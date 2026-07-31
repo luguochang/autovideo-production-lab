@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: AutoVideo Evidence Extractor offline contract regression
+sharing: false
+prompts:
+  - id: file://../prompt-chain/prompts/01-evidence-extractor.md
+    label: evidence-extractor-v1
+providers:
+  - id: file://providers/precomputed-artifact-provider.mjs
+    label: hash-bound-local-candidate
+    config:
+      stage: evidence-extractor
+defaultTest:
+  assert:
+    - type: javascript
+      value: file://assertions/stage-contract.mjs
+tests:
+  - description: Preserve the synthetic Chinese claim ledger and prompt binding
+    vars:
+      stage: evidence-extractor
+      casePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.case.json
+      candidatePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.evidence-extractor.candidate.json
+

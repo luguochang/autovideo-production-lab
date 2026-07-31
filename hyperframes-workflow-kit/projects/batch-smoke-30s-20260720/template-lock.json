@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "autovideo-template-lock/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "styleId": "modern-ip-host-explainer",
+  "styleVersion": "1.0.0",
+  "paletteId": "light-apricot",
+  "ratio": "16:9",
+  "resolution": "1920x1080",
+  "fps": 30,
+  "sourcePath": "style-library/styles/project/modern-ip-host-explainer",
+  "sourceFiles": [
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/frame.md",
+      "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/STYLE_GUIDE.md",
+      "sha256": "02e550777227ef60cd3ed247c2c6da3524fca055ed85c978287af44c08facb77"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+      "sha256": "70872749953cfd53d32d2740385aed37082b1e3552e3e8bb7e9a06b2d3bace0f"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/LAYOUT_CONTRACT.md",
+      "sha256": "5a50c33d860348c4d1f6608b6cdbc895dbd8c0d5bc2718f1779cf89ea7f0c597"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/PLANNING_CONTRACT.json",
+      "sha256": "61af62dbc8a140c9f515ac57ecfd4f3b472941ac16879d07e36dac11437fa7e4"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/PALETTE_VARIANTS.json",
+      "sha256": "f45944c9382537b0c2c34d3417d84a31e773be3f98738ce379b54980c83dcdc7"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/USAGE.md",
+      "sha256": "da3e70ada88f16720f195f4eaacc470ae659567b27847d83907a8db773123fa4"
+    }
+  ],
+  "appliedAt": "2026-07-20T12:54:23.591Z",
+  "immutable": true,
+  "reviewGate": "project task approval plus same-window still and 3-8s motion probe"
+}

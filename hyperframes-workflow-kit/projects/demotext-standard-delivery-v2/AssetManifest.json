@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "autovideo-asset-manifest/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "updatedAt": "2026-07-19T05:20:21.367Z",
+  "assets": [
+    {
+      "id": "approved-narration-source",
+      "type": "text",
+      "path": "input/narration.txt",
+      "sha256": "ec1a51a269faf0344b2ba93abf21c4a75b8aac51d4a0996bd43ac2c66af33198",
+      "size": 4373,
+      "source": "demo/demoText.txt",
+      "license": "user-provided",
+      "rightsStatus": "internal-use-approved"
+    },
+    {
+      "id": "cosyvoice14-final-audio",
+      "type": "audio",
+      "path": "audio/narration.final.wav",
+      "sha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+      "size": 22975582,
+      "source": "CosyVoice preset 14 deterministic V2 generation",
+      "license": "Apache-2.0 code/model; speaker rights separate",
+      "rightsStatus": "needs-review"
+    },
+    {
+      "id": "locked-subtitles",
+      "type": "subtitle",
+      "path": "captions/narration.zh-CN.srt",
+      "sha256": "c3f52112e2c7b0b19a1633bc29a92af432ed1d3939db13db25f6b8a138e2a376",
+      "size": 6130,
+      "source": "NarrationLock exact alignment cues",
+      "license": "project-generated",
+      "rightsStatus": "internal-only"
+    },
+    {
+      "id": "host-normalized-production-set",
+      "type": "derived-image-set",
+      "path": "production-assets/host",
+      "manifestPath": "production-assets/host-assets.manifest.json",
+      "exists": true,
+      "status": "ready-internal-review",
+      "sha256": "012b43e161bc510e9d76b4c4641de1391dda8f87d0025d4e41272bfd0abae7de",
+      "itemCount": 10,
+      "items": [
+        {
+          "id": "greet",
+          "path": "production-assets/host/greet.png",
+          "sha256": "520d36926ee82b4d3d42cd2da92e14fdda70b301d94819063158d3fb6f67e84a"
+        },
+        {
+          "id": "emphasis",
+          "path": "production-assets/host/emphasis.png",
+          "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c"
+        },
+        {
+          "id": "present",
+          "path": "production-assets/host/present.png",
+          "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+        },
+        {
+          "id": "think",
+          "path": "production-assets/host/think.png",
+          "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c"
+        },
+        {
+          "id": "encourage",
+          "path": "production-assets/host/encourage.png",
+          "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa"
+        },
+        {
+          "id": "question",
+          "path": "production-assets/host/question.png",
+          "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+        },
+        {
+          "id": "read",
+          "path": "production-assets/host/read.png",
+          "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388"
+        },
+        {
+          "id": "explain",
+          "path": "production-assets/host/explain.png",
+          "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+        },
+        {
+          "id": "point-right",
+          "path": "production-assets/host/point-right.png",
+          "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+        },
+        {
+          "id": "close",
+          "path": "production-assets/host/close.png",
+          "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+        }
+      ],
+      "source": "Deterministic scripts/build-host-pose-assets.py output",
+      "license": "inherits source licenses",
+      "rightsStatus": "needs-review: inherits user-provided POSE_MANIFEST source rights"
+    },
+    {
+      "id": "style-probe-still",
+      "type": "image",
+      "path": "review/stills/style-probe-hidden-complexity.png",
+      "sha256": "0c8ae9301dc2efea7ee1257c28ca694da2ed5a023b532a0666edd0acda871b4b",
+      "size": 401242,
+      "source": "Fresh V2 probe render",
+      "license": "project-generated",
+      "rightsStatus": "internal-only"
+    },
+    {
+      "id": "style-probe-motion",
+      "type": "video",
+      "path": "review/probes/style-probe-hidden-complexity.mp4",
+      "sha256": "64fb583d61faf3153e298a21ee284af84a513ee486bffec321da9d9eb14ccdaf",
+      "size": 969239,
+      "source": "Fresh V2 HyperFrames 0.7.62 probe render",
+      "license": "project-generated",
+      "rightsStatus": "internal-only"
+    },
+    {
+      "id": "scene-composition-set",
+      "type": "hyperframes-composition-set",
+      "path": "production/hyperframes/compositions/scenes",
+      "exists": true,
+      "status": "strict-check-passed",
+      "sceneCount": 14,
+      "cueCount": 46,
+      "compilerVersion": "1.0.0",
+      "buildReceiptPath": "production/hyperframes/data/composition-build.json",
+      "buildReceiptSha256": "34b269f729d0dbce604f84c344fdc544f459f59c7302a4f7320a865dbfffb5eb",
+      "source": "Deterministic AutoVideo HyperFrames compiler",
+      "license": "project-authored with Apache-2.0 HyperFrames references",
+      "rightsStatus": "internal-only while dependent media rights remain unresolved"
+    },
+    {
+      "id": "delivery-internal-review-video",
+      "type": "video",
+      "path": "renders/demotext-standard-delivery-v2-internal-review.mp4",
+      "exists": true,
+      "status": "qa-passed-internal-only",
+      "sha256": "e0c4ea6bc7c2c9d603dddc2c904355ebc95d3abb6f575cb5579bd51460bc48db",
+      "source": "HyperFrames 0.7.62 high-quality render",
+      "license": "project-generated",
+      "rightsStatus": "internal-only"
+    },
+    {
+      "id": "delivery-cover",
+      "type": "image",
+      "path": "renders/demotext-standard-delivery-v2-cover.png",
+      "exists": true,
+      "status": "ready-internal-review",
+      "sha256": "e777778c9afcbace9515781f855f2f4c3f6b23f4928e413fd1eccd2d3070b661",
+      "source": "FFmpeg frame extraction at 2 seconds",
+      "license": "project-generated",
+      "rightsStatus": "internal-only"
+    }
+  ]
+}

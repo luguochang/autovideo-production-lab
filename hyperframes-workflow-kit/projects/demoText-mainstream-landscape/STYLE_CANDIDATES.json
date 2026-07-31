@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "autovideo-project-style-candidates/v1",
+  "projectId": "demoText-mainstream-landscape",
+  "styles": [
+    {
+      "id": "anime-sticker-explainer",
+      "label": "二次元贴纸讲解",
+      "family": "project-local",
+      "status": "approved-project-local",
+      "license": "project-generated",
+      "sourcePath": "STYLE_ANALYSIS.md",
+      "guidePath": "STYLE_ANALYSIS.md",
+      "bestFor": ["anime-explainer", "creator-education", "continuous-canvas"]
+    },
+    {
+      "id": "manga-panel-pop",
+      "label": "漫画分镜爆点",
+      "family": "project-local",
+      "status": "probe-validated",
+      "license": "project-generated",
+      "sourcePath": "STYLE_ANALYSIS.md",
+      "guidePath": "STYLE_ANALYSIS.md",
+      "bestFor": ["comic-explainer", "punch-in", "impact-type"]
+    },
+    {
+      "id": "chibi-desk-live",
+      "label": "Q版桌面直播",
+      "family": "project-local",
+      "status": "probe-validated",
+      "license": "project-generated",
+      "sourcePath": "STYLE_ANALYSIS.md",
+      "guidePath": "STYLE_ANALYSIS.md",
+      "bestFor": ["creator-desk", "chibi", "chat-bubbles"]
+    },
+    {
+      "id": "creator-cutout-pop",
+      "label": "创作者贴纸快切",
+      "family": "project-local",
+      "status": "probe-validated",
+      "license": "project-generated",
+      "sourcePath": "STYLE_ANALYSIS.md",
+      "guidePath": "STYLE_ANALYSIS.md",
+      "bestFor": ["social-short-video", "sticker-pop", "hook-type"]
+    },
+    {
+      "id": "lofi-anime-night",
+      "label": "Lo-fi 二次元夜景",
+      "family": "project-local",
+      "status": "probe-validated",
+      "license": "project-generated",
+      "sourcePath": "STYLE_ANALYSIS.md",
+      "guidePath": "STYLE_ANALYSIS.md",
+      "bestFor": ["lofi", "anime-night", "soft-parallax"]
+    },
+    {
+      "id": "motion-comic-depth",
+      "label": "空间漫画景深",
+      "family": "project-local",
+      "status": "probe-validated",
+      "license": "project-generated",
+      "sourcePath": "STYLE_ANALYSIS.md",
+      "guidePath": "STYLE_ANALYSIS.md",
+      "bestFor": ["motion-comic", "depth", "camera-drift"]
+    }
+  ]
+}

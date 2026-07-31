@@ -1,0 +1,20 @@
+{
+  "duration": 8,
+  "assertions": [
+    {"kind":"appearsBy","selector":"#host-zone","bySec":0.9},
+    {"kind":"appearsBy","selector":"#bar-entry","bySec":1.6},
+    {"kind":"appearsBy","selector":"#bar-context","bySec":2.0},
+    {"kind":"appearsBy","selector":"#bar-tools","bySec":2.6},
+    {"kind":"appearsBy","selector":"#trend-path","bySec":3.5},
+    {"kind":"appearsBy","selector":"#summary-band","bySec":7.1},
+    {"kind":"appearsBy","selector":"#caption-a","bySec":0.6},
+    {"kind":"appearsBy","selector":"#caption-b","bySec":3.5},
+    {"kind":"appearsBy","selector":"#caption-c","bySec":5.8},
+    {"kind":"before","a":"#bar-entry","b":"#bar-context"},
+    {"kind":"before","a":"#bar-context","b":"#bar-tools"},
+    {"kind":"staysInFrame","selector":"#host-zone"},
+    {"kind":"staysInFrame","selector":"#content-zone"},
+    {"kind":"staysInFrame","selector":"#caption-shell"},
+    {"kind":"keepsMoving","withinSelector":"#probe-scene","maxStaticSec":1.4}
+  ]
+}

@@ -1,0 +1,2139 @@
+{
+  "schemaVersion": "autovideo-composition-source-map/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "semanticSfx": {
+    "planId": "demotext-standard-delivery-v5-sparse-sfx",
+    "status": "candidate",
+    "sha256": "660f1396c90f0e7917cede406180754fb7b1ed624c0e2eec96749281e0d35ef9",
+    "committed": false,
+    "appliedCueCount": 0
+  },
+  "scenes": {
+    "scene-01": {
+      "file": "./compositions/scenes/01-scene-01.html",
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "graphId": null,
+      "hostPose": "question",
+      "editableTargets": [
+        "visual-cue-001",
+        "visual-cue-002",
+        "visual-cue-003"
+      ],
+      "visualVariants": {
+        "cue-001": "auto",
+        "cue-002": "auto",
+        "cue-003": "auto"
+      },
+      "visualTypes": {
+        "cue-001": "keyword",
+        "cue-002": "keyword",
+        "cue-003": "keyword"
+      },
+      "motionRecipes": {
+        "cue-001": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-002": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-003": [
+          "keyword-handoff@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-001": [],
+        "cue-002": [],
+        "cue-003": []
+      },
+      "sfxIds": {
+        "cue-001": [],
+        "cue-002": [],
+        "cue-003": []
+      },
+      "creativeDirectives": {
+        "cue-001": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-001"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-002": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-002"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-003": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-003"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-02": {
+      "file": "./compositions/scenes/02-scene-02.html",
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "graphId": "graph-scene-02",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-004",
+        "visual-cue-005",
+        "visual-cue-006"
+      ],
+      "visualVariants": {
+        "cue-004": "auto",
+        "cue-005": "auto",
+        "cue-006": "auto"
+      },
+      "visualTypes": {
+        "cue-004": "diagram",
+        "cue-005": "diagram",
+        "cue-006": "diagram"
+      },
+      "motionRecipes": {
+        "cue-004": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-005": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-006": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-004": [],
+        "cue-005": [],
+        "cue-006": []
+      },
+      "sfxIds": {
+        "cue-004": [],
+        "cue-005": [],
+        "cue-006": []
+      },
+      "creativeDirectives": {
+        "cue-004": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-004"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-005": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-005"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-006": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-006"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-03": {
+      "file": "./compositions/scenes/03-scene-03.html",
+      "cueIds": [
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "graphId": null,
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-007",
+        "visual-cue-008",
+        "visual-cue-009"
+      ],
+      "visualVariants": {
+        "cue-007": "auto",
+        "cue-008": "auto",
+        "cue-009": "auto"
+      },
+      "visualTypes": {
+        "cue-007": "keyword",
+        "cue-008": "keyword",
+        "cue-009": "keyword"
+      },
+      "motionRecipes": {
+        "cue-007": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-008": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-009": [
+          "keyword-handoff@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-007": [],
+        "cue-008": [],
+        "cue-009": []
+      },
+      "sfxIds": {
+        "cue-007": [],
+        "cue-008": [],
+        "cue-009": []
+      },
+      "creativeDirectives": {
+        "cue-007": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-007"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-008": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-008"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-009": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-009"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-04": {
+      "file": "./compositions/scenes/04-scene-04.html",
+      "cueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "graphId": "graph-scene-04",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-010",
+        "visual-cue-011"
+      ],
+      "visualVariants": {
+        "cue-010": "auto",
+        "cue-011": "auto"
+      },
+      "visualTypes": {
+        "cue-010": "diagram",
+        "cue-011": "diagram"
+      },
+      "motionRecipes": {
+        "cue-010": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-011": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-010": [],
+        "cue-011": []
+      },
+      "sfxIds": {
+        "cue-010": [],
+        "cue-011": []
+      },
+      "creativeDirectives": {
+        "cue-010": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-010"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-011": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-011"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-05": {
+      "file": "./compositions/scenes/05-scene-05.html",
+      "cueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "graphId": "graph-scene-05",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-012",
+        "visual-cue-013",
+        "visual-cue-014"
+      ],
+      "visualVariants": {
+        "cue-012": "auto",
+        "cue-013": "auto",
+        "cue-014": "auto"
+      },
+      "visualTypes": {
+        "cue-012": "diagram",
+        "cue-013": "diagram",
+        "cue-014": "diagram"
+      },
+      "motionRecipes": {
+        "cue-012": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-013": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-014": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-012": [],
+        "cue-013": [],
+        "cue-014": []
+      },
+      "sfxIds": {
+        "cue-012": [],
+        "cue-013": [],
+        "cue-014": []
+      },
+      "creativeDirectives": {
+        "cue-012": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-012"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-013": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-013"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-014": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-014"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-06": {
+      "file": "./compositions/scenes/06-scene-06.html",
+      "cueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-015",
+        "visual-cue-016"
+      ],
+      "visualVariants": {
+        "cue-015": "auto",
+        "cue-016": "auto"
+      },
+      "visualTypes": {
+        "cue-015": "comparison",
+        "cue-016": "comparison"
+      },
+      "motionRecipes": {
+        "cue-015": [
+          "comparison-split@1.0.0"
+        ],
+        "cue-016": [
+          "comparison-split@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-015": [],
+        "cue-016": []
+      },
+      "sfxIds": {
+        "cue-015": [],
+        "cue-016": []
+      },
+      "creativeDirectives": {
+        "cue-015": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-015"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-016": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-016"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-07": {
+      "file": "./compositions/scenes/07-scene-07.html",
+      "cueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "graphId": "graph-scene-07",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-017",
+        "visual-cue-018"
+      ],
+      "visualVariants": {
+        "cue-017": "auto",
+        "cue-018": "auto"
+      },
+      "visualTypes": {
+        "cue-017": "diagram",
+        "cue-018": "diagram"
+      },
+      "motionRecipes": {
+        "cue-017": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-018": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-017": [],
+        "cue-018": []
+      },
+      "sfxIds": {
+        "cue-017": [],
+        "cue-018": []
+      },
+      "creativeDirectives": {
+        "cue-017": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-017"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-018": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-018"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-08": {
+      "file": "./compositions/scenes/08-scene-08.html",
+      "cueIds": [
+        "cue-019",
+        "cue-020"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-019",
+        "visual-cue-020"
+      ],
+      "visualVariants": {
+        "cue-019": "auto",
+        "cue-020": "auto"
+      },
+      "visualTypes": {
+        "cue-019": "comparison",
+        "cue-020": "comparison"
+      },
+      "motionRecipes": {
+        "cue-019": [
+          "comparison-split@1.0.0"
+        ],
+        "cue-020": [
+          "comparison-split@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-019": [],
+        "cue-020": []
+      },
+      "sfxIds": {
+        "cue-019": [],
+        "cue-020": []
+      },
+      "creativeDirectives": {
+        "cue-019": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-019"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-020": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-020"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-09": {
+      "file": "./compositions/scenes/09-scene-09.html",
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "graphId": "graph-scene-09",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-021",
+        "visual-cue-022",
+        "visual-cue-023"
+      ],
+      "visualVariants": {
+        "cue-021": "auto",
+        "cue-022": "auto",
+        "cue-023": "auto"
+      },
+      "visualTypes": {
+        "cue-021": "diagram",
+        "cue-022": "diagram",
+        "cue-023": "diagram"
+      },
+      "motionRecipes": {
+        "cue-021": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-022": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-023": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-021": [],
+        "cue-022": [],
+        "cue-023": []
+      },
+      "sfxIds": {
+        "cue-021": [],
+        "cue-022": [],
+        "cue-023": []
+      },
+      "creativeDirectives": {
+        "cue-021": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-021"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-022": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-022"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-023": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-023"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-10": {
+      "file": "./compositions/scenes/10-scene-10.html",
+      "cueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "graphId": "graph-scene-10",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-024",
+        "visual-cue-025",
+        "visual-cue-026"
+      ],
+      "visualVariants": {
+        "cue-024": "auto",
+        "cue-025": "auto",
+        "cue-026": "auto"
+      },
+      "visualTypes": {
+        "cue-024": "diagram",
+        "cue-025": "diagram",
+        "cue-026": "diagram"
+      },
+      "motionRecipes": {
+        "cue-024": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-025": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-026": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-024": [],
+        "cue-025": [],
+        "cue-026": []
+      },
+      "sfxIds": {
+        "cue-024": [],
+        "cue-025": [],
+        "cue-026": []
+      },
+      "creativeDirectives": {
+        "cue-024": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-024"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-025": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-025"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-026": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-026"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-11": {
+      "file": "./compositions/scenes/11-scene-11.html",
+      "cueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "visual-cue-027",
+        "visual-cue-028",
+        "visual-cue-029"
+      ],
+      "visualVariants": {
+        "cue-027": "auto",
+        "cue-028": "auto",
+        "cue-029": "auto"
+      },
+      "visualTypes": {
+        "cue-027": "keyword",
+        "cue-028": "keyword",
+        "cue-029": "keyword"
+      },
+      "motionRecipes": {
+        "cue-027": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-028": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-029": [
+          "keyword-handoff@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-027": [],
+        "cue-028": [],
+        "cue-029": []
+      },
+      "sfxIds": {
+        "cue-027": [],
+        "cue-028": [],
+        "cue-029": []
+      },
+      "creativeDirectives": {
+        "cue-027": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-027"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-028": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-028"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-029": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-029"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-12": {
+      "file": "./compositions/scenes/12-scene-12.html",
+      "cueIds": [
+        "cue-030",
+        "cue-031",
+        "cue-032"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "visual-cue-030",
+        "visual-cue-031",
+        "visual-cue-032"
+      ],
+      "visualVariants": {
+        "cue-030": "auto",
+        "cue-031": "auto",
+        "cue-032": "auto"
+      },
+      "visualTypes": {
+        "cue-030": "keyword",
+        "cue-031": "keyword",
+        "cue-032": "keyword"
+      },
+      "motionRecipes": {
+        "cue-030": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-031": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-032": [
+          "keyword-handoff@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-030": [],
+        "cue-031": [],
+        "cue-032": []
+      },
+      "sfxIds": {
+        "cue-030": [],
+        "cue-031": [],
+        "cue-032": []
+      },
+      "creativeDirectives": {
+        "cue-030": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-030"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-031": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-031"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-032": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-032"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-13": {
+      "file": "./compositions/scenes/13-scene-13.html",
+      "cueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "graphId": "graph-scene-13",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-033",
+        "visual-cue-034",
+        "visual-cue-035"
+      ],
+      "visualVariants": {
+        "cue-033": "auto",
+        "cue-034": "auto",
+        "cue-035": "auto"
+      },
+      "visualTypes": {
+        "cue-033": "diagram",
+        "cue-034": "diagram",
+        "cue-035": "diagram"
+      },
+      "motionRecipes": {
+        "cue-033": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-034": [
+          "diagram-build@1.0.0"
+        ],
+        "cue-035": [
+          "diagram-build@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-033": [],
+        "cue-034": [],
+        "cue-035": []
+      },
+      "sfxIds": {
+        "cue-033": [],
+        "cue-034": [],
+        "cue-035": []
+      },
+      "creativeDirectives": {
+        "cue-033": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-033"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-034": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-034"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-035": {
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-035"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-14": {
+      "file": "./compositions/scenes/14-scene-14.html",
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "visual-cue-036",
+        "visual-cue-037",
+        "visual-cue-038"
+      ],
+      "visualVariants": {
+        "cue-036": "auto",
+        "cue-037": "auto",
+        "cue-038": "auto"
+      },
+      "visualTypes": {
+        "cue-036": "keyword",
+        "cue-037": "keyword",
+        "cue-038": "keyword"
+      },
+      "motionRecipes": {
+        "cue-036": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-037": [
+          "keyword-handoff@1.0.0"
+        ],
+        "cue-038": [
+          "keyword-handoff@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-036": [],
+        "cue-037": [],
+        "cue-038": []
+      },
+      "sfxIds": {
+        "cue-036": [],
+        "cue-037": [],
+        "cue-038": []
+      },
+      "creativeDirectives": {
+        "cue-036": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-036"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-037": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-037"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-038": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-038"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-15": {
+      "file": "./compositions/scenes/15-scene-15.html",
+      "cueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-039",
+        "visual-cue-040"
+      ],
+      "visualVariants": {
+        "cue-039": "auto",
+        "cue-040": "auto"
+      },
+      "visualTypes": {
+        "cue-039": "comparison",
+        "cue-040": "comparison"
+      },
+      "motionRecipes": {
+        "cue-039": [
+          "comparison-split@1.0.0"
+        ],
+        "cue-040": [
+          "comparison-split@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-039": [],
+        "cue-040": []
+      },
+      "sfxIds": {
+        "cue-039": [],
+        "cue-040": []
+      },
+      "creativeDirectives": {
+        "cue-039": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-039"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-040": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-040"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-16": {
+      "file": "./compositions/scenes/16-scene-16.html",
+      "cueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-041",
+        "visual-cue-042"
+      ],
+      "visualVariants": {
+        "cue-041": "auto",
+        "cue-042": "auto"
+      },
+      "visualTypes": {
+        "cue-041": "comparison",
+        "cue-042": "comparison"
+      },
+      "motionRecipes": {
+        "cue-041": [
+          "comparison-split@1.0.0"
+        ],
+        "cue-042": [
+          "comparison-split@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-041": [],
+        "cue-042": []
+      },
+      "sfxIds": {
+        "cue-041": [],
+        "cue-042": []
+      },
+      "creativeDirectives": {
+        "cue-041": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-041"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-042": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-042"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-17": {
+      "file": "./compositions/scenes/17-scene-17.html",
+      "cueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-043",
+        "visual-cue-044",
+        "visual-cue-045"
+      ],
+      "visualVariants": {
+        "cue-043": "auto",
+        "cue-044": "auto",
+        "cue-045": "auto"
+      },
+      "visualTypes": {
+        "cue-043": "comparison",
+        "cue-044": "comparison",
+        "cue-045": "comparison"
+      },
+      "motionRecipes": {
+        "cue-043": [
+          "comparison-split@1.0.0"
+        ],
+        "cue-044": [
+          "comparison-split@1.0.0"
+        ],
+        "cue-045": [
+          "comparison-split@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-043": [],
+        "cue-044": [],
+        "cue-045": []
+      },
+      "sfxIds": {
+        "cue-043": [],
+        "cue-044": [],
+        "cue-045": []
+      },
+      "creativeDirectives": {
+        "cue-043": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-043"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-044": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-044"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        },
+        "cue-045": {
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-045"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    },
+    "scene-18": {
+      "file": "./compositions/scenes/18-scene-18.html",
+      "cueIds": [
+        "cue-046"
+      ],
+      "graphId": null,
+      "hostPose": "close",
+      "editableTargets": [
+        "visual-cue-046"
+      ],
+      "visualVariants": {
+        "cue-046": "auto"
+      },
+      "visualTypes": {
+        "cue-046": "keyword"
+      },
+      "motionRecipes": {
+        "cue-046": [
+          "keyword-handoff@1.0.0"
+        ]
+      },
+      "assetIds": {
+        "cue-046": []
+      },
+      "sfxIds": {
+        "cue-046": []
+      },
+      "creativeDirectives": {
+        "cue-046": {
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "close",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-046"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ],
+          "resolvedAssets": [],
+          "resolvedSfx": []
+        }
+      }
+    }
+  }
+}

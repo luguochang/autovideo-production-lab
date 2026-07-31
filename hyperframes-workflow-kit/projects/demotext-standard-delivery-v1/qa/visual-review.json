@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "autovideo-visual-review/v1",
+  "projectId": "demotext-standard-delivery-v1",
+  "reviewScope": "internal-autonomous-sampled-frames",
+  "reviewedBy": "codex-autonomous-internal-review",
+  "reviewedAt": "2026-07-19T06:39:30+08:00",
+  "status": "passed-internal-sample",
+  "publicReleaseApproval": false,
+  "userApproval": false,
+  "frames": [
+    {
+      "path": "qa/stills/delivery-start.png",
+      "timeSeconds": 2,
+      "sha256": "de092bf2e6ecd2204b05eeb1d138e044581053c5a34dc1394270e2c2a267672d"
+    },
+    {
+      "path": "qa/stills/delivery-middle.png",
+      "timeSeconds": 119.767,
+      "sha256": "1ea1f763a0206603f94cbdef9604d00a29f3fdd57c0ba52c7910cc13b7ead27c"
+    },
+    {
+      "path": "qa/stills/delivery-end.png",
+      "timeSeconds": 238,
+      "sha256": "a30e1daf2538faebb366f8a6c64679d2a89cbedfd06b27548f34931e5647700a"
+    }
+  ],
+  "checks": {
+    "hostAndContentZones": "passed",
+    "headlineAndPrimaryTextFit": "passed",
+    "captionSafeAreaAndTwoLineLimit": "passed",
+    "croppingAndOverlap": "passed",
+    "closingFrameReadable": "passed"
+  },
+  "limitations": [
+    "This is a sampled-frame review, not a full-timeline human watch.",
+    "OCR semantic comparison was not performed.",
+    "This receipt does not replace user final approval."
+  ]
+}

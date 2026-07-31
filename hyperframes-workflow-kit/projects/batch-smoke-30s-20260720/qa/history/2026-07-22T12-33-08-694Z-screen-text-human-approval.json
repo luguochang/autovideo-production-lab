@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "autovideo-screen-text-internal-approval/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "approved",
+  "approvalScope": "internal-autonomous-review",
+  "approvedBy": "codex-creator-delegated",
+  "approvedAt": "2026-07-22T11:36:47.956Z",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "reviewMode": "technical-only",
+  "review": {
+    "path": "qa/screen-text-human-review.json",
+    "sha256": "d58629bcee9b9156a7812418be5b8862b13269255a89a1b0d23d9a83ed6c0dd5"
+  },
+  "bindings": {
+    "hyperframesCheck": {
+      "path": "qa/hyperframes-check.json",
+      "sha256": "7e4cee6e6dc0b25b096358d9d1a71dec3f1aff35005ae1b2c33e9b71edc201fe"
+    },
+    "subtitleApproval": {
+      "path": "qa/subtitle-human-approval.json",
+      "sha256": "b7351280bfc5dc3f417127e23b7efc8d4e3ec03433f97071976d8c038864705a"
+    },
+    "composition": {
+      "path": "production/hyperframes",
+      "digest": "0339eb0ebe0f6d979bb44d2d40180cdc763a6d1ad6b2e4d7fbf23673ed49e3de",
+      "fileCount": 35
+    },
+    "frameSet": {
+      "path": "qa/screen-text-frame-set.json",
+      "sha256": "59097b38f6b4811783ac698f3f76117d6a4c22fe7fc7064710dce8cec41cc8ec",
+      "digest": "169b4fc23288a4d0478b9deb793c8502a8e21d91a024f1c35209f93846c41fd2"
+    },
+    "frames": [
+      {
+        "id": "frame-9dc3c83e1043",
+        "timeSeconds": 1.99,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-001"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-00-at-1.99s.png",
+        "sha256": "fe6552b8105d546a5fec7473c8e46c518bf5528cab4c1ccae26593149776ff06"
+      },
+      {
+        "id": "frame-61107a2faa52",
+        "timeSeconds": 8.4,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-002"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-01-at-8.4s.png",
+        "sha256": "7c2c0464615a9ace95ab0287337428099765db1eef86605098eab850ed181395"
+      },
+      {
+        "id": "frame-82ede7bf478b",
+        "timeSeconds": 14.44,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-003"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-02-at-14.44s.png",
+        "sha256": "3dbcf7353145e7c092d28a71199f8885569cbada96caadf87d48e5fbe8ee5011"
+      },
+      {
+        "id": "frame-ce658af61581",
+        "timeSeconds": 18.44,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-004"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-03-at-18.44s.png",
+        "sha256": "ce579254a15427ba5d2978a0032086a26923dadd5a621c056d82a26685fd073e"
+      },
+      {
+        "id": "frame-ac1c0af41ba5",
+        "timeSeconds": 25.24,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-005"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-04-at-25.24s.png",
+        "sha256": "95e23ca08159272d1dcf4584407444258f2dd330f041973fdb8558fc294f6ee8"
+      },
+      {
+        "id": "frame-72b6e226c0ea",
+        "timeSeconds": 30.734,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-006"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-05-at-30.734s.png",
+        "sha256": "95aa28a550384894c13de4b063ae96af4e47562a45e7febe97c2530dcb80247a"
+      },
+      {
+        "id": "frame-4e31efd3bc32",
+        "timeSeconds": 31.193,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-006"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-06-at-31.193s.png",
+        "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+      }
+    ],
+    "ocr": null
+  },
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

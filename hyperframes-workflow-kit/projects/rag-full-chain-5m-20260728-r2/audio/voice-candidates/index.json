@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "autovideo-voice-candidate-index/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "baselineCandidateId": null,
+  "generatedCandidateIds": [
+    "candidate-001"
+  ],
+  "activeCandidateIds": [
+    "candidate-001"
+  ],
+  "updatedAt": "2026-07-28T14:16:37.420Z"
+}

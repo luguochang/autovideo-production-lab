@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "autovideo-pronunciation/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "policy": "Pronunciation guidance may change phonetic input but must not change approved semantic wording. Every substitution is recorded in the voice recipe.",
+  "entries": [
+    {
+      "token": "AI",
+      "spokenAs": "A I",
+      "status": "approved-default"
+    },
+    {
+      "token": "Coze",
+      "spokenAs": "Coze",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Dify",
+      "spokenAs": "Dify",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Codex",
+      "spokenAs": "Codex",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Claude Code",
+      "spokenAs": "Claude Code",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Agent",
+      "spokenAs": "Agent",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Demo",
+      "spokenAs": "Demo",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Magic",
+      "spokenAs": "Magic",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "Engineering",
+      "spokenAs": "Engineering",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "MCP",
+      "spokenAs": "M C P",
+      "status": "approved-default"
+    },
+    {
+      "token": "API",
+      "spokenAs": "A P I",
+      "status": "approved-default"
+    },
+    {
+      "token": "30K",
+      "spokenAs": "30 K",
+      "status": "needs-listening-review"
+    },
+    {
+      "token": "666",
+      "spokenAs": "six six six",
+      "status": "approved-default"
+    },
+    {
+      "token": "Token",
+      "spokenAs": "Token",
+      "status": "needs-listening-review"
+    }
+  ]
+}

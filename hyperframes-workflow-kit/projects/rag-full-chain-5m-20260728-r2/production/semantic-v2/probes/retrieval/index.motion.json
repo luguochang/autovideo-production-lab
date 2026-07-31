@@ -1,0 +1,19 @@
+{
+  "duration": 8,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-retrieval-header",
+      "bySec": 0.75
+    },
+    {
+      "kind": "before",
+      "a": "#scene-retrieval-header",
+      "b": "#scene-retrieval-state-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-retrieval .visual-world"
+    }
+  ]
+}

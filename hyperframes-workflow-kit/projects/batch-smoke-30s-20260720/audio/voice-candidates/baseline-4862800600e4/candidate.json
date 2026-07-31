@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "autovideo-voice-candidate/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "candidateId": "baseline-4862800600e4",
+  "role": "baseline",
+  "selectable": false,
+  "generatedAt": "2026-07-22T09:19:31.920Z",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "audio": {
+    "path": "audio/voice-candidates/baseline-4862800600e4/narration.baseline.wav",
+    "sha256": "4862800600e4dbc6df0107cebda153102999092920080495f3eaf83e5712e838"
+  },
+  "recipe": {
+    "path": "audio/voice-candidates/baseline-4862800600e4/voice.baseline.recipe.json",
+    "sha256": "163f17b31429c41e2ab92e0536c555416b2d86c858b8790154f10a944aab1661"
+  },
+  "pronunciation": null,
+  "pronunciationApproval": null,
+  "technicalQa": {
+    "status": "passed",
+    "durationSeconds": 31.370167,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "fullDecodePassed": true,
+    "integratedLufs": -16.4,
+    "truePeakDbfs": -1.5,
+    "maxVolumeDb": -1.5,
+    "audioSha256": "4862800600e4dbc6df0107cebda153102999092920080495f3eaf83e5712e838"
+  },
+  "selectionBlocker": "Baseline is comparison-only because it predates the current pronunciation/effective candidate contract."
+}

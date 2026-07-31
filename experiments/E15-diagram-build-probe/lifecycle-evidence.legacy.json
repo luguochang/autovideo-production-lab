@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-evidence/v1",
+  "projectId": "E15-diagram-build-probe",
+  "recipeId": "diagram-build@1.0.0",
+  "evidenceStatus": "draft",
+  "candidateOnly": true,
+  "sourceReceipt": "SOURCE_RECEIPT.json",
+  "invariantAudit": "INVARIANT_AUDIT.json",
+  "strictCheck": "strict-check.log",
+  "render": "renders/diagram-build-probe.mp4",
+  "stillContactSheet": "snapshots/contact-sheet.jpg",
+  "humanReview": {
+    "status": "pending",
+    "reviewDocument": "PROBE_REVIEW.md",
+    "approvalReceipt": null
+  },
+  "forbiddenActionsNotTaken": ["lifecycle apply", "recipe promotion", "global style-library promotion"]
+}

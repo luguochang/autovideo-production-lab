@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "autovideo-probe-asset-manifest/v1",
+  "projectId": "E20-object-metaphor-probe",
+  "releaseScope": "internal-probe-only",
+  "assets": [
+    {
+      "id": "host-present-transparent",
+      "type": "image",
+      "path": ".media/images/host.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "dimensions": "1122x1402 RGBA",
+      "source": "experiments/E06-keyword-handoff-probe/.media/images/image_001.png",
+      "derivedFrom": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+        "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780"
+      },
+      "provider": "media-use/local-ingest",
+      "license": "derived from user-provided asset; publication rights not implied",
+      "purpose": "single fixed host.left presenter"
+    },
+    {
+      "id": "system-layers",
+      "type": "image",
+      "path": ".media/images/system-layers.svg",
+      "sha256": "fe49102ea55a73b1ae7d23a90be00e1785b379bbcc412d18577846c8808ee2a6",
+      "dimensions": "512x512 SVG",
+      "source": "Lucide layers icon 0.468.0",
+      "sourceUrl": "https://github.com/lucide-icons/lucide/blob/0.468.0/icons/layers.svg",
+      "provider": "Lucide / local adaptation",
+      "license": "ISC",
+      "purpose": "the one visible object that traverses entry, model, API, data, and orchestration stations",
+      "instancePolicy": "one registered asset and one composition instance"
+    },
+    {
+      "id": "narration-window",
+      "type": "voice",
+      "path": ".media/audio/voice/narration.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "durationSeconds": 8,
+      "media": "PCM s16le, 48000Hz, mono",
+      "source": "experiments/E06-keyword-handoff-probe/input/narration-window.wav",
+      "provider": "media-use/local-ingest",
+      "license": "project-local generated narration; internal probe only",
+      "purpose": "exact frozen narration window",
+      "safety": "imported file only; no microphone, recording, autoplay, playback call, or external sound output"
+    },
+    {
+      "id": "gsap-runtime",
+      "type": "runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "experiments/E06-keyword-handoff-probe/assets/runtime/gsap.min.js",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license",
+      "purpose": "single paused seek-safe timeline"
+    }
+  ]
+}

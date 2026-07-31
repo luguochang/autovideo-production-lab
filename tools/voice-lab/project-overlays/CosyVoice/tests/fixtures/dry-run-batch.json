@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "cosyvoice-zh-female-batch/v1",
+  "segments": [
+    {
+      "id": "part-01",
+      "text": "第一段批量试运行。",
+      "output": "outputs/part-01.wav"
+    },
+    {
+      "id": "part-02",
+      "text": "第二段批量试运行。",
+      "output": "outputs/part-02.wav",
+      "receipt": "receipts/part-02.json"
+    }
+  ]
+}

@@ -1,0 +1,1000 @@
+{
+  "Metadata": [
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 976250,
+        "Duration": 1785830,
+        "text": {
+          "Text": "当",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 2880830,
+        "Duration": 3690410,
+        "text": {
+          "Text": "创建",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 6809580,
+        "Duration": 2142910,
+        "text": {
+          "Text": "变得",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 9071250,
+        "Duration": 4762080,
+        "text": {
+          "Text": "廉价",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 17166660,
+        "Duration": 4880830,
+        "text": {
+          "Text": "理解",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 23833330,
+        "Duration": 5476250,
+        "text": {
+          "Text": "判断",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 31452500,
+        "Duration": 5000000,
+        "text": {
+          "Text": "维护",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 39428750,
+        "Duration": 5357080,
+        "text": {
+          "Text": "负责",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 45737910,
+        "Duration": 1428750,
+        "text": {
+          "Text": "就",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 47166660,
+        "Duration": 1309580,
+        "text": {
+          "Text": "会",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 48595410,
+        "Duration": 2380830,
+        "text": {
+          "Text": "变得",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "SentenceBoundary",
+      "Data": {
+        "Offset": 1000000,
+        "Duration": 64142860,
+        "text": {
+          "Text": "当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。",
+          "Length": 28,
+          "BoundaryType": "SentenceBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 51214160,
+        "Duration": 3690410,
+        "text": {
+          "Text": "异常",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 55023750,
+        "Duration": 4642910,
+        "text": {
+          "Text": "珍贵",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 65119160,
+        "Duration": 3214160,
+        "text": {
+          "Text": "就是",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 68571250,
+        "Duration": 1428750,
+        "text": {
+          "Text": "你",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 70000000,
+        "Duration": 1547500,
+        "text": {
+          "Text": "去",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 71666660,
+        "Duration": 1666660,
+        "text": {
+          "Text": "做",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 73333330,
+        "Duration": 2142910,
+        "text": {
+          "Text": "这个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 75595410,
+        "Duration": 3452080,
+        "text": {
+          "Text": "提示",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 79047500,
+        "Duration": 3452500,
+        "text": {
+          "Text": "词",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 85119160,
+        "Duration": 2380830,
+        "text": {
+          "Text": "这个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 87619160,
+        "Duration": 3809580,
+        "text": {
+          "Text": "动作",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 91666660,
+        "Duration": 1071250,
+        "text": {
+          "Text": "是",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 92857080,
+        "Duration": 1785830,
+        "text": {
+          "Text": "很",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 94642910,
+        "Duration": 4285830,
+        "text": {
+          "Text": "廉价",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 98928750,
+        "Duration": 1666660,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 103452500,
+        "Duration": 1666660,
+        "text": {
+          "Text": "只",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 105119160,
+        "Duration": 2619160,
+        "text": {
+          "Text": "需要",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 107976250,
+        "Duration": 3690410,
+        "text": {
+          "Text": "消耗",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "SentenceBoundary",
+      "Data": {
+        "Offset": 64642860,
+        "Duration": 61309526,
+        "text": {
+          "Text": "就是你去做这个提示词，这个动作是很廉价的，只需要消耗一点Token。",
+          "Length": 34,
+          "BoundaryType": "SentenceBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 111785830,
+        "Duration": 3690410,
+        "text": {
+          "Text": "一点",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 116428750,
+        "Duration": 4523750,
+        "text": {
+          "Text": "Token",
+          "Length": 5,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 126428750,
+        "Duration": 2737910,
+        "text": {
+          "Text": "但是",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 129285830,
+        "Duration": 3809580,
+        "text": {
+          "Text": "后面",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 133333330,
+        "Duration": 3452500,
+        "text": {
+          "Text": "如何",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 136904580,
+        "Duration": 1666660,
+        "text": {
+          "Text": "去",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 138571250,
+        "Duration": 2976250,
+        "text": {
+          "Text": "理解",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 141666660,
+        "Duration": 952500,
+        "text": {
+          "Text": "你",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 142619160,
+        "Duration": 952500,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 143690410,
+        "Duration": 3809580,
+        "text": {
+          "Text": "这个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 148333330,
+        "Duration": 4880830,
+        "text": {
+          "Text": "Agent",
+          "Length": 5,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 156309580,
+        "Duration": 3452500,
+        "text": {
+          "Text": "如何",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 159880830,
+        "Duration": 1428750,
+        "text": {
+          "Text": "去",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 161309580,
+        "Duration": 4523750,
+        "text": {
+          "Text": "判断",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 168809580,
+        "Duration": 3452500,
+        "text": {
+          "Text": "如何",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 172380830,
+        "Duration": 1428750,
+        "text": {
+          "Text": "去",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 173928750,
+        "Duration": 4880830,
+        "text": {
+          "Text": "维护",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 181071250,
+        "Duration": 3571250,
+        "text": {
+          "Text": "如何",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 184762080,
+        "Duration": 1309580,
+        "text": {
+          "Text": "去",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 186190410,
+        "Duration": 4762080,
+        "text": {
+          "Text": "负责",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 192976250,
+        "Duration": 1904580,
+        "text": {
+          "Text": "让",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 194880830,
+        "Duration": 1190410,
+        "text": {
+          "Text": "它",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 196190410,
+        "Duration": 1785830,
+        "text": {
+          "Text": "从",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 198095410,
+        "Duration": 2023750,
+        "text": {
+          "Text": "一个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 200357080,
+        "Duration": 4404580,
+        "text": {
+          "Text": "Demo",
+          "Length": 4,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 205714160,
+        "Duration": 3095410,
+        "text": {
+          "Text": "变成",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 208928750,
+        "Duration": 2023750,
+        "text": {
+          "Text": "一个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 211190410,
+        "Duration": 3571250,
+        "text": {
+          "Text": "真正",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 214762080,
+        "Duration": 833330,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 215714160,
+        "Duration": 5237910,
+        "text": {
+          "Text": "产品",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 223571250,
+        "Duration": 1547500,
+        "text": {
+          "Text": "让",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 225119160,
+        "Duration": 1190410,
+        "text": {
+          "Text": "它",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 226428750,
+        "Duration": 2737910,
+        "text": {
+          "Text": "能够",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 229285830,
+        "Duration": 3928330,
+        "text": {
+          "Text": "跑通",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 233214160,
+        "Duration": 952500,
+        "text": {
+          "Text": "你",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 234166660,
+        "Duration": 714160,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 235000000,
+        "Duration": 4523750,
+        "text": {
+          "Text": "业务",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 242500000,
+        "Duration": 2380830,
+        "text": {
+          "Text": "这个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 245000000,
+        "Duration": 4047500,
+        "text": {
+          "Text": "过程",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 249285830,
+        "Duration": 1190410,
+        "text": {
+          "Text": "是",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 250595410,
+        "Duration": 2142500,
+        "text": {
+          "Text": "很",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 252737910,
+        "Duration": 4523750,
+        "text": {
+          "Text": "复杂",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 257262080,
+        "Duration": 1785830,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 261190410,
+        "Duration": 5476250,
+        "text": {
+          "Text": "所以",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 267619160,
+        "Duration": 2737910,
+        "text": {
+          "Text": "这个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 270476250,
+        "Duration": 3690410,
+        "text": {
+          "Text": "过程",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 274404580,
+        "Duration": 1190410,
+        "text": {
+          "Text": "也",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 275595410,
+        "Duration": 1071250,
+        "text": {
+          "Text": "是",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 276785830,
+        "Duration": 1904580,
+        "text": {
+          "Text": "很",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "SentenceBoundary",
+      "Data": {
+        "Offset": 125952386,
+        "Duration": 163809531,
+        "text": {
+          "Text": "但是后面如何去理解你的这个Agent，如何去判断，如何去维护，如何去负责，让它从一个Demo变成一个真正的产品，让它能够跑通你的业务，这个过程是很复杂的，所以这个过程也是很珍贵的。",
+          "Length": 90,
+          "BoundaryType": "SentenceBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 278690410,
+        "Duration": 4523750,
+        "text": {
+          "Text": "珍贵",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 283214160,
+        "Duration": 1785830,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    }
+  ]
+}

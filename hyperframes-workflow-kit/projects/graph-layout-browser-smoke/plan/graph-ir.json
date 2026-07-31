@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-graph-ir/v1",
+  "projectId": "graph-layout-browser-smoke",
+  "graphs": [
+    {
+      "id": "graph-scene-01",
+      "sceneId": "scene-01",
+      "nodes": [
+        {
+          "id": "node-a",
+          "label": "素材先形成事实台账",
+          "kind": "claim",
+          "sourceCueIds": [
+            "cue-001"
+          ]
+        },
+        {
+          "id": "node-b",
+          "label": "再生成可追溯口播稿",
+          "kind": "conclusion",
+          "sourceCueIds": [
+            "cue-002"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-a-b",
+          "from": "node-a",
+          "to": "node-b",
+          "label": "然后"
+        }
+      ]
+    }
+  ]
+}

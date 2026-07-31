@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-pronunciation-approval/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "approved",
+  "approvalScope": "machine-no-subjective-terms",
+  "approvedBy": "automation",
+  "approvedAt": "2026-07-22T09:19:29.128Z",
+  "review": null,
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c"
+    },
+    "generatedGuide": {
+      "path": "input/pronunciation.json",
+      "sha256": "795ced4547f1615da16442f781c9b86bc2e4037e5fb432f876df22c2539eb79a"
+    },
+    "probeManifest": {
+      "path": "audio/pronunciation-probes/probe-manifest.json",
+      "sha256": "a8807c4a2ec50f77e72fc0bfb76b75ac845f5e2d5c5434b58afdceb1f5493236"
+    },
+    "probes": []
+  },
+  "effectiveGuide": {
+    "path": "input/pronunciation.effective.json",
+    "sha256": "f750463416837f3d0f914873b9ffc44ef4c4fcd2b8728c6f90902440ea38706e"
+  }
+}

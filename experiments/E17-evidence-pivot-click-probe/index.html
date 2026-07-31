@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Evidence Pivot Click Motion Recipe Probe</title>
+    <script src="./assets/runtime/gsap.min.js"></script>
+    <style>
+      :root {
+        --background: #f2dfc7;
+        --surface: #fbf3e7;
+        --ink: #2a211b;
+        --muted: #675748;
+        --primary: #496958;
+        --secondary: #a94e36;
+        --line: #dcc2a3;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "Noto Sans SC";
+        src: local("Noto Sans SC"), local("Noto Sans CJK SC");
+        font-weight: 100 900;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+        font-weight: 100 900;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--background);
+        color: var(--ink);
+        font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+        letter-spacing: 0;
+      }
+
+      #root,
+      #probe-scene {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      .stage-fill {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--background);
+      }
+
+      .stage-fill::before {
+        content: "";
+        position: absolute;
+        left: 96px;
+        top: 874px;
+        width: 1728px;
+        height: 3px;
+        background: var(--line);
+      }
+
+      .stage-mark {
+        position: absolute;
+        left: 96px;
+        top: 70px;
+        width: 470px;
+        height: 30px;
+        color: var(--muted);
+        font-family: "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+
+      .stage-mark::before {
+        content: "";
+        display: inline-block;
+        width: 46px;
+        height: 4px;
+        margin-right: 16px;
+        vertical-align: 5px;
+        background: var(--primary);
+      }
+
+      .host-zone {
+        position: absolute;
+        left: 96px;
+        top: 156px;
+        width: 600px;
+        height: 730px;
+        overflow: hidden;
+        z-index: 4;
+        opacity: 0;
+        transform-origin: 50% 100%;
+        will-change: transform, opacity;
+      }
+
+      .host-shadow {
+        position: absolute;
+        left: 112px;
+        bottom: 4px;
+        width: 382px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(73, 105, 88, 0.12);
+        filter: blur(14px);
+      }
+
+      .host-pose {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 600px;
+        height: 730px;
+        object-fit: contain;
+        object-position: 50% 100%;
+      }
+
+      .host-accent {
+        position: absolute;
+        left: 34px;
+        bottom: 18px;
+        width: 510px;
+        height: 5px;
+        background: var(--primary);
+        opacity: 0.72;
+      }
+
+      .content-zone {
+        position: absolute;
+        left: 694px;
+        top: 112px;
+        width: 1130px;
+        height: 760px;
+        overflow: hidden;
+        z-index: 8;
+      }
+
+      .content-world,
+      .parallax-unzoom-grid {
+        position: absolute;
+        inset: 0;
+        width: 1130px;
+        height: 760px;
+        overflow: hidden;
+      }
+
+      .source-label {
+        position: absolute;
+        left: 18px;
+        top: 6px;
+        width: 910px;
+        height: 40px;
+        color: var(--muted);
+        font-family: "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0;
+        opacity: 0;
+      }
+
+      .source-label strong {
+        margin-left: 14px;
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .source-rule {
+        position: absolute;
+        left: 18px;
+        top: 58px;
+        width: 1070px;
+        height: 4px;
+        background: var(--line);
+        transform-origin: 0 50%;
+        opacity: 0;
+      }
+
+      .source-rule::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 238px;
+        background: var(--primary);
+      }
+
+      /* Adapted from the official parallax-unzoom component: a focused
+         evidence card contracts while its one semantic sibling settles. */
+      .parallax-unzoom-grid {
+        --pu-progress: 0;
+      }
+
+      .parallax-unzoom-card {
+        position: absolute;
+        transform-origin: 0 0;
+        will-change: transform, opacity;
+      }
+
+      .parallax-unzoom-card[data-pu-focus="true"] {
+        left: 32px;
+        top: 196px;
+        width: 720px;
+        height: 405px;
+        z-index: 10;
+        transform: translate3d(
+            calc(-14px * (1 - var(--pu-progress))),
+            calc(-95px * (1 - var(--pu-progress))),
+            0
+          )
+          scale(calc(1 + 0.37 * (1 - var(--pu-progress))));
+      }
+
+      .evidence-visual {
+        position: absolute;
+        inset: 0;
+        width: 720px;
+        height: 405px;
+        overflow: hidden;
+        border: 3px solid var(--primary);
+        border-radius: 6px;
+        background: #ffffff;
+        box-shadow: 0 16px 34px rgba(42, 33, 27, 0.14);
+        opacity: 0;
+      }
+
+      .evidence-camera {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 720px;
+        height: 405px;
+        overflow: hidden;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      .evidence-image {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 720px;
+        height: 405px;
+        object-fit: fill;
+      }
+
+      .target-focus {
+        position: absolute;
+        left: 176px;
+        top: 100px;
+        width: 101px;
+        height: 53px;
+        border: 3px solid var(--secondary);
+        border-radius: 4px;
+        background: rgba(169, 78, 54, 0.06);
+        opacity: 0;
+        transform-origin: 50% 50%;
+      }
+
+      .callout-sibling {
+        left: 792px;
+        top: 252px;
+        width: 306px;
+        height: 232px;
+        z-index: 14;
+        transform: translate3d(
+            calc(-158px * (1 - var(--pu-progress))),
+            calc(90px * (1 - var(--pu-progress))),
+            0
+          )
+          scale(calc(0.94 + 0.06 * var(--pu-progress)));
+      }
+
+      .callout-body {
+        position: absolute;
+        inset: 0;
+        width: 306px;
+        height: 232px;
+        overflow: hidden;
+        border-left: 7px solid var(--secondary);
+        background: var(--surface);
+        box-shadow: 0 12px 28px rgba(42, 33, 27, 0.12);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .callout-kicker {
+        position: absolute;
+        left: 24px;
+        top: 24px;
+        width: 250px;
+        height: 28px;
+        color: var(--secondary);
+        font-family: "Microsoft YaHei", sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 28px;
+      }
+
+      .callout-copy {
+        position: absolute;
+        left: 24px;
+        top: 68px;
+        width: 250px;
+        height: 128px;
+        color: var(--ink);
+        font-size: 34px;
+        font-weight: 850;
+        line-height: 1.32;
+      }
+
+      .callout-copy span {
+        display: block;
+      }
+
+      .callout-rule {
+        position: absolute;
+        left: 24px;
+        bottom: 22px;
+        width: 210px;
+        height: 5px;
+        background: var(--primary);
+        transform-origin: 0 50%;
+      }
+
+      .evidence-cursor {
+        position: absolute;
+        left: 910px;
+        top: 620px;
+        width: 38px;
+        height: 42px;
+        z-index: 80;
+        opacity: 0;
+        pointer-events: none;
+        transform-origin: 4px 3px;
+        filter: drop-shadow(0 3px 4px rgba(42, 33, 27, 0.2));
+        will-change: transform, opacity;
+      }
+
+      .click-ring {
+        position: absolute;
+        left: 334px;
+        top: 285px;
+        width: 72px;
+        height: 72px;
+        z-index: 72;
+        border: 3px solid var(--secondary);
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%) scale(0);
+        transform-origin: 50% 50%;
+      }
+
+      .caption-shell {
+        position: absolute;
+        left: 96px;
+        top: 926px;
+        width: 1728px;
+        height: 88px;
+        overflow: hidden;
+        border-top: 2px solid var(--line);
+        background: var(--surface);
+        z-index: 190;
+      }
+
+      .caption-group {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 1728px;
+        max-width: 1600px;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        padding: 0 34px;
+        overflow: visible;
+        color: var(--muted);
+        font-size: 27px;
+        font-weight: 520;
+        line-height: 1.35;
+        white-space: nowrap;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .caption-group strong {
+        color: var(--primary);
+        font-weight: 850;
+      }
+
+      #caption-c strong {
+        color: var(--secondary);
+      }
+
+      .source-receipt {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="8"
+      data-width="1920"
+      data-height="1080"
+      data-fps="30"
+    >
+      <section id="probe-scene" class="clip" data-start="0" data-duration="8" data-track-index="1">
+        <div class="stage-fill" data-role="persistent-stage" data-zone="stage" data-layout-ignore></div>
+        <div class="stage-mark">EVIDENCE PIVOT / CANDIDATE PROBE</div>
+
+        <div id="host-zone" class="host-zone" data-role="host" data-zone="host.left">
+          <div class="host-shadow" aria-hidden="true"></div>
+          <img
+            id="host-present"
+            class="host-pose"
+            src="./.media/images/image_001.png"
+            alt=""
+            data-role="host-pose"
+            data-zone="host.left"
+            data-pose-id="present"
+            data-layout-allow-overflow="normalized-host-crop"
+          />
+          <div class="host-accent" aria-hidden="true"></div>
+        </div>
+
+        <div id="content-zone" class="content-zone" data-role="content" data-zone="content.right">
+          <div
+            id="content-world"
+            class="content-world"
+            data-role="content-world"
+            data-zone="content.right"
+            data-camera-scope="content-world-only"
+            data-motion-recipe="evidence-pivot@1.0.0"
+          >
+            <div id="source-label" class="source-label" data-text-type="source-label">
+              SOURCE / AUTOVIDEO V5 WORKBENCH <strong>LOCAL UI CAPTURE</strong>
+            </div>
+            <div id="source-rule" class="source-rule" aria-hidden="true"></div>
+
+            <div id="evidence-grid" class="parallax-unzoom-grid" data-role="evidence-stage" data-zone="content.right">
+              <div
+                id="evidence-frame"
+                class="parallax-unzoom-card"
+                data-pu-row="0"
+                data-pu-col="0"
+                data-pu-focus="true"
+                data-role="evidence-image"
+                data-zone="content.right"
+                data-asset-id="image_002"
+                data-asset-sha256="9665b8c53c9cad5cbb235fa087836e5092405ec5ab18c908cf9aee0f28c15e80"
+              >
+                <div id="evidence-visual" class="evidence-visual">
+                  <div
+                    id="evidence-camera"
+                    class="evidence-camera"
+                    data-role="content-camera"
+                    data-layout-allow-overflow="intentional evidence crop inside clipped media surface"
+                  >
+                    <img
+                      id="workbench-evidence"
+                      class="evidence-image"
+                      src="./.media/images/image_002.png"
+                      alt=""
+                    />
+                    <div id="target-focus" class="target-focus" aria-hidden="true"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="evidence-callout"
+                class="parallax-unzoom-card callout-sibling"
+                data-pu-row="0"
+                data-pu-col="1"
+                data-role="evidence-callout"
+                data-zone="content.right"
+                data-source-cue="cue-03"
+                data-text-type="generated-summary"
+              >
+                <div id="evidence-callout-body" class="callout-body">
+                  <div class="callout-kicker">ONE ENTRY / FULL PIPELINE</div>
+                  <div class="callout-copy"><span>一个按钮背后，</span><span>是一条工程链</span></div>
+                  <div id="callout-rule" class="callout-rule" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="evidence-cursor" class="evidence-cursor" data-role="cursor" aria-hidden="true">
+              <svg width="38" height="42" viewBox="0 0 38 42" aria-hidden="true">
+                <path d="M4 3L31 23L19 24L13 37L4 3Z" fill="#FBF3E7" stroke="#2A211B" stroke-width="3" />
+              </svg>
+            </div>
+            <div id="click-ring" class="click-ring" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div id="caption-shell" class="caption-shell" data-role="caption" data-zone="caption">
+          <div id="caption-a" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="caption crossfade">
+            第一，平台把系统的<strong>复杂性</strong>给隐藏起来。
+          </div>
+          <div id="caption-b" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="caption crossfade">
+            低代码、无代码、AI 平台、工作流工具，
+          </div>
+          <div id="caption-c" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="caption crossfade">
+            把模型调用、API 连接、向量库、工具链调度流程<strong>包装成了按钮和节点</strong>。
+          </div>
+        </div>
+
+        <div
+          class="source-receipt"
+          data-official-registry="parallax-unzoom"
+          data-official-motion-rule="cursor-click-ripple"
+          data-license="Apache-2.0"
+          data-audio-state="no-sfx-registered"
+        ></div>
+      </section>
+
+      <audio
+        id="probe-narration"
+        src="./.media/audio/voice/voice_002.wav"
+        data-start="0"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      // Precomputed from the frozen 1265x712 evidence asset and authored transforms.
+      const CLICK_X = 334;
+      const CLICK_Y = 285;
+      const CURSOR_ORIGIN_X = 910;
+      const CURSOR_ORIGIN_Y = 620;
+      const CURSOR_TIP_X = 4;
+      const CURSOR_TIP_Y = 3;
+      const CURSOR_TARGET_X = CLICK_X - CURSOR_ORIGIN_X - CURSOR_TIP_X;
+      const CURSOR_TARGET_Y = CLICK_Y - CURSOR_ORIGIN_Y - CURSOR_TIP_Y;
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo("#host-zone", { opacity: 0, scale: 0.985 }, { opacity: 1, scale: 1, duration: 0.62, ease: "power4.out" }, 0.12);
+      tl.fromTo("#source-label", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" }, 0.16);
+      tl.fromTo("#source-rule", { opacity: 0, scaleX: 0.15 }, { opacity: 1, scaleX: 1, duration: 0.58, ease: "power2.out" }, 0.24);
+      tl.fromTo("#evidence-visual", { opacity: 0 }, { opacity: 1, duration: 0.68, ease: "power3.out" }, 0.26);
+      tl.fromTo("#evidence-camera", { x: -46, y: -16, scale: 1.22 }, { x: -46, y: -16, scale: 1.22, duration: 0.01, ease: "none" }, 0);
+
+      tl.fromTo("#caption-a", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 0.12);
+      tl.to("#caption-a", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 3.04);
+      tl.fromTo("#caption-b", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 3.16);
+      tl.to("#caption-b", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 5.30);
+      tl.fromTo("#caption-c", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 5.42);
+
+      tl.fromTo(
+        "#evidence-cursor",
+        { opacity: 0, x: 0, y: 0 },
+        { opacity: 1, x: CURSOR_TARGET_X, y: CURSOR_TARGET_Y, duration: 0.46, ease: "power3.out" },
+        2.56,
+      );
+      tl.to("#evidence-cursor", { scale: 0.84, duration: 0.08, ease: "power2.in", yoyo: true, repeat: 1 }, 3.10);
+      tl.to("#target-focus", { opacity: 1, scale: 0.96, duration: 0.08, ease: "power2.in", yoyo: true, repeat: 1 }, 3.10);
+      tl.set("#click-ring", { opacity: 0.62, scale: 0.18 }, 3.10);
+      tl.to("#click-ring", { opacity: 0, scale: 3.2, duration: 0.62, ease: "power2.out", immediateRender: false }, 3.10);
+      tl.fromTo("#evidence-callout-body", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" }, 3.30);
+      tl.fromTo("#callout-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.46, ease: "power2.out" }, 3.48);
+      tl.to("#evidence-cursor", { opacity: 0, duration: 0.24, ease: "power1.out" }, 4.00);
+
+      tl.to("#evidence-grid", { "--pu-progress": 1, duration: 1.14, ease: "power2.inOut" }, 5.76);
+      tl.to("#evidence-camera", { x: 0, y: 0, scale: 1, duration: 1.14, ease: "power2.inOut" }, 5.76);
+      tl.to("#target-focus", { opacity: 0.72, duration: 0.36, ease: "power2.out" }, 6.22);
+      tl.fromTo("#callout-rule", { scaleX: 0.68 }, { scaleX: 1, duration: 0.42, ease: "power3.out" }, 6.48);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

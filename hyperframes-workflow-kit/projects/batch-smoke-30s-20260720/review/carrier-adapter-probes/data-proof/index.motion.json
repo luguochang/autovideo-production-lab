@@ -1,0 +1,37 @@
+{
+  "duration": 6.35,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#host-zone",
+      "bySec": 0.9
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#visual-cue-001",
+      "bySec": 0.9
+    },
+    {
+      "kind": "before",
+      "a": ".bounded-carrier",
+      "b": ".carrier-evidence"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#host-zone"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#content-zone"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#caption-shell"
+    },
+    {
+      "kind": "keepsMoving",
+      "withinSelector": ".bounded-carrier",
+      "maxStaticSec": 2.2
+    }
+  ]
+}

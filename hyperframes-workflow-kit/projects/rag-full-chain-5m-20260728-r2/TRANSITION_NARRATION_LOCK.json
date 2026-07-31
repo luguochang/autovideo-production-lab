@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "autovideo-transition-narration-lock/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "version": "semantic-v2",
+  "status": "approved-for-internal-candidate",
+  "approvalBasis": "User confirmed the proposed episode split and bridge wording by requesting implementation on 2026-07-29.",
+  "speakerContract": {
+    "model": "CosyVoice-300M-SFT",
+    "speaker": "中文女",
+    "precision": "FP32",
+    "stream": false,
+    "speed": 1.03,
+    "seed": 7
+  },
+  "upperClose": "上集先到这里。我们已经把原始文档经过解析、分块、上下文增强和向量化，最终变成了可以检索的知识库。下集从用户查询开始，继续看这些知识怎样一步步变成可信答案。",
+  "lowerRecap": "上一集，我们走完了从原始文档到可检索知识库的离线链路。这几步决定知识能不能被准确找到。接下来进入在线部分，看查询理解、召回、重排和智能体决策怎样配合。",
+  "humanListeningRequired": true,
+  "publicReleaseBlocked": true
+}
+

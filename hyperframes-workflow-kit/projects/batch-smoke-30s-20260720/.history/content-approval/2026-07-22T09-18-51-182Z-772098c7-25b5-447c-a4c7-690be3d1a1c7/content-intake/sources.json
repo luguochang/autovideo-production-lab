@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-sources/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "root": "content/demoText-30s-platform-complexity.txt",
+  "generatedAt": "2026-07-20T12:38:02.515Z",
+  "sources": [
+    {
+      "id": "source-001-acfa947f",
+      "path": "content/demoText-30s-platform-complexity.txt",
+      "type": "txt",
+      "bytes": 456,
+      "modifiedAt": "2026-07-20T12:37:41.974Z",
+      "sha256": "acfa947fdf8376e90be7aea246f127874bc10088b5d3d3aac512d8b8344b6d32",
+      "source": "user-provided",
+      "license": "user-provided; publication rights not implied",
+      "status": "registered"
+    }
+  ],
+  "skipped": [],
+  "warnings": []
+}

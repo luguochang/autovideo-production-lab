@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280, height=720" />
+    <title>E10 A - Handdrawn Board Landscape</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --paper: #f4f1e8;
+        --ink: #20302c;
+        --ink-soft: #52635d;
+        --red: #d85445;
+        --red-dark: #b94337;
+        --red-soft: #f5d4c9;
+        --teal: #3f9b91;
+        --teal-soft: #d4ebe5;
+        --yellow: #f0c75e;
+        --blue-soft: #d9e2ef;
+        --white: #fffdf7;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+      }
+
+      @font-face {
+        font-family: "PingFang SC";
+        src: local("PingFang SC");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1280px;
+        height: 720px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+        letter-spacing: 0;
+      }
+
+      #root {
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+      }
+
+      #stage {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 16% 24%, rgba(216, 84, 69, 0.09), transparent 25%),
+          radial-gradient(circle at 84% 70%, rgba(63, 155, 145, 0.11), transparent 29%),
+          var(--paper);
+      }
+
+      #stage::before {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image:
+          linear-gradient(rgba(32, 48, 44, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(32, 48, 44, 0.045) 1px, transparent 1px);
+        background-size: 32px 32px;
+        content: "";
+      }
+
+      #stage::after {
+        position: absolute;
+        inset: 14px;
+        z-index: 0;
+        border: 2px solid rgba(32, 48, 44, 0.18);
+        border-radius: 16px;
+        content: "";
+        pointer-events: none;
+      }
+
+      #world {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 2500px;
+        height: 680px;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      #route-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2500px;
+        height: 680px;
+        overflow: visible;
+        pointer-events: none;
+      }
+
+      .route {
+        fill: none;
+        stroke: var(--red);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 8;
+        opacity: 0.86;
+      }
+
+      .route-rough {
+        stroke: #a83e37;
+        stroke-width: 3;
+        opacity: 0.48;
+      }
+
+      .fixed-index {
+        position: absolute;
+        top: 30px;
+        right: 34px;
+        z-index: 8;
+        padding: 9px 14px;
+        border: 2px solid var(--ink);
+        background: rgba(255, 253, 247, 0.9);
+        color: var(--ink-soft);
+        font-size: 16px;
+        font-weight: 900;
+      }
+
+      .board-kicker {
+        position: absolute;
+        top: 54px;
+        left: 118px;
+        padding: 8px 13px;
+        border: 3px solid var(--ink);
+        background: var(--yellow);
+        font-size: 21px;
+        font-weight: 900;
+        transform: rotate(-2deg);
+      }
+
+      #reason-title {
+        position: absolute;
+        top: 102px;
+        left: 118px;
+        margin: 0;
+        font-size: 58px;
+        font-weight: 900;
+        line-height: 1;
+        opacity: 0;
+      }
+
+      #reason-title em {
+        color: var(--red);
+        font-style: normal;
+      }
+
+      #reason-underline {
+        position: absolute;
+        top: 170px;
+        left: 124px;
+        width: 320px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--red);
+        opacity: 0;
+        transform: rotate(-2deg) scaleX(0);
+        transform-origin: left center;
+      }
+
+      .board-sheet {
+        position: absolute;
+        border: 4px solid var(--ink);
+        border-radius: 11px;
+        background: var(--white);
+        box-shadow: 13px 13px 0 rgba(32, 48, 44, 0.14);
+        opacity: 0;
+      }
+
+      #surface-card {
+        top: 215px;
+        left: 120px;
+        width: 620px;
+        height: 278px;
+        padding: 24px 28px;
+        transform: rotate(-0.8deg);
+      }
+
+      .sheet-title {
+        margin: 0 0 5px;
+        font-size: 35px;
+        font-weight: 900;
+        line-height: 1.1;
+      }
+
+      .sheet-subtitle {
+        margin: 0 0 17px;
+        color: var(--ink-soft);
+        font-size: 21px;
+        font-weight: 800;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .surface-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 118px;
+        min-height: 53px;
+        padding: 10px 14px;
+        border: 3px solid var(--ink);
+        border-radius: 8px;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+        line-height: 1.1;
+      }
+
+      .surface-button:nth-child(1) {
+        background: var(--teal-soft);
+      }
+
+      .surface-button:nth-child(2) {
+        background: #f8e8a9;
+      }
+
+      .surface-button:nth-child(3) {
+        background: var(--red-soft);
+      }
+
+      .surface-button:nth-child(4) {
+        background: var(--blue-soft);
+      }
+
+      .surface-foot {
+        position: absolute;
+        right: 27px;
+        bottom: 19px;
+        left: 27px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 12px;
+        border-top: 2px dashed rgba(32, 48, 44, 0.34);
+        color: var(--ink-soft);
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      .surface-foot b {
+        color: var(--red-dark);
+      }
+
+      #cutaway-card {
+        top: 180px;
+        left: 930px;
+        width: 520px;
+        height: 310px;
+        padding: 27px 31px;
+        border-color: var(--red);
+        background: #fffaf2;
+        transform: rotate(0.7deg);
+      }
+
+      #cutaway-card::before {
+        position: absolute;
+        top: -18px;
+        left: 31px;
+        width: 150px;
+        height: 25px;
+        border: 3px solid var(--ink);
+        border-bottom: 0;
+        background: var(--yellow);
+        content: "";
+        transform: rotate(-3deg);
+      }
+
+      .cutaway-title {
+        margin: 0 0 14px;
+        color: var(--red);
+        font-size: 31px;
+        font-weight: 900;
+      }
+
+      .cutaway-copy {
+        width: 440px;
+        margin: 0;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 1.35;
+      }
+
+      .cutaway-note {
+        position: absolute;
+        right: 29px;
+        bottom: 22px;
+        left: 29px;
+        padding: 9px 12px;
+        border-left: 7px solid var(--red);
+        color: var(--ink-soft);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .layer-item {
+        position: absolute;
+        width: 330px;
+        min-height: 140px;
+        padding: 20px 24px;
+        border: 4px solid var(--ink);
+        border-radius: 10px;
+        background: var(--white);
+        box-shadow: 10px 10px 0 rgba(32, 48, 44, 0.13);
+        opacity: 0;
+      }
+
+      #layer-model {
+        top: 145px;
+        left: 1640px;
+        background: var(--teal-soft);
+        transform: rotate(-0.8deg);
+      }
+
+      #layer-api {
+        top: 135px;
+        left: 2030px;
+        background: var(--blue-soft);
+        transform: rotate(1deg);
+      }
+
+      #layer-vector {
+        top: 340px;
+        left: 1650px;
+        background: #f8e8a9;
+        transform: rotate(-1deg);
+      }
+
+      #layer-tools {
+        top: 335px;
+        left: 2040px;
+        background: var(--red-soft);
+        transform: rotate(0.8deg);
+      }
+
+      .layer-meta {
+        margin-bottom: 7px;
+        color: var(--ink-soft);
+        font-family: "Segoe UI", sans-serif;
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
+      .layer-title {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1.08;
+      }
+
+      .layer-detail {
+        margin: 8px 0 0;
+        color: var(--ink-soft);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      #final-verdict {
+        position: absolute;
+        top: 540px;
+        left: 910px;
+        width: 1000px;
+        min-height: 108px;
+        padding: 21px 30px;
+        border: 5px solid var(--ink);
+        border-radius: 12px;
+        background: var(--ink);
+        color: var(--white);
+        opacity: 0;
+        transform: rotate(-0.5deg);
+      }
+
+      #final-verdict small {
+        display: block;
+        margin-bottom: 11px;
+        color: var(--yellow);
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: 0.08em;
+      }
+
+      #final-verdict strong {
+        display: block;
+        max-width: 900px;
+        font-size: 43px;
+        line-height: 1.14;
+      }
+
+      #final-dot {
+        position: absolute;
+        right: 26px;
+        bottom: 24px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--red);
+      }
+
+      #caption-shell {
+        position: absolute;
+        right: 42px;
+        bottom: 27px;
+        left: 42px;
+        z-index: 9;
+        min-height: 112px;
+        padding: 20px 28px 18px;
+        border: 3px solid var(--ink);
+        border-radius: 11px;
+        background: rgba(255, 253, 247, 0.97);
+        box-shadow: 7px 7px 0 rgba(32, 48, 44, 0.14);
+        text-align: center;
+      }
+
+      .caption-line {
+        position: absolute;
+        top: 19px;
+        right: 26px;
+        left: 26px;
+        margin: 0;
+        font-size: 29px;
+        font-weight: 900;
+        line-height: 1.28;
+        opacity: 0;
+      }
+
+      .caption-line .accent {
+        color: var(--red);
+      }
+
+      .caption-source {
+        position: absolute;
+        right: 26px;
+        bottom: 10px;
+        left: 26px;
+        color: var(--ink-soft);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      id="root"
+      data-composition-id="a-handdrawn-board-landscape"
+      data-start="0"
+      data-duration="7.242254"
+      data-width="1280"
+      data-height="720"
+      data-fps="30"
+      data-layout-allow-overflow
+    >
+      <div
+        id="stage"
+        class="clip"
+        data-start="0"
+        data-duration="7.242254"
+        data-track-index="0"
+        data-layout-allow-overflow
+      >
+        <div class="fixed-index">原因 01 / 横向结构拆解</div>
+        <div id="world" data-hf-id="world" data-layout-allow-overflow>
+          <svg id="route-layer" viewBox="0 0 2500 680" aria-hidden="true">
+            <path id="route-hook" class="route" d="M 440 180 C 560 190, 650 250, 760 310" />
+            <path
+              id="route-hook-rough"
+              class="route route-rough"
+              d="M 443 185 C 563 197, 656 256, 765 316"
+            />
+            <path id="route-cutaway" class="route" d="M 740 330 C 820 320, 865 280, 930 278" />
+            <path
+              id="route-cutaway-rough"
+              class="route route-rough"
+              d="M 742 337 C 825 328, 870 289, 935 287"
+            />
+            <path id="route-model" class="route" d="M 1450 280 C 1510 235, 1570 210, 1640 210" />
+            <path id="route-api" class="route" d="M 1450 305 C 1670 250, 1870 205, 2030 205" />
+            <path id="route-vector" class="route" d="M 1450 340 C 1520 365, 1580 400, 1650 410" />
+            <path id="route-tools" class="route" d="M 1450 360 C 1680 405, 1870 405, 2040 405" />
+            <path
+              id="route-final"
+              class="route route-rough"
+              d="M 1470 430 C 1470 495, 1450 520, 1410 540"
+            />
+          </svg>
+
+          <div class="board-kicker">原因 01 / 先看表面</div>
+          <h1 id="reason-title" data-hf-id="reason-title">复杂性被<em>藏</em>起来</h1>
+          <div id="reason-underline" data-hf-id="reason-underline"></div>
+
+          <section id="surface-card" class="board-sheet" data-hf-id="surface-card">
+            <p class="sheet-title">平台界面</p>
+            <p class="sheet-subtitle">看起来只是几个按钮和节点</p>
+            <div class="button-row">
+              <span class="surface-button" data-hf-id="surface-low-code">低代码</span>
+              <span class="surface-button" data-hf-id="surface-no-code">无代码</span>
+              <span class="surface-button" data-hf-id="surface-ai">AI 平台</span>
+              <span class="surface-button" data-hf-id="surface-workflow">工作流</span>
+            </div>
+            <div class="surface-foot"><span>入口很简单</span><b>系统不简单</b></div>
+          </section>
+
+          <section id="cutaway-card" class="board-sheet" data-hf-id="cutaway-card">
+            <p class="cutaway-title">把按钮掀开</p>
+            <p class="cutaway-copy">你看到的是操作层，下面还有一整套工程层。</p>
+            <div class="cutaway-note">沿着红线，从表面走到真实系统。</div>
+          </section>
+
+          <article id="layer-model" class="layer-item" data-hf-id="layer-model">
+            <div class="layer-meta">01 / CORE</div>
+            <h2 class="layer-title">模型调用</h2>
+            <p class="layer-detail">推理、上下文、失败回退</p>
+          </article>
+          <article id="layer-api" class="layer-item" data-hf-id="layer-api">
+            <div class="layer-meta">02 / LINK</div>
+            <h2 class="layer-title">API 连接</h2>
+            <p class="layer-detail">协议、鉴权、重试和超时</p>
+          </article>
+          <article id="layer-vector" class="layer-item" data-hf-id="layer-vector">
+            <div class="layer-meta">03 / MEMORY</div>
+            <h2 class="layer-title">向量库</h2>
+            <p class="layer-detail">检索、切片、召回与更新</p>
+          </article>
+          <article id="layer-tools" class="layer-item" data-hf-id="layer-tools">
+            <div class="layer-meta">04 / ACTION</div>
+            <h2 class="layer-title">工具链</h2>
+            <p class="layer-detail">状态、权限、观测和维护</p>
+          </article>
+
+          <div id="final-verdict" data-hf-id="final-verdict">
+            <small>THE BUTTON IS ONLY THE SURFACE</small>
+            <strong>会用按钮只是入口，真正的能力在下面这张系统图里。</strong>
+            <span id="final-dot" data-hf-id="final-dot"></span>
+          </div>
+        </div>
+
+        <div id="caption-shell" data-hf-id="caption-shell" data-layout-allow-occlusion>
+          <p id="caption-one" class="caption-line" data-hf-id="caption-one">
+            <span class="accent">第一，</span>平台把系统的复杂性给隐藏起来。
+          </p>
+          <p id="caption-two" class="caption-line" data-hf-id="caption-two">
+            低代码、无代码、<span class="accent">AI 平台</span>、工作流工具，
+          </p>
+          <div class="caption-source">EXACT NARRATION / 57.0486088–64.2908627</div>
+        </div>
+      </div>
+
+      <audio
+        id="narration"
+        src="assets/narration.wav"
+        data-start="0"
+        data-duration="7.242254"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </main>
+
+    <script>
+      (function () {
+        "use strict";
+
+        window.__timelines = window.__timelines || {};
+        var DURATION = 7.242254;
+
+        document.querySelectorAll("#route-layer path").forEach(function (path) {
+          var length = path.getTotalLength();
+          path.style.strokeDasharray = String(length);
+          path.style.strokeDashoffset = String(length);
+        });
+
+        var tl = gsap.timeline({ paused: true });
+        tl.addLabel("surface", 0.64);
+        tl.addLabel("cutaway", 2.16);
+        tl.addLabel("systems", 3.48);
+        tl.addLabel("overview", 5.36);
+
+        tl.fromTo(
+          "#reason-title",
+          { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" },
+          0.12,
+        );
+        tl.fromTo(
+          "#reason-underline",
+          { opacity: 0, scaleX: 0 },
+          { opacity: 1, scaleX: 1, duration: 0.4, ease: "power2.out" },
+          0.42,
+        );
+        tl.to("#route-hook", { strokeDashoffset: 0, duration: 0.44, ease: "power2.out" }, 0.3);
+        tl.to(
+          "#route-hook-rough",
+          { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" },
+          0.34,
+        );
+        tl.fromTo(
+          "#surface-card",
+          { opacity: 0, y: 28, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.58, ease: "back.out(1.22)" },
+          "surface",
+        );
+        tl.fromTo(
+          ".surface-button",
+          { opacity: 0, y: 16, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.32, ease: "power2.out", stagger: 0.09 },
+          0.94,
+        );
+
+        tl.fromTo(
+          "#world",
+          { x: 0, y: 0, scale: 1 },
+          { x: -780, y: 20, scale: 1, duration: 1.08, ease: "power3.inOut" },
+          1.48,
+        );
+        tl.to("#route-cutaway", { strokeDashoffset: 0, duration: 0.56, ease: "power2.out" }, 1.58);
+        tl.to(
+          "#route-cutaway-rough",
+          { strokeDashoffset: 0, duration: 0.61, ease: "power2.out" },
+          1.64,
+        );
+        tl.to("#surface-card", { opacity: 0.72, scale: 0.9, duration: 0.42, ease: "power2.out" }, 2.05);
+        tl.fromTo(
+          "#cutaway-card",
+          { opacity: 0, y: 24, scale: 0.96 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.52, ease: "power3.out" },
+          "cutaway",
+        );
+
+        tl.to(
+          "#world",
+          { x: -1460, y: 10, scale: 1, duration: 1.04, ease: "power3.inOut" },
+          2.74,
+        );
+        tl.to("#route-model", { strokeDashoffset: 0, duration: 0.52, ease: "power2.out" }, 3.02);
+        tl.to("#route-api", { strokeDashoffset: 0, duration: 0.64, ease: "power2.out" }, 3.18);
+        tl.to("#route-vector", { strokeDashoffset: 0, duration: 0.68, ease: "power2.out" }, 3.38);
+        tl.to("#route-tools", { strokeDashoffset: 0, duration: 0.74, ease: "power2.out" }, 3.58);
+        tl.fromTo(
+          "#layer-model",
+          { opacity: 0, y: 24, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power2.out" },
+          "systems",
+        );
+        tl.fromTo(
+          "#layer-api",
+          { opacity: 0, y: 24, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power2.out" },
+          3.82,
+        );
+        tl.fromTo(
+          "#layer-vector",
+          { opacity: 0, y: 24, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power2.out" },
+          4.16,
+        );
+        tl.fromTo(
+          "#layer-tools",
+          { opacity: 0, y: 24, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power2.out" },
+          4.5,
+        );
+
+        tl.to(
+          "#world",
+          { x: -20, y: 70, scale: 0.52, duration: 1.16, ease: "power3.inOut" },
+          "overview",
+        );
+        tl.to("#route-final", { strokeDashoffset: 0, duration: 0.64, ease: "power2.out" }, 5.46);
+        tl.fromTo(
+          "#final-verdict",
+          { opacity: 0, y: 26, scale: 0.97 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.52, ease: "power3.out" },
+          5.84,
+        );
+        tl.to(
+          "#final-dot",
+          { scale: 1.16, duration: 0.26, yoyo: true, repeat: 1, ease: "sine.inOut" },
+          6.5,
+        );
+
+        tl.fromTo(
+          "#caption-one",
+          { opacity: 0, y: 13 },
+          { opacity: 1, y: 0, duration: 0.22, ease: "power2.out" },
+          0.08,
+        );
+        tl.to("#caption-one", { opacity: 0, y: -7, duration: 0.17, ease: "power2.in" }, 3.29);
+        tl.fromTo(
+          "#caption-two",
+          { opacity: 0, y: 13 },
+          { opacity: 1, y: 0, duration: 0.22, ease: "power2.out" },
+          3.4,
+        );
+
+        tl.set("#stage", { opacity: 1 }, DURATION - 0.001);
+        window.__timelines["a-handdrawn-board-landscape"] = tl;
+      })();
+    </script>
+  </body>
+</html>

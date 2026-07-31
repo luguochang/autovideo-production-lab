@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo immutable NarrationLock",
+  "type": "object",
+  "required": [
+    "schemaVersion", "projectId", "sourcePath", "frozenPath", "sourceSha256",
+    "normalizedSha256", "normalization", "createdAt", "immutable"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-narration-lock/v1"},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "sourcePath": {"type": "string", "minLength": 1},
+    "frozenPath": {"type": "string", "minLength": 1},
+    "sourceSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "normalizedSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "normalization": {"type": "string", "minLength": 1},
+    "createdAt": {"type": "string", "minLength": 1},
+    "immutable": {"type": "boolean", "const": true},
+    "approvalReceipt": {
+      "type": "object",
+      "required": ["path", "sha256", "schemaVersion", "approvedNarrationSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "const": "input/content-approval.json"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "schemaVersion": {"type": "string", "const": "autovideo-content-approval/v2"},
+        "approvedNarrationSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  }
+}

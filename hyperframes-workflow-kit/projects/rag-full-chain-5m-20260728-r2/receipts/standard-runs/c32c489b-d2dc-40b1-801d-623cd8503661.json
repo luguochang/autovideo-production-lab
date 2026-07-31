@@ -1,0 +1,299 @@
+{
+  "activeStageIds": [
+    "source-register",
+    "material-suitability",
+    "evidence-ledger",
+    "spoken-rewrite",
+    "content-duration-fit",
+    "claim-source-review",
+    "script-review",
+    "content-approval",
+    "narration-lock",
+    "template-lock",
+    "pronunciation-review",
+    "voice-final",
+    "audio-align",
+    "subtitle-qa",
+    "subtitle-review",
+    "rights-clearance",
+    "audio-handoff",
+    "visual-plan",
+    "diagram-assets",
+    "style-probe",
+    "visual-variety-qa",
+    "composition-readiness",
+    "full-production",
+    "qa-review",
+    "screen-text-review",
+    "final-preview",
+    "render-deliver",
+    "delivery-qa",
+    "retrospective",
+    "package-export"
+  ],
+  "currentStageId": "full-production",
+  "finishedAt": "2026-07-29T02:20:36.671Z",
+  "message": "full-production failed: Command failed with exit code 1: node tools/hyperframes-production/compile-production.mjs --project hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2\n\nError: Motion recipes are not authorized for full production: code-proof@1.0.0 (candidate: project-not-approved), comparison-split@1.0.0 (candidate: project-not-approved), device-surface-tour@1.0.0 (candidate: project-not-approved), diagram-build@1.0.0 (candidate: project-not-approved), keyword-handoff@1.0.0 (candidate: project-not-approved). Run bounded probes and explicit project approval first.\n    at assertMotionRecipeAccessReceipt (file:///E:/project/study/codex/autoVideo/tools/planning-contract/motion-lifecycle-gate.mjs:266:11)\n    at async main (file:///E:/project/study/codex/autoVideo/tools/hyperframes-production/compile-production.mjs:369:31)",
+  "policy": {
+    "autoApproveHumanGates": false,
+    "mediaPlaybackInvoked": false,
+    "microphoneUsed": false,
+    "publicReleaseApprovalSynthesized": false
+  },
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "projectState": {
+    "contentIntakeSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+    "formalProjectPath": "hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2",
+    "projectId": "rag-full-chain-5m-20260728-r2",
+    "route": "script",
+    "stages": {
+      "audio-align": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "a8dd55a6a6d735f67b6fb8ea6a73caa44fb408b3527bba8d6fd00b7e96092129",
+        "artifactSha256": "a8dd55a6a6d735f67b6fb8ea6a73caa44fb408b3527bba8d6fd00b7e96092129",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "audio-handoff": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "91955c6190ae27dd33a963f97a357780bfed80a82280984bfb402110ea7a8979",
+        "artifactSha256": "91955c6190ae27dd33a963f97a357780bfed80a82280984bfb402110ea7a8979",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "claim-source-review": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "c78f8587eb43a208d6750d78778b0e22afad5804b29dabf831676269f2109dd4",
+        "artifactSha256": "c78f8587eb43a208d6750d78778b0e22afad5804b29dabf831676269f2109dd4",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "composition-readiness": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "e63cc52bd2d2b7dd803fe2676ba423423b87a78001e550ceee241359d503cf41",
+        "artifactSha256": "e63cc52bd2d2b7dd803fe2676ba423423b87a78001e550ceee241359d503cf41",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "content-approval": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "b205a03be18bd418c34d5b8e028f3a6b2a7b1ac9dcefc65a7e482d2b1f354aa6",
+        "artifactSha256": "b205a03be18bd418c34d5b8e028f3a6b2a7b1ac9dcefc65a7e482d2b1f354aa6",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "content-duration-fit": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "a2c921e2d44dc19bbbf215120e81fba46d80a7e78fc8bd2ca2469f7811de0fad",
+        "artifactSha256": "a2c921e2d44dc19bbbf215120e81fba46d80a7e78fc8bd2ca2469f7811de0fad",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "delivery-qa": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "diagram-assets": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "28abc5454a9fce2137ecd39e6cd5f2cd83d0b8b6a6c65930be6a8986b9608d72",
+        "artifactSha256": "28abc5454a9fce2137ecd39e6cd5f2cd83d0b8b6a6c65930be6a8986b9608d72",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "evidence-ledger": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "58e972b2d0b3f5d0783c4c4cb223578be35d2af7b6563fddb7277a4ba23b7cf6",
+        "artifactSha256": "58e972b2d0b3f5d0783c4c4cb223578be35d2af7b6563fddb7277a4ba23b7cf6",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "final-preview": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "full-production": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "failed"
+      },
+      "material-suitability": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "e72821d494bdf3f3ed964c2a1e79d049b933fd2a738e2a2e69c126899017874b",
+        "artifactSha256": "e72821d494bdf3f3ed964c2a1e79d049b933fd2a738e2a2e69c126899017874b",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "narration-lock": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f",
+        "artifactSha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "package-export": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "pronunciation-review": {
+        "approvalScope": "user-directed-selection-no-listening",
+        "approvedArtifactSha256": "e491faa69b4db00b2ed9f9400f4c76a4caa7e589999398ee82ca85e85e741aff",
+        "artifactSha256": "e491faa69b4db00b2ed9f9400f4c76a4caa7e589999398ee82ca85e85e741aff",
+        "jobId": null,
+        "revision": 3,
+        "status": "approved"
+      },
+      "qa-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "render-deliver": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "retrospective": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "rights-clearance": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "3d5cebdeac1b7eef25312fdfccc3f554496000f96b037546fea31cdb2e2469e6",
+        "artifactSha256": "3d5cebdeac1b7eef25312fdfccc3f554496000f96b037546fea31cdb2e2469e6",
+        "jobId": null,
+        "revision": 2,
+        "status": "approved"
+      },
+      "screen-text-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "script-review": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+        "artifactSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "source-register": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd",
+        "artifactSha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "spoken-rewrite": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018",
+        "artifactSha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "style-probe": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "a913dea59e90eba559f137675bb51e94ca5ca6686f51d15785796ae2e2de034e",
+        "artifactSha256": "a913dea59e90eba559f137675bb51e94ca5ca6686f51d15785796ae2e2de034e",
+        "jobId": null,
+        "revision": 2,
+        "status": "approved"
+      },
+      "subtitle-qa": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "39044a656bacfa8cc2ca73ad415b9613a6ee4d2af4921c898ddacd3053b63b80",
+        "artifactSha256": "39044a656bacfa8cc2ca73ad415b9613a6ee4d2af4921c898ddacd3053b63b80",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "subtitle-review": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "45cf6ae253d1d053b0f50ba005d362875ff0a9e8b723c0f5b1b3a07232301bf1",
+        "artifactSha256": "45cf6ae253d1d053b0f50ba005d362875ff0a9e8b723c0f5b1b3a07232301bf1",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "template-lock": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "9cb95490e8f9c40bd621beea0f91519212e2a262d5d38760b22f3fdcc7bc9d6a",
+        "artifactSha256": "9cb95490e8f9c40bd621beea0f91519212e2a262d5d38760b22f3fdcc7bc9d6a",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "visual-plan": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "76f885fcee52ad89f2fdf8b5513b883e106a4aa2aab8ded891ffe15042e9e7f3",
+        "artifactSha256": "76f885fcee52ad89f2fdf8b5513b883e106a4aa2aab8ded891ffe15042e9e7f3",
+        "jobId": null,
+        "revision": 3,
+        "status": "approved"
+      },
+      "visual-variety-qa": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "0bf6dd78b3589a29533154d48dd6fe81e36645123daa143b12d6b7384c2aba21",
+        "artifactSha256": "0bf6dd78b3589a29533154d48dd6fe81e36645123daa143b12d6b7384c2aba21",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "voice-final": {
+        "approvalScope": "human-listening",
+        "approvedArtifactSha256": "37249fecbcac047e1c89c49e5f9ad3a86631b81d30308cab21300852cb4edefa",
+        "artifactSha256": "37249fecbcac047e1c89c49e5f9ad3a86631b81d30308cab21300852cb4edefa",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      }
+    }
+  },
+  "projectStateSha256": "c72e563faff01639dd783df30caf3e99719b8999a87c17d5db2c05546d060aed",
+  "resumesRunId": null,
+  "runId": "c32c489b-d2dc-40b1-801d-623cd8503661",
+  "schemaVersion": "autovideo-standard-run-receipt/v1",
+  "startedAt": "2026-07-29T02:20:30.165Z",
+  "status": "failed",
+  "updatedAt": "2026-07-29T02:20:36.671Z"
+}

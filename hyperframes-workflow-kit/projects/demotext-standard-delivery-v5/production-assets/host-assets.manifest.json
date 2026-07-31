@@ -1,0 +1,740 @@
+{
+  "schemaVersion": "autovideo-host-assets-manifest/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "styleId": "modern-ip-host-explainer",
+  "generator": {
+    "version": "autovideo-host-pose-assets/v1",
+    "script": "scripts/build-host-pose-assets.py",
+    "python": "3.12.10",
+    "pythonExecutable": "tools/voice-lab/venv/Scripts/python.exe",
+    "pillow": "10.4.0",
+    "numpy": "1.26.4"
+  },
+  "sourceManifest": {
+    "path": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+    "sha256": "70872749953cfd53d32d2740385aed37082b1e3552e3e8bb7e9a06b2d3bace0f"
+  },
+  "backgroundRemoval": {
+    "script": "scripts/remove-connected-background.py",
+    "sha256": "ea2b9b46c5585f411750eb81bfe4bf1c3b496e7e6b515ce3754e80f37f90436c",
+    "parameters": {
+      "min_r": 205,
+      "min_g": 180,
+      "min_b": 155,
+      "min_rg": 5,
+      "max_rg": 55,
+      "min_gb": 0,
+      "max_gb": 55
+    }
+  },
+  "normalization": {
+    "targetCanvas": [
+      600,
+      730
+    ],
+    "method": "alpha-bbox-fit-bottom-center",
+    "anchorIntent": "eyes-and-head-top",
+    "eyeLineDetection": "not-performed",
+    "reviewRequired": [
+      "head-top",
+      "eye-line",
+      "head-scale",
+      "hands",
+      "bottom-crop"
+    ]
+  },
+  "rightsStatus": "needs-review: inherits user-provided POSE_MANIFEST source rights",
+  "poses": [
+    {
+      "id": "greet",
+      "use": "开场、转场、轻量承接",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (1).png",
+        "sha256": "53906666df1a499e8b5b395a7e29c042140e7b583a469a28009e98ef50d2598c",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/greet.png",
+        "sha256": "520d36926ee82b4d3d42cd2da92e14fdda70b301d94819063158d3fb6f67e84a",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            149,
+            45,
+            1015,
+            1402
+          ],
+          "nonTransparentPixels": 747689,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.475313
+        },
+        "crop": [
+          149,
+          45,
+          1015,
+          1402
+        ],
+        "scale": 0.537951363,
+        "resized": [
+          466,
+          730
+        ],
+        "offset": [
+          67,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            67,
+            0,
+            533,
+            730
+          ],
+          "nonTransparentPixels": 220891,
+          "partiallyTransparentPixels": 9007,
+          "coverage": 0.504317
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=825355/1573044 (52.47%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\greet-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "85161a246df066d5cd1163acdb6a25bdb1500aa89d69a31f2b4e8e4107d9bff5"
+    },
+    {
+      "id": "emphasis",
+      "use": "单个核心词、结论强调",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (2).png",
+        "sha256": "6ad9b540b165d459025c70b98b8030b0110bf83db6e14fbd70337115c57b4882",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/emphasis.png",
+        "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            154,
+            69,
+            966,
+            1402
+          ],
+          "nonTransparentPixels": 757425,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.481503
+        },
+        "crop": [
+          154,
+          69,
+          966,
+          1402
+        ],
+        "scale": 0.547636909,
+        "resized": [
+          445,
+          730
+        ],
+        "offset": [
+          77,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            77,
+            0,
+            522,
+            730
+          ],
+          "nonTransparentPixels": 230743,
+          "partiallyTransparentPixels": 6849,
+          "coverage": 0.526811
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=815619/1573044 (51.85%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\emphasis-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "d2532c00974e85cb52b14f2e1f2838033a9f971c9cbe800b6702f072c11d8cf1"
+    },
+    {
+      "id": "present",
+      "use": "展示一个对象或两个选项",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+        "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/present.png",
+        "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            34,
+            102,
+            1076,
+            1402
+          ],
+          "nonTransparentPixels": 685720,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.435919
+        },
+        "crop": [
+          34,
+          102,
+          1076,
+          1402
+        ],
+        "scale": 0.561538462,
+        "resized": [
+          585,
+          730
+        ],
+        "offset": [
+          7,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            7,
+            0,
+            592,
+            730
+          ],
+          "nonTransparentPixels": 220381,
+          "partiallyTransparentPixels": 8397,
+          "coverage": 0.503153
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=887324/1573044 (56.41%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\present-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "8020e11c75ba63a11728e341d52462892798bf37c323c227adbd3f582d24711c"
+    },
+    {
+      "id": "think",
+      "use": "提出问题、解释隐藏条件",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (4).png",
+        "sha256": "167f1fdcaab9ef90c26371219987e5dda992ae79556a0ae1ea53b5f2fc8e173a",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/think.png",
+        "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            247,
+            76,
+            838,
+            1402
+          ],
+          "nonTransparentPixels": 624667,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.397107
+        },
+        "crop": [
+          247,
+          76,
+          838,
+          1402
+        ],
+        "scale": 0.550527903,
+        "resized": [
+          325,
+          730
+        ],
+        "offset": [
+          137,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            137,
+            0,
+            462,
+            730
+          ],
+          "nonTransparentPixels": 192098,
+          "partiallyTransparentPixels": 5980,
+          "coverage": 0.43858
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=948377/1573044 (60.29%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\think-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "cd16e84ff554b66665d7b954e1857c63c217c5b012e7971ccf51d479ae375933"
+    },
+    {
+      "id": "encourage",
+      "use": "鼓励、正向结果、行动提示",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (6).png",
+        "sha256": "6a0613b91c5f9da47f6b00d725bdd789daeb6c62420b81c1fce0e6df178808eb",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/encourage.png",
+        "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            166,
+            64,
+            931,
+            1402
+          ],
+          "nonTransparentPixels": 731740,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.465175
+        },
+        "crop": [
+          166,
+          64,
+          931,
+          1402
+        ],
+        "scale": 0.545590433,
+        "resized": [
+          417,
+          730
+        ],
+        "offset": [
+          91,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            91,
+            0,
+            508,
+            730
+          ],
+          "nonTransparentPixels": 221301,
+          "partiallyTransparentPixels": 7305,
+          "coverage": 0.505253
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=841304/1573044 (53.48%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\encourage-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "4ee432af4ccac40f621d798cf1684860ec23ea5499065cc4e766b3711e7dcd77"
+    },
+    {
+      "id": "question",
+      "use": "疑问场景；图内问号已经存在，不再叠加第二个问号",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (8).png",
+        "sha256": "e24615751116f6ed2a8cbc836d0b180ef916fcd551867d3171f3f5f094193556",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/question.png",
+        "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            88,
+            70,
+            935,
+            1402
+          ],
+          "nonTransparentPixels": 679215,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.431784
+        },
+        "crop": [
+          88,
+          70,
+          935,
+          1402
+        ],
+        "scale": 0.548048048,
+        "resized": [
+          464,
+          730
+        ],
+        "offset": [
+          68,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            68,
+            0,
+            532,
+            730
+          ],
+          "nonTransparentPixels": 207763,
+          "partiallyTransparentPixels": 7574,
+          "coverage": 0.474345
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=893829/1573044 (56.82%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\question-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "ffd8383990edd12ef682933fd04fac9033703281fb82b68ad7a1b692d4e64f88"
+    },
+    {
+      "id": "read",
+      "use": "资料、证据、来源说明",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (9).png",
+        "sha256": "d7f54247bbc18fde1fcf3bd874b26ee19e5a1d212ccfc0e36836be535489cf3a",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/read.png",
+        "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            186,
+            72,
+            899,
+            1402
+          ],
+          "nonTransparentPixels": 699376,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.4446
+        },
+        "crop": [
+          186,
+          72,
+          899,
+          1402
+        ],
+        "scale": 0.54887218,
+        "resized": [
+          391,
+          730
+        ],
+        "offset": [
+          104,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            104,
+            0,
+            495,
+            730
+          ],
+          "nonTransparentPixels": 213770,
+          "partiallyTransparentPixels": 6496,
+          "coverage": 0.488059
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=873668/1573044 (55.54%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\read-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "89a86ea4f83a9ca6ad99d427195dbbc5d8cf3a2ac192104f05e60091b34de6ea"
+    },
+    {
+      "id": "explain",
+      "use": "持续讲解、补充说明",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (10).png",
+        "sha256": "42e9970aad64fe0bb8be92f5d6c297a082c281f286bfa40c4e6434a3a55d75d5",
+        "dimensions": [
+          1122,
+          1402
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/explain.png",
+        "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            218,
+            60,
+            1028,
+            1402
+          ],
+          "nonTransparentPixels": 693925,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.441135
+        },
+        "crop": [
+          218,
+          60,
+          1028,
+          1402
+        ],
+        "scale": 0.543964232,
+        "resized": [
+          441,
+          730
+        ],
+        "offset": [
+          79,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            79,
+            0,
+            520,
+            730
+          ],
+          "nonTransparentPixels": 208987,
+          "partiallyTransparentPixels": 6943,
+          "coverage": 0.477139
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=879119/1573044 (55.89%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\explain-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "4228645b30ebf4005e32b21b4a2ea4493c921a1040f7573a688154cd069b7f5e"
+    },
+    {
+      "id": "point-right",
+      "use": "指向右侧信息；默认镜像后使用",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_16 (9).png",
+        "sha256": "c364da9a33891ee139df5a9ef53592d814426dd3186123d9762186ad8a12f61f",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/point-right.png",
+        "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            30,
+            80,
+            997,
+            1536
+          ],
+          "nonTransparentPixels": 691594,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.439704
+        },
+        "crop": [
+          30,
+          80,
+          997,
+          1536
+        ],
+        "scale": 0.501373626,
+        "resized": [
+          485,
+          730
+        ],
+        "offset": [
+          57,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            57,
+            0,
+            542,
+            730
+          ],
+          "nonTransparentPixels": 178224,
+          "partiallyTransparentPixels": 8437,
+          "coverage": 0.406904
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=881270/1572864 (56.03%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\point-right-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [
+        "host.left"
+      ],
+      "derivationFingerprint": "3c2f3acfd5aa7a082905a6901d34dfaeea93ba3d61735fa137d51a233336c97d"
+    },
+    {
+      "id": "close",
+      "use": "收束、总结、结束保持",
+      "source": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_16 (10).png",
+        "sha256": "0aee211bc4a7f7230e7581cfeccc82b2b0ba715f4e8538fb8c000afdb49267e3",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "license": "user-provided",
+        "rightsStatus": "needs-review"
+      },
+      "output": {
+        "path": "host/close.png",
+        "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb",
+        "dimensions": [
+          600,
+          730
+        ],
+        "mode": "RGBA"
+      },
+      "normalization": {
+        "method": "alpha-bbox-fit-bottom-center",
+        "sourceAlpha": {
+          "bbox": [
+            227,
+            81,
+            783,
+            1536
+          ],
+          "nonTransparentPixels": 624630,
+          "partiallyTransparentPixels": 0,
+          "coverage": 0.397129
+        },
+        "crop": [
+          227,
+          81,
+          783,
+          1536
+        ],
+        "scale": 0.501718213,
+        "resized": [
+          279,
+          730
+        ],
+        "offset": [
+          160,
+          0
+        ],
+        "outputAlpha": {
+          "bbox": [
+            160,
+            0,
+            439,
+            730
+          ],
+          "nonTransparentPixels": 160423,
+          "partiallyTransparentPixels": 6576,
+          "coverage": 0.366263
+        },
+        "eyeLineDetection": "not-performed; contact-sheet human review required"
+      },
+      "backgroundRemovalLog": "removed=948234/1572864 (60.29%) output=E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production-assets\\pose-build-04uy0_5d\\close-transparent.png",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": [],
+      "derivationFingerprint": "ae6671ef4450b92029c92956e6f33e0f28433cdb839e7f9980e8e000f4776378"
+    }
+  ],
+  "contactSheet": {
+    "path": "review/host-poses-contact-sheet.png",
+    "sha256": "924ab1d555c617ec15218aceb45ca9dea53bc3f7ba9b015780cb2bed5a307385",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "reviewStatus": "pending"
+  }
+}

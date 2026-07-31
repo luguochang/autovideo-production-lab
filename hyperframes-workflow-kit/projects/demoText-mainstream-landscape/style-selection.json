@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "demoText-mainstream-landscape",
+  "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+  "baseStyleId": "anime-sticker-explainer",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [],
+  "blueprints": [],
+  "motionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "css-marker-patterns",
+    "card-morph-anchor"
+  ],
+  "status": "approved",
+  "approvedBy": "user-request",
+  "notes": "用户明确选择 A；六个横屏探针已通过 HyperFrames 与媒体 QA。A 作为项目本地原创二次元贴纸讲解风格进入横屏生产。",
+  "receipts": [
+    {
+      "source": "STYLE_ANALYSIS.md",
+      "kind": "project-local",
+      "license": "project-generated"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

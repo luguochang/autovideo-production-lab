@@ -1,0 +1,146 @@
+[
+  {
+    "id": "biennale-yellow",
+    "title": "Biennale Yellow — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/biennale-yellow/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "blockframe",
+    "title": "BlockFrame — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/blockframe/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "blue-professional",
+    "title": "Blue Professional — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/blue-professional/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "bold-poster",
+    "title": "Bold Poster — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/bold-poster/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "broadside",
+    "title": "Broadside — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/broadside/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "capsule",
+    "title": "Capsule — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/capsule/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "cartesian",
+    "title": "Cartesian — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/cartesian/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "claude",
+    "title": "Claude — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/claude/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "fonts",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "cobalt-grid",
+    "title": "Cobalt Grid — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/cobalt-grid/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "coral",
+    "title": "Coral — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/coral/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "creative-mode",
+    "title": "Creative Mode — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/creative-mode/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "daisy-days",
+    "title": "Daisy Days — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/daisy-days/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "editorial-forest",
+    "title": "Editorial Forest — Frame (video / frame layer)",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/frame-presets/editorial-forest/FRAME.md",
+    "files": [
+      "FRAME.md",
+      "caption-skin.html",
+      "frame-showcase.html"
+    ],
+    "license": "Apache-2.0"
+  }
+]

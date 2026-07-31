@@ -1,0 +1,12 @@
+{
+  "name": "e17-data-proof-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.64 preview",
+    "lint": "npx --yes hyperframes@0.7.64 lint --verbose",
+    "check": "npx --yes hyperframes@0.7.64 check --strict --snapshots --samples 18 --at-transitions",
+    "snapshot": "npx --yes hyperframes@0.7.64 snapshot --at 0.8,1.5,2.72,3.8,5.2,6.24,7.1,7.76",
+    "render:probe": "npx --yes hyperframes@0.7.64 render --quality high --fps 30 --output renders/data-proof-probe.mp4"
+  }
+}

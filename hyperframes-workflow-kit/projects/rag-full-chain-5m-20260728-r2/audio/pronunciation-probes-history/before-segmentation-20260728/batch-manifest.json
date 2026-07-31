@@ -1,0 +1,628 @@
+{
+  "schemaVersion": "cosyvoice-zh-female-batch/v1",
+  "segments": [
+    {
+      "id": "term-001-a",
+      "textFile": "term-001-a.tts.txt",
+      "textSha256": "d3b4401896ba6c30ef27600e0c5cfd5a1e1d07271ee91c694e60123d9bb3fea5",
+      "output": "term-001-a.wav",
+      "receipt": "term-001-a.recipe.json"
+    },
+    {
+      "id": "term-001-b",
+      "textFile": "term-001-b.tts.txt",
+      "textSha256": "5ea4a9d91087f8eb1b86b5332dc181cfabfb728034290f08b3ddd8342d68eb84",
+      "output": "term-001-b.wav",
+      "receipt": "term-001-b.recipe.json"
+    },
+    {
+      "id": "term-002-a",
+      "textFile": "term-002-a.tts.txt",
+      "textSha256": "d3b4401896ba6c30ef27600e0c5cfd5a1e1d07271ee91c694e60123d9bb3fea5",
+      "output": "term-002-a.wav",
+      "receipt": "term-002-a.recipe.json"
+    },
+    {
+      "id": "term-002-b",
+      "textFile": "term-002-b.tts.txt",
+      "textSha256": "85a767e562354af9c922286d6868a203fe69446a9fe1f81a33bb525ac2b00d05",
+      "output": "term-002-b.wav",
+      "receipt": "term-002-b.recipe.json"
+    },
+    {
+      "id": "term-003-a",
+      "textFile": "term-003-a.tts.txt",
+      "textSha256": "b3d53b7ea86a6f596e0bc7462be49c01b9e88ec5a8e00749d3eaaa656d157fba",
+      "output": "term-003-a.wav",
+      "receipt": "term-003-a.recipe.json"
+    },
+    {
+      "id": "term-003-b",
+      "textFile": "term-003-b.tts.txt",
+      "textSha256": "b09979d1b92fb59a705bc5f86eee5a929ad91272b6051447dabc0c3028653f14",
+      "output": "term-003-b.wav",
+      "receipt": "term-003-b.recipe.json"
+    },
+    {
+      "id": "term-003-c",
+      "textFile": "term-003-c.tts.txt",
+      "textSha256": "2355f49d14f62b407a6c7689e24553a7434547f140f6ba562acd9c706b20a1e6",
+      "output": "term-003-c.wav",
+      "receipt": "term-003-c.recipe.json"
+    },
+    {
+      "id": "term-004-a",
+      "textFile": "term-004-a.tts.txt",
+      "textSha256": "ebf254f6f80a1f735655ebc38f3b3411f9d5880645b05e3743cf043b511e2e28",
+      "output": "term-004-a.wav",
+      "receipt": "term-004-a.recipe.json"
+    },
+    {
+      "id": "term-004-b",
+      "textFile": "term-004-b.tts.txt",
+      "textSha256": "56cf15996db4a78a5c0438be3a77ca4ff254e58ea197cfe9c0cc173f5d9755ef",
+      "output": "term-004-b.wav",
+      "receipt": "term-004-b.recipe.json"
+    },
+    {
+      "id": "term-004-c",
+      "textFile": "term-004-c.tts.txt",
+      "textSha256": "b14180757507bd4f745b8694258c4e27931d8dd96e63b126794d9a3f90aca814",
+      "output": "term-004-c.wav",
+      "receipt": "term-004-c.recipe.json"
+    },
+    {
+      "id": "term-005-a",
+      "textFile": "term-005-a.tts.txt",
+      "textSha256": "69af6a9d9e812924c51caacca3e6a5ea6e3f282d328dbd4913b8375042a08ebd",
+      "output": "term-005-a.wav",
+      "receipt": "term-005-a.recipe.json"
+    },
+    {
+      "id": "term-005-b",
+      "textFile": "term-005-b.tts.txt",
+      "textSha256": "b7871c1c8cb67ec7a899d33f636be169cd7434fabe42b202700169044ed8b5b9",
+      "output": "term-005-b.wav",
+      "receipt": "term-005-b.recipe.json"
+    },
+    {
+      "id": "term-005-c",
+      "textFile": "term-005-c.tts.txt",
+      "textSha256": "851410d3ddee28e96a7dab08a57b5d4ffa0dd3681b8fdc48765ae522211eb173",
+      "output": "term-005-c.wav",
+      "receipt": "term-005-c.recipe.json"
+    },
+    {
+      "id": "term-006-a",
+      "textFile": "term-006-a.tts.txt",
+      "textSha256": "99cd0e6413b6e9a8ee390c3bfc97ba5d24b38ddbff674ca099780ec39dfdb286",
+      "output": "term-006-a.wav",
+      "receipt": "term-006-a.recipe.json"
+    },
+    {
+      "id": "term-006-b",
+      "textFile": "term-006-b.tts.txt",
+      "textSha256": "52ca91a819c59d8355db794ba887482e1940a0966e1a1a7b5a0a1059baa3cfcd",
+      "output": "term-006-b.wav",
+      "receipt": "term-006-b.recipe.json"
+    },
+    {
+      "id": "term-007-a",
+      "textFile": "term-007-a.tts.txt",
+      "textSha256": "d2a58fb0b87681798df43ed80544d5536e910f33e0caf8436be3092de5c870f8",
+      "output": "term-007-a.wav",
+      "receipt": "term-007-a.recipe.json"
+    },
+    {
+      "id": "term-007-b",
+      "textFile": "term-007-b.tts.txt",
+      "textSha256": "ae519d8237795456330b5cef0854e75df712066696b906a2788649053665f857",
+      "output": "term-007-b.wav",
+      "receipt": "term-007-b.recipe.json"
+    },
+    {
+      "id": "term-008-a",
+      "textFile": "term-008-a.tts.txt",
+      "textSha256": "6d053586c6e47cdb02758180354e9faa3ccb4e29912d883a2a29bec0b6f027bf",
+      "output": "term-008-a.wav",
+      "receipt": "term-008-a.recipe.json"
+    },
+    {
+      "id": "term-008-b",
+      "textFile": "term-008-b.tts.txt",
+      "textSha256": "0919b4b5e7dde93976c48c88689a5662d52da3a179889dc612055dde93657f2c",
+      "output": "term-008-b.wav",
+      "receipt": "term-008-b.recipe.json"
+    },
+    {
+      "id": "term-009-a",
+      "textFile": "term-009-a.tts.txt",
+      "textSha256": "f97fe4ea088246cffdb9648d636ffdd52d497c3fd2310525e0b10153c56f3543",
+      "output": "term-009-a.wav",
+      "receipt": "term-009-a.recipe.json"
+    },
+    {
+      "id": "term-009-b",
+      "textFile": "term-009-b.tts.txt",
+      "textSha256": "007faeffc4ac9a65c7fc6ddf7f058836a2914aebba6c604e4d2a1ac864a7ee89",
+      "output": "term-009-b.wav",
+      "receipt": "term-009-b.recipe.json"
+    },
+    {
+      "id": "term-010-a",
+      "textFile": "term-010-a.tts.txt",
+      "textSha256": "33e8a3ac0fe358ae0f48f533c6870c56577525c1b4cf85d258649224f4c28428",
+      "output": "term-010-a.wav",
+      "receipt": "term-010-a.recipe.json"
+    },
+    {
+      "id": "term-010-b",
+      "textFile": "term-010-b.tts.txt",
+      "textSha256": "de52bcf14fd910c1e4d08525b56497400b68f987891213ab2d7990ffdf408d72",
+      "output": "term-010-b.wav",
+      "receipt": "term-010-b.recipe.json"
+    },
+    {
+      "id": "term-011-a",
+      "textFile": "term-011-a.tts.txt",
+      "textSha256": "10db8029857b26ff809068a47affa2e209075dfd153f576da78dc9cb00160c28",
+      "output": "term-011-a.wav",
+      "receipt": "term-011-a.recipe.json"
+    },
+    {
+      "id": "term-011-b",
+      "textFile": "term-011-b.tts.txt",
+      "textSha256": "789c1d30aa222abbed1725fca6608ecee505e69448b59f518b566b99fa03537d",
+      "output": "term-011-b.wav",
+      "receipt": "term-011-b.recipe.json"
+    },
+    {
+      "id": "term-012-a",
+      "textFile": "term-012-a.tts.txt",
+      "textSha256": "efd9a5db3f484ce5940759597881349812c12f43644507aad5cc0742589bdcce",
+      "output": "term-012-a.wav",
+      "receipt": "term-012-a.recipe.json"
+    },
+    {
+      "id": "term-012-b",
+      "textFile": "term-012-b.tts.txt",
+      "textSha256": "673feeb9c1e3906ba13a391e610bd8c8e724314080abc299db1f9d6c3d82890f",
+      "output": "term-012-b.wav",
+      "receipt": "term-012-b.recipe.json"
+    },
+    {
+      "id": "term-013-a",
+      "textFile": "term-013-a.tts.txt",
+      "textSha256": "d1134fddce68e071a0cd353979996d14c4b6b47aa59e82cdbaa9e8409f491588",
+      "output": "term-013-a.wav",
+      "receipt": "term-013-a.recipe.json"
+    },
+    {
+      "id": "term-013-b",
+      "textFile": "term-013-b.tts.txt",
+      "textSha256": "5c3ffab3f999d8fea478d277f54cd7b5644be5751eff29ed7f02285b7df4b9dc",
+      "output": "term-013-b.wav",
+      "receipt": "term-013-b.recipe.json"
+    },
+    {
+      "id": "term-014-a",
+      "textFile": "term-014-a.tts.txt",
+      "textSha256": "1b03a9deed248b1dac314d15fa70a4fe8dec251bab64cb5582bcb5a865a3e029",
+      "output": "term-014-a.wav",
+      "receipt": "term-014-a.recipe.json"
+    },
+    {
+      "id": "term-014-b",
+      "textFile": "term-014-b.tts.txt",
+      "textSha256": "f7d5dd0e70174cb326fd7c1c2da9c1604cf9417f3337c1da7dc44c0a3a044876",
+      "output": "term-014-b.wav",
+      "receipt": "term-014-b.recipe.json"
+    },
+    {
+      "id": "term-015-a",
+      "textFile": "term-015-a.tts.txt",
+      "textSha256": "9a30357bafafae9f00a962a6df599729705691d5c0a25e529dd707e7186612d5",
+      "output": "term-015-a.wav",
+      "receipt": "term-015-a.recipe.json"
+    },
+    {
+      "id": "term-015-b",
+      "textFile": "term-015-b.tts.txt",
+      "textSha256": "a8946654c2b6e7e5ec7ae51f496e8d6374fde8ed4f641a8e56a667ec88b25d4b",
+      "output": "term-015-b.wav",
+      "receipt": "term-015-b.recipe.json"
+    },
+    {
+      "id": "term-016-a",
+      "textFile": "term-016-a.tts.txt",
+      "textSha256": "48669db3a11ecd4871ea862f86d5ea061970b5e1ea3474e2cac011e68f834bf5",
+      "output": "term-016-a.wav",
+      "receipt": "term-016-a.recipe.json"
+    },
+    {
+      "id": "term-016-b",
+      "textFile": "term-016-b.tts.txt",
+      "textSha256": "f8e7d667b45028913bf90cd261529b17c0e3982c9c06c0cf00931dcf9cd2a64a",
+      "output": "term-016-b.wav",
+      "receipt": "term-016-b.recipe.json"
+    },
+    {
+      "id": "term-017-a",
+      "textFile": "term-017-a.tts.txt",
+      "textSha256": "48669db3a11ecd4871ea862f86d5ea061970b5e1ea3474e2cac011e68f834bf5",
+      "output": "term-017-a.wav",
+      "receipt": "term-017-a.recipe.json"
+    },
+    {
+      "id": "term-017-b",
+      "textFile": "term-017-b.tts.txt",
+      "textSha256": "09be1b15473c73348ab09b429cd395a6618f83483774d4ea782a50b2275ea9a8",
+      "output": "term-017-b.wav",
+      "receipt": "term-017-b.recipe.json"
+    },
+    {
+      "id": "term-018-a",
+      "textFile": "term-018-a.tts.txt",
+      "textSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+      "output": "term-018-a.wav",
+      "receipt": "term-018-a.recipe.json"
+    },
+    {
+      "id": "term-018-b",
+      "textFile": "term-018-b.tts.txt",
+      "textSha256": "eec7caf813fcca00775df3bb659d43d0da983ff3ea6e2aa765c6620c657835a1",
+      "output": "term-018-b.wav",
+      "receipt": "term-018-b.recipe.json"
+    },
+    {
+      "id": "term-019-a",
+      "textFile": "term-019-a.tts.txt",
+      "textSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+      "output": "term-019-a.wav",
+      "receipt": "term-019-a.recipe.json"
+    },
+    {
+      "id": "term-019-b",
+      "textFile": "term-019-b.tts.txt",
+      "textSha256": "0a3b1cba38d5c81f75bd61122a9e78b078ee347756a8aa1145292374ec16e676",
+      "output": "term-019-b.wav",
+      "receipt": "term-019-b.recipe.json"
+    },
+    {
+      "id": "term-020-a",
+      "textFile": "term-020-a.tts.txt",
+      "textSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+      "output": "term-020-a.wav",
+      "receipt": "term-020-a.recipe.json"
+    },
+    {
+      "id": "term-020-b",
+      "textFile": "term-020-b.tts.txt",
+      "textSha256": "1167d39c47247072c8ba66a1085b58cd112c73153a15c1aa86a91f7a5da8a2ce",
+      "output": "term-020-b.wav",
+      "receipt": "term-020-b.recipe.json"
+    },
+    {
+      "id": "term-021-a",
+      "textFile": "term-021-a.tts.txt",
+      "textSha256": "1f71e4e56cc37d205fcc7b5f86b0488cc558e2f055458e6664dde1aa05bd00a0",
+      "output": "term-021-a.wav",
+      "receipt": "term-021-a.recipe.json"
+    },
+    {
+      "id": "term-021-b",
+      "textFile": "term-021-b.tts.txt",
+      "textSha256": "16fdc783d06870c6d5dc7ac81fdb065b46a076a15e8aa25da97ae7fbee006785",
+      "output": "term-021-b.wav",
+      "receipt": "term-021-b.recipe.json"
+    },
+    {
+      "id": "term-022-a",
+      "textFile": "term-022-a.tts.txt",
+      "textSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+      "output": "term-022-a.wav",
+      "receipt": "term-022-a.recipe.json"
+    },
+    {
+      "id": "term-022-b",
+      "textFile": "term-022-b.tts.txt",
+      "textSha256": "b5dbd6459ab71b6952e0d2cc1bc7a76a9ef2f4a4be3de1c69b554a91998b22c2",
+      "output": "term-022-b.wav",
+      "receipt": "term-022-b.recipe.json"
+    },
+    {
+      "id": "term-022-c",
+      "textFile": "term-022-c.tts.txt",
+      "textSha256": "c50639667e525dbba9c6f996df20ca72c3d91de0ff5dfbec58f45395006b22df",
+      "output": "term-022-c.wav",
+      "receipt": "term-022-c.recipe.json"
+    },
+    {
+      "id": "term-023-a",
+      "textFile": "term-023-a.tts.txt",
+      "textSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+      "output": "term-023-a.wav",
+      "receipt": "term-023-a.recipe.json"
+    },
+    {
+      "id": "term-023-b",
+      "textFile": "term-023-b.tts.txt",
+      "textSha256": "9a5bf6e6a3ddbdbcaf92ad6c38963f55313fd821d0ac3d91c9a202ebd6d73007",
+      "output": "term-023-b.wav",
+      "receipt": "term-023-b.recipe.json"
+    },
+    {
+      "id": "term-024-a",
+      "textFile": "term-024-a.tts.txt",
+      "textSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+      "output": "term-024-a.wav",
+      "receipt": "term-024-a.recipe.json"
+    },
+    {
+      "id": "term-024-b",
+      "textFile": "term-024-b.tts.txt",
+      "textSha256": "979b934b28902cf0a6f713dca95ac6db8e4554ec416ba714f8f6a21926ccc0a1",
+      "output": "term-024-b.wav",
+      "receipt": "term-024-b.recipe.json"
+    },
+    {
+      "id": "term-025-a",
+      "textFile": "term-025-a.tts.txt",
+      "textSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+      "output": "term-025-a.wav",
+      "receipt": "term-025-a.recipe.json"
+    },
+    {
+      "id": "term-025-b",
+      "textFile": "term-025-b.tts.txt",
+      "textSha256": "fd7feeaff237d9e1ad161d9d97270620aad8a6514c5896f1fd9dd94cc4d947da",
+      "output": "term-025-b.wav",
+      "receipt": "term-025-b.recipe.json"
+    },
+    {
+      "id": "term-026-a",
+      "textFile": "term-026-a.tts.txt",
+      "textSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+      "output": "term-026-a.wav",
+      "receipt": "term-026-a.recipe.json"
+    },
+    {
+      "id": "term-026-b",
+      "textFile": "term-026-b.tts.txt",
+      "textSha256": "2d73537fd7f5dd893363a88e4900ef066e02147bffb272d011afe006b7433d30",
+      "output": "term-026-b.wav",
+      "receipt": "term-026-b.recipe.json"
+    },
+    {
+      "id": "term-027-a",
+      "textFile": "term-027-a.tts.txt",
+      "textSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+      "output": "term-027-a.wav",
+      "receipt": "term-027-a.recipe.json"
+    },
+    {
+      "id": "term-027-b",
+      "textFile": "term-027-b.tts.txt",
+      "textSha256": "ecf3ae32a920fc0b2185c3b3d993db3f02ef148925712092d7af9a57601777cd",
+      "output": "term-027-b.wav",
+      "receipt": "term-027-b.recipe.json"
+    },
+    {
+      "id": "term-028-a",
+      "textFile": "term-028-a.tts.txt",
+      "textSha256": "e1cc35e29c31df72fdfd4416ea9bab5167e9ddc51b91717d779a2f53f3514f0f",
+      "output": "term-028-a.wav",
+      "receipt": "term-028-a.recipe.json"
+    },
+    {
+      "id": "term-028-b",
+      "textFile": "term-028-b.tts.txt",
+      "textSha256": "1237eb27ebed23313b795a26a8c0bd3dcf6e768ddcd00609ac0436f7a1c75eb3",
+      "output": "term-028-b.wav",
+      "receipt": "term-028-b.recipe.json"
+    },
+    {
+      "id": "term-029-a",
+      "textFile": "term-029-a.tts.txt",
+      "textSha256": "506d79510335d6cc3b8871274eba8e4277945cab76350448b22e369c0d18801b",
+      "output": "term-029-a.wav",
+      "receipt": "term-029-a.recipe.json"
+    },
+    {
+      "id": "term-029-b",
+      "textFile": "term-029-b.tts.txt",
+      "textSha256": "3b81ff015d655a65a9b10bb3364e70d7d89f4298e78dd606cf77cc5623d19168",
+      "output": "term-029-b.wav",
+      "receipt": "term-029-b.recipe.json"
+    },
+    {
+      "id": "term-030-a",
+      "textFile": "term-030-a.tts.txt",
+      "textSha256": "23678e44612ca8bf029f3368248e79e73c80544524be7382e117698c88fd7135",
+      "output": "term-030-a.wav",
+      "receipt": "term-030-a.recipe.json"
+    },
+    {
+      "id": "term-030-b",
+      "textFile": "term-030-b.tts.txt",
+      "textSha256": "73fbdfced45e4e454ecfe686d8f9465c65b8325dbd06b07c5040ef24b83c0936",
+      "output": "term-030-b.wav",
+      "receipt": "term-030-b.recipe.json"
+    },
+    {
+      "id": "term-031-a",
+      "textFile": "term-031-a.tts.txt",
+      "textSha256": "e0706507e8216c365f854af075a4458de10ec1e13e34f06cfd1d36143877c199",
+      "output": "term-031-a.wav",
+      "receipt": "term-031-a.recipe.json"
+    },
+    {
+      "id": "term-031-b",
+      "textFile": "term-031-b.tts.txt",
+      "textSha256": "e933d7b72b1c022b945269adbc934e06ff297d34e496388712f80a0504aff86d",
+      "output": "term-031-b.wav",
+      "receipt": "term-031-b.recipe.json"
+    },
+    {
+      "id": "term-032-a",
+      "textFile": "term-032-a.tts.txt",
+      "textSha256": "f00718e3c1d23c3344581800c9a974c53a85ed05286a3c1effcf337117c094f9",
+      "output": "term-032-a.wav",
+      "receipt": "term-032-a.recipe.json"
+    },
+    {
+      "id": "term-032-b",
+      "textFile": "term-032-b.tts.txt",
+      "textSha256": "0ce7dd1ff8755474e9e9e845598cd4e461838caec454f89e841991843154adee",
+      "output": "term-032-b.wav",
+      "receipt": "term-032-b.recipe.json"
+    },
+    {
+      "id": "term-033-a",
+      "textFile": "term-033-a.tts.txt",
+      "textSha256": "74be0b26e120740fa88791f9f32877eff02717e348f11a017b252c64910453aa",
+      "output": "term-033-a.wav",
+      "receipt": "term-033-a.recipe.json"
+    },
+    {
+      "id": "term-033-b",
+      "textFile": "term-033-b.tts.txt",
+      "textSha256": "6a5f21526e6affa958acc7d0eafb5b611d1d665e30b5436a7958cde8f7d3dc6f",
+      "output": "term-033-b.wav",
+      "receipt": "term-033-b.recipe.json"
+    },
+    {
+      "id": "term-033-c",
+      "textFile": "term-033-c.tts.txt",
+      "textSha256": "e0d1f3cff2a1eaf68f50cdf70e455beff37f81a8d8f9e7ea167e5c1b46d6f2ec",
+      "output": "term-033-c.wav",
+      "receipt": "term-033-c.recipe.json"
+    },
+    {
+      "id": "term-034-a",
+      "textFile": "term-034-a.tts.txt",
+      "textSha256": "c5d2a4464c9adbb8fc758dc71360f995e53be16db43fd057c230f77dfde024cb",
+      "output": "term-034-a.wav",
+      "receipt": "term-034-a.recipe.json"
+    },
+    {
+      "id": "term-034-b",
+      "textFile": "term-034-b.tts.txt",
+      "textSha256": "cebf5af3d5d726ecaa1e43545511b21697ffaae8960f841b7868649259902894",
+      "output": "term-034-b.wav",
+      "receipt": "term-034-b.recipe.json"
+    },
+    {
+      "id": "term-034-c",
+      "textFile": "term-034-c.tts.txt",
+      "textSha256": "1559d37bf5e5131f172edb083a20153e6302bc62f4b74a27991bc02c85b60179",
+      "output": "term-034-c.wav",
+      "receipt": "term-034-c.recipe.json"
+    },
+    {
+      "id": "term-035-a",
+      "textFile": "term-035-a.tts.txt",
+      "textSha256": "46adad81b2f4dc2dfab8c1d68223fe51b37dd910170712e8f9468eb33948b475",
+      "output": "term-035-a.wav",
+      "receipt": "term-035-a.recipe.json"
+    },
+    {
+      "id": "term-035-b",
+      "textFile": "term-035-b.tts.txt",
+      "textSha256": "d7adf1fcc5a5a3320be57a3f2546413324dc8d235398280308fdd44c167de60e",
+      "output": "term-035-b.wav",
+      "receipt": "term-035-b.recipe.json"
+    },
+    {
+      "id": "term-036-a",
+      "textFile": "term-036-a.tts.txt",
+      "textSha256": "51d3e8749359e7e3e240f697b3158ff8755cd488ead35a5ea04d685e14e43578",
+      "output": "term-036-a.wav",
+      "receipt": "term-036-a.recipe.json"
+    },
+    {
+      "id": "term-036-b",
+      "textFile": "term-036-b.tts.txt",
+      "textSha256": "6ebc3ec3a3c62471409ce7e048e4ff8260bbb7a185625a22cee250294a9e24bb",
+      "output": "term-036-b.wav",
+      "receipt": "term-036-b.recipe.json"
+    },
+    {
+      "id": "term-037-a",
+      "textFile": "term-037-a.tts.txt",
+      "textSha256": "c116995bded5024be362340264c2ce3dc7be62358681321a6ef95fac193bcd20",
+      "output": "term-037-a.wav",
+      "receipt": "term-037-a.recipe.json"
+    },
+    {
+      "id": "term-037-b",
+      "textFile": "term-037-b.tts.txt",
+      "textSha256": "8e99e13d6eb1a6171c72fee6134158d826b564f8651b0ea05d7efb7fb31abe6e",
+      "output": "term-037-b.wav",
+      "receipt": "term-037-b.recipe.json"
+    },
+    {
+      "id": "term-037-c",
+      "textFile": "term-037-c.tts.txt",
+      "textSha256": "25466ce8c32cb67900da86d7067bbdc18b934e59a393d532b608020965dbf10e",
+      "output": "term-037-c.wav",
+      "receipt": "term-037-c.recipe.json"
+    },
+    {
+      "id": "term-038-a",
+      "textFile": "term-038-a.tts.txt",
+      "textSha256": "1f0ff0f132a486224afb3159562dbf44d0577cf1dfe8e188a98459468f2c6996",
+      "output": "term-038-a.wav",
+      "receipt": "term-038-a.recipe.json"
+    },
+    {
+      "id": "term-038-b",
+      "textFile": "term-038-b.tts.txt",
+      "textSha256": "e5b2d625bf82087feabe2139c6980db7d4aea19dcdd6d300e86e30fea4f1505a",
+      "output": "term-038-b.wav",
+      "receipt": "term-038-b.recipe.json"
+    },
+    {
+      "id": "term-039-a",
+      "textFile": "term-039-a.tts.txt",
+      "textSha256": "b8a24ccbf9d509d137d655997c2c255e8111e8c7e2ce4dbafd8d5c3524e6846d",
+      "output": "term-039-a.wav",
+      "receipt": "term-039-a.recipe.json"
+    },
+    {
+      "id": "term-039-b",
+      "textFile": "term-039-b.tts.txt",
+      "textSha256": "eaca7690beac4db614da371ce755326032a3c73084ed46577b7c28022733609c",
+      "output": "term-039-b.wav",
+      "receipt": "term-039-b.recipe.json"
+    },
+    {
+      "id": "term-040-a",
+      "textFile": "term-040-a.tts.txt",
+      "textSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c",
+      "output": "term-040-a.wav",
+      "receipt": "term-040-a.recipe.json"
+    },
+    {
+      "id": "term-040-b",
+      "textFile": "term-040-b.tts.txt",
+      "textSha256": "86e9a8c71556b3e4672d3b5e95affd1e320687c5dc2d8758eccbdc2e1dd88505",
+      "output": "term-040-b.wav",
+      "receipt": "term-040-b.recipe.json"
+    },
+    {
+      "id": "term-041-a",
+      "textFile": "term-041-a.tts.txt",
+      "textSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c",
+      "output": "term-041-a.wav",
+      "receipt": "term-041-a.recipe.json"
+    },
+    {
+      "id": "term-041-b",
+      "textFile": "term-041-b.tts.txt",
+      "textSha256": "e088bb5518db5e62240eb19ec2fb331c1b09d667c0f12754398641123ba95595",
+      "output": "term-041-b.wav",
+      "receipt": "term-041-b.recipe.json"
+    }
+  ]
+}

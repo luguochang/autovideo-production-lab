@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "autovideo-breath-merge/v1",
+  "generatedAt": "2026-07-22T09:28:45.992Z",
+  "manifest": {
+    "path": "merge-manifest.json",
+    "sha256": "8e932cca2d0f1768ab4e159e5fcf325363ecaa2fafb21c5bda0b9cee0e247033"
+  },
+  "policy": {
+    "targetActiveVoiceGapSeconds": 0.56,
+    "permittedGapSeconds": {
+      "minimum": 0.42,
+      "maximum": 0.65
+    },
+    "leadingPaddingSeconds": 0.06,
+    "trailingPaddingSeconds": 0.1,
+    "edgeFadeSeconds": 0.01,
+    "silenceDetection": "ffmpeg silencedetect noise=-38dB d=0.03",
+    "finalLoudness": {
+      "integratedLufs": -16,
+      "truePeakDb": -1.5,
+      "passes": 2
+    }
+  },
+  "parts": [
+    {
+      "id": "part-001",
+      "path": "parts/part-001.wav",
+      "sha256": "7a4bb8160e29f548fba283d72977a6fca2ec5412743c6d1b6533addefb2affa4",
+      "durationSeconds": 3.657146,
+      "codec": "pcm_s16le",
+      "bounds": {
+        "durationSeconds": 3.657146,
+        "activeStartSeconds": 0,
+        "activeEndSeconds": 3.657146,
+        "trimStartSeconds": 0,
+        "trimEndSeconds": 3.657146,
+        "retainedLeadingSilenceSeconds": 0,
+        "retainedTrailingSilenceSeconds": 0,
+        "detectedSilenceSegments": [
+          {
+            "start": 0.346187,
+            "end": 0.754687,
+            "duration": 0.4085
+          },
+          {
+            "start": 1.862792,
+            "end": 2.195812,
+            "duration": 0.333021
+          }
+        ]
+      }
+    },
+    {
+      "id": "part-002",
+      "path": "parts/part-002.wav",
+      "sha256": "f4850e8c607e2c33ae32f26565ccd801e7c13dfb80cf401b5fc3754fa1d6e234",
+      "durationSeconds": 8.626208,
+      "codec": "pcm_s16le",
+      "bounds": {
+        "durationSeconds": 8.626208,
+        "activeStartSeconds": 0,
+        "activeEndSeconds": 8.626208,
+        "trimStartSeconds": 0,
+        "trimEndSeconds": 8.626208,
+        "retainedLeadingSilenceSeconds": 0,
+        "retainedTrailingSilenceSeconds": 0,
+        "detectedSilenceSegments": [
+          {
+            "start": 0.457375,
+            "end": 0.882125,
+            "duration": 0.42475
+          },
+          {
+            "start": 1.301417,
+            "end": 1.559917,
+            "duration": 0.2585
+          },
+          {
+            "start": 1.896729,
+            "end": 1.937667,
+            "duration": 0.040938
+          },
+          {
+            "start": 4.395417,
+            "end": 4.441417,
+            "duration": 0.046
+          },
+          {
+            "start": 4.588,
+            "end": 4.693667,
+            "duration": 0.105667
+          },
+          {
+            "start": 7.266417,
+            "end": 7.320125,
+            "duration": 0.053708
+          }
+        ]
+      }
+    },
+    {
+      "id": "part-003",
+      "path": "parts/part-003.wav",
+      "sha256": "676a6cd8da620957f28b633454b4649f8d10bcaddcc049c3b58015a1a4fcf79d",
+      "durationSeconds": 7.418771,
+      "codec": "pcm_s16le",
+      "bounds": {
+        "durationSeconds": 7.418771,
+        "activeStartSeconds": 0,
+        "activeEndSeconds": 7.418771,
+        "trimStartSeconds": 0,
+        "trimEndSeconds": 7.418771,
+        "retainedLeadingSilenceSeconds": 0,
+        "retainedTrailingSilenceSeconds": 0,
+        "detectedSilenceSegments": [
+          {
+            "start": 1.024833,
+            "end": 1.066562,
+            "duration": 0.041729
+          },
+          {
+            "start": 1.151104,
+            "end": 1.26975,
+            "duration": 0.118646
+          },
+          {
+            "start": 1.43725,
+            "end": 1.468187,
+            "duration": 0.030937
+          },
+          {
+            "start": 3.780229,
+            "end": 3.824187,
+            "duration": 0.043958
+          },
+          {
+            "start": 3.923625,
+            "end": 4.010167,
+            "duration": 0.086542
+          },
+          {
+            "start": 5.330062,
+            "end": 5.384396,
+            "duration": 0.054333
+          },
+          {
+            "start": 5.421646,
+            "end": 5.532563,
+            "duration": 0.110917
+          },
+          {
+            "start": 6.345375,
+            "end": 6.388521,
+            "duration": 0.043146
+          }
+        ]
+      }
+    },
+    {
+      "id": "part-004",
+      "path": "parts/part-004.wav",
+      "sha256": "853fa8ebed96ff281c86807ad85f478354ddcd39612fd6344f709cfc34c86717",
+      "durationSeconds": 10.425771,
+      "codec": "pcm_s16le",
+      "bounds": {
+        "durationSeconds": 10.425771,
+        "activeStartSeconds": 0,
+        "activeEndSeconds": 10.425771,
+        "trimStartSeconds": 0,
+        "trimEndSeconds": 10.425771,
+        "retainedLeadingSilenceSeconds": 0,
+        "retainedTrailingSilenceSeconds": 0,
+        "detectedSilenceSegments": [
+          {
+            "start": 0.532604,
+            "end": 0.572354,
+            "duration": 0.03975
+          },
+          {
+            "start": 1.304583,
+            "end": 1.361333,
+            "duration": 0.05675
+          },
+          {
+            "start": 1.425625,
+            "end": 1.572729,
+            "duration": 0.147104
+          },
+          {
+            "start": 2.170271,
+            "end": 2.214604,
+            "duration": 0.044333
+          },
+          {
+            "start": 3.531937,
+            "end": 3.847125,
+            "duration": 0.315188
+          },
+          {
+            "start": 4.728208,
+            "end": 4.759875,
+            "duration": 0.031667
+          },
+          {
+            "start": 4.97275,
+            "end": 5.012104,
+            "duration": 0.039354
+          },
+          {
+            "start": 8.294979,
+            "end": 8.352271,
+            "duration": 0.057292
+          },
+          {
+            "start": 8.488354,
+            "end": 8.593208,
+            "duration": 0.104854
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "afterPartIndex": 0,
+      "targetActiveVoiceGapSeconds": 0.56,
+      "retainedTrailingSilenceSeconds": 0,
+      "retainedNextLeadingSilenceSeconds": 0,
+      "insertedSilenceSeconds": 0.56,
+      "actualActiveVoiceGapSeconds": 0.56
+    },
+    {
+      "afterPartIndex": 1,
+      "targetActiveVoiceGapSeconds": 0.56,
+      "retainedTrailingSilenceSeconds": 0,
+      "retainedNextLeadingSilenceSeconds": 0,
+      "insertedSilenceSeconds": 0.56,
+      "actualActiveVoiceGapSeconds": 0.56
+    },
+    {
+      "afterPartIndex": 2,
+      "targetActiveVoiceGapSeconds": 0.56,
+      "retainedTrailingSilenceSeconds": 0,
+      "retainedNextLeadingSilenceSeconds": 0,
+      "insertedSilenceSeconds": 0.56,
+      "actualActiveVoiceGapSeconds": 0.56
+    }
+  ],
+  "output": {
+    "path": "narration.candidate.wav",
+    "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+    "durationSeconds": 31.807896,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1
+  }
+}

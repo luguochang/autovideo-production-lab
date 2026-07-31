@@ -1,0 +1,342 @@
+{
+  "ok": true,
+  "expectedDuration": 7.242254,
+  "probes": [
+    {
+      "id": "A-handdrawn-board",
+      "file": "renders/A-handdrawn-board.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.274667",
+          "size": "1407959"
+        }
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "video": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "duration": 7.274667,
+      "dimensionsOk": true,
+      "frameRateOk": true,
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "B-magazine-collage",
+      "file": "renders/B-magazine-collage.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.274667",
+          "size": "991255"
+        }
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "video": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "duration": 7.274667,
+      "dimensionsOk": true,
+      "frameRateOk": true,
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "C-editorial-data",
+      "file": "renders/C-editorial-data.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.274667",
+          "size": "925958"
+        }
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "video": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "duration": 7.274667,
+      "dimensionsOk": true,
+      "frameRateOk": true,
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "A-handdrawn-board-landscape",
+      "file": "renders/A-handdrawn-board-landscape.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.274667",
+          "size": "895628"
+        }
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "video": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "duration": 7.274667,
+      "dimensionsOk": true,
+      "frameRateOk": true,
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "B-magazine-collage-landscape",
+      "file": "renders/B-magazine-collage-landscape.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.274667",
+          "size": "723764"
+        }
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "video": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "duration": 7.274667,
+      "dimensionsOk": true,
+      "frameRateOk": true,
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "C-editorial-data-landscape",
+      "file": "renders/C-editorial-data-landscape.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "7.274667",
+          "size": "648618"
+        }
+      },
+      "hasVideo": true,
+      "hasAudio": true,
+      "video": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "duration": 7.274667,
+      "dimensionsOk": true,
+      "frameRateOk": true,
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    }
+  ]
+}

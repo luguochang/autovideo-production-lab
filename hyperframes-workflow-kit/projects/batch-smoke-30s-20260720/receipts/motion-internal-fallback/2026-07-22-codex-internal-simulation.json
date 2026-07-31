@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "autovideo-motion-internal-fallback-request/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "scope": "internal-full-production",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "requestedBy": "codex-creator-delegated-internal-review",
+  "requestedAt": "2026-07-22T19:30:45.1308905+08:00",
+  "reason": "Creator-delegated internal workflow simulation: generate the Candidate A composition for static visual review without claiming human sensory review, lifecycle promotion, rights clearance, or public release approval.",
+  "recipeIds": [
+    "comparison-split",
+    "diagram-build",
+    "keyword-handoff"
+  ]
+}

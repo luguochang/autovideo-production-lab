@@ -1,0 +1,612 @@
+{
+  "schemaVersion": "autovideo-production-manifest/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "motionLifecycleAccess": {
+    "schemaVersion": "autovideo-motion-recipe-access/v1",
+    "projectId": "batch-smoke-30s-20260720",
+    "scope": "full-production",
+    "library": {
+      "path": "style-library/motion-library/knowledge-explainer-v1.json",
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed",
+      "schemaVersion": "autovideo-motion-recipe-library/v1",
+      "libraryId": "knowledge-explainer",
+      "version": "1.0.0",
+      "scope": "workspace"
+    },
+    "lifecycleLedger": {
+      "path": "style-library/motion-library/knowledge-explainer.lifecycle.json",
+      "sha256": "76146211541157efe896f95130c67cbf7c5616caff82712dbc36e9af58137b07",
+      "schemaVersion": "autovideo-motion-recipe-lifecycle/v1",
+      "scope": "workspace"
+    },
+    "authorized": true,
+    "releasePolicy": {
+      "motionApprovalIsPublicationApproval": false,
+      "publicReleaseBlocked": true,
+      "internalFallbackUsed": true
+    },
+    "access": [
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "comparison-split",
+        "version": "1.0.0",
+        "definitionSha256": "df97aa86525b2a4cce38521abc51d344461f51bdaa4bea56a5cee70e23683dee",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "diagram-build",
+        "version": "1.0.0",
+        "definitionSha256": "45001bc3e8194b942dc46195115bf085923bcd2312969667741d164a7090b92f",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "keyword-handoff",
+        "version": "1.0.0",
+        "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      }
+    ],
+    "internalFallback": {
+      "used": true,
+      "request": {
+        "schemaVersion": "autovideo-motion-internal-fallback-request/v1",
+        "projectId": "batch-smoke-30s-20260720",
+        "scope": "internal-full-production",
+        "releaseScope": "internal-only",
+        "publicReleaseBlocked": true,
+        "requestedBy": "codex-creator-delegated-internal-review",
+        "requestedAt": "2026-07-22T19:30:45.1308905+08:00",
+        "reason": "Creator-delegated internal workflow simulation: generate the Candidate A composition for static visual review without claiming human sensory review, lifecycle promotion, rights clearance, or public release approval.",
+        "recipeIds": [
+          "comparison-split",
+          "diagram-build",
+          "keyword-handoff"
+        ]
+      },
+      "requestSha256": "36302202a803cc70b6ebdbd2763aaf53cae71928a0c261d6769a5d2fe9f5d01a"
+    },
+    "decisionSha256": "6e717be95c819c2fd85ecd5f72fc99f57f6db08e7191ccd90d5422b881de4257"
+  },
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c",
+      "normalizedNarrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+      "frozenNarrationPath": "input/script.approved.txt"
+    },
+    "templateLock": {
+      "path": "template-lock.json",
+      "sha256": "157f1ff6a5b38649a8319b272aaba53e9997a4c8738b41570791d46a2226f8ca"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e",
+      "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+      "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+      "cueCount": 6,
+      "lastEndSeconds": 31.808
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "2312308e48a1601ec806d5211df302b45e4c249181dd55277087b6b085efff2b"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "fdb40806066bece7a91a849a76dea7c4be62fcd0300c6fd5e5ee964650931855",
+      "schemaVersion": "autovideo-shot-manifest/v1",
+      "schemaPath": "tools/planning-contract/schemas/shot-manifest.schema.json"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "af8b270a58b4f339fab4fac0993ec32e50a237416fc957cb92e68f77c43d6f82",
+      "schemaVersion": "autovideo-graph-ir/v1",
+      "schemaPath": "tools/planning-contract/schemas/graph-ir.schema.json"
+    },
+    "motionRecipeLibrary": {
+      "path": "style-library/motion-library/knowledge-explainer-v1.json",
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed",
+      "schemaVersion": "autovideo-motion-recipe-library/v1",
+      "scope": "workspace"
+    },
+    "graphLayout": {
+      "path": "plan/graph-layout.json",
+      "sha256": "ae485945020d2f588a5ff9a4a5a2822efeaf9fdaae0ce078359b0967e409fb5f",
+      "schemaVersion": "autovideo-graph-layout/v1",
+      "schemaPath": "tools/planning-contract/schemas/graph-layout.schema.json"
+    }
+  },
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 31.808,
+    "duration": 31.808
+  },
+  "sceneCount": 2,
+  "cueCount": 6,
+  "cueDirectives": [
+    {
+      "cueId": "cue-001",
+      "sceneId": "scene-01",
+      "start": 0,
+      "end": 3.98,
+      "visualType": "keyword",
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "keyword-handoff",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "lift",
+            "handoff": "compact-up",
+            "variant": "focus",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-001"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayload": null,
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ]
+    },
+    {
+      "cueId": "cue-002",
+      "sceneId": "scene-01",
+      "start": 3.98,
+      "end": 12.82,
+      "visualType": "diagram",
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "diagram-build",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "wipe",
+            "handoff": "compact-up",
+            "variant": "route",
+            "enterSeconds": 0.7,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.09
+          },
+          "sourceCueIds": [
+            "cue-002"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayload": null,
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ]
+    },
+    {
+      "cueId": "cue-003",
+      "sceneId": "scene-01",
+      "start": 12.82,
+      "end": 16.06,
+      "visualType": "keyword",
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "keyword-handoff",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "lift",
+            "handoff": "compact-up",
+            "variant": "focus",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-003"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayload": null,
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ]
+    },
+    {
+      "cueId": "cue-004",
+      "sceneId": "scene-02",
+      "start": 16.06,
+      "end": 20.82,
+      "visualType": "comparison",
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "comparison-split",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "split",
+            "handoff": "fade",
+            "variant": "contrast",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-004"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayload": null,
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ]
+    },
+    {
+      "cueId": "cue-005",
+      "sceneId": "scene-02",
+      "start": 20.82,
+      "end": 29.66,
+      "visualType": "diagram",
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "diagram-build",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "wipe",
+            "handoff": "compact-up",
+            "variant": "route",
+            "enterSeconds": 0.7,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.09
+          },
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayload": null,
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ]
+    },
+    {
+      "cueId": "cue-006",
+      "sceneId": "scene-02",
+      "start": 29.66,
+      "end": 31.808,
+      "visualType": "keyword",
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "keyword-handoff",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "lift",
+            "handoff": "compact-up",
+            "variant": "close",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayload": null,
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "order": 1,
+      "title": "第一，平台会把系统的复杂性藏起来",
+      "role": "hook",
+      "start": 0,
+      "end": 16.06,
+      "duration": 16.06,
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "shotCueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "plannedSrc": "production/compositions/scenes/01-scene-01.html",
+      "layout": {
+        "hostPose": "question",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "hold"
+      ],
+      "motionRules": [
+        "scale-swap-transition"
+      ],
+      "visualTypes": [
+        "keyword",
+        "diagram"
+      ],
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "keyword-handoff",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "lift",
+            "handoff": "compact-up",
+            "variant": "focus",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-001"
+          ]
+        },
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "diagram-build",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "wipe",
+            "handoff": "compact-up",
+            "variant": "route",
+            "enterSeconds": 0.7,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.09
+          },
+          "sourceCueIds": [
+            "cue-002"
+          ]
+        },
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "keyword-handoff",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "lift",
+            "handoff": "compact-up",
+            "variant": "focus",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-003"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayloads": [],
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ],
+      "terminalState": {
+        "id": "scene-01-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-01",
+          "stateIds": [
+            "graph-scene-01-state-01",
+            "graph-scene-01-state-02",
+            "graph-scene-01-state-03"
+          ],
+          "sourceCueIds": [
+            "cue-001",
+            "cue-002",
+            "cue-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-02",
+      "order": 2,
+      "title": "但问题也在这里：",
+      "role": "close",
+      "start": 16.06,
+      "end": 31.808,
+      "duration": 15.748,
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "shotCueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "plannedSrc": "production/compositions/scenes/02-scene-02.html",
+      "layout": {
+        "hostPose": "close",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "compact",
+        "hold"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ],
+      "visualTypes": [
+        "comparison",
+        "diagram",
+        "keyword"
+      ],
+      "motionRecipeRefs": [
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "comparison-split",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "split",
+            "handoff": "fade",
+            "variant": "contrast",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-004"
+          ]
+        },
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "diagram-build",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "wipe",
+            "handoff": "compact-up",
+            "variant": "route",
+            "enterSeconds": 0.7,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.09
+          },
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        },
+        {
+          "libraryId": "knowledge-explainer",
+          "libraryVersion": "1.0.0",
+          "recipeId": "keyword-handoff",
+          "version": "1.0.0",
+          "params": {
+            "entrance": "lift",
+            "handoff": "compact-up",
+            "variant": "close",
+            "enterSeconds": 0.58,
+            "handoffSeconds": 0.5,
+            "staggerSeconds": 0.07
+          },
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        }
+      ],
+      "assetRefs": [],
+      "carrierPayloads": [],
+      "sfxRefs": [],
+      "provenanceRefs": [
+        "motion-library:knowledge-explainer@1.0.0"
+      ],
+      "terminalState": {
+        "id": "scene-02-terminal",
+        "operation": "hold",
+        "minimumHoldSeconds": 0.6,
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-02",
+          "stateIds": [
+            "graph-scene-02-state-01",
+            "graph-scene-02-state-02",
+            "graph-scene-02-state-03",
+            "graph-scene-02-state-04"
+          ],
+          "sourceCueIds": [
+            "cue-004",
+            "cue-005",
+            "cue-006"
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "alignment-timing-rebase",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.0.0",
+    "reason": "Creator-approved Candidate A; deterministic cue planning preserves the fixed Q-version host shell and content-world-only motion.",
+    "contentIndependent": true,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 3,
+      "targetSceneSeconds": 18,
+      "numericClaimsAsCharts": false,
+      "llmEnrichmentOptional": true
+    },
+    "inputs": {
+      "sourcePlanningBundle": {
+        "role": "previous-approved-planning-bundle",
+        "path": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/visual-plan/.history/2026-07-22T10-59-56-294Z-planning-bundle.json",
+        "sha256": "c7f4e63872d52d302d11b906d8d7a1e06478d333feada736ef7d7189dc9e8db6",
+        "schemaVersion": "autovideo-planning-bundle/v1"
+      }
+    },
+    "sourcePlanningDigestSha256": "cfbeb733ee70c389979a13a9b1cdae1411cf04e68c13e51a4026329391621b97",
+    "sourceMode": "formal-project-import",
+    "rebasedAt": "2026-07-22T11:05:52.171Z",
+    "policy": "Narration and cue IDs must remain byte-exact; only shot and scene timing fields may change.",
+    "graphLayout": {
+      "mode": "workbench-approved-layout",
+      "sourceArtifactPath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/diagram-assets/graph-layout.json",
+      "sourceArtifactSha256": "ae485945020d2f588a5ff9a4a5a2822efeaf9fdaae0ce078359b0967e409fb5f"
+    }
+  }
+}

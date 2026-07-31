@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "autovideo-template-planning-contract/v1",
+  "styleId": "modern-ip-host-explainer",
+  "styleVersion": "1.0.0",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "scenePolicy": {
+    "maxCuesPerScene": 5,
+    "targetSceneSeconds": 30,
+    "maxScreenTextCodePoints": 28,
+    "maxTitleCodePoints": 16
+  },
+  "defaultPose": "explain",
+  "poseIds": [
+    "greet",
+    "emphasis",
+    "present",
+    "think",
+    "encourage",
+    "question",
+    "read",
+    "explain",
+    "point-right",
+    "close"
+  ],
+  "poseByRole": {
+    "hook": "question",
+    "concept": "explain",
+    "compare": "present",
+    "process": "point-right",
+    "proof": "read",
+    "close": "close"
+  },
+  "layoutPairs": [
+    {
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption"
+    },
+    {
+      "hostZone": "host.right",
+      "contentZone": "content.left",
+      "captionZone": "caption"
+    }
+  ],
+  "allowedVisualOperations": [
+    "enter",
+    "replace",
+    "compact",
+    "compare",
+    "exit",
+    "morph",
+    "hold"
+  ],
+  "allowedMotionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "scale-swap-transition",
+    "card-morph-anchor"
+  ],
+  "motionByRole": {
+    "hook": ["scale-swap-transition"],
+    "concept": ["scale-swap-transition", "viewport-change"],
+    "compare": ["card-morph-anchor", "scale-swap-transition"],
+    "process": ["svg-path-draw", "viewport-change"],
+    "proof": ["viewport-change"],
+    "close": ["card-morph-anchor", "viewport-change"]
+  },
+  "screenTextPolicy": {
+    "baselineTypes": ["exact-source"],
+    "captionZone": "caption",
+    "captionMaxLines": 2,
+    "numericClaimsAsCharts": false
+  },
+  "graphPolicy": {
+    "maxActiveNodesPerState": 3,
+    "allowedKinds": ["process", "cue-sequence"],
+    "forbiddenKinds": ["chart", "stat", "count"]
+  }
+}

@@ -1,0 +1,1567 @@
+{
+  "schemaVersion": "autovideo-style-validation/v1",
+  "validatedAt": "2026-07-31T01:51:11.129Z",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "registry schema version",
+      "passed": true
+    },
+    {
+      "name": "16 curated styles",
+      "passed": true,
+      "details": {
+        "actual": 16
+      }
+    },
+    {
+      "name": "style ids unique",
+      "passed": true
+    },
+    {
+      "name": "default base style exists",
+      "passed": true
+    },
+    {
+      "name": "add-on limit is two",
+      "passed": true
+    },
+    {
+      "name": "editorial-data-report: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "editorial-data-report: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/editorial-data-report/STYLE_GUIDE.md"
+    },
+    {
+      "name": "editorial-data-report: provenance status",
+      "passed": true
+    },
+    {
+      "name": "apple-clean-product: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "apple-clean-product: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/apple-clean-product/STYLE_GUIDE.md"
+    },
+    {
+      "name": "apple-clean-product: provenance status",
+      "passed": true
+    },
+    {
+      "name": "pixel-card-platform-ui: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "pixel-card-platform-ui: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/pixel-card-platform-ui/STYLE_GUIDE.md"
+    },
+    {
+      "name": "pixel-card-platform-ui: provenance status",
+      "passed": true
+    },
+    {
+      "name": "magazine-collage-cards: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "magazine-collage-cards: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/magazine-collage-cards/STYLE_GUIDE.md"
+    },
+    {
+      "name": "magazine-collage-cards: provenance status",
+      "passed": true
+    },
+    {
+      "name": "monochrome-cyber-editorial-cards: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "monochrome-cyber-editorial-cards: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/monochrome-cyber-editorial-cards/STYLE_GUIDE.md"
+    },
+    {
+      "name": "monochrome-cyber-editorial-cards: provenance status",
+      "passed": true
+    },
+    {
+      "name": "handdrawn-workflow-tutorial: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "handdrawn-workflow-tutorial: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/handdrawn-workflow-tutorial/STYLE_GUIDE.md"
+    },
+    {
+      "name": "handdrawn-workflow-tutorial: provenance status",
+      "passed": true
+    },
+    {
+      "name": "data-hud-narration: source exists",
+      "passed": true,
+      "details": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md"
+    },
+    {
+      "name": "data-hud-narration: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/f1/data-hud-narration/STYLE_GUIDE.md"
+    },
+    {
+      "name": "data-hud-narration: provenance status",
+      "passed": true
+    },
+    {
+      "name": "modern-ip-host-explainer: source exists",
+      "passed": true,
+      "details": "style-library/styles/project/modern-ip-host-explainer/"
+    },
+    {
+      "name": "modern-ip-host-explainer: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/project/modern-ip-host-explainer/STYLE_GUIDE.md"
+    },
+    {
+      "name": "modern-ip-host-explainer: provenance status",
+      "passed": true
+    },
+    {
+      "name": "swiss-pulse: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "swiss-pulse: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/swiss-pulse/STYLE_GUIDE.md"
+    },
+    {
+      "name": "swiss-pulse: provenance status",
+      "passed": true
+    },
+    {
+      "name": "velvet-standard: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "velvet-standard: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/velvet-standard/STYLE_GUIDE.md"
+    },
+    {
+      "name": "velvet-standard: provenance status",
+      "passed": true
+    },
+    {
+      "name": "deconstructed: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "deconstructed: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/deconstructed/STYLE_GUIDE.md"
+    },
+    {
+      "name": "deconstructed: provenance status",
+      "passed": true
+    },
+    {
+      "name": "maximalist-type: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "maximalist-type: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/maximalist-type/STYLE_GUIDE.md"
+    },
+    {
+      "name": "maximalist-type: provenance status",
+      "passed": true
+    },
+    {
+      "name": "data-drift: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "data-drift: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/data-drift/STYLE_GUIDE.md"
+    },
+    {
+      "name": "data-drift: provenance status",
+      "passed": true
+    },
+    {
+      "name": "soft-signal: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "soft-signal: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/soft-signal/STYLE_GUIDE.md"
+    },
+    {
+      "name": "soft-signal: provenance status",
+      "passed": true
+    },
+    {
+      "name": "folk-frequency: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "folk-frequency: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/folk-frequency/STYLE_GUIDE.md"
+    },
+    {
+      "name": "folk-frequency: provenance status",
+      "passed": true
+    },
+    {
+      "name": "shadow-cut: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md"
+    },
+    {
+      "name": "shadow-cut: generated guide exists",
+      "passed": true,
+      "details": "style-library/styles/official/shadow-cut/STYLE_GUIDE.md"
+    },
+    {
+      "name": "shadow-cut: provenance status",
+      "passed": true
+    },
+    {
+      "name": "7 F1 specifications extracted",
+      "passed": true,
+      "details": {
+        "actual": 7
+      }
+    },
+    {
+      "name": "8 official named styles extracted",
+      "passed": true,
+      "details": {
+        "actual": 8
+      }
+    },
+    {
+      "name": "official frame presets indexed",
+      "passed": true,
+      "details": {
+        "actual": 13
+      }
+    },
+    {
+      "name": "official examples indexed",
+      "passed": true,
+      "details": {
+        "example": 8,
+        "block": 109,
+        "component": 25
+      }
+    },
+    {
+      "name": "official blocks indexed",
+      "passed": true,
+      "details": {
+        "example": 8,
+        "block": 109,
+        "component": 25
+      }
+    },
+    {
+      "name": "official components indexed",
+      "passed": true,
+      "details": {
+        "example": 8,
+        "block": 109,
+        "component": 25
+      }
+    },
+    {
+      "name": "official motion rules indexed",
+      "passed": true,
+      "details": {
+        "actual": 37
+      }
+    },
+    {
+      "name": "official blueprints indexed",
+      "passed": true,
+      "details": {
+        "actual": 15
+      }
+    },
+    {
+      "name": "official blueprint files exist",
+      "passed": true
+    },
+    {
+      "name": "sync report agrees with registry",
+      "passed": true
+    },
+    {
+      "name": "example selection schema version",
+      "passed": true
+    },
+    {
+      "name": "example base style exists",
+      "passed": true
+    },
+    {
+      "name": "example add-ons exist and respect limit",
+      "passed": true
+    },
+    {
+      "name": "example registry items exist",
+      "passed": true
+    },
+    {
+      "name": "example motion rules exist",
+      "passed": true
+    },
+    {
+      "name": "example blueprints exist",
+      "passed": true
+    },
+    {
+      "name": "example narration hash is current",
+      "passed": true,
+      "details": {
+        "expected": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+        "actual": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c"
+      }
+    },
+    {
+      "name": "example remains unapproved",
+      "passed": true
+    },
+    {
+      "name": "example has provenance receipts",
+      "passed": true
+    },
+    {
+      "name": "motion library schema version",
+      "passed": true
+    },
+    {
+      "name": "motion library is a 1920x1080 16:9 candidate",
+      "passed": true
+    },
+    {
+      "name": "motion recipe ids unique",
+      "passed": true
+    },
+    {
+      "name": "motion library covers non-text carriers",
+      "passed": true
+    },
+    {
+      "name": "motion library receipts resolve",
+      "passed": true
+    },
+    {
+      "name": "motion library SFX contract is discoverable",
+      "passed": true
+    },
+    {
+      "name": "keyword-handoff: visual type exists",
+      "passed": true,
+      "details": "keyword"
+    },
+    {
+      "name": "keyword-handoff: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "keyword-handoff: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "keyword-handoff: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.3,
+          "action": "Reveal the main keyword from the fixed content anchor; add one supporting mark."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.3,
+          "endPct": 0.72,
+          "action": "Hold the keyword and shift caption weight without duplicating narration on screen."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.72,
+          "endPct": 1,
+          "action": "Compact the current keyword into one history mark before the next keyword claims the anchor."
+        }
+      ]
+    },
+    {
+      "name": "keyword-handoff: registry items exist",
+      "passed": true,
+      "details": [
+        "morph-text",
+        "caption-weight-shift"
+      ]
+    },
+    {
+      "name": "keyword-handoff: motion rules exist",
+      "passed": true,
+      "details": [
+        "scale-swap-transition",
+        "card-morph-anchor",
+        "discrete-text-sequence"
+      ]
+    },
+    {
+      "name": "keyword-handoff: blueprints exist",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "keyword-handoff: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "focus-hit"
+      ]
+    },
+    {
+      "name": "keyword-handoff: fallback exists",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence-pivot: visual type exists",
+      "passed": true,
+      "details": "evidence-image"
+    },
+    {
+      "name": "evidence-pivot: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "evidence-pivot: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "evidence-pivot: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.32,
+          "action": "Reveal the evidence in a bounded media surface and focus its relevant region."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.32,
+          "endPct": 0.72,
+          "action": "Keep the evidence visible while a source label and one callout land."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.72,
+          "endPct": 1,
+          "action": "Slide or unzoom the evidence into context and give visual weight to the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "evidence-pivot: registry items exist",
+      "passed": true,
+      "details": [
+        "parallax-zoom",
+        "parallax-unzoom",
+        "caption-weight-shift"
+      ]
+    },
+    {
+      "name": "evidence-pivot: motion rules exist",
+      "passed": true,
+      "details": [
+        "viewport-change",
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "name": "evidence-pivot: blueprints exist",
+      "passed": true,
+      "details": [
+        "video-text-pivot"
+      ]
+    },
+    {
+      "name": "evidence-pivot: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "focus-hit",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "evidence-pivot: fallback exists",
+      "passed": true,
+      "details": "keyword-handoff"
+    },
+    {
+      "name": "device-surface-tour: visual type exists",
+      "passed": true,
+      "details": "device-surface"
+    },
+    {
+      "name": "device-surface-tour: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "device-surface-tour: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "device-surface-tour: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.28,
+          "action": "Stage the first real interface surface and establish its device or window context."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.28,
+          "endPct": 0.76,
+          "action": "Move the content camera between at most three approved interface states."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.76,
+          "endPct": 1,
+          "action": "Return to the overview or retain the last state as evidence for the next beat."
+        }
+      ]
+    },
+    {
+      "name": "device-surface-tour: registry items exist",
+      "passed": true,
+      "details": [
+        "app-showcase",
+        "ui-3d-reveal",
+        "parallax-zoom"
+      ]
+    },
+    {
+      "name": "device-surface-tour: motion rules exist",
+      "passed": true,
+      "details": [
+        "viewport-change",
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "name": "device-surface-tour: blueprints exist",
+      "passed": true,
+      "details": [
+        "spatial-pan-stations"
+      ]
+    },
+    {
+      "name": "device-surface-tour: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "state-change",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "device-surface-tour: fallback exists",
+      "passed": true,
+      "details": "evidence-pivot"
+    },
+    {
+      "name": "diagram-build: visual type exists",
+      "passed": true,
+      "details": "diagram"
+    },
+    {
+      "name": "diagram-build: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "diagram-build: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "diagram-build: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.34,
+          "action": "Place the first node, then draw only connectors supported by the narration relationship."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.34,
+          "endPct": 0.78,
+          "action": "Advance focus through the active nodes while completed nodes remain as context."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.78,
+          "endPct": 1,
+          "action": "Pull back to the complete readable relationship and hold its conclusion."
+        }
+      ]
+    },
+    {
+      "name": "diagram-build: registry items exist",
+      "passed": true,
+      "details": [
+        "flowchart"
+      ]
+    },
+    {
+      "name": "diagram-build: motion rules exist",
+      "passed": true,
+      "details": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "name": "diagram-build: blueprints exist",
+      "passed": true,
+      "details": [
+        "spatial-pan-stations"
+      ]
+    },
+    {
+      "name": "diagram-build: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "connector-draw",
+        "state-change",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "diagram-build: fallback exists",
+      "passed": true,
+      "details": "keyword-handoff"
+    },
+    {
+      "name": "data-proof: visual type exists",
+      "passed": true,
+      "details": "data-proof"
+    },
+    {
+      "name": "data-proof: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "data-proof: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "data-proof: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.3,
+          "action": "Introduce one sourced metric and grow its proportional visual from a deterministic baseline."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.3,
+          "endPct": 0.76,
+          "action": "Hold the terminal value with its unit and source label fully readable."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.76,
+          "endPct": 1,
+          "action": "Dim supporting marks and carry only the conclusion into the next beat."
+        }
+      ]
+    },
+    {
+      "name": "data-proof: registry items exist",
+      "passed": true,
+      "details": [
+        "data-chart"
+      ]
+    },
+    {
+      "name": "data-proof: motion rules exist",
+      "passed": true,
+      "details": [
+        "stat-bars-and-fills",
+        "viewport-change"
+      ]
+    },
+    {
+      "name": "data-proof: blueprints exist",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "data-proof: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "focus-hit",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "data-proof: fallback exists",
+      "passed": true,
+      "details": "keyword-handoff"
+    },
+    {
+      "name": "comparison-split: visual type exists",
+      "passed": true,
+      "details": "comparison"
+    },
+    {
+      "name": "comparison-split: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "comparison-split: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "comparison-split: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.32,
+          "action": "Bring the two states in from mirrored directions and keep equal spatial weight."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.32,
+          "endPct": 0.74,
+          "action": "Shift focus between the states while both remain readable."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.74,
+          "endPct": 1,
+          "action": "Morph the chosen state into the next beat anchor instead of clearing the frame."
+        }
+      ]
+    },
+    {
+      "name": "comparison-split: registry items exist",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "comparison-split: motion rules exist",
+      "passed": true,
+      "details": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "name": "comparison-split: blueprints exist",
+      "passed": true,
+      "details": [
+        "comparison-split"
+      ]
+    },
+    {
+      "name": "comparison-split: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "state-change",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "comparison-split: fallback exists",
+      "passed": true,
+      "details": "keyword-handoff"
+    },
+    {
+      "name": "code-proof: visual type exists",
+      "passed": true,
+      "details": "code-surface"
+    },
+    {
+      "name": "code-proof: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "code-proof: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "code-proof: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.28,
+          "action": "Reveal the real editor, terminal, diff, or log surface with its focal lines visible."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.28,
+          "endPct": 0.78,
+          "action": "Highlight or scroll to the exact evidence while the surrounding context remains legible."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.78,
+          "endPct": 1,
+          "action": "Collapse the evidence into one maintenance or failure conclusion."
+        }
+      ]
+    },
+    {
+      "name": "code-proof: registry items exist",
+      "passed": true,
+      "details": [
+        "code-highlight",
+        "code-scroll",
+        "code-diff",
+        "code-morph"
+      ]
+    },
+    {
+      "name": "code-proof: motion rules exist",
+      "passed": true,
+      "details": [
+        "discrete-text-sequence",
+        "viewport-change"
+      ]
+    },
+    {
+      "name": "code-proof: blueprints exist",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "code-proof: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "state-change",
+        "error",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "code-proof: fallback exists",
+      "passed": true,
+      "details": "evidence-pivot"
+    },
+    {
+      "name": "object-metaphor: visual type exists",
+      "passed": true,
+      "details": "object-metaphor"
+    },
+    {
+      "name": "object-metaphor: candidate is unapproved",
+      "passed": true
+    },
+    {
+      "name": "object-metaphor: HyperFrames owns deterministic rendering",
+      "passed": true
+    },
+    {
+      "name": "object-metaphor: build/breathe/resolve phases",
+      "passed": true,
+      "details": [
+        {
+          "name": "build",
+          "startPct": 0,
+          "endPct": 0.3,
+          "action": "Introduce one local object with a single declared semantic role."
+        },
+        {
+          "name": "breathe",
+          "startPct": 0.3,
+          "endPct": 0.74,
+          "action": "Transform or traverse the object only as the narration changes its meaning."
+        },
+        {
+          "name": "resolve",
+          "startPct": 0.74,
+          "endPct": 1,
+          "action": "Park the object as context so a later callback can reuse its visual identity."
+        }
+      ]
+    },
+    {
+      "name": "object-metaphor: registry items exist",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "object-metaphor: motion rules exist",
+      "passed": true,
+      "details": [
+        "card-morph-anchor",
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "name": "object-metaphor: blueprints exist",
+      "passed": true,
+      "details": [
+        "spatial-pan-stations"
+      ]
+    },
+    {
+      "name": "object-metaphor: SFX roles allowed",
+      "passed": true,
+      "details": [
+        "focus-hit",
+        "state-change",
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "object-metaphor: fallback exists",
+      "passed": true,
+      "details": "keyword-handoff"
+    },
+    {
+      "name": "motion lifecycle ledger satisfies JSON Schema",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "motion lifecycle E05 evidence satisfies JSON Schema",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "motion lifecycle E05 receipt satisfies JSON Schema",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "motion lifecycle ledger hashes and definitions are current",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "all eight motion recipes remain unpromoted candidates",
+      "passed": true
+    },
+    {
+      "name": "E05 batch-contract evidence remains blocked at candidate",
+      "passed": true,
+      "details": {
+        "schemaVersion": "autovideo-motion-recipe-lifecycle-receipt/v1",
+        "receiptId": "motion-lifecycle-keyword-handoff-probe-passed-20260720121500",
+        "action": "transition",
+        "outcome": "blocked",
+        "createdAt": "2026-07-20T12:15:00.000Z",
+        "actor": "autovideo-e05-audit",
+        "library": {
+          "id": "knowledge-explainer",
+          "version": "1.0.0",
+          "path": "style-library/motion-library/knowledge-explainer-v1.json",
+          "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+        },
+        "recipe": {
+          "id": "keyword-handoff",
+          "version": "1.0.0",
+          "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3"
+        },
+        "fromState": "candidate",
+        "requestedState": "probe-passed",
+        "effectiveState": "candidate",
+        "invariantSnapshot": {
+          "baseStyleId": "modern-ip-host-explainer",
+          "baseStyleVersion": "1.0.0",
+          "paletteId": "light-apricot",
+          "background": "#F2DFC7",
+          "hostZone": "host.left",
+          "contentZone": "content.right",
+          "captionZone": "caption",
+          "cameraScope": "content-world-only",
+          "hostReplacementAllowed": false,
+          "paletteReplacementAllowed": false
+        },
+        "evidence": {
+          "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+          "recipeId": "keyword-handoff",
+          "recipeVersion": "1.0.0",
+          "requestedState": "probe-passed",
+          "probe": {
+            "kind": "batch-contract",
+            "projectId": "demotext-standard-delivery-v5",
+            "path": "experiments/E05-batch-contract-probe",
+            "durationSeconds": 239.678,
+            "sameNarrationWindow": true,
+            "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+            "audioSha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+            "invariants": {
+              "baseStyleId": "modern-ip-host-explainer",
+              "baseStyleVersion": "1.0.0",
+              "paletteId": "light-apricot",
+              "background": "#F2DFC7",
+              "hostZone": "host.left",
+              "contentZone": "content.right",
+              "captionZone": "caption",
+              "cameraScope": "content-world-only",
+              "hostReplacementAllowed": false,
+              "paletteReplacementAllowed": false
+            },
+            "invariantAudit": null,
+            "hostAssetManifest": null,
+            "stills": [],
+            "motionProbe": null,
+            "hyperframesCheck": {
+              "binding": {
+                "path": "experiments/E05-batch-contract-probe/check.capture.log",
+                "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+              },
+              "ok": true,
+              "strict": true,
+              "snapshotsEnabled": false,
+              "findingCount": 0,
+              "version": "0.7.64"
+            },
+            "visualReview": null,
+            "officialReuseObserved": []
+          }
+        },
+        "gateResults": [
+          {
+            "id": "transition.allowed",
+            "passed": true,
+            "details": {
+              "from": "candidate",
+              "to": "probe-passed"
+            }
+          },
+          {
+            "id": "probe.kind",
+            "passed": false,
+            "details": "batch-contract"
+          },
+          {
+            "id": "probe.duration",
+            "passed": false,
+            "details": {
+              "duration": 239.678,
+              "minimum": 3,
+              "maximum": 8
+            }
+          },
+          {
+            "id": "probe.same-narration-window",
+            "passed": true,
+            "details": true
+          },
+          {
+            "id": "probe.invariants",
+            "passed": true,
+            "details": {
+              "baseStyleId": "modern-ip-host-explainer",
+              "baseStyleVersion": "1.0.0",
+              "paletteId": "light-apricot",
+              "background": "#F2DFC7",
+              "hostZone": "host.left",
+              "contentZone": "content.right",
+              "captionZone": "caption",
+              "cameraScope": "content-world-only",
+              "hostReplacementAllowed": false,
+              "paletteReplacementAllowed": false
+            }
+          },
+          {
+            "id": "probe.invariant-audit",
+            "passed": false,
+            "details": {
+              "binding": "probe.invariantAudit requires path and SHA-256.",
+              "passed": false,
+              "checks": {}
+            }
+          },
+          {
+            "id": "probe.host-assets",
+            "passed": false,
+            "details": "probe.hostAssetManifest requires path and SHA-256."
+          },
+          {
+            "id": "probe.stills",
+            "passed": false,
+            "details": "probe.stills is empty."
+          },
+          {
+            "id": "probe.motion",
+            "passed": false,
+            "details": "probe.motionProbe requires path and SHA-256."
+          },
+          {
+            "id": "probe.check-binding",
+            "passed": true,
+            "details": {
+              "path": "experiments/E05-batch-contract-probe/check.capture.log",
+              "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+            }
+          },
+          {
+            "id": "probe.hyperframes-check",
+            "passed": false,
+            "details": {
+              "binding": {
+                "path": "experiments/E05-batch-contract-probe/check.capture.log",
+                "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+              },
+              "ok": true,
+              "strict": true,
+              "snapshotsEnabled": false,
+              "findingCount": 0,
+              "version": "0.7.64"
+            }
+          },
+          {
+            "id": "probe.visual-review",
+            "passed": false,
+            "details": null
+          },
+          {
+            "id": "probe.official-reuse",
+            "passed": false,
+            "details": {
+              "requiredTier": {
+                "kind": "official-registry",
+                "ids": [
+                  "morph-text",
+                  "caption-weight-shift"
+                ]
+              },
+              "observed": []
+            }
+          }
+        ],
+        "blockedReasons": [
+          "not-a-motion-probe",
+          "probe-duration-out-of-range",
+          "missing-or-failed-invariant-audit",
+          "missing-host-asset-binding",
+          "missing-still-evidence",
+          "missing-motion-probe",
+          "hyperframes-check-incomplete",
+          "missing-visual-review",
+          "official-reuse-not-observed"
+        ]
+      }
+    },
+    {
+      "name": "E05 checked-in assessment receipt is reproducible",
+      "passed": true,
+      "details": {
+        "schemaVersion": "autovideo-motion-recipe-lifecycle-receipt/v1",
+        "receiptId": "motion-lifecycle-keyword-handoff-probe-passed-20260720121500",
+        "action": "transition",
+        "outcome": "blocked",
+        "createdAt": "2026-07-20T12:15:00.000Z",
+        "actor": "autovideo-e05-audit",
+        "library": {
+          "id": "knowledge-explainer",
+          "version": "1.0.0",
+          "path": "style-library/motion-library/knowledge-explainer-v1.json",
+          "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+        },
+        "recipe": {
+          "id": "keyword-handoff",
+          "version": "1.0.0",
+          "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3"
+        },
+        "fromState": "candidate",
+        "requestedState": "probe-passed",
+        "effectiveState": "candidate",
+        "invariantSnapshot": {
+          "baseStyleId": "modern-ip-host-explainer",
+          "baseStyleVersion": "1.0.0",
+          "paletteId": "light-apricot",
+          "background": "#F2DFC7",
+          "hostZone": "host.left",
+          "contentZone": "content.right",
+          "captionZone": "caption",
+          "cameraScope": "content-world-only",
+          "hostReplacementAllowed": false,
+          "paletteReplacementAllowed": false
+        },
+        "evidence": {
+          "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+          "recipeId": "keyword-handoff",
+          "recipeVersion": "1.0.0",
+          "requestedState": "probe-passed",
+          "probe": {
+            "kind": "batch-contract",
+            "projectId": "demotext-standard-delivery-v5",
+            "path": "experiments/E05-batch-contract-probe",
+            "durationSeconds": 239.678,
+            "sameNarrationWindow": true,
+            "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+            "audioSha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+            "invariants": {
+              "baseStyleId": "modern-ip-host-explainer",
+              "baseStyleVersion": "1.0.0",
+              "paletteId": "light-apricot",
+              "background": "#F2DFC7",
+              "hostZone": "host.left",
+              "contentZone": "content.right",
+              "captionZone": "caption",
+              "cameraScope": "content-world-only",
+              "hostReplacementAllowed": false,
+              "paletteReplacementAllowed": false
+            },
+            "invariantAudit": null,
+            "hostAssetManifest": null,
+            "stills": [],
+            "motionProbe": null,
+            "hyperframesCheck": {
+              "binding": {
+                "path": "experiments/E05-batch-contract-probe/check.capture.log",
+                "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+              },
+              "ok": true,
+              "strict": true,
+              "snapshotsEnabled": false,
+              "findingCount": 0,
+              "version": "0.7.64"
+            },
+            "visualReview": null,
+            "officialReuseObserved": []
+          }
+        },
+        "gateResults": [
+          {
+            "id": "transition.allowed",
+            "passed": true,
+            "details": {
+              "from": "candidate",
+              "to": "probe-passed"
+            }
+          },
+          {
+            "id": "probe.kind",
+            "passed": false,
+            "details": "batch-contract"
+          },
+          {
+            "id": "probe.duration",
+            "passed": false,
+            "details": {
+              "duration": 239.678,
+              "minimum": 3,
+              "maximum": 8
+            }
+          },
+          {
+            "id": "probe.same-narration-window",
+            "passed": true,
+            "details": true
+          },
+          {
+            "id": "probe.invariants",
+            "passed": true,
+            "details": {
+              "baseStyleId": "modern-ip-host-explainer",
+              "baseStyleVersion": "1.0.0",
+              "paletteId": "light-apricot",
+              "background": "#F2DFC7",
+              "hostZone": "host.left",
+              "contentZone": "content.right",
+              "captionZone": "caption",
+              "cameraScope": "content-world-only",
+              "hostReplacementAllowed": false,
+              "paletteReplacementAllowed": false
+            }
+          },
+          {
+            "id": "probe.invariant-audit",
+            "passed": false,
+            "details": {
+              "binding": "probe.invariantAudit requires path and SHA-256.",
+              "passed": false,
+              "checks": {}
+            }
+          },
+          {
+            "id": "probe.host-assets",
+            "passed": false,
+            "details": "probe.hostAssetManifest requires path and SHA-256."
+          },
+          {
+            "id": "probe.stills",
+            "passed": false,
+            "details": "probe.stills is empty."
+          },
+          {
+            "id": "probe.motion",
+            "passed": false,
+            "details": "probe.motionProbe requires path and SHA-256."
+          },
+          {
+            "id": "probe.check-binding",
+            "passed": true,
+            "details": {
+              "path": "experiments/E05-batch-contract-probe/check.capture.log",
+              "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+            }
+          },
+          {
+            "id": "probe.hyperframes-check",
+            "passed": false,
+            "details": {
+              "binding": {
+                "path": "experiments/E05-batch-contract-probe/check.capture.log",
+                "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+              },
+              "ok": true,
+              "strict": true,
+              "snapshotsEnabled": false,
+              "findingCount": 0,
+              "version": "0.7.64"
+            }
+          },
+          {
+            "id": "probe.visual-review",
+            "passed": false,
+            "details": null
+          },
+          {
+            "id": "probe.official-reuse",
+            "passed": false,
+            "details": {
+              "requiredTier": {
+                "kind": "official-registry",
+                "ids": [
+                  "morph-text",
+                  "caption-weight-shift"
+                ]
+              },
+              "observed": []
+            }
+          }
+        ],
+        "blockedReasons": [
+          "not-a-motion-probe",
+          "probe-duration-out-of-range",
+          "missing-or-failed-invariant-audit",
+          "missing-host-asset-binding",
+          "missing-still-evidence",
+          "missing-motion-probe",
+          "hyperframes-check-incomplete",
+          "missing-visual-review",
+          "official-reuse-not-observed"
+        ]
+      }
+    },
+    {
+      "name": "semantic SFX example style locks",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX example pins library version and path",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX example policy matches media-use contract",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX example bindings are unique and valid",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX example cues are ordered, sparse, and unique",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX cue roles match recipes and bindings",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX cues target content-world only",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX example satisfies full contract",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "AGENTS.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/STYLE_REGISTRY.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/MOTION_REGISTRY.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/motion-library/knowledge-explainer-v1.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/motion-library/knowledge-explainer.lifecycle.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/motion-library/README.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/motion-recipe-library.schema.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/motion-recipe-lifecycle.schema.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/motion-recipe-lifecycle-evidence.schema.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/motion-recipe-lifecycle-receipt.schema.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/semantic-sfx-plan.schema.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/semantic-sfx-plan.validator.mjs exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/SOURCES.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/schema/style-selection.schema.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/templates/VIDEO_TASK.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/templates/STYLE_REVIEW.md exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/examples/demoText-handdrawn-selection.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/examples/knowledge-explainer-sfx-plan.example.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/examples/knowledge-explainer-e05-lifecycle-evidence.example.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/examples/knowledge-explainer-e05-assessment.receipt.json exists",
+      "passed": true
+    },
+    {
+      "name": "style-library/tests/semantic-sfx-contract.test.mjs exists",
+      "passed": true
+    },
+    {
+      "name": "tools/motion-recipe-lifecycle/lifecycle.mjs exists",
+      "passed": true
+    },
+    {
+      "name": "tools/motion-recipe-lifecycle/test/lifecycle.test.mjs exists",
+      "passed": true
+    },
+    {
+      "name": "scripts/motion-recipe-lifecycle.mjs exists",
+      "passed": true
+    },
+    {
+      "name": "docs/18-动效配方晋级与退役SOP.md exists",
+      "passed": true
+    },
+    {
+      "name": "vendor/hyperframes-student-kit/LICENSE exists",
+      "passed": true
+    },
+    {
+      "name": "vendor/hyperframes-student-kit/MOTION_PHILOSOPHY.md exists",
+      "passed": true
+    },
+    {
+      "name": "vendor/hyperframes-student-kit/video-projects/may-shorts-19/index.html exists",
+      "passed": true
+    },
+    {
+      "name": "style selection schema parses",
+      "passed": true
+    },
+    {
+      "name": "motion recipe library schema parses",
+      "passed": true
+    },
+    {
+      "name": "motion recipe lifecycle schema parses",
+      "passed": true
+    },
+    {
+      "name": "motion recipe lifecycle evidence schema parses",
+      "passed": true
+    },
+    {
+      "name": "motion recipe lifecycle receipt schema parses",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX plan schema parses",
+      "passed": true
+    }
+  ]
+}

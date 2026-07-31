@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="portrait">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=720,height=1280">
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face {
+      font-family: "Microsoft YaHei";
+      src: local("Microsoft YaHei");
+    }
+
+    @font-face {
+      font-family: "SimHei";
+      src: local("SimHei");
+    }
+
+    :root {
+      --paper: #eef1f3;
+      --panel: #fbfcfd;
+      --ink: #1d252b;
+      --muted: #636f78;
+      --hair: #aab4bb;
+      --red: #b43e3e;
+      --blue: #3c6b85;
+      --teal: #4f7e84;
+      --ochre: #a37a3c;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      width: 720px;
+      height: 1280px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    body {
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "SimHei", sans-serif;
+      letter-spacing: 0;
+    }
+    #root {
+      position: relative;
+      width: 720px;
+      height: 1280px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    #narration { display: none; }
+    #board {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(to right, rgba(102, 116, 126, 0.09) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(102, 116, 126, 0.09) 1px, transparent 1px);
+      background-size: 36px 36px;
+      transform-origin: 360px 570px;
+    }
+    #board::before {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 42px;
+      bottom: 82px;
+      width: 2px;
+      background: rgba(29, 37, 43, 0.18);
+    }
+    #board::after {
+      content: "";
+      position: absolute;
+      left: 52px;
+      right: 52px;
+      top: 300px;
+      height: 1px;
+      background: rgba(29, 37, 43, 0.22);
+    }
+    .report-header {
+      position: absolute;
+      left: 54px;
+      top: 42px;
+      right: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      opacity: 0;
+    }
+    .report-header .rule {
+      width: 210px;
+      height: 2px;
+      background: var(--ink);
+      opacity: 0.7;
+    }
+    .index-mark {
+      position: absolute;
+      left: 52px;
+      top: 74px;
+      color: var(--red);
+      font-size: 96px;
+      line-height: 0.9;
+      font-weight: 900;
+      opacity: 0;
+      transform-origin: left bottom;
+    }
+    .claim {
+      position: absolute;
+      left: 258px;
+      width: 410px;
+      margin: 0;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0;
+      opacity: 0;
+    }
+    #claim-line-1 {
+      top: 90px;
+      color: var(--ink);
+      font-size: 45px;
+    }
+    #claim-line-2 {
+      top: 145px;
+      color: var(--red);
+      font-size: 58px;
+    }
+    #claim-underline {
+      position: absolute;
+      left: 260px;
+      top: 221px;
+      width: 350px;
+      height: 28px;
+      overflow: visible;
+      fill: none;
+      stroke: var(--red);
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+    }
+    .hidden-note {
+      position: absolute;
+      right: 54px;
+      top: 258px;
+      padding: 8px 12px;
+      border: 1px solid var(--red);
+      color: var(--red);
+      background: rgba(251, 252, 253, 0.86);
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      opacity: 0;
+    }
+    .surface-card {
+      position: absolute;
+      left: 52px;
+      top: 330px;
+      width: 616px;
+      height: 158px;
+      padding: 22px 26px;
+      border: 2px solid var(--ink);
+      background: var(--panel);
+      box-shadow: 9px 9px 0 rgba(61, 75, 84, 0.18);
+      opacity: 0;
+      transform-origin: center center;
+    }
+    .surface-kicker {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+    }
+    .surface-title {
+      margin: 0;
+      max-width: 300px;
+      color: var(--ink);
+      font-size: 27px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+    .surface-subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .surface-node {
+      position: absolute;
+      right: 25px;
+      top: 37px;
+      width: 220px;
+      height: 82px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--red);
+      background: #fff7f6;
+      color: var(--red);
+      font-size: 28px;
+      font-weight: 900;
+      opacity: 0;
+      transform-origin: center center;
+    }
+    .surface-node::before,
+    .surface-node::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      width: 13px;
+      height: 28px;
+      border: 3px solid var(--red);
+      background: var(--panel);
+    }
+    .surface-node::before { left: -9px; }
+    .surface-node::after { right: -9px; }
+    .layers-label {
+      position: absolute;
+      left: 53px;
+      top: 514px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      opacity: 0;
+    }
+    .layer {
+      position: absolute;
+      left: 52px;
+      width: 616px;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px 0 18px;
+      border: 2px solid var(--ink);
+      background: rgba(251, 252, 253, 0.97);
+      opacity: 0;
+      transform-origin: left center;
+    }
+    #layer-model { top: 552px; --tone: var(--blue); }
+    #layer-api { top: 650px; --tone: var(--teal); }
+    #layer-vector { top: 748px; --tone: var(--ochre); }
+    #layer-tools { top: 846px; --tone: var(--red); }
+    .layer::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      background: var(--tone);
+    }
+    .layer-number {
+      width: 62px;
+      color: var(--tone);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 24px;
+      font-weight: 900;
+      opacity: 0;
+      transform-origin: center center;
+    }
+    .layer-copy { width: 220px; }
+    .layer-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 27px;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+    .layer-meta {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .layer-progress {
+      position: relative;
+      width: 275px;
+      height: 14px;
+      margin-left: auto;
+      border: 2px solid var(--tone);
+      background: #e5e9ec;
+      overflow: hidden;
+    }
+    .layer-progress span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--tone);
+      opacity: 0.72;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+    #evidence-routes {
+      position: absolute;
+      inset: 0;
+      width: 720px;
+      height: 1040px;
+      overflow: visible;
+      z-index: 4;
+    }
+    .route {
+      fill: none;
+      stroke: var(--ink);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      opacity: 0;
+    }
+    .route.accent { stroke: var(--red); stroke-width: 4; }
+    .route.spine { stroke: var(--hair); stroke-width: 2; }
+    #final-tag {
+      position: absolute;
+      left: 52px;
+      top: 952px;
+      color: var(--red);
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      opacity: 0;
+    }
+    #caption-rail {
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      bottom: 34px;
+      height: 192px;
+      padding: 20px 24px 18px;
+      border-top: 6px solid var(--ink);
+      border-bottom: 2px solid var(--red);
+      background: #e1e6e9;
+      z-index: 20;
+    }
+    .caption-label {
+      margin: 0 0 13px;
+      color: var(--red);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+    }
+    .caption-line {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      margin: 0;
+      color: var(--ink);
+      font-size: 25px;
+      line-height: 1.42;
+      font-weight: 800;
+      opacity: 0;
+    }
+    #caption-1 { top: 55px; }
+    #caption-2 { top: 55px; }
+    #timeline-sentinel { position: absolute; left: 0; top: 0; width: 1px; height: 1px; opacity: 0; }
+  </style>
+</head>
+<body>
+  <main id="root" data-composition-id="main" data-start="0" data-duration="7.242254" data-width="720" data-height="1280" data-fps="30" data-layout-allow-overflow>
+    <audio id="narration" data-hf-id="narration" src="assets/narration.wav" data-start="0" data-duration="7.242254" data-track-index="9"></audio>
+    <div id="board" data-hf-id="board" class="clip" data-start="0" data-duration="7.242254" data-track-index="0" data-layout-allow-overflow>
+      <header id="report-header" data-hf-id="report-header" class="report-header" data-layout-allow-overlap>
+        <span id="report-kicker" data-hf-id="report-kicker">SYSTEM NOTE / 01</span>
+        <span class="rule" aria-hidden="true"></span>
+        <span>PLATFORM LAYERS</span>
+      </header>
+
+      <div id="index-mark" data-hf-id="index-mark" class="index-mark" aria-label="第一">第一</div>
+      <p id="claim-line-1" data-hf-id="claim-line-1" class="claim">平台把系统的复杂性</p>
+      <p id="claim-line-2" data-hf-id="claim-line-2" class="claim">给隐藏起来</p>
+      <svg id="claim-underline" data-hf-id="claim-underline" viewBox="0 0 350 28" aria-hidden="true">
+        <path d="M 4 17 C 86 25, 180 7, 342 15" pathLength="1"></path>
+      </svg>
+      <div id="hidden-note" data-hf-id="hidden-note" class="hidden-note">VISIBLE SURFACE / HIDDEN COMPLEXITY</div>
+
+      <article id="surface-card" data-hf-id="surface-card" class="surface-card">
+        <p id="surface-kicker" data-hf-id="surface-kicker" class="surface-kicker">LOW-CODE SURFACE</p>
+        <h2 id="surface-title" data-hf-id="surface-title" class="surface-title">看见的只是一个界面</h2>
+        <p id="surface-subtitle" data-hf-id="surface-subtitle" class="surface-subtitle">拖拽操作，把复杂性折叠起来</p>
+        <div id="surface-node" data-hf-id="surface-node" class="surface-node">按钮 / 节点</div>
+      </article>
+
+      <div id="layers-label" data-hf-id="layers-label" class="layers-label">EVIDENCE STACK / WHAT THE BUTTON HIDES</div>
+
+      <svg id="evidence-routes" data-hf-id="evidence-routes" viewBox="0 0 720 1040" aria-hidden="true">
+        <defs>
+          <marker id="route-arrow" data-hf-id="route-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M 0 0 L 6 3 L 0 6 z" fill="#b43e3e"></path>
+          </marker>
+        </defs>
+        <path id="route-spine" data-hf-id="route-spine" class="route spine" pathLength="1" d="M 42 590 L 42 908"></path>
+        <path id="route-model" data-hf-id="route-model" class="route accent" pathLength="1" marker-end="url(#route-arrow)" d="M 645 592 C 680 560, 670 454, 520 421"></path>
+        <path id="route-api" data-hf-id="route-api" class="route" pathLength="1" d="M 645 690 C 690 635, 677 490, 520 421"></path>
+        <path id="route-vector" data-hf-id="route-vector" class="route" pathLength="1" d="M 645 788 C 694 710, 678 535, 520 421"></path>
+        <path id="route-tools" data-hf-id="route-tools" class="route" pathLength="1" d="M 645 886 C 694 785, 678 575, 520 421"></path>
+        <path id="route-claim" data-hf-id="route-claim" class="route accent" pathLength="1" marker-end="url(#route-arrow)" d="M 520 421 C 565 402, 580 357, 558 333"></path>
+      </svg>
+
+      <div id="layer-model" data-hf-id="layer-model" class="layer">
+        <div id="layer-model-num" data-hf-id="layer-model-num" class="layer-number">01</div>
+        <div class="layer-copy"><p id="layer-model-title" data-hf-id="layer-model-title" class="layer-title">模型调用</p><p class="layer-meta">MODEL / INFERENCE</p></div>
+        <div id="fill-model" data-hf-id="fill-model" class="layer-progress"><span></span></div>
+      </div>
+      <div id="layer-api" data-hf-id="layer-api" class="layer">
+        <div id="layer-api-num" data-hf-id="layer-api-num" class="layer-number">02</div>
+        <div class="layer-copy"><p id="layer-api-title" data-hf-id="layer-api-title" class="layer-title">API连接</p><p class="layer-meta">REQUEST / RESPONSE</p></div>
+        <div id="fill-api" data-hf-id="fill-api" class="layer-progress"><span></span></div>
+      </div>
+      <div id="layer-vector" data-hf-id="layer-vector" class="layer">
+        <div id="layer-vector-num" data-hf-id="layer-vector-num" class="layer-number">03</div>
+        <div class="layer-copy"><p id="layer-vector-title" data-hf-id="layer-vector-title" class="layer-title">向量库</p><p class="layer-meta">RETRIEVAL / CONTEXT</p></div>
+        <div id="fill-vector" data-hf-id="fill-vector" class="layer-progress"><span></span></div>
+      </div>
+      <div id="layer-tools" data-hf-id="layer-tools" class="layer">
+        <div id="layer-tools-num" data-hf-id="layer-tools-num" class="layer-number">04</div>
+        <div class="layer-copy"><p id="layer-tools-title" data-hf-id="layer-tools-title" class="layer-title">工具链</p><p class="layer-meta">ORCHESTRATION / STATE</p></div>
+        <div id="fill-tools" data-hf-id="fill-tools" class="layer-progress"><span></span></div>
+      </div>
+      <div id="final-tag" data-hf-id="final-tag">包装层 ≠ 系统本身</div>
+    </div>
+
+    <div id="caption-rail" data-hf-id="caption-rail" class="clip" data-start="0" data-duration="7.242254" data-track-index="1" data-layout-allow-overlap>
+      <p id="caption-label" data-hf-id="caption-label" class="caption-label">VOICE / LOCKED SCRIPT</p>
+      <p id="caption-1" data-hf-id="caption-1" class="caption-line">第一，平台把系统的复杂性给隐藏起来。</p>
+      <p id="caption-2" data-hf-id="caption-2" class="caption-line">低代码、无代码、AI平台、工作流工具，</p>
+    </div>
+    <div id="timeline-sentinel" data-hf-id="timeline-sentinel"></div>
+
+    <script>
+      (() => {
+        const tl = gsap.timeline({paused: true});
+        const enter = {ease: "power2.out"};
+
+        tl.fromTo("#report-header", {y: -8, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ...enter}, 0);
+        tl.fromTo("#index-mark", {scale: 0.72, opacity: 0}, {scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.5)"}, 0.05);
+        tl.fromTo("#claim-line-1", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.52, ...enter}, 0.36);
+        tl.fromTo("#claim-line-2", {y: 18, opacity: 0}, {y: 0, opacity: 1, duration: 0.56, ease: "power3.out"}, 0.72);
+        tl.fromTo("#claim-underline path", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.42, ease: "power2.out"}, 1.12);
+
+        tl.fromTo("#surface-card", {x: -34, y: 10, scale: 0.97, opacity: 0}, {x: 0, y: 0, scale: 1, opacity: 1, duration: 0.62, ease: "back.out(1.15)"}, 1.25);
+        tl.fromTo("#surface-node", {x: 20, scale: 0.82, opacity: 0}, {x: 0, scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.55)"}, 1.55);
+        tl.fromTo("#hidden-note", {y: 8, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ...enter}, 1.82);
+        tl.fromTo("#layers-label", {y: 8, opacity: 0}, {y: 0, opacity: 1, duration: 0.28, ...enter}, 2.14);
+
+        tl.fromTo("#layer-model", {x: -28, scale: 0.96, opacity: 0}, {x: 0, scale: 1, opacity: 1, duration: 0.46, ease: "back.out(1.18)"}, 2.32);
+        tl.fromTo("#layer-model-num", {scale: 0.6, opacity: 0}, {scale: 1, opacity: 1, duration: 0.26, ease: "back.out(1.5)"}, 2.40);
+        tl.to("#fill-model span", {scaleX: 1, duration: 0.38, ease: "power2.out"}, 2.48);
+
+        tl.fromTo("#layer-api", {x: -28, scale: 0.96, opacity: 0}, {x: 0, scale: 1, opacity: 1, duration: 0.46, ease: "back.out(1.18)"}, 2.90);
+        tl.fromTo("#layer-api-num", {scale: 0.6, opacity: 0}, {scale: 1, opacity: 1, duration: 0.26, ease: "back.out(1.5)"}, 2.98);
+        tl.to("#fill-api span", {scaleX: 1, duration: 0.38, ease: "power2.out"}, 3.06);
+
+        tl.fromTo("#layer-vector", {x: -28, scale: 0.96, opacity: 0}, {x: 0, scale: 1, opacity: 1, duration: 0.46, ease: "back.out(1.18)"}, 3.48);
+        tl.fromTo("#layer-vector-num", {scale: 0.6, opacity: 0}, {scale: 1, opacity: 1, duration: 0.26, ease: "back.out(1.5)"}, 3.56);
+        tl.to("#fill-vector span", {scaleX: 1, duration: 0.38, ease: "power2.out"}, 3.64);
+
+        tl.fromTo("#layer-tools", {x: -28, scale: 0.96, opacity: 0}, {x: 0, scale: 1, opacity: 1, duration: 0.46, ease: "back.out(1.18)"}, 4.06);
+        tl.fromTo("#layer-tools-num", {scale: 0.6, opacity: 0}, {scale: 1, opacity: 1, duration: 0.26, ease: "back.out(1.5)"}, 4.14);
+        tl.to("#fill-tools span", {scaleX: 1, duration: 0.38, ease: "power2.out"}, 4.22);
+
+        tl.fromTo("#route-spine", {strokeDashoffset: 1, opacity: 0}, {strokeDashoffset: 0, opacity: 0.75, duration: 0.55, ease: "power2.out"}, 4.38);
+        tl.fromTo("#route-model", {strokeDashoffset: 1, opacity: 0}, {strokeDashoffset: 0, opacity: 0.75, duration: 0.42, ease: "power2.out"}, 4.52);
+        tl.fromTo("#route-api", {strokeDashoffset: 1, opacity: 0}, {strokeDashoffset: 0, opacity: 0.75, duration: 0.42, ease: "power2.out"}, 4.70);
+        tl.fromTo("#route-vector", {strokeDashoffset: 1, opacity: 0}, {strokeDashoffset: 0, opacity: 0.75, duration: 0.42, ease: "power2.out"}, 4.88);
+        tl.fromTo("#route-tools", {strokeDashoffset: 1, opacity: 0}, {strokeDashoffset: 0, opacity: 0.75, duration: 0.42, ease: "power2.out"}, 5.06);
+        tl.fromTo("#route-claim", {strokeDashoffset: 1, opacity: 0}, {strokeDashoffset: 0, opacity: 0.75, duration: 0.42, ease: "power2.out"}, 5.22);
+        tl.fromTo("#final-tag", {x: -12, opacity: 0}, {x: 0, opacity: 1, duration: 0.32, ...enter}, 5.48);
+        tl.to("#surface-node", {scale: 1.06, duration: 0.22, yoyo: true, repeat: 1, ease: "power2.inOut"}, 5.62);
+        tl.to("#board", {x: -5, y: -7, scale: 1.012, duration: 1.18, ease: "power2.inOut"}, 5.42);
+
+        tl.fromTo("#caption-1", {y: 8, opacity: 0}, {y: 0, opacity: 1, duration: 0.16, ...enter}, 0.04);
+        tl.to("#caption-1", {y: -4, opacity: 0, duration: 0.16, ...enter}, 3.34);
+        tl.fromTo("#caption-2", {y: 8, opacity: 0}, {y: 0, opacity: 1, duration: 0.16, ...enter}, 3.38);
+        tl.set("#timeline-sentinel", {opacity: 0}, 7.242254);
+
+        window.__timelines = window.__timelines || {};
+        window.__timelines.main = tl;
+      })();
+    </script>
+  </main>
+</body>
+</html>

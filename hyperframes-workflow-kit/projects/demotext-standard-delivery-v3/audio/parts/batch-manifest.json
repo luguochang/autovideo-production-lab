@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "cosyvoice-zh-female-batch/v1",
+  "segments": [
+    {
+      "id": "part-001",
+      "textFile": "part-001.tts.txt",
+      "textSha256": "14536a8034628534353624399573983ad560aa1a3ca46273410cb83c3c61be0e",
+      "output": "part-001.wav",
+      "receipt": "part-001.recipe.json"
+    },
+    {
+      "id": "part-002",
+      "textFile": "part-002.tts.txt",
+      "textSha256": "ed0e5010a49c00033f3819c08047fdc6269e9345b3b35d87281fa422a02afa17",
+      "output": "part-002.wav",
+      "receipt": "part-002.recipe.json"
+    },
+    {
+      "id": "part-003",
+      "textFile": "part-003.tts.txt",
+      "textSha256": "013b9fd09e5e6d8744ad7edf6bf6efeec5bb4777f09800c99bcef9ecc23c1dcd",
+      "output": "part-003.wav",
+      "receipt": "part-003.recipe.json"
+    },
+    {
+      "id": "part-004",
+      "textFile": "part-004.tts.txt",
+      "textSha256": "99ffff2fa35d6dc3c28d99ff0bb6cb9ceb580993d28f181934d0b9fba43b924f",
+      "output": "part-004.wav",
+      "receipt": "part-004.recipe.json"
+    },
+    {
+      "id": "part-005",
+      "textFile": "part-005.tts.txt",
+      "textSha256": "bda497953f1c418ef1167a277b066956a250f2721b011f254b6b99ea6fc8f339",
+      "output": "part-005.wav",
+      "receipt": "part-005.recipe.json"
+    },
+    {
+      "id": "part-006",
+      "textFile": "part-006.tts.txt",
+      "textSha256": "283330bc4646af807a57928321169785a436019ebb7c35358e4500522939e91d",
+      "output": "part-006.wav",
+      "receipt": "part-006.recipe.json"
+    },
+    {
+      "id": "part-007",
+      "textFile": "part-007.tts.txt",
+      "textSha256": "f7182fe20d81d5753ff78172c1e5e26f112aaae45d10895b5e942697782c9341",
+      "output": "part-007.wav",
+      "receipt": "part-007.recipe.json"
+    },
+    {
+      "id": "part-008",
+      "textFile": "part-008.tts.txt",
+      "textSha256": "6e7c496a843fd9f33ff852020ca11733be4cbc55bc3282e32d25de78d4e6ebd0",
+      "output": "part-008.wav",
+      "receipt": "part-008.recipe.json"
+    },
+    {
+      "id": "part-009",
+      "textFile": "part-009.tts.txt",
+      "textSha256": "44d5d9313b7407c35df58828b8c277021090e570a7dd8bd3c42da5aa839ae605",
+      "output": "part-009.wav",
+      "receipt": "part-009.recipe.json"
+    },
+    {
+      "id": "part-010",
+      "textFile": "part-010.tts.txt",
+      "textSha256": "383cb19f737f5a67292a0f98cd741d8340d0184a80ea5032ff6d69d1a2b92647",
+      "output": "part-010.wav",
+      "receipt": "part-010.recipe.json"
+    },
+    {
+      "id": "part-011",
+      "textFile": "part-011.tts.txt",
+      "textSha256": "5da0ed579ad155f25161c1d7de533770770a9c508e6ab0dd788b3a52da034d48",
+      "output": "part-011.wav",
+      "receipt": "part-011.recipe.json"
+    },
+    {
+      "id": "part-012",
+      "textFile": "part-012.tts.txt",
+      "textSha256": "791c3a665d716e036beb30f74a26efdf4726986b589ffa2f1636bae70fe23781",
+      "output": "part-012.wav",
+      "receipt": "part-012.recipe.json"
+    },
+    {
+      "id": "part-013",
+      "textFile": "part-013.tts.txt",
+      "textSha256": "c793402f48f639987e8ed3b8898cd78e99082f723ddfd81cfab6940b03316320",
+      "output": "part-013.wav",
+      "receipt": "part-013.recipe.json"
+    },
+    {
+      "id": "part-014",
+      "textFile": "part-014.tts.txt",
+      "textSha256": "3fa7eb6357063c2e18bb8e6e8ff2fe0ac4af76417ce72465fea77be8578be74d",
+      "output": "part-014.wav",
+      "receipt": "part-014.recipe.json"
+    },
+    {
+      "id": "part-015",
+      "textFile": "part-015.tts.txt",
+      "textSha256": "632fa1cc2aa1c668d49d82fe8fd4765340484c7fc387c7bc6112d286aa06f30b",
+      "output": "part-015.wav",
+      "receipt": "part-015.recipe.json"
+    },
+    {
+      "id": "part-016",
+      "textFile": "part-016.tts.txt",
+      "textSha256": "a1bf11a21a57001d642260d1a13965cfcebe2684e623dac14061a2a498110f03",
+      "output": "part-016.wav",
+      "receipt": "part-016.recipe.json"
+    },
+    {
+      "id": "part-017",
+      "textFile": "part-017.tts.txt",
+      "textSha256": "9b0dc4a51b00e99d295fe19da0bc8fbfa43786ee2bd44b83940f7ddfcc1eac60",
+      "output": "part-017.wav",
+      "receipt": "part-017.recipe.json"
+    },
+    {
+      "id": "part-018",
+      "textFile": "part-018.tts.txt",
+      "textSha256": "b6cf36b5b11976d4a3d8274e421d18d8aed2c87f66185353aae6876a6574e188",
+      "output": "part-018.wav",
+      "receipt": "part-018.recipe.json"
+    }
+  ]
+}

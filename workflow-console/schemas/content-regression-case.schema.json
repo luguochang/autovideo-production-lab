@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo content regression case",
+  "type": "object",
+  "required": [
+    "schemaVersion", "caseId", "language", "datasetClass", "humanGoldEligible",
+    "topicClass", "provenance", "brief", "evidence", "expectations"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-content-regression-case/v1"},
+    "caseId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+    "language": {"type": "string", "const": "zh-CN"},
+    "datasetClass": {"type": "string", "enum": ["synthetic-contract", "human-gold-candidate"]},
+    "humanGoldEligible": {"type": "boolean"},
+    "topicClass": {"type": "string", "minLength": 1},
+    "provenance": {
+      "type": "object",
+      "required": ["origin", "createdBy", "rights"],
+      "additionalProperties": false,
+      "properties": {
+        "origin": {"type": "string", "enum": ["synthetic", "user-material", "published-source"]},
+        "createdBy": {"type": "string", "minLength": 1},
+        "rights": {"type": "string", "minLength": 1}
+      }
+    },
+    "brief": {
+      "type": "object",
+      "required": ["targetSeconds", "toleranceSeconds"],
+      "additionalProperties": false,
+      "properties": {
+        "targetSeconds": {"type": "number", "minimum": 1},
+        "toleranceSeconds": {"type": "number", "minimum": 0}
+      }
+    },
+    "evidence": {"type": "object"},
+    "expectations": {
+      "type": "object",
+      "required": [
+        "requiredClaimIds", "claimSectionKinds", "requiredNarrationTokens",
+        "forbiddenNarrationTokens", "allowedNewProtectedAtoms", "minNarrationGraphemes",
+        "maxNarrationGraphemes", "maxScreenItemsPerSection", "maxScreenItemGraphemes",
+        "maxScreenCoverageRatio", "maxSentenceGraphemes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "requiredClaimIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "claimSectionKinds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["claimId", "allowedKinds"],
+            "additionalProperties": false,
+            "properties": {
+              "claimId": {"type": "string"},
+              "allowedKinds": {
+                "type": "array",
+                "minItems": 1,
+                "items": {"type": "string", "enum": ["sourced", "creator-opinion", "transition"]},
+                "uniqueItems": true
+              }
+            }
+          }
+        },
+        "requiredNarrationTokens": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "forbiddenNarrationTokens": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "allowedNewProtectedAtoms": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "minNarrationGraphemes": {"type": "integer", "minimum": 1},
+        "maxNarrationGraphemes": {"type": "integer", "minimum": 1},
+        "maxScreenItemsPerSection": {"type": "integer", "minimum": 0},
+        "maxScreenItemGraphemes": {"type": "integer", "minimum": 1},
+        "maxScreenCoverageRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "maxSentenceGraphemes": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

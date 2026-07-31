@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "autovideo-motion-probe-canonicalization/v1",
+  "projectId": "E20-object-metaphor-probe",
+  "recipeId": "object-metaphor",
+  "recipeVersion": "1.0.0",
+  "hyperframesVersion": "0.7.67",
+  "invariantAuditPath": "INVARIANT_AUDIT.json",
+  "hostAssetManifestPath": "AssetManifest.json",
+  "strictCheckPath": "strict-check.log",
+  "renderQaPath": "review/render-qa/DECODE_QA.json",
+  "renderPath": "renders/object-metaphor-probe.mp4",
+  "stillPaths": [
+    "snapshots/frame-03-at-3.7s.png",
+    "snapshots/frame-07-at-7.76s.png",
+    "snapshots/contact-sheet.jpg"
+  ],
+  "officialReuseObserved": [
+    {
+      "kind": "official-blueprint",
+      "id": "spatial-pan-stations",
+      "implementationPath": "index.html"
+    },
+    {
+      "kind": "official-motion-rule",
+      "id": "svg-path-draw",
+      "implementationPath": "index.html"
+    }
+  ],
+  "status": "technical-probe-ready-human-pending"
+}

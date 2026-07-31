@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "autovideo-qa-report/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "checkedAt": "2026-07-29T07:49:39.437Z",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "okForInternalReview": true,
+  "okForPublicRelease": false,
+  "gates": {
+    "hyperframesCheck": {
+      "status": "passed",
+      "path": "qa/hyperframes-check.json"
+    },
+    "media": {
+      "status": "passed",
+      "path": "qa/delivery-report.json"
+    },
+    "lockedSubtitleReconstruction": {
+      "status": "passed",
+      "path": "qa/subtitle-qa.json",
+      "alignmentValidationPath": "captions/alignment-validation.json",
+      "humanSemanticReview": "needs-review",
+      "ocrReview": "unavailable"
+    },
+    "visualReview": {
+      "status": "passed-internal-sample-review",
+      "path": "qa/visual-review.json",
+      "reviewedBy": "codex-autonomous-internal-review",
+      "scope": "HyperFrames strict check plus one midpoint frame for every one of 71 scenes and Studio timeline load verification."
+    },
+    "audioApproval": {
+      "status": "passed",
+      "approvalScope": "human-listening",
+      "approvedBy": "user",
+      "path": "audio/approval.json"
+    },
+    "textReviews": {
+      "status": "internal-or-missing",
+      "subtitleApprovalScope": "human-review",
+      "screenTextApprovalScope": "internal-autonomous-review",
+      "publicReleaseEligible": false
+    },
+    "finalPreview": {
+      "status": "approved-internal-review",
+      "approvedBy": "codex-creator-delegated",
+      "approvalScope": "internal-autonomous-review",
+      "compositionDigest": "dd7423319c215b63f34922063304d1eee9830dc786173bc4931778896fa8dffd",
+      "path": "qa/final-preview.json"
+    },
+    "humanListening": {
+      "status": "approved",
+      "approvedBy": "user",
+      "path": "audio/listening-review.json"
+    },
+    "publicationRights": {
+      "status": "internal-only",
+      "declaration": "internal-only",
+      "path": "rights-clearance/publication-rights.json",
+      "unresolvedItemIds": [
+        "source-source-001-0bd400ff",
+        "voice-speaker-rights",
+        "host-artwork-rights",
+        "noto-sans-sc-font",
+        "hyperframes-runtime"
+      ]
+    }
+  },
+  "releaseBlockers": [
+    "The current render is not an unblocked public-release master.",
+    "Publication rights are not fully cleared by the current approved rights receipt.",
+    "Pronunciation review was not completed through full listening or an acronym-only machine approval.",
+    "Human subtitle and screen-text review approvals are required for public release.",
+    "Human final review is missing or stale for the current preview and composition."
+  ]
+}

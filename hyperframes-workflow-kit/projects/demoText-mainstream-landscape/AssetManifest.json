@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-asset-manifest/v1",
+  "projectId": "demoText-mainstream-landscape",
+  "assets": [
+    {
+      "id": "reference-style-video",
+      "path": ".media/video/video_001.mp4",
+      "source": "demo/douyin_一颗小樱_7662366814240303323.mp4",
+      "license": "user-provided; style reference only",
+      "purpose": "reference pacing, composition, and subtitle density"
+    },
+    {
+      "id": "voice-excerpt",
+      "path": "input/narration-excerpt.wav",
+      "source": "demoText-f1-20s/input/narration-excerpt.wav, shared 57.0486088s-77.0486088s excerpt",
+      "license": "project-generated Edge TTS, zh-CN-YunxiNeural",
+      "purpose": "shared exact narration audio for six candidates"
+    },
+    {
+      "id": "original-vector-host",
+      "path": "production/variants/*/index.html",
+      "source": "project-local deterministic SVG illustration",
+      "license": "project-generated",
+      "purpose": "original anime-inspired presenter; no reference character copied"
+    },
+    {
+      "id": "official-hyperframes-motion",
+      "path": "../../../vendor/hyperframes/skills/hyperframes-animation/",
+      "source": "HyperFrames official repository",
+      "license": "Apache-2.0",
+      "purpose": "motion rules and seek-safe timing"
+    },
+    {
+      "id": "approved-a-delivery",
+      "path": "production/final/demoText-mainstream-landscape.mp4",
+      "source": "project-generated HyperFrames high-quality render",
+      "license": "project-generated",
+      "purpose": "approved A-style landscape delivery"
+    }
+  ]
+}

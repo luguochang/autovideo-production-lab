@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>demoText · F1 七风格 20 秒评审</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #e9edeb;
+        --surface: #f8faf8;
+        --ink: #171b19;
+        --muted: #66706b;
+        --line: #bcc5c0;
+        --toolbar: #171b19;
+      }
+
+      * { box-sizing: border-box; }
+      html { background: var(--bg); }
+      body {
+        margin: 0;
+        min-width: 320px;
+        color: var(--ink);
+        background: var(--bg);
+        font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+        letter-spacing: 0;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 68px;
+        padding: 13px clamp(16px, 3vw, 44px);
+        border-bottom: 1px solid #303633;
+        background: var(--toolbar);
+        color: #f6f8f6;
+      }
+      h1 { margin: 0; font-size: 19px; line-height: 1.3; }
+      .summary { color: #aeb8b3; font-size: 12px; font-weight: 500; }
+      .controls { display: flex; gap: 8px; flex: 0 0 auto; }
+      button {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        border: 1px solid #68716d;
+        border-radius: 4px;
+        background: #252b28;
+        color: #f6f8f6;
+        font: 700 16px/1 system-ui, sans-serif;
+        cursor: pointer;
+      }
+      button:hover { background: #343c38; }
+      button:disabled { cursor: wait; opacity: .55; }
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        width: min(1440px, 100%);
+        margin: 0 auto;
+        padding: 28px clamp(16px, 3vw, 44px) 48px;
+      }
+      article {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-top: 5px solid var(--tone);
+        border-radius: 4px;
+        background: var(--surface);
+        overflow: hidden;
+      }
+      .candidate-head {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        min-height: 68px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+      .candidate-id {
+        color: var(--tone);
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1;
+      }
+      h2 { margin: 0; font-size: 16px; line-height: 1.35; }
+      code { color: var(--muted); font-size: 11px; }
+      .video-wrap {
+        display: grid;
+        place-items: center;
+        padding: 14px;
+        background: #d6ddda;
+      }
+      video {
+        display: block;
+        width: min(100%, 340px);
+        aspect-ratio: 9 / 16;
+        background: #111;
+        object-fit: contain;
+      }
+      .meta {
+        min-height: 72px;
+        margin: 0;
+        padding: 12px 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      @media (max-width: 1050px) {
+        main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 680px) {
+        header { position: static; align-items: flex-start; }
+        h1 { font-size: 16px; }
+        .summary { display: block; margin-top: 3px; }
+        main { grid-template-columns: 1fr; max-width: 470px; gap: 18px; padding-top: 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>demoText · F1 七风格 · 20 秒 <span class="summary">同口播 / 竖屏 / 评审稿</span></h1>
+      <div class="controls" aria-label="同步播放控制">
+        <button id="play-all" type="button" title="静音同步播放" aria-label="静音同步播放">▶</button>
+        <button id="pause-all" type="button" title="全部暂停" aria-label="全部暂停">Ⅱ</button>
+        <button id="restart-all" type="button" title="全部重新开始" aria-label="全部重新开始">↺</button>
+        <span id="status" class="sr-only" aria-live="polite"></span>
+      </div>
+    </header>
+    <main>
+      <article style="--tone:#d9274d"><div class="candidate-head"><span class="candidate-id">A</span><div><h2>编辑型数据简报</h2><code>editorial-data-report</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/editorial-data-report.png" src="probes/editorial-data-report.mp4"></video></div><p class="meta">报告页、证据卡和数据条按阅读顺序建立，强调论点与工程层级。</p></article>
+      <article style="--tone:#0071e3"><div class="candidate-head"><span class="candidate-id">B</span><div><h2>苹果式清爽产品</h2><code>apple-clean-product</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/apple-clean-product.png" src="probes/apple-clean-product.mp4"></video></div><p class="meta">产品窗口逐层打开，从轻量入口过渡到隐藏的系统卡片。</p></article>
+      <article style="--tone:#0647b8"><div class="candidate-head"><span class="candidate-id">C</span><div><h2>像素卡片 UI</h2><code>pixel-card-platform-ui</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/pixel-card-platform-ui.png" src="probes/pixel-card-platform-ui.mp4"></video></div><p class="meta">任务菜单、硬边卡片和隐藏工程关卡形成游戏化教学语法。</p></article>
+      <article style="--tone:#c9483e"><div class="candidate-head"><span class="candidate-id">D</span><div><h2>轻量杂志拼贴</h2><code>magazine-collage-cards</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/magazine-collage-cards.png" src="probes/magazine-collage-cards.mp4"></video></div><p class="meta">纸片、证据条与结论印章接力，保持同一块持续画板。</p></article>
+      <article style="--tone:#75b928"><div class="candidate-head"><span class="candidate-id">E</span><div><h2>黑白赛博编辑</h2><code>monochrome-cyber-editorial-cards</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/monochrome-cyber-editorial-cards.png" src="probes/monochrome-cyber-editorial-cards.mp4"></video></div><p class="meta">黑色编辑板、状态节点和进度轨构成克制的技术视觉系统。</p></article>
+      <article style="--tone:#d81e45"><div class="candidate-head"><span class="candidate-id">F</span><div><h2>手绘流程教程</h2><code>handdrawn-workflow-tutorial</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/handdrawn-workflow-tutorial.png" src="probes/handdrawn-workflow-tutorial.mp4"></video></div><p class="meta">来源窗口、信息卡、手绘路径和工程底座在一张画板上连续搭建。</p></article>
+      <article style="--tone:#168ca7"><div class="candidate-head"><span class="candidate-id">G</span><div><h2>深色数据 HUD 口播</h2><code>data-hud-narration</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/data-hud-narration.png" src="probes/data-hud-narration.mp4"></video></div><p class="meta">无人物素材时使用信号核心兜底，诊断面板逐层暴露隐藏复杂度。</p></article>
+    </main>
+    <script>
+      const videos = [...document.querySelectorAll('video')];
+      const playButton = document.getElementById('play-all');
+      const status = document.getElementById('status');
+      playButton.addEventListener('click', async () => {
+        const ended = videos.every((video) => video.ended || (video.duration && video.currentTime >= video.duration - .05));
+        const time = ended ? 0 : Math.min(...videos.map((video) => video.currentTime || 0));
+        videos.forEach((video) => { video.currentTime = time; video.muted = true; });
+        playButton.disabled = true;
+        const results = await Promise.allSettled(videos.map((video) => video.play()));
+        const failed = results.filter((result) => result.status === 'rejected').length;
+        status.textContent = failed ? `${failed} 个视频未能自动播放` : '七个视频已静音同步播放';
+        playButton.disabled = false;
+      });
+      document.getElementById('pause-all').addEventListener('click', () => videos.forEach((video) => video.pause()));
+      document.getElementById('restart-all').addEventListener('click', () => {
+        videos.forEach((video) => { video.pause(); video.currentTime = 0; video.muted = false; });
+        status.textContent = '七个视频已回到开头';
+      });
+    </script>
+  </body>
+</html>

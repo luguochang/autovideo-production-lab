@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "autovideo-spoken-rewrite/v1",
+  "projectId": "placeholder",
+  "sourceRegisterSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "suitabilitySha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "evidenceSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "title": "跑通工作流，不等于产品可维护",
+  "language": "zh-CN",
+  "sections": [
+    {
+      "id": "section-01",
+      "kind": "sourced",
+      "targetSeconds": 8,
+      "narration": "一个 AI 工作流能跑通一次，最多只能说明这个原型可以演示，还不能说明它已经具备可维护性。",
+      "claimIds": ["claim-prototype-not-product"],
+      "sourceIds": ["source-001-9d748887"],
+      "framing": "",
+      "onscreen": [
+        {"text": "跑通一次 ≠ 可维护", "kind": "generated_summary"}
+      ]
+    },
+    {
+      "id": "section-02",
+      "kind": "sourced",
+      "targetSeconds": 11,
+      "narration": "真正准备上线时，你还要逐项检查失败重试、权限边界、日志监控和回滚路径。少掉任何一项，系统都可能只停留在演示阶段。",
+      "claimIds": ["claim-production-checks"],
+      "sourceIds": ["source-001-9d748887"],
+      "framing": "",
+      "onscreen": [
+        {"text": "重试｜权限｜监控｜回滚", "kind": "generated_summary"}
+      ]
+    },
+    {
+      "id": "section-03",
+      "kind": "creator-opinion",
+      "targetSeconds": 9,
+      "narration": "我的看法是，生成会越来越便宜，但理解、判断、维护和负责，仍然是产品能力里最不能省掉的部分。",
+      "claimIds": ["claim-human-capability"],
+      "sourceIds": ["source-001-9d748887"],
+      "framing": "明确标记为作者观点，不包装成外部统计事实。",
+      "onscreen": [
+        {"text": "理解｜判断｜维护｜负责", "kind": "generated_summary"}
+      ]
+    }
+  ],
+  "reviewNotes": [
+    "示例只演示合同与来源绑定，不代表最终内容风格。"
+  ],
+  "generatedAt": "2026-07-20T00:00:00.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "autovideo-public-release-candidate/v1",
+  "projectId": "PROJECT_ID",
+  "status": "ready-for-publication",
+  "attestation": {
+    "confirmedHuman": false,
+    "reviewerType": "human",
+    "reviewer": "REAL_HUMAN_NAME_REQUIRED",
+    "reviewedAt": null
+  },
+  "bindings": {
+    "realProject": {
+      "path": "receipts/scale/real-project.json",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "master": {
+      "path": "renders/PROJECT_ID-master.mp4",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "deliveryQa": {
+      "path": "qa/delivery-report.json",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "rights": {
+      "path": "rights-clearance/publication-rights.json",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "approvals": {
+      "audio": {
+        "path": "audio/approval.json",
+        "sha256": "SHA256_REQUIRED"
+      },
+      "subtitle": {
+        "path": "qa/subtitle-human-approval.json",
+        "sha256": "SHA256_REQUIRED"
+      },
+      "screenText": {
+        "path": "qa/screen-text-human-approval.json",
+        "sha256": "SHA256_REQUIRED"
+      },
+      "finalPreview": {
+        "path": "qa/final-preview.json",
+        "sha256": "SHA256_REQUIRED"
+      }
+    }
+  }
+}

@@ -1,0 +1,2068 @@
+{
+  "schemaVersion": "autovideo-audio-qa/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "scope": "internal-production-technical-approval",
+  "checkedAt": "2026-07-28T15:34:28.210Z",
+  "narrationSha256": "bdf2796e70774507b7ccfc50a66f925ae6b51917f188b976a8c6bb4691cfcf94",
+  "audio": {
+    "path": "audio/narration.final.wav",
+    "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+    "durationSeconds": 1880.218458,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "bitsPerSample": 16
+  },
+  "segmentation": {
+    "recipeMode": "batch",
+    "parts": 237,
+    "minimumDurationSeconds": 1.0565208333333334,
+    "maximumDurationSeconds": 13.305041666666666,
+    "singleModelLoad": true,
+    "seed": 7,
+    "sourceReconstructionMatchesNarrationLock": true,
+    "allPartHashesValid": true,
+    "allPartsSingleInternalUtterance": true,
+    "allPartsSingleOutputChunk": true,
+    "batchManifestHashValid": true,
+    "merge": {
+      "mode": "breath-aware",
+      "valid": true,
+      "manifestSha256": "ac5d65d78df519635b1b63e640752f63953afaded5b3e06bd22a0296760d0228",
+      "receiptSha256": "29cd4457a2245830542e4f663745a55b1471a644a69ff82a20c419ccbe1346e1",
+      "targetActiveVoiceGapSeconds": 0.56,
+      "gaps": [
+        {
+          "afterPartIndex": 0,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 1,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 2,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 3,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 4,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 5,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 6,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 7,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 8,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 9,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 10,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 11,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 12,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 13,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 14,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 15,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 16,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 17,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 18,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 19,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 20,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 21,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 22,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 23,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 24,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 25,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 26,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 27,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 28,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 29,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 30,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 31,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 32,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 33,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0.06,
+          "insertedSilenceSeconds": 0.5,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 34,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 35,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 36,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 37,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 38,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 39,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 40,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 41,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 42,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 43,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 44,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 45,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 46,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 47,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 48,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 49,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 50,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 51,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 52,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 53,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 54,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 55,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 56,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 57,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 58,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 59,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 60,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 61,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 62,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 63,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 64,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 65,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 66,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 67,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 68,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 69,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 70,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 71,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 72,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 73,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 74,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 75,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 76,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 77,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 78,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 79,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 80,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 81,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 82,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 83,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 84,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 85,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 86,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 87,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 88,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 89,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 90,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 91,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 92,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 93,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 94,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 95,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 96,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 97,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 98,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 99,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 100,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 101,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 102,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 103,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 104,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 105,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 106,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 107,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 108,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 109,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 110,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 111,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 112,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 113,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 114,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 115,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 116,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 117,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 118,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 119,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 120,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 121,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 122,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 123,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 124,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 125,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 126,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 127,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 128,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 129,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 130,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 131,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 132,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 133,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 134,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 135,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 136,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 137,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 138,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 139,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 140,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 141,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 142,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 143,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 144,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 145,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 146,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 147,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 148,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 149,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 150,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 151,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 152,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 153,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 154,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 155,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 156,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 157,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 158,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 159,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 160,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 161,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 162,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 163,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 164,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 165,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 166,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 167,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 168,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 169,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 170,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 171,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 172,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 173,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 174,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 175,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 176,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 177,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 178,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 179,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 180,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 181,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 182,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 183,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 184,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 185,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 186,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 187,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 188,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 189,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 190,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 191,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 192,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 193,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 194,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 195,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 196,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 197,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 198,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 199,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 200,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 201,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 202,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 203,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 204,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 205,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 206,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 207,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 208,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 209,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 210,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 211,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 212,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 213,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 214,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 215,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 216,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 217,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 218,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 219,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 220,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 221,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 222,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 223,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 224,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 225,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 226,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 227,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 228,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 229,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 230,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 231,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 232,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 233,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 234,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 235,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        }
+      ]
+    }
+  },
+  "signal": {
+    "fullDecodePassed": true,
+    "integratedLufs": -16,
+    "truePeakDbfs": -1.5,
+    "meanVolumeDb": -16,
+    "maxVolumeDb": -1.5,
+    "silenceSegmentsOver0_8Seconds": 0,
+    "silenceSegments": []
+  },
+  "pacing": {
+    "status": "passed-technical-targets",
+    "leadingSilenceSeconds": 1.154146,
+    "recommendedLeadingSilenceSeconds": {
+      "minimum": 0.25,
+      "target": 0.35
+    },
+    "introWindowSeconds": 15,
+    "recommendedIntroMaximumCps": 7.5,
+    "introCueMetrics": [
+      {
+        "cueId": "cue-001",
+        "durationSeconds": 2.6,
+        "characters": 18,
+        "cps": 6.92
+      },
+      {
+        "cueId": "cue-002",
+        "durationSeconds": 8.8,
+        "characters": 48,
+        "cps": 5.45
+      },
+      {
+        "cueId": "cue-003",
+        "durationSeconds": 11.860000000000001,
+        "characters": 69,
+        "cps": 5.82
+      }
+    ],
+    "fastIntroCues": [],
+    "warnings": [],
+    "remediation": "If listening confirms a rushed opening, regenerate the affected CosyVoice part with punctuation/pause tuning, then rebuild final WAV, alignment, captions, planning, motion and renders."
+  },
+  "alignment": {
+    "status": "passed-for-internal-subtitle-and-motion-timing",
+    "path": "audio/alignment.json",
+    "sha256": "e3193c3da74e3ef6d0ae0672ca352513cc8268ce1aafff5658574d84198fe572",
+    "asrEvidencePath": "audio/alignment.asr.json",
+    "asrEvidenceSha256": "5d3b63202d888fae519d1e3a9df62099287a29a604fe2aa0e8c3a218b5ce4008",
+    "validationReport": "captions/alignment-validation.json",
+    "validationReportSha256": "0aa997dc019d26c180feac207ee3c24d269e1b6f78d21da72f9fe4ac94ee4bdc",
+    "hashesBound": true,
+    "wordTimelineMonotonic": true,
+    "cueTimelineMonotonic": true,
+    "cueCount": 237,
+    "cueTextReconstructsNarrationLock": true,
+    "maximumCueCps": 10.033,
+    "maximumCueCpsThreshold": 15,
+    "rawAsrTranscriptPolicy": "evidence-only; downstream consumers must use alignment.cues",
+    "limitation": "Locked-text timing derived from ASR words; use WhisperX/MFA for phoneme or lip-sync precision."
+  },
+  "subtitles": {
+    "status": "generated-for-internal-review",
+    "path": "captions/narration.zh-CN.srt",
+    "sha256": "650a9b9de704335ce7a65e86d204af6ba464d6c04e68f9225e16a5d7c249445e",
+    "cueCount": 237,
+    "textSource": "alignment.cues (NarrationLock exact text)",
+    "humanReviewRequiredBeforePublicRelease": true
+  },
+  "pronunciation": {
+    "autoApplied": [
+      "RAG",
+      "API",
+      "PDF",
+      "Word",
+      "HTML",
+      "Confluence",
+      "PyMuPDF",
+      "pdfplumber",
+      "Unstructured",
+      "MinerU",
+      "Docling",
+      "LlamaParse",
+      "LLM",
+      "ColPali",
+      "LangChain",
+      "markdown",
+      "LlamaIndex",
+      "Jina",
+      "Anthropic",
+      "BM25",
+      "BGE",
+      "ColBERT",
+      "bge-m3",
+      "OpenAI",
+      "Voyage",
+      "Cohere",
+      "MTEB",
+      "Matryoshka",
+      "pgvector",
+      "Milvus",
+      "Weaviate",
+      "Qdrant",
+      "Chroma",
+      "Elasticsearch",
+      "PostgreSQL",
+      "HNSW",
+      "IVF",
+      "Flat",
+      "SQL",
+      "ANN",
+      "QPS",
+      "P99",
+      "HyDE",
+      "Adaptive",
+      "Redis",
+      "GB",
+      "jieba",
+      "RRF",
+      "nDCG",
+      "Transformer",
+      "MRR",
+      "CRAG",
+      "Self-RAG",
+      "Reflexion",
+      "LangGraph",
+      "RAGAS",
+      "TruLens",
+      "DeepEval",
+      "SLA"
+    ],
+    "requiresListeningReview": []
+  },
+  "humanListening": {
+    "status": "not-performed",
+    "requiredBeforePublicRelease": true
+  },
+  "technicalApproval": {
+    "status": "passed",
+    "approvedFor": "internal composition, alignment, probe and review render",
+    "publicReleaseApproved": false,
+    "pacingReviewRequired": false
+  }
+}

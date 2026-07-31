@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "device-surface-tour",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E19-device-surface-tour-probe",
+    "path": "experiments/E19-device-surface-tour-probe",
+    "durationSeconds": 8,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E19-device-surface-tour-probe/INVARIANT_AUDIT.json",
+        "sha256": "31964804a093fbf14e0c11e2c3257dad939392c4f3082cae6f894298c96f52c1"
+      },
+      "passed": true,
+      "checks": {
+        "landscape16x9": true,
+        "lightApricotBackground": true,
+        "qVersionHostAssets": true,
+        "hostLeft": true,
+        "contentRight": true,
+        "captionPersistent": true,
+        "contentWorldOnlyCamera": true
+      }
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E19-device-surface-tour-probe/AssetManifest.json",
+      "sha256": "3741defc63b54e3e3ecabd873cbec97c8385ed6b5d881b578c5517777cea7aad"
+    },
+    "stills": [
+      {
+        "path": "experiments/E19-device-surface-tour-probe/snapshots/frame-02-at-2.9s.png",
+        "sha256": "6d656eabfc4fc25d0cf3bbcb4f3379a9c937a53bd92ec4f2756d6a9e8be622fa"
+      },
+      {
+        "path": "experiments/E19-device-surface-tour-probe/snapshots/frame-07-at-7.76s.png",
+        "sha256": "b5f4e33be95fd747658b5d823cefe9da55354674444ce61ebf54ffef74455fa2"
+      },
+      {
+        "path": "experiments/E19-device-surface-tour-probe/snapshots/contact-sheet.jpg",
+        "sha256": "1ae07ce3c738c25866a4131742a2ab3cb6d9182bd4eec61d0fc886b74a6718f6"
+      }
+    ],
+    "motionProbe": {
+      "path": "experiments/E19-device-surface-tour-probe/renders/device-surface-tour-probe.mp4",
+      "sha256": "aaf0b18d7cd6bffaf509e4818c84d65ea7a5014b34ccae4103c6b523e514d84d"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E19-device-surface-tour-probe/strict-check.log",
+        "sha256": "67831172dbb28072f1a087101c3516c8a05fe48eefe4fddee8fa4478ed8b6f70"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": true,
+      "findingCount": 0,
+      "version": "0.7.67"
+    },
+    "visualReview": null,
+    "officialReuseObserved": [
+      {
+        "kind": "official-registry",
+        "id": "app-showcase",
+        "implementation": {
+          "path": "experiments/E19-device-surface-tour-probe/index.html",
+          "sha256": "4e470b7e9b484a32efbf3ea2c0d036cedc2081d89993330b5c6c27f5a0ff1392"
+        }
+      },
+      {
+        "kind": "official-motion-rule",
+        "id": "viewport-change",
+        "implementation": {
+          "path": "experiments/E19-device-surface-tour-probe/index.html",
+          "sha256": "4e470b7e9b484a32efbf3ea2c0d036cedc2081d89993330b5c6c27f5a0ff1392"
+        }
+      }
+    ]
+  }
+}

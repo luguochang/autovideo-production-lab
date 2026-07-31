@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "autovideo-content-prompt-candidate/v1",
+  "caseId": "zh-ai-terms-001",
+  "stage": "narration-writer",
+  "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+  "prompt": {
+    "id": "narration-writer",
+    "path": "tools/content-pipeline/prompt-chain/prompts/03-narration-writer.md",
+    "sha256": "5bf9f2f5bdeeff58aa9c36fe83a5cd26218f58ad1ac4cb36d6ebfd84aae025b1"
+  },
+  "generator": {
+    "provider": "precomputed-fixture",
+    "model": "fixture-output",
+    "configSha256": "90a5cec52b9c61ed148258fed8843149391a4956b7c3ffe37072b46bd0b502c2"
+  },
+  "outputCanonicalization": "stable-json-v1",
+  "output": {
+    "schemaVersion": "autovideo-script-draft/v2",
+    "projectId": "zh-ai-terms-001",
+    "evidenceSha256": "130b1ea0867424235e0cf1ab6282f89a848fa4c677ad4edc30e5247ac7527f62",
+    "outlineSha256": "375cba25143e3bc26e011c01fd8471a96c888676fc66743786581693833c360c",
+    "prompt": {
+      "id": "narration-writer",
+      "sha256": "5bf9f2f5bdeeff58aa9c36fe83a5cd26218f58ad1ac4cb36d6ebfd84aae025b1"
+    },
+    "title": "先核对技术词，再判断流程是否成熟",
+    "language": "zh-CN",
+    "sections": [
+      {
+        "id": "section-01",
+        "kind": "sourced",
+        "targetSeconds": 14,
+        "narration": "截至2026年7月，这个测试记录了30次 API 调用。它说明流程有可复核的样本，但不代表所有场景都已经准备好。",
+        "claimIds": [
+          "claim-sample-run"
+        ],
+        "sourceIds": [
+          "source-001"
+        ],
+        "framing": "这是对登记材料中样本记录的事实转述。",
+        "onscreen": [
+          {
+            "text": "30次 API 调用",
+            "kind": "generated_summary"
+          },
+          {
+            "text": "可复核样本",
+            "kind": "generated_summary"
+          }
+        ]
+      },
+      {
+        "id": "section-02",
+        "kind": "creator-opinion",
+        "targetSeconds": 16,
+        "narration": "我的看法是，demo 只是起点。Codex、GPT-4o 和 camelCase 这类技术词，仍要单独检查文字形式和实际发音。",
+        "claimIds": [
+          "claim-terms-need-review"
+        ],
+        "sourceIds": [
+          "source-001"
+        ],
+        "framing": "明确标记为创作者判断，不把发音建议包装成外部统计事实。",
+        "onscreen": [
+          {
+            "text": "demo 只是起点",
+            "kind": "generated_summary"
+          },
+          {
+            "text": "文字与发音分开审",
+            "kind": "generated_summary"
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Synthetic contract fixture only."
+    ],
+    "generatedAt": "2026-07-22T00:00:00.000Z"
+  },
+  "outputSha256": "7ece51aaa49d8aa420df228ce0443e1add437174ec631c8954b6e4a15c765460"
+}

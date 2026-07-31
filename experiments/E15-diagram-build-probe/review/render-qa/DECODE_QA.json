@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-render-decode-qa/v1",
+  "projectId": "E15-diagram-build-probe",
+  "render": {
+    "path": "renders/diagram-build-probe.mp4",
+    "sha256": "6c283a23d9f3a1c364e623e6b4dc48464b84d0fe5f03a4f95d6cd7774b4eb25f"
+  },
+  "ffprobe": {
+    "path": "review/render-qa/ffprobe.json",
+    "sha256": "9ef9d6f2cdd72e14775e9c45097198a53a5997bfe57089ac29e825fedae7c830",
+    "durationSeconds": 8,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "fps": 30, "durationSeconds": 8},
+    "audio": {"codec": "aac", "sampleRate": 48000, "channels": 2, "durationSeconds": 8}
+  },
+  "audioDecode": {
+    "path": "review/render-qa/audio-volumedetect.log",
+    "sha256": "06f6da36e1ded6c057824d8064ad76fff1e11a3d6ca1900f6c7188e655557577",
+    "meanVolumeDb": -28.0,
+    "maxVolumeDb": -7.6,
+    "nonSilent": true
+  },
+  "decodedFrames": [
+    {"timeSeconds": 0.8, "path": "review/render-qa/frame-0.80.png", "sha256": "6a805004183fac22efbda189825114bbb1b471b865d68486ed6fb7f95876d69c"},
+    {"timeSeconds": 2.72, "path": "review/render-qa/frame-2.72.png", "sha256": "c0955a4911cc529aaa92e6122e0ca222b85655dd7b27421f5276b6e5b033d832"},
+    {"timeSeconds": 3.8, "path": "review/render-qa/frame-3.80.png", "sha256": "65b71ad54c51b2557ccac7ca44ad512425a5d8716e31329788eb6cf89607bf74"},
+    {"timeSeconds": 5.2, "path": "review/render-qa/frame-5.20.png", "sha256": "a9e1ab904285bfac36ae96bdd0cf4ba9567a347d7556c4282ab5749b1b38ded3"},
+    {"timeSeconds": 7.1, "path": "review/render-qa/frame-7.10.png", "sha256": "0ed367fe7ff1c22c093cc9e801a0a2ce8da7b4fbf1654d3cd9613894145f2af1"},
+    {"timeSeconds": 7.96, "path": "review/render-qa/frame-7.96.png", "sha256": "b2e7e38c808d3432b280bfcc5d1baf7f88aa4fe16d222753b96c86c1ace23aa7"}
+  ],
+  "visualInspection": {
+    "status": "pass",
+    "checked": [
+      "host remains fixed in host.left",
+      "content remains in content.right",
+      "connector drawing and node focus are visible",
+      "caption rail is readable",
+      "7.96s terminal frame is nonblank and holds the complete relation"
+    ]
+  }
+}

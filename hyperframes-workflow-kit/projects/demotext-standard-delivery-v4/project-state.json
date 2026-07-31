@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "stage": "internal-delivery-ready",
+  "createdAt": "2026-07-19T09:44:38.130Z",
+  "updatedAt": "2026-07-19T10:14:32.022Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "275s",
+    "platform": "Douyin",
+    "audience": "AI learners and knowledge-video viewers",
+    "rememberedOutcome": "Understand that assembling a workflow is not the same as operating a maintainable AI system.",
+    "forbiddenTreatments": null,
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T10:07:37.630Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T10:07:37.723Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T10:08:54.591Z",
+      "approvalScope": "internal-autonomous-review",
+      "publicReleaseBlocked": true,
+      "compositionDigest": "df43f790ba211245fbd970a38ceeb30f1a6b3c04ddf1cbcae0816350a6103477",
+      "compositionFileCount": 50,
+      "checkEvidence": "workflow-console/data/projects/demotext-standard-delivery-v4/artifacts/qa-review/report.json",
+      "notes": "Internal review only. This does not represent user approval or public-release clearance."
+    },
+    "deliveryQa": {
+      "status": "passed-internal-only",
+      "checkedAt": "2026-07-19T10:14:31.847Z",
+      "report": "qa/delivery-report.json",
+      "outputSha256": "2411fe1cbea8944c7ae9e41071963506b3260845e7f896a8b5aae46964d1537d",
+      "publicReleaseBlocked": true
+    }
+  },
+  "nextAction": "Resolve the release blockers in qa/report.json. The current package remains available for internal review only.",
+  "handoffs": {
+    "audio": {
+      "status": "approved",
+      "rightsStatus": "needs-review",
+      "approvalScope": "technical-only",
+      "humanListeningStatus": "not-performed",
+      "publicReleaseBlocked": true,
+      "lock": "audio-handoff.json",
+      "durationSeconds": 239.328167
+    }
+  },
+  "invalidations": [
+    {
+      "at": "2026-07-19T09:48:19.381Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    }
+  ],
+  "deliveries": {
+    "internalReview": {
+      "status": "ready",
+      "video": "renders/demotext-standard-delivery-v4-internal-review.mp4",
+      "cover": "renders/demotext-standard-delivery-v4-cover.png",
+      "manifest": "delivery/delivery-manifest.json",
+      "outputSha256": "2411fe1cbea8944c7ae9e41071963506b3260845e7f896a8b5aae46964d1537d"
+    }
+  }
+}

@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=720, height=1280" />
+    <title>E10 A - Handdrawn Board</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --paper: #f4f1e8;
+        --paper-deep: #e7e1d2;
+        --ink: #20302c;
+        --ink-soft: #52635d;
+        --red: #d85445;
+        --red-soft: #f5d4c9;
+        --teal: #3f9b91;
+        --teal-soft: #d4ebe5;
+        --yellow: #f0c75e;
+        --blue: #315c79;
+        --white: #fffdf7;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+      }
+
+      @font-face {
+        font-family: "PingFang SC";
+        src: local("PingFang SC");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 720px;
+        height: 1280px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+        letter-spacing: 0;
+      }
+
+      body {
+        position: relative;
+      }
+
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: var(--paper);
+      }
+
+      #stage {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 18% 20%, rgba(216, 84, 69, 0.09), transparent 27%),
+          radial-gradient(circle at 82% 72%, rgba(63, 155, 145, 0.11), transparent 31%),
+          var(--paper);
+      }
+
+      #stage::before {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image:
+          linear-gradient(rgba(32, 48, 44, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(32, 48, 44, 0.045) 1px, transparent 1px);
+        background-size: 34px 34px;
+        content: "";
+      }
+
+      #stage::after {
+        position: absolute;
+        inset: 18px;
+        z-index: 0;
+        border: 2px solid rgba(32, 48, 44, 0.18);
+        border-radius: 18px;
+        content: "";
+        pointer-events: none;
+      }
+
+      #world {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1900px;
+        height: 1400px;
+        z-index: 1;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      #route-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1900px;
+        height: 1400px;
+        overflow: visible;
+        pointer-events: none;
+      }
+
+      .route {
+        fill: none;
+        stroke: var(--red);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10;
+        opacity: 0.86;
+      }
+
+      .route-rough {
+        stroke: #a83e37;
+        stroke-width: 4;
+        opacity: 0.52;
+      }
+
+      .board-kicker,
+      .small-label,
+      .node-meta,
+      .layer-meta {
+        font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .board-kicker {
+        position: absolute;
+        top: 128px;
+        left: 280px;
+        padding: 10px 16px;
+        border: 3px solid var(--ink);
+        background: var(--yellow);
+        color: var(--ink);
+        font-size: 26px;
+        transform: rotate(-2deg);
+      }
+
+      #reason-badge {
+        position: absolute;
+        top: 210px;
+        left: 280px;
+        margin: 0;
+        color: var(--ink);
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 1;
+        opacity: 0;
+      }
+
+      #reason-badge em {
+        color: var(--red);
+        font-style: normal;
+      }
+
+      #reason-underline {
+        position: absolute;
+        top: 298px;
+        left: 288px;
+        width: 340px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--red);
+        opacity: 0;
+        transform: rotate(-2deg) scaleX(0);
+        transform-origin: left center;
+      }
+
+      .board-sheet {
+        position: absolute;
+        border: 4px solid var(--ink);
+        border-radius: 12px;
+        background: var(--white);
+        box-shadow: 16px 16px 0 rgba(32, 48, 44, 0.15);
+        opacity: 0;
+      }
+
+      #surface-card {
+        top: 365px;
+        left: 280px;
+        width: 560px;
+        height: 365px;
+        padding: 30px 34px;
+        transform: rotate(-1.1deg);
+      }
+
+      .sheet-title {
+        margin: 0 0 7px;
+        color: var(--ink);
+        font-size: 39px;
+        font-weight: 900;
+        line-height: 1.12;
+      }
+
+      .sheet-subtitle {
+        margin: 0 0 22px;
+        color: var(--ink-soft);
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        width: 100%;
+      }
+
+      .surface-button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 58px;
+        padding: 12px 18px;
+        border: 3px solid var(--ink);
+        border-radius: 9px;
+        color: var(--ink);
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.1;
+      }
+
+      .surface-button:nth-child(1) {
+        background: var(--teal-soft);
+      }
+
+      .surface-button:nth-child(2) {
+        background: #f8e8a9;
+      }
+
+      .surface-button:nth-child(3) {
+        background: var(--red-soft);
+      }
+
+      .surface-button:nth-child(4) {
+        background: #d9e2ef;
+      }
+
+      .surface-foot {
+        position: absolute;
+        right: 32px;
+        bottom: 26px;
+        left: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 15px;
+        border-top: 2px dashed rgba(32, 48, 44, 0.34);
+        color: var(--ink-soft);
+        font-size: 21px;
+        font-weight: 800;
+      }
+
+      .surface-foot b {
+        color: var(--red);
+      }
+
+      #cutaway-card {
+        top: 345px;
+        left: 870px;
+        width: 530px;
+        height: 420px;
+        padding: 30px 34px;
+        border-color: var(--red);
+        background: #fffaf2;
+        transform: rotate(1deg);
+      }
+
+      #cutaway-card::before {
+        position: absolute;
+        top: -22px;
+        left: 34px;
+        width: 160px;
+        height: 30px;
+        border: 3px solid var(--ink);
+        border-bottom: 0;
+        background: var(--yellow);
+        content: "";
+        transform: rotate(-3deg);
+      }
+
+      .cutaway-title {
+        margin: 0 0 20px;
+        color: var(--red);
+        font-size: 34px;
+        font-weight: 900;
+      }
+
+      .cutaway-copy {
+        width: 400px;
+        margin: 0;
+        color: var(--ink);
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1.35;
+      }
+
+      .cutaway-note {
+        position: absolute;
+        right: 30px;
+        bottom: 26px;
+        left: 30px;
+        padding: 12px 14px;
+        border-left: 8px solid var(--red);
+        color: var(--ink-soft);
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .layer-item {
+        position: absolute;
+        width: 350px;
+        min-height: 142px;
+        padding: 24px 28px 22px;
+        border: 4px solid var(--ink);
+        border-radius: 10px;
+        background: var(--white);
+        box-shadow: 12px 12px 0 rgba(32, 48, 44, 0.14);
+        opacity: 0;
+      }
+
+      #layer-model {
+        top: 420px;
+        left: 1370px;
+        background: var(--teal-soft);
+        transform: rotate(-1deg);
+      }
+
+      #layer-api {
+        top: 625px;
+        left: 1510px;
+        background: #d9e2ef;
+        transform: rotate(1.5deg);
+      }
+
+      #layer-vector {
+        top: 835px;
+        left: 1300px;
+        background: #f8e8a9;
+        transform: rotate(-1.5deg);
+      }
+
+      #layer-tools {
+        top: 1015px;
+        left: 1515px;
+        background: var(--red-soft);
+        transform: rotate(1deg);
+      }
+
+      .layer-meta {
+        margin-bottom: 10px;
+        color: var(--ink-soft);
+        font-size: 17px;
+      }
+
+      .layer-title {
+        margin: 0;
+        color: var(--ink);
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1.1;
+      }
+
+      .layer-detail {
+        margin: 10px 0 0;
+        color: var(--ink-soft);
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      #final-verdict {
+        position: absolute;
+        top: 1240px;
+        left: 690px;
+        width: 780px;
+        padding: 28px 34px 30px;
+        border: 5px solid var(--ink);
+        border-radius: 14px;
+        background: var(--ink);
+        color: var(--white);
+        opacity: 0;
+        transform: rotate(-0.7deg);
+      }
+
+      #final-verdict .small-label {
+        display: block;
+        margin-bottom: 12px;
+        color: var(--yellow);
+        font-size: 18px;
+      }
+
+      #final-verdict strong {
+        display: block;
+        max-width: 690px;
+        font-size: 46px;
+        line-height: 1.2;
+      }
+
+      #final-dot {
+        position: absolute;
+        right: 38px;
+        bottom: 31px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--red);
+      }
+
+      #caption-shell {
+        position: absolute;
+        right: 34px;
+        bottom: 36px;
+        left: 34px;
+        z-index: 8;
+        min-height: 154px;
+        padding: 27px 28px 25px;
+        border: 3px solid var(--ink);
+        border-radius: 12px;
+        background: rgba(255, 253, 247, 0.96);
+        box-shadow: 8px 8px 0 rgba(32, 48, 44, 0.15);
+        text-align: center;
+      }
+
+      .caption-line {
+        position: absolute;
+        top: 25px;
+        right: 28px;
+        left: 28px;
+        min-height: 90px;
+        margin: 0;
+        color: var(--ink);
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.38;
+        opacity: 0;
+      }
+
+      .caption-line .accent {
+        color: var(--red);
+      }
+
+      .caption-source {
+        position: absolute;
+        right: 28px;
+        bottom: 12px;
+        left: 28px;
+        color: var(--ink-soft);
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .tiny-note {
+        position: absolute;
+        top: 105px;
+        left: 42px;
+        color: var(--ink-soft);
+        font-size: 20px;
+        font-weight: 800;
+        opacity: 0;
+      }
+
+      .camera-note {
+        position: absolute;
+        top: 104px;
+        right: 38px;
+        z-index: 3;
+        padding: 8px 12px;
+        border: 2px solid var(--ink);
+        background: rgba(255, 253, 247, 0.72);
+        color: var(--ink-soft);
+        font-family: Consolas, monospace;
+        font-size: 15px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      id="root"
+      data-composition-id="a-handdrawn-board"
+      data-start="0"
+      data-duration="7.242254"
+      data-width="720"
+      data-height="1280"
+      data-fps="30"
+      data-layout-allow-overflow
+    >
+      <div
+        id="stage"
+        class="clip"
+        data-start="0"
+        data-duration="7.242254"
+        data-track-index="0"
+        data-layout-allow-overflow
+      >
+        <div class="camera-note">原因 01 / 结构拆解</div>
+        <div id="world" data-hf-id="world" data-layout-allow-overflow>
+          <svg id="route-layer" viewBox="0 0 1900 1400" aria-hidden="true">
+            <path
+              id="route-hook"
+              class="route"
+              d="M 560 320 C 620 350, 655 350, 700 390"
+            />
+            <path
+              id="route-hook-rough"
+              class="route route-rough"
+              d="M 565 326 C 622 354, 661 357, 704 395"
+            />
+            <path
+              id="route-cutaway"
+              class="route"
+              d="M 750 540 C 810 525, 820 475, 870 470"
+            />
+            <path
+              id="route-cutaway-rough"
+              class="route route-rough"
+              d="M 750 548 C 814 532, 827 484, 875 480"
+            />
+            <path
+              id="route-model"
+              class="route"
+              d="M 1280 520 C 1320 500, 1340 468, 1370 466"
+            />
+            <path
+              id="route-api"
+              class="route"
+              d="M 1260 560 C 1360 575, 1430 650, 1510 680"
+            />
+            <path
+              id="route-vector"
+              class="route"
+              d="M 1260 590 C 1300 700, 1290 800, 1300 885"
+            />
+            <path
+              id="route-tools"
+              class="route"
+              d="M 1260 620 C 1370 850, 1450 980, 1515 1065"
+            />
+            <path
+              id="route-final"
+              class="route route-rough"
+              d="M 1100 760 C 1160 900, 1185 1100, 1190 1230"
+            />
+          </svg>
+
+          <div class="board-kicker" data-hf-id="board-kicker">原因 01 / 先看表面</div>
+          <h1 id="reason-badge" data-hf-id="reason-badge">复杂性被<em>藏</em>起来</h1>
+          <div id="reason-underline" data-hf-id="reason-underline"></div>
+
+          <section id="surface-card" class="board-sheet" data-hf-id="surface-card">
+            <p class="sheet-title">平台界面</p>
+            <p class="sheet-subtitle">看起来只是几个按钮和节点</p>
+            <div class="button-row">
+              <span class="surface-button" data-hf-id="surface-low-code">低代码</span>
+              <span class="surface-button" data-hf-id="surface-no-code">无代码</span>
+              <span class="surface-button" data-hf-id="surface-ai">AI 平台</span>
+              <span class="surface-button" data-hf-id="surface-workflow">工作流</span>
+            </div>
+            <div class="surface-foot">
+              <span>入口很简单</span>
+              <b>系统不简单</b>
+            </div>
+          </section>
+
+          <section id="cutaway-card" class="board-sheet" data-hf-id="cutaway-card">
+            <p class="cutaway-title">把按钮掀开</p>
+            <p class="cutaway-copy">你看到的是操作层，下面还有一整套工程层。</p>
+            <div class="cutaway-note">镜头沿着红线，把隐藏的关系拉出来。</div>
+          </section>
+
+          <article id="layer-model" class="layer-item" data-hf-id="layer-model">
+            <div class="layer-meta">01 / CORE</div>
+            <h2 class="layer-title">模型调用</h2>
+            <p class="layer-detail">推理、上下文、失败回退</p>
+          </article>
+          <article id="layer-api" class="layer-item" data-hf-id="layer-api">
+            <div class="layer-meta">02 / LINK</div>
+            <h2 class="layer-title">API 连接</h2>
+            <p class="layer-detail">协议、鉴权、重试和超时</p>
+          </article>
+          <article id="layer-vector" class="layer-item" data-hf-id="layer-vector">
+            <div class="layer-meta">03 / MEMORY</div>
+            <h2 class="layer-title">向量库</h2>
+            <p class="layer-detail">检索、切片、召回与更新</p>
+          </article>
+          <article id="layer-tools" class="layer-item" data-hf-id="layer-tools">
+            <div class="layer-meta">04 / ACTION</div>
+            <h2 class="layer-title">工具链</h2>
+            <p class="layer-detail">状态、权限、观测和维护</p>
+          </article>
+
+          <div id="final-verdict" data-hf-id="final-verdict">
+            <span class="small-label">THE BUTTON IS ONLY THE SURFACE</span>
+            <strong>会用按钮只是入口，真正的能力在下面这张系统图里。</strong>
+            <span id="final-dot" data-hf-id="final-dot"></span>
+          </div>
+        </div>
+
+        <div class="tiny-note" id="tiny-note" data-hf-id="tiny-note">从按钮，走到系统</div>
+        <div id="caption-shell" data-hf-id="caption-shell" data-layout-allow-occlusion>
+          <p id="caption-one" class="caption-line" data-hf-id="caption-one">
+            <span class="accent">第一，</span>平台把系统的复杂性给隐藏起来。
+          </p>
+          <p id="caption-two" class="caption-line" data-hf-id="caption-two">
+            低代码、无代码、<span class="accent">AI 平台</span>、工作流工具，
+          </p>
+          <div class="caption-source">EXACT NARRATION / 57.0486088–64.2908627</div>
+        </div>
+      </div>
+
+      <audio
+        id="narration"
+        src="assets/narration.wav"
+        data-start="0"
+        data-duration="7.242254"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </main>
+
+    <script>
+      (function () {
+        "use strict";
+
+        window.__timelines = window.__timelines || {};
+
+        var DURATION = 7.242254;
+        var world = document.getElementById("world");
+        var cam = { x: -70, y: 160, scale: 1 };
+
+        function applyCamera() {
+          world.style.transform =
+            "translate(" + cam.x + "px, " + cam.y + "px) scale(" + cam.scale + ")";
+        }
+
+        applyCamera();
+
+        var paths = document.querySelectorAll("#route-layer path");
+        paths.forEach(function (path) {
+          var length = path.getTotalLength();
+          path.style.strokeDasharray = String(length);
+          path.style.strokeDashoffset = String(length);
+        });
+
+        var tl = gsap.timeline({ paused: true });
+
+        tl.fromTo(
+          "#reason-badge",
+          { opacity: 0, y: 28 },
+          { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" },
+          0.12,
+        );
+        tl.fromTo(
+          "#reason-underline",
+          { opacity: 0, scaleX: 0 },
+          { opacity: 1, scaleX: 1, duration: 0.42, ease: "power2.out" },
+          0.42,
+        );
+        tl.to("#route-hook", { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 0.28);
+        tl.to(
+          "#route-hook-rough",
+          { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" },
+          0.34,
+        );
+
+        tl.fromTo(
+          "#surface-card",
+          { opacity: 0, y: 34, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.62, ease: "back.out(1.25)" },
+          0.64,
+        );
+        tl.fromTo(
+          ".surface-button",
+          { opacity: 0, y: 20, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "power2.out", stagger: 0.1 },
+          0.96,
+        );
+        tl.fromTo(
+          "#tiny-note",
+          { opacity: 0, y: 12 },
+          { opacity: 1, y: 0, duration: 0.26, ease: "power2.out" },
+          1.16,
+        );
+
+        tl.to(
+          cam,
+          {
+            x: -523.2,
+            y: 106.4,
+            scale: 0.92,
+            duration: 1.15,
+            ease: "power3.inOut",
+            onUpdate: applyCamera,
+          },
+          1.45,
+        );
+        tl.to("#route-cutaway", { strokeDashoffset: 0, duration: 0.58, ease: "power2.out" }, 1.56);
+        tl.to(
+          "#route-cutaway-rough",
+          { strokeDashoffset: 0, duration: 0.62, ease: "power2.out" },
+          1.62,
+        );
+        tl.to("#surface-card", { opacity: 0.72, scale: 0.88, duration: 0.45, ease: "power2.out" }, 2.08);
+        tl.fromTo(
+          "#cutaway-card",
+          { opacity: 0, y: 28, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.56, ease: "power3.out" },
+          2.16,
+        );
+
+        tl.to(
+          cam,
+          {
+            x: -920,
+            y: 6,
+            scale: 0.88,
+            duration: 1.08,
+            ease: "power3.inOut",
+            onUpdate: applyCamera,
+          },
+          2.72,
+        );
+        tl.to("#route-model", { strokeDashoffset: 0, duration: 0.55, ease: "power2.out" }, 3.02);
+        tl.to("#route-api", { strokeDashoffset: 0, duration: 0.65, ease: "power2.out" }, 3.22);
+        tl.to("#route-vector", { strokeDashoffset: 0, duration: 0.72, ease: "power2.out" }, 3.42);
+        tl.to("#route-tools", { strokeDashoffset: 0, duration: 0.78, ease: "power2.out" }, 3.66);
+        tl.fromTo(
+          "#layer-model",
+          { opacity: 0, y: 28, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power2.out" },
+          3.48,
+        );
+        tl.fromTo(
+          "#layer-api",
+          { opacity: 0, y: 28, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power2.out" },
+          3.82,
+        );
+        tl.fromTo(
+          "#layer-vector",
+          { opacity: 0, y: 28, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power2.out" },
+          4.18,
+        );
+        tl.fromTo(
+          "#layer-tools",
+          { opacity: 0, y: 28, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power2.out" },
+          4.56,
+        );
+
+        tl.to(
+          cam,
+          {
+            x: -90,
+            y: 175,
+            scale: 0.43,
+            duration: 1.15,
+            ease: "power3.inOut",
+            onUpdate: applyCamera,
+          },
+          5.36,
+        );
+        tl.to("#route-final", { strokeDashoffset: 0, duration: 0.68, ease: "power2.out" }, 5.46);
+        tl.fromTo(
+          "#final-verdict",
+          { opacity: 0, y: 30, scale: 0.96 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.56, ease: "power3.out" },
+          5.84,
+        );
+        tl.to(
+          "#final-dot",
+          { scale: 1.16, duration: 0.28, yoyo: true, repeat: 1, ease: "sine.inOut" },
+          6.48,
+        );
+
+        tl.fromTo(
+          "#caption-one",
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.24, ease: "power2.out" },
+          0.08,
+        );
+        tl.to("#caption-one", { opacity: 0, y: -8, duration: 0.18, ease: "power2.in" }, 3.28);
+        tl.fromTo(
+          "#caption-two",
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.24, ease: "power2.out" },
+          3.4,
+        );
+
+        // Keep the root duration authoritative; this sentinel is intentionally inert.
+        tl.set("#stage", { opacity: 1 }, DURATION - 0.001);
+        window.__timelines["a-handdrawn-board"] = tl;
+      })();
+    </script>
+  </body>
+</html>

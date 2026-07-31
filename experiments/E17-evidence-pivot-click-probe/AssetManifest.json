@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "autovideo-probe-asset-manifest/v1",
+  "projectId": "E17-evidence-pivot-click-probe",
+  "releaseScope": "internal-probe-only",
+  "assets": [
+    {
+      "id": "host-present-transparent",
+      "type": "image",
+      "path": ".media/images/image_001.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "experiments/E06-keyword-handoff-probe/.media/images/image_001.png",
+      "derivedFrom": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+        "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780"
+      },
+      "provider": "media-use/local-ingest",
+      "license": "derived from user-provided asset; publication rights not implied",
+      "purpose": "single fixed host.left presenter"
+    },
+    {
+      "id": "workbench-evidence-capture",
+      "type": "image",
+      "path": ".media/images/image_002.png",
+      "inputPath": "input/workbench-evidence.png",
+      "sha256": "9665b8c53c9cad5cbb235fa087836e5092405ec5ab18c908cf9aee0f28c15e80",
+      "dimensions": "1265x712",
+      "source": "real local V5 workflow-console capture supplied for E17",
+      "provider": "local-ui-capture",
+      "license": "project-generated local UI capture; internal probe only; public-release rights not asserted",
+      "purpose": "evidence that one video entry is backed by a traceable production pipeline"
+    },
+    {
+      "id": "narration-window",
+      "type": "voice",
+      "path": ".media/audio/voice/voice_002.wav",
+      "inputPath": "input/narration-window.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "durationSeconds": 8,
+      "format": "PCM s16le, 48 kHz, mono",
+      "source": "byte-identical copy of experiments/E06-keyword-handoff-probe/input/narration-window.wav",
+      "provider": "media-use/local-ingest",
+      "license": "project-local generated narration; internal probe only",
+      "purpose": "same-narration-window lifecycle probe"
+    },
+    {
+      "id": "parallax-unzoom",
+      "type": "official-registry-component",
+      "path": "compositions/components/parallax-unzoom.html",
+      "sha256": "0b98917fe6b89bcc054a6f3d33f42d837323e023b87cd2cd6fb15b8ab8284a20",
+      "source": "HyperFrames official registry item parallax-unzoom",
+      "provider": "hyperframes@0.7.64",
+      "license": "Apache-2.0",
+      "purpose": "content-world evidence focus contracts while one conclusion sibling settles"
+    },
+    {
+      "id": "cursor-click-ripple",
+      "type": "official-motion-rule",
+      "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/cursor-click-ripple.md",
+      "sourceSha256": "e095aada6dce26112d5afd98abaf96531c9eacca5d9ac321cb670956862e2fb7",
+      "provider": "HyperFrames official animation rules",
+      "license": "Apache-2.0",
+      "purpose": "precomputed cursor move, synchronized press, and one restrained ring"
+    },
+    {
+      "id": "gsap-runtime",
+      "type": "runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "byte-identical copy from the checked E06 probe",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license",
+      "purpose": "single paused seek-safe timeline"
+    }
+  ],
+  "audioPolicy": {
+    "narrationPresent": true,
+    "sfxRegistered": false,
+    "reason": "The candidate probe uses a visual click only; no audio cue is claimed as approved."
+  }
+}

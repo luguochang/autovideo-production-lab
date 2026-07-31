@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo shot manifest planning output",
+  "type": "object",
+  "required": ["schemaVersion", "projectId", "shots"],
+  "additionalProperties": true,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-shot-manifest/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "cueCount": {"type": "integer", "minimum": 0},
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cueId"],
+        "additionalProperties": true,
+        "properties": {
+          "cueId": {"type": "string", "minLength": 1},
+          "sceneId": {"type": "string"},
+          "carrierPayload": {
+            "oneOf": [
+              {"type": "null"},
+              {"$ref": "#/$defs/dataChartCarrier"},
+              {"$ref": "#/$defs/codeSurfaceCarrier"},
+              {"$ref": "#/$defs/deviceSurfaceCarrier"}
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "receipt": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "id", "sha256"],
+      "properties": {"kind": {"enum": ["claim", "source", "media"]}, "id": {"type": "string", "minLength": 1, "maxLength": 180}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false, "required": ["status", "label"],
+      "properties": {"status": {"enum": ["verified", "illustrative-mock"]}, "label": {"type": "string", "minLength": 1, "maxLength": 40}, "receipt": {"$ref": "#/$defs/receipt"}},
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "verified"}}}, "then": {"required": ["receipt"]}},
+        {"if": {"properties": {"status": {"const": "illustrative-mock"}}}, "then": {"not": {"required": ["receipt"]}}}
+      ]
+    },
+    "carrierBase": {
+      "type": "object", "required": ["adapterId", "adapterVersion", "zone", "sourceReceipt", "sourceCueIds", "evidence", "data"]
+    },
+    "dataChartCarrier": {
+      "allOf": [{"$ref": "#/$defs/carrierBase"}], "type": "object", "additionalProperties": false,
+      "properties": {
+        "adapterId": {"const": "data-chart-bounded"}, "adapterVersion": {"const": "1.0.0"}, "zone": {"const": "content.right"}, "sourceReceipt": {"const": "hf-registry:data-chart@02ccb24bfa21850d"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "evidence": {"$ref": "#/$defs/evidence"},
+        "data": {"type": "object", "additionalProperties": false, "required": ["title", "series"], "properties": {"title": {"type": "string", "minLength": 1, "maxLength": 36}, "unit": {"type": "string", "maxLength": 12}, "highlightIndex": {"type": "integer", "minimum": 0, "maximum": 5}, "series": {"type": "array", "minItems": 2, "maxItems": 6, "items": {"type": "object", "additionalProperties": false, "required": ["label", "value"], "properties": {"label": {"type": "string", "minLength": 1, "maxLength": 12}, "value": {"type": "number", "minimum": 0}, "displayValue": {"type": "string", "maxLength": 14}}}}}}
+      }
+    },
+    "codeSurfaceCarrier": {
+      "allOf": [{"$ref": "#/$defs/carrierBase"}], "type": "object", "additionalProperties": false,
+      "properties": {
+        "adapterId": {"const": "code-surface-bounded"}, "adapterVersion": {"const": "1.0.0"}, "zone": {"const": "content.right"}, "sourceReceipt": {"const": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "evidence": {"$ref": "#/$defs/evidence"},
+        "data": {"type": "object", "additionalProperties": false, "required": ["title", "language", "mode", "lines"], "properties": {"title": {"type": "string", "minLength": 1, "maxLength": 42}, "language": {"type": "string", "minLength": 1, "maxLength": 18}, "mode": {"enum": ["highlight", "diff"]}, "lines": {"type": "array", "minItems": 2, "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["kind", "text"], "properties": {"kind": {"enum": ["context", "add", "remove", "focus"]}, "text": {"type": "string", "minLength": 1, "maxLength": 96}}}}}}
+      }
+    },
+    "deviceSurfaceCarrier": {
+      "allOf": [{"$ref": "#/$defs/carrierBase"}], "type": "object", "additionalProperties": false,
+      "properties": {
+        "adapterId": {"const": "device-surface-bounded"}, "adapterVersion": {"const": "1.0.0"}, "zone": {"const": "content.right"}, "sourceReceipt": {"const": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "evidence": {"$ref": "#/$defs/evidence"},
+        "data": {"type": "object", "additionalProperties": false, "required": ["title", "productLabel", "states"], "properties": {"title": {"type": "string", "minLength": 1, "maxLength": 36}, "productLabel": {"type": "string", "minLength": 1, "maxLength": 28}, "activeState": {"type": "integer", "minimum": 0, "maximum": 2}, "states": {"type": "array", "minItems": 2, "maxItems": 3, "items": {"type": "object", "additionalProperties": false, "required": ["label", "rows"], "properties": {"label": {"type": "string", "minLength": 1, "maxLength": 18}, "rows": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "string", "minLength": 1, "maxLength": 22}}}}}}
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Remotion PNG stills to HyperFrames</title>
+    <script src="./assets/gsap.min.js"></script>
+    <style>
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #10151d; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .clip { position: absolute; inset: 0; }
+      .still { width: 1920px; height: 1080px; object-fit: cover; display: block; }
+      #label { position: absolute; right: 72px; top: 72px; padding: 14px 20px; border-radius: 8px; background: rgba(16,21,29,.88); color: #f5f7fb; font: 700 25px Arial, sans-serif; letter-spacing: 1px; }
+      #label strong { color: #f6bd60; }
+      #progress { position: absolute; left: 72px; right: 72px; top: 48px; height: 7px; transform-origin: left; background: #6ee7f2; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="b-stills" data-start="0" data-width="1920" data-height="1080" data-duration="6">
+      <section id="b-frame-000" class="clip" data-start="0" data-duration="2" data-track-index="1"><img id="still-000" class="still" src="assets/remotion-frame-000.png" alt="Remotion frame 000" /></section>
+      <section id="b-frame-060" class="clip" data-start="2" data-duration="2" data-track-index="1"><img id="still-060" class="still" src="assets/remotion-frame-060.png" alt="Remotion frame 060" /></section>
+      <section id="b-frame-120" class="clip" data-start="4" data-duration="2" data-track-index="1"><img id="still-120" class="still" src="assets/remotion-frame-120.png" alt="Remotion frame 120" /></section>
+      <section id="b-overlay" class="clip" data-start="0" data-duration="6" data-track-index="2" data-layout-allow-overlap="true"><div id="label">B / Remotion <strong>PNG stills</strong></div><div id="progress"></div></section>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({paused: true});
+      tl.fromTo('#label', {opacity: 0, y: -18}, {opacity: 1, y: 0, duration: 0.45, ease: 'power3.out'}, 0.2);
+      tl.fromTo('#progress', {scaleX: 0}, {scaleX: 1, duration: 5.8, ease: 'none'}, 0.1);
+      window.__timelines['b-stills'] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "demoText-e10-c-editorial-data",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "baseStyleId": "editorial-data-report",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": ["data-chart", "grain-overlay"],
+  "blueprints": [],
+  "motionRules": ["stat-bars-and-fills", "svg-path-draw", "viewport-change"],
+  "status": "draft",
+  "approvedBy": null,
+  "notes": "Seven-second report-board evidence build using the shared narration slice.",
+  "receipts": [
+    {"source": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md", "kind": "user-provided", "license": "unknown"},
+    {"source": "vendor/hyperframes/skills/hyperframes-animation/rules", "kind": "official", "license": "Apache-2.0"}
+  ]
+}

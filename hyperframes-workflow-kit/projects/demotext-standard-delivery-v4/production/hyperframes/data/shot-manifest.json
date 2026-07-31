@@ -1,0 +1,1238 @@
+{
+  "schemaVersion": "autovideo-shot-manifest/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "sourceAlignment": "audio/alignment.json",
+  "narrationLock": "NarrationLock.json",
+  "cueCount": 46,
+  "timingUnit": "seconds",
+  "captionPolicy": {
+    "zone": "caption",
+    "textType": "exact-source",
+    "source": "NarrationLock exact cue text",
+    "maxLines": 2
+  },
+  "defaultVisualOperation": "replace",
+  "allowedScreenTextTypes": [
+    "exact-source",
+    "approved-summary",
+    "generated-summary"
+  ],
+  "allowedMotionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "scale-swap-transition",
+    "card-morph-anchor"
+  ],
+  "shots": [
+    {
+      "cueId": "cue-001",
+      "sceneId": "scene-01",
+      "narration": "我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。",
+      "start": 0,
+      "end": 4.78,
+      "duration": 4.78,
+      "screenText": {
+        "text": "对AI技术一定要有敬畏之心",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-001"
+        ]
+      },
+      "hostPose": "emphasis",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "enter",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-002",
+      "sceneId": "scene-02",
+      "narration": "这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。",
+      "start": 4.78,
+      "end": 9.04,
+      "duration": 4.26,
+      "screenText": {
+        "text": "AI、Coze、Dify社群",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-002"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-003",
+      "sceneId": "scene-02",
+      "narration": "但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。",
+      "start": 9.04,
+      "end": 15.14,
+      "duration": 6.1,
+      "screenText": {
+        "text": "99%的人",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-003"
+        ],
+        "claimFraming": "creator-opinion-unverified",
+        "statisticalChartAllowed": false
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-004",
+      "sceneId": "scene-03",
+      "narration": "AI也并不是你想的那么简单。",
+      "start": 15.14,
+      "end": 16.74,
+      "duration": 1.6,
+      "screenText": {
+        "text": "AI也并不是你想的那么简单",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-004"
+        ]
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-005",
+      "sceneId": "scene-03",
+      "narration": "我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。",
+      "start": 16.74,
+      "end": 27.3,
+      "duration": 10.56,
+      "screenText": {
+        "text": "会搭工作流 ≠ 懂系统",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-004",
+          "cue-005"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Visual-Thesis"
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-006",
+      "sceneId": "scene-04",
+      "narration": "尤其是应届生，投了很多简历，说AI并不好找工作。",
+      "start": 27.3,
+      "end": 31.5,
+      "duration": 4.2,
+      "screenText": {
+        "text": "AI并不好找工作",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-006"
+        ]
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-007",
+      "sceneId": "scene-04",
+      "narration": "我可以非常明确地告诉你，这个市场上90%的人，他对底层逻辑是完全不清晰的。",
+      "start": 31.5,
+      "end": 38.74,
+      "duration": 7.24,
+      "screenText": {
+        "text": "90%的人",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-007"
+        ],
+        "claimFraming": "creator-opinion-unverified",
+        "statisticalChartAllowed": false
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-008",
+      "sceneId": "scene-04",
+      "narration": "他不是在构建一个可维护的系统，而是在拼接一个能演示的流程、一个Demo。",
+      "start": 38.74,
+      "end": 44.74,
+      "duration": 6,
+      "screenText": {
+        "text": "可维护系统 ≠ 能演示的Demo",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-008"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Visual-Thesis"
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-009",
+      "sceneId": "scene-05",
+      "narration": "五个原因，对照一下，自己能理解的，月薪都不会低于30K。",
+      "start": 44.74,
+      "end": 49.34,
+      "duration": 4.6,
+      "screenText": {
+        "text": "五个原因",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-009"
+        ],
+        "claimFraming": "author-framework"
+      },
+      "numericClaimTreatment": {
+        "claim": "30K",
+        "mainVisual": "caption-only",
+        "statisticalChartAllowed": false,
+        "guaranteeBadgeAllowed": false
+      },
+      "hostPose": "emphasis",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "viewport-change",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-010",
+      "sceneId": "scene-06",
+      "narration": "第一，平台把系统的复杂性给隐藏起来。",
+      "start": 49.34,
+      "end": 52.56,
+      "duration": 3.22,
+      "screenText": {
+        "text": "平台把系统的复杂性给隐藏起来",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-010"
+        ]
+      },
+      "hostPose": "point-right",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-011",
+      "sceneId": "scene-06",
+      "narration": "低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。",
+      "start": 52.56,
+      "end": 61.68,
+      "duration": 9.12,
+      "screenText": {
+        "text": "包装成了按钮和节点",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-011"
+        ]
+      },
+      "hostPose": "point-right",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-012",
+      "sceneId": "scene-06",
+      "narration": "好处是普通人可以快速上手，坏处是很多人误以为会拖拽节点就等于懂系统架构。",
+      "start": 61.68,
+      "end": 67.56,
+      "duration": 5.88,
+      "screenText": {
+        "text": "快速上手 ≠ 懂系统架构",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-012"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+      },
+      "hostPose": "point-right",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-013",
+      "sceneId": "scene-06",
+      "narration": "但一旦报错，你根本就不知道是模型问题、接口问题、权限问题、数据问题，还是上下游问题、状态管理问题。",
+      "start": 67.56,
+      "end": 74.9,
+      "duration": 7.34,
+      "screenText": {
+        "text": "模型 / 接口 / 权限 / 数据 / 上下游 / 状态管理",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-013"
+        ],
+        "generationReceipt": "plan/graph-ir.json#graph-hidden-complexity"
+      },
+      "hostPose": "point-right",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-014",
+      "sceneId": "scene-07",
+      "narration": "第二点，很多人把原型能力误判成是产品能力。",
+      "start": 74.9,
+      "end": 79.02,
+      "duration": 4.12,
+      "screenText": {
+        "text": "原型能力 ≠ 产品能力",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-014"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-015",
+      "sceneId": "scene-07",
+      "narration": "AI最擅长帮你从0到1做一个Demo，每次帮你跑通一次，你就觉得自己做成了。",
+      "start": 79.02,
+      "end": 84.38,
+      "duration": 5.36,
+      "screenText": {
+        "text": "从0到1做一个Demo",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-015"
+        ]
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-016",
+      "sceneId": "scene-07",
+      "narration": "但是真实的产品不是跑通一次就可以了，而是能够长期稳定地运行真实的业务，是有脏数据、异常输入、并发请求、成本控制、隐私安全等一系列的问题。",
+      "start": 84.38,
+      "end": 97.52,
+      "duration": 13.14,
+      "screenText": {
+        "text": "长期稳定地运行真实的业务",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-016"
+        ]
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "viewport-change",
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-017",
+      "sceneId": "scene-07",
+      "narration": "当没有工程底座的时候，你的Demo越漂亮，后面塌得就越快。",
+      "start": 97.52,
+      "end": 101.74,
+      "duration": 4.22,
+      "screenText": {
+        "text": "Demo越漂亮，后面塌得就越快",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-017"
+        ]
+      },
+      "hostPose": "present",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-018",
+      "sceneId": "scene-08",
+      "narration": "第三点，就是我觉得现在短视频它疯狂地在展示结果，没有去展示维护。",
+      "start": 101.74,
+      "end": 107.08,
+      "duration": 5.34,
+      "screenText": {
+        "text": "展示结果，没有去展示维护",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-018"
+        ]
+      },
+      "hostPose": "explain",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-019",
+      "sceneId": "scene-08",
+      "narration": "一个智能体自动生成报告、自动回复客户、自动剪辑视频，它看起来很震惊，但是没有人展示它失败的时候怎么去排查，没人展示日志怎么读，没人展示测试怎么做，没人展示边界条件怎么处理。",
+      "start": 107.08,
+      "end": 120.1,
+      "duration": 13.02,
+      "screenText": {
+        "text": "失败排查 / 日志 / 测试 / 边界条件",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-019"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+      },
+      "hostPose": "explain",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "viewport-change",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-020",
+      "sceneId": "scene-08",
+      "narration": "于是大家看到的是魔法，Magic，它不是Engineering。",
+      "start": 120.1,
+      "end": 123.96,
+      "duration": 3.86,
+      "screenText": {
+        "text": "Magic ≠ Engineering",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-020"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+      },
+      "hostPose": "explain",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-021",
+      "sceneId": "scene-09",
+      "narration": "第四点，很多人有强烈的弯道超车的心理。",
+      "start": 123.96,
+      "end": 127.14,
+      "duration": 3.18,
+      "screenText": {
+        "text": "弯道超车",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-021"
+        ]
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-022",
+      "sceneId": "scene-09",
+      "narration": "AI给了所有非技术的人一个巨大的想象：我不懂代码也能做软件，我不会开发也能创业。",
+      "start": 127.14,
+      "end": 133.16,
+      "duration": 6.02,
+      "screenText": {
+        "text": "不懂代码也能做软件",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-022"
+        ]
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-023",
+      "sceneId": "scene-09",
+      "narration": "这种心理有一部分是真的，因为AI确实降低了表达需求和生成原型的门槛。",
+      "start": 133.16,
+      "end": 138.52,
+      "duration": 5.36,
+      "screenText": {
+        "text": "降低了表达需求和生成原型的门槛",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-023"
+        ]
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-024",
+      "sceneId": "scene-09",
+      "narration": "但危险在于，有些人进一步误解为，不需要懂代码、不需要懂系统、不需要懂工程就能够。",
+      "start": 138.52,
+      "end": 145.04,
+      "duration": 6.52,
+      "screenText": {
+        "text": "不需要懂代码 / 系统 / 工程",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-024"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-025",
+      "sceneId": "scene-09",
+      "narration": "不能，最后只是一种自欺欺人。",
+      "start": 145.04,
+      "end": 147.28,
+      "duration": 2.24,
+      "screenText": {
+        "text": "最后只是一种自欺欺人",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-025"
+        ]
+      },
+      "hostPose": "think",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "exit",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-026",
+      "sceneId": "scene-10",
+      "narration": "第五点，真正的智能体至少要能回答一些问题：它的任务边界是什么？",
+      "start": 147.28,
+      "end": 151.74,
+      "duration": 4.46,
+      "screenText": {
+        "text": "任务边界是什么？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-026"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-027",
+      "sceneId": "scene-10",
+      "narration": "它失败时应该怎么办？",
+      "start": 151.74,
+      "end": 153.12,
+      "duration": 1.38,
+      "screenText": {
+        "text": "失败时应该怎么办？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-027"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-028",
+      "sceneId": "scene-10",
+      "narration": "该如何保存和调用上下文？",
+      "start": 153.12,
+      "end": 155.12,
+      "duration": 2,
+      "screenText": {
+        "text": "保存和调用上下文",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-028"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-029",
+      "sceneId": "scene-10",
+      "narration": "该怎么判断模型输出是否靠谱？",
+      "start": 155.12,
+      "end": 157.42,
+      "duration": 2.3,
+      "screenText": {
+        "text": "模型输出是否靠谱？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-029"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-030",
+      "sceneId": "scene-10",
+      "narration": "它怎么处理工具调用失败？",
+      "start": 157.42,
+      "end": 159.64,
+      "duration": 2.22,
+      "screenText": {
+        "text": "工具调用失败",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-030"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-031",
+      "sceneId": "scene-10",
+      "narration": "它的数据从哪里来，是否可信？",
+      "start": 159.64,
+      "end": 161.88,
+      "duration": 2.24,
+      "screenText": {
+        "text": "数据从哪里来，是否可信？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-031"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-032",
+      "sceneId": "scene-10",
+      "narration": "它有没有权限控制和安全机制？",
+      "start": 161.88,
+      "end": 164.22,
+      "duration": 2.34,
+      "screenText": {
+        "text": "权限控制和安全机制",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-032"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-033",
+      "sceneId": "scene-10",
+      "narration": "有没有日志、监控、测试、回滚机制？",
+      "start": 164.22,
+      "end": 167.1,
+      "duration": 2.88,
+      "screenText": {
+        "text": "日志、监控、测试、回滚机制",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-033"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-034",
+      "sceneId": "scene-10",
+      "narration": "它的成本是否可控？",
+      "start": 167.1,
+      "end": 168.36,
+      "duration": 1.26,
+      "screenText": {
+        "text": "成本是否可控？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-034"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-035",
+      "sceneId": "scene-10",
+      "narration": "最后，它能不能被别人去维护？",
+      "start": 168.36,
+      "end": 170.36,
+      "duration": 2,
+      "screenText": {
+        "text": "能不能被别人去维护？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-035"
+        ]
+      },
+      "hostPose": "read",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-036",
+      "sceneId": "scene-11",
+      "narration": "很多人出了Bug以后，他用AI来去打这个补丁。",
+      "start": 170.36,
+      "end": 173.46,
+      "duration": 3.1,
+      "screenText": {
+        "text": "用AI来去打这个补丁",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-036"
+        ]
+      },
+      "hostPose": "question",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-037",
+      "sceneId": "scene-11",
+      "narration": "我说实话，AI打补丁，这个补丁会打得非常大，而且一定是失真的。",
+      "start": 173.46,
+      "end": 177.54,
+      "duration": 4.08,
+      "screenText": {
+        "text": "补丁会打得非常大，而且一定是失真的",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-037"
+        ]
+      },
+      "hostPose": "question",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "morph",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-038",
+      "sceneId": "scene-11",
+      "narration": "这些问题，有人回答得上来吗？",
+      "start": 177.54,
+      "end": 179.74,
+      "duration": 2.2,
+      "screenText": {
+        "text": "这些问题，有人回答得上来吗？",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-038"
+        ]
+      },
+      "hostPose": "question",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-039",
+      "sceneId": "scene-11",
+      "narration": "你回答不上来，它就不是产品，它只是个演示。",
+      "start": 179.74,
+      "end": 182.44,
+      "duration": 2.7,
+      "screenText": {
+        "text": "它就不是产品，它只是个演示",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-039"
+        ]
+      },
+      "hostPose": "question",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-040",
+      "sceneId": "scene-12",
+      "narration": "今年，真正懂系统的人已经开始胜出了，因为他们把AI从玩具变成了工具，将工具变成了产品，从产品变成了业务的基础设施。",
+      "start": 182.44,
+      "end": 191.84,
+      "duration": 9.4,
+      "screenText": {
+        "text": "玩具 → 工具 → 产品 → 业务基础设施",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-040"
+        ],
+        "generationReceipt": "plan/graph-ir.json#graph-maturity-ladder"
+      },
+      "hostPose": "point-right",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-041",
+      "sceneId": "scene-13",
+      "narration": "如果你也想把Agent真正地学起来，不只是随便玩一下，而是当作自己的工作，就能拿到一个还不错的薪资。",
+      "start": 191.84,
+      "end": 198.72,
+      "duration": 6.88,
+      "screenText": {
+        "text": "把Agent真正地学起来",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-041"
+        ],
+        "incomeClaimMainVisualAllowed": false
+      },
+      "hostPose": "encourage",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "viewport-change",
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "cueId": "cue-042",
+      "sceneId": "scene-13",
+      "narration": "666，拿着我这份耗时三周整理出来的路线和教程，里面就包含了Agent集群、MCP等基础的知识点，以及要去做什么项目。",
+      "start": 198.72,
+      "end": 208.46,
+      "duration": 9.74,
+      "screenText": {
+        "text": "Agent集群 / MCP / 项目",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-042"
+        ],
+        "generationReceipt": "plan/graph-ir.json#graph-learning-route"
+      },
+      "hostPose": "encourage",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-043",
+      "sceneId": "scene-13",
+      "narration": "把这些东西都要系统地过一遍，这才是决定你做出来的东西不是Demo，而是能够上线的产品。",
+      "start": 208.46,
+      "end": 214.68,
+      "duration": 6.22,
+      "screenText": {
+        "text": "不是Demo，而是能够上线的产品",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-043"
+        ]
+      },
+      "hostPose": "encourage",
+      "zones": [
+        "host.right",
+        "content.left",
+        "caption"
+      ],
+      "visualOperation": "compact",
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ]
+    },
+    {
+      "cueId": "cue-044",
+      "sceneId": "scene-14",
+      "narration": "当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。",
+      "start": 214.68,
+      "end": 220.26,
+      "duration": 5.58,
+      "screenText": {
+        "text": "理解、判断、维护、负责",
+        "type": "exact-source",
+        "sourceCueIds": [
+          "cue-044"
+        ],
+        "claimFraming": "author-framework"
+      },
+      "hostPose": "close",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "replace",
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-045",
+      "sceneId": "scene-14",
+      "narration": "就是你去做这个提示词，这个动作是很廉价的，只需要消耗一点Token。",
+      "start": 220.26,
+      "end": 225.58,
+      "duration": 5.32,
+      "screenText": {
+        "text": "提示词 / Token",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-045"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+      },
+      "hostPose": "close",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "compare",
+      "motionRules": [
+        "scale-swap-transition"
+      ]
+    },
+    {
+      "cueId": "cue-046",
+      "sceneId": "scene-14",
+      "narration": "但是后面如何去理解你的这个Agent，如何去判断，如何去维护，如何去负责，让它从一个Demo变成一个真正的产品，让它能够跑通你的业务，这个过程是很复杂的，所以这个过程也是很珍贵的。",
+      "start": 225.58,
+      "end": 239.328,
+      "duration": 13.748,
+      "screenText": {
+        "text": "Demo → 真正的产品 → 跑通业务",
+        "type": "generated-summary",
+        "sourceCueIds": [
+          "cue-046"
+        ],
+        "generationReceipt": "VIDEO_TASK.md#Visual-Thesis"
+      },
+      "hostPose": "close",
+      "zones": [
+        "host.left",
+        "content.right",
+        "caption"
+      ],
+      "visualOperation": "hold",
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-reference-fallback",
+    "referenceProjectId": "demotext-standard-delivery-v3",
+    "reason": "visual-plan structured adapter failed with upstream 502 after retry timeout.",
+    "referenceArtifactsAreStructureOnly": true
+  }
+}

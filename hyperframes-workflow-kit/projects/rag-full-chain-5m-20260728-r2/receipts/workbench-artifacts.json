@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "autovideo-workbench-receipts/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "generatedBy": "scripts/finalize-delivery-manifest.mjs",
+  "policy": "Present artifacts are byte-for-byte snapshots. Missing artifacts are recorded but never synthesized.",
+  "artifacts": [
+    {
+      "id": "sourceRegistration",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/source-register/sources.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/sources.json",
+      "size": 920,
+      "sha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd"
+    },
+    {
+      "id": "evidenceLedger",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/evidence-ledger/evidence.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/evidence.json",
+      "size": 136026,
+      "sha256": "58e972b2d0b3f5d0783c4c4cb223578be35d2af7b6563fddb7277a4ba23b7cf6"
+    },
+    {
+      "id": "contentOutline",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/content-outline/content-outline.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/content-outline.json"
+    },
+    {
+      "id": "scriptDraft",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/script-draft/script.draft.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/script.draft.json"
+    },
+    {
+      "id": "spokenRewrite",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/spoken-rewrite/spoken-rewrite.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/spoken-rewrite.json",
+      "size": 31617,
+      "sha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018"
+    },
+    {
+      "id": "durationFit",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/content-duration-fit/content-duration-fit.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/content-duration-fit.json",
+      "size": 747,
+      "sha256": "a2c921e2d44dc19bbbf215120e81fba46d80a7e78fc8bd2ca2469f7811de0fad"
+    },
+    {
+      "id": "claimSourceReview",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/claim-source-review/claim-source-review.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/claim-source-review.json",
+      "size": 862,
+      "sha256": "c78f8587eb43a208d6750d78778b0e22afad5804b29dabf831676269f2109dd4"
+    },
+    {
+      "id": "scriptApproval",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/script-review/script.approved.txt",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/script.approved.txt",
+      "size": 28116,
+      "sha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97"
+    },
+    {
+      "id": "publicationRights",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/rights-clearance/publication-rights.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/rights/publication-rights.json",
+      "size": 6078,
+      "sha256": "3d5cebdeac1b7eef25312fdfccc3f554496000f96b037546fea31cdb2e2469e6"
+    }
+  ]
+}

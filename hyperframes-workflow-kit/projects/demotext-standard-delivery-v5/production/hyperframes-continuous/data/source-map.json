@@ -1,0 +1,342 @@
+{
+  "schemaVersion": "autovideo-composition-source-map/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "scenes": {
+    "scene-01": {
+      "file": "./compositions/scenes/01-scene-01.html",
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "graphId": null,
+      "hostPose": "question",
+      "editableTargets": [
+        "visual-cue-001",
+        "visual-cue-002",
+        "visual-cue-003"
+      ],
+      "visualVariants": {
+        "cue-001": "auto",
+        "cue-002": "auto",
+        "cue-003": "auto"
+      }
+    },
+    "scene-02": {
+      "file": "./compositions/scenes/02-scene-02.html",
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "graphId": "graph-scene-02",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-004",
+        "visual-cue-005",
+        "visual-cue-006"
+      ],
+      "visualVariants": {
+        "cue-004": "auto",
+        "cue-005": "auto",
+        "cue-006": "auto"
+      }
+    },
+    "scene-03": {
+      "file": "./compositions/scenes/03-scene-03.html",
+      "cueIds": [
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "graphId": null,
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-007",
+        "visual-cue-008",
+        "visual-cue-009"
+      ],
+      "visualVariants": {
+        "cue-007": "auto",
+        "cue-008": "auto",
+        "cue-009": "auto"
+      }
+    },
+    "scene-04": {
+      "file": "./compositions/scenes/04-scene-04.html",
+      "cueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "graphId": "graph-scene-04",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-010",
+        "visual-cue-011"
+      ],
+      "visualVariants": {
+        "cue-010": "auto",
+        "cue-011": "auto"
+      }
+    },
+    "scene-05": {
+      "file": "./compositions/scenes/05-scene-05.html",
+      "cueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "graphId": "graph-scene-05",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-012",
+        "visual-cue-013",
+        "visual-cue-014"
+      ],
+      "visualVariants": {
+        "cue-012": "auto",
+        "cue-013": "auto",
+        "cue-014": "auto"
+      }
+    },
+    "scene-06": {
+      "file": "./compositions/scenes/06-scene-06.html",
+      "cueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-015",
+        "visual-cue-016"
+      ],
+      "visualVariants": {
+        "cue-015": "auto",
+        "cue-016": "auto"
+      }
+    },
+    "scene-07": {
+      "file": "./compositions/scenes/07-scene-07.html",
+      "cueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "graphId": "graph-scene-07",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-017",
+        "visual-cue-018"
+      ],
+      "visualVariants": {
+        "cue-017": "auto",
+        "cue-018": "auto"
+      }
+    },
+    "scene-08": {
+      "file": "./compositions/scenes/08-scene-08.html",
+      "cueIds": [
+        "cue-019",
+        "cue-020"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-019",
+        "visual-cue-020"
+      ],
+      "visualVariants": {
+        "cue-019": "auto",
+        "cue-020": "auto"
+      }
+    },
+    "scene-09": {
+      "file": "./compositions/scenes/09-scene-09.html",
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "graphId": "graph-scene-09",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-021",
+        "visual-cue-022",
+        "visual-cue-023"
+      ],
+      "visualVariants": {
+        "cue-021": "auto",
+        "cue-022": "auto",
+        "cue-023": "auto"
+      }
+    },
+    "scene-10": {
+      "file": "./compositions/scenes/10-scene-10.html",
+      "cueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "graphId": "graph-scene-10",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-024",
+        "visual-cue-025",
+        "visual-cue-026"
+      ],
+      "visualVariants": {
+        "cue-024": "auto",
+        "cue-025": "auto",
+        "cue-026": "auto"
+      }
+    },
+    "scene-11": {
+      "file": "./compositions/scenes/11-scene-11.html",
+      "cueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "visual-cue-027",
+        "visual-cue-028",
+        "visual-cue-029"
+      ],
+      "visualVariants": {
+        "cue-027": "auto",
+        "cue-028": "auto",
+        "cue-029": "auto"
+      }
+    },
+    "scene-12": {
+      "file": "./compositions/scenes/12-scene-12.html",
+      "cueIds": [
+        "cue-030",
+        "cue-031",
+        "cue-032"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "visual-cue-030",
+        "visual-cue-031",
+        "visual-cue-032"
+      ],
+      "visualVariants": {
+        "cue-030": "auto",
+        "cue-031": "auto",
+        "cue-032": "auto"
+      }
+    },
+    "scene-13": {
+      "file": "./compositions/scenes/13-scene-13.html",
+      "cueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "graphId": "graph-scene-13",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "visual-cue-033",
+        "visual-cue-034",
+        "visual-cue-035"
+      ],
+      "visualVariants": {
+        "cue-033": "auto",
+        "cue-034": "auto",
+        "cue-035": "auto"
+      }
+    },
+    "scene-14": {
+      "file": "./compositions/scenes/14-scene-14.html",
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "visual-cue-036",
+        "visual-cue-037",
+        "visual-cue-038"
+      ],
+      "visualVariants": {
+        "cue-036": "auto",
+        "cue-037": "auto",
+        "cue-038": "auto"
+      }
+    },
+    "scene-15": {
+      "file": "./compositions/scenes/15-scene-15.html",
+      "cueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-039",
+        "visual-cue-040"
+      ],
+      "visualVariants": {
+        "cue-039": "auto",
+        "cue-040": "auto"
+      }
+    },
+    "scene-16": {
+      "file": "./compositions/scenes/16-scene-16.html",
+      "cueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-041",
+        "visual-cue-042"
+      ],
+      "visualVariants": {
+        "cue-041": "auto",
+        "cue-042": "auto"
+      }
+    },
+    "scene-17": {
+      "file": "./compositions/scenes/17-scene-17.html",
+      "cueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "visual-cue-043",
+        "visual-cue-044",
+        "visual-cue-045"
+      ],
+      "visualVariants": {
+        "cue-043": "auto",
+        "cue-044": "auto",
+        "cue-045": "auto"
+      }
+    },
+    "scene-18": {
+      "file": "./compositions/scenes/18-scene-18.html",
+      "cueIds": [
+        "cue-046"
+      ],
+      "graphId": null,
+      "hostPose": "close",
+      "editableTargets": [
+        "visual-cue-046"
+      ],
+      "visualVariants": {
+        "cue-046": "auto"
+      }
+    }
+  }
+}

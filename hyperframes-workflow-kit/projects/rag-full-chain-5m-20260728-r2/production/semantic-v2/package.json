@@ -1,0 +1,16 @@
+{
+  "name": "rag-full-chain-semantic-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-semantic-v2.mjs",
+    "audio:episodes": "node scripts/assemble-episode-audio.mjs",
+    "lint": "npx --yes hyperframes@0.7.81 lint",
+    "check": "npx --yes hyperframes@0.7.81 check",
+    "snapshot": "npx --yes hyperframes@0.7.81 snapshot",
+    "preview": "npx --yes hyperframes@0.7.81 preview",
+    "render": "npx --yes hyperframes@0.7.81 render",
+    "finalize": "node scripts/finalize-semantic-v2-delivery.mjs",
+    "verify-package": "node scripts/finalize-semantic-v2-delivery.mjs --check"
+  }
+}

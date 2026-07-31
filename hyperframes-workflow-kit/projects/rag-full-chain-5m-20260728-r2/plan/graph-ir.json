@@ -1,0 +1,3307 @@
+{
+  "schemaVersion": "autovideo-graph-ir/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "purpose": "Conservative deterministic process diagrams derived from aligned cue order.",
+  "globalPolicy": {
+    "maxActiveNodesPerState": 3,
+    "defaultStateTransition": "replace",
+    "completedGroupTreatment": "compact",
+    "allowedMotionRules": [
+      "viewport-change",
+      "svg-path-draw",
+      "scale-swap-transition",
+      "card-morph-anchor"
+    ],
+    "forbidGraphKinds": [
+      "chart",
+      "stat",
+      "count"
+    ],
+    "excludedNumericClaims": [],
+    "numericClaimReason": "The deterministic baseline never promotes numeric narration to a statistical chart."
+  },
+  "graphs": [
+    {
+      "id": "graph-scene-02",
+      "sceneId": "scene-02",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-005",
+        "cue-006",
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-02-node-01",
+          "label": "把这些判断讲清楚，才能体现真正做过，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        },
+        {
+          "id": "graph-scene-02-node-02",
+          "label": "链路第一站是文档解析。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        },
+        {
+          "id": "graph-scene-02-node-03",
+          "label": "原始文档可能来自 PDF、Word、",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-007"
+          ]
+        },
+        {
+          "id": "graph-scene-02-node-04",
+          "label": "这一步的目标是把异构文档变成结构化文",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-008"
+          ]
+        },
+        {
+          "id": "graph-scene-02-node-05",
+          "label": "先看解析工具，大致有这么几类。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-009"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-02-edge-01",
+          "from": "graph-scene-02-node-01",
+          "to": "graph-scene-02-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-02-edge-02",
+          "from": "graph-scene-02-node-02",
+          "to": "graph-scene-02-node-03",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-02-edge-03",
+          "from": "graph-scene-02-node-03",
+          "to": "graph-scene-02-node-04",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-02-edge-04",
+          "from": "graph-scene-02-node-04",
+          "to": "graph-scene-02-node-05",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-02-state-01",
+          "cueIds": [
+            "cue-005"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-02-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-02-state-02",
+          "cueIds": [
+            "cue-006"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-01",
+            "graph-scene-02-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-02-state-03",
+          "cueIds": [
+            "cue-007"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-01",
+            "graph-scene-02-node-02",
+            "graph-scene-02-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-01",
+            "graph-scene-02-edge-02"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-02-state-04",
+          "cueIds": [
+            "cue-008"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-02",
+            "graph-scene-02-node-03",
+            "graph-scene-02-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-02",
+            "graph-scene-02-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-02-node-01"
+          ]
+        },
+        {
+          "id": "graph-scene-02-state-05",
+          "cueIds": [
+            "cue-009"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-03",
+            "graph-scene-02-node-04",
+            "graph-scene-02-node-05"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-03",
+            "graph-scene-02-edge-04"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-02-node-01",
+            "graph-scene-02-node-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-02-state-05",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-005",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-005"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-006",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-006"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-007",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-007"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-007"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "原始文档可能来自 PDF、Word、HTML 或 Con",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "原始文档可能来自 PDF、Word、HTML"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    " 或 Confluence"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "格式复杂"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-008",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-008"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-008"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "这一步的目标是把异构文档变成结构化文本加元数据，",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "这一步的目标是把异构文档变成结构化文本加元数"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    "据"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "解析质量会直接影响后面各环节的效果"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-009",
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-009"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-05",
+      "sceneId": "scene-05",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-05-node-01",
+          "label": "落地时，还有一个关键点：",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-015"
+          ]
+        },
+        {
+          "id": "graph-scene-05-node-02",
+          "label": "主解析用 MinerU 或 Unst",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-016"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-05-edge-01",
+          "from": "graph-scene-05-node-01",
+          "to": "graph-scene-05-node-02",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-05-state-01",
+          "cueIds": [
+            "cue-015"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-05-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-05-state-02",
+          "cueIds": [
+            "cue-016"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-05-node-01",
+            "graph-scene-05-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-05-edge-01"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-05-state-02",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-015",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-015"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-016",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-016"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-12",
+      "sceneId": "scene-12",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-12-node-01",
+          "label": "生产上一般按文档类型分策略，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-036"
+          ]
+        },
+        {
+          "id": "graph-scene-12-node-02",
+          "label": "比如同一个库里，施工规范按条款条文切",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-037"
+          ]
+        },
+        {
+          "id": "graph-scene-12-node-03",
+          "label": "而且切完每个文本块都要带上元数据——",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-038"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-12-edge-01",
+          "from": "graph-scene-12-node-01",
+          "to": "graph-scene-12-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-12-edge-02",
+          "from": "graph-scene-12-node-02",
+          "to": "graph-scene-12-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-12-state-01",
+          "cueIds": [
+            "cue-036"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-12-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-12-state-02",
+          "cueIds": [
+            "cue-037"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-12-node-01",
+            "graph-scene-12-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-12-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-12-state-03",
+          "cueIds": [
+            "cue-038"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-12-node-01",
+            "graph-scene-12-node-02",
+            "graph-scene-12-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-12-edge-01",
+            "graph-scene-12-edge-02"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-12-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-036",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-036"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-037",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-037"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-038",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-038"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-038"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "而且切完每个文本块都要带上元数据——来源、章节、页码、条",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "而且切完每个文本块都要带上元数据——来源、章"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    "节、页码、条文号、版本"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "这些后面条件过滤、引用展示、索引重建全要用"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-14",
+      "sceneId": "scene-14",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-14-node-01",
+          "label": "分块效果不能只凭感觉，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-041"
+          ]
+        },
+        {
+          "id": "graph-scene-14-node-02",
+          "label": "分块还想继续提升，可以沿三个方向走：",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-042"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-14-edge-01",
+          "from": "graph-scene-14-node-01",
+          "to": "graph-scene-14-node-02",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-14-state-01",
+          "cueIds": [
+            "cue-041"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-14-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-14-state-02",
+          "cueIds": [
+            "cue-042"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-14-node-01",
+            "graph-scene-14-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-14-edge-01"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-14-state-02",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-041",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-041"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-042",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-042"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-21",
+      "sceneId": "scene-21",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-068",
+        "cue-069",
+        "cue-070",
+        "cue-071",
+        "cue-072"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-21-node-01",
+          "label": "具体版本、维度和输入类型，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-068"
+          ]
+        },
+        {
+          "id": "graph-scene-21-node-02",
+          "label": "向量模型怎么选？",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-069"
+          ]
+        },
+        {
+          "id": "graph-scene-21-node-03",
+          "label": "主要看三个方面。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-070"
+          ]
+        },
+        {
+          "id": "graph-scene-21-node-04",
+          "label": "第一是中文效果，BGE 系列通常是中",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-071"
+          ]
+        },
+        {
+          "id": "graph-scene-21-node-05",
+          "label": "第二是部署边界，企业知识不能出域时优",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-072"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-21-edge-01",
+          "from": "graph-scene-21-node-01",
+          "to": "graph-scene-21-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-21-edge-02",
+          "from": "graph-scene-21-node-02",
+          "to": "graph-scene-21-node-03",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-21-edge-03",
+          "from": "graph-scene-21-node-03",
+          "to": "graph-scene-21-node-04",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-21-edge-04",
+          "from": "graph-scene-21-node-04",
+          "to": "graph-scene-21-node-05",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-21-state-01",
+          "cueIds": [
+            "cue-068"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-21-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-21-state-02",
+          "cueIds": [
+            "cue-069"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-21-node-01",
+            "graph-scene-21-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-21-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-21-state-03",
+          "cueIds": [
+            "cue-070"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-21-node-01",
+            "graph-scene-21-node-02",
+            "graph-scene-21-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-21-edge-01",
+            "graph-scene-21-edge-02"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-21-state-04",
+          "cueIds": [
+            "cue-071"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-21-node-02",
+            "graph-scene-21-node-03",
+            "graph-scene-21-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-21-edge-02",
+            "graph-scene-21-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-21-node-01"
+          ]
+        },
+        {
+          "id": "graph-scene-21-state-05",
+          "cueIds": [
+            "cue-072"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-21-node-03",
+            "graph-scene-21-node-04",
+            "graph-scene-21-node-05"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-21-edge-03",
+            "graph-scene-21-edge-04"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-21-node-01",
+            "graph-scene-21-node-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-21-state-05",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-068",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-068"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-069",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-069"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-070",
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-070"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-071",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-071"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-071"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "第一是中文效果，BGE 系列通常是中文开源方案的重要候",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "第一是中文效果"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    "BGE 系列通常是中文开源方案的重要候选"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "但仍要用领域评测集比较"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-072",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-072"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-072"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "第二是部署边界，企业知识不能出域时优先评估本地模型；",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "第二是部署边界"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    "企业知识不能出域时优先评估本地模型"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "允许外部服务时"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-23",
+      "sceneId": "scene-23",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-077",
+        "cue-078",
+        "cue-079"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-23-node-01",
+          "label": "第二，换模型等于全库重新计算向量，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-077"
+          ]
+        },
+        {
+          "id": "graph-scene-23-node-02",
+          "label": "第三，MTEB 榜单只能作为参考，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-078"
+          ]
+        },
+        {
+          "id": "graph-scene-23-node-03",
+          "label": "向量模型选得对不对，重点看三件事：",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-079"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-23-edge-01",
+          "from": "graph-scene-23-node-01",
+          "to": "graph-scene-23-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-23-edge-02",
+          "from": "graph-scene-23-node-02",
+          "to": "graph-scene-23-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-23-state-01",
+          "cueIds": [
+            "cue-077"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-23-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-23-state-02",
+          "cueIds": [
+            "cue-078"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-23-node-01",
+            "graph-scene-23-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-23-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-23-state-03",
+          "cueIds": [
+            "cue-079"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-23-node-01",
+            "graph-scene-23-node-02",
+            "graph-scene-23-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-23-edge-01",
+            "graph-scene-23-edge-02"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-23-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-077",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-077"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-078",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-078"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-079",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-079"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-079"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "向量模型选得对不对，重点看三件事：",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "向量模型选得对不对"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    "重点看三件事"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "MTEB 榜单只作参考"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-46",
+      "sceneId": "scene-46",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-159",
+        "cue-160",
+        "cue-161",
+        "cue-162"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-46-node-01",
+          "label": "Anthropic 的公开流程示例采",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-159"
+          ]
+        },
+        {
+          "id": "graph-scene-46-node-02",
+          "label": "如果采用交叉编码器，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-160"
+          ]
+        },
+        {
+          "id": "graph-scene-46-node-03",
+          "label": "候选数量要用离线指标和延迟压测共同决",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-161"
+          ]
+        },
+        {
+          "id": "graph-scene-46-node-04",
+          "label": "LangChain 也可以接入重排模",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-162"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-46-edge-01",
+          "from": "graph-scene-46-node-01",
+          "to": "graph-scene-46-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-46-edge-02",
+          "from": "graph-scene-46-node-02",
+          "to": "graph-scene-46-node-03",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-46-edge-03",
+          "from": "graph-scene-46-node-03",
+          "to": "graph-scene-46-node-04",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-46-state-01",
+          "cueIds": [
+            "cue-159"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-46-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-46-state-02",
+          "cueIds": [
+            "cue-160"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-46-node-01",
+            "graph-scene-46-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-46-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-46-state-03",
+          "cueIds": [
+            "cue-161"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-46-node-01",
+            "graph-scene-46-node-02",
+            "graph-scene-46-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-46-edge-01",
+            "graph-scene-46-edge-02"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-46-state-04",
+          "cueIds": [
+            "cue-162"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-46-node-02",
+            "graph-scene-46-node-03",
+            "graph-scene-46-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-46-edge-02",
+            "graph-scene-46-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-46-node-01"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-46-state-04",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-159",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-159"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-160",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-160"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-161",
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-161"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-162",
+          "visualType": "code-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "code-proof",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "slide-left",
+                "variant": "stack",
+                "enterSeconds": 0.64,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.06
+              },
+              "sourceCueIds": [
+                "cue-162"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "code-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb",
+            "sourceCueIds": [
+              "cue-162"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "LangChain 也可",
+              "language": "pseudocode",
+              "mode": "highlight",
+              "lines": [
+                {
+                  "kind": "context",
+                  "text": "SOURCE: cue-162"
+                },
+                {
+                  "kind": "focus",
+                  "text": "STEP_1: LangChain 也可"
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-55",
+      "sceneId": "scene-55",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-187",
+        "cue-188",
+        "cue-189",
+        "cue-190"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-55-node-01",
+          "label": "引用有三种实现。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-187"
+          ]
+        },
+        {
+          "id": "graph-scene-55-node-02",
+          "label": "第一种是在提示词里让 LLM 自己标",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-188"
+          ]
+        },
+        {
+          "id": "graph-scene-55-node-03",
+          "label": "第二种是后处理校验，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-189"
+          ]
+        },
+        {
+          "id": "graph-scene-55-node-04",
+          "label": "第三种是片段级引用，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-190"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-55-edge-01",
+          "from": "graph-scene-55-node-01",
+          "to": "graph-scene-55-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-55-edge-02",
+          "from": "graph-scene-55-node-02",
+          "to": "graph-scene-55-node-03",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-55-edge-03",
+          "from": "graph-scene-55-node-03",
+          "to": "graph-scene-55-node-04",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-55-state-01",
+          "cueIds": [
+            "cue-187"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-55-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-55-state-02",
+          "cueIds": [
+            "cue-188"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-55-node-01",
+            "graph-scene-55-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-55-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-55-state-03",
+          "cueIds": [
+            "cue-189"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-55-node-01",
+            "graph-scene-55-node-02",
+            "graph-scene-55-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-55-edge-01",
+            "graph-scene-55-edge-02"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-55-state-04",
+          "cueIds": [
+            "cue-190"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-55-node-02",
+            "graph-scene-55-node-03",
+            "graph-scene-55-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-55-edge-02",
+            "graph-scene-55-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-55-node-01"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-55-state-04",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-187",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-187"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-188",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-188"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-189",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-189"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-189"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "第二种是后处理校验，",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "第二种是后处理校验"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "生成完成后再用规则或小模型核对引用是否真实"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-190",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-190"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-190"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "第三种是片段级引用，让模型直接指出答案片段对应哪个文本块",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "第三种是片段级引用"
+                  ]
+                },
+                {
+                  "label": "PROCESS",
+                  "rows": [
+                    "让模型直接指出答案片段对应哪个文本块"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "这种方式通常能给出更细的引用对应"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-58",
+      "sceneId": "scene-58",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-197",
+        "cue-198",
+        "cue-199",
+        "cue-200"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-58-node-01",
+          "label": "生成环节最后看四个结果：",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-197"
+          ]
+        },
+        {
+          "id": "graph-scene-58-node-02",
+          "label": "生成侧还可以继续加强四件事：",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-198"
+          ]
+        },
+        {
+          "id": "graph-scene-58-node-03",
+          "label": "不评测的 RAG 就是瞎调，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-199"
+          ]
+        },
+        {
+          "id": "graph-scene-58-node-04",
+          "label": "评测贯穿全链路。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-200"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-58-edge-01",
+          "from": "graph-scene-58-node-01",
+          "to": "graph-scene-58-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-58-edge-02",
+          "from": "graph-scene-58-node-02",
+          "to": "graph-scene-58-node-03",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-58-edge-03",
+          "from": "graph-scene-58-node-03",
+          "to": "graph-scene-58-node-04",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-58-state-01",
+          "cueIds": [
+            "cue-197"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-58-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-58-state-02",
+          "cueIds": [
+            "cue-198"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-58-node-01",
+            "graph-scene-58-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-58-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-58-state-03",
+          "cueIds": [
+            "cue-199"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-58-node-01",
+            "graph-scene-58-node-02",
+            "graph-scene-58-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-58-edge-01",
+            "graph-scene-58-edge-02"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-58-state-04",
+          "cueIds": [
+            "cue-200"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-58-node-02",
+            "graph-scene-58-node-03",
+            "graph-scene-58-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-58-edge-02",
+            "graph-scene-58-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-58-node-01"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-58-state-04",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-197",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-197"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-198",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-198"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-199",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-199"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-199"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "不评测的 RAG 就是瞎调，",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "不评测的 RAG 就是瞎调"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "每改一环都要有指标量化"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-200",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-200"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-200"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "评测贯穿全链路。",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "评测贯穿全链路。"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "评测贯穿全链路。"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-64",
+      "sceneId": "scene-64",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-216",
+        "cue-217",
+        "cue-218"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-64-node-01",
+          "label": "从演示到生产，还有几件关键工程能力要",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-216"
+          ]
+        },
+        {
+          "id": "graph-scene-64-node-02",
+          "label": "上线前，通常还要把几组工程能力补齐。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-217"
+          ]
+        },
+        {
+          "id": "graph-scene-64-node-03",
+          "label": "提示词缓存和流式输出，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-218"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-64-edge-01",
+          "from": "graph-scene-64-node-01",
+          "to": "graph-scene-64-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-64-edge-02",
+          "from": "graph-scene-64-node-02",
+          "to": "graph-scene-64-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-64-state-01",
+          "cueIds": [
+            "cue-216"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-64-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-64-state-02",
+          "cueIds": [
+            "cue-217"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-64-node-01",
+            "graph-scene-64-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-64-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-64-state-03",
+          "cueIds": [
+            "cue-218"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-64-node-01",
+            "graph-scene-64-node-02",
+            "graph-scene-64-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-64-edge-01",
+            "graph-scene-64-edge-02"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-64-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-216",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-216"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-217",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-217"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-218",
+          "visualType": "code-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "code-proof",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "slide-left",
+                "variant": "stack",
+                "enterSeconds": 0.64,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.06
+              },
+              "sourceCueIds": [
+                "cue-218"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "code-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb",
+            "sourceCueIds": [
+              "cue-218"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "提示词缓存和流式输出，分别控制成本与首字延迟；",
+              "language": "pseudocode",
+              "mode": "highlight",
+              "lines": [
+                {
+                  "kind": "context",
+                  "text": "SOURCE: cue-218"
+                },
+                {
+                  "kind": "focus",
+                  "text": "STEP_1: 提示词缓存和流式输出"
+                },
+                {
+                  "kind": "context",
+                  "text": "STEP_2: 分别控制成本与首字延迟"
+                },
+                {
+                  "kind": "context",
+                  "text": "STEP_3: 内容去重和防提示词注入"
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-65",
+      "sceneId": "scene-65",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-219",
+        "cue-220",
+        "cue-221",
+        "cue-222"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-65-node-01",
+          "label": "最后看上线工程，这些能力要组合着选。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-219"
+          ]
+        },
+        {
+          "id": "graph-scene-65-node-02",
+          "label": "在上下文检索这类重复携带长前缀的流程",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-220"
+          ]
+        },
+        {
+          "id": "graph-scene-65-node-03",
+          "label": "公开材料给出过显著的成本和首词元延迟",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-221"
+          ]
+        },
+        {
+          "id": "graph-scene-65-node-04",
+          "label": "流式输出通常是改善用户体验的重要手段",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-222"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-65-edge-01",
+          "from": "graph-scene-65-node-01",
+          "to": "graph-scene-65-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-65-edge-02",
+          "from": "graph-scene-65-node-02",
+          "to": "graph-scene-65-node-03",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-65-edge-03",
+          "from": "graph-scene-65-node-03",
+          "to": "graph-scene-65-node-04",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-65-state-01",
+          "cueIds": [
+            "cue-219"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-65-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-65-state-02",
+          "cueIds": [
+            "cue-220"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-65-node-01",
+            "graph-scene-65-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-65-edge-01"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-65-state-03",
+          "cueIds": [
+            "cue-221"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-65-node-01",
+            "graph-scene-65-node-02",
+            "graph-scene-65-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-65-edge-01",
+            "graph-scene-65-edge-02"
+          ],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-65-state-04",
+          "cueIds": [
+            "cue-222"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-65-node-02",
+            "graph-scene-65-node-03",
+            "graph-scene-65-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-65-edge-02",
+            "graph-scene-65-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-65-node-01"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-65-state-04",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-219",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-219"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-220",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-220"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-221",
+          "visualType": "code-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "code-proof",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "slide-left",
+                "variant": "stack",
+                "enterSeconds": 0.64,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.06
+              },
+              "sourceCueIds": [
+                "cue-221"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "code-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb",
+            "sourceCueIds": [
+              "cue-221"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "公开材料给出过显著的成本和首词元延迟改善，",
+              "language": "pseudocode",
+              "mode": "highlight",
+              "lines": [
+                {
+                  "kind": "context",
+                  "text": "SOURCE: cue-221"
+                },
+                {
+                  "kind": "focus",
+                  "text": "STEP_1: 公开材料给出过显著的成本和首词元延迟改善"
+                },
+                {
+                  "kind": "context",
+                  "text": "STEP_2: 但真实收益取决于模型、缓存命中率和当前计费规"
+                },
+                {
+                  "kind": "context",
+                  "text": "STEP_3: 则"
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-222",
+          "visualType": "device-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "device-surface-tour",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "signal",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-222"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "device-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+            "sourceCueIds": [
+              "cue-222"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "流式输出通常是改善用户体",
+              "productLabel": "RAG 工程状态",
+              "activeState": 1,
+              "states": [
+                {
+                  "label": "INPUT",
+                  "rows": [
+                    "流式输出通常是改善用户体"
+                  ]
+                },
+                {
+                  "label": "OUTPUT",
+                  "rows": [
+                    "流式输出通常是改善用户体"
+                  ]
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-69",
+      "sceneId": "scene-69",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-231",
+        "cue-232"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-69-node-01",
+          "label": "工程侧的下一步，包括多级缓存，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-231"
+          ]
+        },
+        {
+          "id": "graph-scene-69-node-02",
+          "label": "第一，RAG 全链路是一条数据流。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-232"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-69-edge-01",
+          "from": "graph-scene-69-node-01",
+          "to": "graph-scene-69-node-02",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-69-state-01",
+          "cueIds": [
+            "cue-231"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-69-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-69-state-02",
+          "cueIds": [
+            "cue-232"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-69-node-01",
+            "graph-scene-69-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-69-edge-01"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-69-state-02",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-231",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-231"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        },
+        {
+          "cueId": "cue-232",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-232"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-70",
+      "sceneId": "scene-70",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-233",
+        "cue-234"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-70-node-01",
+          "label": "离线建库，包括解析、分块、上下文增强",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-233"
+          ]
+        },
+        {
+          "id": "graph-scene-70-node-02",
+          "label": "第二，每一步都不是单一选型，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-234"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-70-edge-01",
+          "from": "graph-scene-70-node-01",
+          "to": "graph-scene-70-node-02",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-70-state-01",
+          "cueIds": [
+            "cue-233"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-70-node-01"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": []
+        },
+        {
+          "id": "graph-scene-70-state-02",
+          "cueIds": [
+            "cue-234"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-70-node-01",
+            "graph-scene-70-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-70-edge-01"
+          ],
+          "compactedNodeIds": []
+        }
+      ],
+      "terminalStateId": "graph-scene-70-state-02",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-233",
+          "visualType": "code-surface",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "code-proof",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "slide-left",
+                "variant": "stack",
+                "enterSeconds": 0.64,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.06
+              },
+              "sourceCueIds": [
+                "cue-233"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": {
+            "adapterId": "code-surface-bounded",
+            "adapterVersion": "1.0.0",
+            "zone": "content.right",
+            "sourceReceipt": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb",
+            "sourceCueIds": [
+              "cue-233"
+            ],
+            "evidence": {
+              "status": "illustrative-mock",
+              "label": "口播逻辑示意"
+            },
+            "data": {
+              "title": "离线建库，包括解析、分块、上下文增强和向量化索引，",
+              "language": "pseudocode",
+              "mode": "highlight",
+              "lines": [
+                {
+                  "kind": "context",
+                  "text": "SOURCE: cue-233"
+                },
+                {
+                  "kind": "focus",
+                  "text": "STEP_1: 离线建库"
+                },
+                {
+                  "kind": "context",
+                  "text": "STEP_2: 包括解析、分块、上下文增强和向量化索引"
+                },
+                {
+                  "kind": "context",
+                  "text": "STEP_3: 决定系统上限"
+                }
+              ]
+            }
+          },
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "carrier:illustrative-mock/v1"
+          ]
+        },
+        {
+          "cueId": "cue-234",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-234"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "carrierPayload": null,
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0"
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-baseline",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.2.0",
+    "reason": "Revised the deterministic board cadence to approximately 30 seconds after the user requested stable one-screen presentation with less frequent page and host changes.",
+    "contentIndependent": false,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 5,
+      "targetSceneSeconds": 30,
+      "numericClaimsAsCharts": false,
+      "semanticCarrierSelection": true,
+      "illustrativeMockCarriers": [
+        "code-surface",
+        "device-surface"
+      ],
+      "llmEnrichmentOptional": true
+    }
+  }
+}

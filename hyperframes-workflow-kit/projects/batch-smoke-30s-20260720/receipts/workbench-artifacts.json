@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "autovideo-workbench-receipts/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedBy": "scripts/finalize-delivery-manifest.mjs",
+  "policy": "Present artifacts are byte-for-byte snapshots. Missing artifacts are recorded but never synthesized.",
+  "artifacts": [
+    {
+      "id": "sourceRegistration",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/source-register/sources.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/sources.json"
+    },
+    {
+      "id": "evidenceLedger",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/evidence-ledger/evidence.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/evidence.json",
+      "size": 4440,
+      "sha256": "1b1160fefe868d4e6320c83704c916c6e13382eb878518418fb78505dce2755f"
+    },
+    {
+      "id": "contentOutline",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/content-outline/content-outline.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/content-outline.json"
+    },
+    {
+      "id": "scriptDraft",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/script-draft/script.draft.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/script.draft.json"
+    },
+    {
+      "id": "spokenRewrite",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/spoken-rewrite/spoken-rewrite.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/spoken-rewrite.json",
+      "size": 1613,
+      "sha256": "1210a0c82f5d78b2e9fc4ae5e4f788c14a635303da95524846284f3254106f85"
+    },
+    {
+      "id": "durationFit",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/content-duration-fit/content-duration-fit.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/content-duration-fit.json",
+      "size": 728,
+      "sha256": "3472a18de51a76e635e4bdd5ebd2a14980a25f0811858bd6ea4ca5d41de964a8"
+    },
+    {
+      "id": "claimSourceReview",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/claim-source-review/claim-source-review.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/claim-source-review.json",
+      "size": 857,
+      "sha256": "5fe94d378a6b6412af563b6412a664c8565da871cff5d4b9bcb5561794da139e"
+    },
+    {
+      "id": "scriptApproval",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/script-review/script.approved.txt",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/script.approved.txt",
+      "size": 538,
+      "sha256": "61c1763700a77ffa654c910e5f88f1b2a981529561befeb8fdbe70f01e1eecb1"
+    },
+    {
+      "id": "publicationRights",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/rights-clearance/publication-rights.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/rights/publication-rights.json",
+      "size": 17279,
+      "sha256": "12ebcc4204d5fcf0da9def920a92c723851f08c32dba6c9fe39c0359955ac99f"
+    }
+  ]
+}

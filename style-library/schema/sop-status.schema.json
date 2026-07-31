@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/sop-status.json",
+  "title": "AutoVideo SOP Status Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "projectId", "generatedBy", "evidence", "approvals", "milestones", "readiness", "release"],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-sop-status/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "generatedBy": {"const": "scripts/sync-project-sop-status.mjs"},
+    "evidence": {"type": "object"},
+    "approvals": {"type": "object"},
+    "milestones": {"type": "object"},
+    "readiness": {"type": "object"},
+    "release": {
+      "type": "object",
+      "required": ["scope", "publicReleaseBlocked", "blockers"],
+      "properties": {
+        "scope": {"enum": ["internal-only", "public-release"]},
+        "publicReleaseBlocked": {"type": "boolean"},
+        "blockers": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

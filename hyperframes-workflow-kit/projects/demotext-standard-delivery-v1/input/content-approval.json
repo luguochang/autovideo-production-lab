@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "autovideo-content-approval/v1",
+  "projectId": "demotext-standard-delivery-v1",
+  "narrationLock": "../NarrationLock.json",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "sourceType": "user-provided-approved-script",
+  "wordingPolicy": "immutable",
+  "approvedForInternalProduction": true,
+  "approvedForPublicRelease": false,
+  "publicReleaseBlockers": [
+    "CosyVoice built-in speaker publication rights are unresolved.",
+    "Numeric claims 99%, 90% and 30K have no external evidence package and must be presented as creator opinion, not verified statistics."
+  ],
+  "screenTextPolicy": {
+    "exactNarration": "exact-source",
+    "shortenedText": "generated-summary requiring a source range and no stronger factual wording",
+    "numericClaims": "creator-claim label or exact-source treatment; no chart implying a measured dataset"
+  },
+  "approvedBy": "user-request",
+  "approvedAt": "2026-07-19T00:54:07+08:00"
+}
+

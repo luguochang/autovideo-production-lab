@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "strict": true,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 72
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 1880.568,
+    "samples": [
+      104.476,
+      313.428,
+      522.38,
+      731.332,
+      940.284,
+      1149.236,
+      1358.188,
+      1567.14,
+      1776.092
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\rag-full-chain-5m-20260728-r2\\production\\hyperframes\\index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      104.476,
+      522.38,
+      940.284,
+      1358.188,
+      1776.092
+    ],
+    "checked": 44,
+    "passed": 44
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.7.77",
+    "latestVersion": "0.7.77",
+    "updateAvailable": false
+  },
+  "autoVideo": {
+    "hyperframesVersion": "0.7.77",
+    "checkedAt": "2026-07-29T03:40:22.859Z",
+    "scope": "composition structure, runtime, layout, motion and contrast; final MP4 media QA runs after render",
+    "compositionDigest": "dd7423319c215b63f34922063304d1eee9830dc786173bc4931778896fa8dffd",
+    "compositionFileCount": 403,
+    "buildReceiptSha256": "2ae7238e3cbf34d8332d190d935515b35fb19311ee93fec4d8dbdb27d63ad927",
+    "sourceAudioContract": {
+      "passed": true,
+      "hasDataDuration": true,
+      "hasDataEnd": false
+    },
+    "cliDiagnostics": []
+  }
+}

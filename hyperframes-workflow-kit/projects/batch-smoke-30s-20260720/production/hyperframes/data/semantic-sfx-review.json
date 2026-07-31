@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "autovideo-semantic-sfx-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "planId": "batch-smoke-30s-20260720-sparse-sfx",
+  "status": "approved",
+  "sourcePlan": {
+    "path": "plan/semantic-sfx-plan.candidate.json",
+    "sha256": "eebd26a41b3f7c310fda861f7294ca53bc00a75d271bc77514f7332365226502"
+  },
+  "approvedPlan": {
+    "path": "plan/semantic-sfx-plan.json",
+    "sha256": "de50bbaa78f034b6ad2375a0e3b303cea8a4caaa1a1d264de1f52082411df63a"
+  },
+  "decisions": [
+    {
+      "cueId": "sfx-cue-001",
+      "decision": "approved",
+      "note": "Accepted only for creator-delegated internal sparse-mix simulation."
+    },
+    {
+      "cueId": "sfx-cue-002",
+      "decision": "approved",
+      "note": "Accepted only for creator-delegated internal sparse-mix simulation."
+    }
+  ],
+  "notes": "Creator instructed Codex to act on their behalf for an internal-only sparse semantic SFX simulation; no microphone, playback, sound output, or human-listening claim.",
+  "reviewedBy": "codex-creator-delegated",
+  "reviewedAt": "2026-07-23T00:06:45.106Z",
+  "approvalScope": "internal-autonomous-review",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "policy": {
+    "atomicPlanApproval": true,
+    "rejectedCuesRemainSilent": true,
+    "pendingCuesBlockApproval": true,
+    "narrationGainChangeDb": 0
+  },
+  "approvedBy": "codex-creator-delegated",
+  "approvedAt": "2026-07-23T00:06:45.106Z",
+  "delegatedSimulation": {
+    "mode": "creator-delegated-internal-only",
+    "reason": "Creator instructed Codex to act on their behalf for an internal-only sparse semantic SFX simulation; no microphone, playback, sound output, or human-listening claim.",
+    "receiptPath": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "receiptSha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  },
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  },
+  "counts": {
+    "total": 2,
+    "approved": 2,
+    "rejected": 0
+  }
+}

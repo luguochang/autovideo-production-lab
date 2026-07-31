@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/semantic-sfx-plan.json",
+  "title": "AutoVideo Sparse Semantic SFX Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "planId",
+    "version",
+    "status",
+    "styleLock",
+    "motionLibraryRef",
+    "timelineDurationSeconds",
+    "policy",
+    "bindings",
+    "cues"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-semantic-sfx-plan/v1"},
+    "planId": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"enum": ["example", "candidate", "approved", "retired"]},
+    "styleLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseStyleId",
+        "paletteId",
+        "requiredBackground",
+        "hostZone",
+        "contentZone",
+        "captionZone",
+        "cameraScope"
+      ],
+      "properties": {
+        "baseStyleId": {"const": "modern-ip-host-explainer"},
+        "paletteId": {"const": "light-apricot"},
+        "requiredBackground": {"const": "#F2DFC7"},
+        "hostZone": {"const": "host.left"},
+        "contentZone": {"const": "content.right"},
+        "captionZone": {"const": "caption"},
+        "cameraScope": {"const": "content-world-only"}
+      }
+    },
+    "motionLibraryRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["libraryId", "version", "path"],
+      "properties": {
+        "libraryId": {"const": "knowledge-explainer"},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "path": {"const": "style-library/motion-library/knowledge-explainer-v1.json"}
+      }
+    },
+    "timelineDurationSeconds": {"type": "number", "exclusiveMinimum": 0},
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "maxPerMinute",
+        "minGapSeconds",
+        "maxSimultaneous",
+        "narrationPriority",
+        "allowAmbientLoops",
+        "allowDecorativeHits",
+        "assetPolicy",
+        "mix"
+      ],
+      "properties": {
+        "mode": {"const": "semantic-only"},
+        "maxPerMinute": {"type": "integer", "minimum": 0, "maximum": 6},
+        "minGapSeconds": {"type": "number", "minimum": 2.4},
+        "maxSimultaneous": {"const": 1},
+        "narrationPriority": {"const": true},
+        "allowAmbientLoops": {"const": false},
+        "allowDecorativeHits": {"const": false},
+        "assetPolicy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "resolver",
+            "manifestPath",
+            "pathPrefix",
+            "mediaType",
+            "allowRemoteAtRender",
+            "allowUnregisteredAssets",
+            "requireSha256"
+          ],
+          "properties": {
+            "resolver": {"const": "media-use"},
+            "manifestPath": {"const": ".media/manifest.jsonl"},
+            "pathPrefix": {"const": ".media/audio/sfx/"},
+            "mediaType": {"const": "sfx"},
+            "allowRemoteAtRender": {"const": false},
+            "allowUnregisteredAssets": {"const": false},
+            "requireSha256": {"const": true}
+          }
+        },
+        "mix": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "defaultCueGainDb",
+            "narrationGainChangeDb",
+            "peakDbfsMax",
+            "fadeInMs",
+            "fadeOutMs"
+          ],
+          "properties": {
+            "defaultCueGainDb": {"type": "number", "minimum": -24, "maximum": -8},
+            "narrationGainChangeDb": {"const": 0},
+            "peakDbfsMax": {"type": "number", "minimum": -12, "maximum": -3},
+            "fadeInMs": {"type": "integer", "minimum": 0, "maximum": 40},
+            "fadeOutMs": {"type": "integer", "minimum": 10, "maximum": 160}
+          }
+        }
+      }
+    },
+    "bindings": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/binding"}
+    },
+    "cues": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/cue"}
+    }
+  },
+  "$defs": {
+    "role": {
+      "enum": ["focus-hit", "connector-draw", "state-change", "error", "chapter-resolve"]
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "intent",
+        "resolutionStatus",
+        "manifestPath",
+        "mediaType",
+        "assetId",
+        "path",
+        "sha256",
+        "provider",
+        "licenseReceipt"
+      ],
+      "properties": {
+        "role": {"$ref": "#/$defs/role"},
+        "intent": {"type": "string", "minLength": 8},
+        "resolutionStatus": {"enum": ["unresolved", "resolved"]},
+        "manifestPath": {"const": ".media/manifest.jsonl"},
+        "mediaType": {"const": "sfx"},
+        "assetId": {"type": ["string", "null"], "pattern": "^[a-z][a-z0-9_-]*$"},
+        "path": {"type": ["string", "null"], "pattern": "^\\.media/audio/sfx/[^/]+\\.(?:wav|mp3|m4a|aac|ogg|flac)$"},
+        "sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "provider": {"type": ["string", "null"], "minLength": 1},
+        "licenseReceipt": {"type": ["string", "null"], "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"resolutionStatus": {"const": "unresolved"}}},
+          "then": {
+            "properties": {
+              "assetId": {"const": null},
+              "path": {"const": null},
+              "sha256": {"const": null},
+              "provider": {"const": null},
+              "licenseReceipt": {"const": null}
+            }
+          },
+          "else": {
+            "properties": {
+              "assetId": {"type": "string", "pattern": "^[a-z][a-z0-9_-]*$"},
+              "path": {"type": "string", "pattern": "^\\.media/audio/sfx/[^/]+\\.(?:wav|mp3|m4a|aac|ogg|flac)$"},
+              "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "provider": {"type": "string", "minLength": 1},
+              "licenseReceipt": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      ]
+    },
+    "cue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "timeSeconds",
+        "role",
+        "bindingRole",
+        "motionRecipeId",
+        "sourceCueIds",
+        "semanticEvent",
+        "anchor",
+        "offsetSeconds",
+        "gainDb",
+        "targetLayer"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^sfx-cue-[0-9]+$"},
+        "timeSeconds": {"type": "number", "minimum": 0},
+        "role": {"$ref": "#/$defs/role"},
+        "bindingRole": {"$ref": "#/$defs/role"},
+        "motionRecipeId": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "sourceCueIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "semanticEvent": {"type": "string", "minLength": 8},
+        "anchor": {"enum": ["motion-land", "connector-complete", "state-commit", "error-state", "chapter-terminal"]},
+        "offsetSeconds": {"type": "number", "minimum": -1, "maximum": 1},
+        "gainDb": {"type": "number", "minimum": -24, "maximum": -6},
+        "targetLayer": {"const": "content-world"}
+      }
+    }
+  }
+}

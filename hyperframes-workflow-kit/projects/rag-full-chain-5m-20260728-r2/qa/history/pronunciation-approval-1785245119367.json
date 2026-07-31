@@ -1,0 +1,1450 @@
+{
+  "schemaVersion": "autovideo-pronunciation-approval/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "status": "approved",
+  "approvalScope": "user-directed-selection-no-listening",
+  "approvedBy": "user",
+  "approvedAt": "2026-07-28T13:24:37.254Z",
+  "review": {
+    "path": "qa/pronunciation-human-review.json",
+    "sha256": "366da8f5d60b11bd7bbde90197f2f818029bff1185dcd96f8bb6e2e6cd6366e0"
+  },
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f"
+    },
+    "generatedGuide": {
+      "path": "input/pronunciation.json",
+      "sha256": "2181841fe23a57df7e14a72ea679092c3793f94b7ce29e525d1f0d9129c8c870"
+    },
+    "probeManifest": {
+      "path": "audio/pronunciation-probes/probe-manifest.json",
+      "sha256": "9612d9ef1744314cafea9ebf8b383e036a358d377b8176e7458fefd96d948dac"
+    },
+    "probes": [
+      {
+        "token": "Word",
+        "contextSha256": "ef3882a374a73dceb323466fdf0b2849b732b7a7597282ad8eeb57bf93e99232",
+        "candidates": [
+          {
+            "id": "term-001-a",
+            "spokenAs": "Word",
+            "ttsTextSha256": "d3b4401896ba6c30ef27600e0c5cfd5a1e1d07271ee91c694e60123d9bb3fea5",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-001-a.wav",
+              "sha256": "636bab3f2e5c9d5bd6994deaaf1102426ed62d988259ab9f35aed233882acc40"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-001-a.recipe.json",
+              "sha256": "e3062bbd1bf125d19db6335505c44150e5b90dc74ab39ca8d30d2f13a412936d"
+            }
+          },
+          {
+            "id": "term-001-b",
+            "spokenAs": "Word",
+            "ttsTextSha256": "5ea4a9d91087f8eb1b86b5332dc181cfabfb728034290f08b3ddd8342d68eb84",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-001-b.wav",
+              "sha256": "9ee9f813a0fe380c13704951e2b5db6fb55efac2b9b86a1919c02341924df216"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-001-b.recipe.json",
+              "sha256": "5575801bcf35acfdca4db4ba226507c7b967e9343ebf985b5a814783a8b2c9e3"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Confluence",
+        "contextSha256": "ef3882a374a73dceb323466fdf0b2849b732b7a7597282ad8eeb57bf93e99232",
+        "candidates": [
+          {
+            "id": "term-002-a",
+            "spokenAs": "Confluence",
+            "ttsTextSha256": "d3b4401896ba6c30ef27600e0c5cfd5a1e1d07271ee91c694e60123d9bb3fea5",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-002-a.wav",
+              "sha256": "636bab3f2e5c9d5bd6994deaaf1102426ed62d988259ab9f35aed233882acc40"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-002-a.recipe.json",
+              "sha256": "2662e377c91559336da6b633cc698cf73cd2ea1e3e580f2ee444b1758f023b08"
+            }
+          },
+          {
+            "id": "term-002-b",
+            "spokenAs": "Confluence",
+            "ttsTextSha256": "85a767e562354af9c922286d6868a203fe69446a9fe1f81a33bb525ac2b00d05",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-002-b.wav",
+              "sha256": "3b16e3061a43684fe58099715b6fae4fc4d7b8bd5e40edafc10fea4ee9ae7a44"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-002-b.recipe.json",
+              "sha256": "b6dbbf8d66e813d5306f13e621834510a3ee682057a17bb9d5d94e67f1187947"
+            }
+          }
+        ]
+      },
+      {
+        "token": "PyMuPDF",
+        "contextSha256": "b3d53b7ea86a6f596e0bc7462be49c01b9e88ec5a8e00749d3eaaa656d157fba",
+        "candidates": [
+          {
+            "id": "term-003-a",
+            "spokenAs": "PyMuPDF",
+            "ttsTextSha256": "b3d53b7ea86a6f596e0bc7462be49c01b9e88ec5a8e00749d3eaaa656d157fba",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-003-a.wav",
+              "sha256": "9ff0b5b9b8f968e312d4a0c1bc40df3e66e59d9b7b17ff78f54ae0489ef0fd00"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-003-a.recipe.json",
+              "sha256": "be5113e4c66c90246dc53c2fba2e08df2dbe68279fa29aa97e39df020b63777e"
+            }
+          },
+          {
+            "id": "term-003-c",
+            "spokenAs": "Py Mu P D F",
+            "ttsTextSha256": "2355f49d14f62b407a6c7689e24553a7434547f140f6ba562acd9c706b20a1e6",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-003-c.wav",
+              "sha256": "f12dc40c13087640e8eb5932bc8d8a4d14011a56ca89df1cda491fc78951359b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-003-c.recipe.json",
+              "sha256": "1b975a5d102bc293c4f89f0ff3cebc06d8ff69e56f054a910732344322e8f1a6"
+            }
+          }
+        ]
+      },
+      {
+        "token": "pdfplumber",
+        "contextSha256": "ebf254f6f80a1f735655ebc38f3b3411f9d5880645b05e3743cf043b511e2e28",
+        "candidates": [
+          {
+            "id": "term-004-a",
+            "spokenAs": "pdfplumber",
+            "ttsTextSha256": "ebf254f6f80a1f735655ebc38f3b3411f9d5880645b05e3743cf043b511e2e28",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-004-a.wav",
+              "sha256": "4940d54ac2e5c044a1e79dcbdc8eaab73fa6b5f67a0ec3292b57c0c15a1f4e8e"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-004-a.recipe.json",
+              "sha256": "f1ffa9c448bab8da868278d2a3bdb623d2fa3d4212e386300445ec461c3db7ea"
+            }
+          },
+          {
+            "id": "term-004-c",
+            "spokenAs": "P D F plumber",
+            "ttsTextSha256": "b14180757507bd4f745b8694258c4e27931d8dd96e63b126794d9a3f90aca814",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-004-c.wav",
+              "sha256": "a4d8da708f0976798ee32ad5aece570dc643f91d3093472470106c7c070612f3"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-004-c.recipe.json",
+              "sha256": "cb762e040e37bae2544d0daad71a599292c1d17b87b6d94393e0fea134355488"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Unstructured",
+        "contextSha256": "69af6a9d9e812924c51caacca3e6a5ea6e3f282d328dbd4913b8375042a08ebd",
+        "candidates": [
+          {
+            "id": "term-005-a",
+            "spokenAs": "Unstructured",
+            "ttsTextSha256": "69af6a9d9e812924c51caacca3e6a5ea6e3f282d328dbd4913b8375042a08ebd",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-005-a.wav",
+              "sha256": "6a4f0e1828d19821bd55cf36a3e86899244c74bab007141b94707ef072ae0f26"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-005-a.recipe.json",
+              "sha256": "23233b20f15ce822b259c8586edc519962044471335e50d4b6e34cf1a3c35274"
+            }
+          },
+          {
+            "id": "term-005-c",
+            "spokenAs": "Un structured",
+            "ttsTextSha256": "b868ad0f959942f7ad2eff0e752eb9fa8032c77d0f8f5350406bc4735b6e8843",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-005-c.wav",
+              "sha256": "6be81172313abcc6fda182d9b79613430c222d1d8d8d4641639faacaf39fc590"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-005-c.recipe.json",
+              "sha256": "1c4cbcf937c77774a69c871577218758878099bc9d9a4ee1930eb47e5b59eaae"
+            }
+          }
+        ]
+      },
+      {
+        "token": "MinerU",
+        "contextSha256": "99cd0e6413b6e9a8ee390c3bfc97ba5d24b38ddbff674ca099780ec39dfdb286",
+        "candidates": [
+          {
+            "id": "term-006-a",
+            "spokenAs": "MinerU",
+            "ttsTextSha256": "99cd0e6413b6e9a8ee390c3bfc97ba5d24b38ddbff674ca099780ec39dfdb286",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-006-a.wav",
+              "sha256": "549600f1b2ef438b3d5b9cd2be1612a4696bf2f6a40ff160adfbdb81e1cc687d"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-006-a.recipe.json",
+              "sha256": "3264e836e4a86658ed77a37eec8d796968e20560393b2cd9c155ce1a83db9473"
+            }
+          },
+          {
+            "id": "term-006-c",
+            "spokenAs": "Miner U",
+            "ttsTextSha256": "704a75fe59207f1d21661e588f218ba34fa5913daea8042efa4db9b2e211ea17",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-006-c.wav",
+              "sha256": "0a7fe44c6c76907b82df070d172a8a66d0089d3a4988245528a876900843d542"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-006-c.recipe.json",
+              "sha256": "9678d93b6acb36a811f76e2687347ab1b55fc383576e8220da0b85af6019dd14"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Docling",
+        "contextSha256": "d2a58fb0b87681798df43ed80544d5536e910f33e0caf8436be3092de5c870f8",
+        "candidates": [
+          {
+            "id": "term-007-a",
+            "spokenAs": "Docling",
+            "ttsTextSha256": "d2a58fb0b87681798df43ed80544d5536e910f33e0caf8436be3092de5c870f8",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-007-a.wav",
+              "sha256": "7f09b9616237f03d89d6c1615ade02ca65cec0e683446830f5cd5575a7242033"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-007-a.recipe.json",
+              "sha256": "edf6cced931a78c88cf0af7e143b3ecf1fbcc0e533fa660bba09212e797ac122"
+            }
+          },
+          {
+            "id": "term-007-b",
+            "spokenAs": "Docling",
+            "ttsTextSha256": "ae519d8237795456330b5cef0854e75df712066696b906a2788649053665f857",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-007-b.wav",
+              "sha256": "24efea92937735df3cc646539e86aa6c2817ae576d750f4d1cc38c774e660060"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-007-b.recipe.json",
+              "sha256": "9d32a6d7bc5dc2388f6ac7623e58af3bc74ddafa1c413e87b2bd2b070b6d1db2"
+            }
+          }
+        ]
+      },
+      {
+        "token": "LlamaParse",
+        "contextSha256": "6d053586c6e47cdb02758180354e9faa3ccb4e29912d883a2a29bec0b6f027bf",
+        "candidates": [
+          {
+            "id": "term-008-a",
+            "spokenAs": "LlamaParse",
+            "ttsTextSha256": "6d053586c6e47cdb02758180354e9faa3ccb4e29912d883a2a29bec0b6f027bf",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-008-a.wav",
+              "sha256": "7075814c36de7bc0699440f44dbb28c4487eaecd62164f2c2e47bbaac527f24d"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-008-a.recipe.json",
+              "sha256": "d534910a5b5e68d5a2eb1430c6c5d94583e068772506dcd43a578b6cbed0e2d8"
+            }
+          },
+          {
+            "id": "term-008-c",
+            "spokenAs": "Llama Parse",
+            "ttsTextSha256": "7084523aa966269aaccf71d475069100eb8db7fcd155e26a8d03968382f8e247",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-008-c.wav",
+              "sha256": "633374ba33c8f9fc3f07591de61ed7b98e7910056c243861ecfe530224317abd"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-008-c.recipe.json",
+              "sha256": "72b96c803c06988f7534b2a20a159ecb7d333cdc0bfdab6c2df178915cf15c13"
+            }
+          }
+        ]
+      },
+      {
+        "token": "ColPali",
+        "contextSha256": "ecba8caeeff4f4274fbc8edb7fdebb13ed9ee7adcf1c2c11ef4cb3ee5626e0cc",
+        "candidates": [
+          {
+            "id": "term-009-a",
+            "spokenAs": "ColPali",
+            "ttsTextSha256": "f97fe4ea088246cffdb9648d636ffdd52d497c3fd2310525e0b10153c56f3543",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-009-a.wav",
+              "sha256": "9e4847dd0927d9c75f90f45080f4ee136f32a9d43cc61406d1ddb1d66839e735"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-009-a.recipe.json",
+              "sha256": "416d5b5e9847d5f2ac963d0652ddd7f305d9fa102e9b2bc0ad0f0f7b101f22de"
+            }
+          },
+          {
+            "id": "term-009-c",
+            "spokenAs": "Col Pali",
+            "ttsTextSha256": "5feb143a2824c481139674835a9b2c8697d606438d638b5fb3a18138b0303f3f",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-009-c.wav",
+              "sha256": "73b99d47df9dae2025f1fcc36ca0642bc65145f4bd322d6cdfba3feb65daaceb"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-009-c.recipe.json",
+              "sha256": "bac31d15c5b804ac54f25846f512c5f46aa867aeaa39cb5f99806b7652513572"
+            }
+          }
+        ]
+      },
+      {
+        "token": "LangChain",
+        "contextSha256": "33e8a3ac0fe358ae0f48f533c6870c56577525c1b4cf85d258649224f4c28428",
+        "candidates": [
+          {
+            "id": "term-010-a",
+            "spokenAs": "LangChain",
+            "ttsTextSha256": "33e8a3ac0fe358ae0f48f533c6870c56577525c1b4cf85d258649224f4c28428",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-010-a.wav",
+              "sha256": "d24ce89e494686e9653d99687847248b1c5de164b72d097873ba7cac8fe57789"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-010-a.recipe.json",
+              "sha256": "7aac7368fdb7e5e9436866010fabaee1286a99c6cf435768cef5602608fa5c9b"
+            }
+          },
+          {
+            "id": "term-010-c",
+            "spokenAs": "Lang Chain",
+            "ttsTextSha256": "a5a9385b32f313d402859dd776a95d89e031eccc5cba40142c74d39236b2ef58",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-010-c.wav",
+              "sha256": "0cd84a8610fa3a1b86f1a8563d1903009986c404a6978a12f4c5ade7229e8a44"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-010-c.recipe.json",
+              "sha256": "4970f29c798f085203e92f68c26ccff6a6372c0447c92ceb6a5847715390e285"
+            }
+          }
+        ]
+      },
+      {
+        "token": "markdown",
+        "contextSha256": "10db8029857b26ff809068a47affa2e209075dfd153f576da78dc9cb00160c28",
+        "candidates": [
+          {
+            "id": "term-011-a",
+            "spokenAs": "markdown",
+            "ttsTextSha256": "10db8029857b26ff809068a47affa2e209075dfd153f576da78dc9cb00160c28",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-011-a.wav",
+              "sha256": "8272ff5897104b5830b900fd7ef6ea65aae645594fe2c55187e49be2ddccccf7"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-011-a.recipe.json",
+              "sha256": "c4cbe12911192b63a944a514974595895d37c2e548938ab2f4565f691ed599b1"
+            }
+          },
+          {
+            "id": "term-011-b",
+            "spokenAs": "markdown",
+            "ttsTextSha256": "789c1d30aa222abbed1725fca6608ecee505e69448b59f518b566b99fa03537d",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-011-b.wav",
+              "sha256": "61956d2527f5cb056826cce3b3701e403d7283f733b0a286147884f73ff06720"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-011-b.recipe.json",
+              "sha256": "1b1e8ab8cf8e6d0e8fc69dd60701a194383de798f49b55225b14e2512e3a4ba9"
+            }
+          }
+        ]
+      },
+      {
+        "token": "LlamaIndex",
+        "contextSha256": "efd9a5db3f484ce5940759597881349812c12f43644507aad5cc0742589bdcce",
+        "candidates": [
+          {
+            "id": "term-012-a",
+            "spokenAs": "LlamaIndex",
+            "ttsTextSha256": "efd9a5db3f484ce5940759597881349812c12f43644507aad5cc0742589bdcce",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-012-a.wav",
+              "sha256": "2f6bd8cb4b8e2db74adb47e8d0f370d89246d5f52c7783a9ca79640404419f7a"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-012-a.recipe.json",
+              "sha256": "124313cd5114e4cc1fc50ffd014e61b8bbd034c63c05dfa35042fc0934638225"
+            }
+          },
+          {
+            "id": "term-012-c",
+            "spokenAs": "Llama Index",
+            "ttsTextSha256": "87baf5891abf389fcd4f0e91ee1e86c0840d836b842608e9afd880f3e79ca778",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-012-c.wav",
+              "sha256": "864292291a5e253f2b680b537d6f09c34bc66d1512291e2ea3643608427bd65f"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-012-c.recipe.json",
+              "sha256": "422782d99a610dd03be55c43045ff3d9f83619984568f6e8d061af21497c4ddd"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Jina",
+        "contextSha256": "d1134fddce68e071a0cd353979996d14c4b6b47aa59e82cdbaa9e8409f491588",
+        "candidates": [
+          {
+            "id": "term-013-a",
+            "spokenAs": "Jina",
+            "ttsTextSha256": "d1134fddce68e071a0cd353979996d14c4b6b47aa59e82cdbaa9e8409f491588",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-013-a.wav",
+              "sha256": "40655b8a341a29284bd8201d37a8497d3a3e5985cd471e89defd92a16c8499f1"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-013-a.recipe.json",
+              "sha256": "696274d1c6bc412afbc516c1bb70c2e30aad90eb6a2e330b8d3c988ff93be7a0"
+            }
+          },
+          {
+            "id": "term-013-b",
+            "spokenAs": "Jina",
+            "ttsTextSha256": "5c3ffab3f999d8fea478d277f54cd7b5644be5751eff29ed7f02285b7df4b9dc",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-013-b.wav",
+              "sha256": "46cbb83234d37ade79853b3cc4132d21e23355a36ef50c8eb8626d2acfe14c91"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-013-b.recipe.json",
+              "sha256": "a74bfcbd2ebdace99793c8761d29ea2f4224ca6e3771dd6173304a4192dea84d"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Anthropic",
+        "contextSha256": "15596a509d475e771100a46c97c0b8e10e22f8b03012851926af2d4212c627a0",
+        "candidates": [
+          {
+            "id": "term-014-a",
+            "spokenAs": "Anthropic",
+            "ttsTextSha256": "1b03a9deed248b1dac314d15fa70a4fe8dec251bab64cb5582bcb5a865a3e029",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-014-a.wav",
+              "sha256": "ed17297b83c523d11abee0bfbb821b721a0517180b9f4c36f7a63073bc6e83d1"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-014-a.recipe.json",
+              "sha256": "5319677e607a326bd3a2049b4f61e6b299aba6367900884e8e53648e2d269f7b"
+            }
+          },
+          {
+            "id": "term-014-b",
+            "spokenAs": "Anthropic",
+            "ttsTextSha256": "f7d5dd0e70174cb326fd7c1c2da9c1604cf9417f3337c1da7dc44c0a3a044876",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-014-b.wav",
+              "sha256": "224ed5d59297d934cf9169251127986a5ec8e7ace8408bbb080f930ef2987098"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-014-b.recipe.json",
+              "sha256": "9be3bcaeb9eb8bc05449f5715b4712c3abf3baecca0129e226dd9b168cef990a"
+            }
+          }
+        ]
+      },
+      {
+        "token": "BM25",
+        "contextSha256": "9a30357bafafae9f00a962a6df599729705691d5c0a25e529dd707e7186612d5",
+        "candidates": [
+          {
+            "id": "term-015-a",
+            "spokenAs": "BM25",
+            "ttsTextSha256": "9a30357bafafae9f00a962a6df599729705691d5c0a25e529dd707e7186612d5",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-015-a.wav",
+              "sha256": "461575982b3aa3f98f06e42cb9671a7828e326844d90e36f8b024355fe7555df"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-015-a.recipe.json",
+              "sha256": "a3537f3feea67b1fec89455cb24ae6b69534bd086cf4b1fe563d298b276e32d2"
+            }
+          },
+          {
+            "id": "term-015-c",
+            "spokenAs": "B M 25",
+            "ttsTextSha256": "4cd7ae5ee38d602706adb0859de4f4ea0e99be7b56abbbc3dd8776febfb2acd7",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-015-c.wav",
+              "sha256": "0bdcee97c3e22ecf7e01a841e9833c68ed7cefe46976716f9492ba73a022e0b6"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-015-c.recipe.json",
+              "sha256": "f0b01d2e8a61bed4f01d40565f89510d022e56af7d230a41286a68ad8351c77a"
+            }
+          }
+        ]
+      },
+      {
+        "token": "ColBERT",
+        "contextSha256": "3eb731dfd0d7e82db18e26da4c31e9af28775177711cdbbf6270df8cc3eba18b",
+        "candidates": [
+          {
+            "id": "term-016-a",
+            "spokenAs": "ColBERT",
+            "ttsTextSha256": "48669db3a11ecd4871ea862f86d5ea061970b5e1ea3474e2cac011e68f834bf5",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-016-a.wav",
+              "sha256": "91c6c68190ef86666637d7c06534ac1d55134042c4544ef9d2efa4cf2b2b2936"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-016-a.recipe.json",
+              "sha256": "32663e69999aa1f58ec0e29ece170149a600c611d73f2218046fe24030a0974b"
+            }
+          },
+          {
+            "id": "term-016-c",
+            "spokenAs": "Col BERT",
+            "ttsTextSha256": "9f3cc44e72a0ad4203bc61d25b1a4db67a3082ce62ba0c60891adc09f6ab18e3",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-016-c.wav",
+              "sha256": "52e32f9aed03056a002461975f816334edf44822e112c5d7e6928ad71a4c631a"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-016-c.recipe.json",
+              "sha256": "dbadef321b0400b2bce48ec3692be5fdbde835963a7dd0e0b268dfe4edd00d77"
+            }
+          }
+        ]
+      },
+      {
+        "token": "bge-m3",
+        "contextSha256": "3eb731dfd0d7e82db18e26da4c31e9af28775177711cdbbf6270df8cc3eba18b",
+        "candidates": [
+          {
+            "id": "term-017-a",
+            "spokenAs": "bge-m3",
+            "ttsTextSha256": "48669db3a11ecd4871ea862f86d5ea061970b5e1ea3474e2cac011e68f834bf5",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-017-a.wav",
+              "sha256": "91c6c68190ef86666637d7c06534ac1d55134042c4544ef9d2efa4cf2b2b2936"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-017-a.recipe.json",
+              "sha256": "7e88d04002d183cea09d78861b3a43d361383f6068cf55e996c543a80fd72481"
+            }
+          },
+          {
+            "id": "term-017-c",
+            "spokenAs": "B G E M 3",
+            "ttsTextSha256": "b09741e3265bf8f7bf6088a5ac67af6e208aa14017f77c118637b7754ae55567",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-017-c.wav",
+              "sha256": "356fef8c07b52e062f69255a690a220eaaa35e784cead31b3f44776fb21d79eb"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-017-c.recipe.json",
+              "sha256": "40e88206ac2ddbc1e1e5e43bd0eac15b0cc5d5f7df7edf51cb7ddbeee3d84b1b"
+            }
+          }
+        ]
+      },
+      {
+        "token": "OpenAI",
+        "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+        "candidates": [
+          {
+            "id": "term-018-a",
+            "spokenAs": "OpenAI",
+            "ttsTextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-018-a.wav",
+              "sha256": "6661af3c2fcb54c253ec433d42f48ecb8a9990a1bb88d3e1a0c168af380d6348"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-018-a.recipe.json",
+              "sha256": "dd97afdada790dd289ddc6a71c21507c7894916f7fca96d59fe2293f6ef96304"
+            }
+          },
+          {
+            "id": "term-018-c",
+            "spokenAs": "Open A I",
+            "ttsTextSha256": "c736e07016fa838d586f1faa60e25d72544aa38e1d28d45cfcb935b03d162a66",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-018-c.wav",
+              "sha256": "3c9acbf43273a0855bb312924a6e9def353e235021bbe97a8dee7aef9e55a09d"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-018-c.recipe.json",
+              "sha256": "26d645ada6cf630f5404d4dad7a71258bbcf0fd0ca522fac3205948ae6a77e92"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Voyage",
+        "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+        "candidates": [
+          {
+            "id": "term-019-a",
+            "spokenAs": "Voyage",
+            "ttsTextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-019-a.wav",
+              "sha256": "6661af3c2fcb54c253ec433d42f48ecb8a9990a1bb88d3e1a0c168af380d6348"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-019-a.recipe.json",
+              "sha256": "b36dcbb2a02806bd6d292646825d169df1ac957627463cda52f1809698b72d70"
+            }
+          },
+          {
+            "id": "term-019-b",
+            "spokenAs": "Voyage",
+            "ttsTextSha256": "0a3b1cba38d5c81f75bd61122a9e78b078ee347756a8aa1145292374ec16e676",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-019-b.wav",
+              "sha256": "30e0019695ae6a858ba383581546fcdb2ebcdc2678d2738380fcaf9ab1ceb64c"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-019-b.recipe.json",
+              "sha256": "575be6b8c529472b2745ec00648d815271ea84c6eb5b90a4f2e0f995a67c059c"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Cohere",
+        "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+        "candidates": [
+          {
+            "id": "term-020-a",
+            "spokenAs": "Cohere",
+            "ttsTextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-020-a.wav",
+              "sha256": "6661af3c2fcb54c253ec433d42f48ecb8a9990a1bb88d3e1a0c168af380d6348"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-020-a.recipe.json",
+              "sha256": "6f1355959b61dd15b4e22c3909b08f92851b78d1192541562571d42cf77f9bcb"
+            }
+          },
+          {
+            "id": "term-020-b",
+            "spokenAs": "Cohere",
+            "ttsTextSha256": "1167d39c47247072c8ba66a1085b58cd112c73153a15c1aa86a91f7a5da8a2ce",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-020-b.wav",
+              "sha256": "cf90d25d5b3d1f64fc3e659d484503d33ba6a52090a223cc1e6a7c7f6d0238d7"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-020-b.recipe.json",
+              "sha256": "773f845ef7e8191274f9655e6f76808368b56c505b7c3af3bcc9a2e8f75b5e8a"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Matryoshka",
+        "contextSha256": "1f71e4e56cc37d205fcc7b5f86b0488cc558e2f055458e6664dde1aa05bd00a0",
+        "candidates": [
+          {
+            "id": "term-021-a",
+            "spokenAs": "Matryoshka",
+            "ttsTextSha256": "1f71e4e56cc37d205fcc7b5f86b0488cc558e2f055458e6664dde1aa05bd00a0",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-021-a.wav",
+              "sha256": "631d945dec8b8240c6fdfe5c652863329c598b1ed05bd1e8282d6d51afa96d7f"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-021-a.recipe.json",
+              "sha256": "521dc831cd68c65891db00bfc7a35ccbb19cc9693b442054c765e626de3b1931"
+            }
+          },
+          {
+            "id": "term-021-b",
+            "spokenAs": "Matryoshka",
+            "ttsTextSha256": "16fdc783d06870c6d5dc7ac81fdb065b46a076a15e8aa25da97ae7fbee006785",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-021-b.wav",
+              "sha256": "e2ff776cfe21175a438557ae809ead2bafca158a46d7e424dc49ba5bad2d3f85"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-021-b.recipe.json",
+              "sha256": "e16ac889c86eb2d4cd0ba025c8faf988c2c11c9cbfd736d20e61e1c04860b6c4"
+            }
+          }
+        ]
+      },
+      {
+        "token": "pgvector",
+        "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+        "candidates": [
+          {
+            "id": "term-022-a",
+            "spokenAs": "pgvector",
+            "ttsTextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-022-a.wav",
+              "sha256": "01d58d3aa787cf831907cc4f41cc24885c9b648cd44aa7f17c16716ede99384b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-022-a.recipe.json",
+              "sha256": "72d44fb45cc00d6825a2295bd883bcfc23d2137be9f8c9c1c8e35e505f0944ed"
+            }
+          },
+          {
+            "id": "term-022-c",
+            "spokenAs": "P G vector",
+            "ttsTextSha256": "c50639667e525dbba9c6f996df20ca72c3d91de0ff5dfbec58f45395006b22df",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-022-c.wav",
+              "sha256": "2446d9a65be49e97af4ba3617262ac823a1076475500bb3ca111837a47538690"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-022-c.recipe.json",
+              "sha256": "81744a532e432fba2f6e8894557946a6dff97bf8dc409b468e319d25a5def11c"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Milvus",
+        "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+        "candidates": [
+          {
+            "id": "term-023-a",
+            "spokenAs": "Milvus",
+            "ttsTextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-023-a.wav",
+              "sha256": "01d58d3aa787cf831907cc4f41cc24885c9b648cd44aa7f17c16716ede99384b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-023-a.recipe.json",
+              "sha256": "9ab84f27e2de4920196ff5b0d23829532fcb8cf2896a1732e7993177d93cfc8f"
+            }
+          },
+          {
+            "id": "term-023-b",
+            "spokenAs": "Milvus",
+            "ttsTextSha256": "9a5bf6e6a3ddbdbcaf92ad6c38963f55313fd821d0ac3d91c9a202ebd6d73007",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-023-b.wav",
+              "sha256": "487a53bd4136384c34f1f9d1dd85fb25a86efd4f71af3ac3e9a97502c884284d"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-023-b.recipe.json",
+              "sha256": "629823e72dd693f86bf42a3906ff3612a5d6d584d747dc3946e48587fe172183"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Weaviate",
+        "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+        "candidates": [
+          {
+            "id": "term-024-a",
+            "spokenAs": "Weaviate",
+            "ttsTextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-024-a.wav",
+              "sha256": "01d58d3aa787cf831907cc4f41cc24885c9b648cd44aa7f17c16716ede99384b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-024-a.recipe.json",
+              "sha256": "2fb41011f2bf8de03be6a8cf19c78a78787f0bc005abb2e986a35996c4c0120c"
+            }
+          },
+          {
+            "id": "term-024-b",
+            "spokenAs": "Weaviate",
+            "ttsTextSha256": "979b934b28902cf0a6f713dca95ac6db8e4554ec416ba714f8f6a21926ccc0a1",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-024-b.wav",
+              "sha256": "956596dbd5a4c135aa08c726e94f7ab2c79337f908155b81a1030ce9db73a04c"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-024-b.recipe.json",
+              "sha256": "7d538092b4ca22c67143f57045626e6062054f9f192de6628595b54adadab139"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Qdrant",
+        "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+        "candidates": [
+          {
+            "id": "term-025-a",
+            "spokenAs": "Qdrant",
+            "ttsTextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-025-a.wav",
+              "sha256": "01d58d3aa787cf831907cc4f41cc24885c9b648cd44aa7f17c16716ede99384b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-025-a.recipe.json",
+              "sha256": "56656860d7ec56acc73c78756777d50632e19253df589af50ff324dd5feb0176"
+            }
+          },
+          {
+            "id": "term-025-b",
+            "spokenAs": "Qdrant",
+            "ttsTextSha256": "fd7feeaff237d9e1ad161d9d97270620aad8a6514c5896f1fd9dd94cc4d947da",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-025-b.wav",
+              "sha256": "1dc1f9752920cbedd3cd2fd6c124788e6e6f6130c78f669369db10af367302b4"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-025-b.recipe.json",
+              "sha256": "df24585dbd1abb800f2ea9a06a8b4cf5e64bee17db7a34c3947afe5b0d215a82"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Chroma",
+        "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+        "candidates": [
+          {
+            "id": "term-026-a",
+            "spokenAs": "Chroma",
+            "ttsTextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-026-a.wav",
+              "sha256": "01d58d3aa787cf831907cc4f41cc24885c9b648cd44aa7f17c16716ede99384b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-026-a.recipe.json",
+              "sha256": "e3fe53d880d0704188dcd62dfb28469f3a409c56338e354bddb0fe91d0795ce3"
+            }
+          },
+          {
+            "id": "term-026-b",
+            "spokenAs": "Chroma",
+            "ttsTextSha256": "2d73537fd7f5dd893363a88e4900ef066e02147bffb272d011afe006b7433d30",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-026-b.wav",
+              "sha256": "70ecf977ace05d1d11d5b7d1887f4252ef64f7f025b849cbfdb19cc559686e10"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-026-b.recipe.json",
+              "sha256": "95bec33ad306ac98747a888c90ea43f7eea9d034c2dc436d6249d4890103a5c8"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Elasticsearch",
+        "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+        "candidates": [
+          {
+            "id": "term-027-a",
+            "spokenAs": "Elasticsearch",
+            "ttsTextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-027-a.wav",
+              "sha256": "01d58d3aa787cf831907cc4f41cc24885c9b648cd44aa7f17c16716ede99384b"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-027-a.recipe.json",
+              "sha256": "c1e629c8b14bf5c2d93715d190a26761d4d4b46b3ed3849654b80a700a75a7e6"
+            }
+          },
+          {
+            "id": "term-027-c",
+            "spokenAs": "Elastic search",
+            "ttsTextSha256": "ffe97f15e8b1350a1dd1c64223242852cb17ea5346d33a064e8408dd0b05ebad",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-027-c.wav",
+              "sha256": "68c0621840c4a07fec4f156f73b6e7037131e8c7b00beb09489ab3b62aef76ff"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-027-c.recipe.json",
+              "sha256": "1944a4fd994ef078a0d1322c91144fa5ef366ff8fbad339c1f5a7e059e7b8c60"
+            }
+          }
+        ]
+      },
+      {
+        "token": "PostgreSQL",
+        "contextSha256": "e1cc35e29c31df72fdfd4416ea9bab5167e9ddc51b91717d779a2f53f3514f0f",
+        "candidates": [
+          {
+            "id": "term-028-a",
+            "spokenAs": "PostgreSQL",
+            "ttsTextSha256": "e1cc35e29c31df72fdfd4416ea9bab5167e9ddc51b91717d779a2f53f3514f0f",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-028-a.wav",
+              "sha256": "ea882281d0e74a97f6b40c48b10d77d65b4b146016226cfcb8641201917e8072"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-028-a.recipe.json",
+              "sha256": "e1eaa4d92041523436b708263a377703db77abee7591fe91fe2441f986e45247"
+            }
+          },
+          {
+            "id": "term-028-c",
+            "spokenAs": "Postgre S Q L",
+            "ttsTextSha256": "33283b01cf38fc1cf5554221dcec771fc33dcca4d522318abef59015eb741a89",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-028-c.wav",
+              "sha256": "fe00a4d1971c9efdac0f82c25e264183b7182b9feb67c48d57f2a08c0a10ea73"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-028-c.recipe.json",
+              "sha256": "2f6a0b5d3baf73b77aaafa41eea4fd50b9390fdf72360d1ce44f4dc2e438e1d8"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Flat",
+        "contextSha256": "245e2d6d0b9904171d8f7ea9e7e7dff28bb7ffe4225f4519f948a0a2b5adc242",
+        "candidates": [
+          {
+            "id": "term-029-a",
+            "spokenAs": "Flat",
+            "ttsTextSha256": "506d79510335d6cc3b8871274eba8e4277945cab76350448b22e369c0d18801b",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-029-a.wav",
+              "sha256": "c17b048194d5de09a893d1e6c78728d0abaf84c145e6da71ebab7b495d8ee186"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-029-a.recipe.json",
+              "sha256": "2fb920c638aea6fb822c90d535b03cd7c1b2e3414c192aa8095fccf7dda961e9"
+            }
+          },
+          {
+            "id": "term-029-b",
+            "spokenAs": "Flat",
+            "ttsTextSha256": "3b81ff015d655a65a9b10bb3364e70d7d89f4298e78dd606cf77cc5623d19168",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-029-b.wav",
+              "sha256": "bf83656e6b0f0da60903d78b7d85396cca0e724437cb1236325989007566c375"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-029-b.recipe.json",
+              "sha256": "03781f55ff858a959dc98ca7745d76cf6cef4c34b8d0ccdda2000dcbef0d7b98"
+            }
+          }
+        ]
+      },
+      {
+        "token": "P99",
+        "contextSha256": "3af38f18922bf70c4f992ff7b124e7646a67860d8bc65fcaa277521269b28ef8",
+        "candidates": [
+          {
+            "id": "term-030-a",
+            "spokenAs": "P99",
+            "ttsTextSha256": "23678e44612ca8bf029f3368248e79e73c80544524be7382e117698c88fd7135",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-030-a.wav",
+              "sha256": "0f229bd1452ad46860191b37767ce20fa1f9a3fefc62e59c0f349a45f7ae6bc5"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-030-a.recipe.json",
+              "sha256": "9fbe39aee57d2533be3bcb89a8eaa669c6056a915de5812e4e79dc07eafff6bd"
+            }
+          },
+          {
+            "id": "term-030-c",
+            "spokenAs": "P 99",
+            "ttsTextSha256": "ab2855f0772589b006fd0dad8ae24147bbc723d7e9fad529b2991deb7313b564",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-030-c.wav",
+              "sha256": "0f229bd1452ad46860191b37767ce20fa1f9a3fefc62e59c0f349a45f7ae6bc5"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-030-c.recipe.json",
+              "sha256": "5681e2ab8bc104cb3b920d9b57b690d8d36020adc1915cabd1e11f65b1c031ea"
+            }
+          }
+        ]
+      },
+      {
+        "token": "HyDE",
+        "contextSha256": "d348ef7e9bbf440a2164fcb095590000c46a383f5d70a8e97451bcb2242d9b45",
+        "candidates": [
+          {
+            "id": "term-031-a",
+            "spokenAs": "HyDE",
+            "ttsTextSha256": "e0706507e8216c365f854af075a4458de10ec1e13e34f06cfd1d36143877c199",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-031-a.wav",
+              "sha256": "ddd2f28f9e9d0eb01c040061b770ea9fe8deecfce5defc353e1c6913ea4c4df8"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-031-a.recipe.json",
+              "sha256": "faf4548b0190694867bfb4471ecf9cdd614244776e22487670132d0a8116cb4a"
+            }
+          },
+          {
+            "id": "term-031-c",
+            "spokenAs": "Hyde",
+            "ttsTextSha256": "4b4b241bc75534d6d182539c462d845c45c5ff957848b54a5e8281400580fbbb",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-031-c.wav",
+              "sha256": "458d0c508b32252bd0f4cbeec89e6c83c518861457284b16b974be92ff9eec89"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-031-c.recipe.json",
+              "sha256": "71b388a82aed9c094944065dffdfe96baeb45fa31ec332f588dc6fe9a5efe1a1"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Adaptive",
+        "contextSha256": "cc2610fdfe2df40b1915b674f47c1da7c89c434c10c391cac348a895698c4972",
+        "candidates": [
+          {
+            "id": "term-032-a",
+            "spokenAs": "Adaptive",
+            "ttsTextSha256": "f00718e3c1d23c3344581800c9a974c53a85ed05286a3c1effcf337117c094f9",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-032-a.wav",
+              "sha256": "459e0d6d5b9f1e0f4e8470df4182df3e2506534093e83ac64d6c46c0b2c11b73"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-032-a.recipe.json",
+              "sha256": "ad937bb5d3142e329fa04c3949b4282209c23f5d399764752ad15a0aec57a9f6"
+            }
+          },
+          {
+            "id": "term-032-b",
+            "spokenAs": "Adaptive",
+            "ttsTextSha256": "0ce7dd1ff8755474e9e9e845598cd4e461838caec454f89e841991843154adee",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-032-b.wav",
+              "sha256": "fb47d9c335e3eae2e78a4271f370aef45fb483baec90c17c0f607af54e8f54fd"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-032-b.recipe.json",
+              "sha256": "9d9d6bd1c944b22b1721f636852e4141d0c51615b48453dbc666cd366d514f53"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Redis",
+        "contextSha256": "74be0b26e120740fa88791f9f32877eff02717e348f11a017b252c64910453aa",
+        "candidates": [
+          {
+            "id": "term-033-a",
+            "spokenAs": "Redis",
+            "ttsTextSha256": "74be0b26e120740fa88791f9f32877eff02717e348f11a017b252c64910453aa",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-033-a.wav",
+              "sha256": "8fc01e3b7e5bfe5363c2537eec08684256e69d0d1dddb52bde4ff6295296a457"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-033-a.recipe.json",
+              "sha256": "851cbac0bf9841cde3b6cfa596adf449157ed4002a4486813ab0e570cbb47942"
+            }
+          },
+          {
+            "id": "term-033-c",
+            "spokenAs": "red is",
+            "ttsTextSha256": "e0d1f3cff2a1eaf68f50cdf70e455beff37f81a8d8f9e7ea167e5c1b46d6f2ec",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-033-c.wav",
+              "sha256": "378081f96be0e6cc33807be55dfbda82da9b83041beca44809059b63e89bc2eb"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-033-c.recipe.json",
+              "sha256": "43a60c04acb5e4b3b7f5154bf4f50310cfb7b30aa63dd6aa2ee903e533efdd9d"
+            }
+          }
+        ]
+      },
+      {
+        "token": "jieba",
+        "contextSha256": "c5d2a4464c9adbb8fc758dc71360f995e53be16db43fd057c230f77dfde024cb",
+        "candidates": [
+          {
+            "id": "term-034-a",
+            "spokenAs": "jieba",
+            "ttsTextSha256": "c5d2a4464c9adbb8fc758dc71360f995e53be16db43fd057c230f77dfde024cb",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-034-a.wav",
+              "sha256": "50eabeee6f71d2c6cfed1968ddab0c98b9a8c2c229aca2f2ac4a6a30b31629ab"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-034-a.recipe.json",
+              "sha256": "520fc963389a8e1fb4664237ed9117bb1134d8766d1b736f968983ee8469c888"
+            }
+          },
+          {
+            "id": "term-034-c",
+            "spokenAs": "结巴",
+            "ttsTextSha256": "1559d37bf5e5131f172edb083a20153e6302bc62f4b74a27991bc02c85b60179",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-034-c.wav",
+              "sha256": "a77ff0b5ba66e828c502c3277b7fd8e5547905c2670cdafb5eec36d69031b692"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-034-c.recipe.json",
+              "sha256": "84890ed6285ef0b853f965c3ae6f5cd45c02770e61a47abe1f3f6e2f7cb158a9"
+            }
+          }
+        ]
+      },
+      {
+        "token": "nDCG",
+        "contextSha256": "46adad81b2f4dc2dfab8c1d68223fe51b37dd910170712e8f9468eb33948b475",
+        "candidates": [
+          {
+            "id": "term-035-a",
+            "spokenAs": "nDCG",
+            "ttsTextSha256": "46adad81b2f4dc2dfab8c1d68223fe51b37dd910170712e8f9468eb33948b475",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-035-a.wav",
+              "sha256": "e9044e18fee89854c529eb8ef23e092582e82ae1fc102f501f779129b0b38501"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-035-a.recipe.json",
+              "sha256": "1742edb13cb2636c0de1a3b3369316edb74a2fac5cebd79c663d41a06f5d8288"
+            }
+          },
+          {
+            "id": "term-035-c",
+            "spokenAs": "N D C G",
+            "ttsTextSha256": "b2ed5d6431b48789343845f07a492bc15991b55393c7fdc276689e593af5fea1",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-035-c.wav",
+              "sha256": "b0140dba560e83bb54174f47dd0be161423ca389672762f49b3d00239d00b7b1"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-035-c.recipe.json",
+              "sha256": "4d626ae0837b328eedef4ef5cdcc9cf97ef4847cdbb32066fb61e509fc7deb69"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Transformer",
+        "contextSha256": "51d3e8749359e7e3e240f697b3158ff8755cd488ead35a5ea04d685e14e43578",
+        "candidates": [
+          {
+            "id": "term-036-a",
+            "spokenAs": "Transformer",
+            "ttsTextSha256": "51d3e8749359e7e3e240f697b3158ff8755cd488ead35a5ea04d685e14e43578",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-036-a.wav",
+              "sha256": "e92bd5f7be27d40db7c77913a050f9fff3c3ba0d6946ff9382ec403532a383ae"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-036-a.recipe.json",
+              "sha256": "b6c7b33bc0094e25909fa93df9d274a95d6809cec254b3bc13f55b7f915db305"
+            }
+          },
+          {
+            "id": "term-036-b",
+            "spokenAs": "Transformer",
+            "ttsTextSha256": "6ebc3ec3a3c62471409ce7e048e4ff8260bbb7a185625a22cee250294a9e24bb",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-036-b.wav",
+              "sha256": "4952f1780810b0f964dc6ef8790a7db9feac5ec5f8e5fdc0c9d362cbc32a1df1"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-036-b.recipe.json",
+              "sha256": "6d8358b2a92523f0cbe4a8342b76672e8dc7195ac9483a25788bab016de708b5"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Self-RAG",
+        "contextSha256": "82c6b6c4a0e7cf8dc6ababb8b187db97e9b93f32049e2779319bd956014a42cf",
+        "candidates": [
+          {
+            "id": "term-037-a",
+            "spokenAs": "Self-RAG",
+            "ttsTextSha256": "c116995bded5024be362340264c2ce3dc7be62358681321a6ef95fac193bcd20",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-037-a.wav",
+              "sha256": "e5300eb6965806942bf47f9b4670b2d3c7b47bafd2e3141e7c245f22b04a11eb"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-037-a.recipe.json",
+              "sha256": "be847585d8c2bd3a0a1f3b7f152ef482cfba5a80d3de9d49fa91422034283c90"
+            }
+          },
+          {
+            "id": "term-037-c",
+            "spokenAs": "Self R A G",
+            "ttsTextSha256": "25466ce8c32cb67900da86d7067bbdc18b934e59a393d532b608020965dbf10e",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-037-c.wav",
+              "sha256": "e42216c80f6c08ef9d421f3ba16e1c8ba1650768f26f558831b182bb70b8dfea"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-037-c.recipe.json",
+              "sha256": "076720067553ce256584e8140f264a09541ddf08c7852d24bd9af46e0c0ad639"
+            }
+          }
+        ]
+      },
+      {
+        "token": "Reflexion",
+        "contextSha256": "1f0ff0f132a486224afb3159562dbf44d0577cf1dfe8e188a98459468f2c6996",
+        "candidates": [
+          {
+            "id": "term-038-a",
+            "spokenAs": "Reflexion",
+            "ttsTextSha256": "1f0ff0f132a486224afb3159562dbf44d0577cf1dfe8e188a98459468f2c6996",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-038-a.wav",
+              "sha256": "a24ac5bd4a514fea824f26395f2af940e00731adb8414a309d37cce5c513190a"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-038-a.recipe.json",
+              "sha256": "a984143bfe5844ca7709570cef96afba628b7aa429e54dcea02e0875f349d40b"
+            }
+          },
+          {
+            "id": "term-038-b",
+            "spokenAs": "Reflexion",
+            "ttsTextSha256": "e5b2d625bf82087feabe2139c6980db7d4aea19dcdd6d300e86e30fea4f1505a",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-038-b.wav",
+              "sha256": "c722735526e53d6f45cd95cf959b447c19177287748a8fe58518e0347795fb1f"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-038-b.recipe.json",
+              "sha256": "061d0f88019aad22c1d48d9cd3a9a520c8693f56590351f1ad3e468fa72f12dd"
+            }
+          }
+        ]
+      },
+      {
+        "token": "LangGraph",
+        "contextSha256": "b8a24ccbf9d509d137d655997c2c255e8111e8c7e2ce4dbafd8d5c3524e6846d",
+        "candidates": [
+          {
+            "id": "term-039-a",
+            "spokenAs": "LangGraph",
+            "ttsTextSha256": "b8a24ccbf9d509d137d655997c2c255e8111e8c7e2ce4dbafd8d5c3524e6846d",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-039-a.wav",
+              "sha256": "f91ae051adc4663d129e8b59c764b765fe9a7111a63b3384db39e33d43db5fa2"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-039-a.recipe.json",
+              "sha256": "8ee37478f862b8ad7ca9b62141afc8d3bf9ed9be00f4c3e23b8f15bd7e04b9f0"
+            }
+          },
+          {
+            "id": "term-039-c",
+            "spokenAs": "Lang Graph",
+            "ttsTextSha256": "ed29651d8c28c622339849714e25caf2dfbba7a498db563695c3eb18da922804",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-039-c.wav",
+              "sha256": "fe01477bf28b20d0bc8572449b4632141a2d6f4f2d27c08399121479f393d921"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-039-c.recipe.json",
+              "sha256": "215bad1194abf53bc5bb6205dab245018162663ba538bc0058f58a6a704cc7a2"
+            }
+          }
+        ]
+      },
+      {
+        "token": "TruLens",
+        "contextSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c",
+        "candidates": [
+          {
+            "id": "term-040-a",
+            "spokenAs": "TruLens",
+            "ttsTextSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-040-a.wav",
+              "sha256": "4a401f4b7ed1f71c95893079e161ffe61fe519b312ede5fa6a9611763c090e4e"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-040-a.recipe.json",
+              "sha256": "1e6f9a57e4fb2bd19e0980f2b35f2709d02d8e8697a153940d1d8183d9d12402"
+            }
+          },
+          {
+            "id": "term-040-c",
+            "spokenAs": "Tru Lens",
+            "ttsTextSha256": "ce22e890fe955977e45f8dcd8ec35d97b5b2dcea42f8b940eb22440f999039a7",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-040-c.wav",
+              "sha256": "0e81905cfe25f7edf03820e0ad11d78a3dafe51945f3e980d04d8e2010047128"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-040-c.recipe.json",
+              "sha256": "061f0f51d23424c6288efc1c828b80c8a03037650c8c1e6e9366854d1e39fc31"
+            }
+          }
+        ]
+      },
+      {
+        "token": "DeepEval",
+        "contextSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c",
+        "candidates": [
+          {
+            "id": "term-041-a",
+            "spokenAs": "DeepEval",
+            "ttsTextSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-041-a.wav",
+              "sha256": "4a401f4b7ed1f71c95893079e161ffe61fe519b312ede5fa6a9611763c090e4e"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-041-a.recipe.json",
+              "sha256": "7b402bba42d889f72f049f58de8546c93528b717594c613812e9284c99717f93"
+            }
+          },
+          {
+            "id": "term-041-c",
+            "spokenAs": "Deep Eval",
+            "ttsTextSha256": "5061f2e663a631ed2b1f76f12b3d90a5d0fe1e476568b14e7e149f4255da3673",
+            "audio": {
+              "path": "audio/pronunciation-probes/term-041-c.wav",
+              "sha256": "2672737c984eb619094c99ad4c9a8895d895b5a6e36a8257ec115f2b22582652"
+            },
+            "recipe": {
+              "path": "audio/pronunciation-probes/term-041-c.recipe.json",
+              "sha256": "da00c43a7245062bf6a2859defe27847c7d4560f1402594da3ba5257dbb48a53"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "effectiveGuide": {
+    "path": "input/pronunciation.effective.json",
+    "sha256": "156c863fea9cca5f870a9df4aec8a19a173144c84467f1b497d8ed948fbb395f"
+  },
+  "humanListening": {
+    "status": "skipped-by-user-direction",
+    "completed": false,
+    "playedCandidateCount": 31,
+    "candidateCount": 82,
+    "skippedCandidateCount": 51
+  },
+  "selectionOverride": {
+    "scope": "user-directed-selection-no-listening",
+    "userDirective": "已选 41/41，按当前选择进入下一步。",
+    "skipReason": "User explicitly confirmed all 41 selected pronunciations and directed the workflow to advance without playing the remaining 55 probe candidates.",
+    "selectedTermCount": 41,
+    "termCount": 41,
+    "playedCandidateCount": 31,
+    "candidateCount": 82,
+    "skippedCandidateCount": 51,
+    "playedCandidateIds": [
+      "term-001-a",
+      "term-002-a",
+      "term-003-a",
+      "term-003-c",
+      "term-004-a",
+      "term-004-c",
+      "term-005-a",
+      "term-006-a",
+      "term-007-a",
+      "term-007-b",
+      "term-008-a",
+      "term-010-a",
+      "term-011-b",
+      "term-012-a",
+      "term-015-a",
+      "term-018-a",
+      "term-019-a",
+      "term-020-a",
+      "term-021-a",
+      "term-022-a",
+      "term-023-b",
+      "term-024-a",
+      "term-025-a",
+      "term-027-a",
+      "term-028-a",
+      "term-033-a",
+      "term-034-a",
+      "term-035-a",
+      "term-036-a",
+      "term-038-b",
+      "term-039-a"
+    ],
+    "skippedCandidateIds": [
+      "term-001-b",
+      "term-002-b",
+      "term-005-c",
+      "term-006-c",
+      "term-008-c",
+      "term-009-a",
+      "term-009-c",
+      "term-010-c",
+      "term-011-a",
+      "term-012-c",
+      "term-013-a",
+      "term-013-b",
+      "term-014-a",
+      "term-014-b",
+      "term-015-c",
+      "term-016-a",
+      "term-016-c",
+      "term-017-a",
+      "term-017-c",
+      "term-018-c",
+      "term-019-b",
+      "term-020-b",
+      "term-021-b",
+      "term-022-c",
+      "term-023-a",
+      "term-024-b",
+      "term-025-b",
+      "term-026-a",
+      "term-026-b",
+      "term-027-c",
+      "term-028-c",
+      "term-029-a",
+      "term-029-b",
+      "term-030-a",
+      "term-030-c",
+      "term-031-a",
+      "term-031-c",
+      "term-032-a",
+      "term-032-b",
+      "term-033-c",
+      "term-034-c",
+      "term-035-c",
+      "term-036-b",
+      "term-037-a",
+      "term-037-c",
+      "term-038-a",
+      "term-039-c",
+      "term-040-a",
+      "term-040-c",
+      "term-041-a",
+      "term-041-c"
+    ],
+    "recordedAt": "2026-07-28T13:24:37.251Z"
+  },
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true
+}

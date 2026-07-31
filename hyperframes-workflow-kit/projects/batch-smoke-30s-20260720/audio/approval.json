@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "autovideo-audio-approval/v4",
+  "projectId": "batch-smoke-30s-20260720",
+  "approvalScope": "technical-only",
+  "approvedBy": "codex-creator-delegated-simulation",
+  "approvedAt": "2026-07-22T09:34:05.680Z",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "selectedCandidateId": "candidate-003",
+  "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+  "recipeSha256": "852379a8b7c9a2fc30bec53e94f309fe1cbd522098dcd36567db982baa461ae6",
+  "listeningReviewSha256": "b32613a59ec54e0a6166a7451804ca82e360fa9fe0f3d18b9f2637d4102c09f6",
+  "candidateBindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c"
+    },
+    "pronunciation": {
+      "path": "input/pronunciation.effective.json",
+      "sha256": "f750463416837f3d0f914873b9ffc44ef4c4fcd2b8728c6f90902440ea38706e"
+    },
+    "pronunciationApproval": {
+      "path": "qa/pronunciation-approval.json",
+      "sha256": "2766d429bd3a3e389f6810a171cdd01710c18d4998d38627bf8066cf585c8e48"
+    },
+    "index": {
+      "path": "audio/voice-candidates/index.json",
+      "sha256": "7a6181c885a86b1369d90ae5171dcdfbc0daed6c432165565d8399c5a1a9a481"
+    },
+    "candidates": [
+      {
+        "candidateId": "baseline-4862800600e4",
+        "manifestSha256": "fec92aae04ed320179d73411ed58dc0bd182d41fd0ecd605a0c622010cc5ae4b",
+        "audioSha256": "4862800600e4dbc6df0107cebda153102999092920080495f3eaf83e5712e838"
+      },
+      {
+        "candidateId": "candidate-003",
+        "manifestSha256": "395f7b396335fdc48cd214491535cb385327ce5f47b677c085380aeeaead28e4",
+        "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+      }
+    ]
+  },
+  "technicalApproval": {
+    "status": "passed",
+    "candidateManifestSha256": "395f7b396335fdc48cd214491535cb385327ce5f47b677c085380aeeaead28e4"
+  },
+  "humanListening": {
+    "status": "not-performed",
+    "reviewer": null,
+    "approvedAt": null,
+    "reviewPath": "audio/listening-review.json",
+    "reviewSha256": "b32613a59ec54e0a6166a7451804ca82e360fa9fe0f3d18b9f2637d4102c09f6"
+  },
+  "delegatedSimulation": {
+    "mode": "creator-delegated-internal-only",
+    "receiptPath": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "receiptSha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e",
+    "reason": "Creator explicitly delegated internal workflow decisions to Codex. Audio was not played because microphone, playback, and sound output remain disabled."
+  },
+  "publicReleaseApproved": false
+}

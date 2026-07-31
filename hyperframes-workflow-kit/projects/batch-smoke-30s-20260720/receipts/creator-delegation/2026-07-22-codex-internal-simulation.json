@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "autovideo-creator-delegation/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "authorizedAt": "2026-07-22T17:17:50.4606845+08:00",
+  "authorizationText": "你帮我输入啊，都按你的来模拟，我手动输入有啥用不如你自己作为我来模拟",
+  "delegate": "codex",
+  "scope": [
+    "text-review",
+    "content-freeze",
+    "internal-visual-review",
+    "internal-only-workflow-simulation"
+  ],
+  "constraints": {
+    "microphoneAllowed": false,
+    "audioPlaybackAllowed": false,
+    "soundOutputAllowed": false,
+    "publicReleaseAllowed": false
+  },
+  "mustNotClaim": [
+    "human-listening-completed",
+    "publication-rights-cleared",
+    "human-final-preview-approved",
+    "public-release-approved"
+  ],
+  "policy": "Skipped sensory or rights gates must remain explicit, internal-only, and public-release-blocking. Machine QA and provenance may not be skipped."
+}

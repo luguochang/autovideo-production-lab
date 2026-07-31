@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "autovideo-semantic-sfx-plan/v1",
+  "planId": "demotext-standard-delivery-v5-sparse-sfx",
+  "version": "1.0.0",
+  "status": "candidate",
+  "styleLock": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "requiredBackground": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionZone": "caption",
+    "cameraScope": "content-world-only"
+  },
+  "motionLibraryRef": {
+    "libraryId": "knowledge-explainer",
+    "version": "1.0.0",
+    "path": "style-library/motion-library/knowledge-explainer-v1.json"
+  },
+  "timelineDurationSeconds": 239.328,
+  "policy": {
+    "mode": "semantic-only",
+    "maxPerMinute": 6,
+    "minGapSeconds": 2.4,
+    "maxSimultaneous": 1,
+    "narrationPriority": true,
+    "allowAmbientLoops": false,
+    "allowDecorativeHits": false,
+    "assetPolicy": {
+      "resolver": "media-use",
+      "manifestPath": ".media/manifest.jsonl",
+      "pathPrefix": ".media/audio/sfx/",
+      "mediaType": "sfx",
+      "allowRemoteAtRender": false,
+      "allowUnregisteredAssets": false,
+      "requireSha256": true
+    },
+    "mix": {
+      "defaultCueGainDb": -20,
+      "narrationGainChangeDb": 0,
+      "peakDbfsMax": -6,
+      "fadeInMs": 8,
+      "fadeOutMs": 80
+    }
+  },
+  "bindings": [
+    {
+      "role": "connector-draw",
+      "intent": "short restrained line draw accent without a scene whoosh",
+      "resolutionStatus": "resolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": "sfx_004",
+      "path": ".media/audio/sfx/sfx_004.mp3",
+      "sha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "provider": "bundled.sfx",
+      "licenseReceipt": "Pixabay Content License; media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "role": "state-change",
+      "intent": "quiet interface state commit click with a compact decay",
+      "resolutionStatus": "resolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": "sfx_001",
+      "path": ".media/audio/sfx/sfx_001.mp3",
+      "sha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "provider": "bundled.sfx",
+      "licenseReceipt": "Pixabay Content License; media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "role": "chapter-resolve",
+      "intent": "soft low chapter resolution chime without bass impact",
+      "resolutionStatus": "resolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": "sfx_003",
+      "path": ".media/audio/sfx/sfx_003.mp3",
+      "sha256": "74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12",
+      "provider": "bundled.sfx",
+      "licenseReceipt": "Pixabay Content License; media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "role": "focus-hit",
+      "intent": "short dry soft focus tick with no cinematic tail",
+      "resolutionStatus": "resolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": "sfx_002",
+      "path": ".media/audio/sfx/sfx_002.mp3",
+      "sha256": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+      "provider": "bundled.sfx",
+      "licenseReceipt": "Pixabay Content License; media-use/audio/assets/sfx/CREDITS.md"
+    }
+  ],
+  "cues": [
+    {
+      "id": "sfx-cue-001",
+      "timeSeconds": 22.865,
+      "role": "connector-draw",
+      "bindingRole": "connector-draw",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": [
+        "cue-005"
+      ],
+      "semanticEvent": "diagram-build reaches its visible connector-complete state.",
+      "anchor": "connector-complete",
+      "offsetSeconds": 0,
+      "gainDb": -21,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-002",
+      "timeSeconds": 82.129,
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-015"
+      ],
+      "semanticEvent": "comparison-split reaches its visible state-commit state.",
+      "anchor": "state-commit",
+      "offsetSeconds": 0,
+      "gainDb": -20,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-003",
+      "timeSeconds": 100.98,
+      "role": "chapter-resolve",
+      "bindingRole": "chapter-resolve",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": [
+        "cue-017"
+      ],
+      "semanticEvent": "diagram-build reaches its visible chapter-terminal state.",
+      "anchor": "chapter-terminal",
+      "offsetSeconds": 0,
+      "gainDb": -21,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-004",
+      "timeSeconds": 152.126,
+      "role": "focus-hit",
+      "bindingRole": "focus-hit",
+      "motionRecipeId": "keyword-handoff",
+      "sourceCueIds": [
+        "cue-027"
+      ],
+      "semanticEvent": "keyword-handoff reaches its visible motion-land state.",
+      "anchor": "motion-land",
+      "offsetSeconds": 0,
+      "gainDb": -19,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-005",
+      "timeSeconds": 181.306,
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-039"
+      ],
+      "semanticEvent": "comparison-split reaches its visible state-commit state.",
+      "anchor": "state-commit",
+      "offsetSeconds": 0,
+      "gainDb": -20,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-006",
+      "timeSeconds": 219.256,
+      "role": "chapter-resolve",
+      "bindingRole": "chapter-resolve",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-044"
+      ],
+      "semanticEvent": "comparison-split reaches its visible chapter-terminal state.",
+      "anchor": "chapter-terminal",
+      "offsetSeconds": 0,
+      "gainDb": -21,
+      "targetLayer": "content-world"
+    }
+  ]
+}

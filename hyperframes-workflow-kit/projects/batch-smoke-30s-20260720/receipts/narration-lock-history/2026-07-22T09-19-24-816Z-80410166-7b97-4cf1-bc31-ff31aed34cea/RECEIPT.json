@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "autovideo-narration-lock-rebind/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "reboundAt": "2026-07-22T09:19:24.816Z",
+  "wordingChanged": false,
+  "normalizedSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "previousLockSha256": "1aa26acbf516e6f908a2b613dd8c0fcd0415b4c47bfa0b24504839090e6d761f",
+  "currentLockSha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c",
+  "contentApprovalSha256": "777499f2dd39ae688a4e566ac1a61c3d97b0100a6faebc6454a4e01279335952"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "baseStyleId": "modern-ip-host-explainer",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [],
+  "blueprints": [],
+  "motionRules": [
+    "svg-path-draw",
+    "viewport-change",
+    "card-morph-anchor",
+    "scale-swap-transition"
+  ],
+  "status": "approved",
+  "approvedBy": "codex-autonomous-internal-review",
+  "notes": "Approved after still and motion-probe review.",
+  "receipts": [
+    {
+      "source": "style-library/styles/project/modern-ip-host-explainer/",
+      "kind": "project-local",
+      "license": "project-generated; user-provided character rights not implied"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

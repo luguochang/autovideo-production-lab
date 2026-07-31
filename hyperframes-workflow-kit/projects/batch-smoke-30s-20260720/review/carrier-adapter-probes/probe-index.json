@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "autovideo-carrier-probes/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "scope": "technical-component-probes",
+  "fixedShell": {
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionPersistent": true
+  },
+  "publicationApproval": false,
+  "probes": [
+    {
+      "id": "data-proof",
+      "visualType": "data-proof",
+      "evidenceStatus": "illustrative-mock",
+      "humanReview": "pending"
+    },
+    {
+      "id": "code-surface",
+      "visualType": "code-surface",
+      "evidenceStatus": "illustrative-mock",
+      "humanReview": "pending"
+    },
+    {
+      "id": "device-surface",
+      "visualType": "device-surface",
+      "evidenceStatus": "illustrative-mock",
+      "humanReview": "pending"
+    }
+  ]
+}

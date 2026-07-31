@@ -1,0 +1,924 @@
+{
+  "schemaVersion": "autovideo-hyperframes-build/v1",
+  "compilerVersion": "1.8.0",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "generatedAt": "2026-07-29T03:30:19.288Z",
+  "inputManifest": {
+    "path": "plan/production-manifest.json",
+    "sha256": "3bbd800be2c0c7153a013cbe0b5f4a335431910f893a3d79699f467376e4c48e"
+  },
+  "outputDir": "production/hyperframes",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 1880.218,
+    "duration": 1880.218
+  },
+  "sceneCount": 71,
+  "cueCount": 237,
+  "appliedOverrideIds": [],
+  "publicReleaseBlocked": true,
+  "motionLifecycleAccess": {
+    "schemaVersion": "autovideo-motion-recipe-access/v1",
+    "projectId": "rag-full-chain-5m-20260728-r2",
+    "scope": "full-production",
+    "library": {
+      "path": "style-library/motion-library/knowledge-explainer-v1.json",
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed",
+      "schemaVersion": "autovideo-motion-recipe-library/v1",
+      "libraryId": "knowledge-explainer",
+      "version": "1.0.0",
+      "scope": "workspace"
+    },
+    "lifecycleLedger": {
+      "path": "style-library/motion-library/knowledge-explainer.lifecycle.json",
+      "sha256": "76146211541157efe896f95130c67cbf7c5616caff82712dbc36e9af58137b07",
+      "schemaVersion": "autovideo-motion-recipe-lifecycle/v1",
+      "scope": "workspace"
+    },
+    "authorized": true,
+    "releasePolicy": {
+      "motionApprovalIsPublicationApproval": false,
+      "publicReleaseBlocked": true,
+      "internalFallbackUsed": true
+    },
+    "access": [
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "code-proof",
+        "version": "1.0.0",
+        "definitionSha256": "81c5952915d0cf80491934de2b9577d6acd26c432bf3434630497cf0ff0f159d",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "comparison-split",
+        "version": "1.0.0",
+        "definitionSha256": "df97aa86525b2a4cce38521abc51d344461f51bdaa4bea56a5cee70e23683dee",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "device-surface-tour",
+        "version": "1.0.0",
+        "definitionSha256": "ab43b1325584c384dc16717e59d0b2b92ad302edf822c14be63ff574b08f5b43",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "diagram-build",
+        "version": "1.0.0",
+        "definitionSha256": "45001bc3e8194b942dc46195115bf085923bcd2312969667741d164a7090b92f",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "keyword-handoff",
+        "version": "1.0.0",
+        "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      }
+    ],
+    "internalFallback": {
+      "used": true,
+      "request": {
+        "schemaVersion": "autovideo-motion-internal-fallback-request/v1",
+        "projectId": "rag-full-chain-5m-20260728-r2",
+        "scope": "internal-full-production",
+        "releaseScope": "internal-only",
+        "publicReleaseBlocked": true,
+        "requestedBy": "codex-creator-delegated-internal-review",
+        "requestedAt": "2026-07-29T10:23:12.7073478+08:00",
+        "reason": "The user approved the current visual probe for this internal-only project. Generate the full composition using the exact reviewed recipe set without claiming global recipe promotion, public rights, or final publication approval.",
+        "recipeIds": [
+          "code-proof",
+          "comparison-split",
+          "device-surface-tour",
+          "diagram-build",
+          "keyword-handoff"
+        ]
+      },
+      "requestSha256": "9158c1e3a44404e10a1d27d0bd7e7ead4ad854c090ce4b65e7fb2fc353222d94"
+    },
+    "decisionSha256": "6b3e1587448135fdf8ec85e93d9f648d9cc833fe9f513e0594917d9643825653",
+    "plannedDecisionSha256": "6b3e1587448135fdf8ec85e93d9f648d9cc833fe9f513e0594917d9643825653"
+  },
+  "continuity": {
+    "mode": "persistent-shell",
+    "introPaddingSeconds": 0.35,
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "cameraScope": "content-world-only",
+    "normalizedSceneLayouts": 0,
+    "transition": "compact-history-and-anchor-enter",
+    "fixedHostPose": null,
+    "normalizedHostPoses": 0,
+    "oneScreenStepCount": null,
+    "screenTextPolicy": "derived-keywords; exact narration remains in captions",
+    "manualTextPolicy": "pipe-separated visual keywords; never changes NarrationLock or captions",
+    "visualVariants": [
+      "focus",
+      "signal",
+      "stack",
+      "route",
+      "contrast",
+      "close"
+    ],
+    "motionRecipeLibrary": "knowledge-explainer@1.0.0",
+    "recipeDrivenFields": [
+      "visualType",
+      "motionRecipeRefs",
+      "assetRefs",
+      "carrierPayload",
+      "sfxRefs",
+      "provenanceRefs"
+    ],
+    "primaryCarrierAdapters": [
+      {
+        "adapterId": "device-surface-bounded",
+        "adapterVersion": "1.0.0",
+        "visualType": "device-surface",
+        "sourceReceipt": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f",
+        "sources": [
+          {
+            "registryItem": "app-showcase",
+            "path": "vendor/hyperframes/registry/blocks/app-showcase/app-showcase.html",
+            "sha256": "c7e1b4d8ec2a2c1f70a8ed67a147ba5c4985074eb475d611b2bec6d921b10ade"
+          }
+        ],
+        "license": {
+          "id": "Apache-2.0",
+          "path": "vendor/hyperframes/LICENSE",
+          "sha256": "4259155fb06f127687ee7b0a8a3682d45132db0f2da26cbc0b7a2d1e796436b8"
+        },
+        "adaptation": "bounded-local-adapter; official visual grammar only; no remote runtime or full-frame mount"
+      },
+      {
+        "adapterId": "code-surface-bounded",
+        "adapterVersion": "1.0.0",
+        "visualType": "code-surface",
+        "sourceReceipt": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb",
+        "sources": [
+          {
+            "registryItem": "code-diff",
+            "path": "vendor/hyperframes/registry/blocks/code-diff/code-diff.html",
+            "sha256": "5356890fec4947e384b044d7dda3d03601432125a4ce60087caac0e3639d9d93"
+          },
+          {
+            "registryItem": "code-highlight",
+            "path": "vendor/hyperframes/registry/blocks/code-highlight/code-highlight.html",
+            "sha256": "2e28ffdb11fe7b595e47488f2dfb93db514f315dd5f334c902540fcbebf2bb2f"
+          }
+        ],
+        "license": {
+          "id": "Apache-2.0",
+          "path": "vendor/hyperframes/LICENSE",
+          "sha256": "4259155fb06f127687ee7b0a8a3682d45132db0f2da26cbc0b7a2d1e796436b8"
+        },
+        "adaptation": "bounded-local-adapter; official visual grammar only; no remote runtime or full-frame mount"
+      }
+    ],
+    "primaryCarrierEvidence": [],
+    "graphLayout": {
+      "mode": "bound-editable-layout",
+      "path": "data/graph-layout.json",
+      "sha256": "28abc5454a9fce2137ecd39e6cd5f2cd83d0b8b6a6c65930be6a8986b9608d72",
+      "diagramCount": 13
+    },
+    "semanticSfxPolicy": {
+      "mode": "semantic-only",
+      "contractPath": "style-library/schema/semantic-sfx-plan.schema.json",
+      "examplePath": "style-library/examples/knowledge-explainer-sfx-plan.example.json",
+      "resolver": "media-use",
+      "manifestPath": ".media/manifest.jsonl",
+      "pathPrefix": ".media/audio/sfx/",
+      "allowRemoteAtRender": false,
+      "allowUnregisteredAssets": false,
+      "requireSha256": true,
+      "roles": [
+        "focus-hit",
+        "connector-draw",
+        "state-change",
+        "error",
+        "chapter-resolve"
+      ],
+      "maxPerMinute": 6,
+      "minGapSeconds": 2.4,
+      "duckingDb": -4
+    },
+    "iconSource": "lucide-react@0.468.0 (ISC)"
+  },
+  "creativeMedia": {
+    "ledger": null,
+    "frozenAssets": []
+  },
+  "semanticSfx": null,
+  "hostAssetManifest": {
+    "path": "production-assets/host-assets.manifest.json",
+    "sha256": "d4504c8810109e9a96976e568b7abcd83c57d4acb9123cb3ba72a7cb7ed25370"
+  },
+  "outputs": [
+    {
+      "path": "hyperframes.json",
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6e3e39b3e9e7a8fd43b136d5cfbc992afe485820cc9b3cf173d83d5f4d52765a"
+    },
+    {
+      "path": "meta.json",
+      "sha256": "ff515454272b1cdae08ee6d231ca309e48b758f6058a930c77c93ad94e687b7e"
+    },
+    {
+      "path": "BRIEF.md",
+      "sha256": "2900d3fb86d19d1c9a842a3f8266ce0dc185e306c6a58422b7f851bd4b668b38"
+    },
+    {
+      "path": "frame.md",
+      "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25"
+    },
+    {
+      "path": "index.html",
+      "sha256": "c83eee53c13b380cd8d6d4f67404cf935b316119611ca31eb7f2e4045e7871cd"
+    },
+    {
+      "path": "index.motion.json",
+      "sha256": "efcce9cf4314f5622d74b6e687764f9c7a4263ca95bf49bbad7ae56a9c2238b8"
+    },
+    {
+      "path": "assets/audio/narration.final.wav",
+      "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "assets/runtime/JetBrainsMono-400.woff2",
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    },
+    {
+      "path": "assets/runtime/JetBrainsMono-700.woff2",
+      "sha256": "d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8"
+    },
+    {
+      "path": "assets/host/close.png",
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/host/read.png",
+      "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "sha256": "3bbd800be2c0c7153a013cbe0b5f4a335431910f893a3d79699f467376e4c48e"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "sha256": "b741e35c878d47c1dc7d9710b8cac9704629b6785d1263347f91465b46aef827"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "sha256": "50fc40f4193a6490b5a2e39a00ee88abb6d637c53b8d5a4a673a08d36be12db5"
+    },
+    {
+      "path": "data/alignment.json",
+      "sha256": "e3193c3da74e3ef6d0ae0672ca352513cc8268ce1aafff5658574d84198fe572"
+    },
+    {
+      "path": "data/overrides.json",
+      "sha256": "55782e577aa37db1a15cde418efb7208ef4847ad6083dcd49fe186c55f767faa"
+    },
+    {
+      "path": "data/motion-recipe-library.json",
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+    },
+    {
+      "path": "data/motion-recipe-lifecycle.json",
+      "sha256": "76146211541157efe896f95130c67cbf7c5616caff82712dbc36e9af58137b07"
+    },
+    {
+      "path": "data/graph-layout.json",
+      "sha256": "28abc5454a9fce2137ecd39e6cd5f2cd83d0b8b6a6c65930be6a8986b9608d72"
+    },
+    {
+      "path": "data/source-map.json",
+      "sha256": "e7f87b39fad77e6e788c9a6a4c8681bea1f904ad061889ed760370c90a9172b4"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.html",
+      "sha256": "b6d475cce09c7bbd32d6aab1d2f3233b6ed899b65dd19327dba7834c385ae249"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.motion.json",
+      "sha256": "0e0f84ffc92755352a771b94dcdefee20367102583aa15b8e24ce957165f34ee"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.html",
+      "sha256": "70759ef365bdb23584653b377ee3a1d075f72444a57b4bdd3e81b4030a961e25"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.motion.json",
+      "sha256": "9ab45af950bd7174320368e04fbfe5077f4084f194afdd251b010e58b731455b"
+    },
+    {
+      "path": "compositions/scenes/03-scene-03.html",
+      "sha256": "a0e292e4d53619980dc7de8ae18b04432838c233fc85224d15e7e8cd43e0acca"
+    },
+    {
+      "path": "compositions/scenes/03-scene-03.motion.json",
+      "sha256": "fa9e6871231ed2d9f468cff4d22b652d288e5fdfae8dabb6ec685b14bc1a1169"
+    },
+    {
+      "path": "compositions/scenes/04-scene-04.html",
+      "sha256": "8242b6c32e53bb935d4d315e3c005c33bb3a04944cda245ee2a422ace6a33692"
+    },
+    {
+      "path": "compositions/scenes/04-scene-04.motion.json",
+      "sha256": "b04c9c787720e38ef1b016de2e31a052b4e3f0f2b24513b152466e1091d2aa77"
+    },
+    {
+      "path": "compositions/scenes/05-scene-05.html",
+      "sha256": "97995d8da7f06ec6b00b4745f753e1f069db2ddab01c89ab54b134ce6315692e"
+    },
+    {
+      "path": "compositions/scenes/05-scene-05.motion.json",
+      "sha256": "58b8f807c30e201d612c6ad78d6798dea6809bb87f270b7421095e2e64b54f12"
+    },
+    {
+      "path": "compositions/scenes/06-scene-06.html",
+      "sha256": "b8eaf5a4d39eb25ba626cbce8192b58f6692d6896a038d1f7967c1d0e3d963a5"
+    },
+    {
+      "path": "compositions/scenes/06-scene-06.motion.json",
+      "sha256": "8c2112de4f1292e5a5d391a44b41f2fadd63643019e30e81fea8afb087793a6b"
+    },
+    {
+      "path": "compositions/scenes/07-scene-07.html",
+      "sha256": "831f131fe1d840b7d436b34b9eb05131cc235d43599dc401c9929eb96c672847"
+    },
+    {
+      "path": "compositions/scenes/07-scene-07.motion.json",
+      "sha256": "84acbb7b79a4a64073016bcbf3785415a367f58f37049ae851fa17a1453f76ef"
+    },
+    {
+      "path": "compositions/scenes/08-scene-08.html",
+      "sha256": "31d783207a40b4df0b0cf64316520c5e6441b8cba5deedbae31a76e042a77c5e"
+    },
+    {
+      "path": "compositions/scenes/08-scene-08.motion.json",
+      "sha256": "7687e1d2f111f5027cad2519a1f945f7f1fdac472f5a20367d56c0ae716db714"
+    },
+    {
+      "path": "compositions/scenes/09-scene-09.html",
+      "sha256": "7146b3643570825d7cbcace7d9936466f32170dbc0368a2da39018123ade9574"
+    },
+    {
+      "path": "compositions/scenes/09-scene-09.motion.json",
+      "sha256": "ae6bc855c785dad8817d020437b9f897ff4133e2090883870059c24a1061a03e"
+    },
+    {
+      "path": "compositions/scenes/10-scene-10.html",
+      "sha256": "75b91cd768896a9a1494b4c9c03898d50d69f7c109712ce51fc6a9180d7264a2"
+    },
+    {
+      "path": "compositions/scenes/10-scene-10.motion.json",
+      "sha256": "8703ba8141b8e576c995a57d00baa2a72f558d168429be925e2450a0b08880ce"
+    },
+    {
+      "path": "compositions/scenes/11-scene-11.html",
+      "sha256": "841213aa7864a12d9537f340a330678ace4b6f45754fc9c7bcdd6a304d7b05ff"
+    },
+    {
+      "path": "compositions/scenes/11-scene-11.motion.json",
+      "sha256": "6b64d53fc1010eac921a6ac92f03163b833ad85b09207dadb953611c8676a1c3"
+    },
+    {
+      "path": "compositions/scenes/12-scene-12.html",
+      "sha256": "5bf5fd2d912f52e2100af433dd13611711b55df44d6e6fdea1cf41dad19f4087"
+    },
+    {
+      "path": "compositions/scenes/12-scene-12.motion.json",
+      "sha256": "5f837da9a5996260d4ff24198e1da6a0ffe2f9cb0a3ca1d79f027fb17c7254e2"
+    },
+    {
+      "path": "compositions/scenes/13-scene-13.html",
+      "sha256": "581413ddd58a7ea8f18c94382e25dff57927959ab412e106c29b4630ee71a4b0"
+    },
+    {
+      "path": "compositions/scenes/13-scene-13.motion.json",
+      "sha256": "7c2896447718f4ffbc4c91786a508b59a58332cb6b6cbf07065fba1cf4a3a800"
+    },
+    {
+      "path": "compositions/scenes/14-scene-14.html",
+      "sha256": "634dbffdc38469ea26041fb9d55fa0128443c9070893885887b402be0eb5c988"
+    },
+    {
+      "path": "compositions/scenes/14-scene-14.motion.json",
+      "sha256": "84cad15259573e0a8af96574a4fc5a7c4dbf6a5240b69f03a45b21ec1a63f13f"
+    },
+    {
+      "path": "compositions/scenes/15-scene-15.html",
+      "sha256": "acf9c1ae18e993a5b5834b8af60adb221a7694cecc45eb3e6cbb06e00556da37"
+    },
+    {
+      "path": "compositions/scenes/15-scene-15.motion.json",
+      "sha256": "790e8f56b3116c3446fddb018fbf94901ce89fe5751e1fcdde23ad761411b0dc"
+    },
+    {
+      "path": "compositions/scenes/16-scene-16.html",
+      "sha256": "09d38a7e5f46a23524093e388b2199e20b4cbda5ea6a57d5370dec9c8d688f81"
+    },
+    {
+      "path": "compositions/scenes/16-scene-16.motion.json",
+      "sha256": "594a3fbd431163e8427922cf1979525bcad12756b6e30cb5de5c288d33f68a93"
+    },
+    {
+      "path": "compositions/scenes/17-scene-17.html",
+      "sha256": "f1a1ab8a941902bab69759cd5fee96a3a949e38ea7df1dbb7fdcd23181af1c3d"
+    },
+    {
+      "path": "compositions/scenes/17-scene-17.motion.json",
+      "sha256": "d392372db0d50eab1e991eda084ca362510891c8c275ddd1038f29b91bd28429"
+    },
+    {
+      "path": "compositions/scenes/18-scene-18.html",
+      "sha256": "af440880dd190bc6752f0aaaf6eadc895464bd3c06a3ad6f26d3b6e93f57af7f"
+    },
+    {
+      "path": "compositions/scenes/18-scene-18.motion.json",
+      "sha256": "5a68b4378cf5bb797b972b18208a5dc7c6c8da2453a8250974ee2d022dc96459"
+    },
+    {
+      "path": "compositions/scenes/19-scene-19.html",
+      "sha256": "a13bc831ff3107bd99dac11d434453312d6a181daa1c30fcdd0ab4ee61efb854"
+    },
+    {
+      "path": "compositions/scenes/19-scene-19.motion.json",
+      "sha256": "4c6db2c4fa578ab93a25c0a9c2764da0955f5747197b9ac1634b4642d0c84fd7"
+    },
+    {
+      "path": "compositions/scenes/20-scene-20.html",
+      "sha256": "b8ac9dc88b872aea84c963cd16a7443b9920a27ec12e4c962b87ceb762780f72"
+    },
+    {
+      "path": "compositions/scenes/20-scene-20.motion.json",
+      "sha256": "808eac865f0088b704e32d6658280769ab9e093415ce1056cf25e69369d7f69d"
+    },
+    {
+      "path": "compositions/scenes/21-scene-21.html",
+      "sha256": "c47b9a325534d127215a308e4ef049c267148395f047cf4a1d8db76751abaced"
+    },
+    {
+      "path": "compositions/scenes/21-scene-21.motion.json",
+      "sha256": "a8678b4240c4530fe68cd6d81a4afe23fd4b8e4402ce05e39f5439f3acb6cf26"
+    },
+    {
+      "path": "compositions/scenes/22-scene-22.html",
+      "sha256": "7749f16022e86a0f4113c6237f04d20fd113c4e8d44e85d8a3d8c9a5639f4253"
+    },
+    {
+      "path": "compositions/scenes/22-scene-22.motion.json",
+      "sha256": "fbd4e610dcfdb52c10a320fab36293e70468c0badfb855080576cd29a29ce15c"
+    },
+    {
+      "path": "compositions/scenes/23-scene-23.html",
+      "sha256": "5d332fe5cfc0160f06acfeb76327d48338af7a11642ca14c1d3c85f327b7ad27"
+    },
+    {
+      "path": "compositions/scenes/23-scene-23.motion.json",
+      "sha256": "f0f1371a7a6d502aedb11440357247e57a215abdd980d8c69d14f64735b55681"
+    },
+    {
+      "path": "compositions/scenes/24-scene-24.html",
+      "sha256": "1fca10be200c6713dcb0f85ad098e794938ae5e58e402828a67cdaabed419022"
+    },
+    {
+      "path": "compositions/scenes/24-scene-24.motion.json",
+      "sha256": "1ae0ea33a94873cc434880380dbff422cb8fe5fbc5df17802846edd7dc157ca5"
+    },
+    {
+      "path": "compositions/scenes/25-scene-25.html",
+      "sha256": "1299f6c70893b6fbdae42945aa53c1c5a450162d48e01d2e29fedd947f9d0ec1"
+    },
+    {
+      "path": "compositions/scenes/25-scene-25.motion.json",
+      "sha256": "cce059fcdb806b8ff38833c1908026598a09f4f6274d37994d6c7b264d98ab50"
+    },
+    {
+      "path": "compositions/scenes/26-scene-26.html",
+      "sha256": "aed4a32e01caf969092f8242790e160bb1b30e2085a4b8cb3fc23494451634fc"
+    },
+    {
+      "path": "compositions/scenes/26-scene-26.motion.json",
+      "sha256": "db44d9ba5d94700a3190ef1d6e4233b50845ef66618b7731f7428ac73c66130c"
+    },
+    {
+      "path": "compositions/scenes/27-scene-27.html",
+      "sha256": "0766e4ddfd43818ea7169c5c401626134dc4a86124e597b4c37121e59b639c54"
+    },
+    {
+      "path": "compositions/scenes/27-scene-27.motion.json",
+      "sha256": "93914e55e15c90172b62f47682d4654cda2003c73d5ab031770746a34c7a514b"
+    },
+    {
+      "path": "compositions/scenes/28-scene-28.html",
+      "sha256": "f980533074c5c554920b39760cffeaaca6cf34da9d5f689cf0c7db104f8eb393"
+    },
+    {
+      "path": "compositions/scenes/28-scene-28.motion.json",
+      "sha256": "aa1d7c08610e3f6a6c2aaf7c837ff95a7e966ddeefdddc0599a8ac714ff9e662"
+    },
+    {
+      "path": "compositions/scenes/29-scene-29.html",
+      "sha256": "5cf36b6ffc04fb62304ff9ea77d8d888e134089e7d0970e25b4e5b5cadfaa5e4"
+    },
+    {
+      "path": "compositions/scenes/29-scene-29.motion.json",
+      "sha256": "3e98d28bc811a035c89fa2fdfd222c810e43563ffe7252ab047362e0a092be89"
+    },
+    {
+      "path": "compositions/scenes/30-scene-30.html",
+      "sha256": "cc7a164a4d37544adb6ec1cb59f08d459bef0fc5fce729eda199408a83faffd1"
+    },
+    {
+      "path": "compositions/scenes/30-scene-30.motion.json",
+      "sha256": "6432eca3b649ea54ae795c66aa24aa99fb9880cc83527e51d1682a4b833ecaa6"
+    },
+    {
+      "path": "compositions/scenes/31-scene-31.html",
+      "sha256": "b0d6974e1ea6380c1422fda1e7a9dd83afa1f9845823b5b867ea880a4a59a263"
+    },
+    {
+      "path": "compositions/scenes/31-scene-31.motion.json",
+      "sha256": "0b5b4989e716f1cf4fecf4e323c4220190afaccb157803c76d0ea8490dd63fe2"
+    },
+    {
+      "path": "compositions/scenes/32-scene-32.html",
+      "sha256": "ea921c7db248c213670dec0a8d2361aad595947bbbf24a2460f7b63e069b30a1"
+    },
+    {
+      "path": "compositions/scenes/32-scene-32.motion.json",
+      "sha256": "39259504ea96f5dbc93aa46c286ddbc509cd23ce4e93ed5475e33a96ec3b9f0a"
+    },
+    {
+      "path": "compositions/scenes/33-scene-33.html",
+      "sha256": "f1c7fdbbf9cbc6a3c53caa4ee24564a63916f47404c33a8c6484e05111450e53"
+    },
+    {
+      "path": "compositions/scenes/33-scene-33.motion.json",
+      "sha256": "f82cefdf269fda8328c567f13569933210f712d07280379fffa1dbbda7a9b1db"
+    },
+    {
+      "path": "compositions/scenes/34-scene-34.html",
+      "sha256": "f102fc383c6dd9dda5e6ec73dafec595aec16e8c1ee9b9a6095e133b0b5d46c6"
+    },
+    {
+      "path": "compositions/scenes/34-scene-34.motion.json",
+      "sha256": "c1bcfd61bc6ec76404d29c83d85d9677fbe0edf49a228c300bbc71689fdaa9f4"
+    },
+    {
+      "path": "compositions/scenes/35-scene-35.html",
+      "sha256": "68410873584843ecd3eb141a0262647092714c51b2b04e343c1d3d95911811be"
+    },
+    {
+      "path": "compositions/scenes/35-scene-35.motion.json",
+      "sha256": "7f18cc89837e34dd4f972cd2b4b7d1f5582ff5f29f3f5985f511bc7b4d7443ca"
+    },
+    {
+      "path": "compositions/scenes/36-scene-36.html",
+      "sha256": "1f0a472079e32093b30a3c0df5055580fd9bffe5e04c7aaa8815edc0c4e20f92"
+    },
+    {
+      "path": "compositions/scenes/36-scene-36.motion.json",
+      "sha256": "65b570379df9e9bb3a65f83ddb9d919e8737f6e52a8f443e9c434d0861847952"
+    },
+    {
+      "path": "compositions/scenes/37-scene-37.html",
+      "sha256": "81f4123ddc1e4ade5a3188634b7f7e6d7199b22db1656275d5a17fbe36c7a31c"
+    },
+    {
+      "path": "compositions/scenes/37-scene-37.motion.json",
+      "sha256": "21587e4cd88a9e209047dce461e25e2b08e7b6f6e82ef5d1feaa407ef62517c2"
+    },
+    {
+      "path": "compositions/scenes/38-scene-38.html",
+      "sha256": "3b81342fb4b0b18f6eb5c3079c9263e69b5d00e0828e25b89ff474fc6afe5901"
+    },
+    {
+      "path": "compositions/scenes/38-scene-38.motion.json",
+      "sha256": "55bd58d5357918313f3e2cf9eb1a02db3a304a9b6bb1af8e9089b1f954aa6714"
+    },
+    {
+      "path": "compositions/scenes/39-scene-39.html",
+      "sha256": "306f54d6d75092b8f405841aed5272abdf430d3852c55782fe421414efdd88b2"
+    },
+    {
+      "path": "compositions/scenes/39-scene-39.motion.json",
+      "sha256": "1228e6c95532658b3e8aa51417707f9bda4c3a8b9d93604c68dca97e0cfdc4e6"
+    },
+    {
+      "path": "compositions/scenes/40-scene-40.html",
+      "sha256": "527359cd85ab495cace6aef156ececed6638c1bdd7a68c38f8cbb44abd27e41f"
+    },
+    {
+      "path": "compositions/scenes/40-scene-40.motion.json",
+      "sha256": "f1d3f4965aa7e35436705a75b7de26cabe065d0826c55e2d62ccd71b05119891"
+    },
+    {
+      "path": "compositions/scenes/41-scene-41.html",
+      "sha256": "abf1a81d29026b216210f464c592517a372b974675d4d9fdc221f8c48d26e2a1"
+    },
+    {
+      "path": "compositions/scenes/41-scene-41.motion.json",
+      "sha256": "ed4e2518899ed81c4bded8ca6e64ce0fd36d32dcd2bbf535e99febea939da917"
+    },
+    {
+      "path": "compositions/scenes/42-scene-42.html",
+      "sha256": "b764ecb8946b89ecb5efcaee78aae0c5ff8a20a8e28dfe8e4fbeddb661f56f1e"
+    },
+    {
+      "path": "compositions/scenes/42-scene-42.motion.json",
+      "sha256": "5818f2be9bc6081a05118a53e0ae2d3c7b608479a6d415a0dee08523a2d98253"
+    },
+    {
+      "path": "compositions/scenes/43-scene-43.html",
+      "sha256": "91ae9d8a331cbd90418a4f458a4d2954aabbe0fade081491794a7b62e7b20db4"
+    },
+    {
+      "path": "compositions/scenes/43-scene-43.motion.json",
+      "sha256": "a4d15fd9ec402aeb3fed1fb7c4527d8f90809474ece5cf8705aff6712f365deb"
+    },
+    {
+      "path": "compositions/scenes/44-scene-44.html",
+      "sha256": "6ebe5253c6b032832e34a79ba98e3cbf1d2501218adccf3b0be86fb8303464b4"
+    },
+    {
+      "path": "compositions/scenes/44-scene-44.motion.json",
+      "sha256": "96948ac2708f2014316c8d4b64560ece2939e5cdd2c19f28665e239cd322b0ba"
+    },
+    {
+      "path": "compositions/scenes/45-scene-45.html",
+      "sha256": "228cb9f29426098c0a56de39971064f29ef9a401063f19f38223c2b9460e60e9"
+    },
+    {
+      "path": "compositions/scenes/45-scene-45.motion.json",
+      "sha256": "64a48dd1a4434209ae12855c9f763260c7e6d6a6f24ceda5a1629b9ff6bf6d94"
+    },
+    {
+      "path": "compositions/scenes/46-scene-46.html",
+      "sha256": "a25a8b1564bc234fa165d8570955e072cb479a5a483aa6c8e52b348fa0d47e6f"
+    },
+    {
+      "path": "compositions/scenes/46-scene-46.motion.json",
+      "sha256": "0af1f232ed54fcc587e87cc6bb43047d8522945c5ff44901e7d4644f0415fec6"
+    },
+    {
+      "path": "compositions/scenes/47-scene-47.html",
+      "sha256": "378a2d9c64536b8798c952847d7363534f8bd34692f1922a1468f2f74c31b0ac"
+    },
+    {
+      "path": "compositions/scenes/47-scene-47.motion.json",
+      "sha256": "380d3a49ae57dbe150f3b0ec8842f317da1ffc67bbc279b3dc92dd3005a45c91"
+    },
+    {
+      "path": "compositions/scenes/48-scene-48.html",
+      "sha256": "634230f04b271556517d7216f7dde6ee3b015c07457f52a8aedb60d63286b3f1"
+    },
+    {
+      "path": "compositions/scenes/48-scene-48.motion.json",
+      "sha256": "37d66edc536bfed6c32f08cabedf43cc3a49d83fd5d553d8e26a6f43228a19c6"
+    },
+    {
+      "path": "compositions/scenes/49-scene-49.html",
+      "sha256": "8d239ce83685f306bda4493acafc030d6a8b206182d354cb87fc10e36c01b022"
+    },
+    {
+      "path": "compositions/scenes/49-scene-49.motion.json",
+      "sha256": "3e21715b86ed12f1a43c263d69d545a515ad193e59e4def19834bde2e8d27a97"
+    },
+    {
+      "path": "compositions/scenes/50-scene-50.html",
+      "sha256": "c85f0a8c3fecbf37f3e3c42a80ddf3df815e59cbf46490c8f35fb9b507e391dd"
+    },
+    {
+      "path": "compositions/scenes/50-scene-50.motion.json",
+      "sha256": "51682c9e9a73ac19c1355d907f910512a7036c3d12bb5e25d1fa3057ef18aeff"
+    },
+    {
+      "path": "compositions/scenes/51-scene-51.html",
+      "sha256": "da7ea92ac5351a2f41f0cc073ce19adcd8438e56d65bc79a68965b378a30f0bb"
+    },
+    {
+      "path": "compositions/scenes/51-scene-51.motion.json",
+      "sha256": "c1e4b98afe2db4c9f950f3285bbb19ffd59ba1b6133a2e6c05ed1551ac1acf85"
+    },
+    {
+      "path": "compositions/scenes/52-scene-52.html",
+      "sha256": "0f895bb5756e777fee748ca7c58ace7f661d6a6c059395d1c10fdf726cb39451"
+    },
+    {
+      "path": "compositions/scenes/52-scene-52.motion.json",
+      "sha256": "62aee1e7de09c8ce1b152a70fbecfa58051ad7641939f8aa81ffca8c8b8593a4"
+    },
+    {
+      "path": "compositions/scenes/53-scene-53.html",
+      "sha256": "21a3c46f7494d8759a1281fa3bdffa49ad0398694631b0a0475f8dd22cd71948"
+    },
+    {
+      "path": "compositions/scenes/53-scene-53.motion.json",
+      "sha256": "b832ea57cfd5b0bb923306ec48902176c40f24a4fab80ab29c23b08d069a8ff4"
+    },
+    {
+      "path": "compositions/scenes/54-scene-54.html",
+      "sha256": "a711ad2d4813768a33bbd1ed034b0b00810d581864b852b5224d858d0aca78a3"
+    },
+    {
+      "path": "compositions/scenes/54-scene-54.motion.json",
+      "sha256": "840e979a27fbff0d1bfb6affbae3e1cc184deb1d003cb1474706bfaf6991b56f"
+    },
+    {
+      "path": "compositions/scenes/55-scene-55.html",
+      "sha256": "8e144b566b72d51bf37a906a2d9fbe797db95171fc9dc7b6ce794760a9c817f9"
+    },
+    {
+      "path": "compositions/scenes/55-scene-55.motion.json",
+      "sha256": "871e105e791d50c9d7c1316137eb89223ad9dbab87e13819775b2e46b3f22e89"
+    },
+    {
+      "path": "compositions/scenes/56-scene-56.html",
+      "sha256": "b4dbe57252f6e654ad56f85ec77d0f44d5a24e338b3c6fb0c7e3d9a9f6fb2e00"
+    },
+    {
+      "path": "compositions/scenes/56-scene-56.motion.json",
+      "sha256": "b78b3fe7117245c2c2733a4ac3876b9bc0bc94fe7b1c0e641ee304aa6703ee19"
+    },
+    {
+      "path": "compositions/scenes/57-scene-57.html",
+      "sha256": "984b765beaa3359406044d8f8605a4d7b5f1aa9558bc962964c79e0a1aff5ac2"
+    },
+    {
+      "path": "compositions/scenes/57-scene-57.motion.json",
+      "sha256": "a59e7d71d8d20925a7ab675266c473692fc19d07f1e3def4b03eaad8a1c125f6"
+    },
+    {
+      "path": "compositions/scenes/58-scene-58.html",
+      "sha256": "d5fd1a8cd6eeb4b3d31ac12c542a24e9c9f319806093201c2f01d44ade59f228"
+    },
+    {
+      "path": "compositions/scenes/58-scene-58.motion.json",
+      "sha256": "9f9b33b742c32f2155ca623f93a7e6a82bcd8e12dfd92f5cf2e194b118360231"
+    },
+    {
+      "path": "compositions/scenes/59-scene-59.html",
+      "sha256": "56ce125e162a64f213980da2baa837693ac03023cedbbbb701b32bbb9a9404fc"
+    },
+    {
+      "path": "compositions/scenes/59-scene-59.motion.json",
+      "sha256": "5d15661cabfe472ff64a4479f30fe54c0eafeb6592d65a619073310708c85f5a"
+    },
+    {
+      "path": "compositions/scenes/60-scene-60.html",
+      "sha256": "bc7910196c1206b305dd26d64b5caf9dc648d6a0f500dca7103fff675572517a"
+    },
+    {
+      "path": "compositions/scenes/60-scene-60.motion.json",
+      "sha256": "0adac005c4af9e2a3c1e13da7d04ff24f7fcc954cc6a721aca455e897bf523b9"
+    },
+    {
+      "path": "compositions/scenes/61-scene-61.html",
+      "sha256": "7748be7e300f3a3a51e16b3953b5d0a1bb4b8966c9cbe72560711b386571a57e"
+    },
+    {
+      "path": "compositions/scenes/61-scene-61.motion.json",
+      "sha256": "447c7e9a33beab67b66a3242eeabbcafd8225129201d742d3e5100abc47939d0"
+    },
+    {
+      "path": "compositions/scenes/62-scene-62.html",
+      "sha256": "07e0d55c4c010317687918cd8ca0e94064c7141603e21c1ed2c05fccbc4f115f"
+    },
+    {
+      "path": "compositions/scenes/62-scene-62.motion.json",
+      "sha256": "66ffcab810c3c80db9e5e8b4030fe7df2fc89b44746100257b681f38f57bf846"
+    },
+    {
+      "path": "compositions/scenes/63-scene-63.html",
+      "sha256": "7e9438ef1c22ef7a18dca0228bd64d27bfa593565413dad4d7ed2393319c7d79"
+    },
+    {
+      "path": "compositions/scenes/63-scene-63.motion.json",
+      "sha256": "c686ab0c05dd474055612ba1704823f3c97dec8c89bcbf7bb668ad005c2e7d67"
+    },
+    {
+      "path": "compositions/scenes/64-scene-64.html",
+      "sha256": "d48a4b130e3ef4a77cc341746564b9e8b2a46e72bd453da2f93978ea1e0120a6"
+    },
+    {
+      "path": "compositions/scenes/64-scene-64.motion.json",
+      "sha256": "11c5e84382e85e493d75adda0f4dcf6b874c33dfee28de86a7c81a4f697af8cf"
+    },
+    {
+      "path": "compositions/scenes/65-scene-65.html",
+      "sha256": "db800a9b3a10bf7761df70c9df45c0e24b2bbe38e984ba104819f99fd4b33427"
+    },
+    {
+      "path": "compositions/scenes/65-scene-65.motion.json",
+      "sha256": "acf82c91730e5f32388f556b34b5d85e1c66d20e594e852f563b37bd565ba1f4"
+    },
+    {
+      "path": "compositions/scenes/66-scene-66.html",
+      "sha256": "b07e5134f5d05ba528f2d6863b73426bd5d4c7ea04960cf5af4c4e61d05be82a"
+    },
+    {
+      "path": "compositions/scenes/66-scene-66.motion.json",
+      "sha256": "2744a6107c9499b20429497e176c803a7c82df78a2bb8328d66c889c51e515ec"
+    },
+    {
+      "path": "compositions/scenes/67-scene-67.html",
+      "sha256": "70c3b2de02548b44f9c25d2edb657c5aeb1b1efeb185cd7b4967bb630b90a488"
+    },
+    {
+      "path": "compositions/scenes/67-scene-67.motion.json",
+      "sha256": "51231ba7ed21b960dd03006a5bf5806332d0335103de6b5401376b97f62cd2c2"
+    },
+    {
+      "path": "compositions/scenes/68-scene-68.html",
+      "sha256": "9329555ce29611d93950ee87ea431c34dee8117c91759dea2960a390ae21bdd3"
+    },
+    {
+      "path": "compositions/scenes/68-scene-68.motion.json",
+      "sha256": "cf872a9cc1b18abc688288115436218f393930fbf240180fa73843c8bc4c405d"
+    },
+    {
+      "path": "compositions/scenes/69-scene-69.html",
+      "sha256": "a4b228fca1aead03330467c09b53f5a63639b431751fcba797177d508a11d451"
+    },
+    {
+      "path": "compositions/scenes/69-scene-69.motion.json",
+      "sha256": "690fd22bee755748c5a3948191cb497c2116ac4516384cdb2866e9817e080115"
+    },
+    {
+      "path": "compositions/scenes/70-scene-70.html",
+      "sha256": "7ed5475845a99e2de855cdac39b61dccc9739494f6a7d5323710737473b408aa"
+    },
+    {
+      "path": "compositions/scenes/70-scene-70.motion.json",
+      "sha256": "ec21f5b278de1dde97fe82158ba45fee6cb1ba66089ec6f63ebe1bae9d416808"
+    },
+    {
+      "path": "compositions/scenes/71-scene-71.html",
+      "sha256": "daabf77118d2a98b8cd0aa012bebbb3ca61940b5b60886e313d65c1b14b8640d"
+    },
+    {
+      "path": "compositions/scenes/71-scene-71.motion.json",
+      "sha256": "10b543f7150f85a7fbe8e5f552294a361efdcb44553acdcd5798aa8fa3d8eff5"
+    }
+  ]
+}

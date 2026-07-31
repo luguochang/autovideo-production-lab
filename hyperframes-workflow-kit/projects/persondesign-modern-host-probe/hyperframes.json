@@ -1,0 +1,17 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "registry": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry",
+  "paths": {
+    "blocks": "compositions",
+    "components": "compositions/components",
+    "assets": "assets"
+  },
+  "composition": {
+    "id": "modern-ip-host-explainer-probe",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration": 8
+  },
+  "style": "modern-ip-host-explainer"
+}

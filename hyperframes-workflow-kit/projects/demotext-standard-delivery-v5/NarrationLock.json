@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "autovideo-narration-lock/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "sourcePath": "demo/demoText.txt",
+  "frozenPath": "input/narration.txt",
+  "sourceSha256": "ec1a51a269faf0344b2ba93abf21c4a75b8aac51d4a0996bd43ac2c66af33198",
+  "normalizedSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "normalization": "UTF-8 text; CRLF converted to LF; surrounding whitespace trimmed",
+  "createdAt": "2026-07-19T14:02:11.537Z",
+  "immutable": true
+}

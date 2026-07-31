@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-content-prompt-candidate/v1",
+  "caseId": "zh-ai-terms-001",
+  "stage": "claim-verifier",
+  "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+  "prompt": {
+    "id": "claim-verifier",
+    "path": "tools/content-pipeline/prompt-chain/prompts/06-claim-verifier.md",
+    "sha256": "c414bfc6ddbd55a10e45c62db9376cd3a22f03827888a1d4e4422b92c4ac2dbb"
+  },
+  "generator": {
+    "provider": "precomputed-fixture",
+    "model": "fixture-output",
+    "configSha256": "90a5cec52b9c61ed148258fed8843149391a4956b7c3ffe37072b46bd0b502c2"
+  },
+  "outputCanonicalization": "stable-json-v1",
+  "output": {
+    "schemaVersion": "autovideo-claim-source-review/v1",
+    "projectId": "zh-ai-terms-001",
+    "bindings": {
+      "sourcesSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "suitabilitySha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "evidenceSha256": "130b1ea0867424235e0cf1ab6282f89a848fa4c677ad4edc30e5247ac7527f62",
+      "spokenRewriteSha256": "c6eb91f7e219600f1a80a4541695c13bdd4dd82908b2d032034c4dc4b2f26a4a",
+      "durationFitSha256": "3e32591b413d2ec931e09bb3f92a03710da293a415d08b9cbe217c9b85f91fe4"
+    },
+    "status": "passed",
+    "checks": {
+      "registeredSources": true,
+      "knownClaims": true,
+      "sourceBindings": true,
+      "exactQuotes": true,
+      "sectionPolicies": true
+    },
+    "issues": [],
+    "reviewedAt": "2026-07-22T00:00:00.000Z",
+    "reviewerType": "machine-contract"
+  },
+  "outputSha256": "67c119c9ffe6c1de34bbb45ee71228a3f7a074cf1cb7763d9b54db10b9cb504c"
+}

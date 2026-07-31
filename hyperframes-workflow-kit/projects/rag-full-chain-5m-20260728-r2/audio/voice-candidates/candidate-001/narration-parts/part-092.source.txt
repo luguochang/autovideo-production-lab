@@ -1,0 +1,1 @@
+以 pgvector 为例，一般同时建 HNSW 向量索引和 PostgreSQL 全文索引，为在线多路检索铺路。

@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "strict": true,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 3
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 32.158,
+    "samples": [
+      1.787,
+      5.36,
+      8.933,
+      12.506,
+      16.079,
+      19.652,
+      23.225,
+      26.798,
+      30.371
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\production\\hyperframes\\index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.787,
+      8.933,
+      16.079,
+      23.225,
+      30.371
+    ],
+    "checked": 67,
+    "passed": 67
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.7.77",
+    "latestVersion": "0.7.77",
+    "updateAvailable": false
+  },
+  "autoVideo": {
+    "hyperframesVersion": "0.7.77",
+    "checkedAt": "2026-07-28T03:24:02.939Z",
+    "scope": "composition structure, runtime, layout, motion and contrast; final MP4 media QA runs after render",
+    "compositionDigest": "7c4e66955a428251566ef3470e7fcacddaa98c6434e358ff5031ecf95b13ea65",
+    "compositionFileCount": 30,
+    "buildReceiptSha256": "fe6c89557619f30d4c2c68c6f1f27836ae96d9d287019fe9b0373aa1a231c4bb",
+    "sourceAudioContract": {
+      "passed": true,
+      "hasDataDuration": true,
+      "hasDataEnd": false
+    },
+    "cliDiagnostics": []
+  }
+}

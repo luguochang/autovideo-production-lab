@@ -1,0 +1,91 @@
+{
+  "verifiedAt": "2026-07-16T03:55:41.488Z",
+  "outputDir": "E:\\project\\study\\codex\\autoVideo\\experiments\\E05-tts-probe\\output\\xiaoxiao-105",
+  "passed": true,
+  "assertions": [
+    {
+      "name": "source SHA-256 unchanged",
+      "passed": true,
+      "details": {
+        "expected": "ec1a51a269faf0344b2ba93abf21c4a75b8aac51d4a0996bd43ac2c66af33198",
+        "actual": "ec1a51a269faf0344b2ba93abf21c4a75b8aac51d4a0996bd43ac2c66af33198"
+      }
+    },
+    {
+      "name": "word count matches manifest",
+      "passed": true,
+      "details": {
+        "expected": 810,
+        "actual": 810
+      }
+    },
+    {
+      "name": "sentence count matches manifest",
+      "passed": true,
+      "details": {
+        "expected": 46,
+        "actual": 46
+      }
+    },
+    {
+      "name": "SRT cue count matches captions",
+      "passed": true,
+      "details": {
+        "expected": 126,
+        "actual": 126
+      }
+    },
+    {
+      "name": "SRT has no punctuation-only lines",
+      "passed": true
+    },
+    {
+      "name": "SRT lines are at most 13 characters",
+      "passed": true
+    },
+    {
+      "name": "word timeline is ordered and in range",
+      "passed": true
+    },
+    {
+      "name": "sentence timeline is ordered and in range",
+      "passed": true
+    },
+    {
+      "name": "caption timeline is ordered and in range",
+      "passed": true
+    },
+    {
+      "name": "sentence timeline has no overlaps",
+      "passed": true
+    },
+    {
+      "name": "caption timeline has no overlaps",
+      "passed": true
+    },
+    {
+      "name": "captions are at most 24 characters",
+      "passed": true
+    },
+    {
+      "name": "captions do not begin with punctuation",
+      "passed": true
+    },
+    {
+      "name": "service transcript matches source",
+      "passed": true
+    },
+    {
+      "name": "caption transcript matches source",
+      "passed": true
+    },
+    {
+      "name": "narration.webm decodes without FFmpeg errors",
+      "passed": true
+    },
+    {
+      "name": "narration.mp3 decodes without FFmpeg errors",
+      "passed": true
+    }
+  ]
+}

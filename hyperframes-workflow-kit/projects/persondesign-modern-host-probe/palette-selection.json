@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "autovideo-palette-selection/v1",
+  "projectId": "persondesign-modern-host-probe",
+  "styleId": "modern-ip-host-explainer",
+  "status": "approved",
+  "defaultPaletteId": "light-apricot",
+  "savedAlternatePaletteIds": ["warm-peach"],
+  "source": "style-library/styles/project/modern-ip-host-explainer/PALETTE_VARIANTS.json",
+  "approvedBy": "user",
+  "approvedAt": "2026-07-18T18:27:22.7358086+08:00",
+  "notes": "User selected 03 light-apricot for current use and requested 02 warm-peach be saved."
+}

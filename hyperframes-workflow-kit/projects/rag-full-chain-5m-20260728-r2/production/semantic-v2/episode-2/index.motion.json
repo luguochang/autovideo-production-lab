@@ -1,0 +1,14 @@
+{
+  "duration": 1099.715,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-lower-recap-header",
+      "bySec": 4.078
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-lower-recap .visual-world"
+    }
+  ]
+}

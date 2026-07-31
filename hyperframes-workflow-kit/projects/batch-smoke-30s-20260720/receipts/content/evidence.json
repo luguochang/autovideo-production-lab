@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "autovideo-evidence/v2",
+  "projectId": "batch-smoke-30s-20260720",
+  "sourceRegisterSha256": "b56525b35939eb05e6005342e22b41fcc331811fa50b50174f4a9096723d689e",
+  "suitabilitySha256": "8807ad06fd7bd60a0ce43dd42c31cae98d4d0611017e72fc6700d18a9d7c1b64",
+  "prompt": {
+    "id": "evidence-extractor",
+    "sha256": "afbc91550a50988e4db3759a4515ede6f86b580aa9d052c37130efe7776c5df1"
+  },
+  "generatedAt": "2026-07-22T08:08:37.623Z",
+  "claims": [
+    {
+      "id": "claim-script-001",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "第一，平台会把系统的复杂性藏起来。低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+      "citations": [
+        {
+          "id": "citation-script-001",
+          "sourceId": "source-001-61c17637",
+          "quote": "第一，平台会把系统的复杂性藏起来。低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 1,
+            "endLine": 1,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "72735600314fa4c37f943b5c12e54ae84c13c685e77b26da5cb00c420644cecf"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-002",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这样做的好处，是普通人可以很快上手。但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。",
+      "citations": [
+        {
+          "id": "citation-script-002",
+          "sourceId": "source-001-61c17637",
+          "quote": "这样做的好处，是普通人可以很快上手。但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 3,
+            "endLine": 3,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "beda326b2832fc672831cb601a583d5c636bf461f636708017bc84636c9db2b9"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-003",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？这才是系统真正复杂的地方。",
+      "citations": [
+        {
+          "id": "citation-script-003",
+          "sourceId": "source-001-61c17637",
+          "quote": "真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？这才是系统真正复杂的地方。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 5,
+            "endLine": 5,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "dade6c367c8a9dceac8cb098cf8beb062d76d46d7169c4fc7f09ffbedc8491fc"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    }
+  ],
+  "protectedAtoms": [],
+  "terms": [
+    {
+      "id": "term-001",
+      "token": "AI",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "AI"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-002",
+      "token": "API",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "API"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    }
+  ],
+  "gaps": [
+    {
+      "question": "Which script statements must be promoted from creator opinion to externally supported facts?",
+      "reason": "The approved-script route preserves user wording; publication as fact requires a separate external evidence package."
+    }
+  ]
+}

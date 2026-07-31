@@ -1,0 +1,1 @@
+已有 Elastic search 技术栈时，也可以复用它的全文和向量能力。常见索引算法包括 H N S W、I V F 和 Flat。

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "autovideo-content-prompt-candidate/v1",
+  "caseId": "zh-ai-terms-001",
+  "stage": "duration-fitter",
+  "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+  "prompt": {
+    "id": "duration-fitter",
+    "path": "tools/content-pipeline/prompt-chain/prompts/05-duration-fitter.md",
+    "sha256": "391f838187ea77f805440707904dbd1a47ad10cf0a865ac3afad9d269f9125a6"
+  },
+  "generator": {
+    "provider": "precomputed-fixture",
+    "model": "fixture-output",
+    "configSha256": "90a5cec52b9c61ed148258fed8843149391a4956b7c3ffe37072b46bd0b502c2"
+  },
+  "outputCanonicalization": "stable-json-v1",
+  "output": {
+    "schemaVersion": "autovideo-content-duration-fit/v1",
+    "projectId": "zh-ai-terms-001",
+    "spokenRewriteSha256": "c6eb91f7e219600f1a80a4541695c13bdd4dd82908b2d032034c4dc4b2f26a4a",
+    "ruleVersion": "zh-cn-text-budget-v1",
+    "status": "passed",
+    "modifiesWording": false,
+    "targetSeconds": 30,
+    "toleranceSeconds": 3,
+    "budgetSeconds": 30,
+    "narrationGraphemes": 119,
+    "graphemesPerSecond": 3.966666666666667,
+    "acceptedDensityBand": {
+      "min": 3.2,
+      "max": 8
+    },
+    "sections": [
+      {
+        "id": "section-01",
+        "targetSeconds": 14,
+        "graphemes": 56,
+        "graphemesPerSecond": 4,
+        "passed": true
+      },
+      {
+        "id": "section-02",
+        "targetSeconds": 16,
+        "graphemes": 63,
+        "graphemesPerSecond": 3.9375,
+        "passed": true
+      }
+    ],
+    "issues": [],
+    "assessedAt": "2026-07-22T00:00:00.000Z"
+  },
+  "outputSha256": "3e32591b413d2ec931e09bb3f92a03710da293a415d08b9cbe217c9b85f91fe4"
+}

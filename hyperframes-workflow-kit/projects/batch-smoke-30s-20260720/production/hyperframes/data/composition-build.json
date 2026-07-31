@@ -1,0 +1,361 @@
+{
+  "schemaVersion": "autovideo-hyperframes-build/v1",
+  "compilerVersion": "1.8.0",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-28T03:14:42.491Z",
+  "inputManifest": {
+    "path": "plan/production-manifest.json",
+    "sha256": "f2dfead138241d12b56f48cd10cccceca26e043c9a57bbdacca62f415ab551dc"
+  },
+  "outputDir": "production/hyperframes",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 31.808,
+    "duration": 31.808
+  },
+  "sceneCount": 2,
+  "cueCount": 6,
+  "appliedOverrideIds": [],
+  "publicReleaseBlocked": true,
+  "motionLifecycleAccess": {
+    "schemaVersion": "autovideo-motion-recipe-access/v1",
+    "projectId": "batch-smoke-30s-20260720",
+    "scope": "full-production",
+    "library": {
+      "path": "style-library/motion-library/knowledge-explainer-v1.json",
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed",
+      "schemaVersion": "autovideo-motion-recipe-library/v1",
+      "libraryId": "knowledge-explainer",
+      "version": "1.0.0",
+      "scope": "workspace"
+    },
+    "lifecycleLedger": {
+      "path": "style-library/motion-library/knowledge-explainer.lifecycle.json",
+      "sha256": "76146211541157efe896f95130c67cbf7c5616caff82712dbc36e9af58137b07",
+      "schemaVersion": "autovideo-motion-recipe-lifecycle/v1",
+      "scope": "workspace"
+    },
+    "authorized": true,
+    "releasePolicy": {
+      "motionApprovalIsPublicationApproval": false,
+      "publicReleaseBlocked": true,
+      "internalFallbackUsed": true
+    },
+    "access": [
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "comparison-split",
+        "version": "1.0.0",
+        "definitionSha256": "df97aa86525b2a4cce38521abc51d344461f51bdaa4bea56a5cee70e23683dee",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "diagram-build",
+        "version": "1.0.0",
+        "definitionSha256": "45001bc3e8194b942dc46195115bf085923bcd2312969667741d164a7090b92f",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      },
+      {
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "keyword-handoff",
+        "version": "1.0.0",
+        "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3",
+        "lifecycleState": "candidate",
+        "allowed": true,
+        "authorization": "internal-fallback",
+        "reason": "explicit-internal-only-fallback",
+        "approvalReceiptRefs": []
+      }
+    ],
+    "internalFallback": {
+      "used": true,
+      "request": {
+        "schemaVersion": "autovideo-motion-internal-fallback-request/v1",
+        "projectId": "batch-smoke-30s-20260720",
+        "scope": "internal-full-production",
+        "releaseScope": "internal-only",
+        "publicReleaseBlocked": true,
+        "requestedBy": "codex-creator-delegated-internal-review",
+        "requestedAt": "2026-07-22T19:30:45.1308905+08:00",
+        "reason": "Creator-delegated internal workflow simulation: generate the Candidate A composition for static visual review without claiming human sensory review, lifecycle promotion, rights clearance, or public release approval.",
+        "recipeIds": [
+          "comparison-split",
+          "diagram-build",
+          "keyword-handoff"
+        ]
+      },
+      "requestSha256": "36302202a803cc70b6ebdbd2763aaf53cae71928a0c261d6769a5d2fe9f5d01a"
+    },
+    "decisionSha256": "6e717be95c819c2fd85ecd5f72fc99f57f6db08e7191ccd90d5422b881de4257",
+    "plannedDecisionSha256": "6e717be95c819c2fd85ecd5f72fc99f57f6db08e7191ccd90d5422b881de4257"
+  },
+  "continuity": {
+    "mode": "one-screen-master-board",
+    "introPaddingSeconds": 0.35,
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "cameraScope": "content-world-only",
+    "normalizedSceneLayouts": 0,
+    "transition": "progressive-reveal-no-replacement",
+    "fixedHostPose": "question",
+    "normalizedHostPoses": 1,
+    "oneScreenStepCount": 6,
+    "screenTextPolicy": "derived-keywords; exact narration remains in captions",
+    "manualTextPolicy": "pipe-separated visual keywords; never changes NarrationLock or captions",
+    "visualVariants": [
+      "focus",
+      "signal",
+      "stack",
+      "route",
+      "contrast",
+      "close"
+    ],
+    "motionRecipeLibrary": "knowledge-explainer@1.0.0",
+    "recipeDrivenFields": [
+      "visualType",
+      "motionRecipeRefs",
+      "assetRefs",
+      "carrierPayload",
+      "sfxRefs",
+      "provenanceRefs"
+    ],
+    "primaryCarrierAdapters": [],
+    "primaryCarrierEvidence": [],
+    "graphLayout": {
+      "mode": "bound-editable-layout",
+      "path": "data/graph-layout.json",
+      "sha256": "ae485945020d2f588a5ff9a4a5a2822efeaf9fdaae0ce078359b0967e409fb5f",
+      "diagramCount": 2
+    },
+    "semanticSfxPolicy": {
+      "mode": "semantic-only",
+      "contractPath": "style-library/schema/semantic-sfx-plan.schema.json",
+      "examplePath": "style-library/examples/knowledge-explainer-sfx-plan.example.json",
+      "resolver": "media-use",
+      "manifestPath": ".media/manifest.jsonl",
+      "pathPrefix": ".media/audio/sfx/",
+      "allowRemoteAtRender": false,
+      "allowUnregisteredAssets": false,
+      "requireSha256": true,
+      "roles": [
+        "focus-hit",
+        "connector-draw",
+        "state-change",
+        "error",
+        "chapter-resolve"
+      ],
+      "maxPerMinute": 6,
+      "minGapSeconds": 2.4,
+      "duckingDb": -4
+    },
+    "iconSource": "lucide-react@0.468.0 (ISC)"
+  },
+  "creativeMedia": {
+    "ledger": ".media/manifest.jsonl",
+    "frozenAssets": [
+      {
+        "id": "sfx-whoosh-short",
+        "type": "sfx",
+        "path": "assets/audio/sfx/sfx-whoosh-short.mp3",
+        "sha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+        "source": "local-asset-library",
+        "sourceSha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+        "licenseReceipt": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md",
+        "provenance": {
+          "provider": "hyperframes-media-use-bundled",
+          "libraryId": "autovideo-local-assets",
+          "libraryVersion": "1.2.0",
+          "sourcePath": "vendor/hyperframes/skills/media-use/audio/assets/sfx/whoosh-short.mp3",
+          "sourceSha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+        }
+      },
+      {
+        "id": "sfx-click-soft",
+        "type": "sfx",
+        "path": "assets/audio/sfx/sfx-click-soft.mp3",
+        "sha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+        "source": "local-asset-library",
+        "sourceSha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+        "licenseReceipt": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md",
+        "provenance": {
+          "provider": "hyperframes-media-use-bundled",
+          "libraryId": "autovideo-local-assets",
+          "libraryVersion": "1.2.0",
+          "sourcePath": "vendor/hyperframes/skills/media-use/audio/assets/sfx/click-soft.mp3",
+          "sourceSha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+        }
+      }
+    ]
+  },
+  "semanticSfx": {
+    "plan": {
+      "path": "data/semantic-sfx-plan.json",
+      "sha256": "de50bbaa78f034b6ad2375a0e3b303cea8a4caaa1a1d264de1f52082411df63a",
+      "status": "approved"
+    },
+    "approval": {
+      "path": "data/semantic-sfx-review.json",
+      "sha256": "d6ea35a9688873190d2b78c160e16ea7b7b5000994156711a3526b969830fc20",
+      "approvedBy": "codex-creator-delegated",
+      "approvedAt": "2026-07-23T00:06:45.106Z",
+      "approvalScope": "internal-autonomous-review",
+      "humanReviewPerformed": false,
+      "publicReleaseBlocked": true
+    },
+    "diagnostics": {
+      "path": "data/semantic-sfx-compile.json",
+      "sha256": "0e636f93f0e9bed90c9a522c71e2e7710062fb799489331333d534012583dffc"
+    },
+    "committed": true,
+    "appliedCueCount": 2,
+    "policy": "approved-plan-only-silence-default"
+  },
+  "hostAssetManifest": {
+    "path": "production-assets/host-assets.manifest.json",
+    "sha256": "f8994903ff77c602a27271422de7804b29fb169c37e4d77f79a6c385261f84a2"
+  },
+  "outputs": [
+    {
+      "path": "hyperframes.json",
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "package.json",
+      "sha256": "395662dac07feb25ccadfa49f50693420dc812e15b7cc35dbb3ab05d03d3641d"
+    },
+    {
+      "path": "meta.json",
+      "sha256": "8dd125f7b510507c0cd88f863db29c598b28791bf183c6ae36a3fb0be42e0c06"
+    },
+    {
+      "path": "BRIEF.md",
+      "sha256": "79cb8ef6b87805a4618708064db1a8cb0f0165c97d2f79efed0b8e6fc917a544"
+    },
+    {
+      "path": "frame.md",
+      "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25"
+    },
+    {
+      "path": "index.html",
+      "sha256": "326058cc2cf5f57c9b2d362258f1ab7def8fee5233d2783e0649bc15b0c5f948"
+    },
+    {
+      "path": "index.motion.json",
+      "sha256": "754cd1539d0b3062876f300accce4a89f6060c2df670c15b0af4bd70c36d4b95"
+    },
+    {
+      "path": "assets/audio/narration.final.wav",
+      "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "assets/runtime/JetBrainsMono-400.woff2",
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    },
+    {
+      "path": "assets/runtime/JetBrainsMono-700.woff2",
+      "sha256": "d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8"
+    },
+    {
+      "path": "assets/host/question.png",
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/audio/sfx/sfx-click-soft.mp3",
+      "sha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    {
+      "path": "assets/audio/sfx/sfx-whoosh-short.mp3",
+      "sha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "sha256": "f2dfead138241d12b56f48cd10cccceca26e043c9a57bbdacca62f415ab551dc"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "sha256": "fdb40806066bece7a91a849a76dea7c4be62fcd0300c6fd5e5ee964650931855"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "sha256": "af8b270a58b4f339fab4fac0993ec32e50a237416fc957cb92e68f77c43d6f82"
+    },
+    {
+      "path": "data/alignment.json",
+      "sha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e"
+    },
+    {
+      "path": "data/overrides.json",
+      "sha256": "854edcd93f60c3cf996687dda925a6fae5694447a9673078cf64c16765dfdce4"
+    },
+    {
+      "path": "data/motion-recipe-library.json",
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+    },
+    {
+      "path": "data/motion-recipe-lifecycle.json",
+      "sha256": "76146211541157efe896f95130c67cbf7c5616caff82712dbc36e9af58137b07"
+    },
+    {
+      "path": "data/graph-layout.json",
+      "sha256": "ae485945020d2f588a5ff9a4a5a2822efeaf9fdaae0ce078359b0967e409fb5f"
+    },
+    {
+      "path": "data/media-manifest.jsonl",
+      "sha256": "8114eb368ec692cde2e80b273bbd6d61253b9d7a8283d12470a54f062cd4d6da"
+    },
+    {
+      "path": "data/semantic-sfx-plan.json",
+      "sha256": "de50bbaa78f034b6ad2375a0e3b303cea8a4caaa1a1d264de1f52082411df63a"
+    },
+    {
+      "path": "data/semantic-sfx-review.json",
+      "sha256": "d6ea35a9688873190d2b78c160e16ea7b7b5000994156711a3526b969830fc20"
+    },
+    {
+      "path": "data/semantic-sfx-compile.json",
+      "sha256": "0e636f93f0e9bed90c9a522c71e2e7710062fb799489331333d534012583dffc"
+    },
+    {
+      "path": "data/source-map.json",
+      "sha256": "1292786f24bc758f1b1994fc7e812fc8e5213f2465752988322dce107412ceb4"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.html",
+      "sha256": "7e315313ab294090be43ee1771f2c020222f14b6573f7536272bc6adf742f92f"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.motion.json",
+      "sha256": "4023a61da663ac94a5398f36c71d881f70d01c7eb2e797198dd1de6d9cf82852"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.html",
+      "sha256": "eaf0d6125d80cf440deaed885e07543e1ae9f3e322109d2985f3fa80a2061c1a"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.motion.json",
+      "sha256": "9b9dbfd984a68afb9a41312c09838949abdc3bf9f0020ec425c864e6c13c52c4"
+    }
+  ]
+}

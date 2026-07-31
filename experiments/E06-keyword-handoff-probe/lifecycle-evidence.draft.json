@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "keyword-handoff",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E06-keyword-handoff-probe",
+    "path": "experiments/E06-keyword-handoff-probe",
+    "durationSeconds": 8,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E06-keyword-handoff-probe/INVARIANT_AUDIT.json",
+        "sha256": "4c381a4ab8a74fef0facc5d5371d33d89d247d194c3d327b0af97b0e3625a731"
+      },
+      "passed": true,
+      "checks": {
+        "landscape16x9": true,
+        "lightApricotBackground": true,
+        "qVersionHostAssets": true,
+        "hostLeft": true,
+        "contentRight": true,
+        "captionPersistent": true,
+        "contentWorldOnlyCamera": true
+      }
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E06-keyword-handoff-probe/AssetManifest.json",
+      "sha256": "bf5550f0952d4aa5fb1dafdfa57a1c89c61f0c2e74a9042576a851c207abadef"
+    },
+    "stills": [
+      {
+        "path": "experiments/E06-keyword-handoff-probe/snapshots/frame-03-at-3.7s.png",
+        "sha256": "bceaed3e69620ca87c4d6cea8bcaf7cbd679cd27705b8567462a02a881b9b93d"
+      },
+      {
+        "path": "experiments/E06-keyword-handoff-probe/snapshots/contact-sheet.jpg",
+        "sha256": "53ebc7954916dbd7e1d60d58232185835724257aaf0d620cf8a90aa8105b3c20"
+      }
+    ],
+    "motionProbe": {
+      "path": "experiments/E06-keyword-handoff-probe/renders/keyword-handoff-probe.mp4",
+      "sha256": "0a641b68e0d8dece67b1b20acb53f9e68c285693e5bfba0bef3e3a92dc59491f"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E06-keyword-handoff-probe/check.capture.log",
+        "sha256": "a67d430fd0e00818d40bade4799bc5b5a885f01889047afd63d70bd3903f2ff6"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": true,
+      "findingCount": 0,
+      "version": "0.7.64"
+    },
+    "visualReview": null,
+    "officialReuseObserved": [
+      {
+        "kind": "official-registry",
+        "id": "caption-weight-shift",
+        "implementation": {
+          "path": "experiments/E06-keyword-handoff-probe/compositions/components/caption-weight-shift.html",
+          "sha256": "8a5294debec3eadeb7ca0a8688c31a6e8c517ebb1c55ff410aa81df3807daa55"
+        }
+      }
+    ]
+  }
+}

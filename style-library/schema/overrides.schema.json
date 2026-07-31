@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/overrides.json",
+  "title": "AutoVideo Replayable Overrides",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "canonicalTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level"],
+      "properties": {
+        "level": {"enum": ["scene", "cue", "object"]},
+        "sceneId": {"type": "string", "minLength": 1},
+        "cueId": {"type": "string", "minLength": 1},
+        "objectId": {"type": "string", "minLength": 1},
+        "sourcePath": {"type": "string"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"level": {"const": "scene"}}},
+          "then": {
+            "required": ["sceneId"],
+            "properties": {"sceneId": {}},
+            "not": {
+              "anyOf": [
+                {"required": ["cueId"], "properties": {"cueId": {}}},
+                {"required": ["objectId"], "properties": {"objectId": {}}}
+              ]
+            }
+          }
+        },
+        {
+          "if": {"properties": {"level": {"const": "cue"}}},
+          "then": {
+            "required": ["sceneId", "cueId"],
+            "properties": {"sceneId": {}, "cueId": {}},
+            "not": {"required": ["objectId"], "properties": {"objectId": {}}}
+          }
+        },
+        {
+          "if": {"properties": {"level": {"const": "object"}}},
+          "then": {
+            "required": ["sceneId", "objectId"],
+            "properties": {"sceneId": {}, "objectId": {}}
+          }
+        }
+      ]
+    },
+    "legacyTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "deprecated": true,
+      "description": "Compatibility shape. New writers must emit the level-based target locator.",
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": {"enum": ["scene", "cue", "object", "shot", "graph", "node", "edge", "caption", "asset", "composition-element"]},
+        "id": {"type": "string", "minLength": 1},
+        "sourcePath": {"type": "string"}
+      }
+    },
+    "valueLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": {"type": "string"}
+      }
+    },
+    "arrayLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": {"type": "array"}
+      }
+    },
+    "objectLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": {"oneOf": [{"type": "object"}, {"type": "null"}]}
+      }
+    },
+    "locks": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "text": {"$ref": "#/$defs/valueLock"},
+        "hostPose": {"$ref": "#/$defs/valueLock"},
+        "visualVariant": {
+          "allOf": [
+            {"$ref": "#/$defs/valueLock"},
+            {"type": "object", "properties": {"value": {"enum": ["focus", "signal", "stack", "route", "contrast", "close"]}}}
+          ]
+        },
+        "visualType": {
+          "allOf": [
+            {"$ref": "#/$defs/valueLock"},
+            {"type": "object", "properties": {"value": {"enum": ["keyword", "evidence-image", "device-surface", "diagram", "data-proof", "comparison", "code-surface", "object-metaphor"]}}}
+          ]
+        },
+        "motionRecipeRefs": {
+          "allOf": [
+            {"$ref": "#/$defs/arrayLock"},
+            {"type": "object", "properties": {"value": {"minItems": 1, "items": {"type": "object", "required": ["recipeId", "version"]}}}}
+          ]
+        },
+        "assetRefs": {"$ref": "#/$defs/arrayLock"},
+        "carrierPayload": {"$ref": "#/$defs/objectLock"},
+        "sfxRefs": {"$ref": "#/$defs/arrayLock"},
+        "provenanceRefs": {
+          "allOf": [
+            {"$ref": "#/$defs/arrayLock"},
+            {"type": "object", "properties": {"value": {"minItems": 1, "items": {"type": "string", "minLength": 1}}}}
+          ]
+        },
+        "layout": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value"],
+          "properties": {
+            "value": {"type": "object", "minProperties": 1}
+          }
+        },
+        "timing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value"],
+          "properties": {
+            "value": {
+              "type": "object",
+              "additionalProperties": false,
+              "minProperties": 1,
+              "properties": {
+                "start": {"type": "number", "minimum": 0},
+                "end": {"type": "number", "minimum": 0},
+                "duration": {"type": "number", "exclusiveMinimum": 0}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["schemaVersion", "projectId", "revision", "createdAt", "createdBy", "approvalStatus", "base", "policy", "overrides"],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-overrides/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 0},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "createdBy": {"type": "string", "minLength": 1},
+    "updatedAt": {"type": "string", "format": "date-time"},
+    "updatedBy": {"type": "string", "minLength": 1},
+    "approvalStatus": {"enum": ["not-applicable-empty", "pending-human-review", "approved", "manual-overrides-active", "manual-overrides-reverted"]},
+    "base": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["emptyMeans", "stableTargetIdsRequired", "invalidationReceiptRequired", "directProductionEditsAllowed"],
+      "properties": {
+        "emptyMeans": {"const": "No manual overrides have been recorded."},
+        "stableTargetIdsRequired": {"const": true},
+        "invalidationReceiptRequired": {"const": true},
+        "directProductionEditsAllowed": {"const": false}
+      }
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "revision", "status", "target", "operation", "reason", "authoredBy", "authoredAt"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "revision": {"type": "integer", "minimum": 1},
+          "status": {"enum": ["active", "superseded", "reverted"]},
+          "target": {
+            "oneOf": [
+              {"$ref": "#/$defs/canonicalTarget"},
+              {"$ref": "#/$defs/legacyTarget"}
+            ]
+          },
+          "operation": {"enum": ["set", "replace", "add", "remove", "move", "retime"]},
+          "patch": {"type": "object", "minProperties": 1},
+          "locks": {"$ref": "#/$defs/locks"},
+          "sourceValue": {"type": "object"},
+          "reason": {"type": "string", "minLength": 1},
+          "authoredBy": {"type": "string", "minLength": 1},
+          "authoredAt": {"type": "string", "format": "date-time"},
+          "groupId": {"type": "string", "minLength": 1},
+          "carriedFrom": {"type": "string", "minLength": 1},
+          "supersededAt": {"type": "string", "format": "date-time"},
+          "supersededBy": {"type": "string", "minLength": 1},
+          "revertedAt": {"type": "string", "format": "date-time"},
+          "revertedBy": {"type": "string", "minLength": 1},
+          "revertReason": {"type": "string", "minLength": 1},
+          "invalidateTargets": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "invalidates": {
+            "type": "array",
+            "deprecated": true,
+            "description": "Compatibility alias. New writers must emit invalidateTargets.",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "supersedes": {"type": ["string", "null"]}
+        },
+        "allOf": [
+          {
+            "anyOf": [
+              {"required": ["patch"], "properties": {"patch": {}}},
+              {"required": ["locks"], "properties": {"locks": {}}}
+            ]
+          },
+          {
+            "oneOf": [
+              {
+                "required": ["invalidateTargets"],
+                "properties": {"invalidateTargets": {}},
+                "not": {"required": ["invalidates"], "properties": {"invalidates": {}}}
+              },
+              {
+                "required": ["invalidates"],
+                "properties": {"invalidates": {}},
+                "not": {"required": ["invalidateTargets"], "properties": {"invalidateTargets": {}}}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"overrides": {"type": "array", "maxItems": 0}}},
+      "then": {"properties": {"approvalStatus": {"const": "not-applicable-empty"}, "revision": {"const": 0}}}
+    },
+    {
+      "if": {"properties": {"approvalStatus": {"const": "approved"}}},
+      "then": {"properties": {"overrides": {"type": "array", "minItems": 1}}}
+    }
+  ]
+}

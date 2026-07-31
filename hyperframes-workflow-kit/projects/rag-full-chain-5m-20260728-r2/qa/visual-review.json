@@ -1,0 +1,386 @@
+{
+  "schemaVersion": "autovideo-visual-review/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "status": "passed-internal-sample-review",
+  "reviewedBy": "codex-autonomous-internal-review",
+  "reviewScope": "HyperFrames strict check plus one midpoint frame for every one of 71 scenes and Studio timeline load verification.",
+  "checkedAt": "2026-07-29T07:45:12.253Z",
+  "compositionDigest": "dd7423319c215b63f34922063304d1eee9830dc786173bc4931778896fa8dffd",
+  "checks": {
+    "hostContentCaptionCollision": "passed",
+    "textOverflow": "passed",
+    "chineseReadability": "passed-at-sampled-frames",
+    "exactSourceVersusGeneratedSummaryLabels": "passed",
+    "unverifiedNumericClaimsNotCharted": "passed",
+    "terminalFrameReadability": "passed-at-sampled-frames",
+    "studioTimelineLoaded": {
+      "status": "passed",
+      "scenes": 71,
+      "captions": 237,
+      "durationSeconds": 1880.218
+    }
+  },
+  "frames": [
+    {
+      "path": "qa/composition-snapshots/01-scene-01-midpoint.png",
+      "sha256": "2e03baa87b1e923ccf28b93de4f21b31d9dbfaa12835c9a01e363fca98ba5c86",
+      "size": 611224
+    },
+    {
+      "path": "qa/composition-snapshots/02-scene-02-midpoint.png",
+      "sha256": "cfcb71af1caf02479879c826dc6736f5787d5f8e7c47a406410ab22e6bbce3d2",
+      "size": 532607
+    },
+    {
+      "path": "qa/composition-snapshots/03-scene-03-midpoint.png",
+      "sha256": "751bba76b584e41bbb417c5582c61cd49a7bc204518705280573f312ca459080",
+      "size": 552186
+    },
+    {
+      "path": "qa/composition-snapshots/04-scene-04-midpoint.png",
+      "sha256": "dcd2b20da2cad8a153ed0d482547dab08c94ebd66dc5b7db2eba572488f53507",
+      "size": 596836
+    },
+    {
+      "path": "qa/composition-snapshots/05-scene-05-midpoint.png",
+      "sha256": "ec1a6330ef56e6ff4260c64869a5a8b629fbc6adff4a808a97467f83485a383b",
+      "size": 609743
+    },
+    {
+      "path": "qa/composition-snapshots/06-scene-06-midpoint.png",
+      "sha256": "4d1eedb8ac0af3effd6e8433a9fafebc352c416c007af5fe2490510617b84bad",
+      "size": 575366
+    },
+    {
+      "path": "qa/composition-snapshots/07-scene-07-midpoint.png",
+      "sha256": "8b366190aefe03da208fa4b4591b497fc263c857d0ffc81658138bdbce4f1946",
+      "size": 538868
+    },
+    {
+      "path": "qa/composition-snapshots/08-scene-08-midpoint.png",
+      "sha256": "7007d858f71164fe0d73b6f38f127dcdd45cf5ad6bfc6ca02fdee5abc1fc6d7c",
+      "size": 588619
+    },
+    {
+      "path": "qa/composition-snapshots/09-scene-09-midpoint.png",
+      "sha256": "1f7464341e859205cbf8983b9d3bc2de8704a4587f41dcdb14569396504c5cb2",
+      "size": 527581
+    },
+    {
+      "path": "qa/composition-snapshots/10-scene-10-midpoint.png",
+      "sha256": "f2f124c414db88cd0abe6f2fdc48c5eb0ae8dc36c9247762aacd6a55c4d05390",
+      "size": 579687
+    },
+    {
+      "path": "qa/composition-snapshots/11-scene-11-midpoint.png",
+      "sha256": "435caab6aea4ee1bf1526efccd22babad604b192c40659d856638e8ad42ab943",
+      "size": 552631
+    },
+    {
+      "path": "qa/composition-snapshots/12-scene-12-midpoint.png",
+      "sha256": "5bf11f8b373ae87e00af2d20f2c39b0d61a190eed0c259c6b3367301bc29075c",
+      "size": 619194
+    },
+    {
+      "path": "qa/composition-snapshots/13-scene-13-midpoint.png",
+      "sha256": "f43eed75e312c761674acfae7657a34f26e085c9e5f20b8614ebdcf1a18e700f",
+      "size": 538911
+    },
+    {
+      "path": "qa/composition-snapshots/14-scene-14-midpoint.png",
+      "sha256": "4991cc5278fda997fda12230b0f9f6b13de51fc7709f15eb25139a2660b59cbf",
+      "size": 628240
+    },
+    {
+      "path": "qa/composition-snapshots/15-scene-15-midpoint.png",
+      "sha256": "a180cc325ba078d93c2a2e91e25fe9b824a5ed2e557d913c68685d7d00619c14",
+      "size": 477839
+    },
+    {
+      "path": "qa/composition-snapshots/16-scene-16-midpoint.png",
+      "sha256": "10703c22e92e2748843f2246020089d808fae1fbe8dbb17d00ed6ba2ae7f5cbb",
+      "size": 569157
+    },
+    {
+      "path": "qa/composition-snapshots/17-scene-17-midpoint.png",
+      "sha256": "2ac1811d0aff688d7a7bbd9517f7adefa2d60197540539250a78e0326f49d8ae",
+      "size": 497280
+    },
+    {
+      "path": "qa/composition-snapshots/18-scene-18-midpoint.png",
+      "sha256": "3774530cdc57b3ab1c09b79643e6efbd131c2f21b5844ad81283dbd0cc9607d7",
+      "size": 652337
+    },
+    {
+      "path": "qa/composition-snapshots/19-scene-19-midpoint.png",
+      "sha256": "8c432c574902e8712ea487749deee5f7d00ef146a7330e304923ab9b9a903de9",
+      "size": 580817
+    },
+    {
+      "path": "qa/composition-snapshots/20-scene-20-midpoint.png",
+      "sha256": "663536f11986ef63a7eff6c6494dcc74c405f73ec15817f4375e6de6847d5482",
+      "size": 521582
+    },
+    {
+      "path": "qa/composition-snapshots/21-scene-21-midpoint.png",
+      "sha256": "29ab4f6720703aacba03b6d5891388c36efa870e10ea45c1269cfd9d66eda008",
+      "size": 568111
+    },
+    {
+      "path": "qa/composition-snapshots/22-scene-22-midpoint.png",
+      "sha256": "f7fb6939936985188a0de24445e84cb5163d41328d98aad9ed76be6141cca255",
+      "size": 544753
+    },
+    {
+      "path": "qa/composition-snapshots/23-scene-23-midpoint.png",
+      "sha256": "d5b19a9bacbdaf8f13e6485c91adf8e5d9b091d8d36291628d355a95253328d2",
+      "size": 495246
+    },
+    {
+      "path": "qa/composition-snapshots/24-scene-24-midpoint.png",
+      "sha256": "cfec1de728c42cdbd44a49d5f7c9aeac0c5230dfc0bffd3542e24c4ed11da79a",
+      "size": 624324
+    },
+    {
+      "path": "qa/composition-snapshots/25-scene-25-midpoint.png",
+      "sha256": "a1bb23e0248196753b2b5b9328fd7c86d552f4595b95709cfd8e608d96f2ffe0",
+      "size": 580326
+    },
+    {
+      "path": "qa/composition-snapshots/26-scene-26-midpoint.png",
+      "sha256": "eec53fd1076bbfbe9f858bb4062790db90bb6341ea3c56b4cc0e2c569306d8a6",
+      "size": 526129
+    },
+    {
+      "path": "qa/composition-snapshots/27-scene-27-midpoint.png",
+      "sha256": "ba729395eb38cf6159bad7df166db5052891f1fc2132497a80e5f994828fcf32",
+      "size": 481771
+    },
+    {
+      "path": "qa/composition-snapshots/28-scene-28-midpoint.png",
+      "sha256": "d96ffddde9e9774d79e3444fe8456d9a42873c7e183d74f1a0340c03e76cf5cf",
+      "size": 510680
+    },
+    {
+      "path": "qa/composition-snapshots/29-scene-29-midpoint.png",
+      "sha256": "9dee1db31b8569253573e3f6a0de2365482a078db62bdfc38200509122a6ce85",
+      "size": 554582
+    },
+    {
+      "path": "qa/composition-snapshots/30-scene-30-midpoint.png",
+      "sha256": "3bb24637b4e3e24460511ab1780cabbc8b47742e5febce603f9b48f3ab76d849",
+      "size": 566860
+    },
+    {
+      "path": "qa/composition-snapshots/31-scene-31-midpoint.png",
+      "sha256": "fc4c3649c283d7cb09dac2c89d00f9bfa63d36fafd584672901d72bc01ac8fdd",
+      "size": 584314
+    },
+    {
+      "path": "qa/composition-snapshots/32-scene-32-midpoint.png",
+      "sha256": "492b4789a45b56436be09104098bc93ee80b174223710248b4a67b7e05d6b1e2",
+      "size": 579570
+    },
+    {
+      "path": "qa/composition-snapshots/33-scene-33-midpoint.png",
+      "sha256": "8303bc1c2e6f4abf693a8de4fe85dc95b599f6345a50404140553b3ff06737ff",
+      "size": 525841
+    },
+    {
+      "path": "qa/composition-snapshots/34-scene-34-midpoint.png",
+      "sha256": "5015e8842ff2fab77bcf9d649b8205033f8590e4d3fde2b67dedda50dcbbc497",
+      "size": 512437
+    },
+    {
+      "path": "qa/composition-snapshots/35-scene-35-midpoint.png",
+      "sha256": "c3d6f5f389af3c242f85ca2796c883be5d84bdd0a2e57a879d4347179cb6a8b9",
+      "size": 554429
+    },
+    {
+      "path": "qa/composition-snapshots/36-scene-36-midpoint.png",
+      "sha256": "8d60fe6c715fd86ffa2226c47c17d89df10487ebfb33864be1f8316cfed0e672",
+      "size": 517652
+    },
+    {
+      "path": "qa/composition-snapshots/37-scene-37-midpoint.png",
+      "sha256": "5b17f7af334240ae8215062cd83a12b72d074fc88872b854819ac4ada7a2aecd",
+      "size": 574773
+    },
+    {
+      "path": "qa/composition-snapshots/38-scene-38-midpoint.png",
+      "sha256": "546bbc5914857c05d94eddce8bcd4d88c5af1235e9af3169e787df98bef8d8c4",
+      "size": 461838
+    },
+    {
+      "path": "qa/composition-snapshots/39-scene-39-midpoint.png",
+      "sha256": "0c34e41178d8154a87e07c5f36d8197d84866fd6022daae0b704629f17d93471",
+      "size": 531314
+    },
+    {
+      "path": "qa/composition-snapshots/40-scene-40-midpoint.png",
+      "sha256": "6dc546314ffd6eb876879df605b65020e79f37183e9c5660e24b786d8bf06160",
+      "size": 523763
+    },
+    {
+      "path": "qa/composition-snapshots/41-scene-41-midpoint.png",
+      "sha256": "88a4c0cda2891f5db6cc807a00a98058ddc0623350f6a93ad98e266a768a71f2",
+      "size": 513781
+    },
+    {
+      "path": "qa/composition-snapshots/42-scene-42-midpoint.png",
+      "sha256": "4e8881fb1108a574374412784fc777ff2fcbcbe374e891b0322820ceea373d00",
+      "size": 551468
+    },
+    {
+      "path": "qa/composition-snapshots/43-scene-43-midpoint.png",
+      "sha256": "4175a01459ba015ce8eef185381678e0270fb65e956135465b01c43dee91ac2f",
+      "size": 519089
+    },
+    {
+      "path": "qa/composition-snapshots/44-scene-44-midpoint.png",
+      "sha256": "7b9c049a27a5f46c0cbbd164471876b0e788f1ee600b30273ff6ddc45044a517",
+      "size": 567001
+    },
+    {
+      "path": "qa/composition-snapshots/45-scene-45-midpoint.png",
+      "sha256": "91a7a4950d1b97ddf84cd271436ab0d75c3afb90d12f98d6db6c416e311346a2",
+      "size": 568324
+    },
+    {
+      "path": "qa/composition-snapshots/46-scene-46-midpoint.png",
+      "sha256": "587d386ccd81020778896156a728b697a3f552b0d564d1de075e27c16a8559cb",
+      "size": 608377
+    },
+    {
+      "path": "qa/composition-snapshots/47-scene-47-midpoint.png",
+      "sha256": "ebc3540eb7980aae3a70e58080a3045ede70e6f4b47a7f68465462c462ab2ff1",
+      "size": 627095
+    },
+    {
+      "path": "qa/composition-snapshots/48-scene-48-midpoint.png",
+      "sha256": "6a1298bd9957f4412799c8c0710a4b2dc29beff9faabe93b10bf1a470ebaaadd",
+      "size": 567272
+    },
+    {
+      "path": "qa/composition-snapshots/49-scene-49-midpoint.png",
+      "sha256": "1d6d0699f23560ecd6ce08e92af2baa9b95615055a93c40fa7591fb14c8a9835",
+      "size": 600478
+    },
+    {
+      "path": "qa/composition-snapshots/50-scene-50-midpoint.png",
+      "sha256": "c6b6ced68782c5ae87ffa7d6f2cb336411852881c7a12f5f6adcab7620536b7d",
+      "size": 535031
+    },
+    {
+      "path": "qa/composition-snapshots/51-scene-51-midpoint.png",
+      "sha256": "1de4b6d913fa9c16dc3f1ce68c45fc4c5869591c842f31ef77d57e6079094bd3",
+      "size": 602604
+    },
+    {
+      "path": "qa/composition-snapshots/52-scene-52-midpoint.png",
+      "sha256": "dbe739b099c22ef088a4882cc30b9aaaf34c0b6600eb883a52b489b78814efbe",
+      "size": 552582
+    },
+    {
+      "path": "qa/composition-snapshots/53-scene-53-midpoint.png",
+      "sha256": "2f60ebae979887b6a6305de4746264beebc3ac5f0aee536efb617f0f66b2f270",
+      "size": 549958
+    },
+    {
+      "path": "qa/composition-snapshots/54-scene-54-midpoint.png",
+      "sha256": "0b639ba441a93b3733b45f76b4b3859dbc4f756a152cbc6a591b3d317d5d6fcf",
+      "size": 636568
+    },
+    {
+      "path": "qa/composition-snapshots/55-scene-55-midpoint.png",
+      "sha256": "48e693898a61b3e442e99ae24acec970919ba186c4a22e74f6cd09cbd420a4ae",
+      "size": 502554
+    },
+    {
+      "path": "qa/composition-snapshots/56-scene-56-midpoint.png",
+      "sha256": "7881a6eafea22741ec73448ea127dfd8ef49edc80a2960fcd3b5f57b2fa237de",
+      "size": 587286
+    },
+    {
+      "path": "qa/composition-snapshots/57-scene-57-midpoint.png",
+      "sha256": "150535d58843f4309655502012c30e7a4ac4397fe7a0a53c887f8027ff858372",
+      "size": 529324
+    },
+    {
+      "path": "qa/composition-snapshots/58-scene-58-midpoint.png",
+      "sha256": "db1ee0412d185961db234f4a966a677835ee0bd7ec51c6301d69451d9555d8ce",
+      "size": 630564
+    },
+    {
+      "path": "qa/composition-snapshots/59-scene-59-midpoint.png",
+      "sha256": "6d2b4bae7b6c9e96ed3c4d2d3a259a7c11d3df11271e1727cf3650b1002015df",
+      "size": 610318
+    },
+    {
+      "path": "qa/composition-snapshots/60-scene-60-midpoint.png",
+      "sha256": "18eb5052db2483c2762966e95ca616bce425f8763354c726b20a20395d836356",
+      "size": 550456
+    },
+    {
+      "path": "qa/composition-snapshots/61-scene-61-midpoint.png",
+      "sha256": "4d116dca4067f6f72045dd6ac2050b10cc883172330d398f6985bf230d5efc61",
+      "size": 602584
+    },
+    {
+      "path": "qa/composition-snapshots/62-scene-62-midpoint.png",
+      "sha256": "70512a889d5d3b27d5fccf7d3949057799166b6e911439f19afc0bf6fc5a6bb1",
+      "size": 527752
+    },
+    {
+      "path": "qa/composition-snapshots/63-scene-63-midpoint.png",
+      "sha256": "9be9f91e79bba4b0f364aa853d465c9a661ef94d1863681315613080371e3ff7",
+      "size": 532095
+    },
+    {
+      "path": "qa/composition-snapshots/64-scene-64-midpoint.png",
+      "sha256": "d73ab44061d77d05b039a60e20117550a75d5d945140780716bbd1430472a4b0",
+      "size": 542741
+    },
+    {
+      "path": "qa/composition-snapshots/65-scene-65-midpoint.png",
+      "sha256": "5f63a2a558e76e24f88faba5c1c13e9185841033a06cdd781ef61411d437ad7c",
+      "size": 522032
+    },
+    {
+      "path": "qa/composition-snapshots/66-scene-66-midpoint.png",
+      "sha256": "b0bf1562a69e5f8befd4db736e088ae309041ec8918710e6b49ec8fb1a501cc6",
+      "size": 555109
+    },
+    {
+      "path": "qa/composition-snapshots/67-scene-67-midpoint.png",
+      "sha256": "f252e3677d1e2c4ed084fdd1f13ec22d90f3c3a12f3536aa99383db22d9a9183",
+      "size": 522694
+    },
+    {
+      "path": "qa/composition-snapshots/68-scene-68-midpoint.png",
+      "sha256": "87829f10b9f6214fddd6085131f6baf52af0807b43b9e4215068063cd83a1f48",
+      "size": 560271
+    },
+    {
+      "path": "qa/composition-snapshots/69-scene-69-midpoint.png",
+      "sha256": "01dd4988cfcf2931c075e36ea1c69116923b878e482ada580d0c9c634b4fae04",
+      "size": 580391
+    },
+    {
+      "path": "qa/composition-snapshots/70-scene-70-midpoint.png",
+      "sha256": "4b12e8bef6538e8aac8a6f11dc8295bf4f335f058fca1378c8e09b1bec9433d0",
+      "size": 580710
+    },
+    {
+      "path": "qa/composition-snapshots/71-scene-71-midpoint.png",
+      "sha256": "3b10d93326401cd344aa93d6a34d0329c0d73741748e9715e7cdac9391946ec9",
+      "size": 474403
+    }
+  ],
+  "limitations": [
+    "Not a user final review.",
+    "No automated OCR engine is connected.",
+    "Full human semantic/subtitle review remains required before public release."
+  ],
+  "publicReleaseBlocked": true
+}

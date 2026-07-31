@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "autovideo-pronunciation-probes/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "generatedGuideSha256": "795ced4547f1615da16442f781c9b86bc2e4037e5fb432f876df22c2539eb79a",
+  "voice": {
+    "route": "cosyvoice-preset-14",
+    "speaker": "中文女",
+    "precision": "FP32",
+    "stream": false,
+    "speed": 1.03,
+    "seed": 7
+  },
+  "probes": [],
+  "generatedAt": "2026-07-22T09:19:29.125Z"
+}

@@ -1,0 +1,240 @@
+{
+  "schemaVersion": "autovideo-hyperframes-build/v1",
+  "compilerVersion": "1.0.0",
+  "projectId": "demotext-standard-delivery-v4",
+  "generatedAt": "2026-07-19T10:07:40.147Z",
+  "inputManifest": {
+    "path": "plan/production-manifest.json",
+    "sha256": "62c33b3e7c8ba795132763f1884d05af23508b19b1a66f61359a8d8a29943cec"
+  },
+  "outputDir": "production/hyperframes",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 239.328,
+    "duration": 239.328167
+  },
+  "sceneCount": 14,
+  "cueCount": 46,
+  "appliedOverrideIds": [],
+  "publicReleaseBlocked": true,
+  "hostAssetManifest": {
+    "path": "production-assets/host-assets.manifest.json",
+    "sha256": "76c7fe35daa3b6402970967b22994e35553988ce51aae94532aad1337022315d"
+  },
+  "outputs": [
+    {
+      "path": "hyperframes.json",
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "package.json",
+      "sha256": "2bda08d67ab98d51099f03dda33f2b754c4135ac81784428e205ab91a369e221"
+    },
+    {
+      "path": "meta.json",
+      "sha256": "a4b83f4069356002dfffc1c2bd05a085c8f306a725e231801866d646cb6a0efb"
+    },
+    {
+      "path": "BRIEF.md",
+      "sha256": "4ced87729d788daa7a10c157a849441140ef0d7b39cf465ec07cb5caff95ff62"
+    },
+    {
+      "path": "frame.md",
+      "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25"
+    },
+    {
+      "path": "index.html",
+      "sha256": "f867c4d4c5f604fb613d522490445aa400955b59f6987b87f07dfa2135906149"
+    },
+    {
+      "path": "index.motion.json",
+      "sha256": "10191941ddfb3b2efe02e970ec281520b340becae30814a82784defbe213470c"
+    },
+    {
+      "path": "assets/audio/narration.final.wav",
+      "sha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "assets/host/close.png",
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/emphasis.png",
+      "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c"
+    },
+    {
+      "path": "assets/host/encourage.png",
+      "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/host/read.png",
+      "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388"
+    },
+    {
+      "path": "assets/host/think.png",
+      "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "sha256": "62c33b3e7c8ba795132763f1884d05af23508b19b1a66f61359a8d8a29943cec"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "sha256": "88d92900bff3d5de8d39ff8585c04adfcd7ec7dac24d5d1c13aa900badbb778d"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "sha256": "ff8b9b38d5f47a3f3972444141eee57cee182ddf8e25c3cac23b0f98a45c44de"
+    },
+    {
+      "path": "data/alignment.json",
+      "sha256": "b72da7862330f3355a5b0da0c43d2a30cda8aa2b1402256210a81fd57b4a3db4"
+    },
+    {
+      "path": "data/overrides.json",
+      "sha256": "3dac98e61f7d7f1bb79be03fe3ad7edc81090057241c7fa7e5216baf1188b4ae"
+    },
+    {
+      "path": "data/source-map.json",
+      "sha256": "7fefc80b14adf7be1506d6c641cbb9dd1379382712f3697c176322c36841d22b"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.html",
+      "sha256": "4ded2f3ae3e71a88c9c75bed994f58323a8530caff46e47b2bf38b2a96770ac3"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.motion.json",
+      "sha256": "144cef0ff465bec284a7517b82d8ffd0335db7d3f3ab3f136e2dc7c87f538936"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.html",
+      "sha256": "890b790148388be12e8026de40f26edeb8c3ee654cb74c06976a1ce10057b708"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.motion.json",
+      "sha256": "30ec6cb9465b4a24a9f8cab7fe697cbc9e1730575136684897a9a013497b2934"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.html",
+      "sha256": "b9c4bc846ef85397cc5d96014b3cae1e0a1d3891912fd4ca8504eaf7ab7f7e89"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.motion.json",
+      "sha256": "f583c9b62de4f18aba5c34315733bbcd5af88477e14d6a360545d9282abcbfba"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.html",
+      "sha256": "db90866af87dba355a979be59d467740376bb884f9e3b91a8b713d80fbd0302e"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.motion.json",
+      "sha256": "3b2c78549491f7d67316521de156d19f6304d36a519be6e7cff2ea2aa7f5983e"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.html",
+      "sha256": "b56de19cacadd86d64cd5a2521ea057278b3b29cde5654d96648d90a4fc005ef"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.motion.json",
+      "sha256": "af61185c0d59e4c325c55e64a42a3a172c85ad9470699f4a7a31d76a18e007d6"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.html",
+      "sha256": "63944a801a707e0e31161b4190236fa45035cbcef10bb40e68d1ab77e3e6394a"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.motion.json",
+      "sha256": "f4289deeeb38971fa0652455e7eedf3b55dc51a313e41c5ccaf30fd82de4df74"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.html",
+      "sha256": "d66368bfb0f3855885cf308b97fedb5f6da74976b6f9f483960ac69c34989e8a"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.motion.json",
+      "sha256": "a596ceb4303cde69ef701916d93befd3e922c82928f4a328bdaa4e6be13b6b72"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.html",
+      "sha256": "c2c6880e45595f82aefaa0ab706c0c2dd97537b88aedc1ab3407498dc0d0adcd"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.motion.json",
+      "sha256": "a52b052ee208b0433b214a66bcfe0f33f6975531dd6196c08b5546c5de2cf753"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.html",
+      "sha256": "74fffb42c8da72fc4057ff0731435491aa04dbdfd92d7ebc1d5ac2de0d110061"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.motion.json",
+      "sha256": "f347f054ebdeb688f46ee6508e3a026122c4e60e9bc3eb44e4f69b61cb931305"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.html",
+      "sha256": "e7a9543e64403af079731cc65440c370aab47676c332bb8f4eea30e2279356fc"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.motion.json",
+      "sha256": "ac0f3df2e7f70b72eb00ae1bbba7fdfeed4a9dcbdab4c6055bee45bfd0822ce2"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.html",
+      "sha256": "f7bef4866f6b9000b3c403f115a63af30a8012c2c7794173a6497cf317076393"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.motion.json",
+      "sha256": "09a52b36cd8a80cccda1bba0dbeba758ca0a975ed5a19dd0ffd91f45f42787f6"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.html",
+      "sha256": "09fa8fbd7c28ec7dc10f1c15963531ef37940881c492b98458c9fe77780f28cf"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.motion.json",
+      "sha256": "d3b89fc5938630bcfe871ce2d4c2faa4701671c6a814faaeebb2fb68387c7843"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.html",
+      "sha256": "a672b963fdc96353398f62fd3c03a03ca269f8ee5895d6b0f00c3d053ab25e8e"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.motion.json",
+      "sha256": "7d382c26a961d69479e64d9910a8d07cc30305791501099b9bece8dc2ece9c96"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.html",
+      "sha256": "b694e2826daf0666bdb5601168b3ff99a9462700a4e65db55ae9a01c29925506"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.motion.json",
+      "sha256": "72509c7bc9104552d43acd63c51e37c942a402a149cd7f260dd31daad3d0981e"
+    }
+  ]
+}

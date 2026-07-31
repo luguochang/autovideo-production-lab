@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-evidence/v1",
+  "projectId": "E17-data-proof-probe",
+  "recipeId": "data-proof@1.0.0",
+  "evidenceStatus": "draft",
+  "candidateOnly": true,
+  "sourceReceipt": "SOURCE_RECEIPT.json",
+  "invariantAudit": "INVARIANT_AUDIT.json",
+  "strictCheck": "strict-check.log",
+  "keyframes": "review/keyframes.json",
+  "render": "renders/data-proof-probe.mp4",
+  "decodeQa": "review/render-qa/DECODE_QA.json",
+  "stillContactSheet": "snapshots/contact-sheet.jpg",
+  "humanReview": {
+    "status": "pending",
+    "reviewDocument": "PROBE_REVIEW.md",
+    "approvalReceipt": null
+  },
+  "forbiddenActionsNotTaken": [
+    "lifecycle apply",
+    "recipe promotion",
+    "global style-library promotion"
+  ]
+}

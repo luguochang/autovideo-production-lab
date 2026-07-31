@@ -1,0 +1,260 @@
+{
+  "schemaVersion": "autovideo-composition-source-map/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "scenes": {
+    "scene-01": {
+      "file": "./compositions/scenes/01-scene-01.html",
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "graphId": null,
+      "hostPose": "question",
+      "editableTargets": [
+        "scene-01-state-01",
+        "scene-01-state-02",
+        "scene-01-state-03"
+      ]
+    },
+    "scene-02": {
+      "file": "./compositions/scenes/02-scene-02.html",
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "graphId": "graph-scene-02",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-02-state-01",
+        "scene-02-state-02",
+        "scene-02-state-03"
+      ]
+    },
+    "scene-03": {
+      "file": "./compositions/scenes/03-scene-03.html",
+      "cueIds": [
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "graphId": null,
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-03-state-01",
+        "scene-03-state-02",
+        "scene-03-state-03"
+      ]
+    },
+    "scene-04": {
+      "file": "./compositions/scenes/04-scene-04.html",
+      "cueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "graphId": "graph-scene-04",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-04-state-01",
+        "scene-04-state-02"
+      ]
+    },
+    "scene-05": {
+      "file": "./compositions/scenes/05-scene-05.html",
+      "cueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "graphId": "graph-scene-05",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-05-state-01",
+        "scene-05-state-02",
+        "scene-05-state-03"
+      ]
+    },
+    "scene-06": {
+      "file": "./compositions/scenes/06-scene-06.html",
+      "cueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-06-state-01",
+        "scene-06-state-02"
+      ]
+    },
+    "scene-07": {
+      "file": "./compositions/scenes/07-scene-07.html",
+      "cueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "graphId": "graph-scene-07",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-07-state-01",
+        "scene-07-state-02"
+      ]
+    },
+    "scene-08": {
+      "file": "./compositions/scenes/08-scene-08.html",
+      "cueIds": [
+        "cue-019",
+        "cue-020"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-08-state-01",
+        "scene-08-state-02"
+      ]
+    },
+    "scene-09": {
+      "file": "./compositions/scenes/09-scene-09.html",
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "graphId": "graph-scene-09",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-09-state-01",
+        "scene-09-state-02",
+        "scene-09-state-03"
+      ]
+    },
+    "scene-10": {
+      "file": "./compositions/scenes/10-scene-10.html",
+      "cueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "graphId": "graph-scene-10",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-10-state-01",
+        "scene-10-state-02",
+        "scene-10-state-03"
+      ]
+    },
+    "scene-11": {
+      "file": "./compositions/scenes/11-scene-11.html",
+      "cueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "scene-11-state-01",
+        "scene-11-state-02",
+        "scene-11-state-03"
+      ]
+    },
+    "scene-12": {
+      "file": "./compositions/scenes/12-scene-12.html",
+      "cueIds": [
+        "cue-030",
+        "cue-031",
+        "cue-032"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "scene-12-state-01",
+        "scene-12-state-02",
+        "scene-12-state-03"
+      ]
+    },
+    "scene-13": {
+      "file": "./compositions/scenes/13-scene-13.html",
+      "cueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "graphId": "graph-scene-13",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-13-state-01",
+        "scene-13-state-02",
+        "scene-13-state-03"
+      ]
+    },
+    "scene-14": {
+      "file": "./compositions/scenes/14-scene-14.html",
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "scene-14-state-01",
+        "scene-14-state-02",
+        "scene-14-state-03"
+      ]
+    },
+    "scene-15": {
+      "file": "./compositions/scenes/15-scene-15.html",
+      "cueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-15-state-01",
+        "scene-15-state-02"
+      ]
+    },
+    "scene-16": {
+      "file": "./compositions/scenes/16-scene-16.html",
+      "cueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-16-state-01",
+        "scene-16-state-02"
+      ]
+    },
+    "scene-17": {
+      "file": "./compositions/scenes/17-scene-17.html",
+      "cueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-17-state-01",
+        "scene-17-state-02",
+        "scene-17-state-03"
+      ]
+    },
+    "scene-18": {
+      "file": "./compositions/scenes/18-scene-18.html",
+      "cueIds": [
+        "cue-046"
+      ],
+      "graphId": null,
+      "hostPose": "close",
+      "editableTargets": [
+        "scene-18-state-01"
+      ]
+    }
+  }
+}

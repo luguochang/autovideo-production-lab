@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-real-project-attestation/v1",
+  "projectId": "PROJECT_ID",
+  "route": "script",
+  "status": "confirmed-real-production",
+  "profile": {
+    "durationClass": "30s",
+    "carriers": [
+      "opinion"
+    ]
+  },
+  "attestation": {
+    "confirmedHuman": false,
+    "reviewerType": "human",
+    "reviewer": "REAL_HUMAN_NAME_REQUIRED",
+    "reviewedAt": null
+  },
+  "bindings": {
+    "input": {
+      "path": "input/narration.txt",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "projectState": {
+      "path": "project-state.json",
+      "sha256": "SHA256_REQUIRED"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "autovideo-experiment-asset-receipts/v1",
+  "experimentId": "E03-hyperframes-remotion",
+  "generatedAt": "2026-07-20",
+  "format": {"width": 1920, "height": 1080, "fps": 30, "ratio": "16:9"},
+  "assets": [
+    {
+      "id": "remotion-mp4",
+      "path": "hyperframes/a-video/assets/remotion-bridge.mp4",
+      "type": "video",
+      "sha256": "0BEC3C679D0F1A937C87C3DC02EF4D6981EA1B37EB79E449BB536BA1FF871FD3",
+      "durationSeconds": 6.0,
+      "source": "remotion/src/root.tsx, RemotionBridge, Remotion 4.0.489",
+      "license": "project-generated; see LICENSE-RECEIPTS.md for Remotion terms",
+      "rightsStatus": "needs-review-before-public-redistribution"
+    },
+    {
+      "id": "remotion-frame-000",
+      "path": "hyperframes/b-stills/assets/remotion-frame-000.png",
+      "type": "image",
+      "sha256": "4063048AF776C8D3932864E27BE3F9264435AC8F324FA5B90CAE544BD0572316",
+      "dimensions": "1920x1080",
+      "source": "RemotionBridge frame 0, Remotion 4.0.489",
+      "license": "project-generated; see LICENSE-RECEIPTS.md for Remotion terms",
+      "rightsStatus": "needs-review-before-public-redistribution"
+    },
+    {
+      "id": "remotion-frame-060",
+      "path": "hyperframes/b-stills/assets/remotion-frame-060.png",
+      "type": "image",
+      "sha256": "92BFD9D2FCFFE730E192627B45D38578F37FCA8FB184D4C96682010DDE4E65AA",
+      "dimensions": "1920x1080",
+      "source": "RemotionBridge frame 60, Remotion 4.0.489",
+      "license": "project-generated; see LICENSE-RECEIPTS.md for Remotion terms",
+      "rightsStatus": "needs-review-before-public-redistribution"
+    },
+    {
+      "id": "remotion-frame-120",
+      "path": "hyperframes/b-stills/assets/remotion-frame-120.png",
+      "type": "image",
+      "sha256": "FCDD14CA82051B4AF263AEBEA393589070B09C579E51BE80DDE16CE79585C829",
+      "dimensions": "1920x1080",
+      "source": "RemotionBridge frame 120, Remotion 4.0.489",
+      "license": "project-generated; see LICENSE-RECEIPTS.md for Remotion terms",
+      "rightsStatus": "needs-review-before-public-redistribution"
+    },
+    {
+      "id": "gsap-runtime-a",
+      "path": "hyperframes/a-video/assets/gsap.min.js",
+      "type": "runtime",
+      "sha256": "C174BFCE53A729418D57A8AD8625E7247C793A22FEF8E2851E3CFA3DE9CD8280",
+      "source": "Copied from the pinned existing HyperFrames project asset",
+      "license": "See the source project receipt before redistribution",
+      "rightsStatus": "needs-review"
+    },
+    {
+      "id": "gsap-runtime-b",
+      "path": "hyperframes/b-stills/assets/gsap.min.js",
+      "type": "runtime",
+      "sha256": "C174BFCE53A729418D57A8AD8625E7247C793A22FEF8E2851E3CFA3DE9CD8280",
+      "source": "Copied from the pinned existing HyperFrames project asset",
+      "license": "See the source project receipt before redistribution",
+      "rightsStatus": "needs-review"
+    },
+    {
+      "id": "hyperframes-a-draft-render",
+      "path": "hyperframes/a-video/renders/a-video.mp4",
+      "type": "experiment-output",
+      "sha256": "FBC4CAFC77447218CB62E2C234E44AA5C71FBCC4092537A0F01FD415EFA36839",
+      "dimensions": "1920x1080",
+      "durationSeconds": 6.0,
+      "source": "HyperFrames 0.7.64 A composition using remotion-mp4",
+      "license": "project-generated experiment output",
+      "rightsStatus": "internal-experiment"
+    },
+    {
+      "id": "hyperframes-b-draft-render",
+      "path": "hyperframes/b-stills/renders/b-stills.mp4",
+      "type": "experiment-output",
+      "sha256": "251D4F6BD46F7B6D580916AFEEFC30D863522BD92D87E9B49F5DA482F5B1DEA6",
+      "dimensions": "1920x1080",
+      "durationSeconds": 6.0,
+      "source": "HyperFrames 0.7.64 B composition using three Remotion PNG stills",
+      "license": "project-generated experiment output",
+      "rightsStatus": "internal-experiment"
+    }
+  ]
+}

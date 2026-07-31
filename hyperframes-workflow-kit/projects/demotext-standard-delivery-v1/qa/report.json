@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "autovideo-qa-report/v1",
+  "projectId": "demotext-standard-delivery-v1",
+  "checkedAt": "2026-07-18T22:54:46.127Z",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "okForInternalReview": true,
+  "okForPublicRelease": false,
+  "gates": {
+    "hyperframesCheck": {
+      "status": "passed",
+      "path": "qa/hyperframes-check.json"
+    },
+    "media": {
+      "status": "passed",
+      "path": "qa/delivery-report.json"
+    },
+    "lockedSubtitleReconstruction": {
+      "status": "passed",
+      "path": "captions/alignment-validation.json"
+    },
+    "visualReview": {
+      "status": "passed-internal-sample",
+      "reviewedBy": "codex-autonomous-internal-review",
+      "scope": "internal-autonomous-sampled-frames",
+      "path": "qa/visual-review.json"
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvalScope": "internal-autonomous-review",
+      "compositionDigest": "008821f817c795c5e1b8d49bc3f8d6bb1ed6a1d74fc604c189797e8ca9a1c617"
+    },
+    "humanListening": {
+      "status": "not-performed"
+    },
+    "publicationRights": {
+      "status": "needs-review"
+    }
+  },
+  "releaseBlockers": [
+    "Human listening approval has not been performed.",
+    "CosyVoice speaker publication rights are unresolved.",
+    "Host pose publication rights are unresolved.",
+    "Numeric claims 99%, 90% and 30K remain creator opinion rather than verified statistics."
+  ]
+}

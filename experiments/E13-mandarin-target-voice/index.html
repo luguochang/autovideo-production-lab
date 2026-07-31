@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>普通话目标声线 A/B</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { --ink: #172033; --muted: #607086; --line: #dce3ea; --paper: #ffffff; --bg: #f4f6f8; --accent: #0f766e; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; }
+    header { background: #172033; color: #fff; border-bottom: 4px solid #22c55e; }
+    .header-inner, main { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
+    .header-inner { padding: 18px 0 15px; }
+    h1 { margin: 0; font-size: 24px; letter-spacing: 0; }
+    header p { margin: 4px 0 0; color: #cbd5e1; }
+    main { padding: 16px 0 40px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0 14px; border-bottom: 1px solid var(--line); }
+    [role="tablist"] { display: flex; gap: 4px; }
+    button, select, input { font: inherit; }
+    button { border: 1px solid #b8c3cf; border-radius: 5px; background: #fff; color: var(--ink); padding: 7px 11px; cursor: pointer; }
+    button[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+    button:hover { border-color: #64748b; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .toggle { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+    .summary { display: flex; flex-wrap: wrap; gap: 18px; padding: 12px 0; color: var(--muted); }
+    .summary strong { color: var(--accent); }
+    .candidate { display: grid; grid-template-columns: 210px minmax(320px, 1fr) 300px; gap: 18px; align-items: center; padding: 17px 0; border-top: 1px solid var(--line); }
+    .candidate:last-child { border-bottom: 1px solid var(--line); }
+    .candidate[hidden] { display: none; }
+    .identity h2 { margin: 0 0 4px; font-size: 17px; letter-spacing: 0; }
+    .identity p { margin: 0; color: var(--muted); }
+    .badge { display: inline-block; margin-top: 7px; padding: 2px 6px; border-radius: 4px; background: #e8eef4; color: #415167; font-size: 12px; }
+    .badge.demo { background: #fff4d6; color: #8a4b08; }
+    .media img { display: block; width: 100%; height: 72px; object-fit: fill; border-radius: 4px; background: #111827; }
+    audio { display: block; width: 100%; height: 36px; margin-top: 7px; }
+    .scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .scores label { color: var(--muted); font-size: 12px; }
+    .scores select, .note { width: 100%; margin-top: 3px; border: 1px solid #cbd5df; border-radius: 4px; background: #fff; padding: 6px; }
+    .note { grid-column: 1 / -1; }
+    footer { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 14px 0 30px; color: var(--muted); }
+    .blind .real-name, .blind .real-detail, .blind .badge { display: none; }
+    .blind .blind-name { display: block; }
+    .blind-name { display: none; }
+    @media (max-width: 900px) { .candidate { grid-template-columns: 170px 1fr; } .scores { grid-column: 1 / -1; } }
+    @media (max-width: 620px) { .candidate { grid-template-columns: 1fr; } .scores { grid-column: auto; } .toolbar { align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>普通话目标声线 A/B</h1>
+      <p>4 个候选 · 51.92 秒 · 中文女性参考 · 仅本机</p>
+    </div>
+  </header>
+  <main>
+    <div class="toolbar">
+      <div role="tablist" aria-label="候选类型">
+        <button type="button" role="tab" aria-selected="true" data-filter="all">全部</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="cleanup">原声与清理</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="voice">音色转换</button>
+      </div>
+      <div class="actions">
+        <label class="toggle"><input id="blind" type="checkbox"> 盲听模式</label>
+        <button id="reveal" type="button">显示身份</button>
+        <button id="export" type="button">导出评分</button>
+      </div>
+    </div>
+    <div class="summary">
+      <span>目标响度 <strong>-16 LUFS</strong></span>
+       <span>实际范围 <strong>-16.07 ~ -16.00</strong></span>
+      <span>时长漂移 <strong>&lt; 0.006 秒</strong></span>
+    </div>
+    <section id="candidates" aria-label="试听候选"></section>
+  </main>
+  <footer>评分保存在浏览器本地。普通话女性参考来自本机 E05 的 zh-CN-XiaoxiaoNeural 技术样本，仅用于本地音色评估，不代表该声线的正式发布授权。</footer>
+  <script>
+    const data = [
+      {id:'00', group:'cleanup', name:'原声基线', detail:'无增强，仅统一响度', file:'00-original.wav', wave:'00-original.png', status:'用户原始录音'},
+      {id:'07', group:'voice', name:'Seed-VC 普通话女性 · 相似度 0.45', detail:'中文女性参考 · steps 30 · style off', file:'07-seedvc-zh-female-sim045.wav', wave:'07-seedvc-zh-female-sim045.png', status:'普通话参考测试', demo:true},
+      {id:'08', group:'voice', name:'Seed-VC 普通话女性 · 相似度 0.55', detail:'中文女性参考 · steps 30 · style off', file:'08-seedvc-zh-female-sim055.wav', wave:'08-seedvc-zh-female-sim055.png', status:'普通话参考测试', demo:true},
+      {id:'09', group:'voice', name:'Seed-VC 普通话女性 · 相似度 0.65', detail:'中文女性参考 · steps 30 · style off', file:'09-seedvc-zh-female-sim065.wav', wave:'09-seedvc-zh-female-sim065.png', status:'普通话参考测试', demo:true}
+    ];
+    const root = document.getElementById('candidates');
+    const scoreOptions = '<option value="">-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>';
+    root.innerHTML = data.map((item, index) => `
+      <article class="candidate" data-group="${item.group}" data-id="${item.id}">
+        <div class="identity">
+          <h2 class="real-name">${item.id} · ${item.name}</h2>
+          <h2 class="blind-name">候选 ${String.fromCharCode(65 + index)}</h2>
+          <p class="real-detail">${item.detail}</p>
+          <span class="badge ${item.demo ? 'demo' : ''}">${item.status}</span>
+        </div>
+        <div class="media">
+          <img src="assets/waveforms/${item.wave}"
+               data-real-alt="${item.name} 波形"
+               data-blind-alt="候选 ${String.fromCharCode(65 + index)} 波形"
+               alt="${item.name} 波形">
+          <audio controls preload="metadata" src="outputs/listen/${item.file}"></audio>
+        </div>
+        <div class="scores">
+          <label>自然度<select data-key="natural">${scoreOptions}</select></label>
+          <label>清晰度<select data-key="clear">${scoreOptions}</select></label>
+          <label>耐听度<select data-key="comfort">${scoreOptions}</select></label>
+          <input class="note" data-key="note" type="text" placeholder="听感笔记">
+        </div>
+      </article>`).join('');
+
+    const storageKey = 'voice-comparison-e13';
+    const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    document.querySelectorAll('.candidate').forEach(row => {
+      row.querySelectorAll('[data-key]').forEach(control => {
+        control.value = saved[row.dataset.id]?.[control.dataset.key] || '';
+        control.addEventListener('change', save);
+        control.addEventListener('input', save);
+      });
+    });
+    document.querySelectorAll('audio').forEach(player => player.addEventListener('play', () => {
+      document.querySelectorAll('audio').forEach(other => { if (other !== player) other.pause(); });
+    }));
+    function save() {
+      const result = {};
+      document.querySelectorAll('.candidate').forEach(row => {
+        result[row.dataset.id] = {};
+        row.querySelectorAll('[data-key]').forEach(control => result[row.dataset.id][control.dataset.key] = control.value);
+      });
+      localStorage.setItem(storageKey, JSON.stringify(result));
+    }
+    document.querySelectorAll('[role="tab"]').forEach(tab => tab.addEventListener('click', () => {
+      document.querySelectorAll('[role="tab"]').forEach(item => item.setAttribute('aria-selected', item === tab ? 'true' : 'false'));
+      document.querySelectorAll('.candidate').forEach(row => row.hidden = tab.dataset.filter !== 'all' && row.dataset.group !== tab.dataset.filter);
+    }));
+    const blind = document.getElementById('blind');
+    function setBlindMode(enabled) {
+      document.body.classList.toggle('blind', enabled);
+      const rows = [...document.querySelectorAll('.candidate')];
+      if (enabled) {
+        for (let index = rows.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [rows[index], rows[swapIndex]] = [rows[swapIndex], rows[index]];
+        }
+      } else {
+        rows.sort((left, right) => left.dataset.id.localeCompare(right.dataset.id));
+      }
+      rows.forEach((row, index) => {
+        root.appendChild(row);
+        const blindLabel = `候选 ${String.fromCharCode(65 + index)}`;
+        row.querySelector('.blind-name').textContent = blindLabel;
+        const image = row.querySelector('.media img');
+        image.dataset.blindAlt = `${blindLabel} 波形`;
+        image.alt = enabled ? image.dataset.blindAlt : image.dataset.realAlt;
+      });
+    }
+    blind.addEventListener('change', () => setBlindMode(blind.checked));
+    document.getElementById('reveal').addEventListener('click', () => {
+      blind.checked = false;
+      setBlindMode(false);
+    });
+    document.getElementById('export').addEventListener('click', () => {
+      save();
+      const payload = {generated_at:new Date().toISOString(), ratings:JSON.parse(localStorage.getItem(storageKey) || '{}')};
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'}));
+      link.download = 'E12-voice-ratings.json';
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+  </script>
+</body>
+</html>

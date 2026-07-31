@@ -1,0 +1,300 @@
+{
+  "schemaVersion": "autovideo-mainstream-landscape-qa/v1",
+  "expected": {
+    "duration": 20,
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1"
+  },
+  "ok": true,
+  "probes": [
+    {
+      "id": "anime-sticker-explainer",
+      "file": "review/probes/anime-sticker-explainer.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "3832638"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "manga-panel-pop",
+      "file": "review/probes/manga-panel-pop.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "4046713"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "chibi-desk-live",
+      "file": "review/probes/chibi-desk-live.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "3607655"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "creator-cutout-pop",
+      "file": "review/probes/creator-cutout-pop.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "4126806"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "lofi-anime-night",
+      "file": "review/probes/lofi-anime-night.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "5587015"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "motion-comic-depth",
+      "file": "review/probes/motion-comic-depth.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "3777508"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    }
+  ]
+}

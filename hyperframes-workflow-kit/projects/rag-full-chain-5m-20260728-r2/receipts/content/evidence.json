@@ -1,0 +1,2803 @@
+{
+  "schemaVersion": "autovideo-evidence/v2",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "sourceRegisterSha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd",
+  "suitabilitySha256": "e72821d494bdf3f3ed964c2a1e79d049b933fd2a738e2a2e69c126899017874b",
+  "prompt": {
+    "id": "evidence-extractor",
+    "sha256": "afbc91550a50988e4db3759a4515ede6f86b580aa9d052c37130efe7776c5df1"
+  },
+  "generatedAt": "2026-07-28T09:02:14.738Z",
+  "claims": [
+    {
+      "id": "claim-script-001",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "我按数据流把 RAG 全链路讲一遍。整个链路分两段：离线建库把文档变成可检索的库，在线检索把查询变成答案，中间智能体式决策是分水岭。我顺着数据流一步步讲，每一步都说清楚有哪些选型、生产上一般怎么选、为什么这么选，实际是否组合使用、怎么组合，看哪些指标，还有哪些提升空间。因为 RAG 的每一步都不是非此即彼的单选，实际生产更多是组合使用。把这些判断讲清楚，才能体现真正做过，而不只是会调 API。",
+      "citations": [
+        {
+          "id": "citation-script-001",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "我按数据流把 RAG 全链路讲一遍。整个链路分两段：离线建库把文档变成可检索的库，在线检索把查询变成答案，中间智能体式决策是分水岭。我顺着数据流一步步讲，每一步都说清楚有哪些选型、生产上一般怎么选、为什么这么选，实际是否组合使用、怎么组合，看哪些指标，还有哪些提升空间。因为 RAG 的每一步都不是非此即彼的单选，实际生产更多是组合使用。把这些判断讲清楚，才能体现真正做过，而不只是会调 API。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 1,
+            "endLine": 1,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "be36f6470e2d980d4afde1f3222af259b756b805bc229e8c5e04cf8670c89b01"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-002",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "链路第一站是文档解析。原始文档可能来自 PDF、Word、HTML 或 Confluence，格式复杂，既有表格、图片，也有扫描件。这一步的目标是把异构文档变成结构化文本加元数据，解析质量会直接影响后面各环节的效果，垃圾进，垃圾出。",
+      "citations": [
+        {
+          "id": "citation-script-002",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "链路第一站是文档解析。原始文档可能来自 PDF、Word、HTML 或 Confluence，格式复杂，既有表格、图片，也有扫描件。这一步的目标是把异构文档变成结构化文本加元数据，解析质量会直接影响后面各环节的效果，垃圾进，垃圾出。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 3,
+            "endLine": 3,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "dffb5271d8bcb8bbbdbb5978e723e08e3065aaa1fe09c517c027d1aceb52bbe0"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-003",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "先看解析工具，大致有这么几类。一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。它们支持的格式、中文复杂文档效果、公式和表格还原能力，要用同一批样本比较；商业服务如 LlamaParse 也可以列入候选；扫描件和图表可以用多模态 LLM 兜底，但成本通常更高。",
+      "citations": [
+        {
+          "id": "citation-script-003",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "先看解析工具，大致有这么几类。一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。它们支持的格式、中文复杂文档效果、公式和表格还原能力，要用同一批样本比较；商业服务如 LlamaParse 也可以列入候选；扫描件和图表可以用多模态 LLM 兜底，但成本通常更高。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 5,
+            "endLine": 5,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4d74328a2b37afa921f7cd9afb8a91575fd5ab580f93a922946526d8be212936"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-004",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "具体到解析工具，先看文档复杂度。简单纯文本可以先用 PyMuPDF，速度快，成本也低；复杂文档——表格多、层级深、有规范编号——通常要用结构化解析，因为后面要按结构分块、要表格检索，丢了结构这些全做不了。我自己的判断是，中文复杂文档场景 MinerU 优先，通用多格式场景 Unstructured 优先。",
+      "citations": [
+        {
+          "id": "citation-script-004",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "具体到解析工具，先看文档复杂度。简单纯文本可以先用 PyMuPDF，速度快，成本也低；复杂文档——表格多、层级深、有规范编号——通常要用结构化解析，因为后面要按结构分块、要表格检索，丢了结构这些全做不了。我自己的判断是，中文复杂文档场景 MinerU 优先，通用多格式场景 Unstructured 优先。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 7,
+            "endLine": 7,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "87e191639d692cc24a5b8c3c0421363d5cbfb6e47915bc6d60b8ada10e7fc1d2"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-005",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "落地时，还有一个关键点：生产上很少只用一个解析器，而是采用分层组合。主解析用 MinerU 或 Unstructured 跑全量，拿到标题树、表格、阅读顺序；然后过一层规则清洗，去页眉页脚、修乱码、补页码缺失；碰到扫描件、复杂图表、公式这种主解析搞不定的，再触发多模态 LLM 二次解析，成本更高，但更适合处理这些难页，只在需要时使用。表格要单独整块保留，别被切碎。所以，只说“用 MinerU”并不准确。更准确的说法是：以 MinerU 为主解析，再配规则清洗和多模态 LLM 兜底。MinerU 是主引擎，但不是全部。",
+      "citations": [
+        {
+          "id": "citation-script-005",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "落地时，还有一个关键点：生产上很少只用一个解析器，而是采用分层组合。主解析用 MinerU 或 Unstructured 跑全量，拿到标题树、表格、阅读顺序；然后过一层规则清洗，去页眉页脚、修乱码、补页码缺失；碰到扫描件、复杂图表、公式这种主解析搞不定的，再触发多模态 LLM 二次解析，成本更高，但更适合处理这些难页，只在需要时使用。表格要单独整块保留，别被切碎。所以，只说“用 MinerU”并不准确。更准确的说法是：以 MinerU 为主解析，再配规则清洗和多模态 LLM 兜底。MinerU 是主引擎，但不是全部。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 9,
+            "endLine": 9,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "7a4ca96291343e5bc95b97ea1a2f5b9592e8681db9dba3a5ea1656bac737a367"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-006",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "那解析质量怎么验收？这一步自动化指标不多，主要还是靠抽检。建立几十篇文档的评测集，人工标注正确解析结果，重点看三项：表格还原率；字段完整率，也就是关键数字和专名有没有丢失；以及标题层级识别准确率。",
+      "citations": [
+        {
+          "id": "citation-script-006",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "那解析质量怎么验收？这一步自动化指标不多，主要还是靠抽检。建立几十篇文档的评测集，人工标注正确解析结果，重点看三项：表格还原率；字段完整率，也就是关键数字和专名有没有丢失；以及标题层级识别准确率。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 11,
+            "endLine": 11,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "15c6e5c3610e47cac33016f02b9d9f910ecc595a14baeebb62aecc7e747addcd"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-007",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "把基础解析跑稳以后，还可以从三条线继续提升：用多模态 LLM 处理复杂页面，评估 ColPali 这类直接检索页面图像的思路，跟进 Docling 在公式和表格上的能力；解析后的结构校验，也可以用规则加小模型自动完成，减少人工抽检。",
+      "citations": [
+        {
+          "id": "citation-script-007",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "把基础解析跑稳以后，还可以从三条线继续提升：用多模态 LLM 处理复杂页面，评估 ColPali 这类直接检索页面图像的思路，跟进 Docling 在公式和表格上的能力；解析后的结构校验，也可以用规则加小模型自动完成，减少人工抽检。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 13,
+            "endLine": 13,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "c1a23ae632e348866af8b9e6e589e8d760c44d76b52ade6956324fadccb0b360"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-008",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "解析完拿到结构化文本，要切成文本块。为什么切？两个原因：LLM 上下文有上限，塞太多又贵又中间信息遗失；整篇文档一起向量化，语义会被稀释。一篇文档既讲主题一又讲主题二，生成的向量可能同时偏离两类主题。切成小片段，每片语义聚焦，检索精度高。",
+      "citations": [
+        {
+          "id": "citation-script-008",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "解析完拿到结构化文本，要切成文本块。为什么切？两个原因：LLM 上下文有上限，塞太多又贵又中间信息遗失；整篇文档一起向量化，语义会被稀释。一篇文档既讲主题一又讲主题二，生成的向量可能同时偏离两类主题。切成小片段，每片语义聚焦，检索精度高。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 15,
+            "endLine": 15,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "51cb176857b7981ba270a9f8d3a14de135f8c22e96619a67502e95ba457fe97b"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-009",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "分块方式主要有五种。固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+      "citations": [
+        {
+          "id": "citation-script-009",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "分块方式主要有五种。固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 17,
+            "endLine": 17,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "6d53080d85743d3e8147904e17b73b23729cee48c221829ee2ab379bc1db7038"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-001",
+        "atom-018"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-010",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "分块怎么选，核心看文档结构。结构化文档——技术文档、知识库、规范——按标题或条款切，天然有语义边界；通用纯文本用递归字符切；对召回质量要求高且文档量不大的场景才上语义切分。一个常见起点是 512 词元配 10% 重叠比例，但它不是固定答案，仍要用领域评测集校准。",
+      "citations": [
+        {
+          "id": "citation-script-010",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "分块怎么选，核心看文档结构。结构化文档——技术文档、知识库、规范——按标题或条款切，天然有语义边界；通用纯文本用递归字符切；对召回质量要求高且文档量不大的场景才上语义切分。一个常见起点是 512 词元配 10% 重叠比例，但它不是固定答案，仍要用领域评测集校准。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 19,
+            "endLine": 19,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "205605832a3bb97975fd30c12cb6e2664180b2ecff860438dd583b28ac2108cc"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-002",
+        "atom-003",
+        "atom-018",
+        "atom-019"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-011",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "真正落地时，仍然是组合策略。生产上一般按文档类型分策略，不是全局一个切法。比如同一个库里，施工规范按条款条文切，工艺手册按步骤切，表格整块保留带表头上下文，普通说明文字用递归切。而且切完每个文本块都要带上元数据——来源、章节、页码、条文号、版本，这些后面条件过滤、引用展示、索引重建全要用。还有一个容易忽略的点，LlamaIndex 生产指南强调的检索块和合成块要解耦：检索用小文本块精度高，合成喂 LLM 时取该文本块前后窗口或整篇，上下文完整。朴素 RAG 往往把两者当成同一个对象，生产上需要把检索块和合成块解耦。",
+      "citations": [
+        {
+          "id": "citation-script-011",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "真正落地时，仍然是组合策略。生产上一般按文档类型分策略，不是全局一个切法。比如同一个库里，施工规范按条款条文切，工艺手册按步骤切，表格整块保留带表头上下文，普通说明文字用递归切。而且切完每个文本块都要带上元数据——来源、章节、页码、条文号、版本，这些后面条件过滤、引用展示、索引重建全要用。还有一个容易忽略的点，LlamaIndex 生产指南强调的检索块和合成块要解耦：检索用小文本块精度高，合成喂 LLM 时取该文本块前后窗口或整篇，上下文完整。朴素 RAG 往往把两者当成同一个对象，生产上需要把检索块和合成块解耦。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 21,
+            "endLine": 21,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "5066034bde635bfddbe19699eb9d16cc8bd8bb83170a7eba71fdf65834b64051"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-012",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "分块效果不能只凭感觉，至少要看三类信号：文本块内聚度，也就是同一文本块内句子向量的平均相似度；边界切断率，抽检有没有切断关键句和表格；最后再用下游召回率验证。",
+      "citations": [
+        {
+          "id": "citation-script-012",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "分块效果不能只凭感觉，至少要看三类信号：文本块内聚度，也就是同一文本块内句子向量的平均相似度；边界切断率，抽检有没有切断关键句和表格；最后再用下游召回率验证。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 23,
+            "endLine": 23,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4bc24e3d9cdfd4f4c4045734202c450ff425adbd7e0568c42b2c8b1337019a7e"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-013",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "分块还想继续提升，可以沿三个方向走：用延迟分块带入整篇上下文，但前提是向量模型支持长上下文；用下一节的上下文检索补充位置和主题；或者根据内容密度做动态分块。",
+      "citations": [
+        {
+          "id": "citation-script-013",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "分块还想继续提升，可以沿三个方向走：用延迟分块带入整篇上下文，但前提是向量模型支持长上下文；用下一节的上下文检索补充位置和主题；或者根据内容密度做动态分块。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 25,
+            "endLine": 25,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "04d77b9e332857912db06df9d8d6cff12eb1391859134c98059a66e68d8b6577"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-014",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "分块后、向量化前，其实可以插一步上下文增强。这一步经常被跳过，但我认为它是值得优先评估的增强项，所以单独讲。",
+      "citations": [
+        {
+          "id": "citation-script-014",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "分块后、向量化前，其实可以插一步上下文增强。这一步经常被跳过，但我认为它是值得优先评估的增强项，所以单独讲。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 27,
+            "endLine": 27,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "2f3785e2943e5d7ae30e10eb58529f64870e53231a624a3c2d3dd42fa39ccfd6"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-015",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "问题在哪：一个文本块脱离原文后语义自足性差。比如，某个文本块只写“它的定价是每月 50 元”。脱离原文，你根本不知道这里的“它”指谁，生成的向量也会很模糊，检索时就容易捞不到，或者捞错。",
+      "citations": [
+        {
+          "id": "citation-script-015",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "问题在哪：一个文本块脱离原文后语义自足性差。比如，某个文本块只写“它的定价是每月 50 元”。脱离原文，你根本不知道这里的“它”指谁，生成的向量也会很模糊，检索时就容易捞不到，或者捞错。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 29,
+            "endLine": 29,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "7b668828b1a45e43fd87c0c145e7dcba8d76119b7530ae1d48abbba70364b8f6"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-004",
+        "atom-018"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-016",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这类上下文增强，目前主要有两个方向。一个是 Anthropic 2024 年 9 月的上下文检索，用 LLM 给每个文本块生成 50 到 100 词元的上下文前缀，说明它在整篇里的位置主题，拼到文本块前再向量化；一个是前面讲的延迟分块，从向量化层面让文本块带整篇上下文。",
+      "citations": [
+        {
+          "id": "citation-script-016",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "这类上下文增强，目前主要有两个方向。一个是 Anthropic 2024 年 9 月的上下文检索，用 LLM 给每个文本块生成 50 到 100 词元的上下文前缀，说明它在整篇里的位置主题，拼到文本块前再向量化；一个是前面讲的延迟分块，从向量化层面让文本块带整篇上下文。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 31,
+            "endLine": 31,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "b1d63aa04824a3117502ea1e901405f24ab8c6ac4525c72406e912f107cec573"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-001",
+        "atom-004",
+        "atom-005",
+        "atom-006",
+        "atom-018",
+        "atom-019"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-017",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "上下文检索值不值得上？公开实验结果很有参考价值，但还要结合自己的成本边界。按 Anthropic 2024 年 9 月发布的材料，检索失败率从 5.7% 降到 1.9%，相对下降 67%。这些数字只代表其公开实验，不能直接当作项目承诺。它不需要额外训练模型，但如果不给提示词做缓存，每个文本块都重复携带整篇文档，成本会迅速放大。该材料还给出了当时的缓存价格示例；真实成本要按当前价格和自己的文档规模重算。框架通常需要自己组装这条链路。",
+      "citations": [
+        {
+          "id": "citation-script-017",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "上下文检索值不值得上？公开实验结果很有参考价值，但还要结合自己的成本边界。按 Anthropic 2024 年 9 月发布的材料，检索失败率从 5.7% 降到 1.9%，相对下降 67%。这些数字只代表其公开实验，不能直接当作项目承诺。它不需要额外训练模型，但如果不给提示词做缓存，每个文本块都重复携带整篇文档，成本会迅速放大。该材料还给出了当时的缓存价格示例；真实成本要按当前价格和自己的文档规模重算。框架通常需要自己组装这条链路。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 33,
+            "endLine": 33,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "021c096bbd0cd96408a9bcc1ec1d5628221736c30b1fdff86071809ee46306ae"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-001",
+        "atom-005",
+        "atom-007",
+        "atom-008",
+        "atom-009",
+        "atom-018",
+        "atom-019"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-018",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "具体接入链路时，这一步是可选增强，不是所有项目都要上。我的判断是，如果文本块切得比较小、或者文档语义关联强、或者召回质量不达标，就值得上上下文检索；文档本身语义自足、量又大，可以先不上控成本。如果想叠加两路收益，向量化和 BM25 都要使用增强后的文本。可以和延迟分块二选一或组合，看向量模型支不支持长上下文。",
+      "citations": [
+        {
+          "id": "citation-script-018",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "具体接入链路时，这一步是可选增强，不是所有项目都要上。我的判断是，如果文本块切得比较小、或者文档语义关联强、或者召回质量不达标，就值得上上下文检索；文档本身语义自足、量又大，可以先不上控成本。如果想叠加两路收益，向量化和 BM25 都要使用增强后的文本。可以和延迟分块二选一或组合，看向量模型支不支持长上下文。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 35,
+            "endLine": 35,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "fd23e9822397c0c7fe3f51c7620bea3fe59d06fdd80b67d6e58fc861d1d2f5a1"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-010"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-019",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这套增强值不值得上，要靠对照实验回答：先比较基础方案和上下文增强方案的检索失败率，再看下游答案正确率和上下文精度。",
+      "citations": [
+        {
+          "id": "citation-script-019",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "这套增强值不值得上，要靠对照实验回答：先比较基础方案和上下文增强方案的检索失败率，再看下游答案正确率和上下文精度。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 37,
+            "endLine": 37,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "7cdee79437021b9106836cf1c029c0f79df848b8d76bb13804f59f802a61d23c"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-020",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "如果对照实验确认有收益，再继续比较三件事：上下文检索和延迟分块是否组合，用什么模型生成上下文前缀，以及生成前缀的提示词怎么优化。",
+      "citations": [
+        {
+          "id": "citation-script-020",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "如果对照实验确认有收益，再继续比较三件事：上下文检索和延迟分块是否组合，用什么模型生成上下文前缀，以及生成前缀的提示词怎么优化。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 39,
+            "endLine": 39,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "46453a442a4c5c2bf84a7e6cbf20cdc74feda30ab221e5d42181c6bb5cf8375f"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-021",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "文本块准备好，接下来向量化。向量模型把文本变定长向量，向量相似度约等于语义相似度，这是检索精度的地基。",
+      "citations": [
+        {
+          "id": "citation-script-021",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "文本块准备好，接下来向量化。向量模型把文本变定长向量，向量相似度约等于语义相似度，这是检索精度的地基。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 41,
+            "endLine": 41,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "6cf3752fbd14000bae5396569b03b0c47b89547bb8164bfbfd55637e43862952"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-022",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量模型先分开源和商业两类。中文开源候选包括 BGE 系列；需要稠密、稀疏和 ColBERT 多种模式时，可以评估 bge-m3。商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。具体版本、维度和输入类型，要以当前文档和同一套领域评测为准。",
+      "citations": [
+        {
+          "id": "citation-script-022",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量模型先分开源和商业两类。中文开源候选包括 BGE 系列；需要稠密、稀疏和 ColBERT 多种模式时，可以评估 bge-m3。商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。具体版本、维度和输入类型，要以当前文档和同一套领域评测为准。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 43,
+            "endLine": 43,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "70c5c9f64a4450a82dd7072682f4a4b3ef02d487ee9bf4d6fa7a0fd6c5914d1d"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-011"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-023",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量模型怎么选？主要看三个方面。第一是中文效果，BGE 系列通常是中文开源方案的重要候选，但仍要用领域评测集比较。第二是部署边界，企业知识不能出域时优先评估本地模型；允许外部服务时，再把 OpenAI、Voyage 等商业方案放进同一评测。第三是维度，3072 维的存储和检索成本更高，是否降到 1024 维，也要用召回指标确认。我的默认起点是中文企业场景先评估 BGE，需要 ColBERT 能力时再评估 bge-m3。",
+      "citations": [
+        {
+          "id": "citation-script-023",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量模型怎么选？主要看三个方面。第一是中文效果，BGE 系列通常是中文开源方案的重要候选，但仍要用领域评测集比较。第二是部署边界，企业知识不能出域时优先评估本地模型；允许外部服务时，再把 OpenAI、Voyage 等商业方案放进同一评测。第三是维度，3072 维的存储和检索成本更高，是否降到 1024 维，也要用召回指标确认。我的默认起点是中文企业场景先评估 BGE，需要 ColBERT 能力时再评估 bge-m3。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 45,
+            "endLine": 45,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "d6d5e803027d1175759b8273cdd4f5e453aad605a57ada712045e497018b401d"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-011",
+        "atom-012",
+        "atom-013",
+        "atom-018",
+        "atom-019"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-024",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这里有三个很容易踩的坑。第一，查询和文档要使用相互兼容的向量模型配置；对区分输入类型的模型，要分别标明查询输入和文档输入，搞反会影响精度。第二，换模型等于全库重新计算向量，要用版本字段做灰度切换。第三，MTEB 榜单只能作为参考，最终要看自建领域评测集的召回率。",
+      "citations": [
+        {
+          "id": "citation-script-024",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "这里有三个很容易踩的坑。第一，查询和文档要使用相互兼容的向量模型配置；对区分输入类型的模型，要分别标明查询输入和文档输入，搞反会影响精度。第二，换模型等于全库重新计算向量，要用版本字段做灰度切换。第三，MTEB 榜单只能作为参考，最终要看自建领域评测集的召回率。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 47,
+            "endLine": 47,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4f59385e73d32a8dca01a9a4d7d78cc60b7983ba8c762c57d509396b19b35849"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-025",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量模型选得对不对，重点看三件事：MTEB 榜单只作参考，领域评测集前若干结果的召回率才是关键，同时还要看向量化计算吞吐。",
+      "citations": [
+        {
+          "id": "citation-script-025",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量模型选得对不对，重点看三件事：MTEB 榜单只作参考，领域评测集前若干结果的召回率才是关键，同时还要看向量化计算吞吐。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 49,
+            "endLine": 49,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "5da16488b9061d4fe580e9aa36aff53e4e7286112248bfb2482fb42623583e06"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-026",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "后续优化可以从能力、成本和领域适配三条线展开：评估 bge-m3 的多模态能力，用 Matryoshka 降维节省存储；有标注数据时，再考虑领域微调和指令微调。",
+      "citations": [
+        {
+          "id": "citation-script-026",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "后续优化可以从能力、成本和领域适配三条线展开：评估 bge-m3 的多模态能力，用 Matryoshka 降维节省存储；有标注数据时，再考虑领域微调和指令微调。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 51,
+            "endLine": 51,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "dd67bff4011859b3b25b8c50cf9bdcabaea39b43a0b2fbe79367fb9e24ebafc1"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-011"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-027",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量存哪、怎么检索，这是向量库和索引的事。",
+      "citations": [
+        {
+          "id": "citation-script-027",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量存哪、怎么检索，这是向量库和索引的事。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 53,
+            "endLine": 53,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "09a4cd7f1dc52af7a370bfef2c9a067c9c5b6619f399e85d610e179ebdd66cf2"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-028",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。常见索引算法包括 HNSW、IVF 和 Flat。它们分别偏向低延迟、高规模或精确基线，具体选择要看压测，不能只按数据量贴标签。",
+      "citations": [
+        {
+          "id": "citation-script-028",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。常见索引算法包括 HNSW、IVF 和 Flat。它们分别偏向低延迟、高规模或精确基线，具体选择要看压测，不能只按数据量贴标签。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 55,
+            "endLine": 55,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "a00da5788c4af459cd8757c541ee6e114f74c6024098b929da01fb1d3a979e50"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-029",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量库怎么选，核心看三件事：规模、是否要事务和联表、运维成本。我的判断是：在中小规模、已有 PostgreSQL、又需要事务和联表的场景里，可以先评估 pgvector。理由很实在：后端团队熟悉 SQL，可以先按元数据过滤，再按向量相似度排序，还能跟业务表联表、走事务，少运维一个中间件。规模、延迟或分片需求超过单库能力后，再评估 Milvus 等分布式方案。需要内置混合检索时，可以把 Weaviate 放进候选。具体迁移阈值不能只看片段数量，要用压测决定。",
+      "citations": [
+        {
+          "id": "citation-script-029",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量库怎么选，核心看三件事：规模、是否要事务和联表、运维成本。我的判断是：在中小规模、已有 PostgreSQL、又需要事务和联表的场景里，可以先评估 pgvector。理由很实在：后端团队熟悉 SQL，可以先按元数据过滤，再按向量相似度排序，还能跟业务表联表、走事务，少运维一个中间件。规模、延迟或分片需求超过单库能力后，再评估 Milvus 等分布式方案。需要内置混合检索时，可以把 Weaviate 放进候选。具体迁移阈值不能只看片段数量，要用压测决定。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 57,
+            "endLine": 57,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "1f62b16fd44d823b696f945e77f58a306221362b261c209b9056ed793163321a"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-030",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "以 pgvector 为例，一般同时建 HNSW 向量索引和 PostgreSQL 全文索引，为在线多路检索铺路。一个库管理两种索引，不用再单独引入 Elasticsearch。HNSW 参数可以先从常见组合开始压测。构建阶段调整连接度和构建深度，查询阶段再调搜索深度，通常要在召回和延迟之间取舍。还要配合元数据打标，检索时先缩小候选集。pgvector 的索引维护和空间回收也要进入运维计划。在我参与的一个知识智能体项目里，我们选择 pgvector 的重要原因之一，就是它能和业务数据共享事务边界。",
+      "citations": [
+        {
+          "id": "citation-script-030",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "以 pgvector 为例，一般同时建 HNSW 向量索引和 PostgreSQL 全文索引，为在线多路检索铺路。一个库管理两种索引，不用再单独引入 Elasticsearch。HNSW 参数可以先从常见组合开始压测。构建阶段调整连接度和构建深度，查询阶段再调搜索深度，通常要在召回和延迟之间取舍。还要配合元数据打标，检索时先缩小候选集。pgvector 的索引维护和空间回收也要进入运维计划。在我参与的一个知识智能体项目里，我们选择 pgvector 的重要原因之一，就是它能和业务数据共享事务边界。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 59,
+            "endLine": 59,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "0518238a95c83e01e9d59beca732645fa4712097428d5caad28969a7c6690f1f"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-031",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "向量库和索引不能只看速度。ANN 召回率要先和 Flat 暴力搜索对比，再结合 QPS、延迟 P99 和内存占用设定业务门槛；95% 可以作为一个评估起点，但不是所有场景的统一标准。",
+      "citations": [
+        {
+          "id": "citation-script-031",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "向量库和索引不能只看速度。ANN 召回率要先和 Flat 暴力搜索对比，再结合 QPS、延迟 P99 和内存占用设定业务门槛；95% 可以作为一个评估起点，但不是所有场景的统一标准。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 61,
+            "endLine": 61,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "bb2f8048f4103e1e207780507fb5e603cb26711b91abb833c90a09ec7c3a76fe"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-005",
+        "atom-014",
+        "atom-015"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-032",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "数据规模继续增长时，再逐步考虑 HNSW 参数调优、用乘积量化或标量量化降低内存，以及多级索引、分片和倒排文件索引配乘积量化这类超大规模组合。",
+      "citations": [
+        {
+          "id": "citation-script-032",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "数据规模继续增长时，再逐步考虑 HNSW 参数调优、用乘积量化或标量量化降低内存，以及多级索引、分片和倒排文件索引配乘积量化这类超大规模组合。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 63,
+            "endLine": 63,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "0f13ff7cd3862d04f4e573501e39ef208f587f15b64d4c82b287e4c6ebbde67b"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-033",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "离线建库讲完，进入在线，从查询开始。查询进来先别急着检索，先做查询理解——判断这个查询怎么处理。",
+      "citations": [
+        {
+          "id": "citation-script-033",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "离线建库讲完，进入在线，从查询开始。查询进来先别急着检索，先做查询理解——判断这个查询怎么处理。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 65,
+            "endLine": 65,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "e9409b818fad99a2282eb62d3e9e111af260ff8be0d3aa207810314a178f37ed"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-034",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "查询理解可以拆成两块。一块是查询改写：多查询扩展，让 LLM 把一个查询改成多个不同角度；HyDE，先让 LLM 生成假设答案文档再用它检索；后退一步改写，把具体问题抽象成更高层问题；问题分解，把复合问题拆成子问题。另一块是查询路由：Adaptive RAG，也就是自适应 RAG 的思路，事前判断查询复杂度路由到不检索、单次检索、多跳检索。",
+      "citations": [
+        {
+          "id": "citation-script-034",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "查询理解可以拆成两块。一块是查询改写：多查询扩展，让 LLM 把一个查询改成多个不同角度；HyDE，先让 LLM 生成假设答案文档再用它检索；后退一步改写，把具体问题抽象成更高层问题；问题分解，把复合问题拆成子问题。另一块是查询路由：Adaptive RAG，也就是自适应 RAG 的思路，事前判断查询复杂度路由到不检索、单次检索、多跳检索。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 67,
+            "endLine": 67,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "b8a993e1dbfc19881faa700288aacb204fe464a4ef924f0655dc1810d4cf05fa"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-035",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "查询改写要不要做，关键看是不是所有查询都值得改写。简单事实查询直接检索就好，改写反而引入噪声、增加延迟和成本。所以一般先做自适应路由判断，简单的直接走，复杂的才改写或多跳。改写策略里，多查询扩展适用面相对广；HyDE 对概念性、方法性查询可能有效，但在事实查询里也可能因为假设错误把检索带偏，这个风险要单独评测。",
+      "citations": [
+        {
+          "id": "citation-script-035",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "查询改写要不要做，关键看是不是所有查询都值得改写。简单事实查询直接检索就好，改写反而引入噪声、增加延迟和成本。所以一般先做自适应路由判断，简单的直接走，复杂的才改写或多跳。改写策略里，多查询扩展适用面相对广；HyDE 对概念性、方法性查询可能有效，但在事实查询里也可能因为假设错误把检索带偏，这个风险要单独评测。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 69,
+            "endLine": 69,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "9d17594b277ce23c41875a3636db9dac2b4190e808ae65a5d68cdcffd236e8b1"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-036",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "落地时，我通常把路由判断和按需改写组合起来。先用分类器或大模型路由器判断查询类型，决定走哪条路：简单的不检索或单次检索，复杂的触发改写和多跳。改写也不是四种方法全上，根据查询特点选——模糊的用多查询扩展，概念性的用 HyDE，复合的用问题分解。多轮对话场景还要结合会话上下文做指代消解和条件补全，这个用 Redis 管会话。",
+      "citations": [
+        {
+          "id": "citation-script-036",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "落地时，我通常把路由判断和按需改写组合起来。先用分类器或大模型路由器判断查询类型，决定走哪条路：简单的不检索或单次检索，复杂的触发改写和多跳。改写也不是四种方法全上，根据查询特点选——模糊的用多查询扩展，概念性的用 HyDE，复合的用问题分解。多轮对话场景还要结合会话上下文做指代消解和条件补全，这个用 Redis 管会话。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 71,
+            "endLine": 71,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "eb25e77a1b12640ad72fd60070ddbb1e4353a74d0befd8006a5a6a578298bd9b"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-037",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "查询理解有没有带来收益，主要看改写后前若干结果的召回率是否提升、路由准确率的混淆矩阵，以及人工评估的改写质量。",
+      "citations": [
+        {
+          "id": "citation-script-037",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "查询理解有没有带来收益，主要看改写后前若干结果的召回率是否提升、路由准确率的混淆矩阵，以及人工评估的改写质量。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 73,
+            "endLine": 73,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "330a5a2d37bcb8cf9ffc01da6a3c5b46c6583a549fa980cb2e3604a708dd7bc5"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-038",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "查询理解跑稳以后，可以继续评估自适应 RAG 的事前路由，也可以微调查询改写模型，或者利用历史日志学习改写策略。",
+      "citations": [
+        {
+          "id": "citation-script-038",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "查询理解跑稳以后，可以继续评估自适应 RAG 的事前路由，也可以微调查询改写模型，或者利用历史日志学习改写策略。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 75,
+            "endLine": 75,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "5666b866f48dc9ebb4325ccb6553d48dfcf17daa0dea32125ea23988b1e27a7b"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-039",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "查询理解完，正式检索。这一步是召回的主力。",
+      "citations": [
+        {
+          "id": "citation-script-039",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "查询理解完，正式检索。这一步是召回的主力。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 77,
+            "endLine": 77,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "b64a98fb26c4171107cf1a654e9f27b7bfe3cd3683250de00471a07683e2fcc3"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-040",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "检索方式可以先分成几类：纯向量检索，懂语义但关键词匹配弱；纯 BM25，精确关键词但不懂语义；混合检索，BM25 加向量两路互补；更激进的多路，向量加全文加编号精确加表格，各管一类。BM25 的参数可以先用论文里的常见默认值，再用自己的领域数据校准。",
+      "citations": [
+        {
+          "id": "citation-script-040",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "检索方式可以先分成几类：纯向量检索，懂语义但关键词匹配弱；纯 BM25，精确关键词但不懂语义；混合检索，BM25 加向量两路互补；更激进的多路，向量加全文加编号精确加表格，各管一类。BM25 的参数可以先用论文里的常见默认值，再用自己的领域数据校准。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 79,
+            "endLine": 79,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "0959302d75a9206e41828eeb0f0fde5c818e8153b7daf986a116549e923f3d04"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-010"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-041",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "检索这一层，先要认清纯向量检索会在两类查询上翻车。第一类是编号查询，比如“GB 50204 第 4.1.2 条”，向量容易把编号当普通文本，匹配不准。第二类是术语精确查询，它要求字面命中。所以生产上通常至少要评估混合检索，补 BM25 关键词路。如果场景里编号、术语、表格多，再评估多路检索，把编号精确匹配和表格检索也单独建索引。",
+      "citations": [
+        {
+          "id": "citation-script-041",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "检索这一层，先要认清纯向量检索会在两类查询上翻车。第一类是编号查询，比如“GB 50204 第 4.1.2 条”，向量容易把编号当普通文本，匹配不准。第二类是术语精确查询，它要求字面命中。所以生产上通常至少要评估混合检索，补 BM25 关键词路。如果场景里编号、术语、表格多，再评估多路检索，把编号精确匹配和表格检索也单独建索引。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 81,
+            "endLine": 81,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "8be4ea517f0e3de141121b3cfdd08f9cad687fb156a9b9cf45e274a86822e1e7"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-004",
+        "atom-010",
+        "atom-016",
+        "atom-017",
+        "atom-018",
+        "atom-019"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-042",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "真正跑在线链路时，我一般至少从混合检索起步。向量路使用 pgvector，关键词路使用 PostgreSQL 全文检索，两路并行，各取前五十条候选。规范文档场景会加到四路：向量、全文、用正则做结构化的编号精确匹配，以及把表格内容单独建索引的表格检索。每一路负责一类查询。BM25 中文要分词，用 jieba。具体几路要看场景。每加一路都可能补充召回，也会增加噪声和延迟，最终要看离线指标和压测。在我参与的一个规范文档项目里，我们采用过四路混合检索，它是提升召回率的关键因素之一。",
+      "citations": [
+        {
+          "id": "citation-script-042",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "真正跑在线链路时，我一般至少从混合检索起步。向量路使用 pgvector，关键词路使用 PostgreSQL 全文检索，两路并行，各取前五十条候选。规范文档场景会加到四路：向量、全文、用正则做结构化的编号精确匹配，以及把表格内容单独建索引的表格检索。每一路负责一类查询。BM25 中文要分词，用 jieba。具体几路要看场景。每加一路都可能补充召回，也会增加噪声和延迟，最终要看离线指标和压测。在我参与的一个规范文档项目里，我们采用过四路混合检索，它是提升召回率的关键因素之一。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 83,
+            "endLine": 83,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "533ee019aa116e3c4891a8f9ed0b0860c8e6f12472c78e558ba517955c4e1c66"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-010"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-043",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "召回层是否有效，先看前若干结果的召回率和命中率，再和单路检索做对比，确认多路组合是不是真的带来提升。",
+      "citations": [
+        {
+          "id": "citation-script-043",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "召回层是否有效，先看前若干结果的召回率和命中率，再和单路检索做对比，确认多路组合是不是真的带来提升。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 85,
+            "endLine": 85,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "181daaec72322ac32b1d6f355e77cd562ff038b388f250d3a756345949f711a6"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-044",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "召回还不够时，优先从三处优化：增加真正有区分度的专用索引，调整各路候选数量，再用元数据预过滤缩小候选集。",
+      "citations": [
+        {
+          "id": "citation-script-044",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "召回还不够时，优先从三处优化：增加真正有区分度的专用索引，调整各路候选数量，再用元数据预过滤缩小候选集。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 87,
+            "endLine": 87,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "3a4385544685516c7fbbabdfa306b1a0b7254a0a85ec6e233656aef3f657941b"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-045",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "多路检索拿到的是多份候选，各路分数尺度不一样——向量相似度 0 到 1，全文是 BM25 分，编号是 0 或 1，不能直接加，要融合。",
+      "citations": [
+        {
+          "id": "citation-script-045",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "多路检索拿到的是多份候选，各路分数尺度不一样——向量相似度 0 到 1，全文是 BM25 分，编号是 0 或 1，不能直接加，要融合。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 89,
+            "endLine": 89,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "d626ec142ba5eb24af51514587af81e0a71050710040b24ce4e8eb571f92269e"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-010",
+        "atom-018",
+        "atom-019"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-046",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "融合方案里，RRF 也就是倒数排名融合，只用排名不用分数；加权分数融合，各路加权求和但要先归一化；凸组合。RRF 是常见默认方案。",
+      "citations": [
+        {
+          "id": "citation-script-046",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "融合方案里，RRF 也就是倒数排名融合，只用排名不用分数；加权分数融合，各路加权求和但要先归一化；凸组合。RRF 是常见默认方案。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 91,
+            "endLine": 91,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "77de8197e265128a3241aafd4efa661c29dd07b1e4dfa0ff903e4e5a8f5e5cc3"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-047",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "融合阶段为什么常从 RRF 开始？先看它的计算方式：每一路用 1 除以常数加名次，再把各路结果求和；这个常数常取 60。为什么用排名不用分数？因为各路尺度不同不可比，直接加权没意义；RRF 只用排名，尺度无关，简单鲁棒，像多评委投票不比绝对分比平均名次。常数取 60 是常见的论文经验起点，但仍应结合候选规模和离线指标确认。LangChain 已经提供混合检索加 RRF 的现成组合，可以减少重复实现。",
+      "citations": [
+        {
+          "id": "citation-script-047",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "融合阶段为什么常从 RRF 开始？先看它的计算方式：每一路用 1 除以常数加名次，再把各路结果求和；这个常数常取 60。为什么用排名不用分数？因为各路尺度不同不可比，直接加权没意义；RRF 只用排名，尺度无关，简单鲁棒，像多评委投票不比绝对分比平均名次。常数取 60 是常见的论文经验起点，但仍应结合候选规模和离线指标确认。LangChain 已经提供混合检索加 RRF 的现成组合，可以减少重复实现。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 93,
+            "endLine": 93,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "a24cff409f4c800de04d9c966f03b5c0942160b48fb1115a754a3a46e72df654"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-018",
+        "atom-019",
+        "atom-020"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-048",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "工程上，我通常先用标准 RRF。但如果某一路明显比其他路准，比如编号精确匹配在格式规则清晰时通常更可靠，可以用加权 RRF 给它更高权重。一般场景可以先从标准 RRF 开始，再看离线指标是否需要加权。",
+      "citations": [
+        {
+          "id": "citation-script-048",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "工程上，我通常先用标准 RRF。但如果某一路明显比其他路准，比如编号精确匹配在格式规则清晰时通常更可靠，可以用加权 RRF 给它更高权重。一般场景可以先从标准 RRF 开始，再看离线指标是否需要加权。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 95,
+            "endLine": 95,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "463426d3ddd642ae0ea89837dd3c199d515562de7363378a703be7d70cbd1dc5"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-049",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "融合是否真的有增益，可以看融合后的 nDCG、和单路结果的对比，以及双路重叠率。重叠率太低可能没有互补价值，太高又说明信息冗余。",
+      "citations": [
+        {
+          "id": "citation-script-049",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "融合是否真的有增益，可以看融合后的 nDCG、和单路结果的对比，以及双路重叠率。重叠率太低可能没有互补价值，太高又说明信息冗余。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 97,
+            "endLine": 97,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "74488e6ec54100a841216731705de79feb499f0013d7599397fe73355c47452e"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-050",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "有了标注数据以后，可以进一步学习融合权重；在此之前，先从加权 RRF 这类可解释方案开始。",
+      "citations": [
+        {
+          "id": "citation-script-050",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "有了标注数据以后，可以进一步学习融合权重；在此之前，先从加权 RRF 这类可解释方案开始。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 99,
+            "endLine": 99,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4e50ec88f8e6d98d8c5cb7d5c0d61f67f49a3e2a24b5ff7467273fb1f9a6aa93"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-051",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "融合完拿到前五十条候选，还混着噪声，上重排精排到真正最相关的前若干条。",
+      "citations": [
+        {
+          "id": "citation-script-051",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "融合完拿到前五十条候选，还混着噪声，上重排精排到真正最相关的前若干条。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 101,
+            "endLine": 101,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "6b6822bf921ab6822d32d88a8fefb7156b15911e99f6d8cabcdefb73f818ccdd"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-052",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "重排方案主要包括交叉编码器和 ColBERT。交叉编码器把查询和文档放进同一个 Transformer 做全注意力交互，通常比双塔召回更精细；开源可以看 BGE 系列重排模型，商业服务可以评估 Cohere 和 Voyage。ColBERT 采用延迟交互，在精度和速度之间折中。双塔编码器负责稠密召回，本身不等于独立重排。",
+      "citations": [
+        {
+          "id": "citation-script-052",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "重排方案主要包括交叉编码器和 ColBERT。交叉编码器把查询和文档放进同一个 Transformer 做全注意力交互，通常比双塔召回更精细；开源可以看 BGE 系列重排模型，商业服务可以评估 Cohere 和 Voyage。ColBERT 采用延迟交互，在精度和速度之间折中。双塔编码器负责稠密召回，本身不等于独立重排。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 103,
+            "endLine": 103,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "3b5d5f1a0ac2be3c00facf89ed8d70db40c8ac55a1d08dc0f82c7ff8c9c1f2e7"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-053",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "到了重排这里，先要分清交叉编码器和双塔的区别。向量召回是双塔，查询和文档各自编码再算相似度，快但粗，适合从大量文本块里粗筛；重排是交叉编码器，查询和文档拼在一起过模型，通常更精细，但计算更慢，更适合精排几十条。所以架构是先双塔粗召前五十条，再交叉编码器精排前五条或前二十条，不是直接用重排召回。Anthropic 的公开流程示例采用混合检索取前一百五十条，再重排到前二十条；这是一种参考配置，不是所有模型和任务的统一最优值。",
+      "citations": [
+        {
+          "id": "citation-script-053",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "到了重排这里，先要分清交叉编码器和双塔的区别。向量召回是双塔，查询和文档各自编码再算相似度，快但粗，适合从大量文本块里粗筛；重排是交叉编码器，查询和文档拼在一起过模型，通常更精细，但计算更慢，更适合精排几十条。所以架构是先双塔粗召前五十条，再交叉编码器精排前五条或前二十条，不是直接用重排召回。Anthropic 的公开流程示例采用混合检索取前一百五十条，再重排到前二十条；这是一种参考配置，不是所有模型和任务的统一最优值。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 105,
+            "endLine": 105,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4f0946c5fde757b3ae7f8991a7781f9e87c76aeee00779aeb2c0c50d8aaf4026"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-054",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "如果采用交叉编码器，可以先评估 BGE 系列的开源重排模型；需要速度和精度折中时，再评估 ColBERT。候选数量要用离线指标和延迟压测共同决定，前五十条到前一百五十条可以作为起始范围。LangChain 也可以接入重排模型。",
+      "citations": [
+        {
+          "id": "citation-script-054",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "如果采用交叉编码器，可以先评估 BGE 系列的开源重排模型；需要速度和精度折中时，再评估 ColBERT。候选数量要用离线指标和延迟压测共同决定，前五十条到前一百五十条可以作为起始范围。LangChain 也可以接入重排模型。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 107,
+            "endLine": 107,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "dbe173f27242adffed288c4b3765f1ee22ff11f89773415f85ef3d946ce7405f"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-055",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "重排值不值得这段额外延迟，关键看重排前后的 nDCG 和 MRR，确认相关项有没有排得更靠前，同时盯住重排延迟 P99。",
+      "citations": [
+        {
+          "id": "citation-script-055",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "重排值不值得这段额外延迟，关键看重排前后的 nDCG 和 MRR，确认相关项有没有排得更靠前，同时盯住重排延迟 P99。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 109,
+            "endLine": 109,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "55fb2a4c4da447f827f3f343d37910b299781bff491c2f6d5d70a6ce2c38f643"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-005",
+        "atom-014"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-056",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "重排层后续可以继续比较 ColBERT 的延迟交互、ColPali 这类直接处理文档图像的多模态重排，再根据领域数据做模型选型或微调。",
+      "citations": [
+        {
+          "id": "citation-script-056",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "重排层后续可以继续比较 ColBERT 的延迟交互、ColPali 这类直接处理文档图像的多模态重排，再根据领域数据做模型选型或微调。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 111,
+            "endLine": 111,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4fdad7eb9f1bada362b8ab4be893e0f83330fa8dce956ec35106cf6db06699dc"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-057",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "检索拿到前若干条证据，到这里是分水岭。普通 RAG 是直线——检索完直接生成，不管证据够不够都硬答。智能体式 RAG 是状态机，拿到证据先评估，不够就改写重检，够了才生成，实在不够就拒答。这一步我多讲点，因为这是智能体式之所以叫智能体式的核心。",
+      "citations": [
+        {
+          "id": "citation-script-057",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "检索拿到前若干条证据，到这里是分水岭。普通 RAG 是直线——检索完直接生成，不管证据够不够都硬答。智能体式 RAG 是状态机，拿到证据先评估，不够就改写重检，够了才生成，实在不够就拒答。这一步我多讲点，因为这是智能体式之所以叫智能体式的核心。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 113,
+            "endLine": 113,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "8e979b703dc79aa691611bc9f8090fa7b2b8e1b90000fb71f28f8e6bcd40f669"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-058",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这些智能体式方案，可以按反思时机来分。事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+      "citations": [
+        {
+          "id": "citation-script-058",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "这些智能体式方案，可以按反思时机来分。事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 115,
+            "endLine": 115,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "db13a1afa72215c30933277755082221d11b302d07874258b3dbdd33762f1e23"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-059",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "智能体式 RAG 怎么落到生产？自反思 RAG 原版需要微调，实施门槛较高，多数团队不会直接照搬完整方案。生产务实做法是用大模型裁判模拟反思——用提示词让 LLM 输出结构化判断，代替微调的反思词元。思想来自自反思方案，实现则是轻量的。四个反思时机里，支持性检查，也就是答案是否被上下文支持，是防幻觉的核心，即使不做其他三个，支持性检查也强烈建议做。",
+      "citations": [
+        {
+          "id": "citation-script-059",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "智能体式 RAG 怎么落到生产？自反思 RAG 原版需要微调，实施门槛较高，多数团队不会直接照搬完整方案。生产务实做法是用大模型裁判模拟反思——用提示词让 LLM 输出结构化判断，代替微调的反思词元。思想来自自反思方案，实现则是轻量的。四个反思时机里，支持性检查，也就是答案是否被上下文支持，是防幻觉的核心，即使不做其他三个，支持性检查也强烈建议做。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 117,
+            "endLine": 117,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "fee60f8054545d8cdfef5b05d109a8587c3bed745efa29d21d2c07f06ea7c52a"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-060",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "落地时，生产智能体式通常先做证据充分性评估、改写重试和拒答组成的轻量闭环，不急着微调。拿到前若干条证据，先综合证据数、相关度和引用支持率，判断够不够。不够就改写查询，再检索一次；同时把最大跳数限制在三跳左右，防止死循环。够了才生成，实在不够就拒答不硬编。整个决策循环我用 LangGraph 的图状态机实现，不是手搓条件判断和循环，LangGraph 更适合表达带条件分支和循环的决策流。坑是 LLM 自评有偏差偏好自己答案，关键场景要换更强模型当裁判做交叉评估。在我参与的一个项目里，我们采用了这套轻量闭环，引用支持率得到明显改善；具体项目名称和数值要在获得公开授权后再披露。",
+      "citations": [
+        {
+          "id": "citation-script-060",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "落地时，生产智能体式通常先做证据充分性评估、改写重试和拒答组成的轻量闭环，不急着微调。拿到前若干条证据，先综合证据数、相关度和引用支持率，判断够不够。不够就改写查询，再检索一次；同时把最大跳数限制在三跳左右，防止死循环。够了才生成，实在不够就拒答不硬编。整个决策循环我用 LangGraph 的图状态机实现，不是手搓条件判断和循环，LangGraph 更适合表达带条件分支和循环的决策流。坑是 LLM 自评有偏差偏好自己答案，关键场景要换更强模型当裁判做交叉评估。在我参与的一个项目里，我们采用了这套轻量闭环，引用支持率得到明显改善；具体项目名称和数值要在获得公开授权后再披露。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 119,
+            "endLine": 119,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "2dc5b23a54532cf68591b5a6d961d567c5e394f0922f954c0c79449e6f7543cd"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-061",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这套闭环不能只看答案漂亮不漂亮，还要看多跳任务成功率、拒答准确率、忠实度和收敛轮数分布；再比较有记忆和无记忆的成功率差值，验证反思记忆到底有没有价值。",
+      "citations": [
+        {
+          "id": "citation-script-061",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "这套闭环不能只看答案漂亮不漂亮，还要看多跳任务成功率、拒答准确率、忠实度和收敛轮数分布；再比较有记忆和无记忆的成功率差值，验证反思记忆到底有没有价值。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 121,
+            "endLine": 121,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "2533025926da51a1c2fac4a18ea37bf9202f63f0e56260ffa54307f05824d8a6"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-062",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "轻量闭环跑稳以后，再逐步评估跨轮能力：用反思记忆从失败中学习，按需要尝试自反思 RAG 微调、纠错型 RAG 的网络检索兜底、图谱 RAG 的跨文档推理和全局总结，以及多智能体互评。",
+      "citations": [
+        {
+          "id": "citation-script-062",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "轻量闭环跑稳以后，再逐步评估跨轮能力：用反思记忆从失败中学习，按需要尝试自反思 RAG 微调、纠错型 RAG 的网络检索兜底、图谱 RAG 的跨文档推理和全局总结，以及多智能体互评。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 123,
+            "endLine": 123,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "081203225d51cd0a9d5e82f60188cb8a2e0e225aa00e870203b49b09b6ea6878"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-063",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "证据够了，生成最终答案。",
+      "citations": [
+        {
+          "id": "citation-script-063",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "证据够了，生成最终答案。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 125,
+            "endLine": 125,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "a835952771288a91959c4930f48ddc270e30f47111d63749628e64a92c84744d"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-064",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "到了生成阶段，先把提示词约束做好：要求只基于资料答、资料没有就说不知道、温度调低 0 到 0.3 减发散。引用有三种实现。第一种是在提示词里让 LLM 自己标来源编号，简单，但可能标错。第二种是后处理校验，生成完成后再用规则或小模型核对引用是否真实。第三种是片段级引用，让模型直接指出答案片段对应哪个文本块；这种方式通常能给出更细的引用对应，Cohere 提供了相关能力。",
+      "citations": [
+        {
+          "id": "citation-script-064",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "到了生成阶段，先把提示词约束做好：要求只基于资料答、资料没有就说不知道、温度调低 0 到 0.3 减发散。引用有三种实现。第一种是在提示词里让 LLM 自己标来源编号，简单，但可能标错。第二种是后处理校验，生成完成后再用规则或小模型核对引用是否真实。第三种是片段级引用，让模型直接指出答案片段对应哪个文本块；这种方式通常能给出更细的引用对应，Cohere 提供了相关能力。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 127,
+            "endLine": 127,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4a1344733c29478e9241ffe25b259807deb1757dd0898b7c55f5c7815717b66f"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-011",
+        "atom-018",
+        "atom-021"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-065",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "到了生成环节，防幻觉是命门，要守住四道防线——支持性检查、温度调低、明确说不知道、引用校验。LLM 会合理化编造，即使上下文没有也可能编一个看似合理的，支持性检查加引用校验是兜底。引用我建议提示词级加后处理校验，别光信 LLM 标的号。",
+      "citations": [
+        {
+          "id": "citation-script-065",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "到了生成环节，防幻觉是命门，要守住四道防线——支持性检查、温度调低、明确说不知道、引用校验。LLM 会合理化编造，即使上下文没有也可能编一个看似合理的，支持性检查加引用校验是兜底。引用我建议提示词级加后处理校验，别光信 LLM 标的号。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 129,
+            "endLine": 129,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "1c8f7483a3d8a740d8dabe480e98f088ffb0b1b66cd9ede813ade546241f158c"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-066",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "具体到生成链路，提示词模板要求每个事实陈述后标来源编号，生成完用后处理校验每个来源编号是不是真存在于上下文且内容对应。多候选场景可以生成多个答案用有用性检查选最优，但成本翻倍，只对低置信答案做。答案要返回来源文档、章节、页码、引用片段，这是 RAG 相比纯 LLM 的可信度优势。",
+      "citations": [
+        {
+          "id": "citation-script-066",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "具体到生成链路，提示词模板要求每个事实陈述后标来源编号，生成完用后处理校验每个来源编号是不是真存在于上下文且内容对应。多候选场景可以生成多个答案用有用性检查选最优，但成本翻倍，只对低置信答案做。答案要返回来源文档、章节、页码、引用片段，这是 RAG 相比纯 LLM 的可信度优势。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 131,
+            "endLine": 131,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "1cf8cfa9b23882894c1eea0d45e20fb8e65168bb7103634b5955edbea097c5c2"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-067",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "生成环节最后看四个结果：引用是不是真实对应，覆盖是否完整，答案是否忠实，以及人工标注的幻觉率。",
+      "citations": [
+        {
+          "id": "citation-script-067",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "生成环节最后看四个结果：引用是不是真实对应，覆盖是否完整，答案是否忠实，以及人工标注的幻觉率。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 133,
+            "endLine": 133,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "910701c56a8fc52167209cadf37459478108ba6c601eeda957ebc32066aade83"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-068",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "生成侧还可以继续加强四件事：用结构化输出约束引用格式，逐句做支持性检查，把引用回溯到具体页码和条文号，并给答案标注置信度。",
+      "citations": [
+        {
+          "id": "citation-script-068",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "生成侧还可以继续加强四件事：用结构化输出约束引用格式，逐句做支持性检查，把引用回溯到具体页码和条文号，并给答案标注置信度。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 135,
+            "endLine": 135,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "79e7d726f64d86b2838fa6815d595a280bd01e7eb3f644056f4d0693946e8f1c"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-069",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "不评测的 RAG 就是瞎调，每改一环都要有指标量化。评测贯穿全链路。",
+      "citations": [
+        {
+          "id": "citation-script-069",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "不评测的 RAG 就是瞎调，每改一环都要有指标量化。评测贯穿全链路。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 137,
+            "endLine": 137,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "004c77f22a8754820d5e18938b4e9d286fe88cc1ca8d005f5dfb1646ed265826"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-070",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "评测工具里，RAGAS 是常用框架之一。它主要看四类指标：忠实度，判断答案是否忠于证据；答案相关性，看回答是否切题；上下文精度，看检索结果准不准；上下文召回率，看该找的证据有没有找全。TruLens 和 DeepEval 也有类似能力；除此之外，还可以用自建黄金问答集配合调用链归因。检索独立指标有前若干结果的召回率、MRR、nDCG、命中率。",
+      "citations": [
+        {
+          "id": "citation-script-070",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "评测工具里，RAGAS 是常用框架之一。它主要看四类指标：忠实度，判断答案是否忠于证据；答案相关性，看回答是否切题；上下文精度，看检索结果准不准；上下文召回率，看该找的证据有没有找全。TruLens 和 DeepEval 也有类似能力；除此之外，还可以用自建黄金问答集配合调用链归因。检索独立指标有前若干结果的召回率、MRR、nDCG、命中率。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 139,
+            "endLine": 139,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "bbf8509560062260c95c2c630332ebf4d86fd6059c3d9ee7fa87be2b9582fb01"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-071",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "评测怎么落地？先承认 RAGAS 用大模型裁判也有偏差——偏好长答案、偏好自己风格，要换不同强模型当裁判交叉、多次评判取平均、关键场景加人工校准。我的判断是，贴合具体场景的黄金问答集加调用链归因比通用 RAGAS 更实用，因为能定位到具体环节。评测集三种来源混合：LLM 从文档生成查询做量、人工标注做质、生产真实查询采样做校准。",
+      "citations": [
+        {
+          "id": "citation-script-071",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "评测怎么落地？先承认 RAGAS 用大模型裁判也有偏差——偏好长答案、偏好自己风格，要换不同强模型当裁判交叉、多次评判取平均、关键场景加人工校准。我的判断是，贴合具体场景的黄金问答集加调用链归因比通用 RAGAS 更实用，因为能定位到具体环节。评测集三种来源混合：LLM 从文档生成查询做量、人工标注做质、生产真实查询采样做校准。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 141,
+            "endLine": 141,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "56bc4a51f9eefc177f8fb68723275e5a68f09b33523e5b7e349b3f45bc9099a3"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-072",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "评测闭环可以这样搭：先建 200 条左右黄金问答集，核心指标三个——前五召回率看检索、引用支持率看生成可信、拒答准确率看兜底。线上每次问答落调用链，记录查询、改写、召回片段、排序分数、引用、提示词版本、用户反馈。问题样例通过调用链定位到具体环节——是分块切断条文、还是召回没命中、还是生成没挂引用，而不是笼统说效果不好，定位完回流迭代。在我参与的一个项目里，我们用这套调用链闭环定位并修复问题，前五召回率得到明显提升；具体项目名称和数值要在获得公开授权后再披露。",
+      "citations": [
+        {
+          "id": "citation-script-072",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "评测闭环可以这样搭：先建 200 条左右黄金问答集，核心指标三个——前五召回率看检索、引用支持率看生成可信、拒答准确率看兜底。线上每次问答落调用链，记录查询、改写、召回片段、排序分数、引用、提示词版本、用户反馈。问题样例通过调用链定位到具体环节——是分块切断条文、还是召回没命中、还是生成没挂引用，而不是笼统说效果不好，定位完回流迭代。在我参与的一个项目里，我们用这套调用链闭环定位并修复问题，前五召回率得到明显提升；具体项目名称和数值要在获得公开授权后再披露。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 143,
+            "endLine": 143,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "73f52e92ece73ed160a5cff235c62b2161a6141dcb9afe56a90fd041466f02d3"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-018",
+        "atom-022"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-073",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "整条评测链要持续追踪前若干结果的召回率、忠实度、答案相关性、上下文精度和召回率、引用准确率，以及拒答准确率。",
+      "citations": [
+        {
+          "id": "citation-script-073",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "整条评测链要持续追踪前若干结果的召回率、忠实度、答案相关性、上下文精度和召回率、引用准确率，以及拒答准确率。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 145,
+            "endLine": 145,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "a4d322be786567d2e80e3c69de6cbfeb52a490137af12bf6c2c6a78a8bfad5d0"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-074",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "评测体系成熟以后，可以进一步全量接入 RAGAS 四类指标，再校准大模型裁判偏差，自动归因问题样例。下一步，把线上对照实验和持续集成式回归测试接起来，做到每次改动都先验证不退化，再上线。",
+      "citations": [
+        {
+          "id": "citation-script-074",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "评测体系成熟以后，可以进一步全量接入 RAGAS 四类指标，再校准大模型裁判偏差，自动归因问题样例。下一步，把线上对照实验和持续集成式回归测试接起来，做到每次改动都先验证不退化，再上线。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 147,
+            "endLine": 147,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "c842d885b2b73760e7b870d88f5eae853a582fa4d4abc8d695ea3fd42b5ea379"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-075",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "从演示到生产，还有几件关键工程能力要补齐，这步往往是被忽视但决定能不能上线的。",
+      "citations": [
+        {
+          "id": "citation-script-075",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "从演示到生产，还有几件关键工程能力要补齐，这步往往是被忽视但决定能不能上线的。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 149,
+            "endLine": 149,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "d5575fc2b7e8bee7df9ad1ecd0b9860521f8fa0dd811492c840572f64e06b999"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-076",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "上线前，通常还要把几组工程能力补齐。提示词缓存和流式输出，分别控制成本与首字延迟；内容去重和防提示词注入，负责上下文质量与安全；增量索引和版本管理，控制更新成本和模型切换；最后再用监控告警守住可用性。",
+      "citations": [
+        {
+          "id": "citation-script-076",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "上线前，通常还要把几组工程能力补齐。提示词缓存和流式输出，分别控制成本与首字延迟；内容去重和防提示词注入，负责上下文质量与安全；增量索引和版本管理，控制更新成本和模型切换；最后再用监控告警守住可用性。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 151,
+            "endLine": 151,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "4fe200b6b26c07419f3e7dbccff82f578a449484337a342629c89ba0ccda3d26"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-077",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "最后看上线工程，这些能力要组合着选。在上下文检索这类重复携带长前缀的流程里，提示词缓存应优先评估。公开材料给出过显著的成本和首词元延迟改善，但真实收益取决于模型、缓存命中率和当前计费规则，不能直接当作项目承诺。流式输出通常是改善用户体验的重要手段。防提示词注入是安全重点，检索到的文档里可能藏恶意指令，做法包括：用分隔符隔离文档内容，在系统中明确文档是数据而不是指令，再做输出过滤。增量索引用内容指纹加版本，文档更新不做全量重建，指纹相同跳过幂等、版本变化只重建差异块。换向量模型要版本管理，带向量模型版本字段灰度切换。",
+      "citations": [
+        {
+          "id": "citation-script-077",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "最后看上线工程，这些能力要组合着选。在上下文检索这类重复携带长前缀的流程里，提示词缓存应优先评估。公开材料给出过显著的成本和首词元延迟改善，但真实收益取决于模型、缓存命中率和当前计费规则，不能直接当作项目承诺。流式输出通常是改善用户体验的重要手段。防提示词注入是安全重点，检索到的文档里可能藏恶意指令，做法包括：用分隔符隔离文档内容，在系统中明确文档是数据而不是指令，再做输出过滤。增量索引用内容指纹加版本，文档更新不做全量重建，指纹相同跳过幂等、版本变化只重建差异块。换向量模型要版本管理，带向量模型版本字段灰度切换。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 153,
+            "endLine": 153,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "87689795c6f0eb307ef9aae8368164c04003b863a3ee8edf6cffbce5e88e30c1"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-078",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "这些能力不能各做各的，而要组合配套。提示词缓存配上下文检索；增量索引配版本管理；防注入配输出过滤；全链路监控延迟、成本、错误率和缓存命中率。pgvector 的 HNSW 删除是标记删除，定期重建索引回收空间，这个运维细节要注意。",
+      "citations": [
+        {
+          "id": "citation-script-078",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "这些能力不能各做各的，而要组合配套。提示词缓存配上下文检索；增量索引配版本管理；防注入配输出过滤；全链路监控延迟、成本、错误率和缓存命中率。pgvector 的 HNSW 删除是标记删除，定期重建索引回收空间，这个运维细节要注意。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 155,
+            "endLine": 155,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "395b9ebbdd7e15d9701074fbfbe8c0a04e6e77783f1c44544ec5ba69d6dc2a55"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-079",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "到了线上，指标还要扩展到工程侧：可用性 SLA、延迟 P99、单次查询成本、缓存命中率、注入拦截率、增量索引正确性和版本切换稳定性。SLA 与缓存收益门槛，要按业务目标和成本模型单独设定。",
+      "citations": [
+        {
+          "id": "citation-script-079",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "到了线上，指标还要扩展到工程侧：可用性 SLA、延迟 P99、单次查询成本、缓存命中率、注入拦截率、增量索引正确性和版本切换稳定性。SLA 与缓存收益门槛，要按业务目标和成本模型单独设定。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 157,
+            "endLine": 157,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "c3514f2fef482de17e7b7754ccaad0da70156bebe39f8555967d102cbb8a0d37"
+        }
+      ],
+      "protectedAtomIds": [
+        "atom-005",
+        "atom-014"
+      ],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-080",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "工程侧的下一步，包括多级缓存，也就是查询结果缓存和向量化缓存；还可以做异步增量索引、灰度发布、用混沌测试验证注入攻击防护，并补上成本告警。",
+      "citations": [
+        {
+          "id": "citation-script-080",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "工程侧的下一步，包括多级缓存，也就是查询结果缓存和向量化缓存；还可以做异步增量索引、灰度发布、用混沌测试验证注入攻击防护，并补上成本告警。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 159,
+            "endLine": 159,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "03fcac6bb78ac682c7da1bb03d27ba631e67f42d28372a9a853e55975e652b62"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-081",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "第一，RAG 全链路是一条数据流。离线建库，包括解析、分块、上下文增强和向量化索引，决定系统上限；在线检索，包括查询理解、多路混合、RRF 和重排，决定召回效果；智能体式决策，通过评估、改写重试和拒答，决定回答是否可信；最后，评测闭环决定这套系统能不能持续迭代。",
+      "citations": [
+        {
+          "id": "citation-script-081",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "第一，RAG 全链路是一条数据流。离线建库，包括解析、分块、上下文增强和向量化索引，决定系统上限；在线检索，包括查询理解、多路混合、RRF 和重排，决定召回效果；智能体式决策，通过评估、改写重试和拒答，决定回答是否可信；最后，评测闭环决定这套系统能不能持续迭代。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 161,
+            "endLine": 161,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "243780485a0527dd1b40cabc277acfba1e2a3153f6cb15bf2bfbe13e07b44879"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-082",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "第二，每一步都不是单一选型，生产多是组合——解析是主引擎加规则清洗加多模态兜底，检索是多路混合，智能体式是轻量闭环不微调，关键是要有选型判断和理由，不是调 API。",
+      "citations": [
+        {
+          "id": "citation-script-082",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "第二，每一步都不是单一选型，生产多是组合——解析是主引擎加规则清洗加多模态兜底，检索是多路混合，智能体式是轻量闭环不微调，关键是要有选型判断和理由，不是调 API。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 163,
+            "endLine": 163,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "fe66e16fa900b8c5e6cfa2de1ef7e365fecf6be743e3c535ec2a28024799a714"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-083",
+      "claimKind": "creator-opinion",
+      "supportStatus": "supported",
+      "statement": "第三，每一步都有指标，也都有继续提升的空间。上下文检索要看失败率有没有下降；反思记忆要看智能体能不能从失败中学习；RAGAS 则用四类指标量化质量。归根结底，RAG 是一套工程系统，不是单纯的提示词技巧，讲究的是每一环都可控、可测、可迭代。",
+      "citations": [
+        {
+          "id": "citation-script-083",
+          "sourceId": "source-001-0bd400ff",
+          "quote": "第三，每一步都有指标，也都有继续提升的空间。上下文检索要看失败率有没有下降；反思记忆要看智能体能不能从失败中学习；RAGAS 则用四类指标量化质量。归根结底，RAG 是一套工程系统，不是单纯的提示词技巧，讲究的是每一环都可控、可测、可迭代。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 165,
+            "endLine": 165,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "2cdd02e106365727d3becb1c5e31d2fade883fff0657869c3a2a55a7bd590305"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    }
+  ],
+  "protectedAtoms": [
+    {
+      "id": "atom-001",
+      "type": "number",
+      "sourceSurface": "2024",
+      "canonicalValue": "2024",
+      "allowedNarrationForms": [
+        "2024"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-002",
+      "type": "number",
+      "sourceSurface": "512",
+      "canonicalValue": "512",
+      "allowedNarrationForms": [
+        "512"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-003",
+      "type": "percentage",
+      "sourceSurface": "10%",
+      "canonicalValue": "10%",
+      "allowedNarrationForms": [
+        "10%"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-004",
+      "type": "number",
+      "sourceSurface": "50",
+      "canonicalValue": "50",
+      "allowedNarrationForms": [
+        "50"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-005",
+      "type": "number",
+      "sourceSurface": "9",
+      "canonicalValue": "9",
+      "allowedNarrationForms": [
+        "9"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-006",
+      "type": "number",
+      "sourceSurface": "100",
+      "canonicalValue": "100",
+      "allowedNarrationForms": [
+        "100"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-007",
+      "type": "percentage",
+      "sourceSurface": "5.7%",
+      "canonicalValue": "5.7%",
+      "allowedNarrationForms": [
+        "5.7%"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-008",
+      "type": "percentage",
+      "sourceSurface": "1.9%",
+      "canonicalValue": "1.9%",
+      "allowedNarrationForms": [
+        "1.9%"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-009",
+      "type": "percentage",
+      "sourceSurface": "67%",
+      "canonicalValue": "67%",
+      "allowedNarrationForms": [
+        "67%"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-010",
+      "type": "number",
+      "sourceSurface": "25",
+      "canonicalValue": "25",
+      "allowedNarrationForms": [
+        "25"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-011",
+      "type": "number",
+      "sourceSurface": "3",
+      "canonicalValue": "3",
+      "allowedNarrationForms": [
+        "3"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-012",
+      "type": "number",
+      "sourceSurface": "3072",
+      "canonicalValue": "3072",
+      "allowedNarrationForms": [
+        "3072"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-013",
+      "type": "number",
+      "sourceSurface": "1024",
+      "canonicalValue": "1024",
+      "allowedNarrationForms": [
+        "1024"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-014",
+      "type": "number",
+      "sourceSurface": "99",
+      "canonicalValue": "99",
+      "allowedNarrationForms": [
+        "99"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-015",
+      "type": "percentage",
+      "sourceSurface": "95%",
+      "canonicalValue": "95%",
+      "allowedNarrationForms": [
+        "95%"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-016",
+      "type": "number",
+      "sourceSurface": "50204",
+      "canonicalValue": "50204",
+      "allowedNarrationForms": [
+        "50204"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-017",
+      "type": "number",
+      "sourceSurface": "4.1.2",
+      "canonicalValue": "4.1.2",
+      "allowedNarrationForms": [
+        "4.1.2"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-018",
+      "type": "number",
+      "sourceSurface": "0",
+      "canonicalValue": "0",
+      "allowedNarrationForms": [
+        "0"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-019",
+      "type": "number",
+      "sourceSurface": "1",
+      "canonicalValue": "1",
+      "allowedNarrationForms": [
+        "1"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-020",
+      "type": "number",
+      "sourceSurface": "60",
+      "canonicalValue": "60",
+      "allowedNarrationForms": [
+        "60"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-021",
+      "type": "number",
+      "sourceSurface": "0.3",
+      "canonicalValue": "0.3",
+      "allowedNarrationForms": [
+        "0.3"
+      ],
+      "omissionPolicy": "required"
+    },
+    {
+      "id": "atom-022",
+      "type": "number",
+      "sourceSurface": "200",
+      "canonicalValue": "200",
+      "allowedNarrationForms": [
+        "200"
+      ],
+      "omissionPolicy": "required"
+    }
+  ],
+  "terms": [
+    {
+      "id": "term-001",
+      "token": "RAG",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "RAG"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-002",
+      "token": "API",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "API"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-003",
+      "token": "PDF",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "PDF"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-004",
+      "token": "Word",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Word"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-005",
+      "token": "HTML",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "HTML"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-006",
+      "token": "Confluence",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Confluence"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-007",
+      "token": "PyMuPDF",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "PyMuPDF"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-008",
+      "token": "pdfplumber",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "pdfplumber"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-009",
+      "token": "Unstructured",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Unstructured"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-010",
+      "token": "MinerU",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "MinerU"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-011",
+      "token": "Docling",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Docling"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-012",
+      "token": "LlamaParse",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "LlamaParse"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-013",
+      "token": "LLM",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "LLM"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-014",
+      "token": "ColPali",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "ColPali"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-015",
+      "token": "LangChain",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "LangChain"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-016",
+      "token": "markdown",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "markdown"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-017",
+      "token": "LlamaIndex",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "LlamaIndex"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-018",
+      "token": "Markdown",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Markdown"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-019",
+      "token": "Jina",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Jina"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-020",
+      "token": "Anthropic",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Anthropic"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-021",
+      "token": "BM25",
+      "tokenClass": "mixed-version",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "BM25"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-022",
+      "token": "BGE",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "BGE"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-023",
+      "token": "ColBERT",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "ColBERT"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-024",
+      "token": "bge-m3",
+      "tokenClass": "mixed-version",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "bge-m3"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-025",
+      "token": "OpenAI",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "OpenAI"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-026",
+      "token": "Voyage",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Voyage"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-027",
+      "token": "Cohere",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Cohere"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-028",
+      "token": "MTEB",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "MTEB"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-029",
+      "token": "Matryoshka",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Matryoshka"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-030",
+      "token": "pgvector",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "pgvector"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-031",
+      "token": "Milvus",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Milvus"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-032",
+      "token": "Weaviate",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Weaviate"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-033",
+      "token": "Qdrant",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Qdrant"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-034",
+      "token": "Chroma",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Chroma"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-035",
+      "token": "Elasticsearch",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Elasticsearch"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-036",
+      "token": "PostgreSQL",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "PostgreSQL"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-037",
+      "token": "HNSW",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "HNSW"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-038",
+      "token": "IVF",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "IVF"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-039",
+      "token": "Flat",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Flat"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-040",
+      "token": "SQL",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "SQL"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-041",
+      "token": "ANN",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "ANN"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-042",
+      "token": "QPS",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "QPS"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-043",
+      "token": "P99",
+      "tokenClass": "mixed-version",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "P99"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-044",
+      "token": "HyDE",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "HyDE"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-045",
+      "token": "Adaptive",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Adaptive"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-046",
+      "token": "Redis",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Redis"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-047",
+      "token": "GB",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "GB"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-048",
+      "token": "jieba",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "jieba"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-049",
+      "token": "RRF",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "RRF"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-050",
+      "token": "nDCG",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "nDCG"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-051",
+      "token": "Transformer",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Transformer"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-052",
+      "token": "MRR",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "MRR"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-053",
+      "token": "CRAG",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "CRAG"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-054",
+      "token": "Self-RAG",
+      "tokenClass": "code-identifier",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Self-RAG"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-055",
+      "token": "Reflexion",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "Reflexion"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-056",
+      "token": "LangGraph",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "LangGraph"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-057",
+      "token": "RAGAS",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "RAGAS"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-058",
+      "token": "TruLens",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "TruLens"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-059",
+      "token": "DeepEval",
+      "tokenClass": "english-word",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "DeepEval"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-060",
+      "token": "SLA",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "SLA"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    }
+  ],
+  "gaps": [
+    {
+      "question": "Which script statements must be promoted from creator opinion to externally supported facts?",
+      "reason": "The approved-script route preserves user wording; publication as fact requires a separate external evidence package."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "autovideo-motion-probe-invariant-audit/v1",
+  "projectId": "E06-keyword-handoff-probe",
+  "recipeId": "keyword-handoff",
+  "recipeVersion": "1.0.0",
+  "composition": {
+    "path": "experiments/E06-keyword-handoff-probe/index.html",
+    "sha256": "e5cf424659bbe0a792566661505562aa674547bfa7189fbbabcf55ffe9547931"
+  },
+  "passed": true,
+  "checks": {
+    "landscape16x9": true,
+    "lightApricotBackground": true,
+    "qVersionHostAssets": true,
+    "hostLeft": true,
+    "contentRight": true,
+    "captionPersistent": true,
+    "contentWorldOnlyCamera": true
+  },
+  "evidence": {
+    "format": "index.html declares 1920x1080, 30fps and 8 seconds",
+    "background": "CSS source is #F2DFC7; browser snapshot samples at (1900,20), (1850,850), and (10,500) are all #F2DFC7",
+    "host": "AssetManifest binds the approved supplied host source hashes and normalized transparent derivatives",
+    "zones": "DOM data-zone values bind host.left, content.right, and caption",
+    "camera": "content-world declares content-world-only; no host or caption element is inside the content-world wrapper"
+  }
+}

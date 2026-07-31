@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "demoText-f1-20s-data-hud-narration",
+  "baseStyleId": "data-hud-narration",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [],
+  "blueprints": [],
+  "motionRules": [
+    "viewport-change",
+    "stat-bars-and-fills"
+  ],
+  "status": "draft",
+  "approvedBy": null,
+  "notes": "User explicitly requested approximately 20 seconds per F1 style. Official data-chart, flowchart-vertical, caption-editorial-emphasis, and grain-overlay were evaluated first. Their motion grammar was adapted where appropriate; the blocks were not mounted because their dimensions/content do not match this shared portrait comparison, and the official grain component uses an infinite CSS animation forbidden by this project determinism contract.",
+  "receipts": [
+    {
+      "source": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md",
+      "kind": "user-provided",
+      "license": "unknown"
+    },
+    {
+      "source": "vendor/hyperframes/registry/registry.json",
+      "kind": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/rules-index.md",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

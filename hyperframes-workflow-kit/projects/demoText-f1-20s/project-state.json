@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "demoText-f1-20s",
+  "stage": "style-review",
+  "createdAt": "2026-07-16T14:41:56.387Z",
+  "updatedAt": "2026-07-17T01:22:04.506Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "9:16",
+    "targetDuration": "20s",
+    "platform": "本地风格评审",
+    "audience": "AI学习者",
+    "rememberedOutcome": "会用工具不等于懂系统",
+    "forbiddenTreatments": "闪白、闪黑、RGB glitch、粒子堆叠、静态PPT翻页"
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "user-request",
+      "approvedAt": "2026-07-16T15:06:39.046Z"
+    },
+    "style": {
+      "status": "pending",
+      "approvedBy": null,
+      "approvedAt": null
+    }
+  },
+  "nextAction": "Review the completed A-G probes and approve one style selection."
+}

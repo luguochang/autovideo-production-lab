@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "persondesign-modern-host-probe",
+  "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+  "baseStyleId": "modern-ip-host-explainer",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [
+    "caption-weight-shift"
+  ],
+  "blueprints": [],
+  "motionRules": [
+    "svg-path-draw",
+    "scale-swap-transition"
+  ],
+  "status": "approved",
+  "approvedBy": "user",
+  "notes": "Approved template v1.0.0. Default palette: light-apricot (03). Saved alternate: warm-peach (02). Static light-apricot master passed strict HyperFrames checks; the previously approved multi-pose motion probe remains the structural motion evidence. No new video render was requested.",
+  "receipts": [
+    {
+      "source": "style-library/styles/project/modern-ip-host-explainer/",
+      "kind": "project-local",
+      "license": "project-generated; user-provided character rights not implied"
+    },
+    {
+      "source": "vendor/hyperframes/registry/registry.json",
+      "kind": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

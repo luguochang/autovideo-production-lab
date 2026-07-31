@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "baseStyleId": "modern-ip-host-explainer",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [
+    "flowchart"
+  ],
+  "blueprints": [],
+  "motionRules": [
+    "svg-path-draw",
+    "viewport-change",
+    "discrete-text-sequence",
+    "card-morph-anchor"
+  ],
+  "status": "approved",
+  "approvedBy": "codex-autonomous-internal-review",
+  "notes": "Approved after still and motion-probe review.",
+  "receipts": [
+    {
+      "source": "style-library/styles/project/modern-ip-host-explainer/",
+      "kind": "project-local",
+      "license": "project-generated; user-provided character rights not implied"
+    },
+    {
+      "source": "vendor/hyperframes/registry/registry.json",
+      "kind": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

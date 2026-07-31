@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/motion-recipe-lifecycle-evidence.json",
+  "title": "AutoVideo Motion Recipe Lifecycle Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "recipeId", "recipeVersion", "requestedState"],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-motion-recipe-lifecycle-evidence/v1"},
+    "recipeId": {"type": "string", "minLength": 1},
+    "recipeVersion": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "requestedState": {"enum": ["probe-passed", "approved-project", "promoted-template", "retired"]},
+    "probe": {"$ref": "#/$defs/probe"},
+    "projectApproval": {"$ref": "#/$defs/projectApproval"},
+    "templateApproval": {"$ref": "#/$defs/templateApproval"},
+    "retirement": {"$ref": "#/$defs/retirement"}
+  },
+  "allOf": [
+    {"if": {"properties": {"requestedState": {"const": "probe-passed"}}}, "then": {"required": ["probe"], "properties": {"probe": true}}},
+    {"if": {"properties": {"requestedState": {"const": "approved-project"}}}, "then": {"required": ["projectApproval"], "properties": {"projectApproval": true}}},
+    {"if": {"properties": {"requestedState": {"const": "promoted-template"}}}, "then": {"required": ["templateApproval"], "properties": {"templateApproval": true}}},
+    {"if": {"properties": {"requestedState": {"const": "retired"}}}, "then": {"required": ["retirement"], "properties": {"retirement": true}}}
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "fileBinding": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"$ref": "#/$defs/sha256"}}
+    },
+    "humanApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "decision", "scope", "reviewer", "approvedAt"],
+      "properties": {
+        "source": {"const": "human"},
+        "decision": {"const": "approved"},
+        "scope": {"enum": ["project", "template", "retirement"]},
+        "reviewer": {"type": "string", "minLength": 1},
+        "approvedAt": {"type": "string", "format": "date-time"},
+        "notes": {"type": "string"}
+      }
+    },
+    "invariants": {"$ref": "https://autovideo.local/schema/motion-recipe-lifecycle.json#/$defs/invariants"},
+    "officialReuse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "implementation"],
+      "properties": {
+        "kind": {"enum": ["official-registry", "official-blueprint", "official-motion-rule"]},
+        "id": {"type": "string", "minLength": 1},
+        "implementation": {"$ref": "#/$defs/fileBinding"}
+      }
+    },
+    "probe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "projectId", "path", "durationSeconds", "sameNarrationWindow", "narrationSha256", "audioSha256", "invariants", "invariantAudit", "hostAssetManifest", "stills", "motionProbe", "hyperframesCheck", "visualReview", "officialReuseObserved"],
+      "properties": {
+        "kind": {"enum": ["motion-probe", "batch-contract"]},
+        "projectId": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "durationSeconds": {"type": "number", "exclusiveMinimum": 0},
+        "sameNarrationWindow": {"type": "boolean"},
+        "narrationSha256": {"$ref": "#/$defs/sha256"},
+        "audioSha256": {"$ref": "#/$defs/sha256"},
+        "invariants": {"$ref": "#/$defs/invariants"},
+        "invariantAudit": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["binding", "passed", "checks"],
+          "properties": {
+            "binding": {"$ref": "#/$defs/fileBinding"},
+            "passed": {"type": "boolean"},
+            "checks": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["landscape16x9", "lightApricotBackground", "qVersionHostAssets", "hostLeft", "contentRight", "captionPersistent", "contentWorldOnlyCamera"],
+              "properties": {
+                "landscape16x9": {"type": "boolean"},
+                "lightApricotBackground": {"type": "boolean"},
+                "qVersionHostAssets": {"type": "boolean"},
+                "hostLeft": {"type": "boolean"},
+                "contentRight": {"type": "boolean"},
+                "captionPersistent": {"type": "boolean"},
+                "contentWorldOnlyCamera": {"type": "boolean"}
+              }
+            }
+          }
+        },
+        "hostAssetManifest": {"$ref": "#/$defs/fileBinding"},
+        "stills": {"type": "array", "items": {"$ref": "#/$defs/fileBinding"}},
+        "motionProbe": {"$ref": "#/$defs/fileBinding"},
+        "hyperframesCheck": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["binding", "ok", "strict", "snapshotsEnabled", "findingCount", "version"],
+          "properties": {
+            "binding": {"$ref": "#/$defs/fileBinding"},
+            "ok": {"type": "boolean"},
+            "strict": {"type": "boolean"},
+            "snapshotsEnabled": {"type": "boolean"},
+            "findingCount": {"type": "integer", "minimum": 0},
+            "version": {"type": "string", "minLength": 1}
+          }
+        },
+        "visualReview": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["status", "reviewer", "reviewedAt", "checks"],
+          "properties": {
+            "status": {"enum": ["passed", "failed"]},
+            "reviewer": {"type": "string", "minLength": 1},
+            "reviewedAt": {"type": "string", "format": "date-time"},
+            "checks": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["layout", "textFit", "seekBehavior", "hostStable", "captionStable", "terminalFrameReadable", "officialReuseVisible", "exactBackground", "cameraScopedToContentWorld"],
+              "properties": {
+                "layout": {"type": "boolean"},
+                "textFit": {"type": "boolean"},
+                "seekBehavior": {"type": "boolean"},
+                "hostStable": {"type": "boolean"},
+                "captionStable": {"type": "boolean"},
+                "terminalFrameReadable": {"type": "boolean"},
+                "officialReuseVisible": {"type": "boolean"},
+                "exactBackground": {"type": "boolean"},
+                "cameraScopedToContentWorld": {"type": "boolean"}
+              }
+            }
+          }
+        },
+        "officialReuseObserved": {"type": "array", "items": {"$ref": "#/$defs/officialReuse"}}
+      }
+    },
+    "projectApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["projectId", "styleSelection", "probeReceipt", "humanApproval"],
+      "properties": {
+        "projectId": {"type": "string", "minLength": 1},
+        "styleSelection": {"$ref": "#/$defs/fileBinding"},
+        "probeReceipt": {"$ref": "#/$defs/fileBinding"},
+        "humanApproval": {"$ref": "#/$defs/humanApproval"}
+      }
+    },
+    "templateApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["report", "crossProjectRegressionPassed", "backwardCompatibilityPassed", "humanApproval"],
+      "properties": {
+        "report": {"$ref": "#/$defs/fileBinding"},
+        "crossProjectRegressionPassed": {"type": "boolean"},
+        "backwardCompatibilityPassed": {"type": "boolean"},
+        "humanApproval": {"$ref": "#/$defs/humanApproval"}
+      }
+    },
+    "retirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason", "replacementRecipeId", "existingProjectReplayAllowed", "futureSelectionBlocked", "humanApproval"],
+      "properties": {
+        "reason": {"enum": ["visual-regression", "semantic-regression", "determinism-regression", "accessibility-regression", "rights-or-license-blocked", "official-source-removed", "superseded-by-new-version", "template-incompatibility"]},
+        "replacementRecipeId": {"type": ["string", "null"]},
+        "existingProjectReplayAllowed": {"const": true},
+        "futureSelectionBlocked": {"const": true},
+        "humanApproval": {"$ref": "#/$defs/humanApproval"}
+      }
+    }
+  }
+}

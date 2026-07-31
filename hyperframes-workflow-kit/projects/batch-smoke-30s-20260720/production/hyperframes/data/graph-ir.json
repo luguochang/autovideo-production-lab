@@ -1,0 +1,548 @@
+{
+  "schemaVersion": "autovideo-graph-ir/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "purpose": "Conservative deterministic process diagrams derived from aligned cue order.",
+  "globalPolicy": {
+    "maxActiveNodesPerState": 3,
+    "defaultStateTransition": "replace",
+    "completedGroupTreatment": "compact",
+    "allowedMotionRules": [
+      "viewport-change",
+      "svg-path-draw",
+      "scale-swap-transition",
+      "card-morph-anchor"
+    ],
+    "forbidGraphKinds": [
+      "chart",
+      "stat",
+      "count"
+    ],
+    "excludedNumericClaims": [],
+    "numericClaimReason": "The deterministic baseline never promotes numeric narration to a statistical chart."
+  },
+  "graphs": [
+    {
+      "id": "graph-scene-01",
+      "sceneId": "scene-01",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-01-node-01",
+          "label": "复杂系统",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-001"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-01-node-02",
+          "label": "模型 / 接口",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-002"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-01-node-03",
+          "label": "向量库",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-002"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-01-node-04",
+          "label": "工具调度",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-002"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-01-node-05",
+          "label": "快速上手",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-003"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-01-edge-01",
+          "from": "graph-scene-01-node-01",
+          "to": "graph-scene-01-node-02",
+          "relation": "封装"
+        },
+        {
+          "id": "graph-scene-01-edge-02",
+          "from": "graph-scene-01-node-02",
+          "to": "graph-scene-01-node-03",
+          "relation": "连接"
+        },
+        {
+          "id": "graph-scene-01-edge-03",
+          "from": "graph-scene-01-node-03",
+          "to": "graph-scene-01-node-04",
+          "relation": "调度"
+        },
+        {
+          "id": "graph-scene-01-edge-04",
+          "from": "graph-scene-01-node-04",
+          "to": "graph-scene-01-node-05",
+          "relation": "上手"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-01-state-01",
+          "cueIds": [
+            "cue-001"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-01-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-01-state-02",
+          "cueIds": [
+            "cue-002"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-01-node-02",
+            "graph-scene-01-node-03",
+            "graph-scene-01-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-01-edge-02",
+            "graph-scene-01-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-01-node-01"
+          ]
+        },
+        {
+          "id": "graph-scene-01-state-03",
+          "cueIds": [
+            "cue-003"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-01-node-04",
+            "graph-scene-01-node-05"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-01-edge-04"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-01-node-02",
+            "graph-scene-01-node-03"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-01-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-001",
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-001"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "project-plan:creator-approved-candidate-a@2026-07-20"
+          ]
+        },
+        {
+          "cueId": "cue-002",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-002"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "project-plan:creator-approved-candidate-a@2026-07-20"
+          ]
+        },
+        {
+          "cueId": "cue-003",
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "focus",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-003"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "project-plan:creator-approved-candidate-a@2026-07-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graph-scene-02",
+      "sceneId": "scene-02",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-02-node-01",
+          "label": "拖拽 ≠ 架构理解",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-004"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-02-node-02",
+          "label": "模型",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-005"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-02-node-03",
+          "label": "接口",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-005"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-02-node-04",
+          "label": "权限",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-005"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-02-node-05",
+          "label": "数据",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-005"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-02-node-06",
+          "label": "上下游 / 状态",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-005"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        },
+        {
+          "id": "graph-scene-02-node-07",
+          "label": "先定位问题层",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-006"
+          ],
+          "generationReceipt": "project-plan:creator-approved-candidate-a@2026-07-20"
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-02-edge-01",
+          "from": "graph-scene-02-node-01",
+          "to": "graph-scene-02-node-02",
+          "relation": "先看"
+        },
+        {
+          "id": "graph-scene-02-edge-02",
+          "from": "graph-scene-02-node-02",
+          "to": "graph-scene-02-node-03",
+          "relation": "再查"
+        },
+        {
+          "id": "graph-scene-02-edge-03",
+          "from": "graph-scene-02-node-03",
+          "to": "graph-scene-02-node-04",
+          "relation": "再查"
+        },
+        {
+          "id": "graph-scene-02-edge-04",
+          "from": "graph-scene-02-node-04",
+          "to": "graph-scene-02-node-05",
+          "relation": "继续"
+        },
+        {
+          "id": "graph-scene-02-edge-05",
+          "from": "graph-scene-02-node-05",
+          "to": "graph-scene-02-node-06",
+          "relation": "最后"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-02-state-01",
+          "cueIds": [
+            "cue-004"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-02-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-02-state-02",
+          "cueIds": [
+            "cue-005"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-02",
+            "graph-scene-02-node-03",
+            "graph-scene-02-node-04"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-02",
+            "graph-scene-02-edge-03"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-02-node-01"
+          ]
+        },
+        {
+          "id": "graph-scene-02-state-03",
+          "cueIds": [
+            "cue-005"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-04",
+            "graph-scene-02-node-05",
+            "graph-scene-02-node-06"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-04",
+            "graph-scene-02-edge-05"
+          ],
+          "compactedNodeIds": [
+            "graph-scene-02-node-02",
+            "graph-scene-02-node-03"
+          ]
+        },
+        {
+          "id": "graph-scene-02-state-04",
+          "cueIds": [
+            "cue-006"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-07"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": [
+            "graph-scene-02-node-04",
+            "graph-scene-02-node-05",
+            "graph-scene-02-node-06"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-02-state-04",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "cueDirectives": [
+        {
+          "cueId": "cue-004",
+          "visualType": "comparison",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "comparison-split",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "split",
+                "handoff": "fade",
+                "variant": "contrast",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-004"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "project-plan:creator-approved-candidate-a@2026-07-20"
+          ]
+        },
+        {
+          "cueId": "cue-005",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "wipe",
+                "handoff": "compact-up",
+                "variant": "route",
+                "enterSeconds": 0.7,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.09
+              },
+              "sourceCueIds": [
+                "cue-005"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "project-plan:creator-approved-candidate-a@2026-07-20"
+          ]
+        },
+        {
+          "cueId": "cue-006",
+          "visualType": "keyword",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer",
+              "libraryVersion": "1.0.0",
+              "recipeId": "keyword-handoff",
+              "version": "1.0.0",
+              "params": {
+                "entrance": "lift",
+                "handoff": "compact-up",
+                "variant": "close",
+                "enterSeconds": 0.58,
+                "handoffSeconds": 0.5,
+                "staggerSeconds": 0.07
+              },
+              "sourceCueIds": [
+                "cue-006"
+              ]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": [
+            "motion-library:knowledge-explainer@1.0.0",
+            "project-plan:creator-approved-candidate-a@2026-07-20"
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "alignment-timing-rebase",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.0.0",
+    "reason": "Creator-approved Candidate A; deterministic cue planning preserves the fixed Q-version host shell and content-world-only motion.",
+    "contentIndependent": true,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 3,
+      "targetSceneSeconds": 18,
+      "numericClaimsAsCharts": false,
+      "llmEnrichmentOptional": true
+    },
+    "inputs": {
+      "sourcePlanningBundle": {
+        "role": "previous-approved-planning-bundle",
+        "path": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/visual-plan/.history/2026-07-22T10-59-56-294Z-planning-bundle.json",
+        "sha256": "c7f4e63872d52d302d11b906d8d7a1e06478d333feada736ef7d7189dc9e8db6",
+        "schemaVersion": "autovideo-planning-bundle/v1"
+      }
+    },
+    "sourcePlanningDigestSha256": "cfbeb733ee70c389979a13a9b1cdae1411cf04e68c13e51a4026329391621b97",
+    "sourceMode": "formal-project-import",
+    "rebasedAt": "2026-07-22T11:05:52.171Z",
+    "policy": "Narration and cue IDs must remain byte-exact; only shot and scene timing fields may change."
+  }
+}

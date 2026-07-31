@@ -1,0 +1,19 @@
+{
+  "duration": 8,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-evaluation-header",
+      "bySec": 0.75
+    },
+    {
+      "kind": "before",
+      "a": "#scene-evaluation-header",
+      "b": "#scene-evaluation-state-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-evaluation .visual-world"
+    }
+  ]
+}

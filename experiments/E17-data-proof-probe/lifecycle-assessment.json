@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-assessment/v1",
+  "projectId": "E17-data-proof-probe",
+  "recipeId": "data-proof",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "readiness": {
+    "compositionPresent": true,
+    "dataProofIrPresent": true,
+    "narrationLockPresent": true,
+    "assetManifestPresent": true,
+    "sourceReceiptPresent": true,
+    "strictCheckPassed": true,
+    "keyframeDiagnosticsPresent": true,
+    "renderPresent": true,
+    "decodeQaPassed": true,
+    "humanReview": "pending"
+  },
+  "apply": {
+    "executed": false,
+    "reason": "Probe is awaiting user visual approval and should not be promoted automatically."
+  }
+}

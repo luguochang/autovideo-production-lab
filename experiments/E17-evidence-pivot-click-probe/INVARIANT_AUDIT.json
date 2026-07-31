@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "autovideo-motion-probe-invariant-audit/v1",
+  "projectId": "E17-evidence-pivot-click-probe",
+  "recipeId": "evidence-pivot",
+  "recipeVersion": "1.0.0",
+  "composition": {
+    "path": "experiments/E17-evidence-pivot-click-probe/index.html",
+    "sha256": "6d4a77aea32eb5d9206ff00fe481b7dabcf3e21a6309ed043dd3951a9c813cc9"
+  },
+  "passed": true,
+  "checks": {
+    "landscape16x9": true,
+    "lightApricotBackground": true,
+    "singleQVersionHostAsset": true,
+    "hostLeft": true,
+    "contentRight": true,
+    "captionPersistent": true,
+    "contentWorldOnlyCamera": true,
+    "sameE06NarrationLock": true,
+    "sameE06AudioWindow": true,
+    "evidenceFrozenLocally": true,
+    "sourceLabelCountOne": true,
+    "calloutCountOne": true,
+    "clickCoordinatesPrecomputed": true,
+    "iframeAbsent": true,
+    "onlineRenderAssetsAbsent": true,
+    "sfxAbsentAndUnapproved": true
+  },
+  "evidence": {
+    "format": "index.html declares 1920x1080, 30fps and 8 seconds",
+    "background": {
+      "css": "#F2DFC7",
+      "sampleFrame": "snapshots/frame-07-at-7.7s.png",
+      "pixelSamples": [
+        {"x": 1900, "y": 20, "hex": "#F2DFC7"},
+        {"x": 1850, "y": 850, "hex": "#F2DFC7"},
+        {"x": 10, "y": 500, "hex": "#F2DFC7"}
+      ]
+    },
+    "host": "One approved transparent image_001 pose is mounted in host.left and never changes zone.",
+    "zones": "DOM data-zone values bind host.left, content.right, and caption.",
+    "camera": "Only #evidence-frame and #evidence-camera move, both descendants of #content-world; host and caption are siblings outside it.",
+    "narration": {
+      "narrationLockSha256": "10cebe060931f1d8c1736e6d58a72fa0c56f766e9f4dde5f1be3291be74b7fbf",
+      "e06NarrationLockSha256": "10cebe060931f1d8c1736e6d58a72fa0c56f766e9f4dde5f1be3291be74b7fbf",
+      "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4"
+    },
+    "evidenceAsset": {
+      "path": ".media/images/image_002.png",
+      "sha256": "9665b8c53c9cad5cbb235fa087836e5092405ec5ab18c908cf9aee0f28c15e80"
+    },
+    "semanticObjects": {
+      "sourceLabels": ["#source-label"],
+      "callouts": ["#evidence-callout-body"]
+    },
+    "determinism": "One synchronous paused GSAP timeline; fixed click/camera constants; no Date, random, fetch, iframe, event listener, or tween-time DOM measurement.",
+    "audio": "Narration only. No SFX file, manifest record, media node, or approval claim exists."
+  }
+}

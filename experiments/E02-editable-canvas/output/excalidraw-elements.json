@@ -1,0 +1,643 @@
+{
+  "skeletons": [
+    {
+      "id": "source",
+      "type": "rectangle",
+      "groupIds": [],
+      "x": 8,
+      "y": 8,
+      "width": 120,
+      "height": 60,
+      "strokeWidth": 2,
+      "label": {
+        "groupIds": [],
+        "text": "知识库",
+        "fontSize": 20
+      },
+      "link": null
+    },
+    {
+      "id": "retrieve",
+      "type": "rectangle",
+      "groupIds": [],
+      "x": 178,
+      "y": 8,
+      "width": 100,
+      "height": 60,
+      "strokeWidth": 2,
+      "label": {
+        "groupIds": [],
+        "text": "检索",
+        "fontSize": 20
+      },
+      "link": null
+    },
+    {
+      "id": "model",
+      "type": "rectangle",
+      "groupIds": [],
+      "x": 328,
+      "y": 8,
+      "width": 120,
+      "height": 60,
+      "strokeWidth": 2,
+      "label": {
+        "groupIds": [],
+        "text": "大模型",
+        "fontSize": 20
+      },
+      "link": null
+    },
+    {
+      "id": "answer",
+      "type": "rectangle",
+      "groupIds": [],
+      "x": 498,
+      "y": 8,
+      "width": 100,
+      "height": 60,
+      "strokeWidth": 2,
+      "label": {
+        "groupIds": [],
+        "text": "回答",
+        "fontSize": 20
+      },
+      "link": null
+    },
+    {
+      "id": "source_retrieve",
+      "type": "arrow",
+      "groupIds": [],
+      "x": 128,
+      "y": 38,
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          46,
+          0
+        ]
+      ],
+      "roundness": {
+        "type": 2
+      },
+      "start": {
+        "id": "source"
+      },
+      "end": {
+        "id": "retrieve"
+      }
+    },
+    {
+      "id": "retrieve_model",
+      "type": "arrow",
+      "groupIds": [],
+      "x": 278,
+      "y": 38,
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          46,
+          0
+        ]
+      ],
+      "roundness": {
+        "type": 2
+      },
+      "start": {
+        "id": "retrieve"
+      },
+      "end": {
+        "id": "model"
+      }
+    },
+    {
+      "id": "model_answer",
+      "type": "arrow",
+      "groupIds": [],
+      "x": 448,
+      "y": 38,
+      "strokeWidth": 2,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          46,
+          0
+        ]
+      ],
+      "roundness": {
+        "type": 2
+      },
+      "start": {
+        "id": "model"
+      },
+      "end": {
+        "id": "answer"
+      }
+    }
+  ],
+  "elements": [
+    {
+      "id": "source",
+      "type": "rectangle",
+      "x": 8,
+      "y": 8,
+      "width": 120,
+      "height": 60,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 229205146,
+      "version": 3,
+      "versionNonce": 781670854,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "uQzmjFi62Rogxyutx5VkF"
+        },
+        {
+          "id": "source_retrieve",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "retrieve",
+      "type": "rectangle",
+      "x": 178,
+      "y": 8,
+      "width": 100,
+      "height": 60,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 125848070,
+      "version": 4,
+      "versionNonce": 1760829510,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "YHt6zzR-eDdkXNNtBfGsa"
+        },
+        {
+          "id": "source_retrieve",
+          "type": "arrow"
+        },
+        {
+          "id": "retrieve_model",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "model",
+      "type": "rectangle",
+      "x": 328,
+      "y": 8,
+      "width": 120,
+      "height": 60,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 1728430426,
+      "version": 4,
+      "versionNonce": 313607878,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "IhBRTSWeILreDJ7zMcxLX"
+        },
+        {
+          "id": "retrieve_model",
+          "type": "arrow"
+        },
+        {
+          "id": "model_answer",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "answer",
+      "type": "rectangle",
+      "x": 498,
+      "y": 8,
+      "width": 100,
+      "height": 60,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a3",
+      "roundness": null,
+      "seed": 1177884998,
+      "version": 3,
+      "versionNonce": 1671986694,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "WRdiLmiS0aWLVFXbyBRZN"
+        },
+        {
+          "id": "model_answer",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "source_retrieve",
+      "type": "arrow",
+      "x": 128,
+      "y": 38,
+      "width": 46,
+      "height": 0,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a4",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 909674010,
+      "version": 4,
+      "versionNonce": 746098074,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0.5,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          45.5,
+          0
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "source",
+        "focus": 0,
+        "gap": 1
+      },
+      "endBinding": {
+        "elementId": "retrieve",
+        "focus": 0,
+        "gap": 4
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "retrieve_model",
+      "type": "arrow",
+      "x": 278,
+      "y": 38,
+      "width": 46,
+      "height": 0,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a5",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1275986054,
+      "version": 4,
+      "versionNonce": 1745973018,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0.5,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          45.5,
+          0
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "retrieve",
+        "focus": 0,
+        "gap": 1
+      },
+      "endBinding": {
+        "elementId": "model",
+        "focus": 0,
+        "gap": 4
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "model_answer",
+      "type": "arrow",
+      "x": 448,
+      "y": 38,
+      "width": 46,
+      "height": 0,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a6",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1144304346,
+      "version": 4,
+      "versionNonce": 553644186,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0.5,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          45.5,
+          0
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "model",
+        "focus": 0,
+        "gap": 1
+      },
+      "endBinding": {
+        "elementId": "answer",
+        "focus": 0,
+        "gap": 4
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "uQzmjFi62Rogxyutx5VkF",
+      "type": "text",
+      "x": 38,
+      "y": 25.5,
+      "width": 60,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a7",
+      "roundness": null,
+      "seed": 1340044762,
+      "version": 3,
+      "versionNonce": 1739246938,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "text": "知识库",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "source",
+      "originalText": "知识库",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "YHt6zzR-eDdkXNNtBfGsa",
+      "type": "text",
+      "x": 208,
+      "y": 25.5,
+      "width": 40,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a8",
+      "roundness": null,
+      "seed": 854043290,
+      "version": 3,
+      "versionNonce": 1463209286,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "text": "检索",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "retrieve",
+      "originalText": "检索",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "IhBRTSWeILreDJ7zMcxLX",
+      "type": "text",
+      "x": 358,
+      "y": 25.5,
+      "width": 60,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a9",
+      "roundness": null,
+      "seed": 411780954,
+      "version": 3,
+      "versionNonce": 1985745434,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "text": "大模型",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "model",
+      "originalText": "大模型",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "WRdiLmiS0aWLVFXbyBRZN",
+      "type": "text",
+      "x": 528,
+      "y": 25.5,
+      "width": 40,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aA",
+      "roundness": null,
+      "seed": 1763527706,
+      "version": 3,
+      "versionNonce": 985216134,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1784165864256,
+      "link": null,
+      "locked": false,
+      "text": "回答",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "answer",
+      "originalText": "回答",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "sceneJson": "{\n  \"type\": \"excalidraw\",\n  \"version\": 2,\n  \"source\": \"null\",\n  \"elements\": [\n    {\n      \"id\": \"source\",\n      \"type\": \"rectangle\",\n      \"x\": 8,\n      \"y\": 8,\n      \"width\": 120,\n      \"height\": 60,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a0\",\n      \"roundness\": null,\n      \"seed\": 229205146,\n      \"version\": 3,\n      \"versionNonce\": 781670854,\n      \"isDeleted\": false,\n      \"boundElements\": [\n        {\n          \"type\": \"text\",\n          \"id\": \"uQzmjFi62Rogxyutx5VkF\"\n        },\n        {\n          \"id\": \"source_retrieve\",\n          \"type\": \"arrow\"\n        }\n      ],\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false\n    },\n    {\n      \"id\": \"retrieve\",\n      \"type\": \"rectangle\",\n      \"x\": 178,\n      \"y\": 8,\n      \"width\": 100,\n      \"height\": 60,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a1\",\n      \"roundness\": null,\n      \"seed\": 125848070,\n      \"version\": 4,\n      \"versionNonce\": 1760829510,\n      \"isDeleted\": false,\n      \"boundElements\": [\n        {\n          \"type\": \"text\",\n          \"id\": \"YHt6zzR-eDdkXNNtBfGsa\"\n        },\n        {\n          \"id\": \"source_retrieve\",\n          \"type\": \"arrow\"\n        },\n        {\n          \"id\": \"retrieve_model\",\n          \"type\": \"arrow\"\n        }\n      ],\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false\n    },\n    {\n      \"id\": \"model\",\n      \"type\": \"rectangle\",\n      \"x\": 328,\n      \"y\": 8,\n      \"width\": 120,\n      \"height\": 60,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a2\",\n      \"roundness\": null,\n      \"seed\": 1728430426,\n      \"version\": 4,\n      \"versionNonce\": 313607878,\n      \"isDeleted\": false,\n      \"boundElements\": [\n        {\n          \"type\": \"text\",\n          \"id\": \"IhBRTSWeILreDJ7zMcxLX\"\n        },\n        {\n          \"id\": \"retrieve_model\",\n          \"type\": \"arrow\"\n        },\n        {\n          \"id\": \"model_answer\",\n          \"type\": \"arrow\"\n        }\n      ],\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false\n    },\n    {\n      \"id\": \"answer\",\n      \"type\": \"rectangle\",\n      \"x\": 498,\n      \"y\": 8,\n      \"width\": 100,\n      \"height\": 60,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a3\",\n      \"roundness\": null,\n      \"seed\": 1177884998,\n      \"version\": 3,\n      \"versionNonce\": 1671986694,\n      \"isDeleted\": false,\n      \"boundElements\": [\n        {\n          \"type\": \"text\",\n          \"id\": \"WRdiLmiS0aWLVFXbyBRZN\"\n        },\n        {\n          \"id\": \"model_answer\",\n          \"type\": \"arrow\"\n        }\n      ],\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false\n    },\n    {\n      \"id\": \"source_retrieve\",\n      \"type\": \"arrow\",\n      \"x\": 128,\n      \"y\": 38,\n      \"width\": 46,\n      \"height\": 0,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a4\",\n      \"roundness\": {\n        \"type\": 2\n      },\n      \"seed\": 909674010,\n      \"version\": 4,\n      \"versionNonce\": 746098074,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"points\": [\n        [\n          0.5,\n          0\n        ],\n        [\n          25,\n          0\n        ],\n        [\n          45.5,\n          0\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startBinding\": {\n        \"elementId\": \"source\",\n        \"focus\": 0,\n        \"gap\": 1\n      },\n      \"endBinding\": {\n        \"elementId\": \"retrieve\",\n        \"focus\": 0,\n        \"gap\": 4\n      },\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\",\n      \"elbowed\": false\n    },\n    {\n      \"id\": \"retrieve_model\",\n      \"type\": \"arrow\",\n      \"x\": 278,\n      \"y\": 38,\n      \"width\": 46,\n      \"height\": 0,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a5\",\n      \"roundness\": {\n        \"type\": 2\n      },\n      \"seed\": 1275986054,\n      \"version\": 4,\n      \"versionNonce\": 1745973018,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"points\": [\n        [\n          0.5,\n          0\n        ],\n        [\n          25,\n          0\n        ],\n        [\n          45.5,\n          0\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startBinding\": {\n        \"elementId\": \"retrieve\",\n        \"focus\": 0,\n        \"gap\": 1\n      },\n      \"endBinding\": {\n        \"elementId\": \"model\",\n        \"focus\": 0,\n        \"gap\": 4\n      },\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\",\n      \"elbowed\": false\n    },\n    {\n      \"id\": \"model_answer\",\n      \"type\": \"arrow\",\n      \"x\": 448,\n      \"y\": 38,\n      \"width\": 46,\n      \"height\": 0,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a6\",\n      \"roundness\": {\n        \"type\": 2\n      },\n      \"seed\": 1144304346,\n      \"version\": 4,\n      \"versionNonce\": 553644186,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"points\": [\n        [\n          0.5,\n          0\n        ],\n        [\n          25,\n          0\n        ],\n        [\n          45.5,\n          0\n        ]\n      ],\n      \"lastCommittedPoint\": null,\n      \"startBinding\": {\n        \"elementId\": \"model\",\n        \"focus\": 0,\n        \"gap\": 1\n      },\n      \"endBinding\": {\n        \"elementId\": \"answer\",\n        \"focus\": 0,\n        \"gap\": 4\n      },\n      \"startArrowhead\": null,\n      \"endArrowhead\": \"arrow\",\n      \"elbowed\": false\n    },\n    {\n      \"id\": \"uQzmjFi62Rogxyutx5VkF\",\n      \"type\": \"text\",\n      \"x\": 38,\n      \"y\": 25.5,\n      \"width\": 60,\n      \"height\": 25,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a7\",\n      \"roundness\": null,\n      \"seed\": 1340044762,\n      \"version\": 3,\n      \"versionNonce\": 1739246938,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"text\": \"知识库\",\n      \"fontSize\": 20,\n      \"fontFamily\": 5,\n      \"textAlign\": \"center\",\n      \"verticalAlign\": \"middle\",\n      \"containerId\": \"source\",\n      \"originalText\": \"知识库\",\n      \"autoResize\": true,\n      \"lineHeight\": 1.25\n    },\n    {\n      \"id\": \"YHt6zzR-eDdkXNNtBfGsa\",\n      \"type\": \"text\",\n      \"x\": 208,\n      \"y\": 25.5,\n      \"width\": 40,\n      \"height\": 25,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a8\",\n      \"roundness\": null,\n      \"seed\": 854043290,\n      \"version\": 3,\n      \"versionNonce\": 1463209286,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"text\": \"检索\",\n      \"fontSize\": 20,\n      \"fontFamily\": 5,\n      \"textAlign\": \"center\",\n      \"verticalAlign\": \"middle\",\n      \"containerId\": \"retrieve\",\n      \"originalText\": \"检索\",\n      \"autoResize\": true,\n      \"lineHeight\": 1.25\n    },\n    {\n      \"id\": \"IhBRTSWeILreDJ7zMcxLX\",\n      \"type\": \"text\",\n      \"x\": 358,\n      \"y\": 25.5,\n      \"width\": 60,\n      \"height\": 25,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"a9\",\n      \"roundness\": null,\n      \"seed\": 411780954,\n      \"version\": 3,\n      \"versionNonce\": 1985745434,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"text\": \"大模型\",\n      \"fontSize\": 20,\n      \"fontFamily\": 5,\n      \"textAlign\": \"center\",\n      \"verticalAlign\": \"middle\",\n      \"containerId\": \"model\",\n      \"originalText\": \"大模型\",\n      \"autoResize\": true,\n      \"lineHeight\": 1.25\n    },\n    {\n      \"id\": \"WRdiLmiS0aWLVFXbyBRZN\",\n      \"type\": \"text\",\n      \"x\": 528,\n      \"y\": 25.5,\n      \"width\": 40,\n      \"height\": 25,\n      \"angle\": 0,\n      \"strokeColor\": \"#1e1e1e\",\n      \"backgroundColor\": \"transparent\",\n      \"fillStyle\": \"solid\",\n      \"strokeWidth\": 2,\n      \"strokeStyle\": \"solid\",\n      \"roughness\": 1,\n      \"opacity\": 100,\n      \"groupIds\": [],\n      \"frameId\": null,\n      \"index\": \"aA\",\n      \"roundness\": null,\n      \"seed\": 1763527706,\n      \"version\": 3,\n      \"versionNonce\": 985216134,\n      \"isDeleted\": false,\n      \"boundElements\": null,\n      \"updated\": 1784165864256,\n      \"link\": null,\n      \"locked\": false,\n      \"text\": \"回答\",\n      \"fontSize\": 20,\n      \"fontFamily\": 5,\n      \"textAlign\": \"center\",\n      \"verticalAlign\": \"middle\",\n      \"containerId\": \"answer\",\n      \"originalText\": \"回答\",\n      \"autoResize\": true,\n      \"lineHeight\": 1.25\n    }\n  ],\n  \"appState\": {\n    \"viewBackgroundColor\": \"#ffffff\"\n  },\n  \"files\": {}\n}",
+  "svg": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 610 80\" width=\"610\" height=\"80\"><!-- svg-source:excalidraw --><metadata></metadata><defs><style class=\"style-fonts\">\n      </style></defs><g stroke-linecap=\"round\" transform=\"translate(10 10) rotate(0 60 30)\"><path d=\"M0 0 C25.1 0.26, 50.94 0.28, 120 0 M0 0 C35.72 0.55, 74.13 0.91, 120 0 M120 0 C118.64 19.23, 121.16 34.42, 120 60 M120 0 C120.33 12.3, 120.48 26.61, 120 60 M120 60 C74.16 60.26, 31.49 59.88, 0 60 M120 60 C73.43 59.82, 28.5 59.49, 0 60 M0 60 C-0.11 40.9, 0.44 25.53, 0 0 M0 60 C-0.84 45.94, -0.11 30.67, 0 0\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(40 27.5) rotate(0 30 12.5)\"><text x=\"30\" y=\"17.619999999999997\" font-family=\"Excalifont, Xiaolai, Segoe UI Emoji\" font-size=\"20px\" fill=\"#1e1e1e\" text-anchor=\"middle\" style=\"white-space: pre;\" direction=\"ltr\" dominant-baseline=\"alphabetic\">知识库</text></g><g stroke-linecap=\"round\" transform=\"translate(180 10) rotate(0 50 30)\"><path d=\"M0 0 C36.47 0.28, 72.59 0.26, 100 0 M0 0 C39.34 1.74, 79.15 0.82, 100 0 M100 0 C101.5 18.06, 99.41 31.87, 100 60 M100 0 C99.13 17.01, 100.44 33.48, 100 60 M100 60 C61.58 60.76, 21.65 61.21, 0 60 M100 60 C70.34 60.51, 40.84 59.56, 0 60 M0 60 C-1.23 37.99, 1.04 12.94, 0 0 M0 60 C0.08 38.24, -0.71 15.44, 0 0\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(210 27.5) rotate(0 20 12.5)\"><text x=\"20\" y=\"17.619999999999997\" font-family=\"Excalifont, Xiaolai, Segoe UI Emoji\" font-size=\"20px\" fill=\"#1e1e1e\" text-anchor=\"middle\" style=\"white-space: pre;\" direction=\"ltr\" dominant-baseline=\"alphabetic\">检索</text></g><g stroke-linecap=\"round\" transform=\"translate(330 10) rotate(0 60 30)\"><path d=\"M0 0 C37.3 0.17, 74.44 1.66, 120 0 M0 0 C30.14 0.38, 58.55 -0.07, 120 0 M120 0 C120.91 13.42, 117.96 26.59, 120 60 M120 0 C120.93 16.8, 121.03 33.29, 120 60 M120 60 C93.73 61.39, 66.69 60.5, 0 60 M120 60 C81.88 58.61, 41.93 60.25, 0 60 M0 60 C0.82 45.01, -1.29 29.72, 0 0 M0 60 C0.55 38.25, -0.19 17.43, 0 0\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(360 27.5) rotate(0 30 12.5)\"><text x=\"30\" y=\"17.619999999999997\" font-family=\"Excalifont, Xiaolai, Segoe UI Emoji\" font-size=\"20px\" fill=\"#1e1e1e\" text-anchor=\"middle\" style=\"white-space: pre;\" direction=\"ltr\" dominant-baseline=\"alphabetic\">大模型</text></g><g stroke-linecap=\"round\" transform=\"translate(500 10) rotate(0 50 30)\"><path d=\"M0 0 C28.87 0.05, 58.83 -1.18, 100 0 M0 0 C20.83 -0.92, 40.95 -1.54, 100 0 M100 0 C100.43 12.63, 100.04 27.99, 100 60 M100 0 C100.21 21.68, 100.54 41.17, 100 60 M100 60 C75.57 62.32, 49.52 61.12, 0 60 M100 60 C72.95 60.83, 48.35 60.53, 0 60 M0 60 C1.26 39.67, 1.79 22.82, 0 0 M0 60 C-0.63 44.13, -0.08 28.53, 0 0\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(530 27.5) rotate(0 20 12.5)\"><text x=\"20\" y=\"17.619999999999997\" font-family=\"Excalifont, Xiaolai, Segoe UI Emoji\" font-size=\"20px\" fill=\"#1e1e1e\" text-anchor=\"middle\" style=\"white-space: pre;\" direction=\"ltr\" dominant-baseline=\"alphabetic\">回答</text></g><g stroke-linecap=\"round\"><g transform=\"translate(130.5 40) rotate(0 22.5 0)\"><path d=\"M0.11 0.03 C4.26 -0.03, 17.62 -0.29, 25.02 -0.31 C32.42 -0.32, 41.08 -0.14, 44.48 -0.06 M-0.5 -0.43 C3.62 -0.42, 17.18 0.08, 24.86 0.24 C32.53 0.39, 42.05 0.43, 45.53 0.51\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(130.5 40) rotate(0 22.5 0)\"><path d=\"M35.85 3.88 C38.97 3.28, 41.74 1.23, 45.53 0.51 M35.85 3.88 C38.6 2.84, 41.24 1.76, 45.53 0.51\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(130.5 40) rotate(0 22.5 0)\"><path d=\"M35.95 -3.13 C39.03 -1.5, 41.78 -1.31, 45.53 0.51 M35.95 -3.13 C38.7 -2.15, 41.31 -1.2, 45.53 0.51\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g></g><mask></mask><g stroke-linecap=\"round\"><g transform=\"translate(280.5 40) rotate(0 22.5 0)\"><path d=\"M0.03 0.52 C4.06 0.42, 16.71 -0.5, 24.19 -0.52 C31.68 -0.53, 41.45 0.36, 44.94 0.44 M-0.62 0.31 C3.59 0.25, 17.74 0.03, 25.27 -0.08 C32.8 -0.2, 41.22 -0.48, 44.56 -0.4\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(280.5 40) rotate(0 22.5 0)\"><path d=\"M34.93 3.13 C38.36 1.76, 40.35 0.9, 44.56 -0.4 M34.93 3.13 C38.53 1.6, 42.09 0.7, 44.56 -0.4\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(280.5 40) rotate(0 22.5 0)\"><path d=\"M34.92 -3.88 C38.36 -3.1, 40.35 -1.81, 44.56 -0.4 M34.92 -3.88 C38.53 -2.74, 42.09 -0.98, 44.56 -0.4\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g></g><mask></mask><g stroke-linecap=\"round\"><g transform=\"translate(450.5 40) rotate(0 22.5 0)\"><path d=\"M0.52 -0.31 C4.5 -0.32, 16.5 -0.14, 23.98 -0.06 C31.47 0.01, 41.95 0.14, 45.44 0.14 M0.12 0.73 C4.25 0.8, 17.42 0.59, 24.95 0.61 C32.48 0.62, 41.97 0.85, 45.32 0.81\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(450.5 40) rotate(0 22.5 0)\"><path d=\"M35.67 4.27 C38.47 2.63, 41.79 2.42, 45.32 0.81 M35.67 4.27 C38.62 2.99, 42.19 2.19, 45.32 0.81\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g><g transform=\"translate(450.5 40) rotate(0 22.5 0)\"><path d=\"M35.7 -2.74 C38.5 -2.14, 41.8 -0.11, 45.32 0.81 M35.7 -2.74 C38.63 -1.74, 42.2 -0.26, 45.32 0.81\" stroke=\"#1e1e1e\" stroke-width=\"2\" fill=\"none\"></path></g></g><mask></mask></svg>"
+}

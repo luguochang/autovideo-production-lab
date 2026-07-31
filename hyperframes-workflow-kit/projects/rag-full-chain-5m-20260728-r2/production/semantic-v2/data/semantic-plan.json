@@ -1,0 +1,530 @@
+{
+  "schemaVersion": "autovideo-semantic-visual-plan/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "splitSeconds": 794.88,
+  "originalDuration": 1880.218458,
+  "baseStyle": "modern-ip-host-explainer",
+  "projectOverride": "host appears only at chapter openings/transitions/summaries; semantic diagrams may use the full canvas",
+  "forbidden": [
+    "fake-terminal",
+    "fake-code",
+    "input-process-output-mock",
+    "equal-card-grid",
+    "verbatim-narration-on-main-stage",
+    "full-panel-crossfade"
+  ],
+  "officialReuse": {
+    "registryItems": [
+      "flowchart",
+      "data-chart"
+    ],
+    "motionRules": [
+      "svg-path-draw",
+      "stat-bars-and-fills",
+      "viewport-change",
+      "spring-pop-entrance"
+    ]
+  },
+  "chapters": [
+    {
+      "episode": 1,
+      "id": "overview",
+      "stage": "全链总览",
+      "visual": "pipeline",
+      "startCue": "cue-001",
+      "showHost": false,
+      "states": [
+        [
+          "cue-001",
+          "一条数据流"
+        ],
+        [
+          "cue-002",
+          "离线建库 → 在线检索"
+        ],
+        [
+          "cue-003",
+          "选型 · 指标 · 提升"
+        ],
+        [
+          "cue-004",
+          "组合，而不是单选"
+        ]
+      ]
+    },
+    {
+      "episode": 1,
+      "id": "parsing",
+      "stage": "文档解析",
+      "visual": "document",
+      "startCue": "cue-006",
+      "states": [
+        [
+          "cue-006",
+          "异构文档进入"
+        ],
+        [
+          "cue-009",
+          "先识别复杂度"
+        ],
+        [
+          "cue-015",
+          "主解析 + 清洗 + 兜底"
+        ],
+        [
+          "cue-021",
+          "结构质量要验收"
+        ],
+        [
+          "cue-024",
+          "复杂页面按需增强"
+        ]
+      ]
+    },
+    {
+      "episode": 1,
+      "id": "chunking",
+      "stage": "文本分块",
+      "visual": "chunk",
+      "startCue": "cue-025",
+      "states": [
+        [
+          "cue-025",
+          "从整篇切到语义块"
+        ],
+        [
+          "cue-030",
+          "五种切分路径"
+        ],
+        [
+          "cue-032",
+          "按文档结构选择"
+        ],
+        [
+          "cue-035",
+          "生产采用组合策略"
+        ],
+        [
+          "cue-038",
+          "元数据必须随块保留"
+        ],
+        [
+          "cue-039",
+          "检索块与合成块解耦"
+        ],
+        [
+          "cue-041",
+          "用指标验证边界"
+        ]
+      ]
+    },
+    {
+      "episode": 1,
+      "id": "context",
+      "stage": "上下文增强",
+      "visual": "context",
+      "startCue": "cue-043",
+      "states": [
+        [
+          "cue-043",
+          "分块之后再补语境"
+        ],
+        [
+          "cue-045",
+          "孤立片段语义不完整"
+        ],
+        [
+          "cue-048",
+          "上下文前缀或延迟分块"
+        ],
+        [
+          "cue-052",
+          "公开结果只作参考"
+        ],
+        [
+          "cue-057",
+          "收益与成本做对照"
+        ],
+        [
+          "cue-061",
+          "用失败率回答值不值得"
+        ]
+      ]
+    },
+    {
+      "episode": 1,
+      "id": "embedding",
+      "stage": "向量化",
+      "visual": "embedding",
+      "startCue": "cue-063",
+      "states": [
+        [
+          "cue-063",
+          "文本映射到向量空间"
+        ],
+        [
+          "cue-065",
+          "开源与商业同台评测"
+        ],
+        [
+          "cue-069",
+          "中文 · 部署 · 维度"
+        ],
+        [
+          "cue-075",
+          "输入类型与版本管理"
+        ],
+        [
+          "cue-079",
+          "领域召回率才是关键"
+        ]
+      ]
+    },
+    {
+      "episode": 1,
+      "id": "index",
+      "stage": "向量库与索引",
+      "visual": "index",
+      "startCue": "cue-081",
+      "states": [
+        [
+          "cue-081",
+          "向量落库"
+        ],
+        [
+          "cue-084",
+          "HNSW · IVF · Flat"
+        ],
+        [
+          "cue-086",
+          "规模 · 事务 · 运维"
+        ],
+        [
+          "cue-087",
+          "中小规模先评估 pgvector"
+        ],
+        [
+          "cue-092",
+          "向量索引 + 全文索引"
+        ],
+        [
+          "cue-099",
+          "召回 · 延迟 · 内存"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "query",
+      "stage": "查询理解",
+      "visual": "query",
+      "startCue": "cue-102",
+      "states": [
+        [
+          "cue-102",
+          "从查询开始在线链路"
+        ],
+        [
+          "cue-104",
+          "改写 + 路由"
+        ],
+        [
+          "cue-106",
+          "按复杂度选择路径"
+        ],
+        [
+          "cue-109",
+          "简单直走，复杂再改写"
+        ],
+        [
+          "cue-111",
+          "路由与按需改写组合"
+        ],
+        [
+          "cue-115",
+          "召回率与路由准确率"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "retrieval",
+      "stage": "混合检索",
+      "visual": "retrieval",
+      "startCue": "cue-117",
+      "states": [
+        [
+          "cue-117",
+          "召回开始"
+        ],
+        [
+          "cue-119",
+          "向量 + BM25"
+        ],
+        [
+          "cue-121",
+          "编号与术语需要精确命中"
+        ],
+        [
+          "cue-125",
+          "多路各管一类问题"
+        ],
+        [
+          "cue-128",
+          "候选并行汇入"
+        ],
+        [
+          "cue-133",
+          "用召回率验证增益"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "fusion",
+      "stage": "RRF 融合",
+      "visual": "fusion",
+      "startCue": "cue-136",
+      "states": [
+        [
+          "cue-136",
+          "不同分数不能直接相加"
+        ],
+        [
+          "cue-139",
+          "先看名次"
+        ],
+        [
+          "cue-143",
+          "RRF 像多路投票"
+        ],
+        [
+          "cue-145",
+          "标准 RRF 起步"
+        ],
+        [
+          "cue-148",
+          "用 nDCG 验证融合"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "rerank",
+      "stage": "重排精筛",
+      "visual": "rerank",
+      "startCue": "cue-151",
+      "states": [
+        [
+          "cue-151",
+          "五十条候选进入精筛"
+        ],
+        [
+          "cue-152",
+          "交叉编码器或 ColBERT"
+        ],
+        [
+          "cue-156",
+          "双塔粗召，交叉编码器精排"
+        ],
+        [
+          "cue-158",
+          "前五十到前五"
+        ],
+        [
+          "cue-163",
+          "nDCG · MRR · P99"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "agent",
+      "stage": "智能体决策",
+      "visual": "agent",
+      "startCue": "cue-165",
+      "states": [
+        [
+          "cue-165",
+          "证据充分性是分水岭"
+        ],
+        [
+          "cue-167",
+          "评估 → 改写 → 重检"
+        ],
+        [
+          "cue-171",
+          "生产先做轻量闭环"
+        ],
+        [
+          "cue-175",
+          "支持性检查守住幻觉"
+        ],
+        [
+          "cue-176",
+          "评估 · 重试 · 拒答"
+        ],
+        [
+          "cue-180",
+          "用图状态机表达循环"
+        ],
+        [
+          "cue-183",
+          "成功率与收敛轮数"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "generation",
+      "stage": "生成与引用",
+      "visual": "generation",
+      "startCue": "cue-185",
+      "states": [
+        [
+          "cue-185",
+          "证据够了才生成"
+        ],
+        [
+          "cue-187",
+          "三种引用实现"
+        ],
+        [
+          "cue-191",
+          "四道防幻觉防线"
+        ],
+        [
+          "cue-194",
+          "逐条校验来源"
+        ],
+        [
+          "cue-196",
+          "回溯到文档与页码"
+        ],
+        [
+          "cue-197",
+          "真实 · 完整 · 忠实"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "evaluation",
+      "stage": "评测闭环",
+      "visual": "evaluation",
+      "startCue": "cue-199",
+      "states": [
+        [
+          "cue-199",
+          "不评测就是瞎调"
+        ],
+        [
+          "cue-201",
+          "四类核心指标"
+        ],
+        [
+          "cue-205",
+          "黄金集 + 调用链归因"
+        ],
+        [
+          "cue-209",
+          "召回 · 引用 · 拒答"
+        ],
+        [
+          "cue-210",
+          "记录完整调用链"
+        ],
+        [
+          "cue-215",
+          "回归后再上线"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "production",
+      "stage": "上线工程",
+      "visual": "production",
+      "startCue": "cue-216",
+      "states": [
+        [
+          "cue-216",
+          "从演示走向生产"
+        ],
+        [
+          "cue-218",
+          "缓存 · 安全 · 版本 · 监控"
+        ],
+        [
+          "cue-220",
+          "缓存优先评估"
+        ],
+        [
+          "cue-223",
+          "防提示词注入"
+        ],
+        [
+          "cue-224",
+          "增量索引与版本管理"
+        ],
+        [
+          "cue-227",
+          "能力必须组合配套"
+        ],
+        [
+          "cue-229",
+          "SLA · P99 · 成本"
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "summary",
+      "stage": "全链总结",
+      "visual": "summary",
+      "startCue": "cue-232",
+      "showHost": false,
+      "states": [
+        [
+          "cue-232",
+          "一条数据流"
+        ],
+        [
+          "cue-233",
+          "离线决定上限，在线决定召回"
+        ],
+        [
+          "cue-234",
+          "生产依赖组合判断"
+        ],
+        [
+          "cue-235",
+          "每一环都可测可提升"
+        ],
+        [
+          "cue-237",
+          "可控 · 可测 · 可迭代"
+        ]
+      ]
+    }
+  ],
+  "episodes": {
+    "built": true,
+    "outputs": [
+      {
+        "episode": 1,
+        "durationSeconds": 808.826,
+        "path": "episode-1",
+        "chapterCount": 7,
+        "captionCount": 216
+      },
+      {
+        "episode": 2,
+        "durationSeconds": 1099.715,
+        "path": "episode-2",
+        "chapterCount": 10,
+        "captionCount": 285
+      }
+    ]
+  }
+}

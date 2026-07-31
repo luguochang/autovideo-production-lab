@@ -1,0 +1,10322 @@
+{
+  "schemaVersion": "autovideo-alignment-locked/v1",
+  "engine": "NarrationLock character mapping over openai-whisper/small",
+  "method": "SequenceMatcher exact blocks plus monotonic interpolation for ASR substitutions/deletions",
+  "limitation": "Locked-text timing derived from ASR words; use WhisperX/MFA for phoneme or lip-sync precision.",
+  "source": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\audio\\narration.final.wav",
+  "sourceSha256": "9586d1476e1022308249bf2996776487f9059fc1e84dabe7cfbf2258c02503b9",
+  "narration": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\input\\narration.txt",
+  "narrationLock": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\NarrationLock.json",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "asrAlignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\audio\\alignment.asr.json",
+  "asrAlignmentSha256": "229fbba40ce803ca286ff0f777353ae6e45b857f60bacf213375665349de2c7d",
+  "durationSeconds": 242.904042,
+  "firstStartSeconds": 0.0,
+  "lastEndSeconds": 242.904,
+  "referenceCharacters": 1378,
+  "asrCharacters": 1356,
+  "editDistance": 116,
+  "cer": 0.08418,
+  "exactMappedCharacters": 1273,
+  "interpolatedCharacters": 105,
+  "transcriptText": "我奉劝很多人对I技术一定要有敬畏之心也希望大家擦亮双眼这个市场上有无数所谓的I GoCode Dify社群告诉你应该怎么做但是这里面99%的人他并不具备开发和维护A&N的能力他完全看不懂底层的代码他也并不是影响的那么简单我看到很多人用完Codex Codex都觉得自己是大神就一下子知冷起来了觉得自己是被掩埋的技术天才强的可怕会搭工作榴会写提示词然后生成一个Agent尤其是硬介声投了很多简历说I并不好找工作我可以非常明确的告诉你这个市场上90%的人他对底层逻辑是完全不清晰的他不是在构建一个可维护的系统而是在拼接一个能掩饰的流程一个代码不过原因对照一下自己能理解的月薪都不会低于30K第一平台把系统的复杂性给隐藏起来D代码、Wu代码、I平台工作榴工具把模型调用、API连接叫量库工具链调度流程包装成了按钮和节点跑出是普通人可以快速上手坏出是很多人误以为会拖拽节点就等于懂系统架构但一旦爆错你根本就不知道是模型问题接口问题权限问题数据问题还是上下有问题状态管理问题第二点很多人把原型能力误判成是产品能力来最擅长帮你从0到1做一个D-mode每次帮你跑通一次你就觉得自己做成了但是真实的产品不是跑通一次就可以了而是能够长期稳定的运行真实的业务是有脏数据一场输入并发请求成本控制隐私安全等一系列的问题当没有工程底座的时候你的D-mode越漂亮后面它的就越快第三点就是我觉得现在短视频它疯狂的在展示结果没有去展示维护一个智能体自动生成报告自动恢复客户自动剪辑视频它看起来很震惊但是没有人展示它失败的时候怎么去排场没人展示日志怎么读没人展示测试怎么做没人展示边界条件怎么处理大家看到的是魔法Magic它不是Engineering第四点很多人有强烈的弯道超车的心理给了所有非技术的人一个巨大的想象我不懂代码也能做软件我不会开发以名创业这种心理有一部分是真的因为IH就是降低了表达需求和生成原型的门槛但危险在于有些人进一步误解为不需要懂代码不需要懂系统不需要懂工程就能够不能最后只是一种自欺欺人第五点真正的智能体至少要能回答一些问题它的任务边界是什么它失败是应该怎么办该如何保存和调用上下文该怎么判断模型输出师父靠谱它怎么处理工具调用失败它的数据从哪里来是否可信它有没有全线控制和安全机制有没有日志监控测试回馆机制它的成本是否可控之后它能不能被别人去维护很多人出了报告以后他用IH打这个补顶有说实话IH打补顶这个补顶会打得非常大而且一定是失真的这些问题有人回答得上来吗你回答不上来它就不是产品它只是个掩饰今年真正懂系统的人已经开始胜出了因为他们把IH从玩具变成了工具将工具变成了产品从产品变成了业务的基础设施如果你也想把AZEN真正的学起来不只是随便玩一下而是当做自己的工作就能拿到一个还不错的薪资666拿着我这份好时三周整理出来的路线和教程里面就包含了AZEN机群MCP等基础的知识点以及要去做什么项目把这些东西都要系统的过一遍这才是决定你做出来的东西不是地盟而是能够上线的产品当创建变得廉价理解判断维护负责就会变成一场争国就是你去做这个提示词这个动作是很廉价的只需要消耗一点token但是后面如何去理解你的AZEN如何去判断如何去维护如何去负责让它从一个DEMO变成一个真正的产品让它能够跑通你的业务这个过程是很复杂的所以这个过程也是很珍贵的",
+  "transcriptTextRole": "raw-asr-evidence-only",
+  "downstreamTextSource": "cues",
+  "words": [
+    {
+      "index": 0,
+      "text": "我",
+      "start": 0.0,
+      "end": 0.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 1,
+      "text": "奉",
+      "start": 0.14,
+      "end": 0.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 2,
+      "text": "劝",
+      "start": 0.34,
+      "end": 0.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 3,
+      "text": "很",
+      "start": 0.54,
+      "end": 0.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 4,
+      "text": "多",
+      "start": 0.7,
+      "end": 0.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 5,
+      "text": "人",
+      "start": 0.86,
+      "end": 1.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 6,
+      "text": "对",
+      "start": 1.14,
+      "end": 1.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 7,
+      "text": "a",
+      "start": 1.14,
+      "end": 1.32,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 8,
+      "text": "i",
+      "start": 1.32,
+      "end": 1.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 9,
+      "text": "技",
+      "start": 1.66,
+      "end": 1.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 10,
+      "text": "术",
+      "start": 1.84,
+      "end": 2.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 11,
+      "text": "一",
+      "start": 2.0,
+      "end": 2.087,
+      "mapping": "exact"
+    },
+    {
+      "index": 12,
+      "text": "定",
+      "start": 2.087,
+      "end": 2.173,
+      "mapping": "exact"
+    },
+    {
+      "index": 13,
+      "text": "要",
+      "start": 2.173,
+      "end": 2.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 14,
+      "text": "有",
+      "start": 2.26,
+      "end": 2.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 15,
+      "text": "敬",
+      "start": 2.58,
+      "end": 2.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 16,
+      "text": "畏",
+      "start": 2.8,
+      "end": 2.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 17,
+      "text": "之",
+      "start": 2.98,
+      "end": 3.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 18,
+      "text": "心",
+      "start": 3.18,
+      "end": 3.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 19,
+      "text": "也",
+      "start": 3.48,
+      "end": 3.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 20,
+      "text": "希",
+      "start": 3.94,
+      "end": 4.05,
+      "mapping": "exact"
+    },
+    {
+      "index": 21,
+      "text": "望",
+      "start": 4.05,
+      "end": 4.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 22,
+      "text": "大",
+      "start": 4.16,
+      "end": 4.29,
+      "mapping": "exact"
+    },
+    {
+      "index": 23,
+      "text": "家",
+      "start": 4.29,
+      "end": 4.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 24,
+      "text": "擦",
+      "start": 4.42,
+      "end": 4.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 25,
+      "text": "亮",
+      "start": 4.84,
+      "end": 5.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 26,
+      "text": "双",
+      "start": 5.02,
+      "end": 5.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 27,
+      "text": "眼",
+      "start": 5.2,
+      "end": 5.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 28,
+      "text": "这",
+      "start": 5.48,
+      "end": 5.65,
+      "mapping": "exact"
+    },
+    {
+      "index": 29,
+      "text": "个",
+      "start": 5.65,
+      "end": 5.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 30,
+      "text": "市",
+      "start": 5.82,
+      "end": 6.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 31,
+      "text": "场",
+      "start": 6.04,
+      "end": 6.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 32,
+      "text": "上",
+      "start": 6.2,
+      "end": 6.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 33,
+      "text": "有",
+      "start": 6.38,
+      "end": 6.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 34,
+      "text": "无",
+      "start": 6.62,
+      "end": 6.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 35,
+      "text": "数",
+      "start": 6.84,
+      "end": 6.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 36,
+      "text": "所",
+      "start": 6.98,
+      "end": 7.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 37,
+      "text": "谓",
+      "start": 7.14,
+      "end": 7.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 38,
+      "text": "的",
+      "start": 7.26,
+      "end": 7.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 39,
+      "text": "a",
+      "start": 7.36,
+      "end": 7.5,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 40,
+      "text": "i",
+      "start": 7.36,
+      "end": 7.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 41,
+      "text": "c",
+      "start": 7.7,
+      "end": 7.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 42,
+      "text": "o",
+      "start": 7.98,
+      "end": 8.007,
+      "mapping": "exact"
+    },
+    {
+      "index": 43,
+      "text": "z",
+      "start": 8.007,
+      "end": 8.033,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 44,
+      "text": "e",
+      "start": 8.033,
+      "end": 8.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 45,
+      "text": "d",
+      "start": 8.06,
+      "end": 8.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 46,
+      "text": "i",
+      "start": 8.32,
+      "end": 8.373,
+      "mapping": "exact"
+    },
+    {
+      "index": 47,
+      "text": "f",
+      "start": 8.373,
+      "end": 8.427,
+      "mapping": "exact"
+    },
+    {
+      "index": 48,
+      "text": "y",
+      "start": 8.427,
+      "end": 8.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 49,
+      "text": "社",
+      "start": 8.48,
+      "end": 8.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 50,
+      "text": "群",
+      "start": 8.68,
+      "end": 8.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 51,
+      "text": "告",
+      "start": 8.98,
+      "end": 9.21,
+      "mapping": "exact"
+    },
+    {
+      "index": 52,
+      "text": "诉",
+      "start": 9.21,
+      "end": 9.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 53,
+      "text": "你",
+      "start": 9.44,
+      "end": 9.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 54,
+      "text": "应",
+      "start": 9.64,
+      "end": 9.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 55,
+      "text": "该",
+      "start": 9.8,
+      "end": 9.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 56,
+      "text": "怎",
+      "start": 9.94,
+      "end": 10.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 57,
+      "text": "么",
+      "start": 10.04,
+      "end": 10.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 58,
+      "text": "做",
+      "start": 10.14,
+      "end": 10.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 59,
+      "text": "但",
+      "start": 10.4,
+      "end": 10.51,
+      "mapping": "exact"
+    },
+    {
+      "index": 60,
+      "text": "是",
+      "start": 10.51,
+      "end": 10.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 61,
+      "text": "这",
+      "start": 10.62,
+      "end": 10.73,
+      "mapping": "exact"
+    },
+    {
+      "index": 62,
+      "text": "里",
+      "start": 10.73,
+      "end": 10.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 63,
+      "text": "面",
+      "start": 10.84,
+      "end": 11.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 64,
+      "text": "9",
+      "start": 11.04,
+      "end": 11.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 65,
+      "text": "9",
+      "start": 11.3,
+      "end": 11.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 66,
+      "text": "的",
+      "start": 11.68,
+      "end": 11.87,
+      "mapping": "exact"
+    },
+    {
+      "index": 67,
+      "text": "人",
+      "start": 11.87,
+      "end": 12.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 68,
+      "text": "他",
+      "start": 12.06,
+      "end": 12.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 69,
+      "text": "并",
+      "start": 12.3,
+      "end": 12.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 70,
+      "text": "不",
+      "start": 12.56,
+      "end": 12.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 71,
+      "text": "具",
+      "start": 12.76,
+      "end": 12.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 72,
+      "text": "备",
+      "start": 12.9,
+      "end": 13.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 73,
+      "text": "开",
+      "start": 13.04,
+      "end": 13.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 74,
+      "text": "发",
+      "start": 13.26,
+      "end": 13.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 75,
+      "text": "和",
+      "start": 13.48,
+      "end": 13.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 76,
+      "text": "维",
+      "start": 13.72,
+      "end": 13.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 77,
+      "text": "护",
+      "start": 13.88,
+      "end": 14.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 78,
+      "text": "a",
+      "start": 14.0,
+      "end": 14.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 79,
+      "text": "i",
+      "start": 14.38,
+      "end": 14.46,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 80,
+      "text": "的",
+      "start": 14.46,
+      "end": 14.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 81,
+      "text": "能",
+      "start": 14.52,
+      "end": 14.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 82,
+      "text": "力",
+      "start": 14.6,
+      "end": 14.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 83,
+      "text": "他",
+      "start": 14.82,
+      "end": 14.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 84,
+      "text": "完",
+      "start": 14.96,
+      "end": 15.13,
+      "mapping": "exact"
+    },
+    {
+      "index": 85,
+      "text": "全",
+      "start": 15.13,
+      "end": 15.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 86,
+      "text": "看",
+      "start": 15.3,
+      "end": 15.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 87,
+      "text": "不",
+      "start": 15.54,
+      "end": 15.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 88,
+      "text": "懂",
+      "start": 15.68,
+      "end": 15.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 89,
+      "text": "底",
+      "start": 15.82,
+      "end": 16.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 90,
+      "text": "层",
+      "start": 16.02,
+      "end": 16.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 91,
+      "text": "的",
+      "start": 16.2,
+      "end": 16.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 92,
+      "text": "代",
+      "start": 16.32,
+      "end": 16.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 93,
+      "text": "码",
+      "start": 16.46,
+      "end": 16.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 94,
+      "text": "a",
+      "start": 16.6,
+      "end": 16.96,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 95,
+      "text": "i",
+      "start": 16.6,
+      "end": 16.96,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 96,
+      "text": "也",
+      "start": 16.96,
+      "end": 17.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 97,
+      "text": "并",
+      "start": 17.14,
+      "end": 17.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 98,
+      "text": "不",
+      "start": 17.28,
+      "end": 17.37,
+      "mapping": "exact"
+    },
+    {
+      "index": 99,
+      "text": "是",
+      "start": 17.37,
+      "end": 17.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 100,
+      "text": "你",
+      "start": 17.46,
+      "end": 17.62,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 101,
+      "text": "想",
+      "start": 17.62,
+      "end": 17.74,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 102,
+      "text": "的",
+      "start": 17.74,
+      "end": 17.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 103,
+      "text": "那",
+      "start": 17.86,
+      "end": 17.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 104,
+      "text": "么",
+      "start": 17.92,
+      "end": 17.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 105,
+      "text": "简",
+      "start": 17.98,
+      "end": 18.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 106,
+      "text": "单",
+      "start": 18.2,
+      "end": 18.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 107,
+      "text": "我",
+      "start": 18.48,
+      "end": 18.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 108,
+      "text": "看",
+      "start": 18.6,
+      "end": 18.71,
+      "mapping": "exact"
+    },
+    {
+      "index": 109,
+      "text": "到",
+      "start": 18.71,
+      "end": 18.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 110,
+      "text": "很",
+      "start": 18.82,
+      "end": 18.97,
+      "mapping": "exact"
+    },
+    {
+      "index": 111,
+      "text": "多",
+      "start": 18.97,
+      "end": 19.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 112,
+      "text": "人",
+      "start": 19.12,
+      "end": 19.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 113,
+      "text": "用",
+      "start": 19.4,
+      "end": 19.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 114,
+      "text": "完",
+      "start": 19.56,
+      "end": 19.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 115,
+      "text": "c",
+      "start": 19.74,
+      "end": 19.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 116,
+      "text": "o",
+      "start": 19.92,
+      "end": 19.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 117,
+      "text": "d",
+      "start": 19.94,
+      "end": 19.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 118,
+      "text": "e",
+      "start": 19.96,
+      "end": 19.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 119,
+      "text": "x",
+      "start": 19.98,
+      "end": 20.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 120,
+      "text": "c",
+      "start": 20.26,
+      "end": 20.315,
+      "mapping": "exact"
+    },
+    {
+      "index": 121,
+      "text": "l",
+      "start": 20.26,
+      "end": 20.315,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 122,
+      "text": "a",
+      "start": 20.26,
+      "end": 20.315,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 123,
+      "text": "u",
+      "start": 20.26,
+      "end": 20.315,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 124,
+      "text": "d",
+      "start": 20.26,
+      "end": 20.315,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 125,
+      "text": "e",
+      "start": 20.26,
+      "end": 20.315,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 126,
+      "text": "c",
+      "start": 20.315,
+      "end": 20.37,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 127,
+      "text": "o",
+      "start": 20.315,
+      "end": 20.37,
+      "mapping": "exact"
+    },
+    {
+      "index": 128,
+      "text": "d",
+      "start": 20.37,
+      "end": 20.425,
+      "mapping": "exact"
+    },
+    {
+      "index": 129,
+      "text": "e",
+      "start": 20.425,
+      "end": 20.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 130,
+      "text": "都",
+      "start": 20.64,
+      "end": 20.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 131,
+      "text": "觉",
+      "start": 20.82,
+      "end": 20.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 132,
+      "text": "得",
+      "start": 20.96,
+      "end": 21.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 133,
+      "text": "自",
+      "start": 21.1,
+      "end": 21.23,
+      "mapping": "exact"
+    },
+    {
+      "index": 134,
+      "text": "己",
+      "start": 21.23,
+      "end": 21.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 135,
+      "text": "是",
+      "start": 21.36,
+      "end": 21.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 136,
+      "text": "大",
+      "start": 21.56,
+      "end": 21.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 137,
+      "text": "神",
+      "start": 21.7,
+      "end": 21.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 138,
+      "text": "就",
+      "start": 21.94,
+      "end": 22.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 139,
+      "text": "一",
+      "start": 22.36,
+      "end": 22.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 140,
+      "text": "下",
+      "start": 22.44,
+      "end": 22.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 141,
+      "text": "子",
+      "start": 22.52,
+      "end": 22.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 142,
+      "text": "支",
+      "start": 22.68,
+      "end": 22.9,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 143,
+      "text": "棱",
+      "start": 22.9,
+      "end": 23.04,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 144,
+      "text": "起",
+      "start": 23.04,
+      "end": 23.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 145,
+      "text": "来",
+      "start": 23.22,
+      "end": 23.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 146,
+      "text": "了",
+      "start": 23.34,
+      "end": 23.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 147,
+      "text": "觉",
+      "start": 23.46,
+      "end": 23.53,
+      "mapping": "exact"
+    },
+    {
+      "index": 148,
+      "text": "得",
+      "start": 23.53,
+      "end": 23.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 149,
+      "text": "自",
+      "start": 23.6,
+      "end": 23.73,
+      "mapping": "exact"
+    },
+    {
+      "index": 150,
+      "text": "己",
+      "start": 23.73,
+      "end": 23.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 151,
+      "text": "是",
+      "start": 23.86,
+      "end": 24.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 152,
+      "text": "被",
+      "start": 24.04,
+      "end": 24.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 153,
+      "text": "掩",
+      "start": 24.24,
+      "end": 24.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 154,
+      "text": "埋",
+      "start": 24.4,
+      "end": 24.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 155,
+      "text": "的",
+      "start": 24.54,
+      "end": 24.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 156,
+      "text": "技",
+      "start": 24.66,
+      "end": 24.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 157,
+      "text": "术",
+      "start": 24.84,
+      "end": 24.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 158,
+      "text": "天",
+      "start": 24.94,
+      "end": 25.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 159,
+      "text": "才",
+      "start": 25.1,
+      "end": 25.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 160,
+      "text": "强",
+      "start": 25.3,
+      "end": 25.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 161,
+      "text": "得",
+      "start": 25.58,
+      "end": 25.76,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 162,
+      "text": "可",
+      "start": 25.76,
+      "end": 25.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 163,
+      "text": "怕",
+      "start": 25.94,
+      "end": 26.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 164,
+      "text": "会",
+      "start": 26.14,
+      "end": 26.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 165,
+      "text": "搭",
+      "start": 26.64,
+      "end": 26.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 166,
+      "text": "工",
+      "start": 26.82,
+      "end": 26.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 167,
+      "text": "作",
+      "start": 26.96,
+      "end": 27.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 168,
+      "text": "流",
+      "start": 27.1,
+      "end": 27.42,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 169,
+      "text": "会",
+      "start": 27.42,
+      "end": 27.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 170,
+      "text": "写",
+      "start": 27.96,
+      "end": 28.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 171,
+      "text": "提",
+      "start": 28.14,
+      "end": 28.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 172,
+      "text": "示",
+      "start": 28.36,
+      "end": 28.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 173,
+      "text": "词",
+      "start": 28.5,
+      "end": 28.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 174,
+      "text": "然",
+      "start": 28.74,
+      "end": 29.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 175,
+      "text": "后",
+      "start": 29.0,
+      "end": 29.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 176,
+      "text": "生",
+      "start": 29.26,
+      "end": 29.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 177,
+      "text": "成",
+      "start": 29.52,
+      "end": 29.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 178,
+      "text": "一",
+      "start": 29.68,
+      "end": 29.83,
+      "mapping": "exact"
+    },
+    {
+      "index": 179,
+      "text": "个",
+      "start": 29.83,
+      "end": 29.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 180,
+      "text": "a",
+      "start": 29.98,
+      "end": 30.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 181,
+      "text": "g",
+      "start": 30.46,
+      "end": 30.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 182,
+      "text": "e",
+      "start": 30.52,
+      "end": 30.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 183,
+      "text": "n",
+      "start": 30.58,
+      "end": 30.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 184,
+      "text": "t",
+      "start": 30.64,
+      "end": 30.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 185,
+      "text": "尤",
+      "start": 30.7,
+      "end": 30.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 186,
+      "text": "其",
+      "start": 30.9,
+      "end": 31.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 187,
+      "text": "是",
+      "start": 31.04,
+      "end": 31.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 188,
+      "text": "应",
+      "start": 31.18,
+      "end": 31.32,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 189,
+      "text": "届",
+      "start": 31.32,
+      "end": 31.46,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 190,
+      "text": "生",
+      "start": 31.46,
+      "end": 31.78,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 191,
+      "text": "投",
+      "start": 31.78,
+      "end": 32.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 192,
+      "text": "了",
+      "start": 32.42,
+      "end": 32.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 193,
+      "text": "很",
+      "start": 32.56,
+      "end": 32.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 194,
+      "text": "多",
+      "start": 32.66,
+      "end": 32.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 195,
+      "text": "简",
+      "start": 32.76,
+      "end": 33.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 196,
+      "text": "历",
+      "start": 33.14,
+      "end": 33.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 197,
+      "text": "说",
+      "start": 33.34,
+      "end": 33.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 198,
+      "text": "a",
+      "start": 33.6,
+      "end": 33.78,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 199,
+      "text": "i",
+      "start": 33.6,
+      "end": 33.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 200,
+      "text": "并",
+      "start": 33.78,
+      "end": 34.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 201,
+      "text": "不",
+      "start": 34.0,
+      "end": 34.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 202,
+      "text": "好",
+      "start": 34.08,
+      "end": 34.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 203,
+      "text": "找",
+      "start": 34.16,
+      "end": 34.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 204,
+      "text": "工",
+      "start": 34.38,
+      "end": 34.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 205,
+      "text": "作",
+      "start": 34.54,
+      "end": 34.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 206,
+      "text": "我",
+      "start": 34.7,
+      "end": 35.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 207,
+      "text": "可",
+      "start": 35.14,
+      "end": 35.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 208,
+      "text": "以",
+      "start": 35.24,
+      "end": 35.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 209,
+      "text": "非",
+      "start": 35.34,
+      "end": 35.45,
+      "mapping": "exact"
+    },
+    {
+      "index": 210,
+      "text": "常",
+      "start": 35.45,
+      "end": 35.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 211,
+      "text": "明",
+      "start": 35.56,
+      "end": 35.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 212,
+      "text": "确",
+      "start": 35.76,
+      "end": 35.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 213,
+      "text": "地",
+      "start": 35.9,
+      "end": 36.0,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 214,
+      "text": "告",
+      "start": 36.0,
+      "end": 36.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 215,
+      "text": "诉",
+      "start": 36.08,
+      "end": 36.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 216,
+      "text": "你",
+      "start": 36.16,
+      "end": 36.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 217,
+      "text": "这",
+      "start": 36.46,
+      "end": 36.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 218,
+      "text": "个",
+      "start": 36.72,
+      "end": 36.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 219,
+      "text": "市",
+      "start": 36.98,
+      "end": 37.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 220,
+      "text": "场",
+      "start": 37.22,
+      "end": 37.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 221,
+      "text": "上",
+      "start": 37.42,
+      "end": 37.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 222,
+      "text": "9",
+      "start": 37.56,
+      "end": 37.83,
+      "mapping": "exact"
+    },
+    {
+      "index": 223,
+      "text": "0",
+      "start": 37.83,
+      "end": 38.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 224,
+      "text": "的",
+      "start": 38.28,
+      "end": 38.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 225,
+      "text": "人",
+      "start": 38.38,
+      "end": 38.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 226,
+      "text": "他",
+      "start": 38.48,
+      "end": 38.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 227,
+      "text": "对",
+      "start": 38.66,
+      "end": 38.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 228,
+      "text": "底",
+      "start": 38.82,
+      "end": 39.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 229,
+      "text": "层",
+      "start": 39.04,
+      "end": 39.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 230,
+      "text": "逻",
+      "start": 39.18,
+      "end": 39.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 231,
+      "text": "辑",
+      "start": 39.34,
+      "end": 39.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 232,
+      "text": "是",
+      "start": 39.48,
+      "end": 39.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 233,
+      "text": "完",
+      "start": 39.6,
+      "end": 39.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 234,
+      "text": "全",
+      "start": 39.72,
+      "end": 39.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 235,
+      "text": "不",
+      "start": 39.84,
+      "end": 40.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 236,
+      "text": "清",
+      "start": 40.06,
+      "end": 40.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 237,
+      "text": "晰",
+      "start": 40.26,
+      "end": 40.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 238,
+      "text": "的",
+      "start": 40.5,
+      "end": 40.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 239,
+      "text": "他",
+      "start": 40.64,
+      "end": 40.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 240,
+      "text": "不",
+      "start": 40.76,
+      "end": 40.87,
+      "mapping": "exact"
+    },
+    {
+      "index": 241,
+      "text": "是",
+      "start": 40.87,
+      "end": 40.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 242,
+      "text": "在",
+      "start": 40.98,
+      "end": 41.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 243,
+      "text": "构",
+      "start": 41.2,
+      "end": 41.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 244,
+      "text": "建",
+      "start": 41.36,
+      "end": 41.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 245,
+      "text": "一",
+      "start": 41.54,
+      "end": 41.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 246,
+      "text": "个",
+      "start": 41.64,
+      "end": 41.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 247,
+      "text": "可",
+      "start": 41.74,
+      "end": 41.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 248,
+      "text": "维",
+      "start": 41.98,
+      "end": 42.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 249,
+      "text": "护",
+      "start": 42.14,
+      "end": 42.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 250,
+      "text": "的",
+      "start": 42.32,
+      "end": 42.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 251,
+      "text": "系",
+      "start": 42.46,
+      "end": 42.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 252,
+      "text": "统",
+      "start": 42.64,
+      "end": 42.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 253,
+      "text": "而",
+      "start": 42.8,
+      "end": 42.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 254,
+      "text": "是",
+      "start": 42.94,
+      "end": 43.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 255,
+      "text": "在",
+      "start": 43.0,
+      "end": 43.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 256,
+      "text": "拼",
+      "start": 43.14,
+      "end": 43.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 257,
+      "text": "接",
+      "start": 43.32,
+      "end": 43.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 258,
+      "text": "一",
+      "start": 43.5,
+      "end": 43.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 259,
+      "text": "个",
+      "start": 43.58,
+      "end": 43.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 260,
+      "text": "能",
+      "start": 43.66,
+      "end": 43.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 261,
+      "text": "演",
+      "start": 43.86,
+      "end": 44.34,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 262,
+      "text": "示",
+      "start": 44.34,
+      "end": 44.52,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 263,
+      "text": "的",
+      "start": 44.52,
+      "end": 44.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 264,
+      "text": "流",
+      "start": 44.64,
+      "end": 44.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 265,
+      "text": "程",
+      "start": 44.84,
+      "end": 45.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 266,
+      "text": "一",
+      "start": 45.12,
+      "end": 45.27,
+      "mapping": "exact"
+    },
+    {
+      "index": 267,
+      "text": "个",
+      "start": 45.27,
+      "end": 45.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 268,
+      "text": "d",
+      "start": 45.42,
+      "end": 45.74,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 269,
+      "text": "e",
+      "start": 45.74,
+      "end": 45.88,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 270,
+      "text": "m",
+      "start": 45.88,
+      "end": 45.98,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 271,
+      "text": "o",
+      "start": 45.98,
+      "end": 46.08,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 272,
+      "text": "五",
+      "start": 45.98,
+      "end": 46.08,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 273,
+      "text": "个",
+      "start": 45.98,
+      "end": 46.08,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 274,
+      "text": "原",
+      "start": 46.08,
+      "end": 46.23,
+      "mapping": "exact"
+    },
+    {
+      "index": 275,
+      "text": "因",
+      "start": 46.23,
+      "end": 46.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 276,
+      "text": "对",
+      "start": 46.38,
+      "end": 46.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 277,
+      "text": "照",
+      "start": 46.64,
+      "end": 46.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 278,
+      "text": "一",
+      "start": 46.82,
+      "end": 46.95,
+      "mapping": "exact"
+    },
+    {
+      "index": 279,
+      "text": "下",
+      "start": 46.95,
+      "end": 47.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 280,
+      "text": "自",
+      "start": 47.08,
+      "end": 47.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 281,
+      "text": "己",
+      "start": 47.22,
+      "end": 47.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 282,
+      "text": "能",
+      "start": 47.36,
+      "end": 47.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 283,
+      "text": "理",
+      "start": 47.6,
+      "end": 47.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 284,
+      "text": "解",
+      "start": 47.78,
+      "end": 47.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 285,
+      "text": "的",
+      "start": 47.92,
+      "end": 48.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 286,
+      "text": "月",
+      "start": 48.1,
+      "end": 48.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 287,
+      "text": "薪",
+      "start": 48.44,
+      "end": 48.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 288,
+      "text": "都",
+      "start": 48.62,
+      "end": 48.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 289,
+      "text": "不",
+      "start": 48.8,
+      "end": 48.91,
+      "mapping": "exact"
+    },
+    {
+      "index": 290,
+      "text": "会",
+      "start": 48.91,
+      "end": 49.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 291,
+      "text": "低",
+      "start": 49.02,
+      "end": 49.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 292,
+      "text": "于",
+      "start": 49.18,
+      "end": 49.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 293,
+      "text": "3",
+      "start": 49.28,
+      "end": 49.39,
+      "mapping": "exact"
+    },
+    {
+      "index": 294,
+      "text": "0",
+      "start": 49.39,
+      "end": 49.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 295,
+      "text": "k",
+      "start": 49.5,
+      "end": 49.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 296,
+      "text": "第",
+      "start": 49.8,
+      "end": 50.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 297,
+      "text": "一",
+      "start": 50.1,
+      "end": 50.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 298,
+      "text": "平",
+      "start": 50.4,
+      "end": 50.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 299,
+      "text": "台",
+      "start": 50.7,
+      "end": 50.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 300,
+      "text": "把",
+      "start": 50.92,
+      "end": 51.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 301,
+      "text": "系",
+      "start": 51.2,
+      "end": 51.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 302,
+      "text": "统",
+      "start": 51.42,
+      "end": 51.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 303,
+      "text": "的",
+      "start": 51.5,
+      "end": 51.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 304,
+      "text": "复",
+      "start": 51.62,
+      "end": 51.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 305,
+      "text": "杂",
+      "start": 51.74,
+      "end": 51.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 306,
+      "text": "性",
+      "start": 51.9,
+      "end": 52.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 307,
+      "text": "给",
+      "start": 52.12,
+      "end": 52.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 308,
+      "text": "隐",
+      "start": 52.26,
+      "end": 52.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 309,
+      "text": "藏",
+      "start": 52.4,
+      "end": 52.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 310,
+      "text": "起",
+      "start": 52.56,
+      "end": 52.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 311,
+      "text": "来",
+      "start": 52.78,
+      "end": 52.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 312,
+      "text": "低",
+      "start": 52.96,
+      "end": 53.52,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 313,
+      "text": "代",
+      "start": 53.52,
+      "end": 53.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 314,
+      "text": "码",
+      "start": 53.64,
+      "end": 53.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 315,
+      "text": "无",
+      "start": 53.98,
+      "end": 54.04,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 316,
+      "text": "代",
+      "start": 54.06,
+      "end": 54.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 317,
+      "text": "码",
+      "start": 54.18,
+      "end": 54.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 318,
+      "text": "a",
+      "start": 54.52,
+      "end": 54.521,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 319,
+      "text": "i",
+      "start": 54.52,
+      "end": 54.521,
+      "mapping": "exact"
+    },
+    {
+      "index": 320,
+      "text": "平",
+      "start": 54.52,
+      "end": 54.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 321,
+      "text": "台",
+      "start": 54.68,
+      "end": 54.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 322,
+      "text": "工",
+      "start": 54.88,
+      "end": 55.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 323,
+      "text": "作",
+      "start": 55.04,
+      "end": 55.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 324,
+      "text": "流",
+      "start": 55.2,
+      "end": 55.42,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 325,
+      "text": "工",
+      "start": 55.42,
+      "end": 55.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 326,
+      "text": "具",
+      "start": 55.62,
+      "end": 55.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 327,
+      "text": "把",
+      "start": 55.82,
+      "end": 56.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 328,
+      "text": "模",
+      "start": 56.0,
+      "end": 56.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 329,
+      "text": "型",
+      "start": 56.16,
+      "end": 56.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 330,
+      "text": "调",
+      "start": 56.34,
+      "end": 56.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 331,
+      "text": "用",
+      "start": 56.52,
+      "end": 56.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 332,
+      "text": "a",
+      "start": 56.94,
+      "end": 57.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 333,
+      "text": "p",
+      "start": 57.02,
+      "end": 57.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 334,
+      "text": "i",
+      "start": 57.1,
+      "end": 57.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 335,
+      "text": "连",
+      "start": 57.36,
+      "end": 57.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 336,
+      "text": "接",
+      "start": 57.5,
+      "end": 57.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 337,
+      "text": "向",
+      "start": 57.7,
+      "end": 57.98,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 338,
+      "text": "量",
+      "start": 57.98,
+      "end": 58.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 339,
+      "text": "库",
+      "start": 58.5,
+      "end": 58.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 340,
+      "text": "工",
+      "start": 58.8,
+      "end": 59.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 341,
+      "text": "具",
+      "start": 59.04,
+      "end": 59.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 342,
+      "text": "链",
+      "start": 59.16,
+      "end": 59.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 343,
+      "text": "调",
+      "start": 59.34,
+      "end": 59.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 344,
+      "text": "度",
+      "start": 59.58,
+      "end": 59.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 345,
+      "text": "流",
+      "start": 59.72,
+      "end": 59.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 346,
+      "text": "程",
+      "start": 59.88,
+      "end": 60.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 347,
+      "text": "包",
+      "start": 60.1,
+      "end": 60.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 348,
+      "text": "装",
+      "start": 60.32,
+      "end": 60.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 349,
+      "text": "成",
+      "start": 60.54,
+      "end": 60.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 350,
+      "text": "了",
+      "start": 60.72,
+      "end": 60.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 351,
+      "text": "按",
+      "start": 60.9,
+      "end": 61.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 352,
+      "text": "钮",
+      "start": 61.04,
+      "end": 61.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 353,
+      "text": "和",
+      "start": 61.22,
+      "end": 61.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 354,
+      "text": "节",
+      "start": 61.38,
+      "end": 61.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 355,
+      "text": "点",
+      "start": 61.56,
+      "end": 61.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 356,
+      "text": "好",
+      "start": 61.8,
+      "end": 61.98,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 357,
+      "text": "处",
+      "start": 61.98,
+      "end": 62.18,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 358,
+      "text": "是",
+      "start": 62.18,
+      "end": 62.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 359,
+      "text": "普",
+      "start": 62.36,
+      "end": 62.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 360,
+      "text": "通",
+      "start": 62.54,
+      "end": 62.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 361,
+      "text": "人",
+      "start": 62.66,
+      "end": 62.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 362,
+      "text": "可",
+      "start": 62.82,
+      "end": 62.91,
+      "mapping": "exact"
+    },
+    {
+      "index": 363,
+      "text": "以",
+      "start": 62.91,
+      "end": 63.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 364,
+      "text": "快",
+      "start": 63.0,
+      "end": 63.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 365,
+      "text": "速",
+      "start": 63.18,
+      "end": 63.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 366,
+      "text": "上",
+      "start": 63.38,
+      "end": 63.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 367,
+      "text": "手",
+      "start": 63.54,
+      "end": 63.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 368,
+      "text": "坏",
+      "start": 63.78,
+      "end": 63.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 369,
+      "text": "处",
+      "start": 63.98,
+      "end": 64.14,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 370,
+      "text": "是",
+      "start": 64.14,
+      "end": 64.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 371,
+      "text": "很",
+      "start": 64.26,
+      "end": 64.35,
+      "mapping": "exact"
+    },
+    {
+      "index": 372,
+      "text": "多",
+      "start": 64.35,
+      "end": 64.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 373,
+      "text": "人",
+      "start": 64.44,
+      "end": 64.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 374,
+      "text": "误",
+      "start": 64.66,
+      "end": 64.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 375,
+      "text": "以",
+      "start": 64.86,
+      "end": 64.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 376,
+      "text": "为",
+      "start": 64.98,
+      "end": 65.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 377,
+      "text": "会",
+      "start": 65.12,
+      "end": 65.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 378,
+      "text": "拖",
+      "start": 65.3,
+      "end": 65.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 379,
+      "text": "拽",
+      "start": 65.5,
+      "end": 65.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 380,
+      "text": "节",
+      "start": 65.64,
+      "end": 65.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 381,
+      "text": "点",
+      "start": 65.82,
+      "end": 66.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 382,
+      "text": "就",
+      "start": 66.04,
+      "end": 66.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 383,
+      "text": "等",
+      "start": 66.22,
+      "end": 66.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 384,
+      "text": "于",
+      "start": 66.36,
+      "end": 66.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 385,
+      "text": "懂",
+      "start": 66.46,
+      "end": 66.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 386,
+      "text": "系",
+      "start": 66.64,
+      "end": 67.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 387,
+      "text": "统",
+      "start": 67.1,
+      "end": 67.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 388,
+      "text": "架",
+      "start": 67.26,
+      "end": 67.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 389,
+      "text": "构",
+      "start": 67.46,
+      "end": 67.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 390,
+      "text": "但",
+      "start": 67.68,
+      "end": 67.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 391,
+      "text": "一",
+      "start": 67.9,
+      "end": 68.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 392,
+      "text": "旦",
+      "start": 68.04,
+      "end": 68.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 393,
+      "text": "报",
+      "start": 68.14,
+      "end": 68.32,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 394,
+      "text": "错",
+      "start": 68.32,
+      "end": 68.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 395,
+      "text": "你",
+      "start": 68.56,
+      "end": 68.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 396,
+      "text": "根",
+      "start": 68.8,
+      "end": 68.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 397,
+      "text": "本",
+      "start": 68.98,
+      "end": 69.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 398,
+      "text": "就",
+      "start": 69.1,
+      "end": 69.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 399,
+      "text": "不",
+      "start": 69.24,
+      "end": 69.307,
+      "mapping": "exact"
+    },
+    {
+      "index": 400,
+      "text": "知",
+      "start": 69.307,
+      "end": 69.373,
+      "mapping": "exact"
+    },
+    {
+      "index": 401,
+      "text": "道",
+      "start": 69.373,
+      "end": 69.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 402,
+      "text": "是",
+      "start": 69.44,
+      "end": 69.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 403,
+      "text": "模",
+      "start": 69.68,
+      "end": 69.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 404,
+      "text": "型",
+      "start": 69.86,
+      "end": 70.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 405,
+      "text": "问",
+      "start": 70.04,
+      "end": 70.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 406,
+      "text": "题",
+      "start": 70.24,
+      "end": 70.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 407,
+      "text": "接",
+      "start": 70.44,
+      "end": 70.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 408,
+      "text": "口",
+      "start": 70.72,
+      "end": 70.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 409,
+      "text": "问",
+      "start": 70.9,
+      "end": 71.09,
+      "mapping": "exact"
+    },
+    {
+      "index": 410,
+      "text": "题",
+      "start": 71.09,
+      "end": 71.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 411,
+      "text": "权",
+      "start": 71.28,
+      "end": 71.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 412,
+      "text": "限",
+      "start": 71.52,
+      "end": 71.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 413,
+      "text": "问",
+      "start": 71.68,
+      "end": 71.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 414,
+      "text": "题",
+      "start": 71.84,
+      "end": 72.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 415,
+      "text": "数",
+      "start": 72.0,
+      "end": 72.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 416,
+      "text": "据",
+      "start": 72.26,
+      "end": 72.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 417,
+      "text": "问",
+      "start": 72.4,
+      "end": 72.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 418,
+      "text": "题",
+      "start": 72.58,
+      "end": 72.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 419,
+      "text": "还",
+      "start": 72.76,
+      "end": 72.97,
+      "mapping": "exact"
+    },
+    {
+      "index": 420,
+      "text": "是",
+      "start": 72.97,
+      "end": 73.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 421,
+      "text": "上",
+      "start": 73.18,
+      "end": 73.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 422,
+      "text": "下",
+      "start": 73.42,
+      "end": 73.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 423,
+      "text": "游",
+      "start": 73.6,
+      "end": 73.74,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 424,
+      "text": "问",
+      "start": 73.74,
+      "end": 73.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 425,
+      "text": "题",
+      "start": 73.92,
+      "end": 74.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 426,
+      "text": "状",
+      "start": 74.1,
+      "end": 74.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 427,
+      "text": "态",
+      "start": 74.26,
+      "end": 74.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 428,
+      "text": "管",
+      "start": 74.38,
+      "end": 74.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 429,
+      "text": "理",
+      "start": 74.56,
+      "end": 74.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 430,
+      "text": "问",
+      "start": 74.7,
+      "end": 74.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 431,
+      "text": "题",
+      "start": 74.86,
+      "end": 75.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 432,
+      "text": "第",
+      "start": 75.02,
+      "end": 75.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 433,
+      "text": "二",
+      "start": 75.14,
+      "end": 75.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 434,
+      "text": "点",
+      "start": 75.26,
+      "end": 75.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 435,
+      "text": "很",
+      "start": 75.78,
+      "end": 75.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 436,
+      "text": "多",
+      "start": 75.88,
+      "end": 75.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 437,
+      "text": "人",
+      "start": 75.98,
+      "end": 76.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 438,
+      "text": "把",
+      "start": 76.2,
+      "end": 76.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 439,
+      "text": "原",
+      "start": 76.36,
+      "end": 76.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 440,
+      "text": "型",
+      "start": 76.58,
+      "end": 76.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 441,
+      "text": "能",
+      "start": 76.74,
+      "end": 76.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 442,
+      "text": "力",
+      "start": 76.92,
+      "end": 77.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 443,
+      "text": "误",
+      "start": 77.16,
+      "end": 77.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 444,
+      "text": "判",
+      "start": 77.38,
+      "end": 77.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 445,
+      "text": "成",
+      "start": 77.56,
+      "end": 77.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 446,
+      "text": "是",
+      "start": 77.74,
+      "end": 78.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 447,
+      "text": "产",
+      "start": 78.14,
+      "end": 78.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 448,
+      "text": "品",
+      "start": 78.6,
+      "end": 78.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 449,
+      "text": "能",
+      "start": 78.78,
+      "end": 78.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 450,
+      "text": "力",
+      "start": 78.94,
+      "end": 79.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 451,
+      "text": "a",
+      "start": 79.12,
+      "end": 79.24,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 452,
+      "text": "i",
+      "start": 79.12,
+      "end": 79.24,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 453,
+      "text": "最",
+      "start": 79.24,
+      "end": 79.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 454,
+      "text": "擅",
+      "start": 79.5,
+      "end": 79.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 455,
+      "text": "长",
+      "start": 79.64,
+      "end": 79.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 456,
+      "text": "帮",
+      "start": 79.92,
+      "end": 80.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 457,
+      "text": "你",
+      "start": 80.18,
+      "end": 80.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 458,
+      "text": "从",
+      "start": 80.42,
+      "end": 80.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 459,
+      "text": "0",
+      "start": 80.68,
+      "end": 80.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 460,
+      "text": "到",
+      "start": 80.88,
+      "end": 81.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 461,
+      "text": "1",
+      "start": 81.06,
+      "end": 81.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 462,
+      "text": "做",
+      "start": 81.4,
+      "end": 81.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 463,
+      "text": "一",
+      "start": 81.82,
+      "end": 81.89,
+      "mapping": "exact"
+    },
+    {
+      "index": 464,
+      "text": "个",
+      "start": 81.89,
+      "end": 81.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 465,
+      "text": "d",
+      "start": 81.96,
+      "end": 82.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 466,
+      "text": "e",
+      "start": 82.24,
+      "end": 82.28,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 467,
+      "text": "m",
+      "start": 82.24,
+      "end": 82.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 468,
+      "text": "o",
+      "start": 82.28,
+      "end": 82.327,
+      "mapping": "exact"
+    },
+    {
+      "index": 469,
+      "text": "每",
+      "start": 82.42,
+      "end": 82.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 470,
+      "text": "次",
+      "start": 82.6,
+      "end": 82.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 471,
+      "text": "帮",
+      "start": 82.76,
+      "end": 82.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 472,
+      "text": "你",
+      "start": 82.88,
+      "end": 82.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 473,
+      "text": "跑",
+      "start": 82.98,
+      "end": 83.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 474,
+      "text": "通",
+      "start": 83.16,
+      "end": 83.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 475,
+      "text": "一",
+      "start": 83.32,
+      "end": 83.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 476,
+      "text": "次",
+      "start": 83.44,
+      "end": 83.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 477,
+      "text": "你",
+      "start": 83.56,
+      "end": 83.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 478,
+      "text": "就",
+      "start": 83.66,
+      "end": 83.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 479,
+      "text": "觉",
+      "start": 83.76,
+      "end": 83.89,
+      "mapping": "exact"
+    },
+    {
+      "index": 480,
+      "text": "得",
+      "start": 83.89,
+      "end": 84.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 481,
+      "text": "自",
+      "start": 84.02,
+      "end": 84.11,
+      "mapping": "exact"
+    },
+    {
+      "index": 482,
+      "text": "己",
+      "start": 84.11,
+      "end": 84.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 483,
+      "text": "做",
+      "start": 84.2,
+      "end": 84.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 484,
+      "text": "成",
+      "start": 84.46,
+      "end": 84.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 485,
+      "text": "了",
+      "start": 84.68,
+      "end": 84.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 486,
+      "text": "但",
+      "start": 84.94,
+      "end": 85.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 487,
+      "text": "是",
+      "start": 85.08,
+      "end": 85.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 488,
+      "text": "真",
+      "start": 85.22,
+      "end": 85.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 489,
+      "text": "实",
+      "start": 85.5,
+      "end": 85.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 490,
+      "text": "的",
+      "start": 85.64,
+      "end": 85.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 491,
+      "text": "产",
+      "start": 85.74,
+      "end": 85.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 492,
+      "text": "品",
+      "start": 85.9,
+      "end": 86.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 493,
+      "text": "不",
+      "start": 86.08,
+      "end": 86.17,
+      "mapping": "exact"
+    },
+    {
+      "index": 494,
+      "text": "是",
+      "start": 86.17,
+      "end": 86.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 495,
+      "text": "跑",
+      "start": 86.26,
+      "end": 86.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 496,
+      "text": "通",
+      "start": 86.46,
+      "end": 86.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 497,
+      "text": "一",
+      "start": 86.62,
+      "end": 86.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 498,
+      "text": "次",
+      "start": 86.72,
+      "end": 86.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 499,
+      "text": "就",
+      "start": 86.82,
+      "end": 86.947,
+      "mapping": "exact"
+    },
+    {
+      "index": 500,
+      "text": "可",
+      "start": 86.947,
+      "end": 87.073,
+      "mapping": "exact"
+    },
+    {
+      "index": 501,
+      "text": "以",
+      "start": 87.073,
+      "end": 87.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 502,
+      "text": "了",
+      "start": 87.2,
+      "end": 87.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 503,
+      "text": "而",
+      "start": 87.4,
+      "end": 87.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 504,
+      "text": "是",
+      "start": 87.72,
+      "end": 87.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 505,
+      "text": "能",
+      "start": 87.86,
+      "end": 87.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 506,
+      "text": "够",
+      "start": 87.96,
+      "end": 88.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 507,
+      "text": "长",
+      "start": 88.1,
+      "end": 88.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 508,
+      "text": "期",
+      "start": 88.26,
+      "end": 88.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 509,
+      "text": "稳",
+      "start": 88.54,
+      "end": 88.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 510,
+      "text": "定",
+      "start": 88.86,
+      "end": 89.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 511,
+      "text": "地",
+      "start": 89.02,
+      "end": 89.26,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 512,
+      "text": "运",
+      "start": 89.26,
+      "end": 89.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 513,
+      "text": "行",
+      "start": 89.6,
+      "end": 89.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 514,
+      "text": "真",
+      "start": 89.84,
+      "end": 90.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 515,
+      "text": "实",
+      "start": 90.06,
+      "end": 90.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 516,
+      "text": "的",
+      "start": 90.18,
+      "end": 90.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 517,
+      "text": "业",
+      "start": 90.28,
+      "end": 90.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 518,
+      "text": "务",
+      "start": 90.44,
+      "end": 90.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 519,
+      "text": "是",
+      "start": 90.66,
+      "end": 91.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 520,
+      "text": "有",
+      "start": 91.16,
+      "end": 91.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 521,
+      "text": "脏",
+      "start": 91.4,
+      "end": 91.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 522,
+      "text": "数",
+      "start": 91.58,
+      "end": 91.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 523,
+      "text": "据",
+      "start": 91.86,
+      "end": 92.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 524,
+      "text": "异",
+      "start": 92.08,
+      "end": 92.22,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 525,
+      "text": "常",
+      "start": 92.22,
+      "end": 92.44,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 526,
+      "text": "输",
+      "start": 92.44,
+      "end": 92.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 527,
+      "text": "入",
+      "start": 92.66,
+      "end": 92.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 528,
+      "text": "并",
+      "start": 92.84,
+      "end": 93.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 529,
+      "text": "发",
+      "start": 93.0,
+      "end": 93.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 530,
+      "text": "请",
+      "start": 93.3,
+      "end": 93.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 531,
+      "text": "求",
+      "start": 93.74,
+      "end": 94.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 532,
+      "text": "成",
+      "start": 94.14,
+      "end": 94.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 533,
+      "text": "本",
+      "start": 94.64,
+      "end": 94.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 534,
+      "text": "控",
+      "start": 94.8,
+      "end": 95.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 535,
+      "text": "制",
+      "start": 95.02,
+      "end": 95.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 536,
+      "text": "隐",
+      "start": 95.3,
+      "end": 95.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 537,
+      "text": "私",
+      "start": 95.7,
+      "end": 95.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 538,
+      "text": "安",
+      "start": 95.86,
+      "end": 95.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 539,
+      "text": "全",
+      "start": 95.98,
+      "end": 96.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 540,
+      "text": "等",
+      "start": 96.1,
+      "end": 96.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 541,
+      "text": "一",
+      "start": 96.36,
+      "end": 96.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 542,
+      "text": "系",
+      "start": 96.52,
+      "end": 96.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 543,
+      "text": "列",
+      "start": 96.6,
+      "end": 96.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 544,
+      "text": "的",
+      "start": 96.72,
+      "end": 96.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 545,
+      "text": "问",
+      "start": 96.82,
+      "end": 96.97,
+      "mapping": "exact"
+    },
+    {
+      "index": 546,
+      "text": "题",
+      "start": 96.97,
+      "end": 97.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 547,
+      "text": "当",
+      "start": 97.12,
+      "end": 97.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 548,
+      "text": "没",
+      "start": 97.46,
+      "end": 97.61,
+      "mapping": "exact"
+    },
+    {
+      "index": 549,
+      "text": "有",
+      "start": 97.61,
+      "end": 97.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 550,
+      "text": "工",
+      "start": 97.76,
+      "end": 97.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 551,
+      "text": "程",
+      "start": 97.96,
+      "end": 98.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 552,
+      "text": "底",
+      "start": 98.12,
+      "end": 98.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 553,
+      "text": "座",
+      "start": 98.3,
+      "end": 98.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 554,
+      "text": "的",
+      "start": 98.46,
+      "end": 98.567,
+      "mapping": "exact"
+    },
+    {
+      "index": 555,
+      "text": "时",
+      "start": 98.567,
+      "end": 98.673,
+      "mapping": "exact"
+    },
+    {
+      "index": 556,
+      "text": "候",
+      "start": 98.673,
+      "end": 98.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 557,
+      "text": "你",
+      "start": 98.78,
+      "end": 98.91,
+      "mapping": "exact"
+    },
+    {
+      "index": 558,
+      "text": "的",
+      "start": 98.91,
+      "end": 99.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 559,
+      "text": "d",
+      "start": 99.04,
+      "end": 99.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 560,
+      "text": "e",
+      "start": 99.04,
+      "end": 99.24,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 561,
+      "text": "m",
+      "start": 99.26,
+      "end": 99.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 562,
+      "text": "o",
+      "start": 99.34,
+      "end": 99.373,
+      "mapping": "exact"
+    },
+    {
+      "index": 563,
+      "text": "越",
+      "start": 99.44,
+      "end": 99.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 564,
+      "text": "漂",
+      "start": 99.68,
+      "end": 99.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 565,
+      "text": "亮",
+      "start": 99.88,
+      "end": 100.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 566,
+      "text": "后",
+      "start": 100.08,
+      "end": 100.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 567,
+      "text": "面",
+      "start": 100.32,
+      "end": 100.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 568,
+      "text": "塌",
+      "start": 100.46,
+      "end": 100.55,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 569,
+      "text": "得",
+      "start": 100.55,
+      "end": 100.64,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 570,
+      "text": "就",
+      "start": 100.64,
+      "end": 100.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 571,
+      "text": "越",
+      "start": 100.86,
+      "end": 101.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 572,
+      "text": "快",
+      "start": 101.04,
+      "end": 101.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 573,
+      "text": "第",
+      "start": 101.32,
+      "end": 101.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 574,
+      "text": "三",
+      "start": 101.6,
+      "end": 101.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 575,
+      "text": "点",
+      "start": 101.88,
+      "end": 102.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 576,
+      "text": "就",
+      "start": 102.18,
+      "end": 102.27,
+      "mapping": "exact"
+    },
+    {
+      "index": 577,
+      "text": "是",
+      "start": 102.27,
+      "end": 102.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 578,
+      "text": "我",
+      "start": 102.36,
+      "end": 102.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 579,
+      "text": "觉",
+      "start": 102.6,
+      "end": 102.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 580,
+      "text": "得",
+      "start": 102.84,
+      "end": 103.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 581,
+      "text": "现",
+      "start": 103.08,
+      "end": 103.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 582,
+      "text": "在",
+      "start": 103.18,
+      "end": 103.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 583,
+      "text": "短",
+      "start": 103.28,
+      "end": 103.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 584,
+      "text": "视",
+      "start": 103.52,
+      "end": 103.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 585,
+      "text": "频",
+      "start": 103.7,
+      "end": 103.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 586,
+      "text": "它",
+      "start": 103.84,
+      "end": 103.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 587,
+      "text": "疯",
+      "start": 103.98,
+      "end": 104.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 588,
+      "text": "狂",
+      "start": 104.18,
+      "end": 104.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 589,
+      "text": "地",
+      "start": 104.36,
+      "end": 104.48,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 590,
+      "text": "在",
+      "start": 104.48,
+      "end": 104.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 591,
+      "text": "展",
+      "start": 104.62,
+      "end": 104.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 592,
+      "text": "示",
+      "start": 104.78,
+      "end": 104.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 593,
+      "text": "结",
+      "start": 104.98,
+      "end": 105.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 594,
+      "text": "果",
+      "start": 105.16,
+      "end": 105.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 595,
+      "text": "没",
+      "start": 105.56,
+      "end": 105.65,
+      "mapping": "exact"
+    },
+    {
+      "index": 596,
+      "text": "有",
+      "start": 105.65,
+      "end": 105.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 597,
+      "text": "去",
+      "start": 105.74,
+      "end": 105.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 598,
+      "text": "展",
+      "start": 105.98,
+      "end": 106.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 599,
+      "text": "示",
+      "start": 106.16,
+      "end": 106.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 600,
+      "text": "维",
+      "start": 106.32,
+      "end": 106.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 601,
+      "text": "护",
+      "start": 106.44,
+      "end": 106.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 602,
+      "text": "一",
+      "start": 106.68,
+      "end": 106.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 603,
+      "text": "个",
+      "start": 106.78,
+      "end": 106.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 604,
+      "text": "智",
+      "start": 106.88,
+      "end": 107.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 605,
+      "text": "能",
+      "start": 107.56,
+      "end": 107.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 606,
+      "text": "体",
+      "start": 107.72,
+      "end": 108.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 607,
+      "text": "自",
+      "start": 108.0,
+      "end": 108.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 608,
+      "text": "动",
+      "start": 108.24,
+      "end": 108.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 609,
+      "text": "生",
+      "start": 108.4,
+      "end": 108.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 610,
+      "text": "成",
+      "start": 108.56,
+      "end": 108.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 611,
+      "text": "报",
+      "start": 108.7,
+      "end": 109.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 612,
+      "text": "告",
+      "start": 109.0,
+      "end": 109.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 613,
+      "text": "自",
+      "start": 109.18,
+      "end": 109.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 614,
+      "text": "动",
+      "start": 109.44,
+      "end": 109.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 615,
+      "text": "回",
+      "start": 109.56,
+      "end": 109.7,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 616,
+      "text": "复",
+      "start": 109.7,
+      "end": 109.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 617,
+      "text": "客",
+      "start": 109.8,
+      "end": 110.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 618,
+      "text": "户",
+      "start": 110.0,
+      "end": 110.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 619,
+      "text": "自",
+      "start": 110.18,
+      "end": 110.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 620,
+      "text": "动",
+      "start": 110.36,
+      "end": 110.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 621,
+      "text": "剪",
+      "start": 110.46,
+      "end": 110.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 622,
+      "text": "辑",
+      "start": 110.64,
+      "end": 110.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 623,
+      "text": "视",
+      "start": 110.78,
+      "end": 110.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 624,
+      "text": "频",
+      "start": 110.98,
+      "end": 111.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 625,
+      "text": "它",
+      "start": 111.22,
+      "end": 111.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 626,
+      "text": "看",
+      "start": 111.58,
+      "end": 111.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 627,
+      "text": "起",
+      "start": 111.72,
+      "end": 111.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 628,
+      "text": "来",
+      "start": 111.82,
+      "end": 111.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 629,
+      "text": "很",
+      "start": 111.88,
+      "end": 112.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 630,
+      "text": "震",
+      "start": 112.04,
+      "end": 112.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 631,
+      "text": "惊",
+      "start": 112.24,
+      "end": 112.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 632,
+      "text": "但",
+      "start": 112.4,
+      "end": 112.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 633,
+      "text": "是",
+      "start": 112.5,
+      "end": 112.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 634,
+      "text": "没",
+      "start": 112.6,
+      "end": 112.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 635,
+      "text": "有",
+      "start": 112.74,
+      "end": 112.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 636,
+      "text": "人",
+      "start": 112.88,
+      "end": 113.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 637,
+      "text": "展",
+      "start": 113.04,
+      "end": 113.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 638,
+      "text": "示",
+      "start": 113.22,
+      "end": 113.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 639,
+      "text": "它",
+      "start": 113.34,
+      "end": 113.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 640,
+      "text": "失",
+      "start": 113.46,
+      "end": 113.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 641,
+      "text": "败",
+      "start": 113.68,
+      "end": 113.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 642,
+      "text": "的",
+      "start": 113.8,
+      "end": 113.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 643,
+      "text": "时",
+      "start": 113.9,
+      "end": 114.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 644,
+      "text": "候",
+      "start": 114.0,
+      "end": 114.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 645,
+      "text": "怎",
+      "start": 114.1,
+      "end": 114.23,
+      "mapping": "exact"
+    },
+    {
+      "index": 646,
+      "text": "么",
+      "start": 114.23,
+      "end": 114.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 647,
+      "text": "去",
+      "start": 114.36,
+      "end": 114.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 648,
+      "text": "排",
+      "start": 114.5,
+      "end": 114.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 649,
+      "text": "查",
+      "start": 114.62,
+      "end": 114.82,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 650,
+      "text": "没",
+      "start": 114.82,
+      "end": 115.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 651,
+      "text": "人",
+      "start": 115.3,
+      "end": 115.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 652,
+      "text": "展",
+      "start": 115.4,
+      "end": 115.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 653,
+      "text": "示",
+      "start": 115.58,
+      "end": 115.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 654,
+      "text": "日",
+      "start": 115.86,
+      "end": 116.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 655,
+      "text": "志",
+      "start": 116.12,
+      "end": 116.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 656,
+      "text": "怎",
+      "start": 116.26,
+      "end": 116.37,
+      "mapping": "exact"
+    },
+    {
+      "index": 657,
+      "text": "么",
+      "start": 116.37,
+      "end": 116.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 658,
+      "text": "读",
+      "start": 116.48,
+      "end": 116.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 659,
+      "text": "没",
+      "start": 116.64,
+      "end": 116.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 660,
+      "text": "人",
+      "start": 116.8,
+      "end": 116.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 661,
+      "text": "展",
+      "start": 116.88,
+      "end": 117.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 662,
+      "text": "示",
+      "start": 117.04,
+      "end": 117.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 663,
+      "text": "测",
+      "start": 117.2,
+      "end": 117.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 664,
+      "text": "试",
+      "start": 117.36,
+      "end": 117.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 665,
+      "text": "怎",
+      "start": 117.5,
+      "end": 117.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 666,
+      "text": "么",
+      "start": 117.6,
+      "end": 117.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 667,
+      "text": "做",
+      "start": 117.7,
+      "end": 117.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 668,
+      "text": "没",
+      "start": 117.9,
+      "end": 118.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 669,
+      "text": "人",
+      "start": 118.1,
+      "end": 118.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 670,
+      "text": "展",
+      "start": 118.18,
+      "end": 118.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 671,
+      "text": "示",
+      "start": 118.32,
+      "end": 118.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 672,
+      "text": "边",
+      "start": 118.46,
+      "end": 118.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 673,
+      "text": "界",
+      "start": 118.6,
+      "end": 118.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 674,
+      "text": "条",
+      "start": 118.74,
+      "end": 118.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 675,
+      "text": "件",
+      "start": 118.96,
+      "end": 119.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 676,
+      "text": "怎",
+      "start": 119.12,
+      "end": 119.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 677,
+      "text": "么",
+      "start": 119.22,
+      "end": 119.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 678,
+      "text": "处",
+      "start": 119.32,
+      "end": 119.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 679,
+      "text": "理",
+      "start": 119.52,
+      "end": 119.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 680,
+      "text": "于",
+      "start": 119.52,
+      "end": 119.7,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 681,
+      "text": "是",
+      "start": 119.7,
+      "end": 119.81,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 682,
+      "text": "大",
+      "start": 119.7,
+      "end": 119.81,
+      "mapping": "exact"
+    },
+    {
+      "index": 683,
+      "text": "家",
+      "start": 119.81,
+      "end": 119.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 684,
+      "text": "看",
+      "start": 119.92,
+      "end": 120.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 685,
+      "text": "到",
+      "start": 120.08,
+      "end": 120.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 686,
+      "text": "的",
+      "start": 120.24,
+      "end": 120.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 687,
+      "text": "是",
+      "start": 120.44,
+      "end": 120.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 688,
+      "text": "魔",
+      "start": 120.64,
+      "end": 120.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 689,
+      "text": "法",
+      "start": 120.94,
+      "end": 121.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 690,
+      "text": "m",
+      "start": 121.22,
+      "end": 121.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 691,
+      "text": "a",
+      "start": 121.36,
+      "end": 121.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 692,
+      "text": "g",
+      "start": 121.5,
+      "end": 121.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 693,
+      "text": "i",
+      "start": 121.64,
+      "end": 121.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 694,
+      "text": "c",
+      "start": 121.78,
+      "end": 121.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 695,
+      "text": "它",
+      "start": 121.92,
+      "end": 122.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 696,
+      "text": "不",
+      "start": 122.1,
+      "end": 122.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 697,
+      "text": "是",
+      "start": 122.22,
+      "end": 122.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 698,
+      "text": "e",
+      "start": 122.34,
+      "end": 122.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 699,
+      "text": "n",
+      "start": 122.42,
+      "end": 122.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 700,
+      "text": "g",
+      "start": 122.5,
+      "end": 122.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 701,
+      "text": "i",
+      "start": 122.58,
+      "end": 122.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 702,
+      "text": "n",
+      "start": 122.62,
+      "end": 122.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 703,
+      "text": "e",
+      "start": 122.66,
+      "end": 122.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 704,
+      "text": "e",
+      "start": 122.7,
+      "end": 122.764,
+      "mapping": "exact"
+    },
+    {
+      "index": 705,
+      "text": "r",
+      "start": 122.764,
+      "end": 122.828,
+      "mapping": "exact"
+    },
+    {
+      "index": 706,
+      "text": "i",
+      "start": 122.828,
+      "end": 122.892,
+      "mapping": "exact"
+    },
+    {
+      "index": 707,
+      "text": "n",
+      "start": 122.892,
+      "end": 122.956,
+      "mapping": "exact"
+    },
+    {
+      "index": 708,
+      "text": "g",
+      "start": 122.956,
+      "end": 123.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 709,
+      "text": "第",
+      "start": 123.02,
+      "end": 123.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 710,
+      "text": "四",
+      "start": 123.48,
+      "end": 123.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 711,
+      "text": "点",
+      "start": 123.68,
+      "end": 123.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 712,
+      "text": "很",
+      "start": 123.86,
+      "end": 123.95,
+      "mapping": "exact"
+    },
+    {
+      "index": 713,
+      "text": "多",
+      "start": 123.95,
+      "end": 124.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 714,
+      "text": "人",
+      "start": 124.04,
+      "end": 124.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 715,
+      "text": "有",
+      "start": 124.24,
+      "end": 124.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 716,
+      "text": "强",
+      "start": 124.36,
+      "end": 124.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 717,
+      "text": "烈",
+      "start": 124.62,
+      "end": 124.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 718,
+      "text": "的",
+      "start": 124.82,
+      "end": 124.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 719,
+      "text": "弯",
+      "start": 124.96,
+      "end": 125.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 720,
+      "text": "道",
+      "start": 125.12,
+      "end": 125.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 721,
+      "text": "超",
+      "start": 125.34,
+      "end": 125.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 722,
+      "text": "车",
+      "start": 125.58,
+      "end": 125.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 723,
+      "text": "的",
+      "start": 125.78,
+      "end": 125.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 724,
+      "text": "心",
+      "start": 125.92,
+      "end": 126.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 725,
+      "text": "理",
+      "start": 126.1,
+      "end": 126.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 726,
+      "text": "a",
+      "start": 126.1,
+      "end": 126.36,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 727,
+      "text": "i",
+      "start": 126.36,
+      "end": 127.02,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 728,
+      "text": "给",
+      "start": 126.36,
+      "end": 127.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 729,
+      "text": "了",
+      "start": 127.02,
+      "end": 127.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 730,
+      "text": "所",
+      "start": 127.28,
+      "end": 127.65,
+      "mapping": "exact"
+    },
+    {
+      "index": 731,
+      "text": "有",
+      "start": 127.65,
+      "end": 128.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 732,
+      "text": "非",
+      "start": 128.02,
+      "end": 128.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 733,
+      "text": "技",
+      "start": 128.44,
+      "end": 128.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 734,
+      "text": "术",
+      "start": 128.66,
+      "end": 128.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 735,
+      "text": "的",
+      "start": 128.78,
+      "end": 128.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 736,
+      "text": "人",
+      "start": 128.88,
+      "end": 128.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 737,
+      "text": "一",
+      "start": 128.98,
+      "end": 129.07,
+      "mapping": "exact"
+    },
+    {
+      "index": 738,
+      "text": "个",
+      "start": 129.07,
+      "end": 129.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 739,
+      "text": "巨",
+      "start": 129.16,
+      "end": 129.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 740,
+      "text": "大",
+      "start": 129.34,
+      "end": 129.43,
+      "mapping": "exact"
+    },
+    {
+      "index": 741,
+      "text": "的",
+      "start": 129.43,
+      "end": 129.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 742,
+      "text": "想",
+      "start": 129.52,
+      "end": 129.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 743,
+      "text": "象",
+      "start": 129.74,
+      "end": 129.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 744,
+      "text": "我",
+      "start": 129.96,
+      "end": 130.07,
+      "mapping": "exact"
+    },
+    {
+      "index": 745,
+      "text": "不",
+      "start": 130.07,
+      "end": 130.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 746,
+      "text": "懂",
+      "start": 130.18,
+      "end": 130.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 747,
+      "text": "代",
+      "start": 130.5,
+      "end": 130.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 748,
+      "text": "码",
+      "start": 130.68,
+      "end": 130.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 749,
+      "text": "也",
+      "start": 130.84,
+      "end": 131.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 750,
+      "text": "能",
+      "start": 131.04,
+      "end": 131.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 751,
+      "text": "做",
+      "start": 131.2,
+      "end": 131.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 752,
+      "text": "软",
+      "start": 131.36,
+      "end": 131.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 753,
+      "text": "件",
+      "start": 131.56,
+      "end": 131.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 754,
+      "text": "我",
+      "start": 131.78,
+      "end": 131.87,
+      "mapping": "exact"
+    },
+    {
+      "index": 755,
+      "text": "不",
+      "start": 131.87,
+      "end": 131.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 756,
+      "text": "会",
+      "start": 131.96,
+      "end": 132.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 757,
+      "text": "开",
+      "start": 132.1,
+      "end": 132.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 758,
+      "text": "发",
+      "start": 132.28,
+      "end": 132.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 759,
+      "text": "也",
+      "start": 132.48,
+      "end": 132.64,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 760,
+      "text": "能",
+      "start": 132.64,
+      "end": 132.72,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 761,
+      "text": "创",
+      "start": 132.72,
+      "end": 132.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 762,
+      "text": "业",
+      "start": 132.92,
+      "end": 133.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 763,
+      "text": "这",
+      "start": 133.18,
+      "end": 133.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 764,
+      "text": "种",
+      "start": 133.38,
+      "end": 133.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 765,
+      "text": "心",
+      "start": 133.56,
+      "end": 133.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 766,
+      "text": "理",
+      "start": 133.78,
+      "end": 133.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 767,
+      "text": "有",
+      "start": 133.98,
+      "end": 134.05,
+      "mapping": "exact"
+    },
+    {
+      "index": 768,
+      "text": "一",
+      "start": 134.05,
+      "end": 134.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 769,
+      "text": "部",
+      "start": 134.12,
+      "end": 134.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 770,
+      "text": "分",
+      "start": 134.28,
+      "end": 134.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 771,
+      "text": "是",
+      "start": 134.44,
+      "end": 134.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 772,
+      "text": "真",
+      "start": 134.68,
+      "end": 134.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 773,
+      "text": "的",
+      "start": 134.78,
+      "end": 134.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 774,
+      "text": "因",
+      "start": 134.88,
+      "end": 134.99,
+      "mapping": "exact"
+    },
+    {
+      "index": 775,
+      "text": "为",
+      "start": 134.99,
+      "end": 135.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 776,
+      "text": "a",
+      "start": 135.1,
+      "end": 135.3,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 777,
+      "text": "i",
+      "start": 135.1,
+      "end": 135.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 778,
+      "text": "确",
+      "start": 135.3,
+      "end": 135.46,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 779,
+      "text": "实",
+      "start": 135.46,
+      "end": 135.54,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 780,
+      "text": "降",
+      "start": 135.62,
+      "end": 135.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 781,
+      "text": "低",
+      "start": 135.82,
+      "end": 136.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 782,
+      "text": "了",
+      "start": 136.04,
+      "end": 136.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 783,
+      "text": "表",
+      "start": 136.18,
+      "end": 136.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 784,
+      "text": "达",
+      "start": 136.32,
+      "end": 136.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 785,
+      "text": "需",
+      "start": 136.5,
+      "end": 136.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 786,
+      "text": "求",
+      "start": 136.68,
+      "end": 136.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 787,
+      "text": "和",
+      "start": 136.86,
+      "end": 137.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 788,
+      "text": "生",
+      "start": 137.02,
+      "end": 137.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 789,
+      "text": "成",
+      "start": 137.2,
+      "end": 137.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 790,
+      "text": "原",
+      "start": 137.36,
+      "end": 137.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 791,
+      "text": "型",
+      "start": 137.54,
+      "end": 137.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 792,
+      "text": "的",
+      "start": 137.68,
+      "end": 137.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 793,
+      "text": "门",
+      "start": 137.84,
+      "end": 137.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 794,
+      "text": "槛",
+      "start": 137.96,
+      "end": 138.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 795,
+      "text": "但",
+      "start": 138.32,
+      "end": 138.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 796,
+      "text": "危",
+      "start": 138.58,
+      "end": 138.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 797,
+      "text": "险",
+      "start": 138.72,
+      "end": 138.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 798,
+      "text": "在",
+      "start": 138.88,
+      "end": 139.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 799,
+      "text": "于",
+      "start": 139.08,
+      "end": 139.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 800,
+      "text": "有",
+      "start": 139.44,
+      "end": 139.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 801,
+      "text": "些",
+      "start": 139.82,
+      "end": 140.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 802,
+      "text": "人",
+      "start": 140.02,
+      "end": 140.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 803,
+      "text": "进",
+      "start": 140.2,
+      "end": 140.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 804,
+      "text": "一",
+      "start": 140.42,
+      "end": 140.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 805,
+      "text": "步",
+      "start": 140.52,
+      "end": 140.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 806,
+      "text": "误",
+      "start": 140.62,
+      "end": 140.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 807,
+      "text": "解",
+      "start": 140.8,
+      "end": 140.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 808,
+      "text": "为",
+      "start": 140.98,
+      "end": 141.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 809,
+      "text": "不",
+      "start": 141.26,
+      "end": 141.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 810,
+      "text": "需",
+      "start": 141.8,
+      "end": 141.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 811,
+      "text": "要",
+      "start": 141.88,
+      "end": 141.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 812,
+      "text": "懂",
+      "start": 141.96,
+      "end": 142.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 813,
+      "text": "代",
+      "start": 142.26,
+      "end": 142.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 814,
+      "text": "码",
+      "start": 142.48,
+      "end": 142.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 815,
+      "text": "不",
+      "start": 142.68,
+      "end": 142.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 816,
+      "text": "需",
+      "start": 142.9,
+      "end": 142.97,
+      "mapping": "exact"
+    },
+    {
+      "index": 817,
+      "text": "要",
+      "start": 142.97,
+      "end": 143.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 818,
+      "text": "懂",
+      "start": 143.04,
+      "end": 143.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 819,
+      "text": "系",
+      "start": 143.22,
+      "end": 143.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 820,
+      "text": "统",
+      "start": 143.46,
+      "end": 143.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 821,
+      "text": "不",
+      "start": 143.6,
+      "end": 143.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 822,
+      "text": "需",
+      "start": 143.8,
+      "end": 143.87,
+      "mapping": "exact"
+    },
+    {
+      "index": 823,
+      "text": "要",
+      "start": 143.87,
+      "end": 143.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 824,
+      "text": "懂",
+      "start": 143.94,
+      "end": 144.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 825,
+      "text": "工",
+      "start": 144.16,
+      "end": 144.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 826,
+      "text": "程",
+      "start": 144.34,
+      "end": 144.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 827,
+      "text": "就",
+      "start": 144.62,
+      "end": 144.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 828,
+      "text": "能",
+      "start": 144.82,
+      "end": 144.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 829,
+      "text": "够",
+      "start": 144.96,
+      "end": 145.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 830,
+      "text": "不",
+      "start": 145.14,
+      "end": 145.29,
+      "mapping": "exact"
+    },
+    {
+      "index": 831,
+      "text": "能",
+      "start": 145.29,
+      "end": 145.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 832,
+      "text": "最",
+      "start": 145.44,
+      "end": 145.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 833,
+      "text": "后",
+      "start": 145.9,
+      "end": 146.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 834,
+      "text": "只",
+      "start": 146.08,
+      "end": 146.19,
+      "mapping": "exact"
+    },
+    {
+      "index": 835,
+      "text": "是",
+      "start": 146.19,
+      "end": 146.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 836,
+      "text": "一",
+      "start": 146.3,
+      "end": 146.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 837,
+      "text": "种",
+      "start": 146.42,
+      "end": 146.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 838,
+      "text": "自",
+      "start": 146.54,
+      "end": 146.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 839,
+      "text": "欺",
+      "start": 146.74,
+      "end": 146.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 840,
+      "text": "欺",
+      "start": 146.9,
+      "end": 147.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 841,
+      "text": "人",
+      "start": 147.1,
+      "end": 147.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 842,
+      "text": "第",
+      "start": 147.28,
+      "end": 147.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 843,
+      "text": "五",
+      "start": 147.4,
+      "end": 147.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 844,
+      "text": "点",
+      "start": 147.52,
+      "end": 147.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 845,
+      "text": "真",
+      "start": 147.72,
+      "end": 147.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 846,
+      "text": "正",
+      "start": 147.94,
+      "end": 148.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 847,
+      "text": "的",
+      "start": 148.16,
+      "end": 148.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 848,
+      "text": "智",
+      "start": 148.28,
+      "end": 148.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 849,
+      "text": "能",
+      "start": 148.42,
+      "end": 148.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 850,
+      "text": "体",
+      "start": 148.54,
+      "end": 148.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 851,
+      "text": "至",
+      "start": 148.78,
+      "end": 149.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 852,
+      "text": "少",
+      "start": 149.06,
+      "end": 149.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 853,
+      "text": "要",
+      "start": 149.22,
+      "end": 149.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 854,
+      "text": "能",
+      "start": 149.34,
+      "end": 149.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 855,
+      "text": "回",
+      "start": 149.48,
+      "end": 149.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 856,
+      "text": "答",
+      "start": 149.64,
+      "end": 149.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 857,
+      "text": "一",
+      "start": 149.74,
+      "end": 149.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 858,
+      "text": "些",
+      "start": 149.84,
+      "end": 149.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 859,
+      "text": "问",
+      "start": 149.94,
+      "end": 150.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 860,
+      "text": "题",
+      "start": 150.1,
+      "end": 150.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 861,
+      "text": "它",
+      "start": 150.26,
+      "end": 150.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 862,
+      "text": "的",
+      "start": 150.4,
+      "end": 150.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 863,
+      "text": "任",
+      "start": 150.54,
+      "end": 150.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 864,
+      "text": "务",
+      "start": 150.78,
+      "end": 150.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 865,
+      "text": "边",
+      "start": 150.88,
+      "end": 151.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 866,
+      "text": "界",
+      "start": 151.04,
+      "end": 151.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 867,
+      "text": "是",
+      "start": 151.22,
+      "end": 151.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 868,
+      "text": "什",
+      "start": 151.44,
+      "end": 151.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 869,
+      "text": "么",
+      "start": 151.56,
+      "end": 151.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 870,
+      "text": "它",
+      "start": 151.68,
+      "end": 152.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 871,
+      "text": "失",
+      "start": 152.02,
+      "end": 152.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 872,
+      "text": "败",
+      "start": 152.18,
+      "end": 152.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 873,
+      "text": "时",
+      "start": 152.26,
+      "end": 152.42,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 874,
+      "text": "应",
+      "start": 152.42,
+      "end": 152.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 875,
+      "text": "该",
+      "start": 152.54,
+      "end": 152.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 876,
+      "text": "怎",
+      "start": 152.62,
+      "end": 152.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 877,
+      "text": "么",
+      "start": 152.7,
+      "end": 152.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 878,
+      "text": "办",
+      "start": 152.78,
+      "end": 153.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 879,
+      "text": "该",
+      "start": 153.06,
+      "end": 153.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 880,
+      "text": "如",
+      "start": 153.36,
+      "end": 153.47,
+      "mapping": "exact"
+    },
+    {
+      "index": 881,
+      "text": "何",
+      "start": 153.47,
+      "end": 153.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 882,
+      "text": "保",
+      "start": 153.58,
+      "end": 153.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 883,
+      "text": "存",
+      "start": 153.84,
+      "end": 154.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 884,
+      "text": "和",
+      "start": 154.02,
+      "end": 154.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 885,
+      "text": "调",
+      "start": 154.2,
+      "end": 154.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 886,
+      "text": "用",
+      "start": 154.34,
+      "end": 154.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 887,
+      "text": "上",
+      "start": 154.52,
+      "end": 154.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 888,
+      "text": "下",
+      "start": 154.7,
+      "end": 154.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 889,
+      "text": "文",
+      "start": 154.86,
+      "end": 155.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 890,
+      "text": "该",
+      "start": 155.08,
+      "end": 155.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 891,
+      "text": "怎",
+      "start": 155.3,
+      "end": 155.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 892,
+      "text": "么",
+      "start": 155.42,
+      "end": 155.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 893,
+      "text": "判",
+      "start": 155.54,
+      "end": 155.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 894,
+      "text": "断",
+      "start": 155.78,
+      "end": 155.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 895,
+      "text": "模",
+      "start": 155.9,
+      "end": 156.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 896,
+      "text": "型",
+      "start": 156.06,
+      "end": 156.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 897,
+      "text": "输",
+      "start": 156.24,
+      "end": 156.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 898,
+      "text": "出",
+      "start": 156.44,
+      "end": 156.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 899,
+      "text": "是",
+      "start": 156.64,
+      "end": 156.86,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 900,
+      "text": "否",
+      "start": 156.86,
+      "end": 156.98,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 901,
+      "text": "靠",
+      "start": 156.98,
+      "end": 157.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 902,
+      "text": "谱",
+      "start": 157.2,
+      "end": 157.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 903,
+      "text": "它",
+      "start": 157.36,
+      "end": 157.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 904,
+      "text": "怎",
+      "start": 157.56,
+      "end": 157.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 905,
+      "text": "么",
+      "start": 157.7,
+      "end": 157.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 906,
+      "text": "处",
+      "start": 157.84,
+      "end": 158.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 907,
+      "text": "理",
+      "start": 158.08,
+      "end": 158.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 908,
+      "text": "工",
+      "start": 158.3,
+      "end": 158.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 909,
+      "text": "具",
+      "start": 158.56,
+      "end": 158.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 910,
+      "text": "调",
+      "start": 158.78,
+      "end": 158.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 911,
+      "text": "用",
+      "start": 158.96,
+      "end": 159.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 912,
+      "text": "失",
+      "start": 159.12,
+      "end": 159.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 913,
+      "text": "败",
+      "start": 159.4,
+      "end": 159.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 914,
+      "text": "它",
+      "start": 159.58,
+      "end": 159.83,
+      "mapping": "exact"
+    },
+    {
+      "index": 915,
+      "text": "的",
+      "start": 159.83,
+      "end": 160.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 916,
+      "text": "数",
+      "start": 160.08,
+      "end": 160.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 917,
+      "text": "据",
+      "start": 160.34,
+      "end": 160.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 918,
+      "text": "从",
+      "start": 160.46,
+      "end": 160.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 919,
+      "text": "哪",
+      "start": 160.6,
+      "end": 160.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 920,
+      "text": "里",
+      "start": 160.76,
+      "end": 160.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 921,
+      "text": "来",
+      "start": 160.88,
+      "end": 161.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 922,
+      "text": "是",
+      "start": 161.1,
+      "end": 161.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 923,
+      "text": "否",
+      "start": 161.32,
+      "end": 161.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 924,
+      "text": "可",
+      "start": 161.42,
+      "end": 161.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 925,
+      "text": "信",
+      "start": 161.58,
+      "end": 161.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 926,
+      "text": "它",
+      "start": 161.82,
+      "end": 162.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 927,
+      "text": "有",
+      "start": 162.04,
+      "end": 162.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 928,
+      "text": "没",
+      "start": 162.16,
+      "end": 162.23,
+      "mapping": "exact"
+    },
+    {
+      "index": 929,
+      "text": "有",
+      "start": 162.23,
+      "end": 162.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 930,
+      "text": "权",
+      "start": 162.3,
+      "end": 162.62,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 931,
+      "text": "限",
+      "start": 162.62,
+      "end": 162.84,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 932,
+      "text": "控",
+      "start": 162.84,
+      "end": 163.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 933,
+      "text": "制",
+      "start": 163.06,
+      "end": 163.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 934,
+      "text": "和",
+      "start": 163.3,
+      "end": 163.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 935,
+      "text": "安",
+      "start": 163.46,
+      "end": 163.59,
+      "mapping": "exact"
+    },
+    {
+      "index": 936,
+      "text": "全",
+      "start": 163.59,
+      "end": 163.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 937,
+      "text": "机",
+      "start": 163.72,
+      "end": 163.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 938,
+      "text": "制",
+      "start": 163.94,
+      "end": 164.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 939,
+      "text": "有",
+      "start": 164.16,
+      "end": 164.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 940,
+      "text": "没",
+      "start": 164.64,
+      "end": 164.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 941,
+      "text": "有",
+      "start": 164.7,
+      "end": 164.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 942,
+      "text": "日",
+      "start": 164.76,
+      "end": 165.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 943,
+      "text": "志",
+      "start": 165.06,
+      "end": 165.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 944,
+      "text": "监",
+      "start": 165.24,
+      "end": 165.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 945,
+      "text": "控",
+      "start": 165.56,
+      "end": 165.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 946,
+      "text": "测",
+      "start": 165.8,
+      "end": 166.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 947,
+      "text": "试",
+      "start": 166.04,
+      "end": 166.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 948,
+      "text": "回",
+      "start": 166.28,
+      "end": 166.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 949,
+      "text": "滚",
+      "start": 166.54,
+      "end": 166.64,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 950,
+      "text": "机",
+      "start": 166.64,
+      "end": 166.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 951,
+      "text": "制",
+      "start": 166.88,
+      "end": 167.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 952,
+      "text": "它",
+      "start": 167.04,
+      "end": 167.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 953,
+      "text": "的",
+      "start": 167.14,
+      "end": 167.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 954,
+      "text": "成",
+      "start": 167.24,
+      "end": 167.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 955,
+      "text": "本",
+      "start": 167.42,
+      "end": 167.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 956,
+      "text": "是",
+      "start": 167.6,
+      "end": 167.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 957,
+      "text": "否",
+      "start": 167.78,
+      "end": 167.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 958,
+      "text": "可",
+      "start": 167.9,
+      "end": 168.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 959,
+      "text": "控",
+      "start": 168.08,
+      "end": 168.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 960,
+      "text": "最",
+      "start": 168.3,
+      "end": 168.42,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 961,
+      "text": "后",
+      "start": 168.42,
+      "end": 168.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 962,
+      "text": "它",
+      "start": 168.64,
+      "end": 169.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 963,
+      "text": "能",
+      "start": 169.22,
+      "end": 169.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 964,
+      "text": "不",
+      "start": 169.36,
+      "end": 169.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 965,
+      "text": "能",
+      "start": 169.44,
+      "end": 169.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 966,
+      "text": "被",
+      "start": 169.52,
+      "end": 169.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 967,
+      "text": "别",
+      "start": 169.74,
+      "end": 169.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 968,
+      "text": "人",
+      "start": 169.9,
+      "end": 170.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 969,
+      "text": "去",
+      "start": 170.04,
+      "end": 170.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 970,
+      "text": "维",
+      "start": 170.18,
+      "end": 170.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 971,
+      "text": "护",
+      "start": 170.32,
+      "end": 170.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 972,
+      "text": "很",
+      "start": 170.56,
+      "end": 170.87,
+      "mapping": "exact"
+    },
+    {
+      "index": 973,
+      "text": "多",
+      "start": 170.87,
+      "end": 171.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 974,
+      "text": "人",
+      "start": 171.18,
+      "end": 171.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 975,
+      "text": "出",
+      "start": 171.38,
+      "end": 171.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 976,
+      "text": "了",
+      "start": 171.6,
+      "end": 171.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 977,
+      "text": "b",
+      "start": 171.7,
+      "end": 171.84,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 978,
+      "text": "u",
+      "start": 171.84,
+      "end": 171.94,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 979,
+      "text": "g",
+      "start": 171.84,
+      "end": 171.94,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 980,
+      "text": "以",
+      "start": 171.94,
+      "end": 172.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 981,
+      "text": "后",
+      "start": 172.06,
+      "end": 172.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 982,
+      "text": "他",
+      "start": 172.18,
+      "end": 172.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 983,
+      "text": "用",
+      "start": 172.32,
+      "end": 172.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 984,
+      "text": "a",
+      "start": 172.32,
+      "end": 172.5,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 985,
+      "text": "i",
+      "start": 172.5,
+      "end": 173.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 986,
+      "text": "来",
+      "start": 173.04,
+      "end": 173.3,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 987,
+      "text": "去",
+      "start": 173.04,
+      "end": 173.3,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 988,
+      "text": "打",
+      "start": 173.3,
+      "end": 173.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 989,
+      "text": "这",
+      "start": 173.54,
+      "end": 173.63,
+      "mapping": "exact"
+    },
+    {
+      "index": 990,
+      "text": "个",
+      "start": 173.63,
+      "end": 173.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 991,
+      "text": "补",
+      "start": 173.72,
+      "end": 173.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 992,
+      "text": "丁",
+      "start": 173.88,
+      "end": 174.02,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 993,
+      "text": "我",
+      "start": 174.02,
+      "end": 174.12,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 994,
+      "text": "说",
+      "start": 174.12,
+      "end": 174.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 995,
+      "text": "实",
+      "start": 174.32,
+      "end": 174.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 996,
+      "text": "话",
+      "start": 174.5,
+      "end": 174.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 997,
+      "text": "a",
+      "start": 174.92,
+      "end": 175.2,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 998,
+      "text": "i",
+      "start": 174.92,
+      "end": 175.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 999,
+      "text": "打",
+      "start": 175.38,
+      "end": 175.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1000,
+      "text": "补",
+      "start": 175.4,
+      "end": 175.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1001,
+      "text": "丁",
+      "start": 175.58,
+      "end": 175.68,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1002,
+      "text": "这",
+      "start": 175.68,
+      "end": 175.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1003,
+      "text": "个",
+      "start": 175.78,
+      "end": 175.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1004,
+      "text": "补",
+      "start": 175.88,
+      "end": 176.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1005,
+      "text": "丁",
+      "start": 176.08,
+      "end": 176.16,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1006,
+      "text": "会",
+      "start": 176.16,
+      "end": 176.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1007,
+      "text": "打",
+      "start": 176.3,
+      "end": 176.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1008,
+      "text": "得",
+      "start": 176.46,
+      "end": 176.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 1009,
+      "text": "非",
+      "start": 176.56,
+      "end": 176.67,
+      "mapping": "exact"
+    },
+    {
+      "index": 1010,
+      "text": "常",
+      "start": 176.67,
+      "end": 176.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1011,
+      "text": "大",
+      "start": 176.78,
+      "end": 177.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 1012,
+      "text": "而",
+      "start": 177.14,
+      "end": 177.27,
+      "mapping": "exact"
+    },
+    {
+      "index": 1013,
+      "text": "且",
+      "start": 177.27,
+      "end": 177.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1014,
+      "text": "一",
+      "start": 177.4,
+      "end": 177.53,
+      "mapping": "exact"
+    },
+    {
+      "index": 1015,
+      "text": "定",
+      "start": 177.53,
+      "end": 177.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1016,
+      "text": "是",
+      "start": 177.66,
+      "end": 177.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 1017,
+      "text": "失",
+      "start": 177.92,
+      "end": 178.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1018,
+      "text": "真",
+      "start": 178.06,
+      "end": 178.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 1019,
+      "text": "的",
+      "start": 178.22,
+      "end": 178.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1020,
+      "text": "这",
+      "start": 178.32,
+      "end": 178.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1021,
+      "text": "些",
+      "start": 178.44,
+      "end": 178.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 1022,
+      "text": "问",
+      "start": 178.56,
+      "end": 178.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1023,
+      "text": "题",
+      "start": 178.72,
+      "end": 178.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1024,
+      "text": "有",
+      "start": 179.3,
+      "end": 179.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 1025,
+      "text": "人",
+      "start": 179.48,
+      "end": 179.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1026,
+      "text": "回",
+      "start": 179.66,
+      "end": 179.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 1027,
+      "text": "答",
+      "start": 179.94,
+      "end": 180.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1028,
+      "text": "得",
+      "start": 180.06,
+      "end": 180.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 1029,
+      "text": "上",
+      "start": 180.16,
+      "end": 180.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1030,
+      "text": "来",
+      "start": 180.32,
+      "end": 180.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1031,
+      "text": "吗",
+      "start": 180.5,
+      "end": 180.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 1032,
+      "text": "你",
+      "start": 180.7,
+      "end": 181.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1033,
+      "text": "回",
+      "start": 181.08,
+      "end": 181.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 1034,
+      "text": "答",
+      "start": 181.22,
+      "end": 181.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1035,
+      "text": "不",
+      "start": 181.32,
+      "end": 181.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1036,
+      "text": "上",
+      "start": 181.46,
+      "end": 181.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1037,
+      "text": "来",
+      "start": 181.58,
+      "end": 181.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 1038,
+      "text": "它",
+      "start": 181.7,
+      "end": 181.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 1039,
+      "text": "就",
+      "start": 181.8,
+      "end": 181.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 1040,
+      "text": "不",
+      "start": 181.9,
+      "end": 182.01,
+      "mapping": "exact"
+    },
+    {
+      "index": 1041,
+      "text": "是",
+      "start": 182.01,
+      "end": 182.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1042,
+      "text": "产",
+      "start": 182.12,
+      "end": 182.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 1043,
+      "text": "品",
+      "start": 182.34,
+      "end": 182.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 1044,
+      "text": "它",
+      "start": 182.54,
+      "end": 182.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1045,
+      "text": "只",
+      "start": 182.68,
+      "end": 182.77,
+      "mapping": "exact"
+    },
+    {
+      "index": 1046,
+      "text": "是",
+      "start": 182.77,
+      "end": 182.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1047,
+      "text": "个",
+      "start": 182.86,
+      "end": 183.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1048,
+      "text": "演",
+      "start": 183.02,
+      "end": 183.18,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1049,
+      "text": "示",
+      "start": 183.18,
+      "end": 183.44,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1050,
+      "text": "今",
+      "start": 183.44,
+      "end": 183.77,
+      "mapping": "exact"
+    },
+    {
+      "index": 1051,
+      "text": "年",
+      "start": 183.77,
+      "end": 184.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1052,
+      "text": "真",
+      "start": 184.52,
+      "end": 184.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1053,
+      "text": "正",
+      "start": 184.88,
+      "end": 185.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1054,
+      "text": "懂",
+      "start": 185.08,
+      "end": 185.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1055,
+      "text": "系",
+      "start": 185.32,
+      "end": 185.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1056,
+      "text": "统",
+      "start": 185.58,
+      "end": 185.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1057,
+      "text": "的",
+      "start": 185.72,
+      "end": 185.83,
+      "mapping": "exact"
+    },
+    {
+      "index": 1058,
+      "text": "人",
+      "start": 185.83,
+      "end": 185.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 1059,
+      "text": "已",
+      "start": 185.94,
+      "end": 186.05,
+      "mapping": "exact"
+    },
+    {
+      "index": 1060,
+      "text": "经",
+      "start": 186.05,
+      "end": 186.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 1061,
+      "text": "开",
+      "start": 186.16,
+      "end": 186.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1062,
+      "text": "始",
+      "start": 186.3,
+      "end": 186.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1063,
+      "text": "胜",
+      "start": 186.44,
+      "end": 186.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1064,
+      "text": "出",
+      "start": 186.66,
+      "end": 186.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 1065,
+      "text": "了",
+      "start": 186.9,
+      "end": 187.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 1066,
+      "text": "因",
+      "start": 187.14,
+      "end": 187.23,
+      "mapping": "exact"
+    },
+    {
+      "index": 1067,
+      "text": "为",
+      "start": 187.23,
+      "end": 187.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1068,
+      "text": "他",
+      "start": 187.32,
+      "end": 187.41,
+      "mapping": "exact"
+    },
+    {
+      "index": 1069,
+      "text": "们",
+      "start": 187.41,
+      "end": 187.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1070,
+      "text": "把",
+      "start": 187.5,
+      "end": 187.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 1071,
+      "text": "a",
+      "start": 187.74,
+      "end": 187.96,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1072,
+      "text": "i",
+      "start": 187.74,
+      "end": 187.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1073,
+      "text": "从",
+      "start": 188.04,
+      "end": 188.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1074,
+      "text": "玩",
+      "start": 188.2,
+      "end": 188.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1075,
+      "text": "具",
+      "start": 188.4,
+      "end": 188.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 1076,
+      "text": "变",
+      "start": 188.64,
+      "end": 188.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1077,
+      "text": "成",
+      "start": 188.86,
+      "end": 189.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1078,
+      "text": "了",
+      "start": 189.06,
+      "end": 189.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1079,
+      "text": "工",
+      "start": 189.2,
+      "end": 189.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 1080,
+      "text": "具",
+      "start": 189.36,
+      "end": 189.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 1081,
+      "text": "将",
+      "start": 189.62,
+      "end": 190.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1082,
+      "text": "工",
+      "start": 190.02,
+      "end": 190.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1083,
+      "text": "具",
+      "start": 190.24,
+      "end": 190.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 1084,
+      "text": "变",
+      "start": 190.36,
+      "end": 190.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1085,
+      "text": "成",
+      "start": 190.52,
+      "end": 190.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1086,
+      "text": "了",
+      "start": 190.68,
+      "end": 190.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 1087,
+      "text": "产",
+      "start": 190.82,
+      "end": 190.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1088,
+      "text": "品",
+      "start": 190.98,
+      "end": 191.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 1089,
+      "text": "从",
+      "start": 191.22,
+      "end": 191.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1090,
+      "text": "产",
+      "start": 191.5,
+      "end": 191.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 1091,
+      "text": "品",
+      "start": 191.76,
+      "end": 191.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1092,
+      "text": "变",
+      "start": 191.96,
+      "end": 192.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 1093,
+      "text": "成",
+      "start": 192.14,
+      "end": 192.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 1094,
+      "text": "了",
+      "start": 192.34,
+      "end": 192.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 1095,
+      "text": "业",
+      "start": 192.56,
+      "end": 193.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1096,
+      "text": "务",
+      "start": 193.04,
+      "end": 193.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1097,
+      "text": "的",
+      "start": 193.2,
+      "end": 193.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 1098,
+      "text": "基",
+      "start": 193.34,
+      "end": 193.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 1099,
+      "text": "础",
+      "start": 193.62,
+      "end": 193.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1100,
+      "text": "设",
+      "start": 193.78,
+      "end": 194.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 1101,
+      "text": "施",
+      "start": 194.0,
+      "end": 194.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1102,
+      "text": "如",
+      "start": 194.2,
+      "end": 194.253,
+      "mapping": "exact"
+    },
+    {
+      "index": 1103,
+      "text": "果",
+      "start": 194.253,
+      "end": 194.307,
+      "mapping": "exact"
+    },
+    {
+      "index": 1104,
+      "text": "你",
+      "start": 194.307,
+      "end": 194.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 1105,
+      "text": "也",
+      "start": 194.36,
+      "end": 194.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1106,
+      "text": "想",
+      "start": 194.68,
+      "end": 194.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1107,
+      "text": "把",
+      "start": 194.86,
+      "end": 195.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1108,
+      "text": "a",
+      "start": 195.08,
+      "end": 195.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1109,
+      "text": "g",
+      "start": 195.26,
+      "end": 195.36,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1110,
+      "text": "e",
+      "start": 195.36,
+      "end": 195.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1111,
+      "text": "n",
+      "start": 195.4,
+      "end": 195.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1112,
+      "text": "t",
+      "start": 195.4,
+      "end": 195.44,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1113,
+      "text": "真",
+      "start": 195.44,
+      "end": 195.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 1114,
+      "text": "正",
+      "start": 195.6,
+      "end": 195.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 1115,
+      "text": "地",
+      "start": 195.76,
+      "end": 195.86,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1116,
+      "text": "学",
+      "start": 195.86,
+      "end": 196.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1117,
+      "text": "起",
+      "start": 196.04,
+      "end": 196.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1118,
+      "text": "来",
+      "start": 196.24,
+      "end": 196.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1119,
+      "text": "不",
+      "start": 196.46,
+      "end": 196.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1120,
+      "text": "只",
+      "start": 196.68,
+      "end": 196.77,
+      "mapping": "exact"
+    },
+    {
+      "index": 1121,
+      "text": "是",
+      "start": 196.77,
+      "end": 196.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1122,
+      "text": "随",
+      "start": 196.86,
+      "end": 197.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1123,
+      "text": "便",
+      "start": 197.12,
+      "end": 197.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1124,
+      "text": "玩",
+      "start": 197.32,
+      "end": 197.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1125,
+      "text": "一",
+      "start": 197.52,
+      "end": 197.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1126,
+      "text": "下",
+      "start": 197.66,
+      "end": 197.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 1127,
+      "text": "而",
+      "start": 197.8,
+      "end": 197.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1128,
+      "text": "是",
+      "start": 197.98,
+      "end": 198.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1129,
+      "text": "当",
+      "start": 198.1,
+      "end": 198.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1130,
+      "text": "作",
+      "start": 198.24,
+      "end": 198.42,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1131,
+      "text": "自",
+      "start": 198.42,
+      "end": 198.51,
+      "mapping": "exact"
+    },
+    {
+      "index": 1132,
+      "text": "己",
+      "start": 198.51,
+      "end": 198.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 1133,
+      "text": "的",
+      "start": 198.6,
+      "end": 198.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1134,
+      "text": "工",
+      "start": 198.78,
+      "end": 198.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 1135,
+      "text": "作",
+      "start": 198.94,
+      "end": 199.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1136,
+      "text": "就",
+      "start": 199.1,
+      "end": 199.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 1137,
+      "text": "能",
+      "start": 199.34,
+      "end": 199.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1138,
+      "text": "拿",
+      "start": 199.46,
+      "end": 199.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 1139,
+      "text": "到",
+      "start": 199.62,
+      "end": 199.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 1140,
+      "text": "一",
+      "start": 199.82,
+      "end": 199.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 1141,
+      "text": "个",
+      "start": 199.92,
+      "end": 200.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1142,
+      "text": "还",
+      "start": 200.02,
+      "end": 200.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 1143,
+      "text": "不",
+      "start": 200.48,
+      "end": 200.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 1144,
+      "text": "错",
+      "start": 200.62,
+      "end": 200.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1145,
+      "text": "的",
+      "start": 200.78,
+      "end": 200.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1146,
+      "text": "薪",
+      "start": 200.88,
+      "end": 201.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1147,
+      "text": "资",
+      "start": 201.06,
+      "end": 201.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 1148,
+      "text": "6",
+      "start": 201.42,
+      "end": 201.69,
+      "mapping": "exact"
+    },
+    {
+      "index": 1149,
+      "text": "6",
+      "start": 201.69,
+      "end": 201.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1150,
+      "text": "6",
+      "start": 201.96,
+      "end": 202.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1151,
+      "text": "拿",
+      "start": 202.46,
+      "end": 202.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1152,
+      "text": "着",
+      "start": 202.72,
+      "end": 202.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 1153,
+      "text": "我",
+      "start": 202.94,
+      "end": 203.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1154,
+      "text": "这",
+      "start": 203.1,
+      "end": 203.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1155,
+      "text": "份",
+      "start": 203.24,
+      "end": 203.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1156,
+      "text": "耗",
+      "start": 203.44,
+      "end": 203.68,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1157,
+      "text": "时",
+      "start": 203.68,
+      "end": 203.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1158,
+      "text": "三",
+      "start": 203.88,
+      "end": 204.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1159,
+      "text": "周",
+      "start": 204.12,
+      "end": 204.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1160,
+      "text": "整",
+      "start": 204.3,
+      "end": 204.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1161,
+      "text": "理",
+      "start": 204.46,
+      "end": 204.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1162,
+      "text": "出",
+      "start": 204.58,
+      "end": 204.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1163,
+      "text": "来",
+      "start": 204.66,
+      "end": 204.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 1164,
+      "text": "的",
+      "start": 204.74,
+      "end": 204.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1165,
+      "text": "路",
+      "start": 204.96,
+      "end": 205.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1166,
+      "text": "线",
+      "start": 205.1,
+      "end": 205.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 1167,
+      "text": "和",
+      "start": 205.34,
+      "end": 205.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 1168,
+      "text": "教",
+      "start": 205.6,
+      "end": 205.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1169,
+      "text": "程",
+      "start": 205.86,
+      "end": 206.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1170,
+      "text": "里",
+      "start": 206.12,
+      "end": 206.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1171,
+      "text": "面",
+      "start": 206.52,
+      "end": 206.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1172,
+      "text": "就",
+      "start": 206.66,
+      "end": 206.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1173,
+      "text": "包",
+      "start": 206.78,
+      "end": 206.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 1174,
+      "text": "含",
+      "start": 206.94,
+      "end": 207.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1175,
+      "text": "了",
+      "start": 207.1,
+      "end": 207.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1176,
+      "text": "a",
+      "start": 207.24,
+      "end": 207.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 1177,
+      "text": "g",
+      "start": 207.36,
+      "end": 207.38,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1178,
+      "text": "e",
+      "start": 207.38,
+      "end": 207.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1179,
+      "text": "n",
+      "start": 207.44,
+      "end": 207.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1180,
+      "text": "t",
+      "start": 207.5,
+      "end": 207.7,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1181,
+      "text": "集",
+      "start": 207.5,
+      "end": 207.7,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1182,
+      "text": "群",
+      "start": 207.7,
+      "end": 208.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 1183,
+      "text": "m",
+      "start": 208.0,
+      "end": 208.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1184,
+      "text": "c",
+      "start": 208.26,
+      "end": 208.37,
+      "mapping": "exact"
+    },
+    {
+      "index": 1185,
+      "text": "p",
+      "start": 208.37,
+      "end": 208.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 1186,
+      "text": "等",
+      "start": 208.48,
+      "end": 209.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1187,
+      "text": "基",
+      "start": 209.2,
+      "end": 209.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 1188,
+      "text": "础",
+      "start": 209.42,
+      "end": 209.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 1189,
+      "text": "的",
+      "start": 209.54,
+      "end": 209.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1190,
+      "text": "知",
+      "start": 209.66,
+      "end": 209.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 1191,
+      "text": "识",
+      "start": 209.82,
+      "end": 209.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1192,
+      "text": "点",
+      "start": 209.88,
+      "end": 210.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1193,
+      "text": "以",
+      "start": 210.12,
+      "end": 210.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1194,
+      "text": "及",
+      "start": 210.44,
+      "end": 210.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 1195,
+      "text": "要",
+      "start": 210.76,
+      "end": 211.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1196,
+      "text": "去",
+      "start": 211.1,
+      "end": 211.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1197,
+      "text": "做",
+      "start": 211.26,
+      "end": 211.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1198,
+      "text": "什",
+      "start": 211.44,
+      "end": 211.57,
+      "mapping": "exact"
+    },
+    {
+      "index": 1199,
+      "text": "么",
+      "start": 211.57,
+      "end": 211.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 1200,
+      "text": "项",
+      "start": 211.7,
+      "end": 211.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1201,
+      "text": "目",
+      "start": 211.88,
+      "end": 212.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1202,
+      "text": "把",
+      "start": 212.04,
+      "end": 212.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 1203,
+      "text": "这",
+      "start": 212.16,
+      "end": 212.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 1204,
+      "text": "些",
+      "start": 212.28,
+      "end": 212.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 1205,
+      "text": "东",
+      "start": 212.38,
+      "end": 212.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1206,
+      "text": "西",
+      "start": 212.52,
+      "end": 212.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 1207,
+      "text": "都",
+      "start": 212.64,
+      "end": 212.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 1208,
+      "text": "要",
+      "start": 212.8,
+      "end": 213.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1209,
+      "text": "系",
+      "start": 213.02,
+      "end": 213.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1210,
+      "text": "统",
+      "start": 213.46,
+      "end": 213.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1211,
+      "text": "地",
+      "start": 213.58,
+      "end": 213.68,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1212,
+      "text": "过",
+      "start": 213.68,
+      "end": 213.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 1213,
+      "text": "一",
+      "start": 213.84,
+      "end": 213.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1214,
+      "text": "遍",
+      "start": 213.98,
+      "end": 214.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1215,
+      "text": "这",
+      "start": 214.08,
+      "end": 214.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1216,
+      "text": "才",
+      "start": 214.32,
+      "end": 214.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1217,
+      "text": "是",
+      "start": 214.5,
+      "end": 214.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1218,
+      "text": "决",
+      "start": 214.66,
+      "end": 214.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1219,
+      "text": "定",
+      "start": 214.78,
+      "end": 214.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 1220,
+      "text": "你",
+      "start": 214.9,
+      "end": 215.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1221,
+      "text": "做",
+      "start": 215.06,
+      "end": 215.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 1222,
+      "text": "出",
+      "start": 215.22,
+      "end": 215.31,
+      "mapping": "exact"
+    },
+    {
+      "index": 1223,
+      "text": "来",
+      "start": 215.31,
+      "end": 215.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1224,
+      "text": "的",
+      "start": 215.4,
+      "end": 215.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1225,
+      "text": "东",
+      "start": 215.52,
+      "end": 215.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1226,
+      "text": "西",
+      "start": 215.66,
+      "end": 215.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 1227,
+      "text": "不",
+      "start": 215.82,
+      "end": 215.93,
+      "mapping": "exact"
+    },
+    {
+      "index": 1228,
+      "text": "是",
+      "start": 215.93,
+      "end": 216.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1229,
+      "text": "d",
+      "start": 216.04,
+      "end": 216.28,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1230,
+      "text": "e",
+      "start": 216.04,
+      "end": 216.28,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1231,
+      "text": "m",
+      "start": 216.28,
+      "end": 216.66,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1232,
+      "text": "o",
+      "start": 216.66,
+      "end": 216.88,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1233,
+      "text": "而",
+      "start": 216.66,
+      "end": 216.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1234,
+      "text": "是",
+      "start": 216.88,
+      "end": 216.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1235,
+      "text": "能",
+      "start": 216.96,
+      "end": 217.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1236,
+      "text": "够",
+      "start": 217.1,
+      "end": 217.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1237,
+      "text": "上",
+      "start": 217.26,
+      "end": 217.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1238,
+      "text": "线",
+      "start": 217.5,
+      "end": 217.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1239,
+      "text": "的",
+      "start": 217.72,
+      "end": 217.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1240,
+      "text": "产",
+      "start": 217.86,
+      "end": 218.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1241,
+      "text": "品",
+      "start": 218.02,
+      "end": 218.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1242,
+      "text": "当",
+      "start": 218.26,
+      "end": 218.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 1243,
+      "text": "创",
+      "start": 218.84,
+      "end": 219.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1244,
+      "text": "建",
+      "start": 219.06,
+      "end": 219.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1245,
+      "text": "变",
+      "start": 219.3,
+      "end": 219.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1246,
+      "text": "得",
+      "start": 219.52,
+      "end": 219.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 1247,
+      "text": "廉",
+      "start": 219.66,
+      "end": 219.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 1248,
+      "text": "价",
+      "start": 219.84,
+      "end": 220.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 1249,
+      "text": "理",
+      "start": 220.06,
+      "end": 220.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 1250,
+      "text": "解",
+      "start": 220.64,
+      "end": 220.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 1251,
+      "text": "判",
+      "start": 220.92,
+      "end": 221.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1252,
+      "text": "断",
+      "start": 221.24,
+      "end": 221.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1253,
+      "text": "维",
+      "start": 221.5,
+      "end": 221.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 1254,
+      "text": "护",
+      "start": 221.9,
+      "end": 222.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 1255,
+      "text": "负",
+      "start": 222.14,
+      "end": 222.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1256,
+      "text": "责",
+      "start": 222.5,
+      "end": 222.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1257,
+      "text": "就",
+      "start": 222.72,
+      "end": 222.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 1258,
+      "text": "会",
+      "start": 222.92,
+      "end": 223.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1259,
+      "text": "变",
+      "start": 223.02,
+      "end": 223.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 1260,
+      "text": "得",
+      "start": 223.16,
+      "end": 223.24,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1261,
+      "text": "异",
+      "start": 223.24,
+      "end": 223.38,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1262,
+      "text": "常",
+      "start": 223.38,
+      "end": 223.5,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1263,
+      "text": "珍",
+      "start": 223.5,
+      "end": 223.68,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1264,
+      "text": "贵",
+      "start": 223.68,
+      "end": 223.84,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1265,
+      "text": "就",
+      "start": 223.84,
+      "end": 223.91,
+      "mapping": "exact"
+    },
+    {
+      "index": 1266,
+      "text": "是",
+      "start": 223.91,
+      "end": 223.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1267,
+      "text": "你",
+      "start": 223.98,
+      "end": 224.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1268,
+      "text": "去",
+      "start": 224.26,
+      "end": 224.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1269,
+      "text": "做",
+      "start": 224.44,
+      "end": 225.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1270,
+      "text": "这",
+      "start": 225.1,
+      "end": 225.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1271,
+      "text": "个",
+      "start": 225.2,
+      "end": 225.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1272,
+      "text": "提",
+      "start": 225.3,
+      "end": 225.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1273,
+      "text": "示",
+      "start": 225.46,
+      "end": 225.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1274,
+      "text": "词",
+      "start": 225.58,
+      "end": 225.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 1275,
+      "text": "这",
+      "start": 225.84,
+      "end": 226.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1276,
+      "text": "个",
+      "start": 226.1,
+      "end": 226.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 1277,
+      "text": "动",
+      "start": 226.36,
+      "end": 226.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1278,
+      "text": "作",
+      "start": 226.52,
+      "end": 226.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1279,
+      "text": "是",
+      "start": 226.68,
+      "end": 226.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 1280,
+      "text": "很",
+      "start": 226.82,
+      "end": 226.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1281,
+      "text": "廉",
+      "start": 226.98,
+      "end": 227.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 1282,
+      "text": "价",
+      "start": 227.18,
+      "end": 227.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 1283,
+      "text": "的",
+      "start": 227.42,
+      "end": 227.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1284,
+      "text": "只",
+      "start": 227.58,
+      "end": 227.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 1285,
+      "text": "需",
+      "start": 227.74,
+      "end": 227.85,
+      "mapping": "exact"
+    },
+    {
+      "index": 1286,
+      "text": "要",
+      "start": 227.85,
+      "end": 227.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1287,
+      "text": "消",
+      "start": 227.96,
+      "end": 228.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 1288,
+      "text": "耗",
+      "start": 228.44,
+      "end": 228.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1289,
+      "text": "一",
+      "start": 228.58,
+      "end": 228.65,
+      "mapping": "exact"
+    },
+    {
+      "index": 1290,
+      "text": "点",
+      "start": 228.65,
+      "end": 228.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1291,
+      "text": "t",
+      "start": 228.72,
+      "end": 229.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 1292,
+      "text": "o",
+      "start": 229.0,
+      "end": 229.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1293,
+      "text": "k",
+      "start": 229.04,
+      "end": 229.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1294,
+      "text": "e",
+      "start": 229.08,
+      "end": 229.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1295,
+      "text": "n",
+      "start": 229.12,
+      "end": 229.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 1296,
+      "text": "但",
+      "start": 229.16,
+      "end": 229.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 1297,
+      "text": "是",
+      "start": 229.28,
+      "end": 229.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1298,
+      "text": "后",
+      "start": 229.4,
+      "end": 229.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 1299,
+      "text": "面",
+      "start": 229.54,
+      "end": 229.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1300,
+      "text": "如",
+      "start": 229.68,
+      "end": 229.79,
+      "mapping": "exact"
+    },
+    {
+      "index": 1301,
+      "text": "何",
+      "start": 229.79,
+      "end": 229.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 1302,
+      "text": "去",
+      "start": 229.9,
+      "end": 230.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 1303,
+      "text": "理",
+      "start": 230.22,
+      "end": 230.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 1304,
+      "text": "解",
+      "start": 230.38,
+      "end": 230.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 1305,
+      "text": "你",
+      "start": 230.58,
+      "end": 230.69,
+      "mapping": "exact"
+    },
+    {
+      "index": 1306,
+      "text": "的",
+      "start": 230.69,
+      "end": 230.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 1307,
+      "text": "这",
+      "start": 230.69,
+      "end": 230.8,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1308,
+      "text": "个",
+      "start": 230.8,
+      "end": 231.3,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1309,
+      "text": "a",
+      "start": 230.8,
+      "end": 231.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1310,
+      "text": "g",
+      "start": 231.3,
+      "end": 231.42,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1311,
+      "text": "e",
+      "start": 231.42,
+      "end": 231.49,
+      "mapping": "exact"
+    },
+    {
+      "index": 1312,
+      "text": "n",
+      "start": 231.49,
+      "end": 231.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 1313,
+      "text": "t",
+      "start": 231.56,
+      "end": 231.68,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 1314,
+      "text": "如",
+      "start": 231.56,
+      "end": 231.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 1315,
+      "text": "何",
+      "start": 231.68,
+      "end": 231.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 1316,
+      "text": "去",
+      "start": 231.8,
+      "end": 232.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 1317,
+      "text": "判",
+      "start": 232.02,
+      "end": 232.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 1318,
+      "text": "断",
+      "start": 232.22,
+      "end": 232.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1319,
+      "text": "如",
+      "start": 232.52,
+      "end": 232.71,
+      "mapping": "exact"
+    },
+    {
+      "index": 1320,
+      "text": "何",
+      "start": 232.71,
+      "end": 232.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 1321,
+      "text": "去",
+      "start": 232.9,
+      "end": 233.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 1322,
+      "text": "维",
+      "start": 233.16,
+      "end": 233.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1323,
+      "text": "护",
+      "start": 233.3,
+      "end": 233.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 1324,
+      "text": "如",
+      "start": 233.64,
+      "end": 233.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 1325,
+      "text": "何",
+      "start": 233.74,
+      "end": 233.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 1326,
+      "text": "去",
+      "start": 233.84,
+      "end": 234.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1327,
+      "text": "负",
+      "start": 234.1,
+      "end": 234.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 1328,
+      "text": "责",
+      "start": 234.28,
+      "end": 234.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 1329,
+      "text": "让",
+      "start": 234.82,
+      "end": 234.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1330,
+      "text": "它",
+      "start": 234.98,
+      "end": 235.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1331,
+      "text": "从",
+      "start": 235.12,
+      "end": 235.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 1332,
+      "text": "一",
+      "start": 235.34,
+      "end": 235.55,
+      "mapping": "exact"
+    },
+    {
+      "index": 1333,
+      "text": "个",
+      "start": 235.55,
+      "end": 235.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 1334,
+      "text": "d",
+      "start": 235.76,
+      "end": 235.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 1335,
+      "text": "e",
+      "start": 235.94,
+      "end": 235.99,
+      "mapping": "exact"
+    },
+    {
+      "index": 1336,
+      "text": "m",
+      "start": 235.99,
+      "end": 236.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1337,
+      "text": "o",
+      "start": 236.04,
+      "end": 236.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 1338,
+      "text": "变",
+      "start": 236.18,
+      "end": 236.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 1339,
+      "text": "成",
+      "start": 236.32,
+      "end": 236.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 1340,
+      "text": "一",
+      "start": 236.5,
+      "end": 236.61,
+      "mapping": "exact"
+    },
+    {
+      "index": 1341,
+      "text": "个",
+      "start": 236.61,
+      "end": 236.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 1342,
+      "text": "真",
+      "start": 236.72,
+      "end": 236.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 1343,
+      "text": "正",
+      "start": 236.92,
+      "end": 237.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 1344,
+      "text": "的",
+      "start": 237.1,
+      "end": 237.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 1345,
+      "text": "产",
+      "start": 237.2,
+      "end": 237.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 1346,
+      "text": "品",
+      "start": 237.4,
+      "end": 237.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 1347,
+      "text": "让",
+      "start": 237.62,
+      "end": 237.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 1348,
+      "text": "它",
+      "start": 237.74,
+      "end": 237.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1349,
+      "text": "能",
+      "start": 237.86,
+      "end": 237.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 1350,
+      "text": "够",
+      "start": 237.98,
+      "end": 238.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 1351,
+      "text": "跑",
+      "start": 238.12,
+      "end": 238.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1352,
+      "text": "通",
+      "start": 238.24,
+      "end": 238.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 1353,
+      "text": "你",
+      "start": 238.42,
+      "end": 238.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 1354,
+      "text": "的",
+      "start": 238.52,
+      "end": 238.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 1355,
+      "text": "业",
+      "start": 238.62,
+      "end": 238.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 1356,
+      "text": "务",
+      "start": 238.88,
+      "end": 239.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 1357,
+      "text": "这",
+      "start": 239.04,
+      "end": 239.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 1358,
+      "text": "个",
+      "start": 239.3,
+      "end": 239.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 1359,
+      "text": "过",
+      "start": 239.56,
+      "end": 239.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 1360,
+      "text": "程",
+      "start": 239.78,
+      "end": 239.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 1361,
+      "text": "是",
+      "start": 239.96,
+      "end": 240.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 1362,
+      "text": "很",
+      "start": 240.14,
+      "end": 240.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 1363,
+      "text": "复",
+      "start": 240.28,
+      "end": 240.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1364,
+      "text": "杂",
+      "start": 240.46,
+      "end": 240.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 1365,
+      "text": "的",
+      "start": 240.7,
+      "end": 240.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 1366,
+      "text": "所",
+      "start": 240.86,
+      "end": 241.11,
+      "mapping": "exact"
+    },
+    {
+      "index": 1367,
+      "text": "以",
+      "start": 241.11,
+      "end": 241.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 1368,
+      "text": "这",
+      "start": 241.36,
+      "end": 241.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 1369,
+      "text": "个",
+      "start": 241.46,
+      "end": 241.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 1370,
+      "text": "过",
+      "start": 241.56,
+      "end": 241.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 1371,
+      "text": "程",
+      "start": 241.76,
+      "end": 241.92,
+      "mapping": "exact"
+    },
+    {
+      "index": 1372,
+      "text": "也",
+      "start": 241.92,
+      "end": 242.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 1373,
+      "text": "是",
+      "start": 242.0,
+      "end": 242.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 1374,
+      "text": "很",
+      "start": 242.08,
+      "end": 242.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 1375,
+      "text": "珍",
+      "start": 242.26,
+      "end": 242.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 1376,
+      "text": "贵",
+      "start": 242.48,
+      "end": 242.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 1377,
+      "text": "的",
+      "start": 242.74,
+      "end": 242.904,
+      "mapping": "exact"
+    }
+  ],
+  "segments": [
+    {
+      "id": "cue-001",
+      "start": 0.0,
+      "end": 5.48,
+      "text": "我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-002",
+      "start": 5.48,
+      "end": 10.4,
+      "text": "这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-003",
+      "start": 10.4,
+      "end": 16.6,
+      "text": "但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-004",
+      "start": 16.6,
+      "end": 18.48,
+      "text": "AI也并不是你想的那么简单。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-005",
+      "start": 18.48,
+      "end": 30.7,
+      "text": "我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-006",
+      "start": 30.7,
+      "end": 34.7,
+      "text": "尤其是应届生，投了很多简历，说AI并不好找工作。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-007",
+      "start": 34.7,
+      "end": 40.64,
+      "text": "我可以非常明确地告诉你，这个市场上90%的人，他对底层逻辑是完全不清晰的。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-008",
+      "start": 40.64,
+      "end": 46.08,
+      "text": "他不是在构建一个可维护的系统，而是在拼接一个能演示的流程、一个Demo。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-009",
+      "start": 46.08,
+      "end": 49.8,
+      "text": "五个原因，对照一下，自己能理解的，月薪都不会低于30K。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-010",
+      "start": 49.8,
+      "end": 52.96,
+      "text": "第一，平台把系统的复杂性给隐藏起来。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-011",
+      "start": 52.96,
+      "end": 61.8,
+      "text": "低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-012",
+      "start": 61.8,
+      "end": 67.68,
+      "text": "好处是普通人可以快速上手，坏处是很多人误以为会拖拽节点就等于懂系统架构。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-013",
+      "start": 67.68,
+      "end": 75.02,
+      "text": "但一旦报错，你根本就不知道是模型问题、接口问题、权限问题、数据问题，还是上下游问题、状态管理问题。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-014",
+      "start": 75.02,
+      "end": 79.12,
+      "text": "第二点，很多人把原型能力误判成是产品能力。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-015",
+      "start": 79.12,
+      "end": 84.94,
+      "text": "AI最擅长帮你从0到1做一个Demo，每次帮你跑通一次，你就觉得自己做成了。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-016",
+      "start": 84.94,
+      "end": 97.12,
+      "text": "但是真实的产品不是跑通一次就可以了，而是能够长期稳定地运行真实的业务，是有脏数据、异常输入、并发请求、成本控制、隐私安全等一系列的问题。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-017",
+      "start": 97.12,
+      "end": 101.32,
+      "text": "当没有工程底座的时候，你的Demo越漂亮，后面塌得就越快。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-018",
+      "start": 101.32,
+      "end": 106.68,
+      "text": "第三点，就是我觉得现在短视频它疯狂地在展示结果，没有去展示维护。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-019",
+      "start": 106.68,
+      "end": 119.7,
+      "text": "一个智能体自动生成报告、自动回复客户、自动剪辑视频，它看起来很震惊，但是没有人展示它失败的时候怎么去排查，没人展示日志怎么读，没人展示测试怎么做，没人展示边界条件怎么处理。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-020",
+      "start": 119.7,
+      "end": 123.02,
+      "text": "于是大家看到的是魔法，Magic，它不是Engineering。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-021",
+      "start": 123.02,
+      "end": 126.36,
+      "text": "第四点，很多人有强烈的弯道超车的心理。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-022",
+      "start": 126.36,
+      "end": 133.18,
+      "text": "AI给了所有非技术的人一个巨大的想象：我不懂代码也能做软件，我不会开发也能创业。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-023",
+      "start": 133.18,
+      "end": 138.32,
+      "text": "这种心理有一部分是真的，因为AI确实降低了表达需求和生成原型的门槛。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-024",
+      "start": 138.32,
+      "end": 145.14,
+      "text": "但危险在于，有些人进一步误解为，不需要懂代码、不需要懂系统、不需要懂工程就能够。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-025",
+      "start": 145.14,
+      "end": 147.28,
+      "text": "不能，最后只是一种自欺欺人。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-026",
+      "start": 147.28,
+      "end": 151.68,
+      "text": "第五点，真正的智能体至少要能回答一些问题：它的任务边界是什么？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-027",
+      "start": 151.68,
+      "end": 153.06,
+      "text": "它失败时应该怎么办？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-028",
+      "start": 153.06,
+      "end": 155.08,
+      "text": "该如何保存和调用上下文？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-029",
+      "start": 155.08,
+      "end": 157.36,
+      "text": "该怎么判断模型输出是否靠谱？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-030",
+      "start": 157.36,
+      "end": 159.58,
+      "text": "它怎么处理工具调用失败？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-031",
+      "start": 159.58,
+      "end": 161.82,
+      "text": "它的数据从哪里来，是否可信？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-032",
+      "start": 161.82,
+      "end": 164.16,
+      "text": "它有没有权限控制和安全机制？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-033",
+      "start": 164.16,
+      "end": 167.04,
+      "text": "有没有日志、监控、测试、回滚机制？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-034",
+      "start": 167.04,
+      "end": 168.3,
+      "text": "它的成本是否可控？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-035",
+      "start": 168.3,
+      "end": 170.56,
+      "text": "最后，它能不能被别人去维护？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-036",
+      "start": 170.56,
+      "end": 174.02,
+      "text": "很多人出了Bug以后，他用AI来去打这个补丁。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-037",
+      "start": 174.02,
+      "end": 178.32,
+      "text": "我说实话，AI打补丁，这个补丁会打得非常大，而且一定是失真的。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-038",
+      "start": 178.32,
+      "end": 180.7,
+      "text": "这些问题，有人回答得上来吗？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-039",
+      "start": 180.7,
+      "end": 183.44,
+      "text": "你回答不上来，它就不是产品，它只是个演示。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-040",
+      "start": 183.44,
+      "end": 194.2,
+      "text": "今年，真正懂系统的人已经开始胜出了，因为他们把AI从玩具变成了工具，将工具变成了产品，从产品变成了业务的基础设施。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-041",
+      "start": 194.2,
+      "end": 201.42,
+      "text": "如果你也想把Agent真正地学起来，不只是随便玩一下，而是当作自己的工作，就能拿到一个还不错的薪资。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-042",
+      "start": 201.42,
+      "end": 212.04,
+      "text": "666，拿着我这份耗时三周整理出来的路线和教程，里面就包含了Agent集群、MCP等基础的知识点，以及要去做什么项目。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-043",
+      "start": 212.04,
+      "end": 218.26,
+      "text": "把这些东西都要系统地过一遍，这才是决定你做出来的东西不是Demo，而是能够上线的产品。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-044",
+      "start": 218.26,
+      "end": 223.84,
+      "text": "当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-045",
+      "start": 223.84,
+      "end": 229.16,
+      "text": "就是你去做这个提示词，这个动作是很廉价的，只需要消耗一点Token。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-046",
+      "start": 229.16,
+      "end": 242.904,
+      "text": "但是后面如何去理解你的这个Agent，如何去判断，如何去维护，如何去负责，让它从一个Demo变成一个真正的产品，让它能够跑通你的业务，这个过程是很复杂的，所以这个过程也是很珍贵的。",
+      "source": "NarrationLock exact text"
+    }
+  ],
+  "cues": [
+    {
+      "id": "cue-001",
+      "start": 0.0,
+      "end": 5.48,
+      "text": "我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-002",
+      "start": 5.48,
+      "end": 10.4,
+      "text": "这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-003",
+      "start": 10.4,
+      "end": 16.6,
+      "text": "但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-004",
+      "start": 16.6,
+      "end": 18.48,
+      "text": "AI也并不是你想的那么简单。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-005",
+      "start": 18.48,
+      "end": 30.7,
+      "text": "我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-006",
+      "start": 30.7,
+      "end": 34.7,
+      "text": "尤其是应届生，投了很多简历，说AI并不好找工作。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-007",
+      "start": 34.7,
+      "end": 40.64,
+      "text": "我可以非常明确地告诉你，这个市场上90%的人，他对底层逻辑是完全不清晰的。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-008",
+      "start": 40.64,
+      "end": 46.08,
+      "text": "他不是在构建一个可维护的系统，而是在拼接一个能演示的流程、一个Demo。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-009",
+      "start": 46.08,
+      "end": 49.8,
+      "text": "五个原因，对照一下，自己能理解的，月薪都不会低于30K。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-010",
+      "start": 49.8,
+      "end": 52.96,
+      "text": "第一，平台把系统的复杂性给隐藏起来。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-011",
+      "start": 52.96,
+      "end": 61.8,
+      "text": "低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-012",
+      "start": 61.8,
+      "end": 67.68,
+      "text": "好处是普通人可以快速上手，坏处是很多人误以为会拖拽节点就等于懂系统架构。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-013",
+      "start": 67.68,
+      "end": 75.02,
+      "text": "但一旦报错，你根本就不知道是模型问题、接口问题、权限问题、数据问题，还是上下游问题、状态管理问题。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-014",
+      "start": 75.02,
+      "end": 79.12,
+      "text": "第二点，很多人把原型能力误判成是产品能力。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-015",
+      "start": 79.12,
+      "end": 84.94,
+      "text": "AI最擅长帮你从0到1做一个Demo，每次帮你跑通一次，你就觉得自己做成了。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-016",
+      "start": 84.94,
+      "end": 97.12,
+      "text": "但是真实的产品不是跑通一次就可以了，而是能够长期稳定地运行真实的业务，是有脏数据、异常输入、并发请求、成本控制、隐私安全等一系列的问题。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-017",
+      "start": 97.12,
+      "end": 101.32,
+      "text": "当没有工程底座的时候，你的Demo越漂亮，后面塌得就越快。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-018",
+      "start": 101.32,
+      "end": 106.68,
+      "text": "第三点，就是我觉得现在短视频它疯狂地在展示结果，没有去展示维护。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-019",
+      "start": 106.68,
+      "end": 119.7,
+      "text": "一个智能体自动生成报告、自动回复客户、自动剪辑视频，它看起来很震惊，但是没有人展示它失败的时候怎么去排查，没人展示日志怎么读，没人展示测试怎么做，没人展示边界条件怎么处理。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-020",
+      "start": 119.7,
+      "end": 123.02,
+      "text": "于是大家看到的是魔法，Magic，它不是Engineering。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-021",
+      "start": 123.02,
+      "end": 126.36,
+      "text": "第四点，很多人有强烈的弯道超车的心理。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-022",
+      "start": 126.36,
+      "end": 133.18,
+      "text": "AI给了所有非技术的人一个巨大的想象：我不懂代码也能做软件，我不会开发也能创业。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-023",
+      "start": 133.18,
+      "end": 138.32,
+      "text": "这种心理有一部分是真的，因为AI确实降低了表达需求和生成原型的门槛。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-024",
+      "start": 138.32,
+      "end": 145.14,
+      "text": "但危险在于，有些人进一步误解为，不需要懂代码、不需要懂系统、不需要懂工程就能够。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-025",
+      "start": 145.14,
+      "end": 147.28,
+      "text": "不能，最后只是一种自欺欺人。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-026",
+      "start": 147.28,
+      "end": 151.68,
+      "text": "第五点，真正的智能体至少要能回答一些问题：它的任务边界是什么？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-027",
+      "start": 151.68,
+      "end": 153.06,
+      "text": "它失败时应该怎么办？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-028",
+      "start": 153.06,
+      "end": 155.08,
+      "text": "该如何保存和调用上下文？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-029",
+      "start": 155.08,
+      "end": 157.36,
+      "text": "该怎么判断模型输出是否靠谱？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-030",
+      "start": 157.36,
+      "end": 159.58,
+      "text": "它怎么处理工具调用失败？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-031",
+      "start": 159.58,
+      "end": 161.82,
+      "text": "它的数据从哪里来，是否可信？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-032",
+      "start": 161.82,
+      "end": 164.16,
+      "text": "它有没有权限控制和安全机制？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-033",
+      "start": 164.16,
+      "end": 167.04,
+      "text": "有没有日志、监控、测试、回滚机制？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-034",
+      "start": 167.04,
+      "end": 168.3,
+      "text": "它的成本是否可控？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-035",
+      "start": 168.3,
+      "end": 170.56,
+      "text": "最后，它能不能被别人去维护？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-036",
+      "start": 170.56,
+      "end": 174.02,
+      "text": "很多人出了Bug以后，他用AI来去打这个补丁。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-037",
+      "start": 174.02,
+      "end": 178.32,
+      "text": "我说实话，AI打补丁，这个补丁会打得非常大，而且一定是失真的。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-038",
+      "start": 178.32,
+      "end": 180.7,
+      "text": "这些问题，有人回答得上来吗？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-039",
+      "start": 180.7,
+      "end": 183.44,
+      "text": "你回答不上来，它就不是产品，它只是个演示。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-040",
+      "start": 183.44,
+      "end": 194.2,
+      "text": "今年，真正懂系统的人已经开始胜出了，因为他们把AI从玩具变成了工具，将工具变成了产品，从产品变成了业务的基础设施。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-041",
+      "start": 194.2,
+      "end": 201.42,
+      "text": "如果你也想把Agent真正地学起来，不只是随便玩一下，而是当作自己的工作，就能拿到一个还不错的薪资。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-042",
+      "start": 201.42,
+      "end": 212.04,
+      "text": "666，拿着我这份耗时三周整理出来的路线和教程，里面就包含了Agent集群、MCP等基础的知识点，以及要去做什么项目。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-043",
+      "start": 212.04,
+      "end": 218.26,
+      "text": "把这些东西都要系统地过一遍，这才是决定你做出来的东西不是Demo，而是能够上线的产品。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-044",
+      "start": 218.26,
+      "end": 223.84,
+      "text": "当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-045",
+      "start": 223.84,
+      "end": 229.16,
+      "text": "就是你去做这个提示词，这个动作是很廉价的，只需要消耗一点Token。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-046",
+      "start": 229.16,
+      "end": 242.904,
+      "text": "但是后面如何去理解你的这个Agent，如何去判断，如何去维护，如何去负责，让它从一个Demo变成一个真正的产品，让它能够跑通你的业务，这个过程是很复杂的，所以这个过程也是很珍贵的。",
+      "source": "NarrationLock exact text"
+    }
+  ],
+  "generatedAt": "2026-07-19T06:33:12.557814+00:00"
+}

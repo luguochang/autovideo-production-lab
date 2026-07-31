@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "autovideo-voice-promotion/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "transactionId": "00d49772-d70e-4078-8036-2a21be3cfb9f",
+  "status": "committed",
+  "selectedCandidateId": "candidate-001",
+  "reviewSha256": "29473a09bf51d9372ba2b2e519663152a6921bdef31f62b0c783bcb0f6cbab7c",
+  "startedAt": "2026-07-28T15:09:11.065Z",
+  "committedAt": "2026-07-28T15:09:11.400Z",
+  "audioSha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+  "recipeSha256": "3ded7c2be02d146907c4dbcb9c6322f14b21dbf64b3cda477c5ec1b7d3ed2d78",
+  "approvalSha256": "37249fecbcac047e1c89c49e5f9ad3a86631b81d30308cab21300852cb4edefa"
+}

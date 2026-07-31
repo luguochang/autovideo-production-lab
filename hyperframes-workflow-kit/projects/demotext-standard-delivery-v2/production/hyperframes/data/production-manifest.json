@@ -1,0 +1,634 @@
+{
+  "schemaVersion": "autovideo-production-manifest/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "f3bf8e7366c45e99f5f517791349380a94da517abd916b7f5b959bc3afdd6572",
+      "normalizedNarrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+      "frozenNarrationPath": "input/narration.txt"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "379d9fb05def883bca9c44a559180b55cd61c8ecab430b7fd363df982bfb6512",
+      "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+      "audioSha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+      "cueCount": 46,
+      "lastEndSeconds": 239.328
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "938739f0fa83d45cf6ea1891c61f2b029c9f21d2a556498a0df9d97db90bea45"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "aa62f0c4949250576aac5890788a64f934fa790519e2ccb086123ae834dbe1e7",
+      "schemaVersion": "autovideo-shot-manifest/v1",
+      "schemaPath": "workflow-console/schemas/shot-manifest.schema.json"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "2399a1a8266aef8f086cabd486eb3c8fe2a5aae5db93659cfc79ef87ad59415d",
+      "schemaVersion": "autovideo-graph-ir/v1",
+      "schemaPath": "workflow-console/schemas/graph-ir.schema.json"
+    }
+  },
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 239.328,
+    "duration": 239.328167
+  },
+  "sceneCount": 14,
+  "cueCount": 46,
+  "scenes": [
+    {
+      "id": "scene-01",
+      "order": 1,
+      "title": "敬畏与辨别",
+      "role": "hook",
+      "start": 0,
+      "end": 4.78,
+      "duration": 4.78,
+      "cueIds": [
+        "cue-001"
+      ],
+      "shotCueIds": [
+        "cue-001"
+      ],
+      "plannedSrc": "production/compositions/scenes/01-respect-warning.html",
+      "layout": {
+        "hostPose": "emphasis",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "hold"
+      ],
+      "motionRules": [
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s01-terminal",
+        "operation": "hold",
+        "description": "主持人与敬畏/辨别双关键词保持，字幕栏不变。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-02",
+      "order": 2,
+      "title": "社群建议不是工程能力",
+      "role": "concept",
+      "start": 4.78,
+      "end": 15.14,
+      "duration": 10.36,
+      "cueIds": [
+        "cue-002",
+        "cue-003"
+      ],
+      "shotCueIds": [
+        "cue-002",
+        "cue-003"
+      ],
+      "plannedSrc": "production/compositions/scenes/02-community-claim.html",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s02-terminal",
+        "operation": "compact",
+        "description": "社群标签退出，开发与维护能力压缩为后续上下文锚点。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-03",
+      "order": 3,
+      "title": "AI信心幻觉",
+      "role": "concept",
+      "start": 15.14,
+      "end": 27.3,
+      "duration": 12.16,
+      "cueIds": [
+        "cue-004",
+        "cue-005"
+      ],
+      "shotCueIds": [
+        "cue-004",
+        "cue-005"
+      ],
+      "plannedSrc": "production/compositions/scenes/03-confidence-illusion.html",
+      "layout": {
+        "hostPose": "think",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "s03-terminal",
+        "operation": "hold",
+        "description": "能力错觉被懂系统的问句打断。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-04",
+      "order": 4,
+      "title": "Demo不是系统",
+      "role": "compare",
+      "start": 27.3,
+      "end": 44.74,
+      "duration": 17.44,
+      "cueIds": [
+        "cue-006",
+        "cue-007",
+        "cue-008"
+      ],
+      "shotCueIds": [
+        "cue-006",
+        "cue-007",
+        "cue-008"
+      ],
+      "plannedSrc": "production/compositions/scenes/04-demo-not-system.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s04-terminal",
+        "operation": "compact",
+        "description": "Demo一侧被限定为能演示，可维护系统成为下一段判断基准。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-05",
+      "order": 5,
+      "title": "五个原因",
+      "role": "concept",
+      "start": 44.74,
+      "end": 49.34,
+      "duration": 4.6,
+      "cueIds": [
+        "cue-009"
+      ],
+      "shotCueIds": [
+        "cue-009"
+      ],
+      "plannedSrc": "production/compositions/scenes/05-five-reasons.html",
+      "layout": {
+        "hostPose": "emphasis",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "compact"
+      ],
+      "motionRules": [
+        "viewport-change",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s05-terminal",
+        "operation": "compact",
+        "description": "五点索引缩为历史锚点，给第一点让出主内容区。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-06",
+      "order": 6,
+      "title": "平台隐藏复杂性",
+      "role": "process",
+      "start": 49.34,
+      "end": 74.9,
+      "duration": 25.56,
+      "cueIds": [
+        "cue-010",
+        "cue-011",
+        "cue-012",
+        "cue-013"
+      ],
+      "shotCueIds": [
+        "cue-010",
+        "cue-011",
+        "cue-012",
+        "cue-013"
+      ],
+      "plannedSrc": "production/compositions/scenes/06-hidden-complexity.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change",
+        "card-morph-anchor"
+      ],
+      "terminalState": {
+        "id": "s06-terminal",
+        "operation": "compact",
+        "description": "错误来源收束为看不见的系统层，不保留六个并列节点。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-07",
+      "order": 7,
+      "title": "原型能力与产品能力",
+      "role": "compare",
+      "start": 74.9,
+      "end": 101.74,
+      "duration": 26.84,
+      "cueIds": [
+        "cue-014",
+        "cue-015",
+        "cue-016",
+        "cue-017"
+      ],
+      "shotCueIds": [
+        "cue-014",
+        "cue-015",
+        "cue-016",
+        "cue-017"
+      ],
+      "plannedSrc": "production/compositions/scenes/07-prototype-vs-product.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "s07-terminal",
+        "operation": "hold",
+        "description": "漂亮Demo失去工程底座，塌陷后的对比结论保持可读。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-08",
+      "order": 8,
+      "title": "结果与维护",
+      "role": "compare",
+      "start": 101.74,
+      "end": 123.96,
+      "duration": 22.22,
+      "cueIds": [
+        "cue-018",
+        "cue-019",
+        "cue-020"
+      ],
+      "shotCueIds": [
+        "cue-018",
+        "cue-019",
+        "cue-020"
+      ],
+      "plannedSrc": "production/compositions/scenes/08-results-vs-maintenance.html",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare"
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change",
+        "card-morph-anchor"
+      ],
+      "terminalState": {
+        "id": "s08-terminal",
+        "operation": "hold",
+        "description": "Engineering侧成为主焦点，结果演示退为次要上下文。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-09",
+      "order": 9,
+      "title": "捷径误解",
+      "role": "compare",
+      "start": 123.96,
+      "end": 147.28,
+      "duration": 23.32,
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023",
+        "cue-024",
+        "cue-025"
+      ],
+      "shotCueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023",
+        "cue-024",
+        "cue-025"
+      ],
+      "plannedSrc": "production/compositions/scenes/09-shortcut-misconception.html",
+      "layout": {
+        "hostPose": "think",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "exit"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s09-terminal",
+        "operation": "exit",
+        "description": "捷径路径被否定并退出，为工程问题清单清空内容区。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-10",
+      "order": 10,
+      "title": "Agent工程清单",
+      "role": "process",
+      "start": 147.28,
+      "end": 170.36,
+      "duration": 23.08,
+      "cueIds": [
+        "cue-026",
+        "cue-027",
+        "cue-028",
+        "cue-029",
+        "cue-030",
+        "cue-031",
+        "cue-032",
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "shotCueIds": [
+        "cue-026",
+        "cue-027",
+        "cue-028",
+        "cue-029",
+        "cue-030",
+        "cue-031",
+        "cue-032",
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "plannedSrc": "production/compositions/scenes/10-agent-engineering-checklist.html",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "viewport-change",
+        "svg-path-draw",
+        "card-morph-anchor"
+      ],
+      "terminalState": {
+        "id": "s10-terminal",
+        "operation": "compact",
+        "description": "十项逐组清单收束到可被他人维护的唯一判断。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-11",
+      "order": 11,
+      "title": "补丁扩大失真",
+      "role": "concept",
+      "start": 170.36,
+      "end": 182.44,
+      "duration": 12.08,
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038",
+        "cue-039"
+      ],
+      "shotCueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038",
+        "cue-039"
+      ],
+      "plannedSrc": "production/compositions/scenes/11-patch-distortion.html",
+      "layout": {
+        "hostPose": "question",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "morph",
+        "compare"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s11-terminal",
+        "operation": "hold",
+        "description": "演示状态保留，产品状态退出，完成反证。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-12",
+      "order": 12,
+      "title": "从玩具到基础设施",
+      "role": "process",
+      "start": 182.44,
+      "end": 191.84,
+      "duration": 9.4,
+      "cueIds": [
+        "cue-040"
+      ],
+      "shotCueIds": [
+        "cue-040"
+      ],
+      "plannedSrc": "production/compositions/scenes/12-maturity-ladder.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "s12-terminal",
+        "operation": "compact",
+        "description": "业务基础设施为唯一主节点，上游阶段压缩为路径痕迹。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-13",
+      "order": 13,
+      "title": "系统学习路线",
+      "role": "process",
+      "start": 191.84,
+      "end": 214.68,
+      "duration": 22.84,
+      "cueIds": [
+        "cue-041",
+        "cue-042",
+        "cue-043"
+      ],
+      "shotCueIds": [
+        "cue-041",
+        "cue-042",
+        "cue-043"
+      ],
+      "plannedSrc": "production/compositions/scenes/13-learning-route.html",
+      "layout": {
+        "hostPose": "encourage",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change",
+        "card-morph-anchor"
+      ],
+      "terminalState": {
+        "id": "s13-terminal",
+        "operation": "compact",
+        "description": "学习路线收束到可上线产品，薪资说法不进入主视觉。"
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-14",
+      "order": 14,
+      "title": "创建廉价，负责珍贵",
+      "role": "close",
+      "start": 214.68,
+      "end": 239.328,
+      "duration": 24.648,
+      "cueIds": [
+        "cue-044",
+        "cue-045",
+        "cue-046"
+      ],
+      "shotCueIds": [
+        "cue-044",
+        "cue-045",
+        "cue-046"
+      ],
+      "plannedSrc": "production/compositions/scenes/14-value-close.html",
+      "layout": {
+        "hostPose": "close",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "compact",
+        "hold"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "s14-terminal",
+        "operation": "hold",
+        "minimumHoldSeconds": 0.6,
+        "description": "四个价值词、成熟度上下文和主持人构成最终可读画面。"
+      },
+      "graphRefs": []
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-reference-fallback",
+    "referenceProjectId": "demotext-standard-delivery-v1",
+    "reason": "visual-plan structured adapter failed with upstream 502 after retry timeout.",
+    "referenceArtifactsAreStructureOnly": true
+  }
+}

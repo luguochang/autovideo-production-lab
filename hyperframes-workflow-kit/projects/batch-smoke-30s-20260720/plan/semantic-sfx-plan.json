@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "autovideo-semantic-sfx-plan/v1",
+  "planId": "batch-smoke-30s-20260720-sparse-sfx",
+  "version": "1.0.0",
+  "status": "approved",
+  "styleLock": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "requiredBackground": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionZone": "caption",
+    "cameraScope": "content-world-only"
+  },
+  "motionLibraryRef": {
+    "libraryId": "knowledge-explainer",
+    "version": "1.0.0",
+    "path": "style-library/motion-library/knowledge-explainer-v1.json"
+  },
+  "timelineDurationSeconds": 31.808,
+  "policy": {
+    "mode": "semantic-only",
+    "maxPerMinute": 6,
+    "minGapSeconds": 2.4,
+    "maxSimultaneous": 1,
+    "narrationPriority": true,
+    "allowAmbientLoops": false,
+    "allowDecorativeHits": false,
+    "assetPolicy": {
+      "resolver": "media-use",
+      "manifestPath": ".media/manifest.jsonl",
+      "pathPrefix": ".media/audio/sfx/",
+      "mediaType": "sfx",
+      "allowRemoteAtRender": false,
+      "allowUnregisteredAssets": false,
+      "requireSha256": true
+    },
+    "mix": {
+      "defaultCueGainDb": -20,
+      "narrationGainChangeDb": 0,
+      "peakDbfsMax": -6,
+      "fadeInMs": 8,
+      "fadeOutMs": 80
+    }
+  },
+  "bindings": [
+    {
+      "role": "connector-draw",
+      "intent": "short restrained line draw accent without a scene whoosh",
+      "resolutionStatus": "resolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": "sfx-whoosh-short",
+      "path": ".media/audio/sfx/sfx-whoosh-short.mp3",
+      "sha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+      "provider": "hyperframes-media-use-bundled",
+      "licenseReceipt": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "role": "state-change",
+      "intent": "quiet interface state commit click with a compact decay",
+      "resolutionStatus": "resolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": "sfx-click-soft",
+      "path": ".media/audio/sfx/sfx-click-soft.mp3",
+      "sha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+      "provider": "hyperframes-media-use-bundled",
+      "licenseReceipt": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    }
+  ],
+  "cues": [
+    {
+      "id": "sfx-cue-001",
+      "timeSeconds": 9.107,
+      "role": "connector-draw",
+      "bindingRole": "connector-draw",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": [
+        "cue-002"
+      ],
+      "semanticEvent": "diagram-build reaches its visible connector-complete state.",
+      "anchor": "connector-complete",
+      "offsetSeconds": 0,
+      "gainDb": -21,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-002",
+      "timeSeconds": 18.821,
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-004"
+      ],
+      "semanticEvent": "comparison-split reaches its visible state-commit state.",
+      "anchor": "state-commit",
+      "offsetSeconds": 0,
+      "gainDb": -20,
+      "targetLayer": "content-world"
+    }
+  ]
+}

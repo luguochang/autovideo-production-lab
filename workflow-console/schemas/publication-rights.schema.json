@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schemas/publication-rights.schema.json",
+  "title": "AutoVideo publication rights v2",
+  "type": "object",
+  "required": ["schemaVersion", "projectId", "declaration", "generatedAt", "inventoryBindings", "items", "policy"],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-publication-rights/v2"},
+    "projectId": {"type": "string", "minLength": 1},
+    "declaration": {"enum": ["cleared", "internal-only"]},
+    "notes": {"type": "string"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "inventoryBindings": {"type": "array", "items": {"$ref": "#/$defs/binding"}},
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "subject", "source", "license", "status", "notApplicableReason", "assetBindings", "evidence", "notes"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "category": {"type": "string", "minLength": 1},
+          "subject": {"type": "string", "minLength": 1},
+          "source": {"type": "string"},
+          "license": {"type": "string"},
+          "status": {"enum": ["cleared", "needs-review", "blocked", "not-applicable"]},
+          "notApplicableReason": {"type": "string"},
+          "assetBindings": {"type": "array", "items": {"$ref": "#/$defs/binding"}},
+          "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "policy": {"type": "object"}
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "required": ["scope", "path", "sha256"],
+      "properties": {
+        "scope": {"enum": ["project", "workspace"]},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "currentAtGeneration": {"type": "boolean"},
+        "kind": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "allOf": [
+        {"$ref": "#/$defs/binding"},
+        {
+          "type": "object",
+          "required": ["kind"],
+          "properties": {
+            "kind": {"enum": ["license-file", "rights-attestation", "terms-snapshot", "source-receipt"]}
+          }
+        }
+      ]
+    }
+  }
+}

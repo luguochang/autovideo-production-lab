@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-internal-final-review/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "status": "accepted-for-internal-only",
+  "approvalScope": "internal-autonomous-review",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "composition": {
+    "path": "production/hyperframes",
+    "digest": "dd7423319c215b63f34922063304d1eee9830dc786173bc4931778896fa8dffd",
+    "fileCount": 403
+  },
+  "previewStartedAt": "2026-07-29T05:52:20.348Z",
+  "checklist": {
+    "fullTimeline": false,
+    "audioVisualSync": false,
+    "captions": false,
+    "visuals": false,
+    "content": false
+  },
+  "notes": "User explicitly authorized internal-only screen-text simulation and continued rendering, accepted humanReviewPerformed=false, and kept public release blocked. Final-preview simulation is used only to unblock the requested internal review render; it is not a human full-film approval.",
+  "reviewedBy": "codex-creator-delegated",
+  "updatedAt": "2026-07-29T05:54:43.652Z",
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-29-user-internal-render-authorization.json",
+    "sha256": "fbffeb0584d4520a57882359d58c823baeb6f0729b57053e6bb317d76d728d27"
+  }
+}

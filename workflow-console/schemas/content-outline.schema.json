@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo content outline",
+  "type": "object",
+  "required": ["schemaVersion", "projectId", "evidenceSha256", "prompt", "targetSeconds", "sections", "reviewNotes", "generatedAt"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-content-outline/v1"},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "evidenceSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "prompt": {
+      "type": "object",
+      "required": ["id", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "const": "outline-planner"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "targetSeconds": {"type": "number", "minimum": 1},
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "purpose", "kind", "targetSeconds", "claimIds", "sourceIds", "screenIntent"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^section-[0-9]{2,}$"},
+          "purpose": {"type": "string", "minLength": 1},
+          "kind": {"type": "string", "enum": ["sourced", "creator-opinion", "transition"]},
+          "targetSeconds": {"type": "number", "minimum": 1},
+          "claimIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "sourceIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "screenIntent": {"type": "string"}
+        }
+      }
+    },
+    "reviewNotes": {"type": "array", "items": {"type": "string"}},
+    "generatedAt": {"type": "string", "minLength": 1}
+  }
+}

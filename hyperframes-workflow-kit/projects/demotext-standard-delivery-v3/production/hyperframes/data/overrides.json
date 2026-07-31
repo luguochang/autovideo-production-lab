@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-overrides/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "revision": 0,
+  "createdAt": "2026-07-19T06:56:32.467Z",
+  "createdBy": "automation:sop-status-sync",
+  "approvalStatus": "not-applicable-empty",
+  "base": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "982fbb3ba9f5b0a32142dd9e5ade33c37fd1b4e2694b0b5005b05285bdbee09e"
+    },
+    "templateLock": {
+      "path": "template-lock.json",
+      "sha256": "18a5bb998589f3992df984f11e92210558ce6dfd2f615efc15505c77d018d92a"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "8286be91146a7378625d6398b7136c090cd02d2277289c25fb9e70277cdca6de"
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "081cec0c57730b637fb0d1de2cccea41707996d769b8c03274366ee386b7128a"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "3a8c9a3980dc5b2194cb0767b16f85787b12604799579bb3c8f3e97e23857dd1"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "e878e4d36abdc2a8c9812b8dd3e2bb05c5b37cdc083dcb1ba3a5ff734b433aea"
+    }
+  },
+  "policy": {
+    "emptyMeans": "No manual overrides have been recorded.",
+    "stableTargetIdsRequired": true,
+    "invalidationReceiptRequired": true,
+    "directProductionEditsAllowed": false
+  },
+  "overrides": []
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "persondesign-modern-host-probe",
+  "stage": "storyboard-ready",
+  "createdAt": "2026-07-17T13:33:55.781Z",
+  "updatedAt": "2026-07-18T10:58:43.832Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": "input/style-reference.png",
+    "ratio": "16:9",
+    "targetDuration": "8",
+    "platform": "modern-ip-host-explainer approved template",
+    "audience": "AI learners and knowledge-video viewers",
+    "rememberedOutcome": "平台把复杂性包装在简单按钮与节点后面",
+    "forbiddenTreatments": "PPT翻页、米黄色纸张、贴纸标签墙、重复卡片网格、仪表盘/HUD、元素累积重叠、竖屏或方形输出",
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "user-request",
+      "approvedAt": "2026-07-18T02:45:29.000Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "user",
+      "approvedAt": "2026-07-18T10:29:28.793Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "pending",
+      "approvedBy": null,
+      "approvedAt": null
+    }
+  },
+  "nextAction": "Template is locked. Attach approved final audio and alignment before full composition work; wait for an explicit production request."
+}

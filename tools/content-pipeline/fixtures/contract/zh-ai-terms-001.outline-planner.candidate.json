@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "autovideo-content-prompt-candidate/v1",
+  "caseId": "zh-ai-terms-001",
+  "stage": "outline-planner",
+  "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+  "prompt": {
+    "id": "outline-planner",
+    "path": "tools/content-pipeline/prompt-chain/prompts/02-outline-planner.md",
+    "sha256": "d22e82222da4dff897dbfb321de748590a2d1764b3e1e0e34ba2bcb76cef3fc4"
+  },
+  "generator": {
+    "provider": "precomputed-fixture",
+    "model": "fixture-output",
+    "configSha256": "90a5cec52b9c61ed148258fed8843149391a4956b7c3ffe37072b46bd0b502c2"
+  },
+  "outputCanonicalization": "stable-json-v1",
+  "output": {
+    "schemaVersion": "autovideo-content-outline/v1",
+    "projectId": "zh-ai-terms-001",
+    "evidenceSha256": "130b1ea0867424235e0cf1ab6282f89a848fa4c677ad4edc30e5247ac7527f62",
+    "prompt": {
+      "id": "outline-planner",
+      "sha256": "d22e82222da4dff897dbfb321de748590a2d1764b3e1e0e34ba2bcb76cef3fc4"
+    },
+    "targetSeconds": 30,
+    "sections": [
+      {
+        "id": "section-01",
+        "purpose": "解释样本事实",
+        "kind": "sourced",
+        "targetSeconds": 14,
+        "claimIds": [
+          "claim-sample-run"
+        ],
+        "sourceIds": [
+          "source-001"
+        ],
+        "screenIntent": "短关键词与事实锚点"
+      },
+      {
+        "id": "section-02",
+        "purpose": "明确创作者判断",
+        "kind": "creator-opinion",
+        "targetSeconds": 16,
+        "claimIds": [
+          "claim-terms-need-review"
+        ],
+        "sourceIds": [
+          "source-001"
+        ],
+        "screenIntent": "短关键词与事实锚点"
+      }
+    ],
+    "reviewNotes": [
+      "Synthetic contract fixture only."
+    ],
+    "generatedAt": "2026-07-22T00:00:00.000Z"
+  },
+  "outputSha256": "375cba25143e3bc26e011c01fd8471a96c888676fc66743786581693833c360c"
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>batch-smoke-30s-20260720 - One Screen AutoVideo</title>
+    <script src="./assets/runtime/gsap.min.js"></script>
+    <style>
+      @font-face { font-family:"Noto Sans SC"; src:local("Noto Sans SC"),local("Noto Sans CJK SC"),local("Microsoft YaHei"); font-weight:100 900; }
+      @font-face { font-family:"JetBrains Mono Local"; src:url("./assets/runtime/JetBrainsMono-400.woff2") format("woff2"); font-weight:100 600; }
+      @font-face { font-family:"JetBrains Mono Local"; src:url("./assets/runtime/JetBrainsMono-700.woff2") format("woff2"); font-weight:700 900; }
+      * { box-sizing:border-box; }
+      html,body { width:1920px; height:1080px; margin:0; overflow:hidden; background:#F2DFC7; }
+      body { font-family:"Noto Sans SC",sans-serif; color:#2A211B; }
+      #root { position:relative; width:1920px; height:1080px; overflow:hidden; }
+      .stage-fill { position:absolute; inset:0; width:1920px; height:1080px; overflow:hidden; background:#F2DFC7; }
+      .stage-fill::before { content:""; position:absolute; left:-260px; top:80px; width:820px; height:820px; border:2px solid #DCC2A3; border-radius:50%; opacity:.55; }
+      .stage-fill::after { content:""; position:absolute; left:96px; top:874px; width:1728px; height:3px; background:#DCC2A3; }
+      .host-zone { position:absolute; left:96px; top:156px; width:520px; height:730px; overflow:hidden; z-index:4; }
+      .host-shadow { position:absolute; left:72px; bottom:2px; width:370px; height:44px; border-radius:50%; background:rgba(73,105,88,.12); filter:blur(14px); }
+      .host-pose { position:absolute; inset:0; width:520px; height:730px; object-fit:contain; object-position:50% 100%; transform-origin:50% 0; opacity:0; will-change:transform,opacity; }
+      .host-accent { position:absolute; left:26px; bottom:18px; width:460px; height:5px; background:#496958; opacity:.72; }
+      .content-zone { position:absolute; left:654px; top:72px; width:1170px; height:802px; overflow:hidden; z-index:8; }
+      .board-heading { position:absolute; left:0; top:0; width:1130px; height:128px; opacity:0; }
+      .board-kicker { display:block; color:#A14A33; font:800 18px/1.2 "JetBrains Mono Local",monospace; }
+      .board-title { display:block; max-width:1100px; margin-top:14px; color:#2A211B; font-size:48px; font-weight:900; line-height:1.08; overflow-wrap:anywhere; }
+      .master-board { position:absolute; left:0; top:0; width:1130px; height:720px; overflow:hidden; }
+      .connector-layer { position:absolute; inset:0; width:1130px; height:720px; overflow:hidden; z-index:0; }
+      .board-connector { fill:none; stroke:#496958; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:1; stroke-dashoffset:1; opacity:0; }
+      .board-step { position:absolute; padding:18px 20px 16px 62px; overflow:hidden; border-left:5px solid #DCC2A3; border-bottom:2px solid #DCC2A3; border-radius:4px; background:rgba(251,243,231,.94); box-shadow:0 10px 24px rgba(73,60,49,.08); opacity:0; transform-origin:50% 50%; z-index:2; will-change:transform,opacity; }
+      .board-step.is-initial { opacity:0; }
+      .board-step-focus { position:absolute; left:0; top:0; width:5px; height:100%; background:#A94E36; opacity:1; }
+      .board-step-index { position:absolute; left:18px; top:19px; color:#A94E36; font:800 17px/1 "JetBrains Mono Local",monospace; }
+      .board-step-copy { width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; min-width:0; }
+      .board-step-copy.has-asset { padding-right:126px; }
+      .board-step-title { display:block; color:#2A211B; font-weight:900; line-height:1.12; overflow-wrap:anywhere; }
+      .board-step-support { display:flex; align-items:center; flex-wrap:wrap; gap:6px 16px; margin-top:10px; color:#675748; font-size:17px; font-weight:650; line-height:1.2; }
+      .board-step-support span { display:block; white-space:nowrap; }
+      .board-step-support span::before { content:"/"; margin-right:8px; color:#DCC2A3; }
+      .board-step-support span:first-child::before { content:""; margin:0; }
+      .board-step-asset { position:absolute; right:16px; top:50%; width:104px; height:104px; transform:translateY(-50%); object-fit:contain; border:1px solid #DCC2A3; background:#fff; }
+      .content-progress { position:absolute; left:0; bottom:0; width:1130px; height:4px; background:#A94E36; transform-origin:0 50%; }
+      .caption-shell { position:absolute; left:96px; top:926px; width:1728px; height:88px; border-top:2px solid #DCC2A3; background:#FBF3E7; z-index:190; }
+      .caption-cue { position:absolute; left:96px; top:926px; width:1728px; height:88px; padding:0 34px; display:flex; align-items:center; overflow:hidden; z-index:200; color:#493C31; font-size:27px; font-weight:550; line-height:1.35; opacity:0; will-change:transform,opacity; }
+      .caption-cue.is-initial { opacity:1; }
+      .caption-cue span { display:block; width:1660px; max-height:76px; overflow:hidden; text-align:left; }
+      .lucide-receipt { display:none; }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="main-root" id="root" data-composition-id="main" data-start="0" data-duration="32.158" data-width="1920" data-height="1080" data-fps="30" data-layout-mode="one-screen-board" data-step-count="6" data-all-content-precomputed="true">
+      <div data-hf-id="persistent-stage" class="stage-fill" data-role="persistent-stage" data-zone="stage" data-layout-ignore></div>
+      <div data-hf-id="host-zone" id="host-zone" class="host-zone" data-role="host" data-zone="host.left">
+        <div data-hf-id="host-shadow" class="host-shadow" aria-hidden="true"></div>
+        <img data-hf-id="host-pose-fixed" id="host-pose-fixed" class="host-pose" src="./assets/host/question.png" alt="" data-pose-id="question" data-layout-allow-overflow="intentional-pose-crop" />
+        <div data-hf-id="host-accent" class="host-accent" aria-hidden="true"></div>
+      </div>
+      <div data-hf-id="content-zone" id="content-zone" class="content-zone" data-role="content" data-zone="content.right">
+        <div data-hf-id="board-heading" id="board-heading" class="board-heading">
+          <span data-hf-id="board-kicker" class="board-kicker">TOPIC / BATCH-SMOKE-30S-20260720</span>
+          <strong data-hf-id="board-title" class="board-title">复杂系统 → 先定位问题层</strong>
+        </div>
+        <div data-hf-id="master-board" id="master-board" class="master-board" data-role="master-storyboard" data-zone="content.right">
+          <svg data-hf-id="connector-layer" class="connector-layer" viewBox="0 0 1130 720" aria-hidden="true" data-layout-ignore><path data-hf-id="connector-cue-002" id="connector-cue-002" class="board-connector" d="M 275.5 238.333 L 854.5 238.333" pathLength="1" data-source-cues="cue-002" /><path data-hf-id="connector-cue-003" id="connector-cue-003" class="board-connector" d="M 854.5 238.333 L 854.5 425 L 854.5 425" pathLength="1" data-source-cues="cue-003" /><path data-hf-id="connector-cue-004" id="connector-cue-004" class="board-connector" d="M 854.5 425 L 275.5 425" pathLength="1" data-source-cues="cue-004" /><path data-hf-id="connector-cue-005" id="connector-cue-005" class="board-connector" d="M 275.5 425 L 275.5 611.667 L 275.5 611.667" pathLength="1" data-source-cues="cue-005" /><path data-hf-id="connector-cue-006" id="connector-cue-006" class="board-connector" d="M 275.5 611.667 L 854.5 611.667" pathLength="1" data-source-cues="cue-006" /></svg>
+          <div data-hf-id="visual-cue-001" id="visual-cue-001" class="board-step is-initial" style="left:0px;top:154px;width:551px;height:168.667px" data-role="board-step" data-zone="content.right" data-step-index="1" data-source-cues="cue-001" data-visual-type="keyword" data-motion-recipe="keyword-handoff@1.0.0" data-final-position="0,154,551,168.667">
+    <div data-hf-id="visual-cue-001-focus" id="visual-cue-001-focus" class="board-step-focus" aria-hidden="true"></div>
+    <span data-hf-id="visual-cue-001-index" class="board-step-index">01</span>
+    <div data-hf-id="visual-cue-001-copy" class="board-step-copy">
+      <strong data-hf-id="visual-cue-001-title" class="board-step-title" style="font-size:34px">复杂系统</strong>
+      
+    </div>
+    
+  </div><div data-hf-id="visual-cue-002" id="visual-cue-002" class="board-step" style="left:579px;top:154px;width:551px;height:168.667px" data-role="board-step" data-zone="content.right" data-step-index="2" data-source-cues="cue-002" data-visual-type="diagram" data-motion-recipe="diagram-build@1.0.0" data-final-position="579,154,551,168.667">
+    <div data-hf-id="visual-cue-002-focus" id="visual-cue-002-focus" class="board-step-focus" aria-hidden="true"></div>
+    <span data-hf-id="visual-cue-002-index" class="board-step-index">02</span>
+    <div data-hf-id="visual-cue-002-copy" class="board-step-copy">
+      <strong data-hf-id="visual-cue-002-title" class="board-step-title" style="font-size:34px">按钮 · 节点</strong>
+      <div data-hf-id="visual-cue-002-support" class="board-step-support"><span data-hf-id="visual-cue-002-support-1">模型 / 接口</span><span data-hf-id="visual-cue-002-support-2">向量库</span><span data-hf-id="visual-cue-002-support-3">工具调度</span></div>
+    </div>
+    
+  </div><div data-hf-id="visual-cue-003" id="visual-cue-003" class="board-step" style="left:579px;top:340.667px;width:551px;height:168.667px" data-role="board-step" data-zone="content.right" data-step-index="3" data-source-cues="cue-003" data-visual-type="keyword" data-motion-recipe="keyword-handoff@1.0.0" data-final-position="579,340.667,551,168.667">
+    <div data-hf-id="visual-cue-003-focus" id="visual-cue-003-focus" class="board-step-focus" aria-hidden="true"></div>
+    <span data-hf-id="visual-cue-003-index" class="board-step-index">03</span>
+    <div data-hf-id="visual-cue-003-copy" class="board-step-copy">
+      <strong data-hf-id="visual-cue-003-title" class="board-step-title" style="font-size:34px">快速上手</strong>
+      
+    </div>
+    
+  </div><div data-hf-id="visual-cue-004" id="visual-cue-004" class="board-step" style="left:0px;top:340.667px;width:551px;height:168.667px" data-role="board-step" data-zone="content.right" data-step-index="4" data-source-cues="cue-004" data-visual-type="comparison" data-motion-recipe="comparison-split@1.0.0" data-final-position="0,340.667,551,168.667">
+    <div data-hf-id="visual-cue-004-focus" id="visual-cue-004-focus" class="board-step-focus" aria-hidden="true"></div>
+    <span data-hf-id="visual-cue-004-index" class="board-step-index">04</span>
+    <div data-hf-id="visual-cue-004-copy" class="board-step-copy">
+      <strong data-hf-id="visual-cue-004-title" class="board-step-title" style="font-size:30px">拖拽 ≠ 架构理解</strong>
+      
+    </div>
+    
+  </div><div data-hf-id="visual-cue-005" id="visual-cue-005" class="board-step" style="left:0px;top:527.333px;width:551px;height:168.667px" data-role="board-step" data-zone="content.right" data-step-index="5" data-source-cues="cue-005" data-visual-type="diagram" data-motion-recipe="diagram-build@1.0.0" data-final-position="0,527.333,551,168.667">
+    <div data-hf-id="visual-cue-005-focus" id="visual-cue-005-focus" class="board-step-focus" aria-hidden="true"></div>
+    <span data-hf-id="visual-cue-005-index" class="board-step-index">05</span>
+    <div data-hf-id="visual-cue-005-copy" class="board-step-copy">
+      <strong data-hf-id="visual-cue-005-title" class="board-step-title" style="font-size:34px">问题在哪一层？</strong>
+      <div data-hf-id="visual-cue-005-support" class="board-step-support"><span data-hf-id="visual-cue-005-support-1">模型 / 接口</span><span data-hf-id="visual-cue-005-support-2">权限 / 数据</span><span data-hf-id="visual-cue-005-support-3">上下游 / 状态</span></div>
+    </div>
+    
+  </div><div data-hf-id="visual-cue-006" id="visual-cue-006" class="board-step" style="left:579px;top:527.333px;width:551px;height:168.667px" data-role="board-step" data-zone="content.right" data-step-index="6" data-source-cues="cue-006" data-visual-type="keyword" data-motion-recipe="keyword-handoff@1.0.0" data-final-position="579,527.333,551,168.667">
+    <div data-hf-id="visual-cue-006-focus" id="visual-cue-006-focus" class="board-step-focus" aria-hidden="true"></div>
+    <span data-hf-id="visual-cue-006-index" class="board-step-index">06</span>
+    <div data-hf-id="visual-cue-006-copy" class="board-step-copy">
+      <strong data-hf-id="visual-cue-006-title" class="board-step-title" style="font-size:34px">先定位问题层</strong>
+      
+    </div>
+    
+  </div>
+        </div>
+        <div data-hf-id="content-progress" id="content-progress" class="content-progress" aria-hidden="true"></div>
+      </div>
+      <div data-hf-id="caption-shell" id="caption-shell" class="caption-shell" data-role="caption-shell" data-zone="caption"></div>
+      <div data-hf-id="caption-cue-001" id="caption-cue-001" class="caption-cue is-initial" data-role="caption" data-zone="caption" data-cue-start="0.35" data-cue-duration="3.98" data-source-cues="cue-001" data-text-type="exact-source"><span data-hf-id="caption-cue-001-text">第一，平台会把系统的复杂性藏起来。</span></div><div data-hf-id="caption-cue-002" id="caption-cue-002" class="caption-cue" data-role="caption" data-zone="caption" data-cue-start="4.33" data-cue-duration="8.84" data-source-cues="cue-002" data-text-type="exact-source"><span data-hf-id="caption-cue-002-text">低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。</span></div><div data-hf-id="caption-cue-003" id="caption-cue-003" class="caption-cue" data-role="caption" data-zone="caption" data-cue-start="13.17" data-cue-duration="3.24" data-source-cues="cue-003" data-text-type="exact-source"><span data-hf-id="caption-cue-003-text">这样做的好处，是普通人可以很快上手。</span></div><div data-hf-id="caption-cue-004" id="caption-cue-004" class="caption-cue" data-role="caption" data-zone="caption" data-cue-start="16.41" data-cue-duration="4.76" data-source-cues="cue-004" data-text-type="exact-source"><span data-hf-id="caption-cue-004-text">但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。</span></div><div data-hf-id="caption-cue-005" id="caption-cue-005" class="caption-cue" data-role="caption" data-zone="caption" data-cue-start="21.17" data-cue-duration="8.84" data-source-cues="cue-005" data-text-type="exact-source"><span data-hf-id="caption-cue-005-text">真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？</span></div><div data-hf-id="caption-cue-006" id="caption-cue-006" class="caption-cue" data-role="caption" data-zone="caption" data-cue-start="30.01" data-cue-duration="2.148" data-source-cues="cue-006" data-text-type="exact-source"><span data-hf-id="caption-cue-006-text">这才是系统真正复杂的地方。</span></div>
+      <audio data-hf-id="narration-final" id="narration-final" class="clip" src="./assets/audio/narration.final.wav" data-start="0.35" data-duration="31.808" data-track-index="30" data-volume="1"></audio>
+      <audio data-hf-id="sfx-cue-002-1" id="sfx-cue-002-1" class="clip" src="./assets/audio/sfx/sfx-whoosh-short.mp3" data-start="9.457" data-duration="0.35" data-track-index="31" data-volume="0.089" data-role="semantic-sfx" data-sfx-role="connector-draw" data-source-cues="cue-002"></audio><audio data-hf-id="sfx-cue-004-1" id="sfx-cue-004-1" class="clip" src="./assets/audio/sfx/sfx-click-soft.mp3" data-start="19.171" data-duration="0.35" data-track-index="32" data-volume="0.1" data-role="semantic-sfx" data-sfx-role="state-change" data-source-cues="cue-004"></audio>
+      <div data-hf-id="lucide-receipt" class="lucide-receipt" data-source="lucide-react@0.468.0" data-license="ISC"></div>
+    </div>
+    <script>window.__timelines = window.__timelines || {};const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });const durationAnchor = { progress: 0 };tl.to(durationAnchor, { progress: 1, duration: 32.158, ease: "none" }, 0);tl.fromTo("#content-progress", { scaleX: 0 }, { scaleX: 1, duration: 32.158, ease: "none" }, 0);tl.fromTo("#host-pose-fixed", { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.04);tl.fromTo("#board-heading", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.44, ease: "power3.out" }, 0.08);tl.fromTo("#visual-cue-001", { opacity: 0, y: 14, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.46, ease: "power3.out" }, 0.35);tl.fromTo("#visual-cue-001 .board-step-title, #visual-cue-001 .board-step-support span, #visual-cue-001 .board-step-asset", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.045, ease: "power2.out" }, 0.43);tl.fromTo("#connector-cue-002", { strokeDashoffset: 1, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 0.42, ease: "power2.out" }, 4.15);tl.to("#visual-cue-001-focus", { opacity: 0.22, duration: 0.24, ease: "power2.out" }, 4.25);tl.fromTo("#visual-cue-002", { opacity: 0, y: 14, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.46, ease: "power3.out" }, 4.33);tl.fromTo("#visual-cue-002 .board-step-title, #visual-cue-002 .board-step-support span, #visual-cue-002 .board-step-asset", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.045, ease: "power2.out" }, 4.41);tl.to("#caption-cue-001", { opacity: 0, y: -3, duration: 0.1, ease: "power2.in" }, 4.21);tl.set("#caption-cue-001", { opacity: 0 }, 4.33);tl.fromTo("#caption-cue-002", { opacity: 0, y: 5 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 4.35);tl.fromTo("#connector-cue-003", { strokeDashoffset: 1, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 0.42, ease: "power2.out" }, 12.99);tl.to("#visual-cue-002-focus", { opacity: 0.22, duration: 0.24, ease: "power2.out" }, 13.09);tl.fromTo("#visual-cue-003", { opacity: 0, y: 14, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.46, ease: "power3.out" }, 13.17);tl.fromTo("#visual-cue-003 .board-step-title, #visual-cue-003 .board-step-support span, #visual-cue-003 .board-step-asset", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.045, ease: "power2.out" }, 13.25);tl.to("#caption-cue-002", { opacity: 0, y: -3, duration: 0.1, ease: "power2.in" }, 13.05);tl.set("#caption-cue-002", { opacity: 0 }, 13.17);tl.fromTo("#caption-cue-003", { opacity: 0, y: 5 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 13.19);tl.fromTo("#connector-cue-004", { strokeDashoffset: 1, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 0.42, ease: "power2.out" }, 16.23);tl.to("#visual-cue-003-focus", { opacity: 0.22, duration: 0.24, ease: "power2.out" }, 16.33);tl.fromTo("#visual-cue-004", { opacity: 0, y: 14, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.46, ease: "power3.out" }, 16.41);tl.fromTo("#visual-cue-004 .board-step-title, #visual-cue-004 .board-step-support span, #visual-cue-004 .board-step-asset", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.045, ease: "power2.out" }, 16.49);tl.to("#caption-cue-003", { opacity: 0, y: -3, duration: 0.1, ease: "power2.in" }, 16.29);tl.set("#caption-cue-003", { opacity: 0 }, 16.41);tl.fromTo("#caption-cue-004", { opacity: 0, y: 5 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 16.43);tl.fromTo("#connector-cue-005", { strokeDashoffset: 1, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 0.42, ease: "power2.out" }, 20.99);tl.to("#visual-cue-004-focus", { opacity: 0.22, duration: 0.24, ease: "power2.out" }, 21.09);tl.fromTo("#visual-cue-005", { opacity: 0, y: 14, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.46, ease: "power3.out" }, 21.17);tl.fromTo("#visual-cue-005 .board-step-title, #visual-cue-005 .board-step-support span, #visual-cue-005 .board-step-asset", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.045, ease: "power2.out" }, 21.25);tl.to("#caption-cue-004", { opacity: 0, y: -3, duration: 0.1, ease: "power2.in" }, 21.05);tl.set("#caption-cue-004", { opacity: 0 }, 21.17);tl.fromTo("#caption-cue-005", { opacity: 0, y: 5 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 21.19);tl.fromTo("#connector-cue-006", { strokeDashoffset: 1, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 0.42, ease: "power2.out" }, 29.83);tl.to("#visual-cue-005-focus", { opacity: 0.22, duration: 0.24, ease: "power2.out" }, 29.93);tl.fromTo("#visual-cue-006", { opacity: 0, y: 14, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.46, ease: "power3.out" }, 30.01);tl.fromTo("#visual-cue-006 .board-step-title, #visual-cue-006 .board-step-support span, #visual-cue-006 .board-step-asset", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.045, ease: "power2.out" }, 30.09);tl.to("#caption-cue-005", { opacity: 0, y: -3, duration: 0.1, ease: "power2.in" }, 29.89);tl.set("#caption-cue-005", { opacity: 0 }, 30.01);tl.fromTo("#caption-cue-006", { opacity: 0, y: 5 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, 30.03);window.__timelines["main"] = tl;</script>
+  </body>
+</html>

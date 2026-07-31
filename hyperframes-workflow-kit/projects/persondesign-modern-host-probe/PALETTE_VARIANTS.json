@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "autovideo-palette-variants/v1",
+  "styleId": "modern-ip-host-explainer",
+  "version": "1.0.0",
+  "status": "approved",
+  "defaultPaletteId": "light-apricot",
+  "variants": [
+    {
+      "id": "light-apricot",
+      "label": "浅杏橙",
+      "status": "approved-default",
+      "trigger": "default when no palette variant is named",
+      "bestFor": ["knowledge", "education", "general host-led content"],
+      "colors": {
+        "background": "#F2DFC7",
+        "surface": "#FBF3E7",
+        "ink": "#2A211B",
+        "muted": "#675748",
+        "primary": "#496958",
+        "secondary": "#A94E36",
+        "warm_host": "#B85C42",
+        "line": "#DCC2A3"
+      }
+    },
+    {
+      "id": "warm-peach",
+      "label": "暖桃灰",
+      "status": "approved-alternate",
+      "trigger": "explicit request for 暖桃灰 or warm-peach",
+      "bestFor": ["people", "lifestyle", "light knowledge"],
+      "colors": {
+        "background": "#F7EAE4",
+        "surface": "#FFF9F5",
+        "ink": "#29211E",
+        "muted": "#6D5D56",
+        "primary": "#456E63",
+        "secondary": "#B45B43",
+        "warm_host": "#B85C42",
+        "line": "#E2D1CA"
+      }
+    }
+  ],
+  "textColorContract": {
+    "ink": "primary information and default headline",
+    "muted": "helper text, sources and unaccented captions",
+    "primary": "one active semantic emphasis per beat",
+    "secondary": "small contrast marker or next semantic focus",
+    "caption": "caption surface, normal text and emphasis must come from the selected variant"
+  },
+  "receipt": {
+    "approvedBy": "user",
+    "approvedAt": "2026-07-18",
+    "decision": "Save warm-peach and light-apricot; use light-apricot as the current default."
+  }
+}

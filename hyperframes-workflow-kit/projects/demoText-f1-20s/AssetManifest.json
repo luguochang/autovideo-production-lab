@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "autovideo-asset-manifest/v1",
+  "projectId": "demoText-f1-20s",
+  "assets": [
+    {
+      "id": "source-script",
+      "path": "../../../demo/demoText.txt",
+      "source": "user-provided",
+      "license": "user-provided",
+      "purpose": "narration source"
+    },
+    {
+      "id": "voice-excerpt",
+      "path": "input/narration-excerpt.wav",
+      "source": "experiments/E08-demo-candidates/shared/narration.wav, 57.0486088s-77.0486088s",
+      "license": "project-generated Edge TTS, zh-CN-YunxiNeural",
+      "purpose": "shared exact narration audio"
+    },
+    {
+      "id": "gsap-runtime",
+      "path": "production/variants/*/assets/gsap.min.js",
+      "source": "existing E10 project runtime copy",
+      "license": "GSAP standard no-charge license",
+      "purpose": "seek-safe animation timeline"
+    },
+    {
+      "id": "f1-style-specs",
+      "path": "../../../style-library/styles/f1/",
+      "source": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md",
+      "license": "user-provided specification; referenced original assets absent",
+      "purpose": "visual reconstruction rules"
+    },
+    {
+      "id": "official-hyperframes-motion",
+      "path": "../../../vendor/hyperframes/skills/hyperframes-animation/",
+      "source": "HyperFrames official repository",
+      "license": "Apache-2.0",
+      "purpose": "motion rules and blueprints"
+    },
+    {
+      "id": "official-registry-evaluation",
+      "path": "../../../vendor/hyperframes/registry/",
+      "source": "HyperFrames official registry",
+      "license": "Apache-2.0",
+      "purpose": "evaluate flowchart, data chart, captions, and grain before custom authoring"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "autovideo-final-preview/v2",
+  "projectId": "demotext-standard-delivery-v5",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "approvedBy": "codex-autonomous-internal-review",
+  "approvedAt": "2026-07-19T14:55:36.194Z",
+  "previewStartedAt": "2026-07-19T14:55:36.075Z",
+  "composition": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v5/production/hyperframes",
+  "compositionDigest": "1c5b30c857564639527b5feb952d3d6816c45fcbad6b31b3a3078d3bf07dbd96",
+  "fileCount": 54,
+  "files": [
+    {
+      "path": "assets/audio/narration.final.wav",
+      "bytes": 22975582,
+      "sha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f"
+    },
+    {
+      "path": "assets/host/close.png",
+      "bytes": 305939,
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "bytes": 390781,
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "bytes": 353487,
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "bytes": 420078,
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "bytes": 382765,
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "bytes": 72779,
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.html",
+      "bytes": 10598,
+      "sha256": "25159095550bcb99ba19eed8609a3f74c0ae76a8d2740353bcbd575b7d38c61d"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.motion.json",
+      "bytes": 414,
+      "sha256": "03043c792a17ed7e7ad781154b35e6d758d71a9cba71843172f49d7f6d518ba7"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.html",
+      "bytes": 15020,
+      "sha256": "2f079b26f129c0b331e95f7ba4cfaaf165709c1519d98abaab3f8ceb258f0a5b"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.motion.json",
+      "bytes": 414,
+      "sha256": "67ab5b9f0506d29a8cb90778ff6ad32c80094589f21804f559bb98065141947a"
+    },
+    {
+      "path": "compositions/scenes/03-scene-03.html",
+      "bytes": 10722,
+      "sha256": "1c03e0ce19d180915193870b89b50f461071e37117a65c938e89efc9b3e3b825"
+    },
+    {
+      "path": "compositions/scenes/03-scene-03.motion.json",
+      "bytes": 414,
+      "sha256": "9a0d63c1ea1c249a160dde7e04540de928b645fe190aa8f3c25d15f92cbf6684"
+    },
+    {
+      "path": "compositions/scenes/04-scene-04.html",
+      "bytes": 12279,
+      "sha256": "5a20400206e62fe8692be5c1d6bfad0e1e9525e43311db221152146efa154b09"
+    },
+    {
+      "path": "compositions/scenes/04-scene-04.motion.json",
+      "bytes": 414,
+      "sha256": "8852528656990b8d2423f7094bfb7280069b5143558a0d6050ce209c2e10dc0f"
+    },
+    {
+      "path": "compositions/scenes/05-scene-05.html",
+      "bytes": 15058,
+      "sha256": "6dc2e3fafe5dbe49e7c1dc45265c0763b1f59ab479d8ad46b3797c5e4bb878ce"
+    },
+    {
+      "path": "compositions/scenes/05-scene-05.motion.json",
+      "bytes": 414,
+      "sha256": "594b2b45e6e258be729ecdc10bd4a327bc5a0bdc913b54d457a88c97b2fd7c2a"
+    },
+    {
+      "path": "compositions/scenes/06-scene-06.html",
+      "bytes": 10146,
+      "sha256": "2500e0af84f5ddb7b0475c32714749109dc6f99ffe9d333902d317e39e6a6388"
+    },
+    {
+      "path": "compositions/scenes/06-scene-06.motion.json",
+      "bytes": 413,
+      "sha256": "b680b919b65327e7e9cbaa2822dbade93c7e4f1ae82614f8f0ff8c26f05acc90"
+    },
+    {
+      "path": "compositions/scenes/07-scene-07.html",
+      "bytes": 12217,
+      "sha256": "881e2d39824ea0dcc7706ee7ef2345112b8db888413c0d4e55dd74c9ad245a83"
+    },
+    {
+      "path": "compositions/scenes/07-scene-07.motion.json",
+      "bytes": 413,
+      "sha256": "20353693703f383385b07a8309319d103c20192c65e064ab4ef4a94128cb664a"
+    },
+    {
+      "path": "compositions/scenes/08-scene-08.html",
+      "bytes": 10168,
+      "sha256": "4ed01ea0e5a15f2975cf26421834ecbe7fa8020d2789273d4774042de24b5d90"
+    },
+    {
+      "path": "compositions/scenes/08-scene-08.motion.json",
+      "bytes": 414,
+      "sha256": "479570fdfc80f5875d97725b76f4f52fec1d0c63603c406126e8d86d3d843990"
+    },
+    {
+      "path": "compositions/scenes/09-scene-09.html",
+      "bytes": 15087,
+      "sha256": "9fe0656ea8cfe1d3c7e7706cab6a38ff109ad8044015aaec4321f6a00748c57f"
+    },
+    {
+      "path": "compositions/scenes/09-scene-09.motion.json",
+      "bytes": 414,
+      "sha256": "1fde8b80b907e863620b46d57dc4d258cc2496e987d79a2ad0990a8f743a02a0"
+    },
+    {
+      "path": "compositions/scenes/10-scene-10.html",
+      "bytes": 15079,
+      "sha256": "9ee4c705d56de67a073cc2a0bbb265765cb3f778efdbc14646c4e1a9ab4dacbf"
+    },
+    {
+      "path": "compositions/scenes/10-scene-10.motion.json",
+      "bytes": 414,
+      "sha256": "a517e3e0327f2e8c9e8ee5c4f14e26b5fae09cc58031aad570a767fdd8bd8fe0"
+    },
+    {
+      "path": "compositions/scenes/11-scene-11.html",
+      "bytes": 10410,
+      "sha256": "7c7946c41e1c602cfe0ca2f3d7439fb2a28e464cc670eebf1590b8698ed9dc4f"
+    },
+    {
+      "path": "compositions/scenes/11-scene-11.motion.json",
+      "bytes": 413,
+      "sha256": "4dcff9ecb400c56f81e8c37388817a686c2d3013533bd68ef37400b814ffd61f"
+    },
+    {
+      "path": "compositions/scenes/12-scene-12.html",
+      "bytes": 10442,
+      "sha256": "cce21166c1a063bd30a343cec9b770518ce922f7fae564c169efc5520ae445f6"
+    },
+    {
+      "path": "compositions/scenes/12-scene-12.motion.json",
+      "bytes": 412,
+      "sha256": "f44f897e0884490eaa8e06e97a98486f01f10c49167ae200bb4037d78d5b7f99"
+    },
+    {
+      "path": "compositions/scenes/13-scene-13.html",
+      "bytes": 15036,
+      "sha256": "8005e411e7ff501489a54b5bbc831a417eed64860f5455b3c730f4f130fb6f70"
+    },
+    {
+      "path": "compositions/scenes/13-scene-13.motion.json",
+      "bytes": 413,
+      "sha256": "37b474e73e86b6120696fc454757846f9f2470c9a47912e1184fe0dbe48e0c6f"
+    },
+    {
+      "path": "compositions/scenes/14-scene-14.html",
+      "bytes": 10479,
+      "sha256": "e2be6c2b5281d63b1e98feee103ac7c3a63bbfdce5fd75250b0eef2d090dc1a0"
+    },
+    {
+      "path": "compositions/scenes/14-scene-14.motion.json",
+      "bytes": 413,
+      "sha256": "3473ce8f579d1106cc4ad9aa570b3e0b13233df693fdf471a6c792845c333ae6"
+    },
+    {
+      "path": "compositions/scenes/15-scene-15.html",
+      "bytes": 10123,
+      "sha256": "d8ea4cf4a968a57ca56671fc4db5449fe81bdd546cea5ded13c02334dfe1cee3"
+    },
+    {
+      "path": "compositions/scenes/15-scene-15.motion.json",
+      "bytes": 413,
+      "sha256": "8756d6f8c4dc156e639effb3139f05a8b97ade0cb3a814101175395066c9d94a"
+    },
+    {
+      "path": "compositions/scenes/16-scene-16.html",
+      "bytes": 10168,
+      "sha256": "4ab845bac4bba03d9ce9b23e0e8dc0d8d423a1999ee7a8739abc6039fd156065"
+    },
+    {
+      "path": "compositions/scenes/16-scene-16.motion.json",
+      "bytes": 414,
+      "sha256": "b79df456248d93182706ec2177ff83dc8e6ac08ed8d093a13c4091dd08677c7c"
+    },
+    {
+      "path": "compositions/scenes/17-scene-17.html",
+      "bytes": 11394,
+      "sha256": "616fa96fc92caae3226ef54d662e4e9cd282576b7a90672c24e7fd54b804685e"
+    },
+    {
+      "path": "compositions/scenes/17-scene-17.motion.json",
+      "bytes": 414,
+      "sha256": "18cc7bcf549567fa40bdc381b6e9191c089f7e79a9660a9a7f9deee46398c6ce"
+    },
+    {
+      "path": "compositions/scenes/18-scene-18.html",
+      "bytes": 9102,
+      "sha256": "b9709158b8f1807845a8115cc305d2525104fc953bf8eb06e516ede5b0be6f22"
+    },
+    {
+      "path": "compositions/scenes/18-scene-18.motion.json",
+      "bytes": 415,
+      "sha256": "d78e0842f822c2b227c0793c351fc2dff792a38fc12dc9e7f4c7456f5b70e2d0"
+    },
+    {
+      "path": "data/alignment.json",
+      "bytes": 205968,
+      "sha256": "f35cfd79397e406b8eef3f0d16fe03c9e1f7a5c2eff297e944f33eeed4662fff"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "bytes": 16963,
+      "sha256": "05f8020926284fb489e449e214271811fae3ef7e5d2790fc95642db97af3c2ee"
+    },
+    {
+      "path": "data/overrides.json",
+      "bytes": 1368,
+      "sha256": "574bc874fd7b6da7eacec2e76700bb4eb6f451d8c41b4ff58216851afb4d2254"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "bytes": 22437,
+      "sha256": "efa3534e7373816ef6932abe1eeb7daa504ea2de0e0aebbcf748fd0085c9a334"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "bytes": 32851,
+      "sha256": "173e25542ed573132181d8ef6d69860770bd95c6c35b5747deffda54bd67e22f"
+    },
+    {
+      "path": "data/source-map.json",
+      "bytes": 5924,
+      "sha256": "1e0c121ca509e7eceb183a6c038d18dc3996723402f6979fab6acb20318771fa"
+    },
+    {
+      "path": "hyperframes.json",
+      "bytes": 318,
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "index.html",
+      "bytes": 25008,
+      "sha256": "c42efeb478cd3061ecb8767f91e1a2934259c978022c03770906accaf0f62248"
+    },
+    {
+      "path": "index.motion.json",
+      "bytes": 226,
+      "sha256": "10191941ddfb3b2efe02e970ec281520b340becae30814a82784defbe213470c"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 712,
+      "sha256": "a1971b1ecc9edd032d9f1b9d2355ca248cdf9d5b2a4157ea0fadbb1263455fb4"
+    },
+    {
+      "path": "package.json",
+      "bytes": 401,
+      "sha256": "dd8a40f9852d23797b182624e69d61d779241ba00bb2cd573095563f312d927e"
+    }
+  ]
+}

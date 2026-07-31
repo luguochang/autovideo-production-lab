@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "autovideo-motion-internal-fallback-request/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "scope": "internal-full-production",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "requestedBy": "codex-creator-delegated-internal-review",
+  "requestedAt": "2026-07-29T10:23:12.7073478+08:00",
+  "reason": "The user approved the current visual probe for this internal-only project. Generate the full composition using the exact reviewed recipe set without claiming global recipe promotion, public rights, or final publication approval.",
+  "recipeIds": [
+    "code-proof",
+    "comparison-split",
+    "device-surface-tour",
+    "diagram-build",
+    "keyword-handoff"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "DemoText 标准化完整交付 V3",
+  "route": "script",
+  "sourcePath": "demo/demoText.txt",
+  "platform": "抖音",
+  "targetDuration": "275s",
+  "voiceRoute": "preset14",
+  "audience": "AI 学习者与知识视频观众",
+  "targetOutcome": "理解会搭工作流不等于具备可维护的 AI 系统能力",
+  "automation": "critical-gates",
+  "publicationRights": "internal-only",
+  "rightsNotes": "本次标准演练默认仅内部交付；CosyVoice speaker、主持人素材与数字 claim 的公开发布凭据仍需人工补齐。"
+}

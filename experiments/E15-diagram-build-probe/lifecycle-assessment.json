@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-assessment/v1",
+  "projectId": "E15-diagram-build-probe",
+  "recipeId": "diagram-build",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "readiness": {
+    "compositionPresent": true,
+    "graphIrPresent": true,
+    "narrationLockPresent": true,
+    "assetManifestPresent": true,
+    "sourceReceiptPresent": true,
+    "strictCheckPassed": true,
+    "renderPresent": true,
+    "humanReview": "pending"
+  },
+  "apply": {
+    "executed": false,
+    "reason": "Probe is awaiting user visual approval and should not be promoted automatically."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "autovideo-official-reuse-receipt/v1",
+  "projectId": "E16-comparison-split-probe",
+  "recipeId": "comparison-split",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "search": {
+    "officialRegistryQuery": "hyperframes@0.7.64 catalog --type block --tag comparison --json",
+    "officialRegistryMatches": [],
+    "framePresetDecision": "No frame preset adopted because modern-ip-host-explainer@1.0.0 is the approved immutable base style.",
+    "selectedTier": "official animation blueprint and rules"
+  },
+  "sources": [
+    {
+      "kind": "official-blueprint",
+      "id": "comparison-split",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/blueprints/comparison-split.md",
+      "sha256": "af2af2ddf86aba21ed8b2016b7b1bd4b1ced52b4ac98f17eff487dca1097599a",
+      "license": "Apache-2.0",
+      "adopted": ["exactly two equal-footprint states", "opposite-wing mirrored entry", "shared static perspective", "simultaneous readability"]
+    },
+    {
+      "kind": "official-motion-rule",
+      "id": "split-tilt-cards",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/split-tilt-cards.md",
+      "sha256": "e25313fbee84ef8597a17729fd9daded3364ced2bc185909debade67c95cf921",
+      "license": "Apache-2.0",
+      "adopted": ["shared perspective parent", "left/right mirrored rotateY", "outside-in x travel", "fixed matching dimensions"],
+      "intentionallyOmitted": ["side glows", "continuous phase-opposed float", "large tilt", "perpetual idle motion"]
+    },
+    {
+      "kind": "official-motion-rule",
+      "id": "scale-swap-transition",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/scale-swap-transition.md",
+      "sha256": "76075cf82b9cb2d15269f14261d255dcbf3d46fd2e8443936559b0799eaeb6cf",
+      "license": "Apache-2.0",
+      "adopted": ["coordinated outgoing shrink and selected-state growth", "fixed CSS footprints", "overlapped timing"],
+      "adaptation": "Both states remain visible and readable because comparison-split requires simultaneous context; no full replacement or third state is introduced."
+    }
+  ],
+  "brandOverrides": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionZone": "caption",
+    "cameraScope": "content-world-only"
+  }
+}

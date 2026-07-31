@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "autovideo-invariant-audit/v1",
+  "projectId": "E15-diagram-build-probe",
+  "status": "candidate",
+  "composition": {
+    "path": "index.html",
+    "sha256": "5219c2a8219c75141df3e91991ba02f5fd4b150bf671ec4309b54120da39e573",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "rootDurationSeconds": 8,
+    "sceneGuardDurationSeconds": 8.033
+  },
+  "brandShell": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "hostRect": {"left": 96, "top": 156, "width": 600, "height": 730},
+    "hostAssetPath": ".media/images/image_001.png",
+    "hostAssetSha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+    "hostPoseCount": 1,
+    "hostPoseSwap": false,
+    "captionZone": "caption",
+    "captionRect": {"left": 96, "top": 926, "width": 1728, "height": 88}
+  },
+  "camera": {
+    "scope": "content-world-only",
+    "selector": "#diagram-camera",
+    "contentZone": "content.right",
+    "contentRect": {"left": 694, "top": 112, "width": 1130, "height": 760},
+    "hostTransformed": false,
+    "captionTransformed": false,
+    "transformSelectorsOutsideScope": []
+  },
+  "graph": {
+    "graphIrPath": "GraphIR.json",
+    "graphIrSha256": "2771383c7319539bdd97133a1ce8754e14f5fbf29c8e67ffbda27df60c7d4142",
+    "nodeCount": 3,
+    "edgeCount": 2,
+    "nodeIds": ["graph-node-model", "graph-node-api", "graph-node-tools"],
+    "edgeIds": ["edge-model-api", "edge-api-tools"],
+    "visualType": "diagram",
+    "recipe": "diagram-build@1.0.0"
+  },
+  "timing": {
+    "narrationLockPath": "NarrationLock.json",
+    "narrationLockSha256": "0c49e4cda09abc62959a5d10089de193586387a81017ce3fe41604b65f7b6bb0",
+    "audioPath": "input/narration-window.wav",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "audioDurationSeconds": 8,
+    "phases": {
+      "establish": {"start": 0, "end": 2.72},
+      "focus": {"start": 2.72, "end": 6.24},
+      "pullback": {"start": 6.24, "end": 7.1},
+      "finalHold": {"start": 7.1, "end": 8}
+    }
+  },
+  "automatedEvidence": {
+    "strictCheckLog": "strict-check.log",
+    "strictCheckLogSha256": "5f30ad489e69c4975f3b129830d00f9fa60b96a2cb686ab0e9a9117334d3efbc",
+    "strictCheck": {
+      "ok": true,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "runtimeErrors": 0,
+      "layoutErrors": 0,
+      "layoutWarnings": 0,
+      "motionErrors": 0,
+      "contrastErrors": 0
+    },
+    "keyframesJson": "review/keyframes.json",
+    "keyframesJsonSha256": "f1a23f73072278665080c3926453965836072cb53adab13895c0f00bc7bc4067",
+    "focusedKeyframeShot": "review/render-qa/diagram-camera-strip.png",
+    "focusedKeyframeShotSha256": "42c1600cfb5238aac04256daac878edf2083568df1fb05a1bfe62e03e1e5f0bb",
+    "contactSheet": "snapshots/contact-sheet.jpg",
+    "contactSheetSha256": "90697cab7233b2087bbd549b1a7317973ff0de33397fdba7ad08c61e80df31a3",
+    "render": {
+      "path": "renders/diagram-build-probe.mp4",
+      "sha256": "6c283a23d9f3a1c364e623e6b4dc48464b84d0fe5f03a4f95d6cd7774b4eb25f",
+      "durationSeconds": 8,
+      "video": "1920x1080, 30fps, H.264",
+      "audio": "48kHz AAC, 8.000s, non-silent"
+    },
+    "decodeQa": {
+      "path": "review/render-qa/DECODE_QA.json",
+      "sha256": "baea2387f4b55da6d3214f4d8b26683521d28fd3f383194c2c372a88c14789e1"
+    },
+    "ffprobe": "review/render-qa/ffprobe.json",
+    "audioVolumeDetect": "review/render-qa/audio-volumedetect.log"
+  },
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewDocument": "PROBE_REVIEW.md",
+    "lifecycleApplyExecuted": false,
+    "promotionExecuted": false
+  }
+}

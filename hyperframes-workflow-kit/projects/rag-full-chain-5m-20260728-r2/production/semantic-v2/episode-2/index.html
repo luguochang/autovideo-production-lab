@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920,height=1080" />
+  <title>RAG 全链路 下集：在线链路</title>
+  <script src="./assets/gsap.min.js"></script>
+  <style>
+  @font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');font-weight:100 900}
+  @font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');font-weight:400 800}
+  @font-face{font-family:JetBrainsMono;src:url('./assets/JetBrainsMono-400.woff2') format('woff2');font-weight:400}
+  @font-face{font-family:JetBrainsMono;src:url('./assets/JetBrainsMono-700.woff2') format('woff2');font-weight:700}
+  *{box-sizing:border-box}
+  html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#F2DFC7;font-family:Inter,'Noto Sans SC','Microsoft YaHei',sans-serif;color:#2A211B}
+  #root{position:relative;width:1920px;height:1080px;overflow:hidden}
+  .clip{position:absolute}
+  .stage-scene{inset:0;width:1920px;height:1080px;overflow:hidden}
+  .stage-fill{position:absolute;inset:0;background:#F2DFC7;overflow:hidden;z-index:0}
+  .stage-fill::before{content:'';position:absolute;left:0;right:0;top:126px;height:2px;background:#DCC2A3}
+  .stage-fill::after{content:'';position:absolute;left:96px;right:96px;bottom:143px;height:1px;background:#DCC2A3}
+  .stage-header{position:absolute;left:96px;right:96px;top:48px;height:64px;display:flex;align-items:center;gap:22px;letter-spacing:0;z-index:2}
+  .stage-kicker{font-family:JetBrainsMono,monospace;font-size:20px;font-weight:700;color:#2A211B}
+  .stage-header h1{margin:0;font-size:46px;line-height:1;font-weight:800;letter-spacing:0}
+  .stage-progress{margin-left:auto;display:flex;gap:8px;align-items:center}
+  .stage-progress i{display:block;width:34px;height:5px;background:#DCC2A3}
+  .stage-progress i.done{background:#496958}
+  .canvas-shell{position:absolute;left:96px;top:150px;width:1728px;height:730px;overflow:hidden;z-index:2}
+  .canvas-shell.has-host .visual-world{width:1260px}
+  .visual-world{position:absolute;left:0;top:0;width:1400px;height:610px;transform-origin:50% 50%;overflow:visible}
+  .diagram-svg{position:absolute;left:0;top:0;width:1400px;height:610px;overflow:visible}
+  .draw-path{fill:none;stroke:#496958;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  .diagram-node{position:absolute;width:230px;height:146px;display:grid;place-items:center;text-align:center;font-size:30px;font-weight:800;letter-spacing:0;color:#2A211B;background:#F2DFC7;z-index:2}
+  .diagram-node::before{content:'';position:absolute;inset:18px;border:3px solid #496958;border-radius:50%;opacity:.22}
+  .diagram-node.node-large{width:250px;height:180px;font-size:31px}
+  .pulse-core{position:relative;display:block;max-width:210px}
+  .plain-label{position:absolute;font-size:30px;font-weight:700;color:#675748;letter-spacing:0}
+  .flow-token,.agent-token,.lane-token,.rail-token{position:absolute;width:22px;height:22px;border-radius:50%;background:#A94E36;box-shadow:0 0 0 10px rgba(169,78,54,.13);z-index:1}
+  .host-figure{position:absolute;right:10px;bottom:0;width:430px;height:690px;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 16px 20px rgba(70,42,26,.14))}
+  .state-note{position:absolute;left:80px;right:80px;bottom:26px;min-height:86px;display:flex;align-items:center;font-size:62px;line-height:1.1;font-weight:800;color:#496958;letter-spacing:0;opacity:0;visibility:hidden}
+  .state-note::before{content:'';width:54px;height:6px;background:#A94E36;margin-right:22px;flex:none}
+  .caption-cue{left:96px;top:926px;width:1728px;height:92px;padding:0 30px;display:flex;align-items:center;background:rgba(251,243,231,.96);border-top:3px solid #496958;font-size:29px;font-weight:600;line-height:1.42;letter-spacing:0;overflow:hidden;z-index:200}
+  .caption-cue span{display:block;width:100%;max-height:82px;overflow:hidden}
+  .document-page{position:absolute;width:330px;height:410px;padding:34px;background:#FBF3E7;border:3px solid #2A211B;box-shadow:12px 16px 0 rgba(73,105,88,.12);transform:rotate(-2deg)}
+  .document-page strong{display:block;font-size:31px;margin-bottom:28px}
+  .document-page i{display:block;width:100%;height:7px;background:#DCC2A3;margin:15px 0}.document-page i.short{width:62%}
+  .table-grid{height:120px;margin-top:28px;border:3px solid #496958;background:linear-gradient(90deg,transparent 49%,#DCC2A3 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#DCC2A3 50%,transparent 51%);background-size:50% 50%}
+  .document-badge,.fallback-mark{position:absolute;font-size:26px;font-weight:800;color:#A94E36}
+  .source-ribbon{position:absolute;width:1260px;height:134px;display:grid;grid-template-columns:repeat(4,1fr);border-top:4px solid #2A211B;border-bottom:4px solid #2A211B}
+  .source-ribbon span{display:flex;align-items:center;padding:20px;font-size:24px;font-weight:700;border-right:2px solid #DCC2A3}
+  .cut-mark{position:absolute;width:5px;height:185px;background:#A94E36;transform-origin:50% 0}
+  .chunk-piece{position:absolute;width:276px;height:150px;padding:26px 24px;border-top:6px solid #496958;background:rgba(251,243,231,.72)}
+  .chunk-piece b{display:block;font-size:35px}.chunk-piece small{display:block;margin-top:18px;font-size:22px;color:#675748}
+  .orphan-sentence,.resolved-sentence{position:absolute;font-size:47px;font-weight:800}.orphan-sentence em,.resolved-sentence em{font-style:normal;color:#A94E36;font-size:72px}
+  .question-ring{position:absolute;width:72px;height:72px;border:4px solid #A94E36;border-radius:50%;display:grid;place-items:center;font-size:48px;font-weight:900;color:#A94E36}
+  .context-prefix{position:absolute;width:500px;padding:28px 0;border-top:5px solid #496958}
+  .context-prefix small{display:block;font:700 19px JetBrainsMono;color:#A94E36;margin-bottom:15px}.context-prefix strong{font-size:34px}
+  .metric-drop{position:absolute;display:flex;align-items:center;gap:24px;font:700 42px JetBrainsMono}.metric-drop strong{color:#496958;font-size:60px}.metric-drop span{color:#675748}
+  .term-cloud{position:absolute;width:340px;display:grid;gap:42px}.term-cloud span{font-size:42px;font-weight:800;color:#2A211B}
+  .vector-axis{position:absolute;width:650px;height:470px;border-left:4px solid #2A211B;border-bottom:4px solid #2A211B}.vector-axis span{position:absolute;left:10px;top:10px}.vector-axis b{position:absolute;right:10px;bottom:10px}
+  .vector-dot{position:absolute;width:18px;height:18px;border-radius:50%;background:#496958}.vector-dot:nth-of-type(3n){background:#A94E36}.vector-label{position:absolute;font-size:26px;font-weight:700;color:#675748}
+  .db-cylinder{position:absolute;width:310px;height:280px;border:4px solid #496958;border-radius:50% / 18%;display:grid;place-items:center;text-align:center;background:rgba(251,243,231,.55)}.db-cylinder::before{content:'';position:absolute;left:-4px;right:-4px;top:42px;border-top:4px solid #496958;border-radius:50%}.db-cylinder span{font:700 42px JetBrainsMono}.db-cylinder small{font-size:23px;color:#675748}
+  .index-gate{position:absolute;width:240px;height:210px;border-left:6px solid #A94E36;padding:24px}.index-gate strong{display:block;font-size:30px;margin-bottom:20px}.index-gate span{display:inline-block;font:700 22px JetBrainsMono;margin:7px 12px 7px 0}
+  .network-svg{position:absolute;width:420px;height:440px}.network-svg path{fill:none;stroke:#DCC2A3;stroke-width:4}.network-node{fill:#496958;stroke:#FBF3E7;stroke-width:4}
+  .query-seed,.router-node{position:absolute;width:260px;height:140px;display:grid;place-items:center;font-size:35px;font-weight:800}.query-seed{border-bottom:7px solid #A94E36}.router-node{border:4px solid #496958;border-radius:50%}
+  .query-methods{position:absolute;font-size:30px;font-weight:700;color:#675748}
+  .retrieval-lane{position:absolute;left:260px;width:780px;height:76px;border-bottom:4px solid #DCC2A3}.retrieval-lane strong{position:absolute;left:0;bottom:20px;width:210px;font-size:26px;background:#F2DFC7;z-index:2}.retrieval-lane i{position:absolute;left:210px;right:0;bottom:-4px;height:4px;background:#496958}.retrieval-lane .lane-token{top:31px;width:16px;height:16px}
+  .retrieval-query{position:absolute;width:150px;height:150px;border:4px solid #A94E36;border-radius:50%;display:grid;place-items:center;font-size:32px;font-weight:800}.candidate-pool{position:absolute;width:230px;height:230px;border:5px solid #496958;border-radius:50%;display:grid;place-items:center;text-align:center}.candidate-pool strong{font-size:35px}.candidate-pool span{font-size:22px;color:#675748}
+  .rank-column{position:absolute;width:230px;padding-top:20px;border-top:6px solid #496958}.rank-column strong{display:block;font-size:30px;margin-bottom:22px}.rank-column span{display:block;font:700 25px JetBrainsMono;padding:15px 0;border-bottom:2px solid #DCC2A3}.final-rank{border-color:#A94E36}
+  .rrf-symbol{position:absolute;font-size:44px;font-weight:900;color:#A94E36}
+  .candidate-field{position:absolute;width:390px;height:420px}.candidate-dot{position:absolute;width:36px;height:36px;border-radius:50%;background:#DCC2A3}.candidate-field strong{position:absolute;bottom:-5px;left:0;font-size:30px}
+  .encoder-lens{position:absolute;width:260px;height:260px;border:10px solid #496958;border-radius:50%;display:grid;place-items:center;text-align:center;box-shadow:0 0 0 22px rgba(73,105,88,.12)}.encoder-lens strong{font-size:31px}.encoder-lens small{font:700 18px JetBrainsMono}
+  .top-results{position:absolute;display:flex;gap:13px;align-items:flex-end}.top-results span{width:52px;height:240px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;background:#496958;color:#FBF3E7;font:700 20px JetBrainsMono}.top-results span:nth-child(n+4){height:150px;background:#DCC2A3;color:#2A211B}.top-results strong{position:absolute;left:0;top:270px;width:300px;font-size:30px}
+  .agent-node{width:260px}.reject-node{position:absolute;width:280px;height:120px;display:grid;place-items:center;border-top:6px solid #A94E36;font-size:26px;font-weight:800}
+  .evidence-stack{position:absolute;width:500px;display:grid;gap:22px}.evidence-snippet{padding:22px 24px;border-left:6px solid #496958;background:rgba(251,243,231,.72)}.evidence-snippet b{display:block;font-size:24px}.evidence-snippet span{display:block;margin-top:12px;font-size:22px;color:#675748}
+  .answer-sheet{position:absolute;width:500px;height:430px;padding:34px 42px;border-top:8px solid #A94E36;background:#FBF3E7;box-shadow:14px 16px 0 rgba(73,105,88,.11)}.answer-sheet strong{font-size:46px}.answer-sheet p{font-size:27px;margin:30px 0;border-bottom:2px solid #DCC2A3;padding-bottom:12px}.answer-sheet small{font-size:21px;color:#675748}
+  .metric-bars{position:absolute;width:560px;display:grid;gap:38px}.metric-row strong{display:block;font-size:25px;margin-bottom:10px}.metric-row>i{display:block;width:540px;height:20px;background:#DCC2A3;overflow:hidden}.bar-fill{display:block;width:100%;height:100%;background:#496958;transform-origin:0 50%}
+  .trace-line{position:absolute;width:600px;display:flex;align-items:center;gap:14px}.trace-line span{font-size:24px;font-weight:800}.trace-line b{display:block;width:45px;height:4px;background:#A94E36}
+  .issue-loop{position:absolute;width:340px;height:170px;border:5px solid #496958;border-radius:50%;display:grid;place-items:center;text-align:center}.issue-loop strong{font-size:31px}.issue-loop i{font-style:normal;color:#496958;font-weight:800}.issue-loop span{font-size:22px}
+  .production-rail{position:absolute;width:1080px;height:32px}.production-rail i{position:absolute;left:0;right:0;top:14px;height:5px;background:#496958}.production-rail .rail-token{top:5px;left:0}
+  .monitor-ring{position:absolute;width:240px;height:240px;border:6px solid #A94E36;border-radius:50%;display:grid;place-items:center;text-align:center}.monitor-ring strong{font-size:38px}.monitor-ring span{font:700 21px JetBrainsMono}
+  .summary-principles{position:absolute;display:flex;gap:90px}.summary-principles strong{font-size:46px;color:#A94E36}
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="rag-semantic-v2-episode-2" data-start="0" data-width="1920" data-height="1080" data-duration="1099.715">
+    <audio id="narration" class="clip" src="./assets/audio/episode-2.internal.wav" data-start="0" data-duration="1099.715" data-track-index="50" data-volume="1"></audio>
+    <section id="scene-lower-recap" class="clip stage-scene" data-visual="pipeline" data-start="0" data-duration="14.376" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-lower-recap-header">
+      <span class="stage-kicker">阶段 01</span>
+      <h1>上集回顾</h1>
+      <div class="stage-progress"><i class="done"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world pipeline-world">
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-lower-recap-path-0" class="draw-path" d="M150 310 C300 310 330 310 480 310" /><path id="scene-lower-recap-path-1" class="draw-path" d="M620 310 C770 310 790 310 940 310" /><path id="scene-lower-recap-path-2" class="draw-path" d="M1080 310 C1130 310 1160 310 1210 310" /></svg>
+        <div class="diagram-node reveal focus-target node-large" data-focus="0" style="left:70px;top:220px"><span class="pulse-core">离线建库</span></div>
+        <div class="diagram-node reveal focus-target node-large" data-focus="1" style="left:430px;top:220px"><span class="pulse-core">在线检索</span></div>
+        <div class="diagram-node reveal focus-target node-large" data-focus="2" style="left:890px;top:220px"><span class="pulse-core">智能体决策</span></div>
+        <div class="diagram-node reveal focus-target node-large" data-focus="3" style="left:1110px;top:220px"><span class="pulse-core">生成与评测</span></div>
+        <div class="flow-token reveal" style="left:124px;top:294px"></div>
+        <div class="plain-label reveal" style="left:380px;top:420px">文档 → 知识库 → 证据 → 答案</div>
+      </div>
+      
+      <div class="state-note" id="scene-lower-recap-state-0" data-at="0.7">解析 · 分块 · 上下文增强</div><div class="state-note" id="scene-lower-recap-state-1" data-at="8.051">向量化 · 索引入库</div>
+    </div>
+  </section>
+<section id="scene-query" class="clip stage-scene" data-visual="query" data-start="14.376" data-duration="119.88" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-query-header">
+      <span class="stage-kicker">阶段 02</span>
+      <h1>查询理解</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world query-world">
+        <div class="query-seed reveal focus-target" data-focus="0" style="left:90px;top:230px">用户查询</div>
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-query-path-0" class="draw-path" d="M330 300 C470 300 500 300 610 300" /><path id="scene-query-path-1" class="draw-path" d="M760 300 C850 210 900 170 1010 150" /><path id="scene-query-path-2" class="draw-path" d="M760 300 C880 300 900 300 1010 300" /><path id="scene-query-path-3" class="draw-path" d="M760 300 C850 390 900 430 1010 450" /></svg>
+        <div class="router-node reveal focus-target" data-focus="1" style="left:590px;top:220px">复杂度路由</div>
+        <div class="diagram-node reveal focus-target " data-focus="2" style="left:1030px;top:80px"><span class="pulse-core">直接回答</span></div><div class="diagram-node reveal focus-target " data-focus="3" style="left:1030px;top:230px"><span class="pulse-core">单次检索</span></div><div class="diagram-node reveal focus-target " data-focus="4" style="left:1030px;top:380px"><span class="pulse-core">改写 / 多跳</span></div>
+        <div class="query-methods reveal" style="left:410px;top:500px">多查询 · HyDE · 后退一步 · 问题分解</div>
+      </div>
+      
+      <div class="state-note" id="scene-query-state-0" data-at="14.376">从查询开始在线链路</div><div class="state-note" id="scene-query-state-1" data-at="24.396">改写 + 路由</div><div class="state-note" id="scene-query-state-2" data-at="45.876">按复杂度选择路径</div><div class="state-note" id="scene-query-state-3" data-at="65.216">简单直走，复杂再改写</div><div class="state-note" id="scene-query-state-4" data-at="83.336">路由与按需改写组合</div><div class="state-note" id="scene-query-state-5" data-at="113.436">召回率与路由准确率</div>
+    </div>
+  </section>
+<section id="scene-retrieval" class="clip stage-scene" data-visual="retrieval" data-start="134.256" data-duration="126.06" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-retrieval-header">
+      <span class="stage-kicker">阶段 03</span>
+      <h1>混合检索</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world retrieval-world">
+        <div class="retrieval-lane focus-target" data-focus="1" style="top:92px"><strong>向量语义</strong><i></i><span class="lane-token" style="left:260px"></span><span class="lane-token" style="left:350px"></span><span class="lane-token" style="left:440px"></span></div><div class="retrieval-lane focus-target" data-focus="2" style="top:208px"><strong>BM25 关键词</strong><i></i><span class="lane-token" style="left:260px"></span><span class="lane-token" style="left:350px"></span><span class="lane-token" style="left:440px"></span></div><div class="retrieval-lane focus-target" data-focus="3" style="top:324px"><strong>编号精确</strong><i></i><span class="lane-token" style="left:260px"></span><span class="lane-token" style="left:350px"></span><span class="lane-token" style="left:440px"></span></div><div class="retrieval-lane focus-target" data-focus="4" style="top:440px"><strong>表格检索</strong><i></i><span class="lane-token" style="left:260px"></span><span class="lane-token" style="left:350px"></span><span class="lane-token" style="left:440px"></span></div>
+        <div class="retrieval-query reveal focus-target" data-focus="0" style="left:42px;top:235px">查询</div>
+        <div class="candidate-pool reveal focus-target" data-focus="5" style="left:1130px;top:190px"><strong>候选池</strong><span>互补召回</span></div>
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-retrieval-path-0" class="draw-path" d="M1040 150 C1120 150 1120 230 1180 250" /><path id="scene-retrieval-path-1" class="draw-path" d="M1040 266 C1120 266 1120 270 1180 280" /><path id="scene-retrieval-path-2" class="draw-path" d="M1040 382 C1120 382 1120 310 1180 310" /><path id="scene-retrieval-path-3" class="draw-path" d="M1040 498 C1120 498 1120 350 1180 340" /></svg>
+      </div>
+      
+      <div class="state-note" id="scene-retrieval-state-0" data-at="134.256">召回开始</div><div class="state-note" id="scene-retrieval-state-1" data-at="137.936">向量 + BM25</div><div class="state-note" id="scene-retrieval-state-2" data-at="164.676">编号与术语需要精确命中</div><div class="state-note" id="scene-retrieval-state-3" data-at="188.676">多路各管一类问题</div><div class="state-note" id="scene-retrieval-state-4" data-at="210.076">候选并行汇入</div><div class="state-note" id="scene-retrieval-state-5" data-at="233.056">用召回率验证增益</div>
+    </div>
+  </section>
+<section id="scene-fusion" class="clip stage-scene" data-visual="fusion" data-start="260.316" data-duration="96.44" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-fusion-header">
+      <span class="stage-kicker">阶段 04</span>
+      <h1>RRF 融合</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world fusion-world">
+        <div class="rank-column reveal" style="left:80px;top:80px"><strong>向量名次</strong><span>A · 1</span><span>C · 2</span><span>B · 3</span></div>
+        <div class="rank-column reveal" style="left:390px;top:80px"><strong>全文名次</strong><span>B · 1</span><span>A · 2</span><span>D · 3</span></div>
+        <div class="rrf-symbol reveal focus-target" data-focus="2" style="left:740px;top:185px">只比较名次</div>
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-fusion-path-0" class="draw-path" d="M305 270 C520 270 590 270 740 270" /><path id="scene-fusion-path-1" class="draw-path" d="M615 270 C670 270 690 270 740 270" /><path id="scene-fusion-path-2" class="draw-path" d="M930 270 C1010 270 1040 270 1110 270" /></svg>
+        <div class="rank-column final-rank reveal focus-target" data-focus="3" style="left:1090px;top:80px"><strong>RRF 融合</strong><span>A · 1</span><span>B · 2</span><span>C · 3</span></div>
+        <div class="plain-label reveal" style="left:520px;top:510px">尺度无关 · 简单鲁棒 · 可解释加权</div>
+      </div>
+      
+      <div class="state-note" id="scene-fusion-state-0" data-at="260.316">不同分数不能直接相加</div><div class="state-note" id="scene-fusion-state-1" data-at="283.896">先看名次</div><div class="state-note" id="scene-fusion-state-2" data-at="306.796">RRF 像多路投票</div><div class="state-note" id="scene-fusion-state-3" data-at="319.636">标准 RRF 起步</div><div class="state-note" id="scene-fusion-state-4" data-at="336.736">用 nDCG 验证融合</div>
+    </div>
+  </section>
+<section id="scene-rerank" class="clip stage-scene" data-visual="rerank" data-start="356.756" data-duration="117.78" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-rerank-header">
+      <span class="stage-kicker">阶段 05</span>
+      <h1>重排精筛</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world rerank-world">
+        <div class="candidate-field" style="left:80px;top:80px"><i class="candidate-dot scatter-node" style="left:0px;top:0px"></i><i class="candidate-dot scatter-node" style="left:74px;top:0px"></i><i class="candidate-dot scatter-node" style="left:148px;top:0px"></i><i class="candidate-dot scatter-node" style="left:222px;top:0px"></i><i class="candidate-dot scatter-node" style="left:296px;top:0px"></i><i class="candidate-dot scatter-node" style="left:0px;top:86px"></i><i class="candidate-dot scatter-node" style="left:74px;top:86px"></i><i class="candidate-dot scatter-node" style="left:148px;top:86px"></i><i class="candidate-dot scatter-node" style="left:222px;top:86px"></i><i class="candidate-dot scatter-node" style="left:296px;top:86px"></i><i class="candidate-dot scatter-node" style="left:0px;top:172px"></i><i class="candidate-dot scatter-node" style="left:74px;top:172px"></i><i class="candidate-dot scatter-node" style="left:148px;top:172px"></i><i class="candidate-dot scatter-node" style="left:222px;top:172px"></i><i class="candidate-dot scatter-node" style="left:296px;top:172px"></i><i class="candidate-dot scatter-node" style="left:0px;top:258px"></i><i class="candidate-dot scatter-node" style="left:74px;top:258px"></i><i class="candidate-dot scatter-node" style="left:148px;top:258px"></i><i class="candidate-dot scatter-node" style="left:222px;top:258px"></i><i class="candidate-dot scatter-node" style="left:296px;top:258px"></i><strong>粗召回 50</strong></div>
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-rerank-path-0" class="draw-path" d="M500 300 C620 300 650 300 760 300" /><path id="scene-rerank-path-1" class="draw-path" d="M930 300 C1030 300 1060 300 1140 300" /></svg>
+        <div class="encoder-lens reveal focus-target" data-focus="2" style="left:720px;top:175px"><strong>交叉编码器</strong><small>query × document</small></div>
+        <div class="top-results reveal focus-target" data-focus="3" style="left:1120px;top:125px"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><strong>精排 Top 5</strong></div>
+        <div class="plain-label reveal" style="left:520px;top:520px">快而粗 → 慢而准</div>
+      </div>
+      
+      <div class="state-note" id="scene-rerank-state-0" data-at="356.756">五十条候选进入精筛</div><div class="state-note" id="scene-rerank-state-1" data-at="364.596">交叉编码器或 ColBERT</div><div class="state-note" id="scene-rerank-state-2" data-at="388.956">双塔粗召，交叉编码器精排</div><div class="state-note" id="scene-rerank-state-3" data-at="411.496">前五十到前五</div><div class="state-note" id="scene-rerank-state-4" data-at="451.476">nDCG · MRR · P99</div>
+    </div>
+  </section>
+<section id="scene-agent" class="clip stage-scene" data-visual="agent" data-start="474.536" data-duration="182.74" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-agent-header">
+      <span class="stage-kicker">阶段 06</span>
+      <h1>智能体决策</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world agent-world">
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-agent-path-0" class="draw-path" d="M250 300 C250 150 440 100 590 180" /><path id="scene-agent-path-1" class="draw-path" d="M720 180 C900 100 1100 170 1110 300" /><path id="scene-agent-path-2" class="draw-path" d="M1110 330 C1080 490 870 510 720 420" /><path id="scene-agent-path-3" class="draw-path" d="M590 420 C410 510 250 455 250 330" /><path id="scene-agent-path-4" class="draw-path" d="M590 180 C640 230 640 370 590 420" /></svg>
+        <div class="diagram-node reveal focus-target agent-node" data-focus="0" style="left:125px;top:230px"><span class="pulse-core">检索证据</span></div><div class="diagram-node reveal focus-target agent-node" data-focus="1" style="left:520px;top:80px"><span class="pulse-core">充分性评估</span></div><div class="diagram-node reveal focus-target agent-node" data-focus="2" style="left:1040px;top:230px"><span class="pulse-core">生成答案</span></div><div class="diagram-node reveal focus-target agent-node" data-focus="3" style="left:520px;top:390px"><span class="pulse-core">改写重检</span></div>
+        <div class="reject-node reveal focus-target" data-focus="4" style="left:600px;top:238px">实在不够 → 拒答</div>
+        <div class="agent-token reveal" style="left:235px;top:293px"></div>
+        <div class="plain-label reveal" style="left:430px;top:545px">最大跳数限制 · 防止死循环</div>
+      </div>
+      
+      <div class="state-note" id="scene-agent-state-0" data-at="474.536">证据充分性是分水岭</div><div class="state-note" id="scene-agent-state-1" data-at="481.916">评估 → 改写 → 重检</div><div class="state-note" id="scene-agent-state-2" data-at="540.416">生产先做轻量闭环</div><div class="state-note" id="scene-agent-state-3" data-at="562.196">支持性检查守住幻觉</div><div class="state-note" id="scene-agent-state-4" data-at="573.756">评估 · 重试 · 拒答</div><div class="state-note" id="scene-agent-state-5" data-at="598.416">用图状态机表达循环</div><div class="state-note" id="scene-agent-state-6" data-at="625.776">成功率与收敛轮数</div>
+    </div>
+  </section>
+<section id="scene-generation" class="clip stage-scene" data-visual="generation" data-start="657.276" data-duration="103.9" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-generation-header">
+      <span class="stage-kicker">阶段 07</span>
+      <h1>生成与引用</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world generation-world">
+        <div class="evidence-stack" style="left:60px;top:78px">
+          <div class="evidence-snippet reveal focus-target" data-focus="0"><b>[1] 施工规范 · 第 12 页</b><span>关键条款与适用条件</span></div>
+          <div class="evidence-snippet reveal focus-target" data-focus="1"><b>[2] 工艺手册 · 第 4 章</b><span>步骤、限制与异常处理</span></div>
+          <div class="evidence-snippet reveal focus-target" data-focus="2"><b>[3] 版本记录 · v3</b><span>更新时间与责任来源</span></div>
+        </div>
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-generation-path-0" class="draw-path" d="M530 170 C690 170 720 215 840 235" /><path id="scene-generation-path-1" class="draw-path" d="M530 300 C700 300 730 300 840 300" /><path id="scene-generation-path-2" class="draw-path" d="M530 430 C690 430 720 385 840 365" /></svg>
+        <div class="answer-sheet reveal focus-target" data-focus="3" style="left:820px;top:92px"><strong>可信答案</strong><p>事实陈述对应证据 [1]</p><p>步骤结论对应证据 [2]</p><p>版本信息对应证据 [3]</p><small>支持性检查 · 引用校验</small></div>
+      </div>
+      
+      <div class="state-note" id="scene-generation-state-0" data-at="657.276">证据够了才生成</div><div class="state-note" id="scene-generation-state-1" data-at="668.236">三种引用实现</div><div class="state-note" id="scene-generation-state-2" data-at="692.756">四道防幻觉防线</div><div class="state-note" id="scene-generation-state-3" data-at="714.616">逐条校验来源</div><div class="state-note" id="scene-generation-state-4" data-at="732.856">回溯到文档与页码</div><div class="state-note" id="scene-generation-state-5" data-at="740.816">真实 · 完整 · 忠实</div>
+    </div>
+  </section>
+<section id="scene-evaluation" class="clip stage-scene" data-visual="evaluation" data-start="761.176" data-duration="141.48" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-evaluation-header">
+      <span class="stage-kicker">阶段 08</span>
+      <h1>评测闭环</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world evaluation-world">
+        <div class="metric-bars" style="left:70px;top:80px">
+          <div class="metric-row focus-target" data-focus="1"><strong>忠实度</strong><i><span class="bar-fill" data-fill="0.9"></span></i></div><div class="metric-row focus-target" data-focus="2"><strong>答案相关性</strong><i><span class="bar-fill" data-fill="0.82"></span></i></div><div class="metric-row focus-target" data-focus="3"><strong>上下文精度</strong><i><span class="bar-fill" data-fill="0.76"></span></i></div><div class="metric-row focus-target" data-focus="4"><strong>上下文召回率</strong><i><span class="bar-fill" data-fill="0.86"></span></i></div>
+        </div>
+        <div class="trace-line reveal" style="left:720px;top:130px">
+          <span>查询</span><b></b><span>改写</span><b></b><span>召回</span><b></b><span>排序</span><b></b><span>引用</span>
+        </div>
+        <div class="issue-loop reveal focus-target" data-focus="5" style="left:850px;top:310px"><strong>问题样例</strong><i>定位具体环节</i><span>回流迭代</span></div>
+        <div class="plain-label reveal" style="left:830px;top:520px">黄金问答集 + 真实调用链</div>
+      </div>
+      
+      <div class="state-note" id="scene-evaluation-state-0" data-at="761.176">不评测就是瞎调</div><div class="state-note" id="scene-evaluation-state-1" data-at="766.876">四类核心指标</div><div class="state-note" id="scene-evaluation-state-2" data-at="797.756">黄金集 + 调用链归因</div><div class="state-note" id="scene-evaluation-state-3" data-at="830.676">召回 · 引用 · 拒答</div><div class="state-note" id="scene-evaluation-state-4" data-at="842.096">记录完整调用链</div><div class="state-note" id="scene-evaluation-state-5" data-at="893.356">回归后再上线</div>
+    </div>
+  </section>
+<section id="scene-production" class="clip stage-scene" data-visual="production" data-start="902.656" data-duration="131.4" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-production-header">
+      <span class="stage-kicker">阶段 09</span>
+      <h1>上线工程</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class=""></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world production-world">
+        <div class="production-rail" style="left:80px;top:250px"><i></i><span class="rail-token"></span></div>
+        <div class="diagram-node reveal focus-target " data-focus="1" style="left:90px;top:120px"><span class="pulse-core">提示词缓存</span></div><div class="diagram-node reveal focus-target " data-focus="2" style="left:410px;top:360px"><span class="pulse-core">防提示词注入</span></div><div class="diagram-node reveal focus-target " data-focus="3" style="left:730px;top:120px"><span class="pulse-core">增量索引</span></div><div class="diagram-node reveal focus-target " data-focus="4" style="left:1010px;top:360px"><span class="pulse-core">版本管理</span></div>
+        <div class="monitor-ring reveal focus-target" data-focus="5" style="left:1170px;top:125px"><strong>监控</strong><span>SLA</span><span>P99</span><span>成本</span></div>
+        <div class="plain-label reveal" style="left:400px;top:530px">缓存配增强 · 版本配增量 · 安全配过滤</div>
+      </div>
+      
+      <div class="state-note" id="scene-production-state-0" data-at="902.656">从演示走向生产</div><div class="state-note" id="scene-production-state-1" data-at="912.656">缓存 · 安全 · 版本 · 监控</div><div class="state-note" id="scene-production-state-2" data-at="934.136">缓存优先评估</div><div class="state-note" id="scene-production-state-3" data-at="954.636">防提示词注入</div><div class="state-note" id="scene-production-state-4" data-at="968.496">增量索引与版本管理</div><div class="state-note" id="scene-production-state-5" data-at="985.196">能力必须组合配套</div><div class="state-note" id="scene-production-state-6" data-at="1003.276">SLA · P99 · 成本</div>
+    </div>
+  </section>
+<section id="scene-summary" class="clip stage-scene" data-visual="summary" data-start="1034.056" data-duration="65.658" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-summary-header">
+      <span class="stage-kicker">阶段 10</span>
+      <h1>全链总结</h1>
+      <div class="stage-progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world summary-world">
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-summary-path-0" class="draw-path" d="M110 250 C260 250 300 250 430 250" /><path id="scene-summary-path-1" class="draw-path" d="M570 250 C700 250 730 250 860 250" /><path id="scene-summary-path-2" class="draw-path" d="M1000 250 C1080 250 1120 250 1200 250" /></svg>
+        <div class="diagram-node reveal focus-target node-large" data-focus="0" style="left:50px;top:165px"><span class="pulse-core">离线建库</span></div><div class="diagram-node reveal focus-target node-large" data-focus="1" style="left:400px;top:165px"><span class="pulse-core">在线检索</span></div><div class="diagram-node reveal focus-target node-large" data-focus="2" style="left:830px;top:165px"><span class="pulse-core">智能体决策</span></div><div class="diagram-node reveal focus-target node-large" data-focus="3" style="left:1110px;top:165px"><span class="pulse-core">评测闭环</span></div>
+        <div class="summary-principles" style="left:190px;top:420px"><strong class="reveal">组合判断</strong><strong class="reveal">指标验证</strong><strong class="reveal">持续迭代</strong></div>
+      </div>
+      
+      <div class="state-note" id="scene-summary-state-0" data-at="1034.056">一条数据流</div><div class="state-note" id="scene-summary-state-1" data-at="1037.596">离线决定上限，在线决定召回</div><div class="state-note" id="scene-summary-state-2" data-at="1060.816">生产依赖组合判断</div><div class="state-note" id="scene-summary-state-3" data-at="1077.956">每一环都可测可提升</div><div class="state-note" id="scene-summary-state-4" data-at="1091.756">可控 · 可测 · 可迭代</div>
+    </div>
+  </section>
+    <div id="caption-0001" class="clip caption-cue" data-start="0" data-duration="4.476" data-track-index="30" data-source-cue="bridge-lower-01"><span>上一集，我们走完了从原始文档到可检索知识库的离线链路。</span></div>
+<div id="caption-0002" class="clip caption-cue" data-start="4.476" data-duration="2.653" data-track-index="30" data-source-cue="bridge-lower-01"><span>这几步决定知识能不能被准确找到。</span></div>
+<div id="caption-0003" class="clip caption-cue" data-start="7.689" data-duration="5.594" data-track-index="30" data-source-cue="bridge-lower-02"><span>接下来进入在线部分，看查询理解、召回、重排和智能体决策怎样配</span></div>
+<div id="caption-0004" class="clip caption-cue" data-start="13.283" data-duration="0.373" data-track-index="30" data-source-cue="bridge-lower-02"><span>合。</span></div>
+<div id="caption-0005" class="clip caption-cue" data-start="14.376" data-duration="4.42" data-track-index="30" data-source-cue="cue-102"><span>离线建库讲完，进入在线，从查询开始。</span></div>
+<div id="caption-0006" class="clip caption-cue" data-start="18.796" data-duration="5.2" data-track-index="30" data-source-cue="cue-103"><span>查询进来先别急着检索，先做查询理解——判断这个查询怎么处理。</span></div>
+<div id="caption-0007" class="clip caption-cue" data-start="24.396" data-duration="1.72" data-track-index="30" data-source-cue="cue-104"><span>查询理解可以拆成两块。</span></div>
+<div id="caption-0008" class="clip caption-cue" data-start="26.116" data-duration="5.781" data-track-index="30" data-source-cue="cue-105"><span>一块是查询改写：多查询扩展，让 LLM 把一个查询改成多个不</span></div>
+<div id="caption-0009" class="clip caption-cue" data-start="31.897" data-duration="5.78" data-track-index="30" data-source-cue="cue-105"><span>同角度；HyDE，先让 LLM 生成假设答案文档再用它检索；</span></div>
+<div id="caption-0010" class="clip caption-cue" data-start="37.677" data-duration="4.336" data-track-index="30" data-source-cue="cue-105"><span>后退一步改写，把具体问题抽象成更高层问题；</span></div>
+<div id="caption-0011" class="clip caption-cue" data-start="42.013" data-duration="3.303" data-track-index="30" data-source-cue="cue-105"><span>问题分解，把复合问题拆成子问题。</span></div>
+<div id="caption-0012" class="clip caption-cue" data-start="45.876" data-duration="3.479" data-track-index="30" data-source-cue="cue-106"><span>另一块是查询路由：Adaptive RAG，</span></div>
+<div id="caption-0013" class="clip caption-cue" data-start="49.355" data-duration="4.639" data-track-index="30" data-source-cue="cue-106"><span>也就是自适应 RAG 的思路，事前判断查询复杂度路由到不检索</span></div>
+<div id="caption-0014" class="clip caption-cue" data-start="53.994" data-duration="1.822" data-track-index="30" data-source-cue="cue-106"><span>、单次检索、多跳检索。</span></div>
+<div id="caption-0015" class="clip caption-cue" data-start="55.816" data-duration="3.84" data-track-index="30" data-source-cue="cue-107"><span>查询改写要不要做，关键看是不是所有查询都值得改写。</span></div>
+<div id="caption-0016" class="clip caption-cue" data-start="59.656" data-duration="3.799" data-track-index="30" data-source-cue="cue-108"><span>简单事实查询直接检索就好，改写反而引入噪声、</span></div>
+<div id="caption-0017" class="clip caption-cue" data-start="63.455" data-duration="1.381" data-track-index="30" data-source-cue="cue-108"><span>增加延迟和成本。</span></div>
+<div id="caption-0018" class="clip caption-cue" data-start="65.216" data-duration="3.441" data-track-index="30" data-source-cue="cue-109"><span>所以一般先做自适应路由判断，简单的直接走，</span></div>
+<div id="caption-0019" class="clip caption-cue" data-start="68.657" data-duration="1.639" data-track-index="30" data-source-cue="cue-109"><span>复杂的才改写或多跳。</span></div>
+<div id="caption-0020" class="clip caption-cue" data-start="70.296" data-duration="3.402" data-track-index="30" data-source-cue="cue-110"><span>改写策略里，多查询扩展适用面相对广；</span></div>
+<div id="caption-0021" class="clip caption-cue" data-start="73.698" data-duration="3.591" data-track-index="30" data-source-cue="cue-110"><span>HyDE 对概念性、方法性查询可能有效，</span></div>
+<div id="caption-0022" class="clip caption-cue" data-start="77.289" data-duration="4.157" data-track-index="30" data-source-cue="cue-110"><span>但在事实查询里也可能因为假设错误把检索带偏，</span></div>
+<div id="caption-0023" class="clip caption-cue" data-start="81.446" data-duration="1.89" data-track-index="30" data-source-cue="cue-110"><span>这个风险要单独评测。</span></div>
+<div id="caption-0024" class="clip caption-cue" data-start="83.336" data-duration="4.32" data-track-index="30" data-source-cue="cue-111"><span>落地时，我通常把路由判断和按需改写组合起来。</span></div>
+<div id="caption-0025" class="clip caption-cue" data-start="87.656" data-duration="4.871" data-track-index="30" data-source-cue="cue-112"><span>先用分类器或大模型路由器判断查询类型，决定走哪条路：</span></div>
+<div id="caption-0026" class="clip caption-cue" data-start="92.527" data-duration="4.309" data-track-index="30" data-source-cue="cue-112"><span>简单的不检索或单次检索，复杂的触发改写和多跳。</span></div>
+<div id="caption-0027" class="clip caption-cue" data-start="96.836" data-duration="5.592" data-track-index="30" data-source-cue="cue-113"><span>改写也不是四种方法全上，根据查询特点选——模糊的用多查询扩展</span></div>
+<div id="caption-0028" class="clip caption-cue" data-start="102.428" data-duration="3.728" data-track-index="30" data-source-cue="cue-113"><span>，概念性的用 HyDE，复合的用问题分解。</span></div>
+<div id="caption-0029" class="clip caption-cue" data-start="106.156" data-duration="4.981" data-track-index="30" data-source-cue="cue-114"><span>多轮对话场景还要结合会话上下文做指代消解和条件补全，</span></div>
+<div id="caption-0030" class="clip caption-cue" data-start="111.137" data-duration="2.299" data-track-index="30" data-source-cue="cue-114"><span>这个用 Redis 管会话。</span></div>
+<div id="caption-0031" class="clip caption-cue" data-start="113.436" data-duration="5.204" data-track-index="30" data-source-cue="cue-115"><span>查询理解有没有带来收益，主要看改写后前若干结果的召回率是否提</span></div>
+<div id="caption-0032" class="clip caption-cue" data-start="118.64" data-duration="4.336" data-track-index="30" data-source-cue="cue-115"><span>升、路由准确率的混淆矩阵，以及人工评估的改写质量。</span></div>
+<div id="caption-0033" class="clip caption-cue" data-start="122.976" data-duration="5.64" data-track-index="30" data-source-cue="cue-116"><span>查询理解跑稳以后，可以继续评估自适应 RAG 的事前路由，</span></div>
+<div id="caption-0034" class="clip caption-cue" data-start="128.616" data-duration="5.64" data-track-index="30" data-source-cue="cue-116"><span>也可以微调查询改写模型，或者利用历史日志学习改写策略。</span></div>
+<div id="caption-0035" class="clip caption-cue" data-start="134.256" data-duration="2.02" data-track-index="30" data-source-cue="cue-117"><span>查询理解完，正式检索。</span></div>
+<div id="caption-0036" class="clip caption-cue" data-start="136.276" data-duration="1.66" data-track-index="30" data-source-cue="cue-118"><span>这一步是召回的主力。</span></div>
+<div id="caption-0037" class="clip caption-cue" data-start="137.936" data-duration="6.51" data-track-index="30" data-source-cue="cue-119"><span>检索方式可以先分成几类：纯向量检索，懂语义但关键词匹配弱；</span></div>
+<div id="caption-0038" class="clip caption-cue" data-start="144.446" data-duration="3.817" data-track-index="30" data-source-cue="cue-119"><span>纯 BM25，精确关键词但不懂语义；</span></div>
+<div id="caption-0039" class="clip caption-cue" data-start="148.263" data-duration="3.816" data-track-index="30" data-source-cue="cue-119"><span>混合检索，BM25 加向量两路互补；</span></div>
+<div id="caption-0040" class="clip caption-cue" data-start="152.079" data-duration="4.715" data-track-index="30" data-source-cue="cue-119"><span>更激进的多路，向量加全文加编号精确加表格，</span></div>
+<div id="caption-0041" class="clip caption-cue" data-start="156.794" data-duration="1.122" data-track-index="30" data-source-cue="cue-119"><span>各管一类。</span></div>
+<div id="caption-0042" class="clip caption-cue" data-start="157.916" data-duration="4.302" data-track-index="30" data-source-cue="cue-120"><span>BM25 的参数可以先用论文里的常见默认值，</span></div>
+<div id="caption-0043" class="clip caption-cue" data-start="162.218" data-duration="2.458" data-track-index="30" data-source-cue="cue-120"><span>再用自己的领域数据校准。</span></div>
+<div id="caption-0044" class="clip caption-cue" data-start="164.676" data-duration="5.62" data-track-index="30" data-source-cue="cue-121"><span>检索这一层，先要认清纯向量检索会在两类查询上翻车。</span></div>
+<div id="caption-0045" class="clip caption-cue" data-start="170.916" data-duration="4.861" data-track-index="30" data-source-cue="cue-122"><span>第一类是编号查询，比如“GB 50204 第 4.1.2 条</span></div>
+<div id="caption-0046" class="clip caption-cue" data-start="175.777" data-duration="3.739" data-track-index="30" data-source-cue="cue-122"><span>”，向量容易把编号当普通文本，匹配不准。</span></div>
+<div id="caption-0047" class="clip caption-cue" data-start="179.516" data-duration="3.1" data-track-index="30" data-source-cue="cue-123"><span>第二类是术语精确查询，它要求字面命中。</span></div>
+<div id="caption-0048" class="clip caption-cue" data-start="183.176" data-duration="5.5" data-track-index="30" data-source-cue="cue-124"><span>所以生产上通常至少要评估混合检索，补 BM25 关键词路。</span></div>
+<div id="caption-0049" class="clip caption-cue" data-start="188.676" data-duration="4.512" data-track-index="30" data-source-cue="cue-125"><span>如果场景里编号、术语、表格多，再评估多路检索，</span></div>
+<div id="caption-0050" class="clip caption-cue" data-start="193.188" data-duration="3.728" data-track-index="30" data-source-cue="cue-125"><span>把编号精确匹配和表格检索也单独建索引。</span></div>
+<div id="caption-0051" class="clip caption-cue" data-start="197.396" data-duration="3.64" data-track-index="30" data-source-cue="cue-126"><span>真正跑在线链路时，我一般至少从混合检索起步。</span></div>
+<div id="caption-0052" class="clip caption-cue" data-start="201.596" data-duration="4.48" data-track-index="30" data-source-cue="cue-127"><span>向量路使用 pgvector，关键词路使用 PostgreS</span></div>
+<div id="caption-0053" class="clip caption-cue" data-start="206.076" data-duration="3.36" data-track-index="30" data-source-cue="cue-127"><span>QL 全文检索，两路并行，各取前五十条候选。</span></div>
+<div id="caption-0054" class="clip caption-cue" data-start="210.076" data-duration="5.6" data-track-index="30" data-source-cue="cue-128"><span>规范文档场景会加到四路：向量、全文、用正则做结构化的编号精确</span></div>
+<div id="caption-0055" class="clip caption-cue" data-start="215.676" data-duration="3.92" data-track-index="30" data-source-cue="cue-128"><span>匹配，以及把表格内容单独建索引的表格检索。</span></div>
+<div id="caption-0056" class="clip caption-cue" data-start="219.596" data-duration="1.74" data-track-index="30" data-source-cue="cue-129"><span>每一路负责一类查询。</span></div>
+<div id="caption-0057" class="clip caption-cue" data-start="221.836" data-duration="3.12" data-track-index="30" data-source-cue="cue-130"><span>BM25 中文要分词，用 jieba。</span></div>
+<div id="caption-0058" class="clip caption-cue" data-start="224.956" data-duration="1.34" data-track-index="30" data-source-cue="cue-131"><span>具体几路要看场景。</span></div>
+<div id="caption-0059" class="clip caption-cue" data-start="226.296" data-duration="4.038" data-track-index="30" data-source-cue="cue-132"><span>每加一路都可能补充召回，也会增加噪声和延迟，</span></div>
+<div id="caption-0060" class="clip caption-cue" data-start="230.334" data-duration="2.202" data-track-index="30" data-source-cue="cue-132"><span>最终要看离线指标和压测。</span></div>
+<div id="caption-0061" class="clip caption-cue" data-start="233.056" data-duration="4.629" data-track-index="30" data-source-cue="cue-133"><span>在我参与的一个规范文档项目里，我们采用过四路混合检索，</span></div>
+<div id="caption-0062" class="clip caption-cue" data-start="237.685" data-duration="2.571" data-track-index="30" data-source-cue="cue-133"><span>它是提升召回率的关键因素之一。</span></div>
+<div id="caption-0063" class="clip caption-cue" data-start="240.736" data-duration="3.926" data-track-index="30" data-source-cue="cue-134"><span>召回层是否有效，先看前若干结果的召回率和命中率，</span></div>
+<div id="caption-0064" class="clip caption-cue" data-start="244.662" data-duration="4.254" data-track-index="30" data-source-cue="cue-134"><span>再和单路检索做对比，确认多路组合是不是真的带来提升。</span></div>
+<div id="caption-0065" class="clip caption-cue" data-start="249.276" data-duration="5.845" data-track-index="30" data-source-cue="cue-135"><span>召回还不够时，优先从三处优化：增加真正有区分度的专用索引，</span></div>
+<div id="caption-0066" class="clip caption-cue" data-start="255.121" data-duration="4.635" data-track-index="30" data-source-cue="cue-135"><span>调整各路候选数量，再用元数据预过滤缩小候选集。</span></div>
+<div id="caption-0067" class="clip caption-cue" data-start="260.316" data-duration="4.915" data-track-index="30" data-source-cue="cue-136"><span>多路检索拿到的是多份候选，各路分数尺度不一样——向量相似度</span></div>
+<div id="caption-0068" class="clip caption-cue" data-start="265.231" data-duration="3.39" data-track-index="30" data-source-cue="cue-136"><span>0 到 1，全文是 BM25 分，编号是 0 或 1，</span></div>
+<div id="caption-0069" class="clip caption-cue" data-start="268.621" data-duration="1.695" data-track-index="30" data-source-cue="cue-136"><span>不能直接加，要融合。</span></div>
+<div id="caption-0070" class="clip caption-cue" data-start="270.316" data-duration="4.165" data-track-index="30" data-source-cue="cue-137"><span>融合方案里，RRF 也就是倒数排名融合，</span></div>
+<div id="caption-0071" class="clip caption-cue" data-start="274.481" data-duration="6.358" data-track-index="30" data-source-cue="cue-137"><span>只用排名不用分数；加权分数融合，各路加权求和但要先归一化；</span></div>
+<div id="caption-0072" class="clip caption-cue" data-start="280.839" data-duration="0.877" data-track-index="30" data-source-cue="cue-137"><span>凸组合。</span></div>
+<div id="caption-0073" class="clip caption-cue" data-start="281.716" data-duration="2.18" data-track-index="30" data-source-cue="cue-138"><span>RRF 是常见默认方案。</span></div>
+<div id="caption-0074" class="clip caption-cue" data-start="283.896" data-duration="2.68" data-track-index="30" data-source-cue="cue-139"><span>融合阶段为什么常从 RRF 开始？</span></div>
+<div id="caption-0075" class="clip caption-cue" data-start="286.576" data-duration="4.433" data-track-index="30" data-source-cue="cue-140"><span>先看它的计算方式：每一路用 1 除以常数加名次，</span></div>
+<div id="caption-0076" class="clip caption-cue" data-start="291.009" data-duration="3.627" data-track-index="30" data-source-cue="cue-140"><span>再把各路结果求和；这个常数常取 60。</span></div>
+<div id="caption-0077" class="clip caption-cue" data-start="295.216" data-duration="1.66" data-track-index="30" data-source-cue="cue-141"><span>为什么用排名不用分数？</span></div>
+<div id="caption-0078" class="clip caption-cue" data-start="296.876" data-duration="3.455" data-track-index="30" data-source-cue="cue-142"><span>因为各路尺度不同不可比，直接加权没意义；</span></div>
+<div id="caption-0079" class="clip caption-cue" data-start="300.331" data-duration="5.009" data-track-index="30" data-source-cue="cue-142"><span>RRF 只用排名，尺度无关，简单鲁棒，像多评委投票不比绝对分</span></div>
+<div id="caption-0080" class="clip caption-cue" data-start="305.34" data-duration="1.036" data-track-index="30" data-source-cue="cue-142"><span>比平均名次。</span></div>
+<div id="caption-0081" class="clip caption-cue" data-start="306.796" data-duration="5.668" data-track-index="30" data-source-cue="cue-143"><span>常数取 60 是常见的论文经验起点，但仍应结合候选规模和离线</span></div>
+<div id="caption-0082" class="clip caption-cue" data-start="312.464" data-duration="1.012" data-track-index="30" data-source-cue="cue-143"><span>指标确认。</span></div>
+<div id="caption-0083" class="clip caption-cue" data-start="314.216" data-duration="3.705" data-track-index="30" data-source-cue="cue-144"><span>LangChain 已经提供混合检索加 RRF 的现成组合，</span></div>
+<div id="caption-0084" class="clip caption-cue" data-start="317.921" data-duration="1.235" data-track-index="30" data-source-cue="cue-144"><span>可以减少重复实现。</span></div>
+<div id="caption-0085" class="clip caption-cue" data-start="319.636" data-duration="2.26" data-track-index="30" data-source-cue="cue-145"><span>工程上，我通常先用标准 RRF。</span></div>
+<div id="caption-0086" class="clip caption-cue" data-start="321.896" data-duration="5.4" data-track-index="30" data-source-cue="cue-146"><span>但如果某一路明显比其他路准，比如编号精确匹配在格式规则清晰时</span></div>
+<div id="caption-0087" class="clip caption-cue" data-start="327.296" data-duration="3.78" data-track-index="30" data-source-cue="cue-146"><span>通常更可靠，可以用加权 RRF 给它更高权重。</span></div>
+<div id="caption-0088" class="clip caption-cue" data-start="331.076" data-duration="5.079" data-track-index="30" data-source-cue="cue-147"><span>一般场景可以先从标准 RRF 开始，再看离线指标是否需要加权</span></div>
+<div id="caption-0089" class="clip caption-cue" data-start="336.155" data-duration="0.181" data-track-index="30" data-source-cue="cue-147"><span>。</span></div>
+<div id="caption-0090" class="clip caption-cue" data-start="336.736" data-duration="3.87" data-track-index="30" data-source-cue="cue-148"><span>融合是否真的有增益，可以看融合后的 nDCG、</span></div>
+<div id="caption-0091" class="clip caption-cue" data-start="340.606" data-duration="2.99" data-track-index="30" data-source-cue="cue-148"><span>和单路结果的对比，以及双路重叠率。</span></div>
+<div id="caption-0092" class="clip caption-cue" data-start="343.596" data-duration="4.12" data-track-index="30" data-source-cue="cue-149"><span>重叠率太低可能没有互补价值，太高又说明信息冗余。</span></div>
+<div id="caption-0093" class="clip caption-cue" data-start="348.216" data-duration="3.878" data-track-index="30" data-source-cue="cue-150"><span>有了标注数据以后，可以进一步学习融合权重；</span></div>
+<div id="caption-0094" class="clip caption-cue" data-start="352.094" data-duration="4.062" data-track-index="30" data-source-cue="cue-150"><span>在此之前，先从加权 RRF 这类可解释方案开始。</span></div>
+<div id="caption-0095" class="clip caption-cue" data-start="356.756" data-duration="6.292" data-track-index="30" data-source-cue="cue-151"><span>融合完拿到前五十条候选，还混着噪声，上重排精排到真正最相关的</span></div>
+<div id="caption-0096" class="clip caption-cue" data-start="363.048" data-duration="1.048" data-track-index="30" data-source-cue="cue-151"><span>前若干条。</span></div>
+<div id="caption-0097" class="clip caption-cue" data-start="364.596" data-duration="3.06" data-track-index="30" data-source-cue="cue-152"><span>重排方案主要包括交叉编码器和 ColBERT。</span></div>
+<div id="caption-0098" class="clip caption-cue" data-start="367.656" data-duration="4.622" data-track-index="30" data-source-cue="cue-153"><span>交叉编码器把查询和文档放进同一个 Transformer 做</span></div>
+<div id="caption-0099" class="clip caption-cue" data-start="372.278" data-duration="2.971" data-track-index="30" data-source-cue="cue-153"><span>全注意力交互，通常比双塔召回更精细；</span></div>
+<div id="caption-0100" class="clip caption-cue" data-start="375.249" data-duration="4.456" data-track-index="30" data-source-cue="cue-153"><span>开源可以看 BGE 系列重排模型，商业服务可以评估 Cohe</span></div>
+<div id="caption-0101" class="clip caption-cue" data-start="379.705" data-duration="1.651" data-track-index="30" data-source-cue="cue-153"><span>re 和 Voyage。</span></div>
+<div id="caption-0102" class="clip caption-cue" data-start="381.896" data-duration="3.38" data-track-index="30" data-source-cue="cue-154"><span>ColBERT 采用延迟交互，在精度和速度之间折中。</span></div>
+<div id="caption-0103" class="clip caption-cue" data-start="385.276" data-duration="3.68" data-track-index="30" data-source-cue="cue-155"><span>双塔编码器负责稠密召回，本身不等于独立重排。</span></div>
+<div id="caption-0104" class="clip caption-cue" data-start="388.956" data-duration="4.7" data-track-index="30" data-source-cue="cue-156"><span>到了重排这里，先要分清交叉编码器和双塔的区别。</span></div>
+<div id="caption-0105" class="clip caption-cue" data-start="393.656" data-duration="5.004" data-track-index="30" data-source-cue="cue-157"><span>向量召回是双塔，查询和文档各自编码再算相似度，</span></div>
+<div id="caption-0106" class="clip caption-cue" data-start="398.66" data-duration="3.481" data-track-index="30" data-source-cue="cue-157"><span>快但粗，适合从大量文本块里粗筛；</span></div>
+<div id="caption-0107" class="clip caption-cue" data-start="402.141" data-duration="4.786" data-track-index="30" data-source-cue="cue-157"><span>重排是交叉编码器，查询和文档拼在一起过模型，</span></div>
+<div id="caption-0108" class="clip caption-cue" data-start="406.927" data-duration="4.569" data-track-index="30" data-source-cue="cue-157"><span>通常更精细，但计算更慢，更适合精排几十条。</span></div>
+<div id="caption-0109" class="clip caption-cue" data-start="411.496" data-duration="7.129" data-track-index="30" data-source-cue="cue-158"><span>所以架构是先双塔粗召前五十条，再交叉编码器精排前五条或前二十</span></div>
+<div id="caption-0110" class="clip caption-cue" data-start="418.625" data-duration="2.851" data-track-index="30" data-source-cue="cue-158"><span>条，不是直接用重排召回。</span></div>
+<div id="caption-0111" class="clip caption-cue" data-start="421.476" data-duration="5.084" data-track-index="30" data-source-cue="cue-159"><span>Anthropic 的公开流程示例采用混合检索取前一百五十条</span></div>
+<div id="caption-0112" class="clip caption-cue" data-start="426.56" data-duration="1.753" data-track-index="30" data-source-cue="cue-159"><span>，再重排到前二十条；</span></div>
+<div id="caption-0113" class="clip caption-cue" data-start="428.313" data-duration="4.383" data-track-index="30" data-source-cue="cue-159"><span>这是一种参考配置，不是所有模型和任务的统一最优值。</span></div>
+<div id="caption-0114" class="clip caption-cue" data-start="433.256" data-duration="5.365" data-track-index="30" data-source-cue="cue-160"><span>如果采用交叉编码器，可以先评估 BGE 系列的开源重排模型；</span></div>
+<div id="caption-0115" class="clip caption-cue" data-start="438.621" data-duration="4.215" data-track-index="30" data-source-cue="cue-160"><span>需要速度和精度折中时，再评估 ColBERT。</span></div>
+<div id="caption-0116" class="clip caption-cue" data-start="442.836" data-duration="3.21" data-track-index="30" data-source-cue="cue-161"><span>候选数量要用离线指标和延迟压测共同决定，</span></div>
+<div id="caption-0117" class="clip caption-cue" data-start="446.046" data-duration="3.21" data-track-index="30" data-source-cue="cue-161"><span>前五十条到前一百五十条可以作为起始范围。</span></div>
+<div id="caption-0118" class="clip caption-cue" data-start="449.256" data-duration="2.06" data-track-index="30" data-source-cue="cue-162"><span>LangChain 也可以接入重排模型。</span></div>
+<div id="caption-0119" class="clip caption-cue" data-start="451.476" data-duration="5.41" data-track-index="30" data-source-cue="cue-163"><span>重排值不值得这段额外延迟，关键看重排前后的 nDCG 和 M</span></div>
+<div id="caption-0120" class="clip caption-cue" data-start="456.886" data-duration="5.81" data-track-index="30" data-source-cue="cue-163"><span>RR，确认相关项有没有排得更靠前，同时盯住重排延迟 P99。</span></div>
+<div id="caption-0121" class="clip caption-cue" data-start="463.176" data-duration="4.088" data-track-index="30" data-source-cue="cue-164"><span>重排层后续可以继续比较 ColBERT 的延迟交互、</span></div>
+<div id="caption-0122" class="clip caption-cue" data-start="467.264" data-duration="4.087" data-track-index="30" data-source-cue="cue-164"><span>ColPali 这类直接处理文档图像的多模态重排，</span></div>
+<div id="caption-0123" class="clip caption-cue" data-start="471.351" data-duration="2.725" data-track-index="30" data-source-cue="cue-164"><span>再根据领域数据做模型选型或微调。</span></div>
+<div id="caption-0124" class="clip caption-cue" data-start="474.536" data-duration="3.02" data-track-index="30" data-source-cue="cue-165"><span>检索拿到前若干条证据，到这里是分水岭。</span></div>
+<div id="caption-0125" class="clip caption-cue" data-start="477.556" data-duration="2.706" data-track-index="30" data-source-cue="cue-166"><span>普通 RAG 是直线——检索完直接生成，</span></div>
+<div id="caption-0126" class="clip caption-cue" data-start="480.262" data-duration="1.654" data-track-index="30" data-source-cue="cue-166"><span>不管证据够不够都硬答。</span></div>
+<div id="caption-0127" class="clip caption-cue" data-start="481.916" data-duration="3.743" data-track-index="30" data-source-cue="cue-167"><span>智能体式 RAG 是状态机，拿到证据先评估，</span></div>
+<div id="caption-0128" class="clip caption-cue" data-start="485.659" data-duration="4.117" data-track-index="30" data-source-cue="cue-167"><span>不够就改写重检，够了才生成，实在不够就拒答。</span></div>
+<div id="caption-0129" class="clip caption-cue" data-start="489.776" data-duration="4.82" data-track-index="30" data-source-cue="cue-168"><span>这一步我多讲点，因为这是智能体式之所以叫智能体式的核心。</span></div>
+<div id="caption-0130" class="clip caption-cue" data-start="494.596" data-duration="3.48" data-track-index="30" data-source-cue="cue-169"><span>这些智能体式方案，可以按反思时机来分。</span></div>
+<div id="caption-0131" class="clip caption-cue" data-start="498.076" data-duration="3.846" data-track-index="30" data-source-cue="cue-170"><span>事前是自适应 RAG，负责检索前路由；</span></div>
+<div id="caption-0132" class="clip caption-cue" data-start="501.922" data-duration="3.846" data-track-index="30" data-source-cue="cue-170"><span>事后是 CRAG，也就是纠错型 RAG，</span></div>
+<div id="caption-0133" class="clip caption-cue" data-start="505.768" data-duration="4.915" data-track-index="30" data-source-cue="cue-170"><span>检索后用评估器判断检索质量，证据正确就直接用，</span></div>
+<div id="caption-0134" class="clip caption-cue" data-start="510.683" data-duration="4.914" data-track-index="30" data-source-cue="cue-170"><span>证据模糊就补网络检索，证据错误就转向网络检索；</span></div>
+<div id="caption-0135" class="clip caption-cue" data-start="515.597" data-duration="4.701" data-track-index="30" data-source-cue="cue-170"><span>事中是 Self-RAG，也就是自反思 RAG，</span></div>
+<div id="caption-0136" class="clip caption-cue" data-start="520.298" data-duration="4.487" data-track-index="30" data-source-cue="cue-170"><span>用四个反思词元，也就是是否检索、是否相关、</span></div>
+<div id="caption-0137" class="clip caption-cue" data-start="524.785" data-duration="4.274" data-track-index="30" data-source-cue="cue-170"><span>是否支持和是否有用，贯穿检索与生成全程，</span></div>
+<div id="caption-0138" class="clip caption-cue" data-start="529.059" data-duration="4.06" data-track-index="30" data-source-cue="cue-170"><span>但它需要微调；还有 Reflexion，</span></div>
+<div id="caption-0139" class="clip caption-cue" data-start="533.119" data-duration="4.914" data-track-index="30" data-source-cue="cue-170"><span>也就是反思记忆，把每轮失败的反思存进情景记忆，</span></div>
+<div id="caption-0140" class="clip caption-cue" data-start="538.033" data-duration="1.923" data-track-index="30" data-source-cue="cue-170"><span>让智能体跨轮学习。</span></div>
+<div id="caption-0141" class="clip caption-cue" data-start="540.416" data-duration="2.1" data-track-index="30" data-source-cue="cue-171"><span>智能体式 RAG 怎么落到生产？</span></div>
+<div id="caption-0142" class="clip caption-cue" data-start="542.516" data-duration="3.817" data-track-index="30" data-source-cue="cue-172"><span>自反思 RAG 原版需要微调，实施门槛较高，</span></div>
+<div id="caption-0143" class="clip caption-cue" data-start="546.333" data-duration="2.863" data-track-index="30" data-source-cue="cue-172"><span>多数团队不会直接照搬完整方案。</span></div>
+<div id="caption-0144" class="clip caption-cue" data-start="549.696" data-duration="5.525" data-track-index="30" data-source-cue="cue-173"><span>生产务实做法是用大模型裁判模拟反思——用提示词让 LLM 输</span></div>
+<div id="caption-0145" class="clip caption-cue" data-start="555.221" data-duration="3.355" data-track-index="30" data-source-cue="cue-173"><span>出结构化判断，代替微调的反思词元。</span></div>
+<div id="caption-0146" class="clip caption-cue" data-start="558.576" data-duration="3.62" data-track-index="30" data-source-cue="cue-174"><span>思想来自自反思方案，实现则是轻量的。</span></div>
+<div id="caption-0147" class="clip caption-cue" data-start="562.196" data-duration="5.364" data-track-index="30" data-source-cue="cue-175"><span>四个反思时机里，支持性检查，也就是答案是否被上下文支持，</span></div>
+<div id="caption-0148" class="clip caption-cue" data-start="567.56" data-duration="5.556" data-track-index="30" data-source-cue="cue-175"><span>是防幻觉的核心，即使不做其他三个，支持性检查也强烈建议做。</span></div>
+<div id="caption-0149" class="clip caption-cue" data-start="573.756" data-duration="4.451" data-track-index="30" data-source-cue="cue-176"><span>落地时，生产智能体式通常先做证据充分性评估、</span></div>
+<div id="caption-0150" class="clip caption-cue" data-start="578.207" data-duration="4.249" data-track-index="30" data-source-cue="cue-176"><span>改写重试和拒答组成的轻量闭环，不急着微调。</span></div>
+<div id="caption-0151" class="clip caption-cue" data-start="582.456" data-duration="4.973" data-track-index="30" data-source-cue="cue-177"><span>拿到前若干条证据，先综合证据数、相关度和引用支持率，</span></div>
+<div id="caption-0152" class="clip caption-cue" data-start="587.429" data-duration="1.147" data-track-index="30" data-source-cue="cue-177"><span>判断够不够。</span></div>
+<div id="caption-0153" class="clip caption-cue" data-start="588.576" data-duration="2.448" data-track-index="30" data-source-cue="cue-178"><span>不够就改写查询，再检索一次；</span></div>
+<div id="caption-0154" class="clip caption-cue" data-start="591.024" data-duration="3.672" data-track-index="30" data-source-cue="cue-178"><span>同时把最大跳数限制在三跳左右，防止死循环。</span></div>
+<div id="caption-0155" class="clip caption-cue" data-start="594.696" data-duration="3.2" data-track-index="30" data-source-cue="cue-179"><span>够了才生成，实在不够就拒答不硬编。</span></div>
+<div id="caption-0156" class="clip caption-cue" data-start="598.416" data-duration="3.539" data-track-index="30" data-source-cue="cue-180"><span>整个决策循环我用 LangGraph 的图状态机实现，</span></div>
+<div id="caption-0157" class="clip caption-cue" data-start="601.955" data-duration="4.105" data-track-index="30" data-source-cue="cue-180"><span>不是手搓条件判断和循环，LangGraph 更适合表达带条件</span></div>
+<div id="caption-0158" class="clip caption-cue" data-start="606.06" data-duration="1.416" data-track-index="30" data-source-cue="cue-180"><span>分支和循环的决策流。</span></div>
+<div id="caption-0159" class="clip caption-cue" data-start="608.176" data-duration="5.196" data-track-index="30" data-source-cue="cue-181"><span>坑是 LLM 自评有偏差偏好自己答案，关键场景要换更强模型当</span></div>
+<div id="caption-0160" class="clip caption-cue" data-start="613.372" data-duration="1.484" data-track-index="30" data-source-cue="cue-181"><span>裁判做交叉评估。</span></div>
+<div id="caption-0161" class="clip caption-cue" data-start="614.856" data-duration="4.221" data-track-index="30" data-source-cue="cue-182"><span>在我参与的一个项目里，我们采用了这套轻量闭环，</span></div>
+<div id="caption-0162" class="clip caption-cue" data-start="619.077" data-duration="2.202" data-track-index="30" data-source-cue="cue-182"><span>引用支持率得到明显改善；</span></div>
+<div id="caption-0163" class="clip caption-cue" data-start="621.279" data-duration="4.037" data-track-index="30" data-source-cue="cue-182"><span>具体项目名称和数值要在获得公开授权后再披露。</span></div>
+<div id="caption-0164" class="clip caption-cue" data-start="625.776" data-duration="4.903" data-track-index="30" data-source-cue="cue-183"><span>这套闭环不能只看答案漂亮不漂亮，还要看多跳任务成功率、</span></div>
+<div id="caption-0165" class="clip caption-cue" data-start="630.679" data-duration="3.087" data-track-index="30" data-source-cue="cue-183"><span>拒答准确率、忠实度和收敛轮数分布；</span></div>
+<div id="caption-0166" class="clip caption-cue" data-start="633.766" data-duration="5.448" data-track-index="30" data-source-cue="cue-183"><span>再比较有记忆和无记忆的成功率差值，验证反思记忆到底有没有价值</span></div>
+<div id="caption-0167" class="clip caption-cue" data-start="639.214" data-duration="0.182" data-track-index="30" data-source-cue="cue-183"><span>。</span></div>
+<div id="caption-0168" class="clip caption-cue" data-start="639.896" data-duration="5.951" data-track-index="30" data-source-cue="cue-184"><span>轻量闭环跑稳以后，再逐步评估跨轮能力：用反思记忆从失败中学习</span></div>
+<div id="caption-0169" class="clip caption-cue" data-start="645.847" data-duration="5.157" data-track-index="30" data-source-cue="cue-184"><span>，按需要尝试自反思 RAG 微调、纠错型 RAG 的网络检索</span></div>
+<div id="caption-0170" class="clip caption-cue" data-start="651.004" data-duration="3.967" data-track-index="30" data-source-cue="cue-184"><span>兜底、图谱 RAG 的跨文档推理和全局总结，</span></div>
+<div id="caption-0171" class="clip caption-cue" data-start="654.971" data-duration="1.785" data-track-index="30" data-source-cue="cue-184"><span>以及多智能体互评。</span></div>
+<div id="caption-0172" class="clip caption-cue" data-start="657.276" data-duration="1.88" data-track-index="30" data-source-cue="cue-185"><span>证据够了，生成最终答案。</span></div>
+<div id="caption-0173" class="clip caption-cue" data-start="659.156" data-duration="4.818" data-track-index="30" data-source-cue="cue-186"><span>到了生成阶段，先把提示词约束做好：要求只基于资料答、</span></div>
+<div id="caption-0174" class="clip caption-cue" data-start="663.974" data-duration="4.262" data-track-index="30" data-source-cue="cue-186"><span>资料没有就说不知道、温度调低 0 到 0.3 减发散。</span></div>
+<div id="caption-0175" class="clip caption-cue" data-start="668.236" data-duration="1.84" data-track-index="30" data-source-cue="cue-187"><span>引用有三种实现。</span></div>
+<div id="caption-0176" class="clip caption-cue" data-start="670.576" data-duration="4.06" data-track-index="30" data-source-cue="cue-188"><span>第一种是在提示词里让 LLM 自己标来源编号，</span></div>
+<div id="caption-0177" class="clip caption-cue" data-start="674.636" data-duration="1.74" data-track-index="30" data-source-cue="cue-188"><span>简单，但可能标错。</span></div>
+<div id="caption-0178" class="clip caption-cue" data-start="676.376" data-duration="5.269" data-track-index="30" data-source-cue="cue-189"><span>第二种是后处理校验，生成完成后再用规则或小模型核对引用是否真</span></div>
+<div id="caption-0179" class="clip caption-cue" data-start="681.645" data-duration="0.351" data-track-index="30" data-source-cue="cue-189"><span>实。</span></div>
+<div id="caption-0180" class="clip caption-cue" data-start="681.996" data-duration="5.201" data-track-index="30" data-source-cue="cue-190"><span>第三种是片段级引用，让模型直接指出答案片段对应哪个文本块；</span></div>
+<div id="caption-0181" class="clip caption-cue" data-start="687.197" data-duration="5.2" data-track-index="30" data-source-cue="cue-190"><span>这种方式通常能给出更细的引用对应，Cohere 提供了相关能</span></div>
+<div id="caption-0182" class="clip caption-cue" data-start="692.397" data-duration="0.359" data-track-index="30" data-source-cue="cue-190"><span>力。</span></div>
+<div id="caption-0183" class="clip caption-cue" data-start="692.756" data-duration="5.182" data-track-index="30" data-source-cue="cue-191"><span>到了生成环节，防幻觉是命门，要守住四道防线——支持性检查、</span></div>
+<div id="caption-0184" class="clip caption-cue" data-start="697.938" data-duration="3.038" data-track-index="30" data-source-cue="cue-191"><span>温度调低、明确说不知道、引用校验。</span></div>
+<div id="caption-0185" class="clip caption-cue" data-start="701.536" data-duration="4.964" data-track-index="30" data-source-cue="cue-192"><span>LLM 会合理化编造，即使上下文没有也可能编一个看似合理的，</span></div>
+<div id="caption-0186" class="clip caption-cue" data-start="706.5" data-duration="2.396" data-track-index="30" data-source-cue="cue-192"><span>支持性检查加引用校验是兜底。</span></div>
+<div id="caption-0187" class="clip caption-cue" data-start="709.396" data-duration="4.86" data-track-index="30" data-source-cue="cue-193"><span>引用我建议提示词级加后处理校验，别光信 LLM 标的号。</span></div>
+<div id="caption-0188" class="clip caption-cue" data-start="714.616" data-duration="4.793" data-track-index="30" data-source-cue="cue-194"><span>具体到生成链路，提示词模板要求每个事实陈述后标来源编号，</span></div>
+<div id="caption-0189" class="clip caption-cue" data-start="719.409" data-duration="5.136" data-track-index="30" data-source-cue="cue-194"><span>生成完用后处理校验每个来源编号是不是真存在于上下文且内容对应</span></div>
+<div id="caption-0190" class="clip caption-cue" data-start="724.545" data-duration="0.171" data-track-index="30" data-source-cue="cue-194"><span>。</span></div>
+<div id="caption-0191" class="clip caption-cue" data-start="725.196" data-duration="4.322" data-track-index="30" data-source-cue="cue-195"><span>多候选场景可以生成多个答案用有用性检查选最优，</span></div>
+<div id="caption-0192" class="clip caption-cue" data-start="729.518" data-duration="2.818" data-track-index="30" data-source-cue="cue-195"><span>但成本翻倍，只对低置信答案做。</span></div>
+<div id="caption-0193" class="clip caption-cue" data-start="732.856" data-duration="4.06" data-track-index="30" data-source-cue="cue-196"><span>答案要返回来源文档、章节、页码、引用片段，</span></div>
+<div id="caption-0194" class="clip caption-cue" data-start="736.916" data-duration="3.48" data-track-index="30" data-source-cue="cue-196"><span>这是 RAG 相比纯 LLM 的可信度优势。</span></div>
+<div id="caption-0195" class="clip caption-cue" data-start="740.816" data-duration="4.175" data-track-index="30" data-source-cue="cue-197"><span>生成环节最后看四个结果：引用是不是真实对应，</span></div>
+<div id="caption-0196" class="clip caption-cue" data-start="744.991" data-duration="4.745" data-track-index="30" data-source-cue="cue-197"><span>覆盖是否完整，答案是否忠实，以及人工标注的幻觉率。</span></div>
+<div id="caption-0197" class="clip caption-cue" data-start="750.256" data-duration="4.834" data-track-index="30" data-source-cue="cue-198"><span>生成侧还可以继续加强四件事：用结构化输出约束引用格式，</span></div>
+<div id="caption-0198" class="clip caption-cue" data-start="755.09" data-duration="4.296" data-track-index="30" data-source-cue="cue-198"><span>逐句做支持性检查，把引用回溯到具体页码和条文号，</span></div>
+<div id="caption-0199" class="clip caption-cue" data-start="759.386" data-duration="1.79" data-track-index="30" data-source-cue="cue-198"><span>并给答案标注置信度。</span></div>
+<div id="caption-0200" class="clip caption-cue" data-start="761.176" data-duration="4.16" data-track-index="30" data-source-cue="cue-199"><span>不评测的 RAG 就是瞎调，每改一环都要有指标量化。</span></div>
+<div id="caption-0201" class="clip caption-cue" data-start="765.336" data-duration="1.54" data-track-index="30" data-source-cue="cue-200"><span>评测贯穿全链路。</span></div>
+<div id="caption-0202" class="clip caption-cue" data-start="766.876" data-duration="4.1" data-track-index="30" data-source-cue="cue-201"><span>评测工具里，RAGAS 是常用框架之一。</span></div>
+<div id="caption-0203" class="clip caption-cue" data-start="770.976" data-duration="4.534" data-track-index="30" data-source-cue="cue-202"><span>它主要看四类指标：忠实度，判断答案是否忠于证据；</span></div>
+<div id="caption-0204" class="clip caption-cue" data-start="775.51" data-duration="2.644" data-track-index="30" data-source-cue="cue-202"><span>答案相关性，看回答是否切题；</span></div>
+<div id="caption-0205" class="clip caption-cue" data-start="778.154" data-duration="2.834" data-track-index="30" data-source-cue="cue-202"><span>上下文精度，看检索结果准不准；</span></div>
+<div id="caption-0206" class="clip caption-cue" data-start="780.988" data-duration="3.589" data-track-index="30" data-source-cue="cue-202"><span>上下文召回率，看该找的证据有没有找全。</span></div>
+<div id="caption-0207" class="clip caption-cue" data-start="784.577" data-duration="3.582" data-track-index="30" data-source-cue="cue-203"><span>TruLens 和 DeepEval 也有类似能力；</span></div>
+<div id="caption-0208" class="clip caption-cue" data-start="788.159" data-duration="3.737" data-track-index="30" data-source-cue="cue-203"><span>除此之外，还可以用自建黄金问答集配合调用链归因。</span></div>
+<div id="caption-0209" class="clip caption-cue" data-start="791.896" data-duration="4.102" data-track-index="30" data-source-cue="cue-204"><span>检索独立指标有前若干结果的召回率、MRR、</span></div>
+<div id="caption-0210" class="clip caption-cue" data-start="795.998" data-duration="1.758" data-track-index="30" data-source-cue="cue-204"><span>nDCG、命中率。</span></div>
+<div id="caption-0211" class="clip caption-cue" data-start="797.756" data-duration="2.1" data-track-index="30" data-source-cue="cue-205"><span>评测怎么落地？</span></div>
+<div id="caption-0212" class="clip caption-cue" data-start="799.856" data-duration="4.924" data-track-index="30" data-source-cue="cue-206"><span>先承认 RAGAS 用大模型裁判也有偏差——偏好长答案、</span></div>
+<div id="caption-0213" class="clip caption-cue" data-start="804.78" data-duration="3.787" data-track-index="30" data-source-cue="cue-206"><span>偏好自己风格，要换不同强模型当裁判交叉、</span></div>
+<div id="caption-0214" class="clip caption-cue" data-start="808.567" data-duration="3.409" data-track-index="30" data-source-cue="cue-206"><span>多次评判取平均、关键场景加人工校准。</span></div>
+<div id="caption-0215" class="clip caption-cue" data-start="811.976" data-duration="6.035" data-track-index="30" data-source-cue="cue-207"><span>我的判断是，贴合具体场景的黄金问答集加调用链归因比通用 RA</span></div>
+<div id="caption-0216" class="clip caption-cue" data-start="818.011" data-duration="3.745" data-track-index="30" data-source-cue="cue-207"><span>GAS 更实用，因为能定位到具体环节。</span></div>
+<div id="caption-0217" class="clip caption-cue" data-start="821.756" data-duration="4.885" data-track-index="30" data-source-cue="cue-208"><span>评测集三种来源混合：LLM 从文档生成查询做量、</span></div>
+<div id="caption-0218" class="clip caption-cue" data-start="826.641" data-duration="4.035" data-track-index="30" data-source-cue="cue-208"><span>人工标注做质、生产真实查询采样做校准。</span></div>
+<div id="caption-0219" class="clip caption-cue" data-start="830.676" data-duration="4.493" data-track-index="30" data-source-cue="cue-209"><span>评测闭环可以这样搭：先建 200 条左右黄金问答集，</span></div>
+<div id="caption-0220" class="clip caption-cue" data-start="835.169" data-duration="5.242" data-track-index="30" data-source-cue="cue-209"><span>核心指标三个——前五召回率看检索、引用支持率看生成可信、</span></div>
+<div id="caption-0221" class="clip caption-cue" data-start="840.411" data-duration="1.685" data-track-index="30" data-source-cue="cue-209"><span>拒答准确率看兜底。</span></div>
+<div id="caption-0222" class="clip caption-cue" data-start="842.096" data-duration="4.421" data-track-index="30" data-source-cue="cue-210"><span>线上每次问答落调用链，记录查询、改写、召回片段、</span></div>
+<div id="caption-0223" class="clip caption-cue" data-start="846.517" data-duration="3.499" data-track-index="30" data-source-cue="cue-210"><span>排序分数、引用、提示词版本、用户反馈。</span></div>
+<div id="caption-0224" class="clip caption-cue" data-start="850.576" data-duration="4.579" data-track-index="30" data-source-cue="cue-211"><span>问题样例通过调用链定位到具体环节——是分块切断条文、</span></div>
+<div id="caption-0225" class="clip caption-cue" data-start="855.155" data-duration="4.932" data-track-index="30" data-source-cue="cue-211"><span>还是召回没命中、还是生成没挂引用，而不是笼统说效果不好，</span></div>
+<div id="caption-0226" class="clip caption-cue" data-start="860.087" data-duration="1.409" data-track-index="30" data-source-cue="cue-211"><span>定位完回流迭代。</span></div>
+<div id="caption-0227" class="clip caption-cue" data-start="861.996" data-duration="5.377" data-track-index="30" data-source-cue="cue-212"><span>在我参与的一个项目里，我们用这套调用链闭环定位并修复问题，</span></div>
+<div id="caption-0228" class="clip caption-cue" data-start="867.373" data-duration="2.224" data-track-index="30" data-source-cue="cue-212"><span>前五召回率得到明显提升；</span></div>
+<div id="caption-0229" class="clip caption-cue" data-start="869.597" data-duration="4.079" data-track-index="30" data-source-cue="cue-212"><span>具体项目名称和数值要在获得公开授权后再披露。</span></div>
+<div id="caption-0230" class="clip caption-cue" data-start="873.676" data-duration="3.711" data-track-index="30" data-source-cue="cue-213"><span>整条评测链要持续追踪前若干结果的召回率、</span></div>
+<div id="caption-0231" class="clip caption-cue" data-start="877.387" data-duration="3.711" data-track-index="30" data-source-cue="cue-213"><span>忠实度、答案相关性、上下文精度和召回率、</span></div>
+<div id="caption-0232" class="clip caption-cue" data-start="881.098" data-duration="2.598" data-track-index="30" data-source-cue="cue-213"><span>引用准确率，以及拒答准确率。</span></div>
+<div id="caption-0233" class="clip caption-cue" data-start="883.696" data-duration="5.297" data-track-index="30" data-source-cue="cue-214"><span>评测体系成熟以后，可以进一步全量接入 RAGAS 四类指标，</span></div>
+<div id="caption-0234" class="clip caption-cue" data-start="888.993" data-duration="3.783" data-track-index="30" data-source-cue="cue-214"><span>再校准大模型裁判偏差，自动归因问题样例。</span></div>
+<div id="caption-0235" class="clip caption-cue" data-start="893.356" data-duration="5.163" data-track-index="30" data-source-cue="cue-215"><span>下一步，把线上对照实验和持续集成式回归测试接起来，</span></div>
+<div id="caption-0236" class="clip caption-cue" data-start="898.519" data-duration="3.717" data-track-index="30" data-source-cue="cue-215"><span>做到每次改动都先验证不退化，再上线。</span></div>
+<div id="caption-0237" class="clip caption-cue" data-start="902.656" data-duration="3.597" data-track-index="30" data-source-cue="cue-216"><span>从演示到生产，还有几件关键工程能力要补齐，</span></div>
+<div id="caption-0238" class="clip caption-cue" data-start="906.253" data-duration="3.083" data-track-index="30" data-source-cue="cue-216"><span>这步往往是被忽视但决定能不能上线的。</span></div>
+<div id="caption-0239" class="clip caption-cue" data-start="909.336" data-duration="3.32" data-track-index="30" data-source-cue="cue-217"><span>上线前，通常还要把几组工程能力补齐。</span></div>
+<div id="caption-0240" class="clip caption-cue" data-start="912.656" data-duration="5.004" data-track-index="30" data-source-cue="cue-218"><span>提示词缓存和流式输出，分别控制成本与首字延迟；</span></div>
+<div id="caption-0241" class="clip caption-cue" data-start="917.66" data-duration="5.004" data-track-index="30" data-source-cue="cue-218"><span>内容去重和防提示词注入，负责上下文质量与安全；</span></div>
+<div id="caption-0242" class="clip caption-cue" data-start="922.664" data-duration="4.786" data-track-index="30" data-source-cue="cue-218"><span>增量索引和版本管理，控制更新成本和模型切换；</span></div>
+<div id="caption-0243" class="clip caption-cue" data-start="927.45" data-duration="3.046" data-track-index="30" data-source-cue="cue-218"><span>最后再用监控告警守住可用性。</span></div>
+<div id="caption-0244" class="clip caption-cue" data-start="930.496" data-duration="3.64" data-track-index="30" data-source-cue="cue-219"><span>最后看上线工程，这些能力要组合着选。</span></div>
+<div id="caption-0245" class="clip caption-cue" data-start="934.136" data-duration="3.884" data-track-index="30" data-source-cue="cue-220"><span>在上下文检索这类重复携带长前缀的流程里，</span></div>
+<div id="caption-0246" class="clip caption-cue" data-start="938.02" data-duration="2.136" data-track-index="30" data-source-cue="cue-220"><span>提示词缓存应优先评估。</span></div>
+<div id="caption-0247" class="clip caption-cue" data-start="940.736" data-duration="3.84" data-track-index="30" data-source-cue="cue-221"><span>公开材料给出过显著的成本和首词元延迟改善，</span></div>
+<div id="caption-0248" class="clip caption-cue" data-start="944.576" data-duration="4.389" data-track-index="30" data-source-cue="cue-221"><span>但真实收益取决于模型、缓存命中率和当前计费规则，</span></div>
+<div id="caption-0249" class="clip caption-cue" data-start="948.965" data-duration="2.011" data-track-index="30" data-source-cue="cue-221"><span>不能直接当作项目承诺。</span></div>
+<div id="caption-0250" class="clip caption-cue" data-start="950.976" data-duration="3.66" data-track-index="30" data-source-cue="cue-222"><span>流式输出通常是改善用户体验的重要手段。</span></div>
+<div id="caption-0251" class="clip caption-cue" data-start="954.636" data-duration="5.585" data-track-index="30" data-source-cue="cue-223"><span>防提示词注入是安全重点，检索到的文档里可能藏恶意指令，</span></div>
+<div id="caption-0252" class="clip caption-cue" data-start="960.221" data-duration="6.206" data-track-index="30" data-source-cue="cue-223"><span>做法包括：用分隔符隔离文档内容，在系统中明确文档是数据而不是</span></div>
+<div id="caption-0253" class="clip caption-cue" data-start="966.427" data-duration="2.069" data-track-index="30" data-source-cue="cue-223"><span>指令，再做输出过滤。</span></div>
+<div id="caption-0254" class="clip caption-cue" data-start="968.496" data-duration="4.724" data-track-index="30" data-source-cue="cue-224"><span>增量索引用内容指纹加版本，文档更新不做全量重建，</span></div>
+<div id="caption-0255" class="clip caption-cue" data-start="973.22" data-duration="3.936" data-track-index="30" data-source-cue="cue-224"><span>指纹相同跳过幂等、版本变化只重建差异块。</span></div>
+<div id="caption-0256" class="clip caption-cue" data-start="977.156" data-duration="4.86" data-track-index="30" data-source-cue="cue-225"><span>换向量模型要版本管理，带向量模型版本字段灰度切换。</span></div>
+<div id="caption-0257" class="clip caption-cue" data-start="982.016" data-duration="3.18" data-track-index="30" data-source-cue="cue-226"><span>这些能力不能各做各的，而要组合配套。</span></div>
+<div id="caption-0258" class="clip caption-cue" data-start="985.196" data-duration="2.303" data-track-index="30" data-source-cue="cue-227"><span>提示词缓存配上下文检索；</span></div>
+<div id="caption-0259" class="clip caption-cue" data-start="987.499" data-duration="1.919" data-track-index="30" data-source-cue="cue-227"><span>增量索引配版本管理；</span></div>
+<div id="caption-0260" class="clip caption-cue" data-start="989.418" data-duration="3.839" data-track-index="30" data-source-cue="cue-227"><span>防注入配输出过滤；全链路监控延迟、成本、</span></div>
+<div id="caption-0261" class="clip caption-cue" data-start="993.257" data-duration="1.919" data-track-index="30" data-source-cue="cue-227"><span>错误率和缓存命中率。</span></div>
+<div id="caption-0262" class="clip caption-cue" data-start="995.176" data-duration="3.75" data-track-index="30" data-source-cue="cue-228"><span>pgvector 的 HNSW 删除是标记删除，</span></div>
+<div id="caption-0263" class="clip caption-cue" data-start="998.926" data-duration="3.75" data-track-index="30" data-source-cue="cue-228"><span>定期重建索引回收空间，这个运维细节要注意。</span></div>
+<div id="caption-0264" class="clip caption-cue" data-start="1003.276" data-duration="4.183" data-track-index="30" data-source-cue="cue-229"><span>到了线上，指标还要扩展到工程侧：可用性 SLA、</span></div>
+<div id="caption-0265" class="clip caption-cue" data-start="1007.459" data-duration="3.456" data-track-index="30" data-source-cue="cue-229"><span>延迟 P99、单次查询成本、缓存命中率、</span></div>
+<div id="caption-0266" class="clip caption-cue" data-start="1010.915" data-duration="4.001" data-track-index="30" data-source-cue="cue-229"><span>注入拦截率、增量索引正确性和版本切换稳定性。</span></div>
+<div id="caption-0267" class="clip caption-cue" data-start="1014.916" data-duration="5.52" data-track-index="30" data-source-cue="cue-230"><span>SLA 与缓存收益门槛，要按业务目标和成本模型单独设定。</span></div>
+<div id="caption-0268" class="clip caption-cue" data-start="1020.956" data-duration="5.696" data-track-index="30" data-source-cue="cue-231"><span>工程侧的下一步，包括多级缓存，也就是查询结果缓存和向量化缓存</span></div>
+<div id="caption-0269" class="clip caption-cue" data-start="1026.652" data-duration="5.695" data-track-index="30" data-source-cue="cue-231"><span>；还可以做异步增量索引、灰度发布、用混沌测试验证注入攻击防护</span></div>
+<div id="caption-0270" class="clip caption-cue" data-start="1032.347" data-duration="1.709" data-track-index="30" data-source-cue="cue-231"><span>，并补上成本告警。</span></div>
+<div id="caption-0271" class="clip caption-cue" data-start="1034.056" data-duration="3.54" data-track-index="30" data-source-cue="cue-232"><span>第一，RAG 全链路是一条数据流。</span></div>
+<div id="caption-0272" class="clip caption-cue" data-start="1037.596" data-duration="5.137" data-track-index="30" data-source-cue="cue-233"><span>离线建库，包括解析、分块、上下文增强和向量化索引，</span></div>
+<div id="caption-0273" class="clip caption-cue" data-start="1042.733" data-duration="4.932" data-track-index="30" data-source-cue="cue-233"><span>决定系统上限；在线检索，包括查询理解、多路混合、</span></div>
+<div id="caption-0274" class="clip caption-cue" data-start="1047.665" data-duration="2.877" data-track-index="30" data-source-cue="cue-233"><span>RRF 和重排，决定召回效果；</span></div>
+<div id="caption-0275" class="clip caption-cue" data-start="1050.542" data-duration="4.109" data-track-index="30" data-source-cue="cue-233"><span>智能体式决策，通过评估、改写重试和拒答，</span></div>
+<div id="caption-0276" class="clip caption-cue" data-start="1054.651" data-duration="6.165" data-track-index="30" data-source-cue="cue-233"><span>决定回答是否可信；最后，评测闭环决定这套系统能不能持续迭代。</span></div>
+<div id="caption-0277" class="clip caption-cue" data-start="1060.816" data-duration="6.348" data-track-index="30" data-source-cue="cue-234"><span>第二，每一步都不是单一选型，生产多是组合——解析是主引擎加规</span></div>
+<div id="caption-0278" class="clip caption-cue" data-start="1067.164" data-duration="6.348" data-track-index="30" data-source-cue="cue-234"><span>则清洗加多模态兜底，检索是多路混合，智能体式是轻量闭环不微调</span></div>
+<div id="caption-0279" class="clip caption-cue" data-start="1073.512" data-duration="4.444" data-track-index="30" data-source-cue="cue-234"><span>，关键是要有选型判断和理由，不是调 API。</span></div>
+<div id="caption-0280" class="clip caption-cue" data-start="1077.956" data-duration="3.48" data-track-index="30" data-source-cue="cue-235"><span>第三，每一步都有指标，也都有继续提升的空间。</span></div>
+<div id="caption-0281" class="clip caption-cue" data-start="1081.856" data-duration="2.962" data-track-index="30" data-source-cue="cue-236"><span>上下文检索要看失败率有没有下降；</span></div>
+<div id="caption-0282" class="clip caption-cue" data-start="1084.818" data-duration="3.517" data-track-index="30" data-source-cue="cue-236"><span>反思记忆要看智能体能不能从失败中学习；</span></div>
+<div id="caption-0283" class="clip caption-cue" data-start="1088.335" data-duration="2.961" data-track-index="30" data-source-cue="cue-236"><span>RAGAS 则用四类指标量化质量。</span></div>
+<div id="caption-0284" class="clip caption-cue" data-start="1091.756" data-duration="4.775" data-track-index="30" data-source-cue="cue-237"><span>归根结底，RAG 是一套工程系统，不是单纯的提示词技巧，</span></div>
+<div id="caption-0285" class="clip caption-cue" data-start="1096.531" data-duration="3.183" data-track-index="30" data-source-cue="cue-237"><span>讲究的是每一环都可控、可测、可迭代。</span></div>
+  </div>
+  <script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({paused:true});
+  document.querySelectorAll('.stage-scene').forEach((scene) => {
+    const sceneStart = Number(scene.dataset.start);
+    const sceneDuration = Number(scene.dataset.duration);
+    const scope = '#' + scene.id;
+    tl.fromTo(scope + ' .stage-header', {opacity:0,y:-20}, {opacity:1,y:0,duration:.52,ease:'power3.out'}, sceneStart + .12);
+    tl.fromTo(scope + ' .visual-world', {opacity:0,scale:.975}, {opacity:1,scale:1,duration:.72,ease:'expo.out'}, sceneStart + .22);
+    const revealItems = Array.from(scene.querySelectorAll('.reveal'));
+    revealItems.forEach((element,index) => {
+      const variants = [{x:-26,y:0,scale:1},{x:0,y:24,scale:1},{x:0,y:0,scale:.88},{x:28,y:0,scale:1}];
+      const from = variants[index % variants.length];
+      tl.fromTo(element,{opacity:0,...from},{opacity:1,x:0,y:0,scale:1,duration:.46 + (index % 3) * .08,ease:index % 2 ? 'power3.out' : 'expo.out'},sceneStart + .42 + Math.min(index * .06,.48));
+    });
+    scene.querySelectorAll('.draw-path').forEach((element,index) => {
+      const length = Math.max(1, element.getTotalLength());
+      element.style.strokeDasharray = String(length);
+      element.style.strokeDashoffset = String(length);
+      tl.to(element,{strokeDashoffset:0,duration:.58 + index * .08,ease:'power2.out'},sceneStart + .58 + index * .09);
+    });
+    scene.querySelectorAll('.cut-mark').forEach((element,index) => {
+      tl.fromTo(element,{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:.42,ease:'power3.out'},sceneStart + .7 + index * .1);
+    });
+    scene.querySelectorAll('.scatter-node').forEach((element,index) => {
+      const offsetX = ((index % 5) - 2) * 34;
+      const offsetY = ((index % 4) - 1.5) * 28;
+      tl.fromTo(element,{opacity:0,x:offsetX,y:offsetY,scale:.45},{opacity:1,x:0,y:0,scale:1,duration:.5,ease:'power3.out'},sceneStart + .7 + Math.min(index * .045,.5));
+    });
+    scene.querySelectorAll('.bar-fill').forEach((element,index) => {
+      tl.fromTo(element,{scaleX:0},{scaleX:Number(element.dataset.fill || .8),duration:.8,ease:'power2.out'},sceneStart + .75 + index * .12);
+    });
+    scene.querySelectorAll('.lane-token').forEach((element,index) => {
+      tl.fromTo(element,{opacity:0,x:-40},{opacity:1,x:560,duration:1.7 + (index % 3) * .25,ease:'power2.inOut'},sceneStart + .75 + (index % 3) * .16);
+      tl.to(element,{opacity:0,duration:.18,ease:'power1.in'},sceneStart + 2.55 + (index % 3) * .2);
+    });
+    const railToken = scene.querySelector('.rail-token');
+    if (railToken) tl.fromTo(railToken,{x:0},{x:1030,duration:2.8,ease:'power2.inOut'},sceneStart + .8);
+    const flowToken = scene.querySelector('.flow-token');
+    if (flowToken) tl.fromTo(flowToken,{x:0},{x:1160,duration:3.2,ease:'power2.inOut'},sceneStart + .85);
+    const agentToken = scene.querySelector('.agent-token');
+    if (agentToken) {
+      tl.to(agentToken,{x:400,y:-155,duration:1.0,ease:'power2.inOut'},sceneStart + 1.0);
+      tl.to(agentToken,{x:800,y:0,duration:1.0,ease:'power2.inOut'},sceneStart + 2.15);
+      tl.to(agentToken,{x:400,y:150,duration:1.0,ease:'power2.inOut'},sceneStart + 3.3);
+      tl.to(agentToken,{x:0,y:0,duration:1.0,ease:'power2.inOut'},sceneStart + 4.45);
+    }
+    const host = scene.querySelector('.host-figure');
+    if (host && sceneDuration > 4) {
+      const repeats = Math.max(0, Math.floor((sceneDuration - 1) / 4) - 1);
+      tl.to(host,{y:-6,duration:2,ease:'sine.inOut',yoyo:true,repeat:repeats},sceneStart + 1.1);
+    }
+    const states = Array.from(scene.querySelectorAll('.state-note'));
+    states.forEach((state,index) => {
+      const at = Number(state.dataset.at);
+      const nextAt = index < states.length - 1 ? Number(states[index + 1].dataset.at) : sceneStart + sceneDuration;
+      tl.set(state,{visibility:'visible'},at);
+      tl.fromTo(state,{opacity:0,x:-26},{opacity:1,x:0,duration:.38,ease:'power3.out'},at + .01);
+      if (nextAt - at > .8) {
+        tl.to(state,{opacity:0,x:18,duration:.2,ease:'power2.in'},Math.max(at + .5,nextAt - .24));
+        tl.set(state,{visibility:'hidden'},nextAt);
+      }
+      const focus = scene.querySelector('[data-focus="' + index + '"] .pulse-core') || scene.querySelector('[data-focus="' + index + '"]');
+      if (focus) {
+        tl.to(focus,{scale:1.055,color:'#496958',duration:.28,ease:'power2.out'},at + .08);
+        tl.to(focus,{scale:1,color:'#2A211B',duration:.42,ease:'power2.inOut'},at + .52);
+      }
+    });
+  });
+  window.__timelines['rag-semantic-v2-episode-2'] = tl;
+</script>
+</body>
+</html>

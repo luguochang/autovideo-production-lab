@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "autovideo-open-source-receipt/v1",
+  "component": "RapidOCR ONNXRuntime",
+  "package": "rapidocr-onnxruntime",
+  "version": "1.4.4",
+  "source": "https://github.com/RapidAI/RapidOCR",
+  "sourceTag": "v1.4.4",
+  "sourceCommit": "86ae3f5079df3422c1829cd84baf19bc8a7a9453",
+  "packageIndex": "https://pypi.org/project/rapidocr-onnxruntime/1.4.4/",
+  "wheel": {
+    "filename": "rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+    "bytes": 14915192,
+    "sha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf"
+  },
+  "modelSource": "https://github.com/PaddlePaddle/PaddleOCR",
+  "license": "Apache-2.0",
+  "licenseReceipt": {
+    "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/86ae3f5079df3422c1829cd84baf19bc8a7a9453/LICENSE",
+    "bytes": 11422,
+    "sha256": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333"
+  },
+  "integration": "tools/ocr/rapidocr_adapter.py",
+  "scope": "Local CPU OCR over frozen screen-review frames; never grants human approval.",
+  "verifiedAt": "2026-07-22"
+}

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "stage": "internal-delivery-ready",
+  "createdAt": "2026-07-28T09:05:10.910Z",
+  "updatedAt": "2026-07-29T07:49:45.023Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "1655 seconds audio-driven estimate",
+    "platform": "bilibili",
+    "audience": "技术面试官和有工程经验的 AI 开发者",
+    "rememberedOutcome": "RAG 是一条可控、可测、可迭代的数据链；生产选型重在组合判断",
+    "forbiddenTreatments": null,
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "user",
+      "approvedAt": "2026-07-29T01:31:19.915Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "user",
+      "approvedAt": "2026-07-29T02:19:45.293Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-creator-delegated",
+      "approvedAt": "2026-07-29T05:54:43.652Z",
+      "approvalScope": "internal-autonomous-review",
+      "humanReviewPerformed": false,
+      "publicReleaseBlocked": true,
+      "compositionDigest": "dd7423319c215b63f34922063304d1eee9830dc786173bc4931778896fa8dffd",
+      "compositionFileCount": 403,
+      "delegation": {
+        "path": "receipts/creator-delegation/2026-07-29-user-internal-render-authorization.json",
+        "sha256": "fbffeb0584d4520a57882359d58c823baeb6f0729b57053e6bb317d76d728d27"
+      },
+      "notes": "Creator-delegated internal simulation only; no human final review was performed."
+    },
+    "deliveryQa": {
+      "status": "passed-internal-only",
+      "checkedAt": "2026-07-29T07:49:39.437Z",
+      "report": "qa/delivery-report.json",
+      "outputSha256": "87b83ea59c300473cc869d1acffa94bde0a7abba871b392465fd74506691d7b6",
+      "publicReleaseBlocked": true
+    }
+  },
+  "nextAction": "Watch the internal-review MP4, record human listening and visual feedback, then rerun only affected downstream stages.",
+  "handoffs": {
+    "audio": {
+      "status": "approved",
+      "rightsStatus": "needs-review",
+      "approvalScope": "human-listening",
+      "humanListeningStatus": "approved",
+      "publicReleaseBlocked": true,
+      "lock": "audio-handoff.json",
+      "durationSeconds": 1880.218458
+    }
+  },
+  "release": {
+    "phase": "internal-review-package",
+    "technicalVideoGenerationReady": true,
+    "internalReviewReady": true,
+    "publicMasterReady": false,
+    "publicReleaseBlocked": true,
+    "receipt": "qa/internal-review-delivery.json",
+    "video": {
+      "path": "renders/rag-full-chain-5m-20260728-r2-internal-review.mp4",
+      "sha256": "87b83ea59c300473cc869d1acffa94bde0a7abba871b392465fd74506691d7b6"
+    },
+    "cover": {
+      "path": "renders/rag-full-chain-5m-20260728-r2-cover.png",
+      "sha256": "11de8253802a071091b77fa761d398fcbf52ac48761ba1392dd386495c8e0a59"
+    }
+  },
+  "invalidations": [
+    {
+      "at": "2026-07-28T23:33:57.204Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    }
+  ],
+  "deliveries": {
+    "internalReview": {
+      "status": "ready",
+      "video": "renders/rag-full-chain-5m-20260728-r2-internal-review.mp4",
+      "cover": "renders/rag-full-chain-5m-20260728-r2-cover.png",
+      "manifest": "delivery/delivery-manifest.json",
+      "outputSha256": "87b83ea59c300473cc869d1acffa94bde0a7abba871b392465fd74506691d7b6"
+    }
+  }
+}

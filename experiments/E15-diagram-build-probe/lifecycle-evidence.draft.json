@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "diagram-build",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E15-diagram-build-probe",
+    "path": "experiments/E15-diagram-build-probe",
+    "durationSeconds": 8,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E15-diagram-build-probe/INVARIANT_AUDIT.json",
+        "sha256": "5329c656d81edb46ac6ac2f200ec99737e9376910bf66f37a677d69d9cc73304"
+      },
+      "passed": true,
+      "checks": {
+        "landscape16x9": true,
+        "lightApricotBackground": true,
+        "qVersionHostAssets": true,
+        "hostLeft": true,
+        "contentRight": true,
+        "captionPersistent": true,
+        "contentWorldOnlyCamera": true
+      }
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E15-diagram-build-probe/AssetManifest.json",
+      "sha256": "02fc06c95d3df5d5c75dfa437ef69e284fc3b67f4a7e7935fa6754088a2fdde0"
+    },
+    "stills": [
+      {
+        "path": "experiments/E15-diagram-build-probe/snapshots/frame-03-at-3.8s.png",
+        "sha256": "8bd650e7b5508c34c4d8b91f7b2a8a78142b61a42cfc7a0307e8987b1fd9e1a8"
+      },
+      {
+        "path": "experiments/E15-diagram-build-probe/snapshots/contact-sheet.jpg",
+        "sha256": "90697cab7233b2087bbd549b1a7317973ff0de33397fdba7ad08c61e80df31a3"
+      }
+    ],
+    "motionProbe": {
+      "path": "experiments/E15-diagram-build-probe/renders/diagram-build-probe.mp4",
+      "sha256": "6c283a23d9f3a1c364e623e6b4dc48464b84d0fe5f03a4f95d6cd7774b4eb25f"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E15-diagram-build-probe/strict-check.log",
+        "sha256": "5f30ad489e69c4975f3b129830d00f9fa60b96a2cb686ab0e9a9117334d3efbc"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": true,
+      "findingCount": 0,
+      "version": "0.7.64"
+    },
+    "visualReview": null,
+    "officialReuseObserved": [
+      {
+        "kind": "official-registry",
+        "id": "flowchart",
+        "implementation": {
+          "path": "experiments/E15-diagram-build-probe/index.html",
+          "sha256": "5219c2a8219c75141df3e91991ba02f5fd4b150bf671ec4309b54120da39e573"
+        }
+      },
+      {
+        "kind": "official-motion-rule",
+        "id": "svg-path-draw",
+        "implementation": {
+          "path": "experiments/E15-diagram-build-probe/index.html",
+          "sha256": "5219c2a8219c75141df3e91991ba02f5fd4b150bf671ec4309b54120da39e573"
+        }
+      }
+    ]
+  }
+}

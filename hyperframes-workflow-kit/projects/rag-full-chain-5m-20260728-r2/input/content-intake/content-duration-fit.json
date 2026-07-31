@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-content-duration-fit/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "spokenRewriteSha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018",
+  "ruleVersion": "zh-cn-text-budget-v1",
+  "status": "passed",
+  "modifiesWording": false,
+  "targetSeconds": 1655,
+  "toleranceSeconds": 165.5,
+  "budgetSeconds": 1655,
+  "narrationGraphemes": 10363,
+  "graphemesPerSecond": 6.261631419939577,
+  "acceptedDensityBand": {
+    "min": 3.2,
+    "max": 8
+  },
+  "sections": [
+    {
+      "id": "section-01",
+      "targetSeconds": 1655,
+      "graphemes": 10363,
+      "graphemesPerSecond": 6.261631419939577,
+      "passed": true
+    }
+  ],
+  "issues": [],
+  "assessedAt": "2026-07-28T09:04:02.967Z"
+}

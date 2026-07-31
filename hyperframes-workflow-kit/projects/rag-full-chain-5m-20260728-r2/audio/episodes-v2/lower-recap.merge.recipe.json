@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "autovideo-breath-merge/v1",
+  "generatedAt": "2026-07-29T10:39:07.085Z",
+  "manifest": {
+    "path": "lower-recap.merge.json",
+    "sha256": "5002b3aeeda8ec6ad03c83b4e9f6dbffed3f211a3508a1a64987232fb255da49"
+  },
+  "policy": {
+    "targetActiveVoiceGapSeconds": 0.56,
+    "permittedGapSeconds": {
+      "minimum": 0.42,
+      "maximum": 0.65
+    },
+    "leadingPaddingSeconds": 0.06,
+    "trailingPaddingSeconds": 0.1,
+    "edgeFadeSeconds": 0.01,
+    "assemblyStrategy": "prepared-segments-concat-demuxer",
+    "commandLineBounded": true,
+    "silenceDetection": "ffmpeg silencedetect noise=-38dB d=0.03",
+    "finalLoudness": {
+      "integratedLufs": -16,
+      "truePeakDb": -1.5,
+      "passes": 2
+    }
+  },
+  "parts": [
+    {
+      "id": "lower-recap-part-01",
+      "path": "lower-recap-part-01.wav",
+      "sha256": "0d3c8cc1c3944a83c905025bd469f017ce20056a11b4eb1586ffd4dae4854e49",
+      "durationSeconds": 7.128542,
+      "codec": "pcm_s16le",
+      "bounds": {
+        "durationSeconds": 7.128542,
+        "activeStartSeconds": 0,
+        "activeEndSeconds": 7.128542,
+        "trimStartSeconds": 0,
+        "trimEndSeconds": 7.128542,
+        "retainedLeadingSilenceSeconds": 0,
+        "retainedTrailingSilenceSeconds": 0,
+        "detectedSilenceSegments": [
+          {
+            "start": 4.336875,
+            "end": 4.403271,
+            "duration": 0.066396
+          },
+          {
+            "start": 4.597167,
+            "end": 4.713708,
+            "duration": 0.116542
+          },
+          {
+            "start": 4.999479,
+            "end": 5.031854,
+            "duration": 0.032375
+          }
+        ]
+      }
+    },
+    {
+      "id": "lower-recap-part-02",
+      "path": "lower-recap-part-02.wav",
+      "sha256": "ef3e2804dda3b181ecb18f3325ae21a59678f81817cfaa2696183fade11cfbdf",
+      "durationSeconds": 5.967542,
+      "codec": "pcm_s16le",
+      "bounds": {
+        "durationSeconds": 5.967542,
+        "activeStartSeconds": 0,
+        "activeEndSeconds": 5.967542,
+        "trimStartSeconds": 0,
+        "trimEndSeconds": 5.967542,
+        "retainedLeadingSilenceSeconds": 0,
+        "retainedTrailingSilenceSeconds": 0,
+        "detectedSilenceSegments": [
+          {
+            "start": 1.135938,
+            "end": 1.201313,
+            "duration": 0.065375
+          },
+          {
+            "start": 1.737396,
+            "end": 1.781813,
+            "duration": 0.044417
+          },
+          {
+            "start": 2.298896,
+            "end": 2.344354,
+            "duration": 0.045458
+          },
+          {
+            "start": 3.879687,
+            "end": 3.914167,
+            "duration": 0.034479
+          },
+          {
+            "start": 4.043396,
+            "end": 4.121396,
+            "duration": 0.078
+          }
+        ]
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "afterPartIndex": 0,
+      "targetActiveVoiceGapSeconds": 0.56,
+      "retainedTrailingSilenceSeconds": 0,
+      "retainedNextLeadingSilenceSeconds": 0,
+      "insertedSilenceSeconds": 0.56,
+      "actualActiveVoiceGapSeconds": 0.56
+    }
+  ],
+  "output": {
+    "path": "lower-recap.wav",
+    "sha256": "09d4520d9565d1bca1b29d6518fd23d35c8311095155b7469d8cbd827a22f1c1",
+    "durationSeconds": 13.656083,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/production-manifest.schema.json",
+  "title": "AutoVideo HyperFrames Production Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "projectId", "motionLifecycleAccess", "bindings", "format", "timeline", "sceneCount", "cueCount", "cueDirectives", "scenes"],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-production-manifest/v1"},
+    "projectId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "motionLifecycleAccess": {"$ref": "#/$defs/motionLifecycleAccess"},
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["narrationLock", "templateLock", "alignment", "storyboard", "shotManifest", "graphIr", "motionRecipeLibrary"],
+      "properties": {
+        "narrationLock": {"$ref": "#/$defs/narrationBinding"},
+        "templateLock": {"$ref": "#/$defs/fileBinding"},
+        "alignment": {"$ref": "#/$defs/alignmentBinding"},
+        "storyboard": {"$ref": "#/$defs/fileBinding"},
+        "shotManifest": {"$ref": "#/$defs/schemaFileBinding"},
+        "graphIr": {"$ref": "#/$defs/schemaFileBinding"},
+        "graphLayout": {"$ref": "#/$defs/schemaFileBinding"},
+        "motionRecipeLibrary": {"$ref": "#/$defs/workspaceSchemaFileBinding"}
+      }
+    },
+    "format": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ratio", "width", "height", "fps"],
+      "properties": {
+        "ratio": {"type": "string", "minLength": 1},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "fps": {"type": "number", "minimum": 1}
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end", "duration"],
+      "properties": {
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "minimum": 0},
+        "duration": {"type": "number", "minimum": 0}
+      }
+    },
+    "sceneCount": {"type": "integer", "minimum": 1},
+    "cueCount": {"type": "integer", "minimum": 1},
+    "cueDirectives": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/productionCueDirective"}},
+    "scenes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/scene"}},
+    "provenance": {"type": "object", "additionalProperties": true}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "motionLifecycleAccess": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "projectId", "scope", "library", "lifecycleLedger", "authorized", "releasePolicy", "access", "internalFallback", "decisionSha256"],
+      "properties": {
+        "schemaVersion": {"const": "autovideo-motion-recipe-access/v1"},
+        "projectId": {"type": "string", "minLength": 1},
+        "scope": {"const": "full-production"},
+        "library": {"$ref": "#/$defs/motionLifecycleLibraryBinding"},
+        "lifecycleLedger": {"$ref": "#/$defs/workspaceSchemaFileBinding"},
+        "authorized": {"type": "boolean"},
+        "releasePolicy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["motionApprovalIsPublicationApproval", "publicReleaseBlocked", "internalFallbackUsed"],
+          "properties": {
+            "motionApprovalIsPublicationApproval": {"const": false},
+            "publicReleaseBlocked": {"const": true},
+            "internalFallbackUsed": {"type": "boolean"}
+          }
+        },
+        "access": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/motionRecipeAccessEntry"}},
+        "internalFallback": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["used"],
+          "properties": {
+            "used": {"type": "boolean"},
+            "request": {"$ref": "#/$defs/internalMotionFallbackRequest"},
+            "requestSha256": {"$ref": "#/$defs/sha256"}
+          }
+        },
+        "decisionSha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "motionLifecycleLibraryBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "schemaVersion", "libraryId", "version", "scope"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "schemaVersion": {"type": "string", "minLength": 1},
+        "libraryId": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "scope": {"const": "workspace"}
+      }
+    },
+    "motionRecipeAccessEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["libraryId", "libraryVersion", "recipeId", "version", "definitionSha256", "lifecycleState", "allowed", "authorization", "reason", "approvalReceiptRefs"],
+      "properties": {
+        "libraryId": {"type": "string", "minLength": 1},
+        "libraryVersion": {"type": "string", "minLength": 1},
+        "recipeId": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "definitionSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "lifecycleState": {"enum": ["candidate", "probe-passed", "approved-project", "promoted-template", "retired", "unknown"]},
+        "allowed": {"type": "boolean"},
+        "authorization": {"enum": ["denied", "approved-project", "promoted-template", "internal-fallback"]},
+        "reason": {"type": "string", "minLength": 1},
+        "approvalReceiptRefs": {"type": "array", "items": {"$ref": "#/$defs/fileBinding"}},
+        "projectApproval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["projectId", "approvedBy", "approvedAt", "styleSelection", "probeReceipt"],
+          "properties": {
+            "projectId": {"type": "string", "minLength": 1},
+            "approvedBy": {"type": "string", "minLength": 1},
+            "approvedAt": {"type": "string", "minLength": 1},
+            "styleSelection": {"$ref": "#/$defs/fileBinding"},
+            "probeReceipt": {"$ref": "#/$defs/fileBinding"}
+          }
+        }
+      }
+    },
+    "internalMotionFallbackRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "projectId", "scope", "releaseScope", "publicReleaseBlocked", "requestedBy", "requestedAt", "reason", "recipeIds"],
+      "properties": {
+        "schemaVersion": {"const": "autovideo-motion-internal-fallback-request/v1"},
+        "projectId": {"type": "string", "minLength": 1},
+        "scope": {"const": "internal-full-production"},
+        "releaseScope": {"const": "internal-only"},
+        "publicReleaseBlocked": {"const": true},
+        "requestedBy": {"type": "string", "minLength": 1},
+        "requestedAt": {"type": "string", "minLength": 1},
+        "reason": {"type": "string", "minLength": 1},
+        "recipeIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "cueId": {"type": "string", "pattern": "^cue-[0-9]{3,}$"},
+    "sceneId": {"type": "string", "pattern": "^scene-[0-9]{2,}$"},
+    "fileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "schemaFileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "schemaVersion", "schemaPath"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "schemaVersion": {"type": "string", "minLength": 1},
+        "schemaPath": {"type": "string", "minLength": 1}
+      }
+    },
+    "workspaceSchemaFileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "schemaVersion", "scope"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "schemaVersion": {"type": "string", "minLength": 1},
+        "scope": {"const": "workspace"}
+      }
+    },
+    "narrationBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "normalizedNarrationSha256", "frozenNarrationPath"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "normalizedNarrationSha256": {"$ref": "#/$defs/sha256"},
+        "frozenNarrationPath": {"type": "string", "minLength": 1}
+      }
+    },
+    "alignmentBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "narrationSha256", "audioSha256", "cueCount", "lastEndSeconds"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "narrationSha256": {"$ref": "#/$defs/sha256"},
+        "audioSha256": {"$ref": "#/$defs/sha256"},
+        "cueCount": {"type": "integer", "minimum": 1},
+        "lastEndSeconds": {"type": "number", "minimum": 0}
+      }
+    },
+    "graphRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["graphId", "stateIds", "sourceCueIds"],
+      "properties": {
+        "graphId": {"type": "string", "pattern": "^graph-[a-z0-9-]+$"},
+        "stateIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/cueId"}}
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "order",
+        "title",
+        "role",
+        "start",
+        "end",
+        "duration",
+        "cueIds",
+        "shotCueIds",
+        "plannedSrc",
+        "layout",
+        "visualOperations",
+        "motionRules",
+        "terminalState",
+        "graphRefs"
+      ],
+      "properties": {
+        "id": {"$ref": "#/$defs/sceneId"},
+        "order": {"type": "integer", "minimum": 1},
+        "title": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "minimum": 0},
+        "duration": {"type": "number", "minimum": 0},
+        "cueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/cueId"}},
+        "shotCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/cueId"}},
+        "plannedSrc": {"type": "string", "minLength": 1},
+        "layout": {"type": "object", "additionalProperties": true},
+        "visualOperations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "motionRules": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "visualTypes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/visualType"}},
+        "motionRecipeRefs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/motionRecipeRef"}},
+        "assetRefs": {"type": "array", "items": {"$ref": "#/$defs/assetRef"}},
+        "carrierPayloads": {"type": "array", "items": {"type": "object"}},
+        "sfxRefs": {"type": "array", "items": {"$ref": "#/$defs/sfxRef"}},
+        "provenanceRefs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "terminalState": {"type": "object", "additionalProperties": true},
+        "graphRefs": {"type": "array", "items": {"$ref": "#/$defs/graphRef"}}
+      }
+    },
+    "visualType": {
+      "enum": ["keyword", "evidence-image", "device-surface", "diagram", "data-proof", "comparison", "code-surface", "object-metaphor"]
+    },
+    "motionRecipeRef": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["libraryId", "libraryVersion", "recipeId", "version", "params", "sourceCueIds"],
+      "properties": {
+        "libraryId": {"type": "string", "minLength": 1},
+        "libraryVersion": {"type": "string", "minLength": 1},
+        "recipeId": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "params": {"type": "object", "additionalProperties": true},
+        "sourceCueIds": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/cueId"}}
+      }
+    },
+    "assetRef": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["assetId", "role", "zone", "required", "sourceCueIds"],
+      "properties": {
+        "assetId": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "zone": {"const": "content.right"},
+        "required": {"type": "boolean"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/cueId"}}
+      }
+    },
+    "sfxRef": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["assetId", "role", "event", "cueId", "offsetMs", "gainDb", "duckingDb"],
+      "properties": {
+        "assetId": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "event": {"type": "string", "minLength": 1},
+        "cueId": {"$ref": "#/$defs/cueId"},
+        "offsetMs": {"type": "integer", "minimum": 0},
+        "gainDb": {"type": "number", "minimum": -36, "maximum": 0},
+        "duckingDb": {"type": "number", "minimum": -12, "maximum": 0}
+      }
+    },
+    "productionCueDirective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cueId", "sceneId", "start", "end", "visualType", "motionRecipeRefs", "assetRefs", "sfxRefs", "provenanceRefs"],
+      "properties": {
+        "cueId": {"$ref": "#/$defs/cueId"},
+        "sceneId": {"$ref": "#/$defs/sceneId"},
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "minimum": 0},
+        "visualType": {"$ref": "#/$defs/visualType"},
+        "motionRecipeRefs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/motionRecipeRef"}},
+        "assetRefs": {"type": "array", "items": {"$ref": "#/$defs/assetRef"}},
+        "carrierPayload": {"oneOf": [{"type": "object"}, {"type": "null"}]},
+        "sfxRefs": {"type": "array", "items": {"$ref": "#/$defs/sfxRef"}},
+        "provenanceRefs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

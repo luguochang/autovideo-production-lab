@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "autovideo-probe-source-receipt/v1",
+  "projectId": "E18-code-proof-probe",
+  "recipe": {
+    "id": "code-proof",
+    "version": "1.0.0",
+    "status": "candidate"
+  },
+  "composition": {
+    "path": "index.html",
+    "sha256": "111fed9560a9ed19de874a6ec150b3dc74d3c5387db663417e6be1d68f3958c9"
+  },
+  "officialSources": [
+    {
+      "id": "hyperframes-official-code-highlight",
+      "kind": "official-registry-block",
+      "registryName": "code-highlight",
+      "path": "references/official/code-highlight.html",
+      "sha256": "2e28ffdb11fe7b595e47488f2dfb93db514f315dd5f334c902540fcbebf2bb2f",
+      "registryItemPath": "references/official/code-highlight.registry-item.json",
+      "registryItemSha256": "b003cb888898c2e86b0f696fb44395cb2ec7ddc678f270af72393b3502f11495",
+      "provider": "HyperFrames official registry",
+      "license": "Apache-2.0",
+      "borrowedContract": "focus one line with a sweep band while surrounding code remains readable"
+    },
+    {
+      "id": "hyperframes-official-discrete-text-sequence",
+      "kind": "official-motion-rule",
+      "ruleName": "discrete-text-sequence",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/discrete-text-sequence.md",
+      "sourceSha256": "b3b2874bba225567991fbae5f7977840a1c49814301dbad047df3ff44a54f1cc",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "borrowedContract": "threshold-driven status and step-note changes on one deterministic timeline"
+    },
+    {
+      "id": "hyperframes-official-viewport-change",
+      "kind": "official-motion-rule",
+      "ruleName": "viewport-change",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/viewport-change.md",
+      "sourceSha256": "86600df8e88e3814fe6fad360cfe524abc65d6689b11a49d8038a7fd368914fa",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "borrowedContract": "subtle scale and translate on content-world-only editor camera"
+    }
+  ],
+  "projectEvidence": {
+    "id": "workflow-console-server-source",
+    "path": "workflow-console/server.mjs",
+    "sha256": "b3e0183398be326d77e06f256c1ca9f0cd874ec95e95ff02cfb29c1f905f9f9d",
+    "lineRange": "281-293",
+    "frozenExcerptPath": "input/server-source-excerpt.txt",
+    "frozenExcerptSha256": "6a5aa3f402668f1f47153cb3f06559ba772a9abc4c7485a33fbc78126fd02637",
+    "provider": "project-local source",
+    "license": "internal project source; publication rights not asserted",
+    "mapping": [
+      {"sourceLine": 281, "selector": "#code-row-running", "role": "state-change"},
+      {"sourceLine": 283, "selector": "#code-row-generate", "role": "execution"},
+      {"sourceLine": 292, "selector": "#code-row-promote", "role": "artifact-promotion"}
+    ],
+    "displayPolicy": "The visible rows keep exact function calls and status values; omitted arguments are marked with an explicit ellipsis in CodeProofIR.json."
+  },
+  "adaptationEvidence": [
+    {
+      "source": "hyperframes-official-code-highlight",
+      "implementationSelectors": ["#focus-band", ".code-row"],
+      "projectSpecificChanges": [
+        "replaced the official full-screen dark canvas with the approved #F2DFC7 host shell",
+        "bounded the editor to content.right and kept host/caption outside the camera",
+        "used a prepositioned transform band instead of tweening layout width",
+        "focused three source-linked lines over one 8-second narration window"
+      ]
+    },
+    {
+      "source": "hyperframes-official-discrete-text-sequence",
+      "implementationSelectors": ["#state-chip-text", "#step-note"],
+      "timelineEvidence": "STATUS_SEQUENCE is threshold-ordered and driven by one paused GSAP scalar tween."
+    },
+    {
+      "source": "hyperframes-official-viewport-change",
+      "implementationSelectors": ["#editor-camera"],
+      "timelineEvidence": "One content-only camera tween scales to 1.025x and returns before the conclusion hold."
+    }
+  ],
+  "scope": {
+    "host": "fixed host.left; one approved Q-version presenter image",
+    "content": "real server.mjs code excerpt in content.right; no iframe or network content",
+    "caption": "persistent fixed caption rail outside content camera",
+    "audio": "narration only; no SFX registered"
+  },
+  "promotion": {
+    "lifecycleApplyExecuted": false,
+    "promoted": false,
+    "humanReview": "pending"
+  }
+}

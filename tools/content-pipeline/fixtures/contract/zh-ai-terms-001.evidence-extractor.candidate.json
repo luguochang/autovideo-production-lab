@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "autovideo-content-prompt-candidate/v1",
+  "caseId": "zh-ai-terms-001",
+  "stage": "evidence-extractor",
+  "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+  "prompt": {
+    "id": "evidence-extractor",
+    "path": "tools/content-pipeline/prompt-chain/prompts/01-evidence-extractor.md",
+    "sha256": "afbc91550a50988e4db3759a4515ede6f86b580aa9d052c37130efe7776c5df1"
+  },
+  "generator": {
+    "provider": "precomputed-fixture",
+    "model": "fixture-output",
+    "configSha256": "90a5cec52b9c61ed148258fed8843149391a4956b7c3ffe37072b46bd0b502c2"
+  },
+  "outputCanonicalization": "stable-json-v1",
+  "output": {
+    "schemaVersion": "autovideo-evidence/v2",
+    "claims": [
+      {
+        "id": "claim-sample-run",
+        "statement": "截至2026年7月，这个测试记录了30次 API 调用。",
+        "claimKind": "fact",
+        "supportStatus": "supported",
+        "citations": [
+          {
+            "id": "citation-sample-run",
+            "sourceId": "source-001",
+            "quote": "截至2026年7月，这个测试记录了30次 API 调用。",
+            "locator": {
+              "scheme": "line-range",
+              "startLine": 1,
+              "endLine": 1,
+              "occurrence": 1
+            },
+            "canonicalQuoteSha256": "15dc1375048602deafdf70666720bbf2132691387baf4711a784d6747029d727"
+          }
+        ],
+        "protectedAtomIds": [
+          "atom-year",
+          "atom-month",
+          "atom-count"
+        ]
+      },
+      {
+        "id": "claim-terms-need-review",
+        "statement": "demo、Codex、GPT-4o 和 camelCase 等技术词需要单独检查文字形式和实际发音。",
+        "claimKind": "creator-opinion",
+        "supportStatus": "supported",
+        "citations": [
+          {
+            "id": "citation-terms-review",
+            "sourceId": "source-001",
+            "quote": "我的看法是，demo、Codex、GPT-4o 和 camelCase 等技术词需要单独检查文字形式和实际发音。",
+            "locator": {
+              "scheme": "line-range",
+              "startLine": 2,
+              "endLine": 2,
+              "occurrence": 1
+            },
+            "canonicalQuoteSha256": "9ca100015d3ae6ab0c94c93a511aa7c10f881894bf28884a64707d777838ad2d"
+          }
+        ],
+        "protectedAtomIds": []
+      }
+    ],
+    "protectedAtoms": [
+      {
+        "id": "atom-year",
+        "type": "date",
+        "sourceSurface": "2026",
+        "canonicalValue": "2026",
+        "allowedNarrationForms": [
+          "2026"
+        ],
+        "omissionPolicy": "required"
+      },
+      {
+        "id": "atom-month",
+        "type": "date",
+        "sourceSurface": "7",
+        "canonicalValue": "7",
+        "allowedNarrationForms": [
+          "7"
+        ],
+        "omissionPolicy": "required"
+      },
+      {
+        "id": "atom-count",
+        "type": "number",
+        "sourceSurface": "30",
+        "canonicalValue": "30",
+        "allowedNarrationForms": [
+          "30"
+        ],
+        "omissionPolicy": "required"
+      }
+    ],
+    "terms": [
+      {
+        "id": "term-api",
+        "token": "API",
+        "tokenClass": "initialism",
+        "caseSensitive": true,
+        "allowedWrittenForms": [
+          "API"
+        ],
+        "spokenPolicy": "letter-by-letter",
+        "requiresListeningReview": true
+      },
+      {
+        "id": "term-demo",
+        "token": "demo",
+        "tokenClass": "english-word",
+        "caseSensitive": false,
+        "allowedWrittenForms": [
+          "demo"
+        ],
+        "spokenPolicy": "whole-word",
+        "requiresListeningReview": true
+      },
+      {
+        "id": "term-codex",
+        "token": "Codex",
+        "tokenClass": "brand",
+        "caseSensitive": true,
+        "allowedWrittenForms": [
+          "Codex"
+        ],
+        "spokenPolicy": "brand-pronunciation",
+        "requiresListeningReview": true
+      },
+      {
+        "id": "term-gpt4o",
+        "token": "GPT-4o",
+        "tokenClass": "mixed-version",
+        "caseSensitive": true,
+        "allowedWrittenForms": [
+          "GPT-4o"
+        ],
+        "spokenPolicy": "listening-review",
+        "requiresListeningReview": true
+      },
+      {
+        "id": "term-camelcase",
+        "token": "camelCase",
+        "tokenClass": "code-identifier",
+        "caseSensitive": true,
+        "allowedWrittenForms": [
+          "camelCase"
+        ],
+        "spokenPolicy": "listening-review",
+        "requiresListeningReview": true
+      }
+    ],
+    "gaps": [],
+    "projectId": "zh-ai-terms-001",
+    "sourceRegisterSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "suitabilitySha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "prompt": {
+      "id": "evidence-extractor",
+      "sha256": "afbc91550a50988e4db3759a4515ede6f86b580aa9d052c37130efe7776c5df1"
+    },
+    "generatedAt": "2026-07-22T00:00:00.000Z"
+  },
+  "outputSha256": "130b1ea0867424235e0cf1ab6282f89a848fa4c677ad4edc30e5247ac7527f62"
+}

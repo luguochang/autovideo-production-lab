@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "stage": "internal-delivery-ready",
+  "createdAt": "2026-07-19T00:11:01.701Z",
+  "updatedAt": "2026-07-19T05:20:21.458Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "275s",
+    "platform": "抖音",
+    "audience": "AI 学习者与知识视频观众",
+    "rememberedOutcome": "理解会搭工作流不等于具备可维护的 AI 系统能力",
+    "forbiddenTreatments": "PPT翻页、卡片墙、HUD堆叠、未经证据支持的统计图表",
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T01:34:46.367Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T01:34:46.453Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T04:36:43.564Z",
+      "approvalScope": "internal-autonomous-review",
+      "publicReleaseBlocked": true,
+      "compositionDigest": "511dabbb70c3a7cff499b9084e3726fb47859fb254c1d7a197c2d8acac8c6b75",
+      "compositionFileCount": 50,
+      "checkEvidence": "workflow-console/data/projects/demotext-standard-delivery-v2/artifacts/qa-review/report.json",
+      "notes": "Internal review only. This does not represent user approval or public-release clearance."
+    },
+    "deliveryQa": {
+      "status": "passed-internal-only",
+      "checkedAt": "2026-07-19T05:20:21.270Z",
+      "report": "qa/delivery-report.json",
+      "outputSha256": "e0c4ea6bc7c2c9d603dddc2c904355ebc95d3abb6f575cb5579bd51460bc48db",
+      "publicReleaseBlocked": true
+    }
+  },
+  "nextAction": "Resolve the release blockers in qa/report.json. The current package remains available for internal review only.",
+  "handoffs": {
+    "audio": {
+      "status": "approved",
+      "rightsStatus": "needs-review",
+      "approvalScope": "technical-only",
+      "humanListeningStatus": "not-performed",
+      "publicReleaseBlocked": true,
+      "lock": "audio-handoff.json",
+      "durationSeconds": 239.328167
+    }
+  },
+  "invalidations": [
+    {
+      "at": "2026-07-19T00:20:39.830Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    }
+  ],
+  "deliveries": {
+    "internalReview": {
+      "status": "ready",
+      "video": "renders/demotext-standard-delivery-v2-internal-review.mp4",
+      "cover": "renders/demotext-standard-delivery-v2-cover.png",
+      "manifest": "delivery/delivery-manifest.json",
+      "outputSha256": "e0c4ea6bc7c2c9d603dddc2c904355ebc95d3abb6f575cb5579bd51460bc48db"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "generatedAt": "2026-07-16T02:30:34.034Z",
+  "source": "demo/demoText.txt",
+  "sourceSha256": "ec1a51a269faf0344b2ba93abf21c4a75b8aac51d4a0996bd43ac2c66af33198",
+  "sourceCharacters": 1563,
+  "sourceNonWhitespaceCharacters": 1536,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": 1.05,
+  "segmentCount": 14,
+  "durationSeconds": 301.02891666666665,
+  "wordBoundaryCount": 810,
+  "sentenceBoundaryCount": 46,
+  "captionCueCount": 126,
+  "serviceTranscriptMatchesSource": true,
+  "outputs": {
+    "webm": "narration.webm",
+    "mp3": "narration.mp3",
+    "words": "words.json",
+    "sentences": "sentences.json",
+    "captions": "captions.json",
+    "srt": "subtitles.srt",
+    "vtt": "subtitles.vtt",
+    "sentenceSrt": "sentences.srt"
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "text": "我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。",
+      "start": 0,
+      "duration": 6.452375,
+      "end": 6.452375,
+      "audio": "chunks/000/audio.webm",
+      "metadata": "chunks/000/metadata.json"
+    },
+    {
+      "index": 1,
+      "text": "这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。",
+      "start": 6.452375,
+      "duration": 14.01925,
+      "end": 20.471625,
+      "audio": "chunks/001/audio.webm",
+      "metadata": "chunks/001/metadata.json"
+    },
+    {
+      "index": 2,
+      "text": "AI也并不是你想的那么简单。我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。",
+      "start": 20.471625,
+      "duration": 17.622708333333332,
+      "end": 38.09433333333333,
+      "audio": "chunks/002/audio.webm",
+      "metadata": "chunks/002/metadata.json"
+    },
+    {
+      "index": 3,
+      "text": "尤其是应届生，投了很多简历，说AI并不好找工作。我可以非常明确地告诉你，这个市场上90%的人，他对底层逻辑是完全不清晰的。他不是在构建一个可维护的系统，而是在拼接一个能演示的流程、一个Demo。",
+      "start": 38.09433333333333,
+      "duration": 18.820666666666668,
+      "end": 56.915,
+      "audio": "chunks/003/audio.webm",
+      "metadata": "chunks/003/metadata.json"
+    },
+    {
+      "index": 4,
+      "text": "五个原因，对照一下，自己能理解的，月薪都不会低于30K。",
+      "start": 56.915,
+      "duration": 5.485833333333333,
+      "end": 62.40083333333333,
+      "audio": "chunks/004/audio.webm",
+      "metadata": "chunks/004/metadata.json"
+    },
+    {
+      "index": 5,
+      "text": "第一，平台把系统的复杂性给隐藏起来。低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。好处是普通人可以快速上手，坏处是很多人误以为会拖拽节点就等于懂系统架构。但一旦报错，你根本就不知道是模型问题、接口问题、权限问题、数据问题，还是上下游问题、状态管理问题。",
+      "start": 62.40083333333333,
+      "duration": 32.56425,
+      "end": 94.96508333333333,
+      "audio": "chunks/005/audio.webm",
+      "metadata": "chunks/005/metadata.json"
+    },
+    {
+      "index": 6,
+      "text": "第二点，很多人把原型能力误判成是产品能力。AI最擅长帮你从0到1做一个Demo，每次帮你跑通一次，你就觉得自己做成了。但是真实的产品不是跑通一次就可以了，而是能够长期稳定地运行真实的业务，是有脏数据、异常输入、并发请求、成本控制、隐私安全等一系列的问题。当没有工程底座的时候，你的Demo越漂亮，后面塌得就越快。",
+      "start": 94.96508333333333,
+      "duration": 30.02575,
+      "end": 124.99083333333333,
+      "audio": "chunks/006/audio.webm",
+      "metadata": "chunks/006/metadata.json"
+    },
+    {
+      "index": 7,
+      "text": "第三点，就是我觉得现在短视频它疯狂地在展示结果，没有去展示维护。一个智能体自动生成报告、自动回复客户、自动剪辑视频，它看起来很震惊，但是没有人展示它失败的时候怎么去排查，没人展示日志怎么读，没人展示测试怎么做，没人展示边界条件怎么处理。于是大家看到的是魔法，Magic，它不是Engineering。",
+      "start": 124.99083333333333,
+      "duration": 28.163416666666667,
+      "end": 153.15425,
+      "audio": "chunks/007/audio.webm",
+      "metadata": "chunks/007/metadata.json"
+    },
+    {
+      "index": 8,
+      "text": "第四点，很多人有强烈的弯道超车的心理。AI给了所有非技术的人一个巨大的想象：我不懂代码也能做软件，我不会开发也能创业。这种心理有一部分是真的，因为AI确实降低了表达需求和生成原型的门槛。但危险在于，有些人进一步误解为，不需要懂代码、不需要懂系统、不需要懂工程就能够。不能，最后只是一种自欺欺人。",
+      "start": 153.15425,
+      "duration": 29.58175,
+      "end": 182.736,
+      "audio": "chunks/008/audio.webm",
+      "metadata": "chunks/008/metadata.json"
+    },
+    {
+      "index": 9,
+      "text": "第五点，真正的智能体至少要能回答一些问题：它的任务边界是什么？它失败时应该怎么办？该如何保存和调用上下文？该怎么判断模型输出是否靠谱？它怎么处理工具调用失败？它的数据从哪里来，是否可信？它有没有权限控制和安全机制？有没有日志、监控、测试、回滚机制？它的成本是否可控？最后，它能不能被别人去维护？",
+      "start": 182.736,
+      "duration": 31.994416666666666,
+      "end": 214.73041666666666,
+      "audio": "chunks/009/audio.webm",
+      "metadata": "chunks/009/metadata.json"
+    },
+    {
+      "index": 10,
+      "text": "很多人出了Bug以后，他用AI来去打这个补丁。我说实话，AI打补丁，这个补丁会打得非常大，而且一定是失真的。这些问题，有人回答得上来吗？你回答不上来，它就不是产品，它只是个演示。",
+      "start": 214.73041666666666,
+      "duration": 17.414291666666667,
+      "end": 232.1447083333333,
+      "audio": "chunks/010/audio.webm",
+      "metadata": "chunks/010/metadata.json"
+    },
+    {
+      "index": 11,
+      "text": "今年，真正懂系统的人已经开始胜出了，因为他们把AI从玩具变成了工具，将工具变成了产品，从产品变成了业务的基础设施。",
+      "start": 232.1447083333333,
+      "duration": 11.6725,
+      "end": 243.81720833333333,
+      "audio": "chunks/011/audio.webm",
+      "metadata": "chunks/011/metadata.json"
+    },
+    {
+      "index": 12,
+      "text": "如果你也想把Agent真正地学起来，不只是随便玩一下，而是当作自己的工作，就能拿到一个还不错的薪资。666，拿着我这份耗时三周整理出来的路线和教程，里面就包含了Agent集群、MCP等基础的知识点，以及要去做什么项目。把这些东西都要系统地过一遍，这才是决定你做出来的东西不是Demo，而是能够上线的产品。",
+      "start": 243.81720833333333,
+      "duration": 28.244666666666667,
+      "end": 272.061875,
+      "audio": "chunks/012/audio.webm",
+      "metadata": "chunks/012/metadata.json"
+    },
+    {
+      "index": 13,
+      "text": "当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。就是你去做这个提示词，这个动作是很廉价的，只需要消耗一点Token。但是后面如何去理解你的这个Agent，如何去判断，如何去维护，如何去负责，让它从一个Demo变成一个真正的产品，让它能够跑通你的业务，这个过程是很复杂的，所以这个过程也是很珍贵的。",
+      "start": 272.061875,
+      "duration": 28.967041666666667,
+      "end": 301.02891666666665,
+      "audio": "chunks/013/audio.webm",
+      "metadata": "chunks/013/metadata.json"
+    }
+  ]
+}

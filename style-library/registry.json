@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "autovideo-style-registry/v1",
+  "updatedAt": "2026-07-18",
+  "defaults": {
+    "baseStyleId": "handdrawn-workflow-tutorial",
+    "maxAddonStyles": 2,
+    "reviewProbeSeconds": {"min": 3, "max": 8}
+  },
+  "styles": [
+    {"id":"editorial-data-report","label":"编辑型数据简报","family":"f1","status":"spec-only","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/editorial-data-report/STYLE_GUIDE.md","bestFor":["data","ranking","evidence"]},
+    {"id":"apple-clean-product","label":"苹果式清爽产品","family":"f1","status":"spec-only","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/apple-clean-product/STYLE_GUIDE.md","bestFor":["product","ui","tools"]},
+    {"id":"pixel-card-platform-ui","label":"像素卡片 UI","family":"f1","status":"spec-only","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/pixel-card-platform-ui/STYLE_GUIDE.md","bestFor":["gamified-learning","retro-ui"]},
+    {"id":"magazine-collage-cards","label":"轻量杂志拼贴","family":"f1","status":"spec-only","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/magazine-collage-cards/STYLE_GUIDE.md","bestFor":["screenshots","evidence","creator-education"]},
+    {"id":"monochrome-cyber-editorial-cards","label":"黑白赛博编辑","family":"f1","status":"spec-only","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/monochrome-cyber-editorial-cards/STYLE_GUIDE.md","bestFor":["technical-editorial","high-contrast"]},
+    {"id":"handdrawn-workflow-tutorial","label":"手绘流程教程","family":"f1","status":"spec-only","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/handdrawn-workflow-tutorial/STYLE_GUIDE.md","bestFor":["teaching","workflow","continuous-board"]},
+    {"id":"data-hud-narration","label":"深色数据 HUD 口播","family":"f1","status":"spec-only-opt-in","license":"unknown","sourcePath":"demo/f1/HF_风格与动效库_分享包搭建说明 (1).md","guidePath":"style-library/styles/f1/data-hud-narration/STYLE_GUIDE.md","bestFor":["talking-head","data-hud"]},
+    {"id":"modern-ip-host-explainer","label":"固定二次元主持知识讲解","family":"project-local","status":"approved-project-style","license":"project-generated; user-provided character rights not implied","sourcePath":"style-library/styles/project/modern-ip-host-explainer/","guidePath":"style-library/styles/project/modern-ip-host-explainer/STYLE_GUIDE.md","bestFor":["knowledge","education","host-led-explainer"]},
+    {"id":"swiss-pulse","label":"Swiss Pulse","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/swiss-pulse/STYLE_GUIDE.md","bestFor":["saas","metrics","developer-tools"]},
+    {"id":"velvet-standard","label":"Velvet Standard","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/velvet-standard/STYLE_GUIDE.md","bestFor":["premium","enterprise","keynote"]},
+    {"id":"deconstructed","label":"Deconstructed","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/deconstructed/STYLE_GUIDE.md","bestFor":["security","raw-tech","launch"]},
+    {"id":"maximalist-type","label":"Maximalist Type","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/maximalist-type/STYLE_GUIDE.md","bestFor":["kinetic-type","announcement"]},
+    {"id":"data-drift","label":"Data Drift","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/data-drift/STYLE_GUIDE.md","bestFor":["ai","ml","immersive-data"]},
+    {"id":"soft-signal","label":"Soft Signal","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/soft-signal/STYLE_GUIDE.md","bestFor":["warm-story","wellness"]},
+    {"id":"folk-frequency","label":"Folk Frequency","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/folk-frequency/STYLE_GUIDE.md","bestFor":["consumer","community","festive"]},
+    {"id":"shadow-cut","label":"Shadow Cut","family":"hyperframes-official","status":"official-preset","license":"Apache-2.0","sourcePath":"vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md","guidePath":"style-library/styles/official/shadow-cut/STYLE_GUIDE.md","bestFor":["investigative","dramatic","cinematic"]}
+  ]
+}

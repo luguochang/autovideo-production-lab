@@ -1,0 +1,18 @@
+{
+  "objects": [
+    {"id": "rag", "title": "RAG", "subtitle": "先检索，再生成", "x": -520, "y": 0, "color": "#167d7f"},
+    {"id": "retrieval", "title": "检索", "subtitle": "找到可信上下文", "x": 260, "y": -130, "color": "#db695f"},
+    {"id": "generation", "title": "生成", "subtitle": "基于证据回答", "x": 1040, "y": 110, "color": "#5e72b8"}
+  ],
+  "operations": [
+    {"at": 0.2, "op": "add", "target": "rag", "duration": 0.7},
+    {"at": 1.2, "op": "highlight", "target": "rag", "duration": 0.45, "scale": 1.12},
+    {"at": 2.0, "op": "move", "target": "rag", "duration": 0.8, "x": -720, "y": -260, "scale": 0.72},
+    {"at": 2.9, "op": "add", "target": "retrieval", "duration": 0.65},
+    {"at": 3.7, "op": "camera", "duration": 1.1, "x": 260, "y": -60, "zoom": 1.08},
+    {"at": 4.9, "op": "add", "target": "generation", "duration": 0.65},
+    {"at": 5.7, "op": "camera", "duration": 1.2, "x": 850, "y": 20, "zoom": 1.18},
+    {"at": 7.0, "op": "highlight", "target": "generation", "duration": 0.45, "scale": 1.12}
+  ],
+  "duration": 8
+}

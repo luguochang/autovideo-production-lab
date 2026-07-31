@@ -1,0 +1,16 @@
+{
+  "duration": 8,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#host-zone", "bySec": 0.9},
+    {"kind": "appearsBy", "selector": "#keyword-a", "bySec": 1.1},
+    {"kind": "appearsBy", "selector": "#caption-a", "bySec": 0.6},
+    {"kind": "appearsBy", "selector": "#keyword-b", "bySec": 4.1},
+    {"kind": "appearsBy", "selector": "#keyword-c", "bySec": 6.4},
+    {"kind": "before", "a": "#keyword-a", "b": "#keyword-b"},
+    {"kind": "before", "a": "#keyword-b", "b": "#keyword-c"},
+    {"kind": "staysInFrame", "selector": "#host-zone"},
+    {"kind": "staysInFrame", "selector": "#content-zone"},
+    {"kind": "staysInFrame", "selector": "#caption-shell"},
+    {"kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 1.8}
+  ]
+}

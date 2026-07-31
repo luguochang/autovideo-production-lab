@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-recovery-attestation/v1",
+  "projectId": "PROJECT_ID",
+  "status": "verified-to-human-gate",
+  "resumedFromRunId": "PRIOR_RUN_ID",
+  "reached": {
+    "status": "waiting-for-human",
+    "stageId": "HUMAN_GATE_STAGE_ID"
+  },
+  "attestation": {
+    "confirmedHuman": false,
+    "reviewerType": "human",
+    "reviewer": "REAL_HUMAN_NAME_REQUIRED",
+    "reviewedAt": null
+  },
+  "metrics": {
+    "elapsedSeconds": 0,
+    "humanMinutes": 0,
+    "cpuSeconds": 0,
+    "gpuSeconds": 0,
+    "modelCalls": 0,
+    "retryCount": 0,
+    "overrideCount": 0,
+    "assetReuseCount": 0,
+    "assetCandidateCount": 0,
+    "recipeReuseCount": 0,
+    "recipeOpportunityCount": 0,
+    "reworkCount": 0
+  },
+  "bindings": {
+    "realProject": {
+      "path": "receipts/scale/real-project.json",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "standardRun": {
+      "path": "STANDARD_RUN_RECEIPT.json",
+      "sha256": "SHA256_REQUIRED"
+    }
+  }
+}

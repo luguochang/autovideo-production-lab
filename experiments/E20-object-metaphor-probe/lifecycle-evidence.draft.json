@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "object-metaphor",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E20-object-metaphor-probe",
+    "path": "experiments/E20-object-metaphor-probe",
+    "durationSeconds": 8,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E20-object-metaphor-probe/INVARIANT_AUDIT.json",
+        "sha256": "d3fb67013a63889e97d3580263f757cb7c4fef804e3cf32c9e35c4b5204c1b35"
+      },
+      "passed": true,
+      "checks": {
+        "landscape16x9": true,
+        "lightApricotBackground": true,
+        "qVersionHostAssets": true,
+        "hostLeft": true,
+        "contentRight": true,
+        "captionPersistent": true,
+        "contentWorldOnlyCamera": true
+      }
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E20-object-metaphor-probe/AssetManifest.json",
+      "sha256": "4564008286b83365fc6881f52aa502a542ac4b8fe41f2d89567337fc150595b3"
+    },
+    "stills": [
+      {
+        "path": "experiments/E20-object-metaphor-probe/snapshots/frame-03-at-3.7s.png",
+        "sha256": "26edefd70a0964ca1e8171f2d589dd034ed8ee99b2ce68e5eefb7d6ca5686d7c"
+      },
+      {
+        "path": "experiments/E20-object-metaphor-probe/snapshots/frame-07-at-7.76s.png",
+        "sha256": "ac070f44d4ccec0164dfc630fcef55c2172cd49f20054f13506faa99af9580a1"
+      },
+      {
+        "path": "experiments/E20-object-metaphor-probe/snapshots/contact-sheet.jpg",
+        "sha256": "ce2a0db9ec5c7cf1a22ce342af5f1e7d75cb0ce8fd062c18ba4f3378eca86977"
+      }
+    ],
+    "motionProbe": {
+      "path": "experiments/E20-object-metaphor-probe/renders/object-metaphor-probe.mp4",
+      "sha256": "8cfb3eec66985839e360bb2ccedcb11d5d27fbc086a3f75fea840534274a7bd3"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E20-object-metaphor-probe/strict-check.log",
+        "sha256": "e40aa7f8602d62053db19ed95e88880fcf10507f9cc4f46d0c7458a0f78f0458"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": true,
+      "findingCount": 0,
+      "version": "0.7.67"
+    },
+    "visualReview": null,
+    "officialReuseObserved": [
+      {
+        "kind": "official-blueprint",
+        "id": "spatial-pan-stations",
+        "implementation": {
+          "path": "experiments/E20-object-metaphor-probe/index.html",
+          "sha256": "9fab982fc1ecfcc478fd6bf10ae4ec53e506c6f05119ebc5481f6ae2430daffc"
+        }
+      },
+      {
+        "kind": "official-motion-rule",
+        "id": "svg-path-draw",
+        "implementation": {
+          "path": "experiments/E20-object-metaphor-probe/index.html",
+          "sha256": "9fab982fc1ecfcc478fd6bf10ae4ec53e506c6f05119ebc5481f6ae2430daffc"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "autovideo-motion-probe-invariant-audit/v1",
+  "projectId": "E18-code-proof-probe",
+  "recipeId": "code-proof",
+  "recipeVersion": "1.0.0",
+  "composition": {
+    "path": "experiments/E18-code-proof-probe/index.html",
+    "sha256": "111fed9560a9ed19de874a6ec150b3dc74d3c5387db663417e6be1d68f3958c9"
+  },
+  "passed": true,
+  "checks": {
+    "landscape16x9": true,
+    "lightApricotBackground": true,
+    "singleQVersionHostAsset": true,
+    "hostLeft": true,
+    "contentRight": true,
+    "captionPersistent": true,
+    "contentWorldOnlyCamera": true,
+    "sameE06NarrationLock": true,
+    "sameE06AudioWindow": true,
+    "codeEvidenceFrozenLocally": true,
+    "officialCodeHighlightReceipt": true,
+    "noIframe": true,
+    "onlineRenderAssetsAbsent": true,
+    "sfxAbsentAndUnapproved": true,
+    "lifecycleApplyNotExecuted": true
+  },
+  "evidence": {
+    "format": "index.html declares 1920x1080, 30fps and 8 seconds",
+    "background": {
+      "css": "#F2DFC7",
+      "sampleFrame": "snapshots/frame-07-at-7.76s.png",
+      "pixelSamples": [
+        {"x": 1900, "y": 20, "hex": "#F2DFC7"},
+        {"x": 1850, "y": 850, "hex": "#F2DFC7"},
+        {"x": 10, "y": 500, "hex": "#F2DFC7"}
+      ]
+    },
+    "host": "One approved transparent image_001 pose is mounted in host.left and never changes zone.",
+    "zones": "DOM data-zone values bind host.left, content.right, and caption.",
+    "camera": "Only #editor-camera transforms; it is a descendant of #content-world while host and caption remain siblings outside it.",
+    "narration": {
+      "narrationLockSha256": "94fc95ce2b07dbbb2eb7745e2bc4856d209ffcfdc9b5df98bd45a1ad3ed141fa",
+      "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4"
+    },
+    "codeEvidence": {
+      "source": "workflow-console/server.mjs",
+      "sourceSha256": "b3e0183398be326d77e06f256c1ca9f0cd874ec95e95ff02cfb29c1f905f9f9d",
+      "lineRange": "281-293",
+      "frozenExcerptPath": "input/server-source-excerpt.txt",
+      "frozenExcerptSha256": "6a5aa3f402668f1f47153cb3f06559ba772a9abc4c7485a33fbc78126fd02637",
+      "focusSelectors": ["#code-row-running", "#code-row-generate", "#code-row-promote"]
+    },
+    "determinism": "One synchronous paused GSAP timeline; fixed transforms and threshold sequences; no Date, random, fetch, iframe, event listener, or tween-time DOM measurement.",
+    "audio": "Narration only. No SFX file, manifest record, or approval claim exists."
+  }
+}

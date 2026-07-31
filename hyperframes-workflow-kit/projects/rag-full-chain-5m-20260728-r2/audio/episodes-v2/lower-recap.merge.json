@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "autovideo-breath-merge/v1",
+  "targetGapSeconds": 0.56,
+  "parts": [
+    {
+      "id": "lower-recap-part-01",
+      "path": "lower-recap-part-01.wav",
+      "sha256": "0d3c8cc1c3944a83c905025bd469f017ce20056a11b4eb1586ffd4dae4854e49"
+    },
+    {
+      "id": "lower-recap-part-02",
+      "path": "lower-recap-part-02.wav",
+      "sha256": "ef3e2804dda3b181ecb18f3325ae21a59678f81817cfaa2696183fade11cfbdf"
+    }
+  ],
+  "output": "lower-recap.wav",
+  "receipt": "lower-recap.merge.recipe.json"
+}

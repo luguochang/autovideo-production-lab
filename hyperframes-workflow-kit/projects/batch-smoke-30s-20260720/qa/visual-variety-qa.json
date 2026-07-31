@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "autovideo-visual-variety-qa/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-22T12:27:53.105Z",
+  "machine": {
+    "status": "passed",
+    "shotCount": 6,
+    "visualTypeCounts": {
+      "comparison": 1,
+      "diagram": 2,
+      "keyword": 3
+    },
+    "recipeCounts": {
+      "comparison-split": 1,
+      "diagram-build": 2,
+      "keyword-handoff": 3
+    },
+    "uniqueVisualTypes": 3,
+    "uniqueRecipes": 3,
+    "nonKeywordCount": 3,
+    "dominantVisualType": {
+      "id": "keyword",
+      "count": 3,
+      "ratio": 0.5
+    },
+    "dominantRecipe": {
+      "id": "keyword-handoff",
+      "count": 3,
+      "ratio": 0.5
+    },
+    "maximumRuns": {
+      "sameVisualType": 1,
+      "sameRecipe": 1,
+      "keywordOnly": 1
+    },
+    "assetBackedCount": 0,
+    "adapterBackedCount": 0,
+    "verifiedAdapterBackedCount": 0,
+    "verifiedCarrierEvidence": [],
+    "shotChecks": [
+      {
+        "cueId": "cue-001",
+        "visualType": "keyword",
+        "recipeId": "keyword-handoff",
+        "screenTextRatio": 0.235,
+        "summaryCompressed": true,
+        "graphBound": true,
+        "assetBound": true,
+        "primaryAssetIds": [],
+        "supportingAssetIds": []
+      },
+      {
+        "cueId": "cue-002",
+        "visualType": "diagram",
+        "recipeId": "diagram-build",
+        "screenTextRatio": 0.096,
+        "summaryCompressed": true,
+        "graphBound": true,
+        "assetBound": true,
+        "primaryAssetIds": [],
+        "supportingAssetIds": []
+      },
+      {
+        "cueId": "cue-003",
+        "visualType": "keyword",
+        "recipeId": "keyword-handoff",
+        "screenTextRatio": 0.222,
+        "summaryCompressed": true,
+        "graphBound": true,
+        "assetBound": true,
+        "primaryAssetIds": [],
+        "supportingAssetIds": []
+      },
+      {
+        "cueId": "cue-004",
+        "visualType": "comparison",
+        "recipeId": "comparison-split",
+        "screenTextRatio": 0.226,
+        "summaryCompressed": true,
+        "graphBound": true,
+        "assetBound": true,
+        "primaryAssetIds": [],
+        "supportingAssetIds": []
+      },
+      {
+        "cueId": "cue-005",
+        "visualType": "diagram",
+        "recipeId": "diagram-build",
+        "screenTextRatio": 0.143,
+        "summaryCompressed": true,
+        "graphBound": true,
+        "assetBound": true,
+        "primaryAssetIds": [],
+        "supportingAssetIds": []
+      },
+      {
+        "cueId": "cue-006",
+        "visualType": "keyword",
+        "recipeId": "keyword-handoff",
+        "screenTextRatio": 0.462,
+        "summaryCompressed": true,
+        "graphBound": true,
+        "assetBound": true,
+        "primaryAssetIds": [],
+        "supportingAssetIds": []
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "No cue has a frozen supporting asset; semantic visual candidates should be reviewed before full production.",
+      "No semantic SFX is planned; silence is valid, but review whether one or two state-change cues need restrained punctuation."
+    ]
+  },
+  "fixedBrandShell": {
+    "host": "host.left",
+    "background": "#F2DFC7",
+    "captions": "persistent",
+    "cameraScope": "content-world-only"
+  },
+  "humanReview": {
+    "status": "needs-review",
+    "note": "Machine distribution checks do not replace motion-probe and Studio full-timeline review."
+  },
+  "bindings": {
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "fdb40806066bece7a91a849a76dea7c4be62fcd0300c6fd5e5ee964650931855"
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "2312308e48a1601ec806d5211df302b45e4c249181dd55277087b6b085efff2b"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "af8b270a58b4f339fab4fac0993ec32e50a237416fc957cb92e68f77c43d6f82"
+    }
+  }
+}

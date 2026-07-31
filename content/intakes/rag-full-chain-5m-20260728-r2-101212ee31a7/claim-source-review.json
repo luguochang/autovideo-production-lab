@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "autovideo-claim-source-review/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "bindings": {
+    "sourcesSha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd",
+    "suitabilitySha256": "e72821d494bdf3f3ed964c2a1e79d049b933fd2a738e2a2e69c126899017874b",
+    "evidenceSha256": "58e972b2d0b3f5d0783c4c4cb223578be35d2af7b6563fddb7277a4ba23b7cf6",
+    "spokenRewriteSha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018",
+    "durationFitSha256": "a2c921e2d44dc19bbbf215120e81fba46d80a7e78fc8bd2ca2469f7811de0fad"
+  },
+  "status": "passed",
+  "checks": {
+    "registeredSources": true,
+    "knownClaims": true,
+    "sourceBindings": true,
+    "exactQuotes": true,
+    "sectionPolicies": true
+  },
+  "issues": [],
+  "reviewedAt": "2026-07-28T09:04:03.433Z",
+  "reviewerType": "machine-contract"
+}

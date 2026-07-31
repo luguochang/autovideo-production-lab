@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "autovideo-semantic-episodes/v1",
+  "outputs": [
+    {
+      "episode": 1,
+      "durationSeconds": 808.826,
+      "path": "episode-1",
+      "chapterCount": 7,
+      "captionCount": 216
+    },
+    {
+      "episode": 2,
+      "durationSeconds": 1099.715,
+      "path": "episode-2",
+      "chapterCount": 10,
+      "captionCount": 285
+    }
+  ]
+}

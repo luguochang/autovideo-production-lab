@@ -1,0 +1,19 @@
+{
+  "duration": 8,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#host-zone", "bySec": 0.9},
+    {"kind": "appearsBy", "selector": "#graph-node-model", "bySec": 1.1},
+    {"kind": "appearsBy", "selector": "#graph-node-api", "bySec": 2.0},
+    {"kind": "appearsBy", "selector": "#graph-node-tools", "bySec": 2.72},
+    {"kind": "appearsBy", "selector": "#caption-a", "bySec": 0.6},
+    {"kind": "appearsBy", "selector": "#caption-b", "bySec": 3.5},
+    {"kind": "appearsBy", "selector": "#caption-c", "bySec": 5.8},
+    {"kind": "appearsBy", "selector": "#relation-summary", "bySec": 7.1},
+    {"kind": "before", "a": "#graph-node-model", "b": "#graph-node-api"},
+    {"kind": "before", "a": "#graph-node-api", "b": "#graph-node-tools"},
+    {"kind": "staysInFrame", "selector": "#host-zone"},
+    {"kind": "staysInFrame", "selector": "#content-zone"},
+    {"kind": "staysInFrame", "selector": "#caption-shell"},
+    {"kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 1.4}
+  ]
+}

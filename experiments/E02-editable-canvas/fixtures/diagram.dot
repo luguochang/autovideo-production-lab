@@ -1,0 +1,14 @@
+digraph RAG {
+  graph [id="diagram-rag", rankdir="LR", bgcolor="transparent", pad="0.2", nodesep="0.55"];
+  node [shape="rect", style="rounded,filled", fillcolor="#F7F3EA", color="#213547", fontname="Microsoft YaHei", fontsize="16", margin="0.18,0.12"];
+  edge [color="#4D8076", penwidth="2", arrowsize="0.8"];
+
+  source [id="node-source", label="知识库"];
+  retrieve [id="node-retrieve", label="检索"];
+  model [id="node-model", label="大模型"];
+  answer [id="node-answer", label="回答"];
+
+  source -> retrieve [id="edge-source-retrieve"];
+  retrieve -> model [id="edge-retrieve-model"];
+  model -> answer [id="edge-model-answer"];
+}

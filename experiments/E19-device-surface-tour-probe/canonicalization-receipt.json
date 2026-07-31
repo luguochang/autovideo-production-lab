@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-motion-probe-canonicalization-receipt/v1",
+  "projectId": "E19-device-surface-tour-probe",
+  "recipeId": "device-surface-tour",
+  "recipeVersion": "1.0.0",
+  "recipeDefinitionSha256": "ab43b1325584c384dc16717e59d0b2b92ad302edf822c14be63ff574b08f5b43",
+  "canonicalizer": "tools/motion-recipe-lifecycle/canonicalize-probe.mjs",
+  "inputs": {
+    "config": {
+      "path": "experiments/E19-device-surface-tour-probe/probe-canonicalization.json",
+      "sha256": "3a417cfc6b5166ad34f7470dc15d053e77eff1f04bbd51beb793d9e86062c9df"
+    },
+    "narrationLock": {
+      "path": "experiments/E19-device-surface-tour-probe/NarrationLock.json",
+      "sha256": "085c2a9c8905298ba2c541919e0cbf620ad4811a3696626c5c5ee0651c4ecf84"
+    },
+    "invariantAudit": {
+      "path": "experiments/E19-device-surface-tour-probe/INVARIANT_AUDIT.json",
+      "sha256": "31964804a093fbf14e0c11e2c3257dad939392c4f3082cae6f894298c96f52c1"
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E19-device-surface-tour-probe/AssetManifest.json",
+      "sha256": "3741defc63b54e3e3ecabd873cbec97c8385ed6b5d881b578c5517777cea7aad"
+    },
+    "strictCheck": {
+      "path": "experiments/E19-device-surface-tour-probe/strict-check.log",
+      "sha256": "67831172dbb28072f1a087101c3516c8a05fe48eefe4fddee8fa4478ed8b6f70"
+    },
+    "render": {
+      "path": "experiments/E19-device-surface-tour-probe/renders/device-surface-tour-probe.mp4",
+      "sha256": "aaf0b18d7cd6bffaf509e4818c84d65ea7a5014b34ccae4103c6b523e514d84d"
+    }
+  },
+  "humanReviewInvented": false,
+  "lifecycleMutationApplied": false,
+  "evidence": {
+    "path": "experiments/E19-device-surface-tour-probe/lifecycle-evidence.draft.json",
+    "sha256": "62ceb7d5340e1affb3fbc6bb9ea432afc61fceb7133900aee5cd805db817c196"
+  }
+}

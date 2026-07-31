@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-motion-probe-invariant-audit/v1",
+  "projectId": "E16-comparison-split-probe",
+  "recipeId": "comparison-split",
+  "recipeVersion": "1.0.0",
+  "composition": {
+    "path": "experiments/E16-comparison-split-probe/index.html",
+    "sha256": "6feda0b686b18a0e70ece77a825e6a8c91c7fd4689d8feb629e406e2b52ca510",
+    "hashAlgorithm": "SHA-256"
+  },
+  "passed": true,
+  "lifecycleState": "candidate",
+  "humanReview": "pending",
+  "checks": {
+    "landscape16x9": true,
+    "rootDurationExactly6Seconds": true,
+    "videoStream1920x1080At30fps": true,
+    "lightApricotBackground": true,
+    "qVersionHostAssets": true,
+    "singleHostImageFixedThroughout": true,
+    "hostLeft": true,
+    "contentRight": true,
+    "exactlyTwoComparisonStates": true,
+    "equalCssFootprints": true,
+    "captionPersistent": true,
+    "contentWorldOnlyCamera": true,
+    "noFullFrameCamera": true,
+    "noThirdState": true,
+    "noPageCut": true
+  },
+  "evidence": {
+    "format": "index.html declares root 1920x1080, 30fps and 6 seconds; rendered video has 180 frames at 30fps",
+    "background": "CSS source is #F2DFC7; stage fill covers the full frame",
+    "host": "AssetManifest binds one approved normalized present-pose PNG from E06; host-zone has fixed host.left geometry and no timeline transform",
+    "zones": "DOM data-zone values bind host.left, content.right and caption",
+    "comparison": "DOM contains exactly #state-apparent and #state-actual with the same 488x480 CSS footprint; #contrast-axis is a connector rule, not a state",
+    "camera": "content-world declares content-world-only and no host or caption element is inside it",
+    "motion": "Timeline labels mirror the required 0-1.92s entry, 1.92-4.44s readable focus shift, 4.44-5.25s selected handoff, and 5.25-6.00s hold",
+    "audio": "WAV is an exact six-second, 48kHz mono PCM derivative of the first E06 narration window"
+  }
+}

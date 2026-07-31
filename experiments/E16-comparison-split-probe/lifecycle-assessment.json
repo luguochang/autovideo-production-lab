@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-assessment/v1",
+  "projectId": "E16-comparison-split-probe",
+  "recipeId": "comparison-split",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "readiness": {
+    "compositionPresent": true,
+    "invariantAuditPresent": true,
+    "narrationLockPresent": true,
+    "assetManifestPresent": true,
+    "sourceReceiptPresent": true,
+    "strictCheckPassed": true,
+    "renderPresent": true,
+    "renderQaPresent": true,
+    "humanReview": "pending"
+  },
+  "apply": {
+    "executed": false,
+    "reason": "Probe is awaiting explicit user visual approval and must not be promoted automatically."
+  }
+}

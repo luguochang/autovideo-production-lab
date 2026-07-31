@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "check": "npx --yes hyperframes@0.7.62 check --snapshots --strict",
+    "snapshot": "npx --yes hyperframes@0.7.62 snapshot --at 1.2,4.6,6.8,7.8 --output review/snapshots --no-end",
+    "render:probe": "npx --yes hyperframes@0.7.62 render --quality draft --output review/modern-ip-host-explainer-probe.mp4"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "autovideo-overrides/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "revision": 0,
+  "createdAt": "2026-07-20T13:47:55.003Z",
+  "createdBy": "automation:sop-status-sync",
+  "approvalStatus": "not-applicable-empty",
+  "base": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c"
+    },
+    "templateLock": {
+      "path": "template-lock.json",
+      "sha256": "157f1ff6a5b38649a8319b272aaba53e9997a4c8738b41570791d46a2226f8ca"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e"
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "2312308e48a1601ec806d5211df302b45e4c249181dd55277087b6b085efff2b"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "fdb40806066bece7a91a849a76dea7c4be62fcd0300c6fd5e5ee964650931855"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "af8b270a58b4f339fab4fac0993ec32e50a237416fc957cb92e68f77c43d6f82"
+    }
+  },
+  "policy": {
+    "emptyMeans": "No manual overrides have been recorded.",
+    "stableTargetIdsRequired": true,
+    "invalidationReceiptRequired": true,
+    "directProductionEditsAllowed": false
+  },
+  "overrides": [],
+  "updatedAt": "2026-07-22T11:27:05.623Z",
+  "updatedBy": "automation:sop-status-sync",
+  "baseRebaseReason": "Upstream production inputs changed before any manual override was recorded."
+}

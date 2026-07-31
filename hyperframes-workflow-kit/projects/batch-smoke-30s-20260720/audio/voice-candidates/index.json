@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "autovideo-voice-candidate-index/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "baselineCandidateId": "baseline-4862800600e4",
+  "generatedCandidateIds": [
+    "candidate-003"
+  ],
+  "activeCandidateIds": [
+    "baseline-4862800600e4",
+    "candidate-003"
+  ],
+  "updatedAt": "2026-07-22T09:28:46.522Z"
+}

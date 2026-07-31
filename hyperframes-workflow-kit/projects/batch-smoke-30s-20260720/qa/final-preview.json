@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "autovideo-final-preview-internal-approval/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "approved-internal-only",
+  "releaseScope": "internal-only",
+  "approvalScope": "internal-autonomous-review",
+  "approvedBy": "codex-creator-delegated",
+  "approvedAt": "2026-07-23T05:21:06.045Z",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "previewStartedAt": "2026-07-23T05:21:05.968Z",
+  "previewUrl": "http://127.0.0.1:3409/",
+  "composition": "production/hyperframes",
+  "compositionDigest": "a33228e76b3851e1d6c776460241ad71259396810c4f45794f96b01949d8957d",
+  "fileCount": 43,
+  "files": [
+    {
+      "path": "assets/audio/narration.final.wav",
+      "bytes": 3053636,
+      "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+    },
+    {
+      "path": "assets/audio/sfx/sfx-click-soft.mp3",
+      "bytes": 11702,
+      "sha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    {
+      "path": "assets/audio/sfx/sfx-whoosh-short.mp3",
+      "bytes": 18390,
+      "sha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    {
+      "path": "assets/host/close.png",
+      "bytes": 305939,
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/question.png",
+      "bytes": 382765,
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "bytes": 72779,
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "assets/runtime/JetBrainsMono-400.woff2",
+      "bytes": 21168,
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    },
+    {
+      "path": "assets/runtime/JetBrainsMono-700.woff2",
+      "bytes": 21908,
+      "sha256": "d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.html",
+      "bytes": 14976,
+      "sha256": "7e315313ab294090be43ee1771f2c020222f14b6573f7536272bc6adf742f92f"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.motion.json",
+      "bytes": 414,
+      "sha256": "4023a61da663ac94a5398f36c71d881f70d01c7eb2e797198dd1de6d9cf82852"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.html",
+      "bytes": 17216,
+      "sha256": "a0be9302ab0f504e7d99f6bd95850aba728a0f75526b3c8a4bf64744deb790df"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.motion.json",
+      "bytes": 415,
+      "sha256": "9b9dbfd984a68afb9a41312c09838949abdc3bf9f0020ec425c864e6c13c52c4"
+    },
+    {
+      "path": "data/alignment.json",
+      "bytes": 33992,
+      "sha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "bytes": 16269,
+      "sha256": "af8b270a58b4f339fab4fac0993ec32e50a237416fc957cb92e68f77c43d6f82"
+    },
+    {
+      "path": "data/graph-layout.json",
+      "bytes": 11565,
+      "sha256": "ae485945020d2f588a5ff9a4a5a2822efeaf9fdaae0ce078359b0967e409fb5f"
+    },
+    {
+      "path": "data/hyperframes-check.internal.strict.json",
+      "bytes": 10320,
+      "sha256": "4294389842a15e9305f1a89e271d679f170609669ec98291edefb1f4678e6d8c"
+    },
+    {
+      "path": "data/motion-recipe-library.json",
+      "bytes": 15305,
+      "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+    },
+    {
+      "path": "data/motion-recipe-lifecycle.json",
+      "bytes": 4227,
+      "sha256": "76146211541157efe896f95130c67cbf7c5616caff82712dbc36e9af58137b07"
+    },
+    {
+      "path": "data/overrides.json",
+      "bytes": 1552,
+      "sha256": "854edcd93f60c3cf996687dda925a6fae5694447a9673078cf64c16765dfdce4"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "bytes": 18359,
+      "sha256": "f2dfead138241d12b56f48cd10cccceca26e043c9a57bbdacca62f415ab551dc"
+    },
+    {
+      "path": "data/semantic-sfx-compile.json",
+      "bytes": 1619,
+      "sha256": "0e636f93f0e9bed90c9a522c71e2e7710062fb799489331333d534012583dffc"
+    },
+    {
+      "path": "data/semantic-sfx-plan.json",
+      "bytes": 3274,
+      "sha256": "de50bbaa78f034b6ad2375a0e3b303cea8a4caaa1a1d264de1f52082411df63a"
+    },
+    {
+      "path": "data/semantic-sfx-review.json",
+      "bytes": 2146,
+      "sha256": "d6ea35a9688873190d2b78c160e16ea7b7b5000994156711a3526b969830fc20"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "bytes": 10592,
+      "sha256": "fdb40806066bece7a91a849a76dea7c4be62fcd0300c6fd5e5ee964650931855"
+    },
+    {
+      "path": "data/source-map.json",
+      "bytes": 10231,
+      "sha256": "1ac6e795be420035736b4041e9e7f1eefeda5c66b2d84c8b84063568ba38419d"
+    },
+    {
+      "path": "hyperframes.json",
+      "bytes": 318,
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "index.html",
+      "bytes": 36962,
+      "sha256": "ec340702eb61353a5c3ad76b13125e435fa501fed8d936b1e18b1825312709f5"
+    },
+    {
+      "path": "index.motion.json",
+      "bytes": 463,
+      "sha256": "754cd1539d0b3062876f300accce4a89f6060c2df670c15b0af4bd70c36d4b95"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 187,
+      "sha256": "39ab9531229c64efeb64ae8a3994507679f4b6328406bb01581ba859b7dc1104"
+    },
+    {
+      "path": "package.json",
+      "bytes": 343,
+      "sha256": "1934fa5cab8165657004b73d59a69f9620a0aa900ed0f55c18db8a92d01ea667"
+    },
+    {
+      "path": "snapshots/contact-sheet.jpg",
+      "bytes": 187993,
+      "sha256": "490856dcacabec7ba1d21eafd663d6d56a7f128e7abda7424c07d3b734169deb"
+    },
+    {
+      "path": "snapshots/frame-00-at-0.0s.png",
+      "bytes": 433673,
+      "sha256": "c3e10c85180b3668a0b752ba92c7fafa7e7deb2869e5563d7da4a1ed32c041a4"
+    },
+    {
+      "path": "snapshots/frame-00-at-1.99s.png",
+      "bytes": 432911,
+      "sha256": "fe6552b8105d546a5fec7473c8e46c518bf5528cab4c1ccae26593149776ff06"
+    },
+    {
+      "path": "snapshots/frame-01-at-13.1s.png",
+      "bytes": 464701,
+      "sha256": "8bd1b559564e14d6d54a1449ca78308364f3271b3d5e1a2cb689246b47bb2c5a"
+    },
+    {
+      "path": "snapshots/frame-01-at-8.4s.png",
+      "bytes": 445444,
+      "sha256": "7c2c0464615a9ace95ab0287337428099765db1eef86605098eab850ed181395"
+    },
+    {
+      "path": "snapshots/frame-02-at-14.44s.png",
+      "bytes": 421157,
+      "sha256": "3dbcf7353145e7c092d28a71199f8885569cbada96caadf87d48e5fbe8ee5011"
+    },
+    {
+      "path": "snapshots/frame-02-at-16.4s.png",
+      "bytes": 366780,
+      "sha256": "36a3857320a99351c58b80d71b108f8e8930b9800f6b43ce1a253db3b831fa76"
+    },
+    {
+      "path": "snapshots/frame-03-at-18.44s.png",
+      "bytes": 391868,
+      "sha256": "ce579254a15427ba5d2978a0032086a26923dadd5a621c056d82a26685fd073e"
+    },
+    {
+      "path": "snapshots/frame-03-at-21.4s.png",
+      "bytes": 404370,
+      "sha256": "64396b81e7c1b93f623a7741cffe693d8897068c87e0efd5bfdbd2eff0c9d968"
+    },
+    {
+      "path": "snapshots/frame-04-at-25.24s.png",
+      "bytes": 402336,
+      "sha256": "95e23ca08159272d1dcf4584407444258f2dd330f041973fdb8558fc294f6ee8"
+    },
+    {
+      "path": "snapshots/frame-04-at-32.2s.png",
+      "bytes": 387919,
+      "sha256": "0824ef2c8fcaedf40c039c2063a5fe3a250fc2edd15c6c6bd7568ca8ef9e78b2"
+    },
+    {
+      "path": "snapshots/frame-05-at-30.734s.png",
+      "bytes": 383799,
+      "sha256": "95aa28a550384894c13de4b063ae96af4e47562a45e7febe97c2530dcb80247a"
+    },
+    {
+      "path": "snapshots/frame-06-at-31.193s.png",
+      "bytes": 383803,
+      "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+    }
+  ],
+  "internalReview": {
+    "path": "qa/internal-final-review.json",
+    "sha256": "1c69be4b8cd9e381f6d8ce683362618562a1918b9bd12bf0c1ff9d67518993c2"
+  },
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

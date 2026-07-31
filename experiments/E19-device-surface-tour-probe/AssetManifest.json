@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "autovideo-probe-asset-manifest/v1",
+  "projectId": "E19-device-surface-tour-probe",
+  "releaseScope": "internal-probe-only",
+  "assets": [
+    {
+      "id": "host-present-transparent",
+      "type": "image",
+      "path": ".media/images/host.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "experiments/E17-evidence-pivot-click-probe/.media/images/image_001.png",
+      "derivedFrom": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+        "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780"
+      },
+      "provider": "media-use/local-ingest",
+      "license": "derived from user-provided asset; publication rights not implied",
+      "purpose": "single fixed host.left presenter"
+    },
+    {
+      "id": "workbench-evidence-capture",
+      "type": "image",
+      "path": ".media/images/workbench.png",
+      "inputPath": "input/workbench-evidence.png",
+      "sha256": "9665b8c53c9cad5cbb235fa087836e5092405ec5ab18c908cf9aee0f28c15e80",
+      "dimensions": "1265x712",
+      "source": "frozen real local AutoVideo workflow-console capture supplied for E19",
+      "provider": "local-ui-capture",
+      "license": "project-generated local UI capture; internal probe only; public-release rights not asserted",
+      "purpose": "one immutable source image cropped into project/input, workflow graph, and inspector/evidence surfaces"
+    },
+    {
+      "id": "narration-window",
+      "type": "voice",
+      "path": ".media/audio/voice/narration.wav",
+      "inputPath": "input/narration-window.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "durationSeconds": 8,
+      "format": "PCM s16le, 48 kHz, mono",
+      "source": "byte-identical frozen narration window",
+      "provider": "local-file-reference",
+      "license": "project-local generated narration; internal probe only",
+      "purpose": "same-narration-window lifecycle probe"
+    },
+    {
+      "id": "app-showcase-reference",
+      "type": "official-registry-block-reference",
+      "path": "references/official/app-showcase.html",
+      "sha256": "c7e1b4d8ec2a2c1f70a8ed67a147ba5c4985074eb475d611b2bec6d921b10ade",
+      "registryItemPath": "references/official/app-showcase.registry-item.json",
+      "registryItemSha256": "c1cc7ac0ec8d959e2c27b2178d770aa9df126967f8e4f866876a9c6053d690dc",
+      "provider": "HyperFrames official registry",
+      "license": "Apache-2.0",
+      "purpose": "reference for three persistent product surfaces with one ordered focus path"
+    },
+    {
+      "id": "device-surface-showcase-blueprint",
+      "type": "official-blueprint-reference",
+      "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/blueprints/device-surface-showcase.md",
+      "sourceSha256": "4976bbac08adad9cbc8cef08bcf12ccaeb57c0a2d5f50bb0df72649f0b17bb72",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "purpose": "ordered surface establish, advance, and terminal hold choreography"
+    },
+    {
+      "id": "viewport-change",
+      "type": "official-motion-rule-reference",
+      "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/viewport-change.md",
+      "sourceSha256": "86600df8e88e3814fe6fad360cfe524abc65d6689b11a49d8038a7fd368914fa",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "purpose": "bounded content-world camera pan between the three surfaces"
+    },
+    {
+      "id": "gsap-runtime",
+      "type": "runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "byte-identical local runtime used by prior checked probes",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license",
+      "purpose": "single paused seek-safe timeline"
+    }
+  ],
+  "audioPolicy": {
+    "narrationPresent": true,
+    "narrationPath": ".media/audio/voice/narration.wav",
+    "preload": "none",
+    "sfxRegistered": false,
+    "microphoneApiPresent": false,
+    "recordingApiPresent": false,
+    "autoplayPresent": false,
+    "playbackCallPresent": false,
+    "externalSoundOutputAuthorized": false,
+    "playbackOwner": "hyperframes-only-after-explicitly-authorized-preview-or-render"
+  }
+}

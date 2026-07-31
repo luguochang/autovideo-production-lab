@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: AutoVideo Narration Writer offline contract regression
+sharing: false
+prompts:
+  - id: file://../prompt-chain/prompts/03-narration-writer.md
+    label: narration-writer-v1
+providers:
+  - id: file://providers/precomputed-artifact-provider.mjs
+    label: hash-bound-local-candidate
+    config:
+      stage: narration-writer
+defaultTest:
+  assert:
+    - type: javascript
+      value: file://assertions/stage-contract.mjs
+tests:
+  - description: Preserve outline section, claim, source, and opinion identities
+    vars:
+      stage: narration-writer
+      casePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.case.json
+      candidatePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.narration-writer.candidate.json
+

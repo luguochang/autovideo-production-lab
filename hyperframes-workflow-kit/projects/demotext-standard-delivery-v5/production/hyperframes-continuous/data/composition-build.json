@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "autovideo-hyperframes-build/v1",
+  "compilerVersion": "1.2.0",
+  "projectId": "demotext-standard-delivery-v5",
+  "generatedAt": "2026-07-19T18:01:08.680Z",
+  "inputManifest": {
+    "path": "plan/production-manifest.json",
+    "sha256": "efa3534e7373816ef6932abe1eeb7daa504ea2de0e0aebbcf748fd0085c9a334"
+  },
+  "outputDir": "production/hyperframes-continuous",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 239.328,
+    "duration": 239.328
+  },
+  "sceneCount": 18,
+  "cueCount": 46,
+  "appliedOverrideIds": [],
+  "publicReleaseBlocked": true,
+  "continuity": {
+    "mode": "persistent-shell",
+    "introPaddingSeconds": 0.35,
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "transition": "compact-history-and-anchor-enter",
+    "screenTextPolicy": "derived-keywords; exact narration remains in captions",
+    "manualTextPolicy": "pipe-separated visual keywords; never changes NarrationLock or captions",
+    "visualVariants": [
+      "focus",
+      "signal",
+      "stack",
+      "route",
+      "contrast",
+      "close"
+    ],
+    "iconSource": "lucide-react@0.468.0 (ISC)"
+  },
+  "hostAssetManifest": {
+    "path": "production-assets/host-assets.manifest.json",
+    "sha256": "56ad6f5c3b5d12ff73d1d652da251e9e82c73c1ea3ffc52b864877205360de9f"
+  },
+  "outputs": [
+    {
+      "path": "hyperframes.json",
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "package.json",
+      "sha256": "b84b3f957a9c8bfff775631c6bd7f344c9a0ca72d2680ed0ba3a6408ad524dc4"
+    },
+    {
+      "path": "meta.json",
+      "sha256": "9ca650da0937a24df46aa5346bada7383fef192a7ccfaa39534bb8877f692774"
+    },
+    {
+      "path": "BRIEF.md",
+      "sha256": "54ea3c41bd38527c37156ca349c176d722a51b54740773d1adbcad8077e01c3c"
+    },
+    {
+      "path": "frame.md",
+      "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25"
+    },
+    {
+      "path": "index.html",
+      "sha256": "3bad73099295c59723fc56935bfba8812b3977c95c49d55922de716733e0d16e"
+    },
+    {
+      "path": "index.motion.json",
+      "sha256": "7d5cce27c0ee50d8900ab0685dcd86bfcaf0f440daa588c3520ee7d9fe948abd"
+    },
+    {
+      "path": "assets/audio/narration.final.wav",
+      "sha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "assets/host/close.png",
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "sha256": "efa3534e7373816ef6932abe1eeb7daa504ea2de0e0aebbcf748fd0085c9a334"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "sha256": "173e25542ed573132181d8ef6d69860770bd95c6c35b5747deffda54bd67e22f"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "sha256": "05f8020926284fb489e449e214271811fae3ef7e5d2790fc95642db97af3c2ee"
+    },
+    {
+      "path": "data/alignment.json",
+      "sha256": "f35cfd79397e406b8eef3f0d16fe03c9e1f7a5c2eff297e944f33eeed4662fff"
+    },
+    {
+      "path": "data/overrides.json",
+      "sha256": "574bc874fd7b6da7eacec2e76700bb4eb6f451d8c41b4ff58216851afb4d2254"
+    },
+    {
+      "path": "data/source-map.json",
+      "sha256": "613e462da0ee33f34b7ef612643d011a484119e02e24207e358bdea23bd650c6"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.html",
+      "sha256": "6ffb817d2052edecd26d7d6bd3162168f74238b5bd67d2e8b011b63cd9570c24"
+    },
+    {
+      "path": "compositions/scenes/01-scene-01.motion.json",
+      "sha256": "03043c792a17ed7e7ad781154b35e6d758d71a9cba71843172f49d7f6d518ba7"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.html",
+      "sha256": "f11b2586fb2c4c050a21ad3be37fffad4f5cdd2acf19ad360e7cefd8766242f7"
+    },
+    {
+      "path": "compositions/scenes/02-scene-02.motion.json",
+      "sha256": "67ab5b9f0506d29a8cb90778ff6ad32c80094589f21804f559bb98065141947a"
+    },
+    {
+      "path": "compositions/scenes/03-scene-03.html",
+      "sha256": "175af3772d87c5e6daa0e7ae877f162cc621706c196073c3fb79da58af8fb974"
+    },
+    {
+      "path": "compositions/scenes/03-scene-03.motion.json",
+      "sha256": "9a0d63c1ea1c249a160dde7e04540de928b645fe190aa8f3c25d15f92cbf6684"
+    },
+    {
+      "path": "compositions/scenes/04-scene-04.html",
+      "sha256": "8616dd66450d04f876421d148ad1f41a935457cffa4acac86059164141b48422"
+    },
+    {
+      "path": "compositions/scenes/04-scene-04.motion.json",
+      "sha256": "8852528656990b8d2423f7094bfb7280069b5143558a0d6050ce209c2e10dc0f"
+    },
+    {
+      "path": "compositions/scenes/05-scene-05.html",
+      "sha256": "750f6ba60280189968df6c20466cb8558dccd92558fa00d9c33bc84aaa3f8f49"
+    },
+    {
+      "path": "compositions/scenes/05-scene-05.motion.json",
+      "sha256": "594b2b45e6e258be729ecdc10bd4a327bc5a0bdc913b54d457a88c97b2fd7c2a"
+    },
+    {
+      "path": "compositions/scenes/06-scene-06.html",
+      "sha256": "80584a79fc385987878f91f316ddaf5ec40c4fe8c048f1fe410fcf4b76bbda4d"
+    },
+    {
+      "path": "compositions/scenes/06-scene-06.motion.json",
+      "sha256": "b680b919b65327e7e9cbaa2822dbade93c7e4f1ae82614f8f0ff8c26f05acc90"
+    },
+    {
+      "path": "compositions/scenes/07-scene-07.html",
+      "sha256": "4fb7b319a783b388fe9ff7888388d071afe4206dc40fbe072c431f0d623328a2"
+    },
+    {
+      "path": "compositions/scenes/07-scene-07.motion.json",
+      "sha256": "20353693703f383385b07a8309319d103c20192c65e064ab4ef4a94128cb664a"
+    },
+    {
+      "path": "compositions/scenes/08-scene-08.html",
+      "sha256": "c6908374ac702281495b4c76c9c471921f24760499d7e85aab6fda9c89e940e4"
+    },
+    {
+      "path": "compositions/scenes/08-scene-08.motion.json",
+      "sha256": "479570fdfc80f5875d97725b76f4f52fec1d0c63603c406126e8d86d3d843990"
+    },
+    {
+      "path": "compositions/scenes/09-scene-09.html",
+      "sha256": "156d0c2f889d6dee5d76a72c7084a18b70e773c60ea2565bf122044e81c00dbc"
+    },
+    {
+      "path": "compositions/scenes/09-scene-09.motion.json",
+      "sha256": "1fde8b80b907e863620b46d57dc4d258cc2496e987d79a2ad0990a8f743a02a0"
+    },
+    {
+      "path": "compositions/scenes/10-scene-10.html",
+      "sha256": "6454163d6cadf2d0d2dc36b4c8c724872078149908832bdadc3297b7ed142353"
+    },
+    {
+      "path": "compositions/scenes/10-scene-10.motion.json",
+      "sha256": "a517e3e0327f2e8c9e8ee5c4f14e26b5fae09cc58031aad570a767fdd8bd8fe0"
+    },
+    {
+      "path": "compositions/scenes/11-scene-11.html",
+      "sha256": "1a6f04ba4ab15219552b0fbbb411e84f8ab16ee45d91a6f8ab125a676897cb78"
+    },
+    {
+      "path": "compositions/scenes/11-scene-11.motion.json",
+      "sha256": "4dcff9ecb400c56f81e8c37388817a686c2d3013533bd68ef37400b814ffd61f"
+    },
+    {
+      "path": "compositions/scenes/12-scene-12.html",
+      "sha256": "b244c8e3444a9b9a15c18232f3adbb8b07f6a0876b9ca3040f8afb144280542f"
+    },
+    {
+      "path": "compositions/scenes/12-scene-12.motion.json",
+      "sha256": "f44f897e0884490eaa8e06e97a98486f01f10c49167ae200bb4037d78d5b7f99"
+    },
+    {
+      "path": "compositions/scenes/13-scene-13.html",
+      "sha256": "030c5f79e4486f6edca5c4b540ede1d7d8bf9f98b56a30d76ec6d853813e4c2d"
+    },
+    {
+      "path": "compositions/scenes/13-scene-13.motion.json",
+      "sha256": "37b474e73e86b6120696fc454757846f9f2470c9a47912e1184fe0dbe48e0c6f"
+    },
+    {
+      "path": "compositions/scenes/14-scene-14.html",
+      "sha256": "769b30a6ab76fb6962aba4b6d45ca33835ca387a3f6099e4c94a40348f244da5"
+    },
+    {
+      "path": "compositions/scenes/14-scene-14.motion.json",
+      "sha256": "3473ce8f579d1106cc4ad9aa570b3e0b13233df693fdf471a6c792845c333ae6"
+    },
+    {
+      "path": "compositions/scenes/15-scene-15.html",
+      "sha256": "82de3954e0931189a57c64c7b15bb8077a00f044e09aa4411418546831674bad"
+    },
+    {
+      "path": "compositions/scenes/15-scene-15.motion.json",
+      "sha256": "8756d6f8c4dc156e639effb3139f05a8b97ade0cb3a814101175395066c9d94a"
+    },
+    {
+      "path": "compositions/scenes/16-scene-16.html",
+      "sha256": "fc9db031e955ede1c3f58da28f9c392858b3f5c5a18b2c98432fb75fc5e1a5d0"
+    },
+    {
+      "path": "compositions/scenes/16-scene-16.motion.json",
+      "sha256": "b79df456248d93182706ec2177ff83dc8e6ac08ed8d093a13c4091dd08677c7c"
+    },
+    {
+      "path": "compositions/scenes/17-scene-17.html",
+      "sha256": "099225d3447a21d0df59fb0ceb9ded2f4c72e27c5726e61b85e6bb57eb68afd7"
+    },
+    {
+      "path": "compositions/scenes/17-scene-17.motion.json",
+      "sha256": "18cc7bcf549567fa40bdc381b6e9191c089f7e79a9660a9a7f9deee46398c6ce"
+    },
+    {
+      "path": "compositions/scenes/18-scene-18.html",
+      "sha256": "35cf5d09e26e7ec754556437db69aeda3f56ba55ad97277e2b8dea74975d0b63"
+    },
+    {
+      "path": "compositions/scenes/18-scene-18.motion.json",
+      "sha256": "d78e0842f822c2b227c0793c351fc2dff792a38fc12dc9e7f4c7456f5b70e2d0"
+    }
+  ]
+}

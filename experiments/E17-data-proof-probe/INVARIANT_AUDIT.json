@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "autovideo-invariant-audit/v1",
+  "projectId": "E17-data-proof-probe",
+  "status": "candidate",
+  "composition": {
+    "path": "index.html",
+    "sha256": "d7af4e6f88cf9e475977b3ab5c50e7fea4fb25cf691037033dc0d95454b21896",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "rootDurationSeconds": 8,
+    "sceneGuardDurationSeconds": 8.033
+  },
+  "brandShell": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "hostRect": {"left": 96, "top": 156, "width": 600, "height": 730},
+    "hostAssetPath": ".media/images/image_001.png",
+    "hostAssetSha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+    "hostPoseCount": 1,
+    "hostPoseSwap": false,
+    "captionZone": "caption",
+    "captionRect": {"left": 96, "top": 926, "width": 1728, "height": 88}
+  },
+  "camera": {
+    "scope": "content-world-only",
+    "selector": "#chart-camera",
+    "contentZone": "content.right",
+    "contentRect": {"left": 694, "top": 112, "width": 1130, "height": 760},
+    "hostTransformed": false,
+    "captionTransformed": false,
+    "transformSelectorsOutsideScope": []
+  },
+  "dataProof": {
+    "irPath": "DataProofIR.json",
+    "irSha256": "d746adcb386a1b252d92260e5c59cd70aa564dc19c896c60b03a5ef0e55c094c",
+    "metricCount": 3,
+    "metricIds": ["entry", "context", "tools"],
+    "visualType": "data-proof",
+    "claimType": "structural-derived",
+    "notAnExternalBenchmark": true,
+    "recipe": "data-proof@1.0.0"
+  },
+  "timing": {
+    "narrationLockPath": "NarrationLock.json",
+    "narrationLockSha256": "98dbb0ba853f95d6f668a1492df329bf7fb1d6634ff290958a5e88a573923783",
+    "audioPath": "input/narration-window.wav",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "audioDurationSeconds": 8,
+    "phases": {
+      "establish": {"start": 0, "end": 2.72},
+      "focus": {"start": 2.72, "end": 6.24},
+      "pullback": {"start": 6.24, "end": 7.1},
+      "finalHold": {"start": 7.1, "end": 8}
+    }
+  },
+  "automatedEvidence": {
+    "strictCheckLog": "strict-check.log",
+    "strictCheckLogSha256": "0b4249508f86314ffdb6e13cb6337076c69b537ade8976f47be2786d9d7dead5",
+    "strictCheck": {
+      "ok": true,
+      "lintErrors": 0,
+      "lintWarnings": 0,
+      "runtimeErrors": 0,
+      "layoutErrors": 0,
+      "layoutWarnings": 0,
+      "motionErrors": 0,
+      "contrastErrors": 0,
+      "contrastWarnings": 0
+    },
+    "keyframesJson": "review/keyframes.json",
+    "keyframesJsonSha256": "d333ee7128b56e57d1b28b6dcd5f7cf435cca213c28085dadeae3af58c6b0984",
+    "focusedKeyframeShot": "review/render-qa/chart-camera-strip.png",
+    "focusedKeyframeShotSha256": "338a37b2ea2bef9e2c03535efe08dd0489566bc66ed6fa466a764d4649aef2bc",
+    "contactSheet": "snapshots/contact-sheet.jpg",
+    "contactSheetSha256": "fcd55811182b86f0df4f593831f2d98e07534a71b81c9789bf14aabd21adb07d",
+    "render": {
+      "path": "renders/data-proof-probe.mp4",
+      "sha256": "00e86adb64321a4cb8add020b30f7421bb029ecb151a343f04dd1c1c46cb7859",
+      "durationSeconds": 8,
+      "video": "1920x1080, 30fps, H.264",
+      "audio": "48kHz AAC, 8.000s, non-silent"
+    },
+    "decodeQa": "review/render-qa/DECODE_QA.json",
+    "ffprobe": "review/render-qa/ffprobe.json",
+    "audioVolumeDetect": "review/render-qa/audio-volumedetect.log"
+  },
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewDocument": "PROBE_REVIEW.md",
+    "lifecycleApplyExecuted": false,
+    "promotionExecuted": false
+  }
+}

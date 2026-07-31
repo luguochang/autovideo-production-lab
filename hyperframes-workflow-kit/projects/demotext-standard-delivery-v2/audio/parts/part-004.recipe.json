@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-07-19T00:16:28.314608+00:00",
+  "recipe": "E14 candidate 14",
+  "model": "CosyVoice-300M-SFT",
+  "model_dir": "E:\\project\\study\\codex\\autoVideo\\tools\\voice-lab\\CosyVoice\\pretrained_models\\CosyVoice-300M-SFT",
+  "speaker": "中文女",
+  "speed": 1.03,
+  "seed": 7,
+  "precision": "FP32",
+  "stream": false,
+  "segment_id": "part-004",
+  "text_source": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v2\\audio\\parts\\part-004.tts.txt",
+  "text_sha256": "B7CE27BDE37AF823446F7FBEBA4A0FF23A7C8789C7133B2B1194EDA48B5CAE37",
+  "text_characters": 102,
+  "raw": {
+    "sample_rate": 22050,
+    "duration_seconds": 16.92734693877551,
+    "sha256": "C504E5B6E7CCC91D010739774C7B4926E00CC313EFFF4770F71FF549993E3F8C",
+    "nonfinite_samples": 0
+  },
+  "output": {
+    "path": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v2\\audio\\parts\\part-004.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "duration_seconds": 16.927354166666667,
+    "sha256": "241B9DF46C97CD7345091FCD85442625D75682D34497971986F4CF0BC9435FAF",
+    "nonfinite_samples": 0,
+    "loudness_target_lufs": -16,
+    "true_peak_target_db": -1.5
+  },
+  "batch": {
+    "manifest": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v2\\audio\\parts\\batch-manifest.json",
+    "manifest_sha256": "5C3797C2CDA5F80369AE8359DE1FE279C38DEEFE242C6F08163F66BE726F90EE"
+  }
+}

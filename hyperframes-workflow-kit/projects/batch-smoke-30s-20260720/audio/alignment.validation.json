@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "autovideo-alignment-validation/v1",
+  "generatedAt": "2026-07-20T12:53:05.506967+00:00",
+  "status": "passed",
+  "inputs": {
+    "alignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\alignment.json",
+    "alignmentSha256": "55850cb9dfb36f112b8fabc70794c63586ff7800ab33d19268b272dc98f92004",
+    "asrAlignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\alignment.asr.json",
+    "asrAlignmentSha256": "3641171f26abf42a922bbb0a8447a9f03569733e6b8a72ae1c771e7e69ab958d",
+    "narration": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\input\\narration.txt",
+    "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+    "narrationLock": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\NarrationLock.json",
+    "audio": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\narration.final.wav",
+    "audioSha256": "4862800600e4dbc6df0107cebda153102999092920080495f3eaf83e5712e838",
+    "audioDurationSeconds": 31.370167
+  },
+  "textPolicy": {
+    "downstreamTextSource": "alignment.cues",
+    "rawAsrTranscriptField": "alignment.transcriptText",
+    "rawAsrTranscriptRole": "evidence-only",
+    "rawAsrTranscriptDownstreamConsumable": false
+  },
+  "checks": {
+    "hashesBound": true,
+    "wordTimeline": {
+      "count": 158,
+      "firstStartSeconds": 0.0,
+      "lastEndSeconds": 31.37,
+      "overlapCount": 1,
+      "maxGapSeconds": 0.44,
+      "monotonic": true
+    },
+    "cueTimeline": {
+      "count": 6,
+      "firstStartSeconds": 0.0,
+      "lastEndSeconds": 31.37,
+      "overlapCount": 0,
+      "maxGapSeconds": 0.0,
+      "monotonic": true
+    },
+    "wordTextReconstructsNarrationLock": true,
+    "cueTextReconstructsNarrationLock": true,
+    "cueCps": {
+      "thresholdCps": 15.0,
+      "maximumCps": 6.569,
+      "passed": true,
+      "cues": [
+        {
+          "id": "cue-001",
+          "characters": 17,
+          "durationSeconds": 3.26,
+          "cps": 5.215,
+          "passed": true
+        },
+        {
+          "id": "cue-002",
+          "characters": 52,
+          "durationSeconds": 9.1,
+          "cps": 5.714,
+          "passed": true
+        },
+        {
+          "id": "cue-003",
+          "characters": 18,
+          "durationSeconds": 2.74,
+          "cps": 6.569,
+          "passed": true
+        },
+        {
+          "id": "cue-004",
+          "characters": 31,
+          "durationSeconds": 5.3,
+          "cps": 5.849,
+          "passed": true
+        },
+        {
+          "id": "cue-005",
+          "characters": 49,
+          "durationSeconds": 8.76,
+          "cps": 5.594,
+          "passed": true
+        },
+        {
+          "id": "cue-006",
+          "characters": 13,
+          "durationSeconds": 2.21,
+          "cps": 5.882,
+          "passed": true
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "srt": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\narration.zh-CN.srt",
+    "srtSha256": "7085fdb89c1297f27a19db97e7f9ddb70c242d9cef8fd8f5269bb0fb1de6074a",
+    "cueCount": 6,
+    "source": "alignment.cues (NarrationLock exact text)"
+  }
+}

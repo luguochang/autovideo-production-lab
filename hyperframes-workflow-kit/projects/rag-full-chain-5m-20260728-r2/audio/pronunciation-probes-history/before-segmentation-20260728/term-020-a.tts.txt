@@ -1,0 +1,1 @@
+商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。

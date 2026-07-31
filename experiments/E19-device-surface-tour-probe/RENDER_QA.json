@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "autovideo-render-qa/v1",
+  "projectId": "E19-device-surface-tour-probe",
+  "scope": "internal-review",
+  "artifact": {
+    "path": "renders/device-surface-tour-probe.mp4",
+    "sha256": "aaf0b18d7cd6bffaf509e4818c84d65ea7a5014b34ccae4103c6b523e514d84d",
+    "sizeBytes": 2252719,
+    "durationSeconds": 8,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "fps": 30, "frames": 240},
+    "audio": {"codec": "aac", "sampleRate": 48000, "channels": 2}
+  },
+  "sourceAudio": {
+    "path": ".media/audio/voice/narration.wav",
+    "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "format": "PCM s16le, 48 kHz, mono",
+    "durationSeconds": 8,
+    "testMode": "imported-file-in/file-out; no microphone or external sound output"
+  },
+  "checks": {
+    "highQualityRenderCompleted": true,
+    "fullDecodePassed": true,
+    "audioLevelPassed": true,
+    "blackFrameScanPassed": true,
+    "strictHyperframesCheckPassed": true,
+    "renderFrameInspectionPassed": true,
+    "publicReleaseApproved": false
+  },
+  "contactSheet": {
+    "path": "review/render-qa/render-contact-sheet.png",
+    "sha256": "1e2d9194c2d0b9d8e174ea4114f71abe11beefe5cfb9e5586ab919718dcab19d"
+  },
+  "humanVisualReview": null
+}

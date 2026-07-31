@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "autovideo-code-proof-ir/v1",
+  "projectId": "E18-code-proof-probe",
+  "visualType": "code-surface",
+  "language": "javascript",
+  "source": {
+    "path": "workflow-console/server.mjs",
+    "lineRange": "281-293",
+    "kind": "real-project-source",
+    "frozenExcerptPath": "input/server-source-excerpt.txt",
+    "frozenExcerptSha256": "6a5aa3f402668f1f47153cb3f06559ba772a9abc4c7485a33fbc78126fd02637",
+    "displayPolicy": "Exact function calls and status values are retained; non-focus arguments are condensed with an explicit ellipsis."
+  },
+  "focusLines": [
+    {
+      "sourceLine": 281,
+      "display": "await updateJobRecord(job.id, {status: 'running', ...})",
+      "semanticRole": "state-change"
+    },
+    {
+      "sourceLine": 283,
+      "display": "const result = await generateStage(job.projectId, job.stageId)",
+      "semanticRole": "execution"
+    },
+    {
+      "sourceLine": 292,
+      "display": "await markStageGenerated(job.projectId, job.stageId, result)",
+      "semanticRole": "artifact-promotion"
+    }
+  ],
+  "conclusion": "一个按钮，串起状态、生成与产物晋级",
+  "sourceCueIds": ["cue-01", "cue-02", "cue-03"]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-creator-delegation/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "authorizedAt": "2026-07-29T05:40:48.1917106Z",
+  "delegate": "codex",
+  "scope": [
+    "text-review",
+    "internal-visual-review",
+    "internal-only-workflow-simulation"
+  ],
+  "authorizationBasis": {
+    "source": "user-message",
+    "statement": "授权仅内部模拟屏幕文字复核并继续渲染，接受 humanReviewPerformed=false 且禁止公开发布"
+  },
+  "constraints": {
+    "microphoneAllowed": false,
+    "audioPlaybackAllowed": false,
+    "soundOutputAllowed": false,
+    "publicReleaseAllowed": false
+  }
+}

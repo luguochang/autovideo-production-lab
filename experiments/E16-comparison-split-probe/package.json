@@ -1,0 +1,12 @@
+{
+  "name": "e16-comparison-split-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.64 preview",
+    "check": "npx --yes hyperframes@0.7.64 check --strict --snapshots --samples 15 --at-transitions",
+    "snapshot": "npx --yes hyperframes@0.7.64 snapshot --at 0,0.8,1.92,2.72,4.44,5.25,5.9",
+    "render:probe": "npx --yes hyperframes@0.7.64 render --quality high --fps 30 --output renders/comparison-split-probe.mp4",
+    "publish": "npx --yes hyperframes@0.7.64 publish"
+  }
+}

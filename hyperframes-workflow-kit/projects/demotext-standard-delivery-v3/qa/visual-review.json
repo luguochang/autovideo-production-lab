@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "autovideo-visual-review/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "status": "passed-internal-sample-review",
+  "reviewedBy": "codex-autonomous-internal-review",
+  "reviewScope": "HyperFrames strict check plus one midpoint frame for every one of 14 scenes and Studio timeline load verification.",
+  "checkedAt": "2026-07-19T08:22:36.957Z",
+  "compositionDigest": "bc3d9612c5f79e9c008c9b7034cc44e70974eef5cda38c69ff82b9f68d0b85c6",
+  "checks": {
+    "hostContentCaptionCollision": "passed",
+    "textOverflow": "passed",
+    "chineseReadability": "passed-at-sampled-frames",
+    "exactSourceVersusGeneratedSummaryLabels": "passed",
+    "unverifiedNumericClaimsNotCharted": "passed",
+    "terminalFrameReadability": "passed-at-sampled-frames",
+    "studioTimelineLoaded": {
+      "status": "passed",
+      "scenes": 14,
+      "captions": 46,
+      "durationSeconds": 242.904042
+    }
+  },
+  "frames": [
+    {
+      "path": "qa/composition-snapshots/01-scene-01-midpoint.png",
+      "sha256": "6c7cb07376d67558f496234ab1be1728416778ccb2d88163eaebad326453194c",
+      "size": 577762
+    },
+    {
+      "path": "qa/composition-snapshots/02-scene-02-midpoint.png",
+      "sha256": "db82dd865eb77a75af71e0e538a22e7ee38fcd08ec14495142f9745e94243226",
+      "size": 583768
+    },
+    {
+      "path": "qa/composition-snapshots/03-scene-03-midpoint.png",
+      "sha256": "407cf666db4c22571978d70b7eb8577a090157a53b659a605bc8dbdf0ba33cce",
+      "size": 599709
+    },
+    {
+      "path": "qa/composition-snapshots/04-scene-04-midpoint.png",
+      "sha256": "d15253dc0c908f07f1f88914da05d0a7ddd6f8f7eb173fc67eafd705a7a8817b",
+      "size": 566098
+    },
+    {
+      "path": "qa/composition-snapshots/05-scene-05-midpoint.png",
+      "sha256": "1ff700453b91c14ba5e9f6123fa962b3890d20e8890daf408672e596450d43c5",
+      "size": 515234
+    },
+    {
+      "path": "qa/composition-snapshots/06-scene-06-midpoint.png",
+      "sha256": "8aedc170caaeb48248f3fd9def000a334fca6800c599d726a8c872506e5b8a5f",
+      "size": 562457
+    },
+    {
+      "path": "qa/composition-snapshots/07-scene-07-midpoint.png",
+      "sha256": "47cdce465f348c13d3068c3bf14b1f88a53f2fca0e01cc6ce2cb7a0e84b9dc80",
+      "size": 677243
+    },
+    {
+      "path": "qa/composition-snapshots/08-scene-08-midpoint.png",
+      "sha256": "bc4bd65ae695d1416ea933cf8229ba71ab0bd283dd999aa6617660e40d69c828",
+      "size": 643616
+    },
+    {
+      "path": "qa/composition-snapshots/09-scene-09-midpoint.png",
+      "sha256": "19363c852150d6392e6f387262afc08d986d62ebe181f814ccd9f1fe83ea68e5",
+      "size": 548102
+    },
+    {
+      "path": "qa/composition-snapshots/10-scene-10-midpoint.png",
+      "sha256": "0f96473344ea23924b6e7e0ce427c5533f50a21857d24f0cfbd59fc4ab4d7400",
+      "size": 499876
+    },
+    {
+      "path": "qa/composition-snapshots/11-scene-11-midpoint.png",
+      "sha256": "4fb78711777251db0b4abad41baa67e816f4f0245ffaeb2e4375908d61de8bd5",
+      "size": 560890
+    },
+    {
+      "path": "qa/composition-snapshots/12-scene-12-midpoint.png",
+      "sha256": "e64b4f019b7604bb621580bf4f939e830b5d8546c27f9349fe19fba2c0e9a0f4",
+      "size": 606209
+    },
+    {
+      "path": "qa/composition-snapshots/13-scene-13-midpoint.png",
+      "sha256": "4ea5985303932606ca412b753fda2c4f7233a4419b3107a550a997e7cb78a9e6",
+      "size": 601900
+    },
+    {
+      "path": "qa/composition-snapshots/14-scene-14-midpoint.png",
+      "sha256": "cf8b4932fd09e99ab302fa7ecedad0dfa52001fba6930bda79d584ff6905a54d",
+      "size": 647094
+    }
+  ],
+  "limitations": [
+    "Not a user final review.",
+    "No automated OCR engine is connected.",
+    "Full human semantic/subtitle review remains required before public release."
+  ],
+  "publicReleaseBlocked": true
+}

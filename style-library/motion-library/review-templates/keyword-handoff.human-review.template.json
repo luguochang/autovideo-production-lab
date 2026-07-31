@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "autovideo-motion-human-review-template/v1",
+  "recipeId": "keyword-handoff",
+  "recipeVersion": "1.0.0",
+  "recipeDefinitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3",
+  "library": {
+    "id": "knowledge-explainer",
+    "version": "1.0.0"
+  },
+  "probeId": null,
+  "decision": null,
+  "checks": {
+    "layout": null,
+    "textFit": null,
+    "seekBehavior": null,
+    "hostStable": null,
+    "captionStable": null,
+    "terminalFrameReadable": null,
+    "officialReuseVisible": null,
+    "exactBackground": null,
+    "cameraScopedToContentWorld": null
+  },
+  "notes": "",
+  "reviewer": null,
+  "reviewedAt": null,
+  "confirmedHuman": false,
+  "authorizesLifecycleTransition": false,
+  "instruction": "Use this only as a review worksheet. Complete the actual current probe review in the workbench; lifecycle acceptance remains a separate explicit action."
+}

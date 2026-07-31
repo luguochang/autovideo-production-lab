@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "autovideo-content-intake-submission/v1",
+  "id": "163e6e616e006194add3540caebad00226eb353d56e090b0b9d54944b6db4e88",
+  "projectId": "e2e-intake-002",
+  "inputType": "pasted-text",
+  "route": "script",
+  "createdAt": "2026-07-20T04:19:25.479Z",
+  "source": {
+    "kind": "pasted-text",
+    "label": "e2e",
+    "license": "user-provided; publication rights not implied"
+  },
+  "payload": {
+    "path": "content/workbench-intakes/e2e-intake-002/input/content-intake/submissions/163e6e616e006194add3540caebad00226eb353d56e090b0b9d54944b6db4e88/payload/pasted.txt",
+    "sha256": "67ec23b3ba38f570af38d0ca262092a08c7d2e9b7580850907ed4410e31d96b9",
+    "bytes": 26,
+    "fileCount": 1,
+    "hashAlgorithm": "sha256-bytes",
+    "files": [
+      {
+        "relativePath": "pasted.txt",
+        "path": "content/workbench-intakes/e2e-intake-002/input/content-intake/submissions/163e6e616e006194add3540caebad00226eb353d56e090b0b9d54944b6db4e88/payload/pasted.txt",
+        "sha256": "67ec23b3ba38f570af38d0ca262092a08c7d2e9b7580850907ed4410e31d96b9",
+        "bytes": 26
+      }
+    ],
+    "skipped": []
+  },
+  "registration": {
+    "schemaVersion": "autovideo-content-pipeline-registration/v1",
+    "projectId": "e2e-intake-002",
+    "route": "script",
+    "workbenchInput": {
+      "route": "script",
+      "sourcePath": "content/workbench-intakes/e2e-intake-002/input/content-intake/submissions/163e6e616e006194add3540caebad00226eb353d56e090b0b9d54944b6db4e88/payload/pasted.txt"
+    },
+    "pipelineIntakePath": "content/intakes/e2e-intake-002-163e6e616e00",
+    "commands": {
+      "register": {
+        "executable": "npm.cmd",
+        "args": [
+          "run",
+          "content:register",
+          "--",
+          "--id",
+          "e2e-intake-002",
+          "--materials",
+          "content/workbench-intakes/e2e-intake-002/input/content-intake/submissions/163e6e616e006194add3540caebad00226eb353d56e090b0b9d54944b6db4e88/payload/pasted.txt",
+          "--out",
+          "content/intakes/e2e-intake-002-163e6e616e00"
+        ]
+      },
+      "diagnose": {
+        "executable": "npm.cmd",
+        "args": [
+          "run",
+          "content:diagnose",
+          "--",
+          "--intake",
+          "content/intakes/e2e-intake-002-163e6e616e00",
+          "--route",
+          "script"
+        ]
+      }
+    }
+  }
+}

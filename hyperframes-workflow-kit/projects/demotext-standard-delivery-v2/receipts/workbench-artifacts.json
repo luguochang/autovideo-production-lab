@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "autovideo-workbench-receipts/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "generatedBy": "scripts/finalize-delivery-manifest.mjs",
+  "policy": "Present artifacts are byte-for-byte snapshots. Missing artifacts are recorded but never synthesized.",
+  "artifacts": [
+    {
+      "id": "sourceRegistration",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v2/artifacts/source-register/sources.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/sources.json",
+      "size": 609,
+      "sha256": "45298392446f7209a12e8ffd098b2ef65e5f2387374901dcd2a8fe1a378c3370"
+    },
+    {
+      "id": "evidenceLedger",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v2/artifacts/evidence-ledger/evidence.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/evidence.json"
+    },
+    {
+      "id": "scriptDraft",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v2/artifacts/script-draft/script.draft.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/script.draft.json"
+    },
+    {
+      "id": "scriptApproval",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v2/artifacts/script-review/script.approved.txt",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/script.approved.txt",
+      "size": 4374,
+      "sha256": "1d2e145372944e0a77f1e730d5bcff1140b88fbc52c3face506110b15c10e0d0"
+    },
+    {
+      "id": "publicationRights",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v2/artifacts/rights-clearance/publication-rights.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/rights/publication-rights.json",
+      "size": 2642,
+      "sha256": "be079f5fe76aa5fcdc9243d4ab6bda611bea3016e47f69d189c11d7d986a34b1"
+    }
+  ]
+}

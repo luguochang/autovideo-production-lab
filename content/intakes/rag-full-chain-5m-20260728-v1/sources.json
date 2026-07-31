@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-sources/v1",
+  "projectId": "rag-full-chain-5m-20260728-v1",
+  "root": "demo/RAG全链路口播-选型生产实践与提升.md",
+  "generatedAt": "2026-07-28T05:41:48.747Z",
+  "sources": [
+    {
+      "id": "source-001-41d218d3",
+      "path": "demo/RAG全链路口播-选型生产实践与提升.md",
+      "type": "md",
+      "bytes": 25349,
+      "modifiedAt": "2026-07-28T05:34:36.998Z",
+      "sha256": "41d218d326099ce40fe43b0a1d3bd70925a94fea7819d16f90f6acc43ef55906",
+      "source": "user-provided",
+      "license": "user-provided; publication rights not implied",
+      "status": "registered"
+    }
+  ],
+  "skipped": [],
+  "warnings": []
+}

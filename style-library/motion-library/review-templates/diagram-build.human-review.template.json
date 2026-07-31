@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "autovideo-motion-human-review-template/v1",
+  "recipeId": "diagram-build",
+  "recipeVersion": "1.0.0",
+  "recipeDefinitionSha256": "45001bc3e8194b942dc46195115bf085923bcd2312969667741d164a7090b92f",
+  "library": {
+    "id": "knowledge-explainer",
+    "version": "1.0.0"
+  },
+  "probeId": null,
+  "decision": null,
+  "checks": {
+    "layout": null,
+    "textFit": null,
+    "seekBehavior": null,
+    "hostStable": null,
+    "captionStable": null,
+    "terminalFrameReadable": null,
+    "officialReuseVisible": null,
+    "exactBackground": null,
+    "cameraScopedToContentWorld": null
+  },
+  "notes": "",
+  "reviewer": null,
+  "reviewedAt": null,
+  "confirmedHuman": false,
+  "authorizesLifecycleTransition": false,
+  "instruction": "Use this only as a review worksheet. Complete the actual current probe review in the workbench; lifecycle acceptance remains a separate explicit action."
+}

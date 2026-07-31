@@ -1,0 +1,99 @@
+{
+  "ok": true,
+  "strict": true,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 19
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 239.328,
+    "samples": [
+      13.296,
+      39.888,
+      66.48,
+      93.072,
+      119.664,
+      146.256,
+      172.848,
+      199.44,
+      226.032
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v5\\production\\hyperframes\\index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      13.296,
+      66.48,
+      119.664,
+      172.848,
+      226.032
+    ],
+    "checked": 25,
+    "passed": 25
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.7.62",
+    "latestVersion": "0.7.64",
+    "updateAvailable": true
+  },
+  "autoVideo": {
+    "hyperframesVersion": "0.7.62",
+    "checkedAt": "2026-07-19T14:55:32.484Z",
+    "scope": "composition structure, runtime, layout, motion and contrast; final MP4 media QA runs after render",
+    "compositionDigest": "1c5b30c857564639527b5feb952d3d6816c45fcbad6b31b3a3078d3bf07dbd96",
+    "compositionFileCount": 54,
+    "buildReceiptSha256": "d42d04994e79d6ad7c73936049c8e8b05e80afbf9c7b75c143d2c02a7c12f651",
+    "sourceAudioContract": {
+      "passed": true,
+      "hasDataDuration": true,
+      "hasDataEnd": false
+    },
+    "cliDiagnostics": [
+      "[StaticGuard] Invalid HyperFrame contract: <audio id=\"narration-final\"> uses data-end without data-duration. Use data-duration in source HTML.",
+      "[INFO] [Compiler] Fetched 60 font face(s) for \"JetBrains Mono\" from Google Fonts (cached to C:\\Users\\90603\\.cache\\hyperframes\\fonts\\jetbrains-mono)",
+      "[INFO] [Compiler] Injected deterministic @font-face rules for 1 requested font families"
+    ]
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "autovideo-final-preview/v2",
+  "projectId": "demotext-standard-delivery-v2",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "approvedBy": "codex-autonomous-internal-review",
+  "approvedAt": "2026-07-19T04:36:43.624Z",
+  "previewStartedAt": "2026-07-19T04:36:43.461Z",
+  "composition": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v2/production/hyperframes",
+  "compositionDigest": "511dabbb70c3a7cff499b9084e3726fb47859fb254c1d7a197c2d8acac8c6b75",
+  "fileCount": 50,
+  "files": [
+    {
+      "path": "assets/audio/narration.final.wav",
+      "bytes": 22975582,
+      "sha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f"
+    },
+    {
+      "path": "assets/host/close.png",
+      "bytes": 305939,
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/emphasis.png",
+      "bytes": 426512,
+      "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c"
+    },
+    {
+      "path": "assets/host/encourage.png",
+      "bytes": 404031,
+      "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "bytes": 390781,
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "bytes": 353487,
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "bytes": 420078,
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "bytes": 382765,
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/host/read.png",
+      "bytes": 413640,
+      "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388"
+    },
+    {
+      "path": "assets/host/think.png",
+      "bytes": 363756,
+      "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "bytes": 72779,
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.html",
+      "bytes": 8815,
+      "sha256": "4ded2f3ae3e71a88c9c75bed994f58323a8530caff46e47b2bf38b2a96770ac3"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.motion.json",
+      "bytes": 413,
+      "sha256": "144cef0ff465bec284a7517b82d8ffd0335db7d3f3ab3f136e2dc7c87f538936"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.html",
+      "bytes": 9696,
+      "sha256": "890b790148388be12e8026de40f26edeb8c3ee654cb74c06976a1ce10057b708"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.motion.json",
+      "bytes": 414,
+      "sha256": "30ec6cb9465b4a24a9f8cab7fe697cbc9e1730575136684897a9a013497b2934"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.html",
+      "bytes": 9607,
+      "sha256": "b9c4bc846ef85397cc5d96014b3cae1e0a1d3891912fd4ca8504eaf7ab7f7e89"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.motion.json",
+      "bytes": 414,
+      "sha256": "f583c9b62de4f18aba5c34315733bbcd5af88477e14d6a360545d9282abcbfba"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.html",
+      "bytes": 10873,
+      "sha256": "db90866af87dba355a979be59d467740376bb884f9e3b91a8b713d80fbd0302e"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.motion.json",
+      "bytes": 414,
+      "sha256": "3b2c78549491f7d67316521de156d19f6304d36a519be6e7cff2ea2aa7f5983e"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.html",
+      "bytes": 8894,
+      "sha256": "b56de19cacadd86d64cd5a2521ea057278b3b29cde5654d96648d90a4fc005ef"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.motion.json",
+      "bytes": 412,
+      "sha256": "af61185c0d59e4c325c55e64a42a3a172c85ad9470699f4a7a31d76a18e007d6"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.html",
+      "bytes": 11646,
+      "sha256": "63944a801a707e0e31161b4190236fa45035cbcef10bb40e68d1ab77e3e6394a"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.motion.json",
+      "bytes": 414,
+      "sha256": "f4289deeeb38971fa0652455e7eedf3b55dc51a313e41c5ccaf30fd82de4df74"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.html",
+      "bytes": 11200,
+      "sha256": "d66368bfb0f3855885cf308b97fedb5f6da74976b6f9f483960ac69c34989e8a"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.motion.json",
+      "bytes": 414,
+      "sha256": "a596ceb4303cde69ef701916d93befd3e922c82928f4a328bdaa4e6be13b6b72"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.html",
+      "bytes": 10830,
+      "sha256": "c2c6880e45595f82aefaa0ab706c0c2dd97537b88aedc1ab3407498dc0d0adcd"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.motion.json",
+      "bytes": 414,
+      "sha256": "a52b052ee208b0433b214a66bcfe0f33f6975531dd6196c08b5546c5de2cf753"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.html",
+      "bytes": 12371,
+      "sha256": "74fffb42c8da72fc4057ff0731435491aa04dbdfd92d7ebc1d5ac2de0d110061"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.motion.json",
+      "bytes": 414,
+      "sha256": "f347f054ebdeb688f46ee6508e3a026122c4e60e9bc3eb44e4f69b61cb931305"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.html",
+      "bytes": 15830,
+      "sha256": "e7a9543e64403af079731cc65440c370aab47676c332bb8f4eea30e2279356fc"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.motion.json",
+      "bytes": 414,
+      "sha256": "ac0f3df2e7f70b72eb00ae1bbba7fdfeed4a9dcbdab4c6055bee45bfd0822ce2"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.html",
+      "bytes": 11645,
+      "sha256": "f7bef4866f6b9000b3c403f115a63af30a8012c2c7794173a6497cf317076393"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.motion.json",
+      "bytes": 414,
+      "sha256": "09a52b36cd8a80cccda1bba0dbeba758ca0a975ed5a19dd0ffd91f45f42787f6"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.html",
+      "bytes": 8866,
+      "sha256": "09fa8fbd7c28ec7dc10f1c15963531ef37940881c492b98458c9fe77780f28cf"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.motion.json",
+      "bytes": 412,
+      "sha256": "d3b89fc5938630bcfe871ce2d4c2faa4701671c6a814faaeebb2fb68387c7843"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.html",
+      "bytes": 10412,
+      "sha256": "a672b963fdc96353398f62fd3c03a03ca269f8ee5895d6b0f00c3d053ab25e8e"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.motion.json",
+      "bytes": 414,
+      "sha256": "7d382c26a961d69479e64d9910a8d07cc30305791501099b9bece8dc2ece9c96"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.html",
+      "bytes": 11027,
+      "sha256": "b694e2826daf0666bdb5601168b3ff99a9462700a4e65db55ae9a01c29925506"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.motion.json",
+      "bytes": 415,
+      "sha256": "72509c7bc9104552d43acd63c51e37c942a402a149cd7f260dd31daad3d0981e"
+    },
+    {
+      "path": "data/alignment.json",
+      "bytes": 205968,
+      "sha256": "379d9fb05def883bca9c44a559180b55cd61c8ecab430b7fd363df982bfb6512"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "bytes": 16167,
+      "sha256": "2399a1a8266aef8f086cabd486eb3c8fe2a5aae5db93659cfc79ef87ad59415d"
+    },
+    {
+      "path": "data/overrides.json",
+      "bytes": 1368,
+      "sha256": "0c3a0e8c25ed39ff33513129c54704d5fec4187437b1220aced0f16e23fde8c8"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "bytes": 16007,
+      "sha256": "bbb85a6413619c8a43a068ea838c2c221d71d37f4c92f5c3a8615b6d1d7818e3"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "bytes": 32297,
+      "sha256": "aa62f0c4949250576aac5890788a64f934fa790519e2ccb086123ae834dbe1e7"
+    },
+    {
+      "path": "data/source-map.json",
+      "bytes": 5166,
+      "sha256": "ebb2bafb47ba0d99f7e6288f5f371cfa32b99aa837af7e3c8344d0384e943f05"
+    },
+    {
+      "path": "hyperframes.json",
+      "bytes": 318,
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "index.html",
+      "bytes": 24109,
+      "sha256": "57e7a0a8e3b47280663ff7181f57105b30d5d578fcba05bcf3955e2f87106baf"
+    },
+    {
+      "path": "index.motion.json",
+      "bytes": 226,
+      "sha256": "10191941ddfb3b2efe02e970ec281520b340becae30814a82784defbe213470c"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 712,
+      "sha256": "ef0de53f74b3472a7854089bd53e91c831e23855e82099fc88832a2c6cb296ee"
+    },
+    {
+      "path": "package.json",
+      "bytes": 401,
+      "sha256": "51256b642e9339661f9e033dc32ede4306d55cb1ccf1e9cedc9f0ae62affa0a5"
+    }
+  ]
+}

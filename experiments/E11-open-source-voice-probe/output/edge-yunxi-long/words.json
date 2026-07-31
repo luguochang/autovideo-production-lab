@@ -1,0 +1,401 @@
+[
+  {
+    "segmentIndex": 0,
+    "text": "如果",
+    "start": 0.096291,
+    "duration": 0.254625,
+    "end": 0.350916
+  },
+  {
+    "segmentIndex": 0,
+    "text": "你",
+    "start": 0.350916,
+    "duration": 0.104166,
+    "end": 0.455082
+  },
+  {
+    "segmentIndex": 0,
+    "text": "只是",
+    "start": 0.466666,
+    "duration": 0.19675,
+    "end": 0.663416
+  },
+  {
+    "segmentIndex": 0,
+    "text": "把",
+    "start": 0.663416,
+    "duration": 0.11575,
+    "end": 0.779166
+  },
+  {
+    "segmentIndex": 0,
+    "text": "提示",
+    "start": 0.802333,
+    "duration": 0.289333,
+    "end": 1.091666
+  },
+  {
+    "segmentIndex": 0,
+    "text": "词",
+    "start": 1.091666,
+    "duration": 0.219916,
+    "end": 1.311582
+  },
+  {
+    "segmentIndex": 0,
+    "text": "丢",
+    "start": 1.334708,
+    "duration": 0.11575,
+    "end": 1.450458
+  },
+  {
+    "segmentIndex": 0,
+    "text": "给",
+    "start": 1.450458,
+    "duration": 0.081,
+    "end": 1.531458
+  },
+  {
+    "segmentIndex": 0,
+    "text": "模型",
+    "start": 1.543041,
+    "duration": 0.486125,
+    "end": 2.029166
+  },
+  {
+    "segmentIndex": 0,
+    "text": "然后",
+    "start": 2.3185,
+    "duration": 0.219916,
+    "end": 2.538416
+  },
+  {
+    "segmentIndex": 0,
+    "text": "等待",
+    "start": 2.55,
+    "duration": 0.243041,
+    "end": 2.7930409999999997
+  },
+  {
+    "segmentIndex": 0,
+    "text": "一个",
+    "start": 2.804625,
+    "duration": 0.127333,
+    "end": 2.9319580000000003
+  },
+  {
+    "segmentIndex": 0,
+    "text": "看起来",
+    "start": 2.955083,
+    "duration": 0.347208,
+    "end": 3.3022910000000003
+  },
+  {
+    "segmentIndex": 0,
+    "text": "漂亮",
+    "start": 3.325458,
+    "duration": 0.289333,
+    "end": 3.614791
+  },
+  {
+    "segmentIndex": 0,
+    "text": "的",
+    "start": 3.614833,
+    "duration": 0.069458,
+    "end": 3.684291
+  },
+  {
+    "segmentIndex": 0,
+    "text": "答案",
+    "start": 3.695833,
+    "duration": 0.335666,
+    "end": 4.031499
+  },
+  {
+    "segmentIndex": 0,
+    "text": "视频",
+    "start": 4.367125,
+    "duration": 0.381958,
+    "end": 4.749083
+  },
+  {
+    "segmentIndex": 0,
+    "text": "很快",
+    "start": 4.772208,
+    "duration": 0.335666,
+    "end": 5.107874
+  },
+  {
+    "segmentIndex": 0,
+    "text": "就",
+    "start": 5.119458,
+    "duration": 0.081,
+    "end": 5.200458
+  },
+  {
+    "segmentIndex": 0,
+    "text": "会",
+    "start": 5.200458,
+    "duration": 0.081,
+    "end": 5.281458000000001
+  },
+  {
+    "segmentIndex": 0,
+    "text": "变成",
+    "start": 5.293041,
+    "duration": 0.2315,
+    "end": 5.524540999999999
+  },
+  {
+    "segmentIndex": 0,
+    "text": "流水",
+    "start": 5.547666,
+    "duration": 0.266208,
+    "end": 5.813874
+  },
+  {
+    "segmentIndex": 0,
+    "text": "账",
+    "start": 5.813875,
+    "duration": 0.208333,
+    "end": 6.022208
+  },
+  {
+    "segmentIndex": 1,
+    "text": "真正",
+    "start": 6.866832666666666,
+    "duration": 0.370375,
+    "end": 7.2372076666666665
+  },
+  {
+    "segmentIndex": 1,
+    "text": "可靠",
+    "start": 7.2487916666666665,
+    "duration": 0.324083,
+    "end": 7.572874666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "的",
+    "start": 7.572874666666666,
+    "duration": 0.069458,
+    "end": 7.642332666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "做法",
+    "start": 7.653874666666667,
+    "duration": 0.462958,
+    "end": 8.116832666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "是",
+    "start": 8.290457666666667,
+    "duration": 0.185166,
+    "end": 8.475623666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "先",
+    "start": 8.475624666666667,
+    "duration": 0.150458,
+    "end": 8.626082666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "锁定",
+    "start": 8.649249666666666,
+    "duration": 0.324083,
+    "end": 8.973332666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "目标",
+    "start": 8.984874666666666,
+    "duration": 0.381958,
+    "end": 9.366832666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "再",
+    "start": 9.540457666666667,
+    "duration": 0.173583,
+    "end": 9.714040666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "核对",
+    "start": 9.714041666666667,
+    "duration": 0.266208,
+    "end": 9.980249666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "证据",
+    "start": 9.991832666666667,
+    "duration": 0.381958,
+    "end": 10.373790666666668
+  },
+  {
+    "segmentIndex": 1,
+    "text": "最后",
+    "start": 10.593707666666667,
+    "duration": 0.277791,
+    "end": 10.871498666666668
+  },
+  {
+    "segmentIndex": 1,
+    "text": "让",
+    "start": 10.883041666666667,
+    "duration": 0.104166,
+    "end": 10.987207666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "画面",
+    "start": 10.998791666666666,
+    "duration": 0.381958,
+    "end": 11.380749666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "和",
+    "start": 11.403874666666667,
+    "duration": 0.069458,
+    "end": 11.473332666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "声音",
+    "start": 11.484874666666666,
+    "duration": 0.439833,
+    "end": 11.924707666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "一起",
+    "start": 12.017291666666665,
+    "duration": 0.3125,
+    "end": 12.329791666666665
+  },
+  {
+    "segmentIndex": 1,
+    "text": "服务",
+    "start": 12.341374666666667,
+    "duration": 0.243041,
+    "end": 12.584415666666667
+  },
+  {
+    "segmentIndex": 1,
+    "text": "于",
+    "start": 12.584416666666666,
+    "duration": 0.11575,
+    "end": 12.700166666666666
+  },
+  {
+    "segmentIndex": 1,
+    "text": "结论",
+    "start": 12.711749666666666,
+    "duration": 0.335666,
+    "end": 13.047415666666666
+  },
+  {
+    "segmentIndex": 2,
+    "text": "听",
+    "start": 13.903582666666667,
+    "duration": 0.19675,
+    "end": 14.100332666666667
+  },
+  {
+    "segmentIndex": 2,
+    "text": "起来",
+    "start": 14.100332666666667,
+    "duration": 0.173625,
+    "end": 14.273957666666666
+  },
+  {
+    "segmentIndex": 2,
+    "text": "慢",
+    "start": 14.297124666666667,
+    "duration": 0.173583,
+    "end": 14.470707666666668
+  },
+  {
+    "segmentIndex": 2,
+    "text": "一点",
+    "start": 14.470707666666666,
+    "duration": 0.347208,
+    "end": 14.817915666666666
+  },
+  {
+    "segmentIndex": 2,
+    "text": "但",
+    "start": 15.107291666666667,
+    "duration": 0.150458,
+    "end": 15.257749666666667
+  },
+  {
+    "segmentIndex": 2,
+    "text": "观众",
+    "start": 15.269332666666665,
+    "duration": 0.277791,
+    "end": 15.547123666666666
+  },
+  {
+    "segmentIndex": 2,
+    "text": "会",
+    "start": 15.570249666666665,
+    "duration": 0.092583,
+    "end": 15.662832666666665
+  },
+  {
+    "segmentIndex": 2,
+    "text": "更",
+    "start": 15.674416666666666,
+    "duration": 0.162041,
+    "end": 15.836457666666666
+  },
+  {
+    "segmentIndex": 2,
+    "text": "舒服",
+    "start": 15.836457666666666,
+    "duration": 0.416666,
+    "end": 16.253123666666667
+  },
+  {
+    "segmentIndex": 2,
+    "text": "也",
+    "start": 16.461457666666668,
+    "duration": 0.127333,
+    "end": 16.588790666666668
+  },
+  {
+    "segmentIndex": 2,
+    "text": "更",
+    "start": 16.600332666666667,
+    "duration": 0.138875,
+    "end": 16.739207666666665
+  },
+  {
+    "segmentIndex": 2,
+    "text": "容易",
+    "start": 16.739249666666666,
+    "duration": 0.173625,
+    "end": 16.912874666666667
+  },
+  {
+    "segmentIndex": 2,
+    "text": "相信",
+    "start": 16.924416666666666,
+    "duration": 0.289333,
+    "end": 17.213749666666665
+  },
+  {
+    "segmentIndex": 2,
+    "text": "你",
+    "start": 17.213791666666665,
+    "duration": 0.127333,
+    "end": 17.341124666666666
+  }
+]

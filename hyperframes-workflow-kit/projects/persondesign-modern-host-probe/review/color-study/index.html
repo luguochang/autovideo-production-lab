@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Modern IP Host Color Study</title>
+    <style>
+      :root {
+        --background: #F2DFC7;
+        --surface: #FBF3E7;
+        --ink: #2A211B;
+        --muted: #675748;
+        --primary: #496958;
+        --secondary: #A94E36;
+        --line: #DCC2A3;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--background);
+        color: var(--ink);
+        font-family: Inter, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .frame {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--background);
+      }
+
+      .ambient-circle {
+        position: absolute;
+        left: -84px;
+        top: 120px;
+        width: 770px;
+        height: 770px;
+        border: 2px solid var(--line);
+        border-radius: 50%;
+      }
+
+      .ambient-rule {
+        position: absolute;
+        left: 734px;
+        top: 704px;
+        width: 1090px;
+        height: 2px;
+        background: var(--line);
+      }
+
+      .host {
+        position: absolute;
+        left: 96px;
+        top: 156px;
+        width: 600px;
+        height: 730px;
+        overflow: hidden;
+      }
+
+      .host img {
+        display: block;
+        width: 600px;
+        height: 730px;
+        object-fit: contain;
+        object-position: 50% 100%;
+      }
+
+      .content {
+        position: absolute;
+        left: 734px;
+        top: 112px;
+        width: 1090px;
+        height: 760px;
+        overflow: hidden;
+      }
+
+      .section-index {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 390px;
+        height: 36px;
+        color: var(--muted);
+        font-family: SFMono-Regular, Consolas, monospace;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+
+      .section-index::before {
+        content: "";
+        display: inline-block;
+        width: 52px;
+        height: 4px;
+        margin-right: 18px;
+        vertical-align: 5px;
+        background: var(--primary);
+      }
+
+      .headline {
+        position: absolute;
+        left: 0;
+        top: 116px;
+        width: 1060px;
+        height: 300px;
+      }
+
+      .headline-line {
+        display: block;
+        width: 1060px;
+        height: 112px;
+        color: var(--ink);
+        font-size: 96px;
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .headline-line.accented {
+        color: var(--primary);
+      }
+
+      .accent-path {
+        position: absolute;
+        left: 0;
+        top: 220px;
+        width: 850px;
+        height: 58px;
+      }
+
+      .accent-path path {
+        fill: none;
+        stroke: var(--primary);
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .accent-path circle {
+        fill: var(--secondary);
+      }
+
+      .context-helper {
+        position: absolute;
+        left: 0;
+        top: 468px;
+        width: 760px;
+        height: 56px;
+        color: var(--muted);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 56px;
+        letter-spacing: 0;
+      }
+
+      .context-helper strong {
+        color: var(--ink);
+        font-weight: 800;
+      }
+
+      .caption-rail {
+        position: absolute;
+        left: 96px;
+        top: 926px;
+        width: 1728px;
+        height: 88px;
+        overflow: hidden;
+        border-top: 2px solid var(--line);
+        background: var(--surface);
+        display: flex;
+        align-items: center;
+      }
+
+      .caption-copy {
+        display: block;
+        width: 1640px;
+        height: 44px;
+        margin-left: 34px;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .caption-copy strong {
+        color: var(--primary);
+        font-weight: 800;
+      }
+    </style>
+    <script>
+      const palettes = {
+        "01-neutral-sage": {
+          background: "#F4F4F0",
+          surface: "#FFFFFF",
+          ink: "#1D241F",
+          muted: "#626C65",
+          primary: "#4F7A62",
+          secondary: "#B85C42",
+          line: "#D9DED9"
+        },
+        "02-warm-peach": {
+          background: "#F7EAE4",
+          surface: "#FFF9F5",
+          ink: "#29211E",
+          muted: "#6D5D56",
+          primary: "#456E63",
+          secondary: "#B45B43",
+          line: "#E2D1CA"
+        },
+        "03-light-apricot": {
+          background: "#F2DFC7",
+          surface: "#FBF3E7",
+          ink: "#2A211B",
+          muted: "#675748",
+          primary: "#496958",
+          secondary: "#A94E36",
+          line: "#DCC2A3"
+        },
+        "04-pale-sage": {
+          background: "#E9F0EA",
+          surface: "#F7FAF7",
+          ink: "#1F2721",
+          muted: "#5B675E",
+          primary: "#3D7155",
+          secondary: "#B55E43",
+          line: "#CDD9CF"
+        },
+        "05-muted-orange": {
+          background: "#D87955",
+          surface: "#F7E8DF",
+          ink: "#271B18",
+          muted: "#4E3026",
+          primary: "#1C473D",
+          secondary: "#8A3322",
+          line: "#B85A3B"
+        },
+        "06-deep-forest": {
+          background: "#26342C",
+          surface: "#314138",
+          ink: "#F5F1E9",
+          muted: "#C7CEC8",
+          primary: "#A8CEAF",
+          secondary: "#F09A76",
+          line: "#52675A"
+        }
+      };
+
+      const id = new URLSearchParams(window.location.search).get("palette") || "03-light-apricot";
+      const palette = palettes[id] || palettes["03-light-apricot"];
+      for (const [token, value] of Object.entries(palette)) {
+        document.documentElement.style.setProperty(`--${token}`, value);
+      }
+      document.documentElement.dataset.palette = id;
+    </script>
+  </head>
+  <body>
+    <main class="frame">
+      <div class="ambient-circle" aria-hidden="true"></div>
+      <div class="ambient-rule" aria-hidden="true"></div>
+
+      <div class="host">
+        <img src="../../.media/images/image_001.png" alt="">
+      </div>
+
+      <section class="content">
+        <div class="section-index">SYSTEM LAYER / 01</div>
+
+        <div class="headline">
+          <span class="headline-line">平台把复杂性</span>
+          <span class="headline-line accented">藏在按钮后面</span>
+          <svg class="accent-path" viewBox="0 0 850 58" aria-hidden="true">
+            <path d="M 8 28 C 210 10, 450 46, 790 24"></path>
+            <circle cx="816" cy="23" r="11"></circle>
+          </svg>
+        </div>
+
+        <div class="context-helper">系统仍然复杂，只是被<strong>包装</strong>了。</div>
+      </section>
+
+      <div class="caption-rail">
+        <span class="caption-copy">第一，平台把系统的<strong>复杂性</strong>给隐藏起来。</span>
+      </div>
+    </main>
+  </body>
+</html>

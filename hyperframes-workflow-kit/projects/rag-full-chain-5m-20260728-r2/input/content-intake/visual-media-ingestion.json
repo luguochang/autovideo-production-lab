@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "autovideo-content-visual-ingestion/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "intakeId": "101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3",
+  "sourceReceipt": {
+    "path": "input/content-intake/submission.json",
+    "sha256": "5bd3cd4a3576007949e1d464c856466a21c69ca4acbd940c99a14e2492ee745c"
+  },
+  "policy": {
+    "autoAttachToShots": false,
+    "publicationRights": "needs-review",
+    "canonicalKey": [
+      "type",
+      "sha256"
+    ]
+  },
+  "assets": [],
+  "skipped": [
+    {
+      "relativePath": "pasted.txt",
+      "reason": "not-a-raster-visual"
+    }
+  ]
+}

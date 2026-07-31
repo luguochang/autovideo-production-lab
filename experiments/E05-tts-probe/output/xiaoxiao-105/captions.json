@@ -1,0 +1,1010 @@
+[
+  {
+    "sentenceIndex": 0,
+    "text": "我奉劝很多人，",
+    "start": 0.1,
+    "duration": 1.3719388285714285,
+    "end": 1.4719388285714285,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "对AI技术一定要有敬畏之心，",
+    "start": 1.4719388285714285,
+    "duration": 2.972534128571428,
+    "end": 4.444472957142857,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "也希望大家擦亮双眼。",
+    "start": 4.444472957142857,
+    "duration": 2.0579082428571427,
+    "end": 6.502381199999999,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "这个市场上有无数所谓的AI、Coze、",
+    "start": 6.552375,
+    "duration": 3.4182797161290317,
+    "end": 9.970654716129031,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "Dify社群，",
+    "start": 9.970654716129031,
+    "duration": 1.2064516645161287,
+    "end": 11.17710638064516,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "告诉你应该怎么做。",
+    "start": 11.17710638064516,
+    "duration": 1.6086022193548395,
+    "end": 12.7857086,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 2,
+    "text": "但是这里面99%的人，",
+    "start": 12.7857086,
+    "duration": 2.1362434722222226,
+    "end": 14.921952072222222,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 2,
+    "text": "他并不具备开发和维护AI的能力，",
+    "start": 14.921952072222222,
+    "duration": 3.204365208333332,
+    "end": 18.126317280555554,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 2,
+    "text": "他完全看不懂底层的代码。",
+    "start": 18.126317280555554,
+    "duration": 2.3498678194444445,
+    "end": 20.4761851,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 3,
+    "text": "AI也并不是你想的那么简单。",
+    "start": 20.571625,
+    "duration": 2.780952499999998,
+    "end": 23.3525775,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "我看到很多人用完Codex、",
+    "start": 23.3525775,
+    "duration": 2.4583334333333333,
+    "end": 25.810910933333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "Claude Code，",
+    "start": 25.810910933333332,
+    "duration": 1.8910257179487182,
+    "end": 27.70193665128205,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "都觉得自己是大神，",
+    "start": 27.70193665128205,
+    "duration": 1.512820574358976,
+    "end": 29.214757225641026,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "就一下子支棱起来了，",
+    "start": 29.214757225641026,
+    "duration": 1.7019231461538453,
+    "end": 30.91668037179487,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "觉得自己是被掩埋的技术天才，强得可怕，",
+    "start": 30.91668037179487,
+    "duration": 3.214743720512825,
+    "end": 34.1314240923077,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "会搭工作流，",
+    "start": 34.1314240923077,
+    "duration": 0.9455128589743609,
+    "end": 35.07693695128206,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "会写提示词，",
+    "start": 35.07693695128206,
+    "duration": 0.9455128589743609,
+    "end": 36.02244981025642,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 4,
+    "text": "然后生成一个Agent。",
+    "start": 36.02244981025642,
+    "duration": 2.080128289743584,
+    "end": 38.1025781,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 5,
+    "text": "尤其是应届生，",
+    "start": 38.19433333333333,
+    "duration": 1.4374150285714293,
+    "end": 39.63174836190476,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 5,
+    "text": "投了很多简历，",
+    "start": 39.63174836190476,
+    "duration": 1.4374150285714293,
+    "end": 41.06916339047619,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 5,
+    "text": "说AI并不好找工作。",
+    "start": 41.06916339047619,
+    "duration": 2.1561225428571404,
+    "end": 43.22528593333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 6,
+    "text": "我可以非常明确地告诉你，",
+    "start": 43.22528593333333,
+    "duration": 2.3648460323529363,
+    "end": 45.59013196568627,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 6,
+    "text": "这个市场上90%的人，",
+    "start": 45.59013196568627,
+    "duration": 2.1498600294117622,
+    "end": 47.73999199509803,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 6,
+    "text": "他对底层逻辑是完全不清晰的。",
+    "start": 47.73999199509803,
+    "duration": 2.7948180382352987,
+    "end": 50.53481003333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 7,
+    "text": "他不是在构建一个可维护的系统，",
+    "start": 50.53481003333333,
+    "duration": 2.707070799999997,
+    "end": 53.241880833333326,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 7,
+    "text": "而是在拼接一个能演示的流程、",
+    "start": 53.241880833333326,
+    "duration": 2.513708600000001,
+    "end": 55.75558943333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 7,
+    "text": "一个Demo。",
+    "start": 55.75558943333333,
+    "duration": 1.1601732000000027,
+    "end": 56.91576263333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 8,
+    "text": "五个原因，对照一下，",
+    "start": 57.015,
+    "duration": 1.8126984666666672,
+    "end": 58.82769846666667,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 8,
+    "text": "自己能理解的，",
+    "start": 58.82769846666667,
+    "duration": 1.3595238500000022,
+    "end": 60.18722231666667,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 8,
+    "text": "月薪都不会低于30K。",
+    "start": 60.18722231666667,
+    "duration": 2.2658730833333323,
+    "end": 62.4530954,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 9,
+    "text": "第一，平台把系统的复杂性给隐藏起来。",
+    "start": 62.50083333333333,
+    "duration": 3.9476191999999912,
+    "end": 66.44845253333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 10,
+    "text": "低代码、无代码、AI平台、",
+    "start": 66.44845253333332,
+    "duration": 2.481060704545456,
+    "end": 68.92951323787878,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 10,
+    "text": "工作流工具，",
+    "start": 68.92951323787878,
+    "duration": 1.240530352272728,
+    "end": 70.17004359015151,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 10,
+    "text": "把模型调用、",
+    "start": 70.17004359015151,
+    "duration": 1.240530352272728,
+    "end": 71.41057394242424,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 10,
+    "text": "API连接、向量库、",
+    "start": 71.41057394242424,
+    "duration": 1.984848563636362,
+    "end": 73.3954225060606,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 10,
+    "text": "工具链调度流程包装成了按钮和节点。",
+    "start": 73.3954225060606,
+    "duration": 3.969697127272724,
+    "end": 77.36511963333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 11,
+    "text": "好处是普通人可以快速上手，",
+    "start": 77.36511963333334,
+    "duration": 2.7100841294117686,
+    "end": 80.0752037627451,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 11,
+    "text": "坏处是很多人误以为会拖拽节点就等于懂系统架构。",
+    "start": 80.0752037627451,
+    "duration": 4.968487570588238,
+    "end": 85.04369133333334,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 12,
+    "text": "但一旦报错，",
+    "start": 85.04369143333334,
+    "duration": 1.181972833333333,
+    "end": 86.22566426666667,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 12,
+    "text": "你根本就不知道是模型问题、接口问题、权限问题、",
+    "start": 86.22566426666667,
+    "duration": 4.727891333333332,
+    "end": 90.9535556,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 12,
+    "text": "数据问题，还是上下游问题、",
+    "start": 90.9535556,
+    "duration": 2.600340233333327,
+    "end": 93.55389583333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 12,
+    "text": "状态管理问题。",
+    "start": 93.55389583333333,
+    "duration": 1.4183674000000082,
+    "end": 94.97226323333334,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 13,
+    "text": "第二点，很多人把原型能力误判成是产品能力。",
+    "start": 95.06508333333332,
+    "duration": 4.471428700000004,
+    "end": 99.53651203333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 14,
+    "text": "AI最擅长帮你从0到1做一个Demo，",
+    "start": 99.53651203333332,
+    "duration": 3.5204083200000014,
+    "end": 103.05692035333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 14,
+    "text": "每次帮你跑通一次，",
+    "start": 103.05692035333333,
+    "duration": 1.5646259199999974,
+    "end": 104.62154627333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 14,
+    "text": "你就觉得自己做成了。",
+    "start": 104.62154627333332,
+    "duration": 1.7602041600000007,
+    "end": 106.38175043333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 15,
+    "text": "但是真实的产品不是跑通一次就可以了，",
+    "start": 106.38175043333332,
+    "duration": 3.7423889180327876,
+    "end": 110.12413935136611,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 15,
+    "text": "而是能够长期稳定地运行真实的业务，",
+    "start": 110.12413935136611,
+    "duration": 3.5222483934426236,
+    "end": 113.64638774480873,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 15,
+    "text": "是有脏数据、异常输入、并发请求、成本控制、",
+    "start": 113.64638774480873,
+    "duration": 3.7423889180327876,
+    "end": 117.38877666284152,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 15,
+    "text": "隐私安全等一系列的问题。",
+    "start": 117.38877666284152,
+    "duration": 2.4215457704918038,
+    "end": 119.81032243333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 16,
+    "text": "当没有工程底座的时候，",
+    "start": 119.81032253333333,
+    "duration": 1.9963370769230693,
+    "end": 121.8066596102564,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 16,
+    "text": "你的Demo越漂亮，",
+    "start": 121.8066596102564,
+    "duration": 1.7967033692307695,
+    "end": 123.60336297948717,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 16,
+    "text": "后面塌得就越快。",
+    "start": 123.60336297948717,
+    "duration": 1.3974359538461556,
+    "end": 125.00079893333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 17,
+    "text": "第三点，就是我觉得现在短视频它疯狂地在展示结果，",
+    "start": 125.09083333333332,
+    "duration": 5.108046179310335,
+    "end": 130.19887951264366,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 17,
+    "text": "没有去展示维护。",
+    "start": 130.19887951264366,
+    "duration": 1.6252874206896593,
+    "end": 131.82416693333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "一个智能体自动生成报告、",
+    "start": 131.82416693333332,
+    "duration": 2.3218865435897555,
+    "end": 134.14605347692307,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "自动回复客户、",
+    "start": 134.14605347692307,
+    "duration": 1.2664835692307577,
+    "end": 135.41253704615383,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "自动剪辑视频，",
+    "start": 135.41253704615383,
+    "duration": 1.2664835692307577,
+    "end": 136.6790206153846,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "它看起来很震惊，",
+    "start": 136.6790206153846,
+    "duration": 1.4775641641025743,
+    "end": 138.15658477948716,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "但是没有人展示它失败的时候怎么去排查，",
+    "start": 138.15658477948716,
+    "duration": 3.7994507076923014,
+    "end": 141.95603548717946,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "没人展示日志怎么读，",
+    "start": 141.95603548717946,
+    "duration": 1.8997253538461507,
+    "end": 143.8557608410256,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "没人展示测试怎么做，",
+    "start": 143.8557608410256,
+    "duration": 1.8997253538461507,
+    "end": 145.75548619487176,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 18,
+    "text": "没人展示边界条件怎么处理。",
+    "start": 145.75548619487176,
+    "duration": 2.5329671384615438,
+    "end": 148.2884533333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 19,
+    "text": "于是大家看到的是魔法，",
+    "start": 148.28845343333333,
+    "duration": 1.6789819999999906,
+    "end": 149.96743543333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 19,
+    "text": "Magic，",
+    "start": 149.96743543333332,
+    "duration": 0.8394910000000095,
+    "end": 150.80692643333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 19,
+    "text": "它不是Engineering。",
+    "start": 150.80692643333333,
+    "duration": 2.350574800000004,
+    "end": 153.15750123333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 20,
+    "text": "第四点，很多人有强烈的弯道超车的心理。",
+    "start": 153.25424999999998,
+    "duration": 3.8285716000000036,
+    "end": 157.0828216,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 21,
+    "text": "AI给了所有非技术的人一个巨大的想象：",
+    "start": 157.0828216,
+    "duration": 3.926641086486484,
+    "end": 161.00946268648647,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 21,
+    "text": "我不懂代码也能做软件，",
+    "start": 161.00946268648647,
+    "duration": 2.181467270270275,
+    "end": 163.19092995675675,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 21,
+    "text": "我不会开发也能创业。",
+    "start": 163.19092995675675,
+    "duration": 1.963320543243242,
+    "end": 165.1542505,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 22,
+    "text": "这种心理有一部分是真的，",
+    "start": 165.1542505,
+    "duration": 2.398065553125008,
+    "end": 167.552316053125,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 22,
+    "text": "因为AI确实降低了表达需求和生成原型的门槛。",
+    "start": 167.552316053125,
+    "duration": 4.5781251468749815,
+    "end": 172.13044119999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 23,
+    "text": "但危险在于，",
+    "start": 172.1304413,
+    "duration": 1.0680272571428588,
+    "end": 173.19846855714286,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 23,
+    "text": "有些人进一步误解为，",
+    "start": 173.19846855714286,
+    "duration": 1.9224490628571402,
+    "end": 175.12091762,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 23,
+    "text": "不需要懂代码、",
+    "start": 175.12091762,
+    "duration": 1.2816327085714363,
+    "end": 176.40255032857144,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 23,
+    "text": "不需要懂系统、",
+    "start": 176.40255032857144,
+    "duration": 1.2816327085714363,
+    "end": 177.68418303714287,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 23,
+    "text": "不需要懂工程就能够。",
+    "start": 177.68418303714287,
+    "duration": 1.9224490628571118,
+    "end": 179.60663209999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 24,
+    "text": "不能，最后只是一种自欺欺人。",
+    "start": 179.60663209999998,
+    "duration": 3.1309525000000065,
+    "end": 182.7375846,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 25,
+    "text": "第五点，真正的智能体至少要能回答一些问题：",
+    "start": 182.83599999999998,
+    "duration": 4.1247450821428515,
+    "end": 186.96074508214284,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 25,
+    "text": "它的任务边界是什么？",
+    "start": 186.96074508214284,
+    "duration": 1.9538266178571462,
+    "end": 188.91457169999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 26,
+    "text": "它失败时应该怎么办？",
+    "start": 188.91457169999998,
+    "duration": 2.32142859999999,
+    "end": 191.23600029999997,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 27,
+    "text": "该如何保存和调用上下文？",
+    "start": 191.2360003,
+    "duration": 2.8452382000000114,
+    "end": 194.0812385,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 28,
+    "text": "该怎么判断模型输出是否靠谱？",
+    "start": 194.08123859999998,
+    "duration": 3.154762000000005,
+    "end": 197.23600059999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 29,
+    "text": "它怎么处理工具调用失败？",
+    "start": 197.23600059999998,
+    "duration": 2.500000099999994,
+    "end": 199.73600069999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 30,
+    "text": "它的数据从哪里来，是否可信？",
+    "start": 199.73600069999998,
+    "duration": 3.0238095999999928,
+    "end": 202.75981029999997,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 31,
+    "text": "它有没有权限控制和安全机制？",
+    "start": 202.7598104,
+    "duration": 2.9880952999999977,
+    "end": 205.7479057,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 32,
+    "text": "有没有日志、监控、测试、回滚机制？",
+    "start": 205.74790579999998,
+    "duration": 3.9880953999999917,
+    "end": 209.73600119999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 33,
+    "text": "它的成本是否可控？",
+    "start": 209.73600119999998,
+    "duration": 2.07142859999999,
+    "end": 211.80742979999997,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 34,
+    "text": "最后，它能不能被别人去维护？",
+    "start": 211.8074298,
+    "duration": 2.928571500000004,
+    "end": 214.7360013,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 35,
+    "text": "很多人出了Bug以后，",
+    "start": 214.83041666666665,
+    "duration": 2.0158730952381063,
+    "end": 216.84628976190476,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 35,
+    "text": "他用AI来去打这个补丁。",
+    "start": 216.84628976190476,
+    "duration": 2.2174604047619084,
+    "end": 219.06375016666667,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 36,
+    "text": "我说实话，AI打补丁，",
+    "start": 219.06375016666667,
+    "duration": 2.0119048333333183,
+    "end": 221.07565499999998,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 36,
+    "text": "这个补丁会打得非常大，",
+    "start": 221.07565499999998,
+    "duration": 2.235449814814814,
+    "end": 223.3111048148148,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 36,
+    "text": "而且一定是失真的。",
+    "start": 223.3111048148148,
+    "duration": 1.788359851851851,
+    "end": 225.09946466666665,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 37,
+    "text": "这些问题，有人回答得上来吗？",
+    "start": 225.09946466666665,
+    "duration": 2.809523899999988,
+    "end": 227.90898856666664,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 38,
+    "text": "你回答不上来，",
+    "start": 227.90898866666666,
+    "duration": 1.4126984666666544,
+    "end": 229.3216871333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 38,
+    "text": "它就不是产品，",
+    "start": 229.3216871333333,
+    "duration": 1.4126984666666544,
+    "end": 230.73438559999997,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 38,
+    "text": "它只是个演示。",
+    "start": 230.73438559999997,
+    "duration": 1.4126984666666829,
+    "end": 232.14708406666665,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 39,
+    "text": "今年，真正懂系统的人已经开始胜出了，",
+    "start": 232.2447083333333,
+    "duration": 3.562637507692301,
+    "end": 235.8073458410256,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 39,
+    "text": "因为他们把AI从玩具变成了工具，",
+    "start": 235.8073458410256,
+    "duration": 3.3399726634615376,
+    "end": 239.14731850448715,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 39,
+    "text": "将工具变成了产品，",
+    "start": 239.14731850448715,
+    "duration": 1.7813187538461648,
+    "end": 240.9286372583333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 39,
+    "text": "从产品变成了业务的基础设施。",
+    "start": 240.9286372583333,
+    "duration": 2.8946429750000107,
+    "end": 243.82328023333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 40,
+    "text": "如果你也想把Agent真正地学起来，",
+    "start": 243.91720833333332,
+    "duration": 3.143944226086944,
+    "end": 247.06115255942026,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 40,
+    "text": "不只是随便玩一下，",
+    "start": 247.06115255942026,
+    "duration": 1.4795031652173805,
+    "end": 248.54065572463765,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 40,
+    "text": "而是当作自己的工作，",
+    "start": 248.54065572463765,
+    "duration": 1.6644410608695637,
+    "end": 250.2050967855072,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 40,
+    "text": "就能拿到一个还不错的薪资。",
+    "start": 250.2050967855072,
+    "duration": 2.2192547478261133,
+    "end": 252.42435153333332,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 41,
+    "text": "666，拿着我这份耗时三周整理出来的路线和教程，",
+    "start": 252.42435153333332,
+    "duration": 4.699735659259261,
+    "end": 257.1240871925926,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 41,
+    "text": "里面就包含了Agent集群、",
+    "start": 257.1240871925926,
+    "duration": 2.777116525925919,
+    "end": 259.9012037185185,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 41,
+    "text": "MCP等基础的知识点，",
+    "start": 259.9012037185185,
+    "duration": 2.136243481481472,
+    "end": 262.0374472,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 41,
+    "text": "以及要去做什么项目。",
+    "start": 262.0374472,
+    "duration": 1.9226191333333418,
+    "end": 263.9600663333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 42,
+    "text": "把这些东西都要系统地过一遍，",
+    "start": 263.9600663333333,
+    "duration": 2.6386905675000207,
+    "end": 266.59875690083334,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 42,
+    "text": "这才是决定你做出来的东西不是Demo，",
+    "start": 266.59875690083334,
+    "duration": 3.653571554999985,
+    "end": 270.2523284558333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 42,
+    "text": "而是能够上线的产品。",
+    "start": 270.2523284558333,
+    "duration": 1.8267857774999925,
+    "end": 272.0791142333333,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 43,
+    "text": "当创建变得廉价，理解、判断、维护、",
+    "start": 272.161875,
+    "duration": 3.5972051304347588,
+    "end": 275.75908013043477,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 43,
+    "text": "负责就会变得异常珍贵。",
+    "start": 275.75908013043477,
+    "duration": 2.767080869565234,
+    "end": 278.526161,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 44,
+    "text": "就是你去做这个提示词，",
+    "start": 278.526161,
+    "duration": 1.9777266451612832,
+    "end": 280.5038876451613,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 44,
+    "text": "这个动作是很廉价的，",
+    "start": 280.5038876451613,
+    "duration": 1.779953980645189,
+    "end": 282.2838416258065,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 44,
+    "text": "只需要消耗一点Token。",
+    "start": 282.2838416258065,
+    "duration": 2.3732719741935284,
+    "end": 284.6571136,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "但是后面如何去理解你的这个Agent，",
+    "start": 284.6571136,
+    "duration": 3.5938104292682738,
+    "end": 288.2509240292683,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "如何去判断，",
+    "start": 288.2509240292683,
+    "duration": 0.9982806747967743,
+    "end": 289.24920470406505,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "如何去维护，",
+    "start": 289.24920470406505,
+    "duration": 0.9982806747967743,
+    "end": 290.2474853788618,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "如何去负责，",
+    "start": 290.2474853788618,
+    "duration": 0.9982806747967743,
+    "end": 291.2457660536586,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "让它从一个Demo变成一个真正的产品，",
+    "start": 291.2457660536586,
+    "duration": 3.5938104292682738,
+    "end": 294.8395764829269,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "让它能够跑通你的业务，",
+    "start": 294.8395764829269,
+    "duration": 1.9965613495934917,
+    "end": 296.83613783252036,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "这个过程是很复杂的，",
+    "start": 296.83613783252036,
+    "duration": 1.7969052146341369,
+    "end": 298.6330430471545,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 45,
+    "text": "所以这个过程也是很珍贵的。",
+    "start": 298.6330430471545,
+    "duration": 2.3958736195121446,
+    "end": 301.02891666666665,
+    "timingSource": "sentence-boundary-proportional"
+  }
+]

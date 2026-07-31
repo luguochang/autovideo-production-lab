@@ -1,0 +1,24 @@
+{
+  "duration": 8,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#host-zone", "bySec": 0.9},
+    {"kind": "appearsBy", "selector": "#system-object", "bySec": 0.95},
+    {"kind": "appearsBy", "selector": "#station-entry", "bySec": 0.95},
+    {"kind": "appearsBy", "selector": "#station-model", "bySec": 1.8},
+    {"kind": "appearsBy", "selector": "#station-api", "bySec": 2.9},
+    {"kind": "appearsBy", "selector": "#station-data", "bySec": 4.0},
+    {"kind": "appearsBy", "selector": "#station-orchestration", "bySec": 5.2},
+    {"kind": "appearsBy", "selector": "#caption-a", "bySec": 0.6},
+    {"kind": "appearsBy", "selector": "#caption-b", "bySec": 3.5},
+    {"kind": "appearsBy", "selector": "#caption-c", "bySec": 5.8},
+    {"kind": "appearsBy", "selector": "#final-summary", "bySec": 6.8},
+    {"kind": "before", "a": "#station-model", "b": "#station-api"},
+    {"kind": "before", "a": "#station-api", "b": "#station-data"},
+    {"kind": "before", "a": "#station-data", "b": "#station-orchestration"},
+    {"kind": "staysInFrame", "selector": "#host-zone"},
+    {"kind": "staysInFrame", "selector": "#content-zone"},
+    {"kind": "staysInFrame", "selector": "#caption-shell"},
+    {"kind": "staysInFrame", "selector": "#system-object"},
+    {"kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 1.35}
+  ]
+}

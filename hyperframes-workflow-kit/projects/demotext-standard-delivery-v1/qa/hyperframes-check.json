@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "strict": true,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 15
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 239.909,
+    "samples": [
+      13.328,
+      39.985,
+      66.641,
+      93.298,
+      119.955,
+      146.611,
+      173.268,
+      199.924,
+      226.581
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v1\\production\\hyperframes\\index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      13.328,
+      66.641,
+      119.955,
+      173.268,
+      226.581
+    ],
+    "checked": 33,
+    "passed": 33
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.7.62",
+    "latestVersion": "0.7.64",
+    "updateAvailable": true
+  },
+  "autoVideo": {
+    "hyperframesVersion": "0.7.62",
+    "checkedAt": "2026-07-18T22:37:32.188Z",
+    "scope": "composition structure, runtime, layout, motion and contrast; final MP4 media QA runs after render",
+    "compositionDigest": "008821f817c795c5e1b8d49bc3f8d6bb1ed6a1d74fc604c189797e8ca9a1c617",
+    "compositionFileCount": 136
+  }
+}

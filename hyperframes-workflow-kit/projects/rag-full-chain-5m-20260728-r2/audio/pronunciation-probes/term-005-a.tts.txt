@@ -1,0 +1,1 @@
+纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。

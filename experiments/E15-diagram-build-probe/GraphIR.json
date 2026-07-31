@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "autovideo-graph-ir/v1",
+  "projectId": "e15-diagram-build-probe",
+  "purpose": "Represent the hidden engineering pipeline behind a simple low-code or workflow entry as a genuine ordered relation.",
+  "globalPolicy": {
+    "maxActiveNodesPerState": 3,
+    "defaultStateTransition": "connector draw followed by bounded node arrival",
+    "completedGroupTreatment": "retain the complete three-node relation and pull the content-world camera back for a readable terminal hold",
+    "allowedMotionRules": ["svg-path-draw", "viewport-change"],
+    "forbidGraphKinds": ["chart", "stat", "count"],
+    "excludedNumericClaims": [],
+    "numericClaimReason": "The narration window contains no sourced numeric claim."
+  },
+  "graphs": [
+    {
+      "id": "graph-hidden-pipeline",
+      "sceneId": "scene-01",
+      "kind": "process",
+      "sourceCueIds": ["cue-001", "cue-002", "cue-003"],
+      "nodes": [
+        {
+          "id": "graph-node-model",
+          "label": "模型调用｜调用推理能力",
+          "textType": "generated-summary",
+          "sourceCueIds": ["cue-003"],
+          "generationReceipt": "PROBE_REVIEW.md#screen-copy"
+        },
+        {
+          "id": "graph-node-api",
+          "label": "API 连接｜数据与向量检索",
+          "textType": "generated-summary",
+          "sourceCueIds": ["cue-003"],
+          "generationReceipt": "PROBE_REVIEW.md#screen-copy"
+        },
+        {
+          "id": "graph-node-tools",
+          "label": "工具链调度｜编排实际动作",
+          "textType": "generated-summary",
+          "sourceCueIds": ["cue-003"],
+          "generationReceipt": "PROBE_REVIEW.md#screen-copy"
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-model-api",
+          "from": "graph-node-model",
+          "to": "graph-node-api",
+          "relation": "connects-context"
+        },
+        {
+          "id": "edge-api-tools",
+          "from": "graph-node-api",
+          "to": "graph-node-tools",
+          "relation": "orchestrates-execution"
+        }
+      ],
+      "states": [
+        {
+          "id": "state-model",
+          "cueIds": ["cue-001"],
+          "operation": "replace",
+          "activeNodeIds": ["graph-node-model"],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "state-connected",
+          "cueIds": ["cue-002"],
+          "operation": "compact",
+          "activeNodeIds": ["graph-node-model", "graph-node-api"],
+          "activeEdgeIds": ["edge-model-api"]
+        },
+        {
+          "id": "state-complete",
+          "cueIds": ["cue-003"],
+          "operation": "compact",
+          "activeNodeIds": ["graph-node-model", "graph-node-api", "graph-node-tools"],
+          "activeEdgeIds": ["edge-model-api", "edge-api-tools"]
+        }
+      ],
+      "terminalStateId": "state-complete",
+      "motionRules": ["svg-path-draw", "viewport-change"],
+      "cueDirectives": [
+        {
+          "cueId": "cue-003",
+          "visualType": "diagram",
+          "motionRecipeRefs": [
+            {
+              "libraryId": "knowledge-explainer-v1",
+              "libraryVersion": "1.0.0",
+              "recipeId": "diagram-build",
+              "version": "1.0.0",
+              "params": {
+                "establishEndSec": 2.72,
+                "focusEndSec": 6.24,
+                "pullbackEndSec": 7.1,
+                "cameraScope": "content-world-only"
+              },
+              "sourceCueIds": ["cue-003"]
+            }
+          ],
+          "assetRefs": [],
+          "sfxRefs": [],
+          "provenanceRefs": ["SOURCE_RECEIPT.json"]
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "probe-adaptation",
+    "narrationLock": "NarrationLock.json",
+    "sourceReceipt": "SOURCE_RECEIPT.json",
+    "status": "candidate"
+  }
+}

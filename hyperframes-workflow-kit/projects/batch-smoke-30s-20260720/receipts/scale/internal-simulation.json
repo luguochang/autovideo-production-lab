@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "autovideo-scale-metrics-simulation/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-22T16:36:21.854Z",
+  "status": "internal-simulation-only",
+  "countsForMaturity": false,
+  "generatedBy": "codex-creator-delegated-internal-simulation",
+  "metrics": {
+    "elapsedSeconds": {
+      "state": "derived",
+      "value": 1.16,
+      "source": "STANDARD_RUN_RECEIPT.json",
+      "method": "updatedAt - startedAt"
+    },
+    "humanMinutes": {
+      "state": "unavailable",
+      "value": null,
+      "reason": "Human active time is not captured by a trustworthy timer."
+    },
+    "cpuSeconds": {
+      "state": "unavailable",
+      "value": null,
+      "reason": "Per-process CPU time is not captured by the current runner."
+    },
+    "gpuSeconds": {
+      "state": "unavailable",
+      "value": null,
+      "reason": "GPU utilization time is not captured by the current runner."
+    },
+    "modelCalls": {
+      "state": "unavailable",
+      "value": null,
+      "reason": "No provider usage receipt or explicit modelCalls counter is stored for this project."
+    },
+    "retryCount": {
+      "state": "derived",
+      "value": 12,
+      "source": "workflow-console/data/db.json",
+      "method": "failed jobs that have a later successful job for the same stage"
+    },
+    "overrideCount": {
+      "state": "derived",
+      "value": 0,
+      "source": "workbench stages + overrides/overrides.json",
+      "method": "deduplicated override records"
+    },
+    "assetReuseCount": {
+      "state": "derived",
+      "value": 2,
+      "source": "AssetManifest.json + .media/manifest.jsonl",
+      "method": "frozen assets whose provenance is a shared local, bundled, or registry library"
+    },
+    "assetCandidateCount": {
+      "state": "derived",
+      "value": 12,
+      "source": "AssetManifest.json + .media/manifest.jsonl",
+      "method": "unique frozen asset hashes or paths observed in both ledgers"
+    },
+    "recipeReuseCount": {
+      "state": "derived",
+      "value": 6,
+      "source": "plan/planning-bundle.json",
+      "method": "motion recipe references attached to final shots"
+    },
+    "recipeOpportunityCount": {
+      "state": "derived",
+      "value": 6,
+      "source": "plan/planning-bundle.json",
+      "method": "final shots with a cue identity"
+    },
+    "reworkCount": {
+      "state": "derived",
+      "value": 13,
+      "source": "workflow-console project events",
+      "method": "stage-reopened events"
+    }
+  },
+  "observations": {
+    "jobCount": 77,
+    "failedJobCount": 12,
+    "timedJobCount": 77,
+    "activeJobWallSeconds": 614.007,
+    "projectInvalidationCount": 2,
+    "stageReopenedCount": 13
+  },
+  "recoveryEligible": false,
+  "recoveryIssues": [
+    "The current standard run is not a distinct resumed run."
+  ],
+  "bindings": {
+    "projectState": {
+      "path": "project-state.json",
+      "sha256": "bdd82dcf1280f6f0c6047125c1cff9e6f8e60560928c2e8886f93b349ea5e1c2"
+    },
+    "standardRun": {
+      "path": "STANDARD_RUN_RECEIPT.json",
+      "sha256": "92bf6ce2365920188c6483612e4de6a83a73165dee27c81bf3b201e7e155980e"
+    }
+  },
+  "policy": {
+    "unknownIsNeverZero": true,
+    "simulationCountsAsHuman": false,
+    "microphoneUsed": false,
+    "mediaPlaybackInvoked": false
+  },
+  "notes": "Mechanical fields were derived from frozen local receipts. Missing human, CPU, GPU, and provider-usage telemetry remains unknown and was not silently replaced with zero."
+}

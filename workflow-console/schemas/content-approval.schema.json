@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo approved narration receipt",
+  "type": "object",
+  "required": [
+    "schemaVersion", "projectId", "bindings", "approvedNarration", "status",
+    "approvalScope", "approvedBy", "approvedAt", "wordingPolicy", "acceptedWarnings"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-content-approval/v2"},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "bindings": {
+      "type": "object",
+      "required": ["sourcesSha256", "suitabilitySha256", "evidenceSha256", "spokenRewriteSha256", "claimSourceReviewSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "sourcesSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "suitabilitySha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "evidenceSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "evidenceApprovalSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "contentOutlineSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "scriptDraftSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "spokenRewriteSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "durationFitSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "claimSourceReviewSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "approvedNarration": {
+      "type": "object",
+      "required": ["path", "sha256", "bytes"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "const": "script.approved.txt"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "status": {"type": "string", "const": "approved"},
+    "approvalScope": {"type": "string", "const": "human-review"},
+    "approvedBy": {"type": "string", "minLength": 1},
+    "approvedAt": {"type": "string", "minLength": 1},
+    "wordingPolicy": {"type": "string", "const": "immutable-after-approval"},
+    "acceptedWarnings": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "autovideo-material-suitability/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "sourceRegister": {
+    "path": "sources.json",
+    "sha256": "7d0bf05c2507dbbf424c5dfb44d28c346cc1a44730f77969bfdde2775952d71c"
+  },
+  "assessmentScope": "technical-baseline",
+  "status": "suitable",
+  "recommendedRoute": "script",
+  "usableSourceIds": [
+    "source-001-acfa947f"
+  ],
+  "preparationActions": [
+    {
+      "sourceId": "source-001-acfa947f",
+      "action": "none",
+      "reason": "Text can enter claim extraction directly."
+    }
+  ],
+  "blockers": [],
+  "humanReviewRequired": true,
+  "rewritePolicy": {
+    "allowNewFacts": false,
+    "requireClaimMapping": true,
+    "preserveApprovedWording": true
+  },
+  "generatedAt": "2026-07-20T12:38:18.720Z"
+}

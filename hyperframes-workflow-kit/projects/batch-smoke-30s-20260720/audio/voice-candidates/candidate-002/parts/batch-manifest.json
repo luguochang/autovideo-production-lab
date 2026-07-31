@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "cosyvoice-zh-female-batch/v1",
+  "segments": [
+    {
+      "id": "part-001",
+      "textFile": "part-001.tts.txt",
+      "textSha256": "8457b8b48eb60b4ab69f0b2ce975c3fa9e88a7590a51247a5e9c294420f19c9c",
+      "output": "part-001.wav",
+      "receipt": "part-001.recipe.json"
+    },
+    {
+      "id": "part-002",
+      "textFile": "part-002.tts.txt",
+      "textSha256": "8b1bea173ee51c7abf4d9c6b1320f3aaeb43d5965f64c8656812ac21dc59f47e",
+      "output": "part-002.wav",
+      "receipt": "part-002.recipe.json"
+    },
+    {
+      "id": "part-003",
+      "textFile": "part-003.tts.txt",
+      "textSha256": "10183108a602a09397f50e1e5f6cde847113ef008f31d5702f1f1bcabeefdde2",
+      "output": "part-003.wav",
+      "receipt": "part-003.recipe.json"
+    },
+    {
+      "id": "part-004",
+      "textFile": "part-004.tts.txt",
+      "textSha256": "0814db2ef4bd237d2c5b98ac42c8f68a84e5e78533819a9dff4bb921a241b928",
+      "output": "part-004.wav",
+      "receipt": "part-004.recipe.json"
+    }
+  ]
+}

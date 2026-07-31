@@ -1,0 +1,2162 @@
+{
+  "schemaVersion": "autovideo-subtitle-qa/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "generatedAt": "2026-07-28T15:35:09.403Z",
+  "machine": {
+    "status": "passed",
+    "source": "alignment.cues and captions/narration.zh-CN.srt",
+    "alignmentSha256": "e3193c3da74e3ef6d0ae0672ca352513cc8268ce1aafff5658574d84198fe572",
+    "validationSha256": "0aa997dc019d26c180feac207ee3c24d269e1b6f78d21da72f9fe4ac94ee4bdc",
+    "srtSha256": "650a9b9de704335ce7a65e86d204af6ba464d6c04e68f9225e16a5d7c249445e",
+    "cueCount": 237,
+    "srtCount": 237,
+    "checks": [
+      {
+        "cueId": "cue-001",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.923,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-002",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.455,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-003",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.818,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-004",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.589,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-005",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.067,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-006",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.622,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-007",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.857,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-008",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.423,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-009",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.282,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-010",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.435,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-011",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.131,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-012",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.819,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-013",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.478,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-014",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.37,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-015",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.363,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-016",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.616,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-017",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.717,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-018",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.098,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-019",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.65,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-020",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.818,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-021",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.579,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-022",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.46,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-023",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.929,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-024",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.556,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-025",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.623,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-026",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 8.945,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-027",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.968,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-028",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.116,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-029",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.897,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-030",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.353,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-031",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.126,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-032",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.698,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-033",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.905,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-034",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.967,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-035",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.375,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-036",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.665,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-037",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.231,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-038",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-039",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.448,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-040",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.607,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-041",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.817,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-042",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.132,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-043",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.5,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-044",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.452,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-045",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.759,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-046",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 8.333,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-047",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.452,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-048",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.625,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-049",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.025,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-050",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.331,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-051",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.702,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-052",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.84,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-053",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.452,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-054",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.437,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-055",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.352,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-056",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.245,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-057",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.649,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-058",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.157,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-059",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.827,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-060",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.444,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-061",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.337,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-062",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.112,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-063",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 3.763,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-064",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.843,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-065",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.828,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-066",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.681,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-067",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.461,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-068",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.703,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-069",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.878,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-070",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.634,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-071",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.381,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-072",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.3,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-073",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.422,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-074",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.928,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-075",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.556,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-076",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.108,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-077",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.39,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-078",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.274,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-079",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.268,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-080",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.917,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-081",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.73,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-082",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 10.526,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-083",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.681,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-084",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.378,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-085",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.699,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-086",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.936,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-087",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.368,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-088",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.925,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-089",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.769,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-090",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.527,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-091",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.762,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-092",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.064,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-093",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.452,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-094",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.098,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-095",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.249,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-096",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.545,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-097",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.087,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-098",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.124,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-099",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.603,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-100",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.009,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-101",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.778,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-102",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.072,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-103",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.769,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-104",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.395,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-105",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.052,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-106",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.338,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-107",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.51,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-108",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.792,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-109",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.102,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-110",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.368,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-111",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.093,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-112",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.338,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-113",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.472,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-114",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.495,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-115",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.765,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-116",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.965,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-117",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.446,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-118",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.024,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-119",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.555,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-120",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.03,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-121",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.448,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-122",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.814,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-123",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.129,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-124",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.273,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-125",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.097,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-126",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.044,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-127",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.633,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-128",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.357,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-129",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.747,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-130",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.09,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-131",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.716,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-132",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.449,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-133",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.833,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-134",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.112,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-135",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.962,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-136",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.7,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-137",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.649,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-138",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.505,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-139",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.343,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-140",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.335,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-141",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.627,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-142",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.895,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-143",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.24,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-144",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.895,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-145",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.08,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-146",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.773,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-147",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.894,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-148",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.831,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-149",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.825,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-150",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.668,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-151",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.768,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-152",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.516,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-153",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.569,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-154",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.692,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-155",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.978,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-156",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.894,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-157",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.596,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-158",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.208,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-159",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.793,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-160",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.532,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-161",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.231,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-162",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 9.709,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-163",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.348,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-164",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.147,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-165",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.291,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-166",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.11,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-167",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.598,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-168",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.809,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-169",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.46,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-170",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.823,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-171",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.619,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-172",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.539,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-173",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.293,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-174",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.972,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-175",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.22,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-176",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.943,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-177",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.229,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-178",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.719,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-179",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.312,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-180",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 7.395,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-181",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.689,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-182",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.449,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-183",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.507,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-184",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.397,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-185",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.383,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-186",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.837,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-187",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.348,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-188",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.517,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-189",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.694,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-190",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.669,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-191",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.596,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-192",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.978,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-193",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.761,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-194",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.842,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-195",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.322,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-196",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.703,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-197",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.269,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-198",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.586,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-199",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.25,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-200",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.195,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-201",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.878,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-202",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.294,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-203",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.832,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-204",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.119,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-205",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 3.333,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-206",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.446,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-207",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.01,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-208",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.821,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-209",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.517,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-210",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.429,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-211",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.678,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-212",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.394,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-213",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.389,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-214",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.507,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-215",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.842,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-216",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.838,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-217",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.422,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-218",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.596,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-219",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.945,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-220",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.15,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-221",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.469,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-222",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.191,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-223",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.834,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-224",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.081,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-225",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.144,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-226",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.66,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-227",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.21,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-228",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-229",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.67,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-230",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.072,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-231",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.267,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-232",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.802,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-233",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.91,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-234",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.784,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-235",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.322,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-236",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.508,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-237",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.78,
+        "cpsPassed": true,
+        "empty": false
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "humanSemanticReview": {
+    "status": "needs-review",
+    "reviewer": null,
+    "note": "Machine checks do not replace subtitle wording and context review."
+  },
+  "ocrReview": {
+    "status": "unavailable",
+    "tool": "PaddleOCR",
+    "note": "OCR adapter is not installed in this workspace; screen text review remains manual."
+  },
+  "publicReleaseEligible": false
+}

@@ -1,0 +1,32 @@
+{
+  "title": "RAG 为什么需要重排序",
+  "subtitle": "60 秒理解检索增强生成",
+  "scenes": [
+    {
+      "type": "hook",
+      "duration": 150,
+      "headline": "召回到了\n不等于找对了",
+      "body": "RAG 的第一次检索，只负责不漏掉候选。"
+    },
+    {
+      "type": "flow",
+      "duration": 240,
+      "headline": "两阶段检索",
+      "body": "先扩大召回，再精确排序",
+      "items": ["问题 Query", "召回 Top-K", "重排序 Rerank", "送入 LLM"]
+    },
+    {
+      "type": "compare",
+      "duration": 240,
+      "headline": "为什么不能只用向量相似度？",
+      "body": "相似不代表真正回答了问题",
+      "items": ["召回：快、范围广", "重排：慢一点、判断更细"]
+    },
+    {
+      "type": "summary",
+      "duration": 180,
+      "headline": "记住这条链路",
+      "body": "Retrieve 找候选，Rerank 定顺序，LLM 负责回答。"
+    }
+  ]
+}

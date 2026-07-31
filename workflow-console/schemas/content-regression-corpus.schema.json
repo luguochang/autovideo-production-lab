@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo content regression corpus",
+  "type": "object",
+  "required": [
+    "schemaVersion", "corpusId", "datasetClass", "humanReviewedGoldCases",
+    "cases", "policy"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-content-regression-corpus/v1"},
+    "corpusId": {"type": "string", "minLength": 1},
+    "datasetClass": {"type": "string", "enum": ["synthetic-contract-seed", "mixed-content-regression"]},
+    "humanReviewedGoldCases": {"type": "integer", "minimum": 0},
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["caseId", "casePath", "caseSha256", "candidatePath", "candidateSha256"],
+        "additionalProperties": false,
+        "properties": {
+          "caseId": {"type": "string"},
+          "casePath": {"type": "string", "minLength": 1},
+          "caseSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "candidatePath": {"type": "string", "minLength": 1},
+          "candidateSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "humanEvaluationPath": {"type": "string", "minLength": 1},
+          "humanEvaluationSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "required": ["syntheticCasesAuthorizeProduction", "humanEvaluationAuthorizesNarrationLock"],
+      "additionalProperties": false,
+      "properties": {
+        "syntheticCasesAuthorizeProduction": {"type": "boolean", "const": false},
+        "humanEvaluationAuthorizesNarrationLock": {"type": "boolean", "const": false}
+      }
+    }
+  }
+}

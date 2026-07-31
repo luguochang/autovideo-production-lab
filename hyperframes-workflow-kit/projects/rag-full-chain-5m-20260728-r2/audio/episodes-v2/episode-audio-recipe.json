@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "autovideo-episode-audio/v1",
+  "generatedAt": "2026-07-29T10:42:27.469Z",
+  "internalOnly": true,
+  "humanListeningRequired": true,
+  "humanListeningPerformed": false,
+  "publicReleaseBlocked": true,
+  "split": {
+    "seconds": 794.88,
+    "reason": "semantic boundary before the online query stage"
+  },
+  "transitionGapSeconds": 0.72,
+  "original": {
+    "path": "audio/narration.final.wav",
+    "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+    "durationSeconds": 1880.218458,
+    "preserved": true
+  },
+  "bridges": {
+    "upperClose": {
+      "path": "audio/episodes-v2/upper-close.wav",
+      "sha256": "2bef4ffe8784afb0a6896ff290dbdfbd15bae3e5d1dd4bf37d2fdc9df00a5eaa",
+      "receipt": "audio/episodes-v2/upper-close.merge.recipe.json"
+    },
+    "lowerRecap": {
+      "path": "audio/episodes-v2/lower-recap.wav",
+      "sha256": "09d4520d9565d1bca1b29d6518fd23d35c8311095155b7469d8cbd827a22f1c1",
+      "receipt": "audio/episodes-v2/lower-recap.merge.recipe.json"
+    }
+  },
+  "episode1": {
+    "path": "audio/episodes-v2/episode-1.internal.wav",
+    "sha256": "1b4c8d370bb3636f8d3807bd6c991359feae6904ec11d364ae632f0aef2ef330",
+    "durationSeconds": 808.826479,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "loudness": {
+      "integratedLufs": -16.03,
+      "truePeakDb": -1.49,
+      "loudnessRangeLu": 2.6,
+      "thresholdLufs": -26.22
+    },
+    "decodePassed": true,
+    "bridgeStartSeconds": 795.6,
+    "bridgeSegments": [
+      {
+        "id": "bridge-upper-01",
+        "start": 795.6,
+        "end": 803.726979,
+        "text": "上集先到这里。我们已经把原始文档经过解析、分块、上下文增强和向量化，最终变成了可以检索的知识库。"
+      },
+      {
+        "id": "bridge-upper-02",
+        "start": 804.286979,
+        "end": 808.826479,
+        "text": "下集从用户查询开始，继续看这些知识怎样一步步变成可信答案。"
+      }
+    ]
+  },
+  "episode2": {
+    "path": "audio/episodes-v2/episode-2.internal.wav",
+    "sha256": "255bc4d38c9232e8c8a020fb6e04d06ec78eb82e0c1df74c3da66882e09b183a",
+    "durationSeconds": 1099.714542,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "loudness": {
+      "integratedLufs": -16.02,
+      "truePeakDb": -1.49,
+      "loudnessRangeLu": 2.5,
+      "thresholdLufs": -26.21
+    },
+    "decodePassed": true,
+    "originalStartAtSeconds": 14.376083,
+    "bridgeSegments": [
+      {
+        "id": "bridge-lower-01",
+        "start": 0,
+        "end": 7.128542,
+        "text": "上一集，我们走完了从原始文档到可检索知识库的离线链路。这几步决定知识能不能被准确找到。"
+      },
+      {
+        "id": "bridge-lower-02",
+        "start": 7.688542,
+        "end": 13.656084,
+        "text": "接下来进入在线部分，看查询理解、召回、重排和智能体决策怎样配合。"
+      }
+    ]
+  }
+}

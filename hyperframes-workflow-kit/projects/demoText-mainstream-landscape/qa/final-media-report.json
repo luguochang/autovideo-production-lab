@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "autovideo-final-media-qa/v1",
+  "file": "production/final/demoText-mainstream-landscape.mp4",
+  "ok": true,
+  "duration": 20.010667,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "decodeOk": true,
+  "blackIntervals": 0,
+  "quality": "high"
+}

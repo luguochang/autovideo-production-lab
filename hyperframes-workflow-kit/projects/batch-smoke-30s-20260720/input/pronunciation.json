@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "autovideo-pronunciation/v2",
+  "projectId": "batch-smoke-30s-20260720",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "policy": "NarrationLock wording is immutable. Letter acronyms use explicit spelling; every other Latin token requires a hash-bound in-context listening probe before full narration synthesis.",
+  "entries": [
+    {
+      "token": "AI",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "A I",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 30,
+          "end": 32,
+          "contextText": "低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+          "contextSha256": "55c5df6c136c779b7f2449790ebeacc527412f2dcd0f738a55adcf0ffd9f58c6"
+        }
+      ]
+    },
+    {
+      "token": "API",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "A P I",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 46,
+          "end": 49,
+          "contextText": "低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+          "contextSha256": "55c5df6c136c779b7f2449790ebeacc527412f2dcd0f738a55adcf0ffd9f58c6"
+        }
+      ]
+    }
+  ]
+}

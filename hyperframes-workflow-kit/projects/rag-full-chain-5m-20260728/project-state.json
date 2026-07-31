@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "rag-full-chain-5m-20260728",
+  "stage": "planning",
+  "createdAt": "2026-07-28T05:37:48.872Z",
+  "updatedAt": "2026-07-28T06:16:39.9497959Z",
+  "inputs": {
+    "narration": "input/narration.md",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "audio-driven",
+    "platform": "bilibili",
+    "audience": "技术面试官和有工程经验的 AI 开发者",
+    "rememberedOutcome": "RAG 是一条可控、可测、可迭代的数据链；生产选型重在组合判断",
+    "forbiddenTreatments": "不得为固定时长强制压缩；不得频繁换页、换人物、制造叠影或透明历史帧"
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "user",
+      "approvedAt": "2026-07-28T05:52:47.3879479Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "user",
+      "approvedAt": "2026-07-28T05:52:47.3879479Z"
+    },
+    "finalPreview": {
+      "status": "pending",
+      "approvedBy": null,
+      "approvedAt": null
+    }
+  },
+  "nextAction": "User reviews input/narration.editorial.draft.txt and the consolidated narration/pronunciation/prompt reports; after explicit confirmation, freeze a new production NarrationLock before TTS or visual timing."
+}

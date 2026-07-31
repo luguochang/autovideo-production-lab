@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "npx --yes hyperframes@0.7.59 lint",
+    "check": "npx --yes hyperframes@0.7.59 check --snapshots",
+    "snapshot": "npx --yes hyperframes@0.7.59 snapshot --at 0,3.5,8.5,14.5,19.8",
+    "render": "npx --yes hyperframes@0.7.59 render --quality draft --output render.mp4"
+  }
+}

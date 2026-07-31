@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/template-lock.json",
+  "title": "AutoVideo Template Lock",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "projectId",
+    "narrationSha256",
+    "styleId",
+    "styleVersion",
+    "paletteId",
+    "ratio",
+    "resolution",
+    "fps",
+    "sourcePath",
+    "sourceFiles",
+    "appliedAt",
+    "immutable",
+    "reviewGate"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-template-lock/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "narrationSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "styleId": {"type": "string", "minLength": 1},
+    "styleVersion": {"type": "string", "minLength": 1},
+    "paletteId": {"type": "string", "minLength": 1},
+    "ratio": {"const": "16:9"},
+    "resolution": {"const": "1920x1080"},
+    "fps": {"const": 30},
+    "sourcePath": {"type": "string", "minLength": 1},
+    "sourceFiles": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "appliedAt": {"type": "string", "format": "date-time"},
+    "immutable": {"const": true},
+    "reviewGate": {"type": "string", "minLength": 1}
+  }
+}

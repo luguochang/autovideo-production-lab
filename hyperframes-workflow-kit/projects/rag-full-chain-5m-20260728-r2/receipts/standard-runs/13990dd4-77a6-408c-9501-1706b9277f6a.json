@@ -1,0 +1,299 @@
+{
+  "activeStageIds": [
+    "source-register",
+    "material-suitability",
+    "evidence-ledger",
+    "spoken-rewrite",
+    "content-duration-fit",
+    "claim-source-review",
+    "script-review",
+    "content-approval",
+    "narration-lock",
+    "template-lock",
+    "pronunciation-review",
+    "voice-final",
+    "audio-align",
+    "subtitle-qa",
+    "subtitle-review",
+    "rights-clearance",
+    "audio-handoff",
+    "visual-plan",
+    "diagram-assets",
+    "style-probe",
+    "visual-variety-qa",
+    "composition-readiness",
+    "full-production",
+    "qa-review",
+    "screen-text-review",
+    "final-preview",
+    "render-deliver",
+    "delivery-qa",
+    "retrospective",
+    "package-export"
+  ],
+  "currentStageId": "full-production",
+  "finishedAt": "2026-07-29T02:28:35.147Z",
+  "message": "full-production failed: Command failed with exit code 1: npx.cmd --yes \"hyperframes@0.7.77\" snapshot --at \"1.3,7,17.71,26.74,31.71,35.29,39.98,48.47,54.53,62.32,76.42,85.42,94.93,106.24,113.41,128.51,142.03,145.82,151,156.46,159.08,161.58,170.32,187.76,199.8,201.68,206.59,214.25,219.22,222.34,246.92,272.85,281.68,293.55,299.68,303.31,310.31,321.32,334.17,344.63,356.58,372.9,383.04,387.52,391.91,395.32,400.915,406.56,417.87,428.85,432.4,439.56,447.22,453.31,461.09,466.07,469.89,478.97,488.32,494.13,502.62,514.62,522.84,528.52,534.29,539.06,546.72,553.61,557.06,558.59,563.11,571.92,581.61,589.08,593.48,600.14,608.79,614.11,622.53,635.6,644.58,650.3,660.49,669.22,675.89,683.18,690.56,700.79,709.9,714.88,719.05,726.06,733.24,737.36,743.29,749.3,753.8,760.39,765.88,773.53,787.45,797.09,801.9,805.76,816.22,831.35,838.24,842.75,848.26,857.32,866,872.75,882,890.3,898.71,909.12,915.77,917.61,928.43,941.8,947.99,955.72,961.57,966.43,973.3,979.72,986.02,995.34,1000.97,1003.9,1006.13,1009.92,1017.16,1025.33,1035.02,1045.82,1056.52,1063.31,1065.74,1071.11,1076.55,1082.13,1090.64,1097.19,1101.27,1106.99,1114.21,1120.67,1126.16,1132.69,1140.93,1146.63,1155.01,1164.09,1167.62,1171.81,1183.08,1196.99,1207.59,1218.55,1226.55,1230.79,1237.59,1249.13,1256.55,1260.24,1266.35,1272.69,1276.84,1299.52,1321.97,1326.36,1334.64,1340.89,1348.16,1358.61,1366.02,1372.14,1376.8,1383.45,1392.02,1400.59,1413.09,1428.83,1438.72,1444.2,1449.66,1453.98,1459.69,1467.88,1477.37,1485.72,1492.33,1500.17,1509.27,1517.13,1525.78,1536.22,1543.76,1546.61,1549.43,1558.28,1568.74,1575.33,1579.31,1586.42,1597.37,1606.72,1616.89,1626.56,1636.54,1648.34,1659.19,1668.74,1678.3,1686.5,1691.5,1702.08,1712.82,1717.65,1726.36,1733.31,1742.07,1753.33,1760.09,1764.11,1770.69,1779.43,1789.6,1798.18,1808.01,1816.33,1829.71,1849.89,1860.2,1867.08,1876.239\"\n\n\n✗ Snapshot failed: Navigation timeout of 10000 ms exceeded\n\n◆  Capturing 237 frames at [1.3s, 7s, 17.71s, 26.74s, 31.71s, 35.29s, 39.98s, 48.47s, 54.53s, 62.32s, 76.42s, 85.42s, 94.93s, 106.24s, 113.41s, 128.51s, 142.03s, 145.82s, 151s, 156.46s, 159.08s, 161.58s, 170.32s, 187.76s, 199.8s, 201.68s, 206.59s, 214.25s, 219.22s, 222.34s, 246.92s, 272.85s, 281.68s, 293.55s, 299.68s, 303.31s, 310.31s, 321.32s, 334.17s, 344.63s, 356.58s, 372.9s, 383.04s, 387.52s, 391.91s, 395.32s, 400.915s, 406.56s, 417.87s, 428.85s, 432.4s, 439.56s, 447.22s, 453.31s, 461.09s, 466.07s, 469.89s, 478.97s, 488.32s, 494.13s, 502.62s, 514.62s, 522.84s, 528.52s, 534.29s, 539.06s, 546.72s, 553.61s, 557.06s, 558.59s, 563.11s, 571.92s, 581.61s, 589.08s, 593.48s, 600.14s, 608.79s, 614.11s, 622.53s, 635.6s, 644.58s, 650.3s, 660.49s, 669.22s, 675.89s, 683.18s, 690.56s, 700.79s, 709.9s, 714.88s, 719.05s, 726.06s, 733.24s, 737.36s, 743.29s, 749.3s, 753.8s, 760.39s, 765.88s, 773.53s, 787.45s, 797.09s, 801.9s, 805.76s, 816.22s, 831.35s, 838.24s, 842.75s, 848.26s, 857.32s, 866s, 872.75s, 882s, 890.3s, 898.71s, 909.12s, 915.77s, 917.61s, 928.43s, 941.8s, 947.99s, 955.72s, 961.57s, 966.43s, 973.3s, 979.72s, 986.02s, 995.34s, 1000.97s, 1003.9s, 1006.13s, 1009.92s, 1017.16s, 1025.33s, 1035.02s, 1045.82s, 1056.52s, 1063.31s, 1065.74s, 1071.11s, 1076.55s, 1082.13s, 1090.64s, 1097.19s, 1101.27s, 1106.99s, 1114.21s, 1120.67s, 1126.16s, 1132.69s, 1140.93s, 1146.63s, 1155.01s, 1164.09s, 1167.62s, 1171.81s, 1183.08s, 1196.99s, 1207.59s, 1218.55s, 1226.55s, 1230.79s, 1237.59s, 1249.13s, 1256.55s, 1260.24s, 1266.35s, 1272.69s, 1276.84s, 1299.52s, 1321.97s, 1326.36s, 1334.64s, 1340.89s, 1348.16s, 1358.61s, 1366.02s, 1372.14s, 1376.8s, 1383.45s, 1392.02s, 1400.59s, 1413.09s, 1428.83s, 1438.72s, 1444.2s, 1449.66s, 1453.98s, 1459.69s, 1467.88s, 1477.37s, 1485.72s, 1492.33s, 1500.17s, 1509.27s, 1517.13s, 1525.78s, 1536.22s, 1543.76s, 1546.61s, 1549.43s, 1558.28s, 1568.74s, 1575.33s, 1579.31s, 1586.42s, 1597.37s, 1606.72s, 1616.89s, 1626.56s, 1636.54s, 1648.34s, 1659.19s, 1668.74s, 1678.3s, 1686.5s, 1691.5s, 1702.08s, 1712.82s, 1717.65s, 1726.36s, 1733.31s, 1742.07s, 1753.33s, 1760.09s, 1764.11s, 1770.69s, 1779.43s, 1789.6s, 1798.18s, 1808.01s, 1816.33s, 1829.71s, 1849.89s, 1860.2s, 1867.08s, 1876.239s] from hyperframes",
+  "policy": {
+    "autoApproveHumanGates": false,
+    "mediaPlaybackInvoked": false,
+    "microphoneUsed": false,
+    "publicReleaseApprovalSynthesized": false
+  },
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "projectState": {
+    "contentIntakeSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+    "formalProjectPath": "hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2",
+    "projectId": "rag-full-chain-5m-20260728-r2",
+    "route": "script",
+    "stages": {
+      "audio-align": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "a8dd55a6a6d735f67b6fb8ea6a73caa44fb408b3527bba8d6fd00b7e96092129",
+        "artifactSha256": "a8dd55a6a6d735f67b6fb8ea6a73caa44fb408b3527bba8d6fd00b7e96092129",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "audio-handoff": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "91955c6190ae27dd33a963f97a357780bfed80a82280984bfb402110ea7a8979",
+        "artifactSha256": "91955c6190ae27dd33a963f97a357780bfed80a82280984bfb402110ea7a8979",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "claim-source-review": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "c78f8587eb43a208d6750d78778b0e22afad5804b29dabf831676269f2109dd4",
+        "artifactSha256": "c78f8587eb43a208d6750d78778b0e22afad5804b29dabf831676269f2109dd4",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "composition-readiness": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "e63cc52bd2d2b7dd803fe2676ba423423b87a78001e550ceee241359d503cf41",
+        "artifactSha256": "e63cc52bd2d2b7dd803fe2676ba423423b87a78001e550ceee241359d503cf41",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "content-approval": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "b205a03be18bd418c34d5b8e028f3a6b2a7b1ac9dcefc65a7e482d2b1f354aa6",
+        "artifactSha256": "b205a03be18bd418c34d5b8e028f3a6b2a7b1ac9dcefc65a7e482d2b1f354aa6",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "content-duration-fit": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "a2c921e2d44dc19bbbf215120e81fba46d80a7e78fc8bd2ca2469f7811de0fad",
+        "artifactSha256": "a2c921e2d44dc19bbbf215120e81fba46d80a7e78fc8bd2ca2469f7811de0fad",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "delivery-qa": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "diagram-assets": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "28abc5454a9fce2137ecd39e6cd5f2cd83d0b8b6a6c65930be6a8986b9608d72",
+        "artifactSha256": "28abc5454a9fce2137ecd39e6cd5f2cd83d0b8b6a6c65930be6a8986b9608d72",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "evidence-ledger": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "58e972b2d0b3f5d0783c4c4cb223578be35d2af7b6563fddb7277a4ba23b7cf6",
+        "artifactSha256": "58e972b2d0b3f5d0783c4c4cb223578be35d2af7b6563fddb7277a4ba23b7cf6",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "final-preview": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "full-production": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "failed"
+      },
+      "material-suitability": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "e72821d494bdf3f3ed964c2a1e79d049b933fd2a738e2a2e69c126899017874b",
+        "artifactSha256": "e72821d494bdf3f3ed964c2a1e79d049b933fd2a738e2a2e69c126899017874b",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "narration-lock": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f",
+        "artifactSha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "package-export": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "pronunciation-review": {
+        "approvalScope": "user-directed-selection-no-listening",
+        "approvedArtifactSha256": "e491faa69b4db00b2ed9f9400f4c76a4caa7e589999398ee82ca85e85e741aff",
+        "artifactSha256": "e491faa69b4db00b2ed9f9400f4c76a4caa7e589999398ee82ca85e85e741aff",
+        "jobId": null,
+        "revision": 3,
+        "status": "approved"
+      },
+      "qa-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "render-deliver": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "retrospective": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "rights-clearance": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "3d5cebdeac1b7eef25312fdfccc3f554496000f96b037546fea31cdb2e2469e6",
+        "artifactSha256": "3d5cebdeac1b7eef25312fdfccc3f554496000f96b037546fea31cdb2e2469e6",
+        "jobId": null,
+        "revision": 2,
+        "status": "approved"
+      },
+      "screen-text-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "script-review": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+        "artifactSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "source-register": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd",
+        "artifactSha256": "55a2761b7c1c09f4883ca4ec0d9c44a252a015d9001036162fb11157b63259dd",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "spoken-rewrite": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018",
+        "artifactSha256": "425132de7db7d40932673e9b80bf078c776111130701b5ab1ad3f275c5c4f018",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "style-probe": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "a913dea59e90eba559f137675bb51e94ca5ca6686f51d15785796ae2e2de034e",
+        "artifactSha256": "a913dea59e90eba559f137675bb51e94ca5ca6686f51d15785796ae2e2de034e",
+        "jobId": null,
+        "revision": 2,
+        "status": "approved"
+      },
+      "subtitle-qa": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "39044a656bacfa8cc2ca73ad415b9613a6ee4d2af4921c898ddacd3053b63b80",
+        "artifactSha256": "39044a656bacfa8cc2ca73ad415b9613a6ee4d2af4921c898ddacd3053b63b80",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "subtitle-review": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "45cf6ae253d1d053b0f50ba005d362875ff0a9e8b723c0f5b1b3a07232301bf1",
+        "artifactSha256": "45cf6ae253d1d053b0f50ba005d362875ff0a9e8b723c0f5b1b3a07232301bf1",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "template-lock": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "9cb95490e8f9c40bd621beea0f91519212e2a262d5d38760b22f3fdcc7bc9d6a",
+        "artifactSha256": "9cb95490e8f9c40bd621beea0f91519212e2a262d5d38760b22f3fdcc7bc9d6a",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "visual-plan": {
+        "approvalScope": "human-review",
+        "approvedArtifactSha256": "76f885fcee52ad89f2fdf8b5513b883e106a4aa2aab8ded891ffe15042e9e7f3",
+        "artifactSha256": "76f885fcee52ad89f2fdf8b5513b883e106a4aa2aab8ded891ffe15042e9e7f3",
+        "jobId": null,
+        "revision": 3,
+        "status": "approved"
+      },
+      "visual-variety-qa": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "0bf6dd78b3589a29533154d48dd6fe81e36645123daa143b12d6b7384c2aba21",
+        "artifactSha256": "0bf6dd78b3589a29533154d48dd6fe81e36645123daa143b12d6b7384c2aba21",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "voice-final": {
+        "approvalScope": "human-listening",
+        "approvedArtifactSha256": "37249fecbcac047e1c89c49e5f9ad3a86631b81d30308cab21300852cb4edefa",
+        "artifactSha256": "37249fecbcac047e1c89c49e5f9ad3a86631b81d30308cab21300852cb4edefa",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      }
+    }
+  },
+  "projectStateSha256": "c72e563faff01639dd783df30caf3e99719b8999a87c17d5db2c05546d060aed",
+  "resumesRunId": "16160bb0-b1f9-4024-afdf-ec678c162634",
+  "runId": "13990dd4-77a6-408c-9501-1706b9277f6a",
+  "schemaVersion": "autovideo-standard-run-receipt/v1",
+  "startedAt": "2026-07-29T02:28:11.653Z",
+  "status": "failed",
+  "updatedAt": "2026-07-29T02:28:35.147Z"
+}

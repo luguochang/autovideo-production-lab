@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "autovideo-narration-lock/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "sourcePath": "content/intakes/batch-smoke-30s-20260720/script.approved.txt",
+  "frozenPath": "input/narration.txt",
+  "sourceSha256": "61c1763700a77ffa654c910e5f88f1b2a981529561befeb8fdbe70f01e1eecb1",
+  "normalizedSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "normalization": "UTF-8 text; CRLF converted to LF; surrounding whitespace trimmed",
+  "createdAt": "2026-07-20T12:44:42.681Z",
+  "immutable": true,
+  "approvalReceipt": {
+    "path": "input/content-approval.json",
+    "sha256": "808a77d40795b105aea364cf55cba945c8245f1f6272b903cdc7ac33c2139725",
+    "schemaVersion": "autovideo-content-approval/v2",
+    "approvedNarrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97"
+  }
+}

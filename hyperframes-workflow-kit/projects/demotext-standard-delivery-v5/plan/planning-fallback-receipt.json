@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-planning-fallback/v2",
+  "projectId": "demotext-standard-delivery-v5",
+  "createdAt": "2026-07-19T14:17:55.955Z",
+  "status": "ready-for-workbench-import",
+  "failedStage": "visual-plan",
+  "failure": {
+    "type": "structured-planning-unavailable",
+    "message": "No reviewed formal planning bundle existed; generated the canonical content-independent baseline before optional enrichment."
+  },
+  "method": "Generated a content-independent deterministic baseline from the current NarrationLock, alignment, and locked template contract.",
+  "reusableAcrossUnrelatedScripts": true,
+  "llmEnrichmentRequired": false,
+  "outputs": {
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "188c952d116c09c735ec3da259bbbba37133742922a2fd2473606d45af03082e"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "173e25542ed573132181d8ef6d69860770bd95c6c35b5747deffda54bd67e22f"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "05f8020926284fb489e449e214271811fae3ef7e5d2790fc95642db97af3c2ee"
+    },
+    "productionManifest": {
+      "path": "plan/production-manifest.json",
+      "sha256": "efa3534e7373816ef6932abe1eeb7daa504ea2de0e0aebbcf748fd0085c9a334"
+    },
+    "planningBundle": {
+      "path": "plan/planning-fallback-bundle.json",
+      "sha256": "bbd84c24e97636af6fc13a6d68f1ecf2a54ea7913a1c25f925b4c72346a594aa"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "duration": 8,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#host-zone", "bySec": 0.1},
+    {"kind": "appearsBy", "selector": "#surface-project", "bySec": 0.9},
+    {"kind": "appearsBy", "selector": "#state-project", "bySec": 0.9},
+    {"kind": "appearsBy", "selector": "#state-workflow", "bySec": 3.1},
+    {"kind": "appearsBy", "selector": "#state-inspector", "bySec": 6.1},
+    {"kind": "appearsBy", "selector": "#caption-a", "bySec": 0.6},
+    {"kind": "appearsBy", "selector": "#caption-b", "bySec": 3.5},
+    {"kind": "appearsBy", "selector": "#caption-c", "bySec": 5.8},
+    {"kind": "before", "a": "#state-project", "b": "#state-workflow"},
+    {"kind": "before", "a": "#state-workflow", "b": "#state-inspector"},
+    {"kind": "staysInFrame", "selector": "#host-zone"},
+    {"kind": "staysInFrame", "selector": "#content-zone"},
+    {"kind": "staysInFrame", "selector": "#caption-shell"},
+    {"kind": "staysInFrame", "selector": "#surface-viewport"},
+    {"kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 2.0}
+  ]
+}

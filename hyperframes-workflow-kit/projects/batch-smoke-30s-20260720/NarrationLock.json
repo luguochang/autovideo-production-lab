@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "autovideo-narration-lock/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "sourcePath": "hyperframes-workflow-kit/projects/batch-smoke-30s-20260720/input/script.approved.txt",
+  "frozenPath": "input/script.approved.txt",
+  "sourceSha256": "61c1763700a77ffa654c910e5f88f1b2a981529561befeb8fdbe70f01e1eecb1",
+  "normalizedSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "normalization": "UTF-8 text; CRLF converted to LF; surrounding whitespace trimmed",
+  "createdAt": "2026-07-20T12:44:42.681Z",
+  "immutable": true,
+  "approvalReceipt": {
+    "path": "input/content-approval.json",
+    "sha256": "777499f2dd39ae688a4e566ac1a61c3d97b0100a6faebc6454a4e01279335952",
+    "schemaVersion": "autovideo-content-approval/v2",
+    "approvedNarrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97"
+  },
+  "revision": 2,
+  "updatedAt": "2026-07-22T09:19:24.816Z"
+}

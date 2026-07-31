@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-planning-fallback/v2",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "createdAt": "2026-07-29T00:30:30.858Z",
+  "status": "ready-for-workbench-import",
+  "failedStage": "visual-plan",
+  "failure": {
+    "type": "structured-planning-unavailable",
+    "message": "Revised the deterministic board cadence to approximately 30 seconds after the user requested stable one-screen presentation with less frequent page and host changes."
+  },
+  "method": "Generated a deterministic semantic baseline from the current NarrationLock, alignment, and locked template contract.",
+  "reusableAcrossUnrelatedScripts": true,
+  "llmEnrichmentRequired": false,
+  "outputs": {
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "a5f6cc8a7752b09aa626f0743a93f09a22366a2610e96e0bb7d9dbab39e6f38c"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "b741e35c878d47c1dc7d9710b8cac9704629b6785d1263347f91465b46aef827"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "50fc40f4193a6490b5a2e39a00ee88abb6d637c53b8d5a4a673a08d36be12db5"
+    },
+    "productionManifest": {
+      "path": "plan/production-manifest.json",
+      "sha256": "30a5bc3f92c6a53bb6701a0a486519287357f26c671c60bbdb7b845a5d990d83"
+    },
+    "planningBundle": {
+      "path": "plan/planning-fallback-bundle.json",
+      "sha256": "44b9a9e3618d4dc98fb5ede4be778abde0d24121942a12b4fc936fceef0a8000"
+    }
+  }
+}

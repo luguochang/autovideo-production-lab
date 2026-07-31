@@ -1,0 +1,514 @@
+[
+  {
+    "id": "hacker-flip-3d",
+    "description": "Character-level 3D rotation with deterministic glyph substitution (decryption). GSAP `back.out` ease + per-glyph `onUpdate` for the flicker hash.",
+    "tags": [
+      "text",
+      "3d",
+      "reveal",
+      "decode"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/hacker-flip-3d.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "vertical-spring-ticker",
+    "description": "Slot-machine vertical scrolling using stepped GSAP tweens within a masked column.",
+    "tags": [
+      "text",
+      "ticker",
+      "scroll",
+      "vertical"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/vertical-spring-ticker.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "counting-dynamic-scale",
+    "description": "Counter where font size grows with the value for escalating emphasis. Single GSAP tween on a numeric proxy.",
+    "tags": [
+      "counter",
+      "scale",
+      "font-size",
+      "number",
+      "dynamic"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/counting-dynamic-scale.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "discrete-text-sequence",
+    "description": "Replace entire text states at time thresholds for non-linear typing (typos, holds, bulk additions, backspaces). GSAP onUpdate-driven reverse search.",
+    "tags": [
+      "text",
+      "typing",
+      "discrete",
+      "threshold",
+      "non-linear"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/discrete-text-sequence.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "asr-keyword-glow",
+    "description": "Highlight keywords with glow + scale + color synced to ASR word timestamps. Two GSAP tweens per word drive a CSS custom property `--glow` through attack-decay-rest envelope.",
+    "tags": [
+      "asr",
+      "audio-sync",
+      "highlight",
+      "glow",
+      "keyword",
+      "text"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/asr-keyword-glow.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "3d-text-depth-layers",
+    "description": "Multiple offset text layers (N divs at `(i*dx, i*dy)` with decreasing alpha) create a stacked 3D extrusion illusion on large typography.",
+    "tags": [
+      "text",
+      "3d",
+      "depth",
+      "layers",
+      "shadow",
+      "typography",
+      "stacked"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/3d-text-depth-layers.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "context-sensitive-cursor",
+    "description": "Typing cursor whose `background-color` switches at segment boundaries plus square-wave blink via `(tl.time() % cycle) < cycle/2`.",
+    "tags": [
+      "cursor",
+      "color",
+      "context",
+      "typewriter",
+      "styling",
+      "segment"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/context-sensitive-cursor.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "dynamic-content-sequencing",
+    "description": "Pre-compute a flat `[{startTime, endTime, ...}]` array from a script of `{textMain, textAccent, charSpeed, hold}` entries. Each phrase's window = `chars × charSpeed + hold`. Content-driven duration, no hand-tuned offsets.",
+    "tags": [
+      "timeline",
+      "sequencing",
+      "dynamic",
+      "duration",
+      "script-driven"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/dynamic-content-sequencing.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "kinetic-beat-slam",
+    "description": "Percussive kinetic typography — short phrases slam in on ONE shared beat array with DISTINCT per-phrase entrances (scale-slam / side-snap / rise-rotate), optional rhythm chrome (metronome ticks, beat bar), then a locked finale. The recipe for \"punchy / rhythmic\" taglines.",
+    "tags": [
+      "text",
+      "kinetic",
+      "typography",
+      "beat",
+      "rhythm",
+      "slam",
+      "percussive",
+      "punchy"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/kinetic-beat-slam.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "counting-dynamic-scale",
+    "description": "Counter whose font size grows with the value; seek-safe `onUpdate`, `Math.round`, `tabular-nums`, multi-stat chord. (Also listed under Text & Typography.)",
+    "tags": [
+      "counter",
+      "number",
+      "stat",
+      "count-up"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/counting-dynamic-scale.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "stat-bars-and-fills",
+    "description": "Data-viz primitives that pair a number with a graphic — growth bars (CSS `scaleY` stagger), progress fill (bar `scaleX` or measured SVG ring), and fractional star-rating wipe (`clip-path`). Transforms only, seek-safe. Pick single-focus vs split-frame and hold it.",
+    "tags": [
+      "data",
+      "stats",
+      "chart",
+      "bars",
+      "progress",
+      "ring",
+      "stars",
+      "rating",
+      "infographic"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/stat-bars-and-fills.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "coordinate-target-zoom",
+    "description": "Zoom into non-centered elements via scale (outer wrapper) + counter-translation (inner wrapper).",
+    "tags": [
+      "camera",
+      "zoom",
+      "scale",
+      "translate"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/coordinate-target-zoom.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "camera-cursor-tracking",
+    "description": "Two-phase virtual camera that locks the viewport to a moving focal point (typing cursor) — static initial framing then focal-point-locked tracking. Uses browser-native `getBoundingClientRect()` / `ctx.measureText()` after `document.fonts.ready`.",
+    "tags": [
+      "camera",
+      "tracking",
+      "viewport",
+      "two-phase",
+      "typing"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/camera-cursor-tracking.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "multi-phase-camera",
+    "description": "Sequential camera-zoom system (pull-back / focus / push) plus continuous micro-drift.",
+    "tags": [
+      "camera",
+      "zoom",
+      "phase",
+      "drift",
+      "scale",
+      "cinematic"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/multi-phase-camera.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "viewport-change",
+    "description": "Virtual camera — simulate zoom / pan / focus-lock by transforming a single `.world` wrapper containing all scene content. Single-element composite transform `translate(x,y) scale(S)`; counter-translate math is `T = -offset × S` (DIFFERENT from coordinate-target-zoom's `T = -offset`).",
+    "tags": [
+      "viewport",
+      "camera",
+      "zoom",
+      "pan",
+      "focus-lock"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/viewport-change.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "depth-of-field-blur",
+    "description": "Selective rack-focus — GSAP-tween `filter: blur()` (+ slight opacity dim) on off-focus layers via a `--dof` var while the focal element stays sharp; single pull, two-plane rack, or blur-the-cluster-while-pushing-in. Finite, deterministic, seek-safe.",
+    "tags": [
+      "blur",
+      "depth-of-field",
+      "focus",
+      "rack-focus",
+      "dim",
+      "spotlight"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/depth-of-field-blur.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "avatar-cloud-network",
+    "description": "Avatars on an elliptical ring with SVG connection lines to a center point, staggered entry. Cloud center coordinates must match the centerpiece element exactly.",
+    "tags": [
+      "avatar",
+      "cloud",
+      "network",
+      "social-proof",
+      "stagger"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/avatar-cloud-network.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "3d-page-scroll",
+    "description": "Full webpage rendered as a tilted 3D card whose internal content scrolls to reveal specific sections. Pair with asr-keyword-glow for on-page keyword highlighting.",
+    "tags": [
+      "3d",
+      "page",
+      "scroll",
+      "webpage",
+      "tilt",
+      "perspective",
+      "product-demo"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/3d-page-scroll.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "center-outward-expansion",
+    "description": "Elements start clustered at screen center and expand outward to final positions. Each element gets its target position via CSS once; GSAP tweens transform `x` / `y` offsets to 0 in lockstep with a shared driver.",
+    "tags": [
+      "expansion",
+      "scatter",
+      "center",
+      "reveal",
+      "layout",
+      "sync"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/center-outward-expansion.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "split-tilt-cards",
+    "description": "Two cards side-by-side with opposing rotationY tilts (+/- baseTilt) and entry slides from their respective sides. Continuous floating runs in phase opposition (`Math.PI` offset).",
+    "tags": [
+      "3d",
+      "cards",
+      "split",
+      "tilt",
+      "comparison",
+      "symmetric"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/split-tilt-cards.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "orbit-3d-entry",
+    "description": "Elements flip in from 3D space (`rotateX` + `rotateY` + `translateZ`) then settle into a continuous elliptical orbit. **Critical**: entry MUST flip in-place at the orbital starting position (`gsap.set` BEFORE phase 1), not at scene center.",
+    "tags": [
+      "orbit",
+      "3d",
+      "flip",
+      "ellipse",
+      "circular",
+      "icon",
+      "entry",
+      "continuous"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/orbit-3d-entry.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "ai-tracking-box",
+    "description": "AI detection overlay — yellow `#facc15` L-bracket corners + confidence label (fluctuating 95-99%) following a target on a sine arc path. Box position recomputed per-frame from target position (never tweened separately).",
+    "tags": [
+      "ai",
+      "tracking",
+      "bounding-box",
+      "detection",
+      "corner",
+      "ml"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/ai-tracking-box.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "depth-scatter-assemble",
+    "description": "N elements scatter into / reassemble from a rotating 3D depth-cloud — each starts at a deterministic index-derived 3D offset (translateZ + rotateX/Y + scatter) and settles to a clean flat layout; tumble-swap and radial-explode variants. preserve-3d + perspective, transform-only, seek-safe.",
+    "tags": [
+      "3d",
+      "scatter",
+      "assemble",
+      "tumble",
+      "depth",
+      "perspective",
+      "glyphs"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/depth-scatter-assemble.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "svg-icon-enrichment",
+    "description": "Animate internal SVG elements (rotating hands, oscillating blades, pulsing dots, dash-flow lines) so icons feel alive. **Critical**: use SVG `setAttribute('transform', 'rotate(deg cx cy)')` for explicit center — CSS `transform-origin` + `transform-box: fill-box` interprets origin in bbox-local coords (off-center for thin lines).",
+    "tags": [
+      "svg",
+      "icon",
+      "animation",
+      "micro-animation",
+      "rotation",
+      "pulse"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/svg-icon-enrichment.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "svg-path-draw",
+    "description": "SVG outline draws itself stroke-by-stroke via `stroke-dasharray` / `stroke-dashoffset`. Measure with `getTotalLength()` at composition setup, set initial dashoffset = length, GSAP tweens to 0. For circular progress rings, rotate the stroke `-90deg` so drawing starts at 12 o'clock.",
+    "tags": [
+      "svg",
+      "stroke",
+      "draw",
+      "vector",
+      "path",
+      "dasharray"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/svg-path-draw.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "sine-wave-loop",
+    "description": "Continuous breathing/idle ambient motion. Two forms: GSAP `sine.inOut` yoyo with finite repeats (preferred when standalone) or onUpdate reading `tl.time()` (preferred when multiplying onto another live value).",
+    "tags": [
+      "idle",
+      "loop",
+      "breathing",
+      "sine",
+      "ambient"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/sine-wave-loop.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "ambient-glow-bloom",
+    "description": "Un-triggered soft radial glow that blooms in behind a hero element and holds with a bounded idle breathe, or a single-pass traveling sheen across a surface. No click, no word-sync; peak opacity ≤ ~0.45, finite/deterministic.",
+    "tags": [
+      "glow",
+      "bloom",
+      "ambient",
+      "radial",
+      "sheen",
+      "hero"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/ambient-glow-bloom.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "reactive-displacement",
+    "description": "Physical-collision transition where an entering element's GSAP tween drives the exiting element's displacement. Three concurrent tweens at the same timeline position with victim durations 40-50% of the intruder's.",
+    "tags": [
+      "transition",
+      "physics",
+      "collision",
+      "displacement",
+      "push"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/reactive-displacement.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "press-release-spring",
+    "description": "Tactile button press: linear compression then spring recovery via two adjacent GSAP tweens on the same property. Variations: color transition, shadow depth via CSS vars, release burst, background glow.",
+    "tags": [
+      "spring",
+      "press",
+      "button",
+      "interaction",
+      "physics",
+      "glow",
+      "burst"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/press-release-spring.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "physics-press-reaction",
+    "description": "Physical click simulation — two sequential GSAP scale tweens (down to 0.9, up to 1.0) approximate a spring with overshoot. Pass a single targets array `[\"#cta\", \"#cursor\"]` to compress both together for tactile contact feel.",
+    "tags": [
+      "spring",
+      "click",
+      "physics",
+      "press",
+      "interaction",
+      "cursor"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/physics-press-reaction.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "cursor-click-ripple",
+    "description": "Animated cursor moves to a target, depresses cursor + target together on click, emits an expanding ripple with attack-decay opacity envelope. Element lives in DOM from t=0 with `opacity: 0` (no conditional rendering).",
+    "tags": [
+      "cursor",
+      "click",
+      "ripple",
+      "interaction",
+      "mouse",
+      "button",
+      "keyframes"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/cursor-click-ripple.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "scale-swap-transition",
+    "description": "Coordinated morph between two DOM elements at the same screen center. Exit cluster shrinks + fades; entrance pops in with `back.out(2)` overshoot.",
+    "tags": [
+      "transition",
+      "morph",
+      "scale",
+      "swap"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/scale-swap-transition.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "card-morph-anchor",
+    "description": "Container morphs apparent size + corner radius + surface treatment between two shots, then fades to reveal the real target underneath. HyperFrames substitutes uniform `scale` for the forbidden `width`/`height` tween, plus paint-only `borderRadius`/`background`/`boxShadow`.",
+    "tags": [
+      "morph",
+      "anchor",
+      "transition",
+      "border-radius",
+      "container",
+      "shape",
+      "handoff"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/card-morph-anchor.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "spring-pop-entrance",
+    "description": "The canonical ENTRANCE pop — an element (or staggered group) arrives by springing `scale: 0 → 1` with `back.out` overshoot, `fromTo` so it's correct at t=0 under seek. Single hero, staggered group (≤500ms cap), overshoot tuned by personality. Distinct from `press-release-spring` (a click/press reaction).",
+    "tags": [
+      "spring",
+      "entrance",
+      "pop",
+      "scale-in",
+      "overshoot",
+      "stagger",
+      "arrival"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/spring-pop-entrance.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "motion-blur-streak",
+    "description": "Fake directional velocity blur on a fast entrance / camera push-through — blur peaks at max speed, resolves to 0 at the settle. Two paths: SVG `feGaussianBlur` stdDeviation on the motion axis (proxy-tweened), or a deterministic echo/ghost trail that collapses into the lead. Entrances / mid-shot only.",
+    "tags": [
+      "motion-blur",
+      "streak",
+      "velocity",
+      "ghost",
+      "echo",
+      "fast"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/motion-blur-streak.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "gsap-effects",
+    "description": "Drop-in GSAP timeline patterns — typewriter, audio visualizer, and other reusable choreography blocks.",
+    "tags": [
+      "gsap",
+      "recipe",
+      "drop-in",
+      "typewriter",
+      "audio-visualizer"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/gsap-effects.md",
+    "license": "Apache-2.0"
+  },
+  {
+    "id": "css-marker-patterns",
+    "description": "Pure CSS + GSAP implementations of marker-highlight drawing modes — highlight (yellow sweep), circle (hand-drawn ellipse), burst (radiating lines), scribble (chaotic), sketchout (rough rectangle outline).",
+    "tags": [
+      "css",
+      "marker",
+      "highlight",
+      "text",
+      "emphasis"
+    ],
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-animation/rules/css-marker-patterns.md",
+    "license": "Apache-2.0"
+  }
+]

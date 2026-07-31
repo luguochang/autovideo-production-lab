@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: AutoVideo Duration Fitter offline contract regression
+sharing: false
+prompts:
+  - id: file://../prompt-chain/prompts/05-duration-fitter.md
+    label: duration-fitter-v1
+providers:
+  - id: file://providers/precomputed-artifact-provider.mjs
+    label: hash-bound-local-candidate
+    config:
+      stage: duration-fitter
+defaultTest:
+  assert:
+    - type: javascript
+      value: file://assertions/stage-contract.mjs
+tests:
+  - description: Pass deterministic text budget without changing narration wording
+    vars:
+      stage: duration-fitter
+      casePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.case.json
+      candidatePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.duration-fitter.candidate.json
+

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "cosyvoice-zh-female-batch/v1",
+  "segments": [
+    {
+      "id": "upper-close-part-01",
+      "textFile": "upper-close-part-01.txt",
+      "textSha256": "f27360861af4a023b2a5ff59f68222f6403fda60b14119406aee50f43b236028",
+      "output": "upper-close-part-01.wav",
+      "receipt": "upper-close-part-01.recipe.json"
+    },
+    {
+      "id": "upper-close-part-02",
+      "textFile": "upper-close-part-02.txt",
+      "textSha256": "de81e4ce4c564db13e2c9b3d2758dce1524d2a6c8ad918ac13d17ec163f21190",
+      "output": "upper-close-part-02.wav",
+      "receipt": "upper-close-part-02.recipe.json"
+    },
+    {
+      "id": "lower-recap-part-01",
+      "textFile": "lower-recap-part-01.txt",
+      "textSha256": "bdb6a551d23aee2bccb25aa63c10ad11cf9fb127ff5f917015bf7691809f516c",
+      "output": "lower-recap-part-01.wav",
+      "receipt": "lower-recap-part-01.recipe.json"
+    },
+    {
+      "id": "lower-recap-part-02",
+      "textFile": "lower-recap-part-02.txt",
+      "textSha256": "bb8b8480e2815125242e7e317734fafcc496c0b2be72c17009716f36ee8efe35",
+      "output": "lower-recap-part-02.wav",
+      "receipt": "lower-recap-part-02.recipe.json"
+    }
+  ]
+}

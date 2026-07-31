@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "duration": 7.242254,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#surface-card", "bySec": 1.2 },
+    { "kind": "appearsBy", "selector": "#evidence-model", "bySec": 3.1 },
+    { "kind": "appearsBy", "selector": "#evidence-tools", "bySec": 4.7 },
+    { "kind": "appearsBy", "selector": "#conclusion-stamp", "bySec": 7.0 },
+    { "kind": "before", "a": "#surface-card", "b": "#evidence-model" },
+    { "kind": "before", "a": "#evidence-model", "b": "#evidence-api" },
+    { "kind": "before", "a": "#evidence-api", "b": "#evidence-vector" },
+    { "kind": "before", "a": "#evidence-vector", "b": "#evidence-tools" },
+    { "kind": "staysInFrame", "selector": "#evidence-model" },
+    { "kind": "staysInFrame", "selector": "#evidence-api" },
+    { "kind": "staysInFrame", "selector": "#evidence-vector" },
+    { "kind": "staysInFrame", "selector": "#evidence-tools" },
+    { "kind": "staysInFrame", "selector": "#conclusion-stamp" },
+    { "kind": "keepsMoving", "withinSelector": "#board", "maxStaticSec": 2 }
+  ]
+}

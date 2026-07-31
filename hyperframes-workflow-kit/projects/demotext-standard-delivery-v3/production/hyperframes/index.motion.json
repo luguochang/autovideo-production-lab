@@ -1,0 +1,14 @@
+{
+  "duration": 242.904,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-01-host-wrap",
+      "bySec": 0.9
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#caption-shell"
+    }
+  ]
+}

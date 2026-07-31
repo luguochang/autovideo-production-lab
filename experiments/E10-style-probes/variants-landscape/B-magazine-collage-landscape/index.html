@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280,height=720" />
+    <meta name="hf-style" content="magazine-collage-cards" />
+    <title>平台把复杂性隐藏起来 - 横屏</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --ink: #2b2623;
+        --muted: #746a60;
+        --paper: #f7f0e4;
+        --paper-light: #fffaf0;
+        --paper-shadow: #d5c4af;
+        --red: #c84d43;
+        --blue: #3f6e9d;
+        --green: #5b8a74;
+        --yellow: #f3d45c;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+      }
+      @font-face {
+        font-family: "Noto Sans CJK SC";
+        src: local("Noto Sans CJK SC");
+      }
+
+      * { box-sizing: border-box; }
+      html, body {
+        width: 1280px;
+        height: 720px;
+        margin: 0;
+        overflow: hidden;
+        background: #e8ddce;
+        color: var(--ink);
+        font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+        letter-spacing: 0;
+      }
+
+      body { position: relative; }
+      #root {
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+      }
+
+      #board {
+        position: absolute;
+        inset: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background: var(--paper);
+        isolation: isolate;
+      }
+
+      #board::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.2;
+        background-image:
+          linear-gradient(90deg, rgba(120, 94, 70, 0.06) 1px, transparent 1px),
+          linear-gradient(rgba(120, 94, 70, 0.045) 1px, transparent 1px);
+        background-size: 34px 34px;
+        z-index: 0;
+      }
+
+      .eyebrow,
+      .index-mark,
+      .rail-note,
+      .desk-rule,
+      .hinge,
+      .paper-card,
+      .tape,
+      .routes,
+      .evidence-heading,
+      .evidence-card,
+      .conclusion-stamp,
+      .footer-note {
+        position: absolute;
+      }
+
+      .eyebrow {
+        left: 58px;
+        top: 32px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .index-mark {
+        left: 56px;
+        top: 66px;
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        border: 4px solid var(--red);
+        border-radius: 50%;
+        color: var(--red);
+        font-size: 28px;
+        font-weight: 800;
+        transform: rotate(-8deg);
+      }
+
+      .rail-note {
+        right: 54px;
+        top: 38px;
+        width: 302px;
+        margin: 0;
+        padding: 10px 0 10px 18px;
+        border-left: 5px solid var(--blue);
+        color: var(--ink);
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.35;
+        text-align: right;
+      }
+      .rail-note span { display: block; }
+
+      .desk-rule {
+        left: 142px;
+        right: 398px;
+        top: 83px;
+        height: 3px;
+        background: rgba(43, 38, 35, 0.28);
+        transform: scaleX(0);
+        transform-origin: left center;
+      }
+
+      .hinge {
+        left: 624px;
+        top: 142px;
+        width: 4px;
+        height: 414px;
+        background: var(--blue);
+        opacity: 0.72;
+        transform: scaleY(0);
+        transform-origin: top center;
+        z-index: 6;
+      }
+
+      .paper-card {
+        left: 64px;
+        top: 158px;
+        width: 530px;
+        height: 390px;
+        padding: 34px 38px 30px;
+        border: 3px solid var(--ink);
+        border-radius: 5px;
+        background: var(--paper-light);
+        box-shadow: 12px 15px 0 var(--paper-shadow);
+        transform: rotate(-0.8deg);
+        transform-origin: 18% 16%;
+        z-index: 8;
+      }
+
+      .paper-card::after {
+        content: "";
+        position: absolute;
+        right: 24px;
+        bottom: 20px;
+        width: 78px;
+        height: 7px;
+        background: var(--red);
+        transform: rotate(-3deg);
+      }
+
+      .surface-inner { position: relative; width: 100%; height: 100%; }
+      .paper-kicker {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .paper-title {
+        max-width: 448px;
+        margin: 0;
+        font-size: 43px;
+        line-height: 1.16;
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .word-mark {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        z-index: 0;
+      }
+      .word-text { position: relative; z-index: 1; }
+      .marker-sweep {
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        bottom: 6px;
+        display: block;
+        width: calc(100% + 8px);
+        height: 20px;
+        border-radius: 4px;
+        background: var(--yellow);
+        opacity: 0.9;
+        transform: scaleX(0);
+        transform-origin: left center;
+        z-index: 0;
+      }
+
+      .paper-copy {
+        max-width: 450px;
+        margin: 14px 0 17px;
+        color: var(--muted);
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1.42;
+      }
+
+      .node-row { display: flex; gap: 9px; flex-wrap: wrap; }
+      .mini-node {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 5px 11px;
+        border: 2px solid var(--ink);
+        border-radius: 3px;
+        background: #f2e3c5;
+        font-size: 17px;
+        font-weight: 900;
+      }
+      .mini-node:nth-child(2) { background: #dfe9ef; }
+      .mini-node:nth-child(3) { background: #e5eedf; }
+      .mini-node:nth-child(4) { background: #f4deda; }
+
+      .tape {
+        width: 126px;
+        height: 36px;
+        border: 1px solid rgba(132, 107, 46, 0.22);
+        background: rgba(243, 212, 92, 0.78);
+        box-shadow: 0 2px 0 rgba(80, 65, 30, 0.12);
+        z-index: 14;
+      }
+      #tape-a { left: 188px; top: 140px; transform: rotate(-6deg); }
+      #tape-b { left: 490px; top: 526px; transform: rotate(8deg); }
+
+      .evidence-heading {
+        left: 684px;
+        top: 118px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+        color: var(--ink);
+        font-size: 23px;
+        font-weight: 900;
+        z-index: 10;
+      }
+      .evidence-heading::before {
+        content: "";
+        display: block;
+        width: 42px;
+        height: 12px;
+        background: var(--yellow);
+        transform: rotate(-3deg);
+      }
+
+      .routes {
+        left: 0;
+        top: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: visible;
+        z-index: 3;
+      }
+      .route {
+        fill: none;
+        stroke: var(--blue);
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        opacity: 0.82;
+      }
+      #route-api, #route-tools { stroke: var(--green); }
+
+      .evidence-card {
+        width: 246px;
+        height: 154px;
+        padding: 19px 20px 16px;
+        border: 3px solid var(--ink);
+        border-radius: 4px;
+        background: #fffdf7;
+        box-shadow: 8px 9px 0 rgba(184, 161, 134, 0.68);
+        transform-origin: 20% 20%;
+        z-index: 11;
+      }
+      #evidence-model { left: 680px; top: 176px; transform: rotate(-2.4deg); }
+      #evidence-api { left: 968px; top: 170px; transform: rotate(2.2deg); }
+      #evidence-vector { left: 690px; top: 378px; transform: rotate(2deg); }
+      #evidence-tools { left: 982px; top: 372px; transform: rotate(-2deg); }
+
+      .evidence-label {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 17px;
+        font-weight: 900;
+      }
+      .evidence-title {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.12;
+        font-weight: 900;
+      }
+      .evidence-detail {
+        margin: 9px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        font-weight: 800;
+      }
+      .evidence-card::before {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        width: 24px;
+        height: 24px;
+        border: 3px solid var(--red);
+        border-radius: 50%;
+      }
+      #evidence-api::before, #evidence-tools::before { border-color: var(--green); }
+
+      .conclusion-stamp {
+        left: 864px;
+        top: 580px;
+        width: 232px;
+        min-height: 70px;
+        display: grid;
+        place-items: center;
+        padding: 10px 16px;
+        border: 4px solid var(--red);
+        color: var(--red);
+        font-size: 29px;
+        font-weight: 900;
+        line-height: 1.1;
+        text-align: center;
+        transform: rotate(-3deg);
+        z-index: 16;
+      }
+
+      .footer-note {
+        left: 64px;
+        bottom: 30px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 20px;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      id="root"
+      data-composition-id="b-magazine-collage-landscape"
+      data-start="0"
+      data-duration="7.242254"
+      data-width="1280"
+      data-height="720"
+      data-fps="30"
+    >
+      <audio
+        id="narration"
+        src="assets/narration.wav"
+        data-start="0"
+        data-duration="7.242254"
+        data-track-index="9"
+        data-volume="1"
+      ></audio>
+
+      <section id="board" class="clip" data-start="0" data-duration="7.242254" data-track-index="0">
+        <p id="eyebrow" class="eyebrow">系统拆解 · 01 / DESK NOTE</p>
+        <div id="index-mark" class="index-mark" aria-label="第一">01</div>
+        <p id="rail-note" class="rail-note"><span>表面是按钮</span><span>底层仍是一套系统</span></p>
+        <div id="desk-rule" class="desk-rule" aria-hidden="true"></div>
+        <div id="hinge" class="hinge" aria-hidden="true"></div>
+
+        <article id="surface-card" class="paper-card">
+          <div id="surface-inner" class="surface-inner">
+            <p class="paper-kicker">平台的“简单”</p>
+            <h1 class="paper-title">第一，平台把系统的复杂性给<span class="word-mark"><span id="marker-sweep" class="marker-sweep"></span><span class="word-text">隐藏</span></span>起来。</h1>
+            <p class="paper-copy">低代码、无代码、AI 平台和工作流工具，把底层能力收进看得见的按钮与节点。</p>
+            <div class="node-row" aria-label="表层工具">
+              <span class="mini-node">低代码</span>
+              <span class="mini-node">无代码</span>
+              <span class="mini-node">AI 平台</span>
+              <span class="mini-node">工作流工具</span>
+            </div>
+          </div>
+        </article>
+
+        <div id="tape-a" class="tape" data-layout-ignore aria-hidden="true"></div>
+        <div id="tape-b" class="tape" data-layout-ignore aria-hidden="true"></div>
+
+        <p id="evidence-heading" class="evidence-heading">节点背后的 4 层能力</p>
+        <svg class="routes" viewBox="0 0 1280 720" aria-hidden="true" data-layout-ignore>
+          <path id="route-model" class="route" pathLength="1" d="M 576 238 C 622 224 646 218 680 230" />
+          <path id="route-api" class="route" pathLength="1" d="M 578 300 C 700 258 820 216 968 224" />
+          <path id="route-vector" class="route" pathLength="1" d="M 578 402 C 624 424 650 438 690 442" />
+          <path id="route-tools" class="route" pathLength="1" d="M 576 468 C 720 500 840 452 982 446" />
+        </svg>
+
+        <article id="evidence-model" class="evidence-card">
+          <p class="evidence-label">证据 01</p>
+          <h2 class="evidence-title">模型调用</h2>
+          <p class="evidence-detail">输入 · 推理 · 输出</p>
+        </article>
+        <article id="evidence-api" class="evidence-card">
+          <p class="evidence-label">证据 02</p>
+          <h2 class="evidence-title">API 连接</h2>
+          <p class="evidence-detail">请求 · 鉴权 · 返回</p>
+        </article>
+        <article id="evidence-vector" class="evidence-card">
+          <p class="evidence-label">证据 03</p>
+          <h2 class="evidence-title">向量库</h2>
+          <p class="evidence-detail">检索 · 召回 · 上下文</p>
+        </article>
+        <article id="evidence-tools" class="evidence-card">
+          <p class="evidence-label">证据 04</p>
+          <h2 class="evidence-title">工具链</h2>
+          <p class="evidence-detail">编排 · 调度 · 状态</p>
+        </article>
+
+        <div id="conclusion-stamp" class="conclusion-stamp">复杂性仍在</div>
+        <p class="footer-note">看见按钮，不等于看见系统。</p>
+      </section>
+    </main>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo("#eyebrow", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.32, ease: "power2.out" }, 0.1);
+      tl.fromTo("#index-mark", { x: -28, y: -8, rotation: -18, opacity: 0 }, { x: 0, y: 0, rotation: -8, opacity: 1, duration: 0.4, ease: "back.out(1.18)" }, 0.16);
+      tl.to("#desk-rule", { scaleX: 1, duration: 0.46, ease: "power1.out" }, 0.2);
+      tl.fromTo("#rail-note", { x: 28, opacity: 0 }, { x: 0, opacity: 1, duration: 0.38, ease: "expo.out" }, 0.28);
+
+      tl.fromTo("#surface-card", {
+        x: -620,
+        y: 20,
+        rotation: -7,
+        opacity: 0
+      }, {
+        x: 0,
+        y: 0,
+        rotation: -0.8,
+        opacity: 1,
+        duration: 0.7,
+        ease: "power3.out"
+      }, 0.38);
+      tl.fromTo("#surface-inner", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.42, ease: "sine.out" }, 0.8);
+      tl.fromTo("#tape-a", { y: -26, rotation: -15, opacity: 0 }, { y: 0, rotation: -6, opacity: 1, duration: 0.34, ease: "power2.out" }, 1.04);
+      tl.to("#marker-sweep", { scaleX: 1, duration: 0.5, ease: "power2.out" }, 1.4);
+      tl.fromTo("#tape-b", { y: -22, rotation: 16, opacity: 0 }, { y: 0, rotation: 8, opacity: 1, duration: 0.3, ease: "back.out(1.08)" }, 1.76);
+
+      tl.to("#hinge", { scaleY: 1, duration: 0.48, ease: "power1.out" }, 1.96);
+      tl.fromTo("#evidence-heading", { x: -22, opacity: 0 }, { x: 0, opacity: 1, duration: 0.38, ease: "expo.out" }, 2.04);
+      tl.to("#surface-card", { x: -12, y: 5, scale: 0.92, rotation: -1.4, duration: 0.68, ease: "power2.inOut" }, 2.12);
+      tl.to("#surface-inner", { opacity: 0.7, duration: 0.44, ease: "power1.out" }, 2.12);
+
+      tl.to("#route-model", { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 2.26);
+      tl.fromTo("#evidence-model", { x: -72, y: -16, rotation: -8, opacity: 0 }, { x: 0, y: 0, rotation: -2.4, opacity: 1, duration: 0.5, ease: "power3.out" }, 2.34);
+      tl.to("#route-api", { strokeDashoffset: 0, duration: 0.52, ease: "sine.out" }, 2.8);
+      tl.fromTo("#evidence-api", { x: -96, y: -18, rotation: -5, opacity: 0 }, { x: 0, y: 0, rotation: 2.2, opacity: 1, duration: 0.52, ease: "expo.out" }, 2.88);
+      tl.to("#route-vector", { strokeDashoffset: 0, duration: 0.54, ease: "power1.out" }, 3.36);
+      tl.fromTo("#evidence-vector", { x: -74, y: 18, rotation: 7, opacity: 0 }, { x: 0, y: 0, rotation: 2, opacity: 1, duration: 0.52, ease: "power2.out" }, 3.44);
+      tl.to("#route-tools", { strokeDashoffset: 0, duration: 0.56, ease: "sine.out" }, 3.92);
+      tl.fromTo("#evidence-tools", { x: -98, y: 20, rotation: 5, opacity: 0 }, { x: 0, y: 0, rotation: -2, opacity: 1, duration: 0.54, ease: "expo.out" }, 4.0);
+
+      tl.to(".evidence-card", { y: -4, duration: 0.22, yoyo: true, repeat: 1, ease: "power1.inOut" }, 5.16);
+      tl.to("#surface-card", { opacity: 0.8, duration: 0.4, ease: "power1.out" }, 5.48);
+      tl.fromTo("#conclusion-stamp", { y: 18, rotation: -10, opacity: 0 }, { y: 0, rotation: -3, opacity: 1, duration: 0.48, ease: "back.out(1.12)" }, 6.14);
+      tl.to("#conclusion-stamp", { scale: 1.035, duration: 0.22, yoyo: true, repeat: 1, ease: "power1.inOut" }, 6.68);
+
+      window.__timelines["b-magazine-collage-landscape"] = tl;
+    </script>
+  </body>
+</html>

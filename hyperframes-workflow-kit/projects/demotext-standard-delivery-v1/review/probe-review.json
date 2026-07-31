@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-probe-review/v1",
+  "projectId": "demotext-standard-delivery-v1",
+  "scope": "internal-only",
+  "reviewer": "codex-autonomous-internal-review",
+  "approvalBasis": "User requested an autonomous end-to-end standard delivery; approval records an agent visual review and does not represent user listening or public-rights approval.",
+  "window": {
+    "cueId": "cue-010",
+    "startSeconds": 49.34,
+    "endSeconds": 52.56,
+    "durationSeconds": 3.22,
+    "text": "第一，平台把系统的复杂性给隐藏起来。"
+  },
+  "composition": "review/probe-project",
+  "hyperframesVersion": "0.7.62",
+  "check": {
+    "command": "npm.cmd run check -- --strict --snapshots --at 0.4,1.4,2.4,3.0",
+    "status": "passed",
+    "errors": 0,
+    "warnings": 0,
+    "snapshotTimesSeconds": [0.4, 1.4, 2.4, 3.0]
+  },
+  "visualReview": {
+    "hostContentCaptionCollision": "passed",
+    "chineseLineBreaks": "passed",
+    "activeNodeLimit": "passed",
+    "terminalHold": "passed",
+    "paletteAndHierarchy": "passed"
+  },
+  "artifacts": [
+    {
+      "path": "review/stills/style-probe-hidden-complexity.png",
+      "sha256": "88871D748C7CB11876FE435F9A3CD8084A569732C67D05A9AF0C288164775FD7"
+    },
+    {
+      "path": "review/probes/style-probe-hidden-complexity.mp4",
+      "sha256": "D134A4A3A0C1893BCBDDD6688918A84BC962B2B5E1DFF9BFEC58BE78DC7AE4C2"
+    }
+  ],
+  "publicReleaseBlocked": true
+}

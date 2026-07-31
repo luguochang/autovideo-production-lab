@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "rag-full-chain-5m-20260728",
+  "narrationSha256": "aed7f4d3133193b252e1aaa4c2b87afac9b40b7ce9ade8fed38b65d6cd046527",
+  "baseStyleId": "modern-ip-host-explainer",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [],
+  "blueprints": [],
+  "motionRules": [
+    "svg-path-draw",
+    "viewport-change",
+    "card-morph-anchor",
+    "scale-swap-transition"
+  ],
+  "status": "approved",
+  "approvedBy": "user",
+  "notes": "Reuse the user-approved one-screen sample chain. Host, caption rail, palette and zones are immutable; the final NarrationLock window still receives a timing and overlap probe before full production.",
+  "receipts": [
+    {
+      "source": "style-library/styles/project/modern-ip-host-explainer/",
+      "kind": "project-local",
+      "license": "project-generated; user-provided character rights not implied"
+    },
+    {
+      "source": "style-library/generated/hyperframes-motion-rules.json",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

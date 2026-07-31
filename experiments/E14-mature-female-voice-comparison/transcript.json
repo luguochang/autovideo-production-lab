@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "status": "needs_human_review",
+  "source": {
+    "path": "C:\\Users\\90603\\Documents\\录音\\录音.m4a",
+    "sha256": "239BE515FACD90D20943C67EB5068E80CEFB0F9B71C368BE79DB74F8CE04A63B",
+    "duration_s": 51.925313,
+    "asr_input": "16 kHz mono PCM WAV converted with FFmpeg"
+  },
+  "generated_at": "2026-07-18T12:56:28.5942154+08:00",
+  "engine": {
+    "name": "FunASR SeACo-Paraformer",
+    "device": "cpu",
+    "funasr_version": "1.3.7",
+    "torch_version": "2.3.1+cpu",
+    "models": {
+      "asr": {
+        "id": "iic/speech_seaco_paraformer_large_asr_nat-zh-cn-16k-common-vocab8404-pytorch",
+        "commit": "0141367fdc9b6ba58b0442ef34bceb56a6c1789c"
+      },
+      "vad": {
+        "id": "iic/speech_fsmn_vad_zh-cn-16k-common-pytorch",
+        "commit": "f9a8b8274674755d925277e27063869038d41515"
+      },
+      "punctuation": {
+        "id": "iic/punc_ct-transformer_cn-en-common-vocab471067-large",
+        "commit": "45ab6961ad58a973ce7785401b4e93a0aab907a3"
+      },
+      "cross_check": {
+        "id": "iic/SenseVoiceSmall",
+        "commit": "7bf452403abd7353a300cd760f7adae7701c92c1",
+        "scope": "first 15 seconds and full-text sanity check"
+      }
+    }
+  },
+  "text": "我奉劝很多人对 AI 一定要有敬畏之心，也希望大家擦亮双眼。这个市场上有无数所谓的 AI clode dedeine 社群告诉你应该怎么做。但是这里面百分之九十九的人，他不具备开发和维护 AI 的能力，他完全看不从底层的代码。AI 并不是你想的那么简单。但看到很多人用 code de clall code 都觉得自己是大神，就一下子自己冷起来了，觉得自己是被淹没了。技技术才强强可怕，怕被工工作流会写提示词，然后生成一个 a 群。尤其是应届生投了很多简历，说 AI 并不好找工作。我可以非常明确告诉你，这个世界市场上百分之九十的人，他对底层逻辑是完全不清晰的。他不是在构建一个可维护的系统，而是在拼接一个能演示的过程，一个 demo。",
+  "segments": [
+    {
+      "id": "s00",
+      "start_s": 1.23,
+      "end_s": 4.83,
+      "text": "我奉劝很多人对 AI 一定要有敬畏之心，"
+    },
+    {
+      "id": "s01",
+      "start_s": 4.83,
+      "end_s": 6.99,
+      "text": "也希望大家擦亮双眼。"
+    },
+    {
+      "id": "s02",
+      "start_s": 6.99,
+      "end_s": 11.99,
+      "text": "这个市场上有无数所谓的 AI clode dedeine 社群告诉你应该怎么做。",
+      "needs_review": true
+    },
+    {
+      "id": "s03",
+      "start_s": 12.63,
+      "end_s": 14.97,
+      "text": "但是这里面百分之九十九的人，"
+    },
+    {
+      "id": "s04",
+      "start_s": 14.99,
+      "end_s": 17.45,
+      "text": "他不具备开发和维护 AI 的能力，"
+    },
+    {
+      "id": "s05",
+      "start_s": 17.93,
+      "end_s": 20.27,
+      "text": "他完全看不从底层的代码。",
+      "needs_review": true
+    },
+    {
+      "id": "s06",
+      "start_s": 20.75,
+      "end_s": 22.39,
+      "text": "AI 并不是你想的那么简单。"
+    },
+    {
+      "id": "s07",
+      "start_s": 22.39,
+      "end_s": 26.55,
+      "text": "但看到很多人用 code de clall code 都觉得自己是大神，",
+      "needs_review": true
+    },
+    {
+      "id": "s08",
+      "start_s": 26.55,
+      "end_s": 28.17,
+      "text": "就一下子自己冷起来了，",
+      "needs_review": true
+    },
+    {
+      "id": "s09",
+      "start_s": 28.17,
+      "end_s": 29.73,
+      "text": "觉得自己是被淹没了。"
+    },
+    {
+      "id": "s10",
+      "start_s": 29.73,
+      "end_s": 31.07,
+      "text": "技技术才强强可怕，",
+      "needs_review": true
+    },
+    {
+      "id": "s11",
+      "start_s": 31.07,
+      "end_s": 33.11,
+      "text": "怕被工工作流会写提示词，",
+      "needs_review": true
+    },
+    {
+      "id": "s12",
+      "start_s": 33.11,
+      "end_s": 34.77,
+      "text": "然后生成一个 a 群。",
+      "needs_review": true
+    },
+    {
+      "id": "s13",
+      "start_s": 34.77,
+      "end_s": 36.57,
+      "text": "尤其是应届生投了很多简历，"
+    },
+    {
+      "id": "s14",
+      "start_s": 36.57,
+      "end_s": 38.07,
+      "text": "说 AI 并不好找工作。"
+    },
+    {
+      "id": "s15",
+      "start_s": 38.07,
+      "end_s": 39.49,
+      "text": "我可以非常明确告诉你，"
+    },
+    {
+      "id": "s16",
+      "start_s": 39.49,
+      "end_s": 41.65,
+      "text": "这个世界市场上百分之九十的人，",
+      "needs_review": true
+    },
+    {
+      "id": "s17",
+      "start_s": 41.65,
+      "end_s": 44.13,
+      "text": "他对底层逻辑是完全不清晰的。"
+    },
+    {
+      "id": "s18",
+      "start_s": 44.13,
+      "end_s": 47.07,
+      "text": "他不是在构建一个可维护的系统，"
+    },
+    {
+      "id": "s19",
+      "start_s": 47.07,
+      "end_s": 49.05,
+      "text": "而是在拼接一个能演示的过程，"
+    },
+    {
+      "id": "s20",
+      "start_s": 49.05,
+      "end_s": 51.015,
+      "text": "一个 demo。"
+    }
+  ],
+  "first_15s_review": {
+    "status": "timing_and_punctuation_cross_checked",
+    "paraformer_segments": [
+      {
+        "start_s": 1.23,
+        "end_s": 4.83,
+        "text": "我奉劝很多人对 AI 一定要有敬畏之心，"
+      },
+      {
+        "start_s": 4.83,
+        "end_s": 6.99,
+        "text": "也希望大家擦亮双眼。"
+      },
+      {
+        "start_s": 6.99,
+        "end_s": 11.99,
+        "text": "这个市场上有无数所谓的 AI clode dedeine 社群告诉你应该怎么做。"
+      },
+      {
+        "start_s": 12.63,
+        "end_s": 14.97,
+        "text": "但是这里面百分之九十九的人，"
+      }
+    ],
+    "sensevoice_cross_check": [
+      {
+        "start_s": 0.99,
+        "end_s": 4.65,
+        "text": "我奉劝很多人对 AI 一定要有敬畏之心，"
+      },
+      {
+        "start_s": 4.65,
+        "end_s": 6.27,
+        "text": "也希望大家擦亮双眼。"
+      },
+      {
+        "start_s": 6.75,
+        "end_s": 12.09,
+        "text": "这个市场上有无数所谓的 AI clode vice 社群告诉你应该怎么做。"
+      },
+      {
+        "start_s": 12.57,
+        "end_s": 14.97,
+        "text": "但是这里面百分之九十九的人。"
+      }
+    ],
+    "notes": [
+      "Sentence starts agree within about 0.24 seconds.",
+      "The second Paraformer segment includes the trailing pause through 6.99 seconds; SenseVoice places the spoken sentence ending near 6.27 seconds.",
+      "Both models agree on the Chinese wording and punctuation structure, but disagree on the English technical phrase around 9-10.5 seconds. It was not guessed or silently corrected."
+    ]
+  },
+  "review_flags": [
+    {
+      "start_s": 8.97,
+      "end_s": 10.59,
+      "reason": "English technical phrase differs between models: Paraformer 'clode dedeine', SenseVoice 'clode vice'."
+    },
+    {
+      "start_s": 17.93,
+      "end_s": 20.27,
+      "reason": "The phrase '看不从' is likely an ASR error and needs listening confirmation."
+    },
+    {
+      "start_s": 22.39,
+      "end_s": 34.77,
+      "reason": "Mixed English product names and several repeated Chinese characters are not reliable enough for direct TTS use."
+    },
+    {
+      "start_s": 39.49,
+      "end_s": 41.65,
+      "reason": "SenseVoice heard '这个市场上' while Paraformer heard '这个世界市场上'."
+    }
+  ]
+}

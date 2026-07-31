@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: AutoVideo Oralizer offline contract regression
+sharing: false
+prompts:
+  - id: file://../prompt-chain/prompts/04-oralizer.md
+    label: oralizer-v1
+providers:
+  - id: file://providers/precomputed-artifact-provider.mjs
+    label: hash-bound-local-candidate
+    config:
+      stage: oralizer
+defaultTest:
+  assert:
+    - type: javascript
+      value: file://assertions/stage-contract.mjs
+tests:
+  - description: Chinese AI terms, opinion boundary, duration and screen compression
+    vars:
+      stage: oralizer
+      casePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.case.json
+      candidatePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.candidate.json

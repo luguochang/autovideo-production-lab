@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-07-28T13:47:03.874357+00:00",
+  "recipe": "E14 candidate 14",
+  "model": "CosyVoice-300M-SFT",
+  "model_dir": "E:\\project\\study\\codex\\autoVideo\\tools\\voice-lab\\CosyVoice\\pretrained_models\\CosyVoice-300M-SFT",
+  "speaker": "中文女",
+  "speed": 1.03,
+  "seed": 7,
+  "precision": "FP32",
+  "stream": false,
+  "segment_id": "part-110",
+  "text_source": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\rag-full-chain-5m-20260728-r2\\audio\\voice-candidates\\candidate-001\\parts\\part-110.tts.txt",
+  "text_sha256": "CD552DE18631A1B6189C3E7B00EAB0C1C968892D6CC14796D58958F5B1A0E28F",
+  "text_characters": 12,
+  "frontend_preflight": {
+    "policy": "exactly-one-internal-utterance-required",
+    "utterance_count": 1,
+    "normalized_text_sha256": "9E48B449D9576FF6C8BB08D0E35AED5B00264632868E48253FFE34B2EDEB4A41",
+    "normalized_text_characters": 10
+  },
+  "output_chunks": 1,
+  "raw": {
+    "sample_rate": 22050,
+    "duration_seconds": 1.555736961451247,
+    "sha256": "C456C065700C9C0C184B17DC7C1D8D3C15CAE7089607102776D1E63FC251E565",
+    "nonfinite_samples": 0
+  },
+  "output": {
+    "path": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\rag-full-chain-5m-20260728-r2\\audio\\voice-candidates\\candidate-001\\parts\\part-110.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "duration_seconds": 1.55575,
+    "sha256": "6D3230DDFE5D6D7AA7904E662B33EE3884E52991036063FC54280B8325F8F373",
+    "nonfinite_samples": 0,
+    "loudness_target_lufs": -16,
+    "true_peak_target_db": -1.5
+  },
+  "batch": {
+    "manifest": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\rag-full-chain-5m-20260728-r2\\audio\\voice-candidates\\candidate-001\\parts\\batch-manifest.json",
+    "manifest_sha256": "8A3A2F997B2A10999D9348E4AD51645E817CAAD4D73F07B95CDB986FE77CB3C6"
+  }
+}

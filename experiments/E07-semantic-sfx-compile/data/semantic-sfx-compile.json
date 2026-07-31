@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "autovideo-semantic-sfx-compile-diagnostics/v1",
+  "planId": "demotext-standard-delivery-v5-sparse-sfx",
+  "planStatus": "candidate",
+  "mode": "approved-plan-only-silence-default",
+  "committed": false,
+  "policy": {
+    "hardMaxPerMinute": 6,
+    "hardMinGapSeconds": 2.4,
+    "effectiveMaxPerMinute": null,
+    "effectiveMinGapSeconds": null
+  },
+  "summary": {
+    "requestedCueCount": 6,
+    "appliedCueCount": 0,
+    "rejectedCueCount": 6,
+    "unchangedShotCount": 46
+  },
+  "entries": [
+    {
+      "planCueId": "sfx-cue-001",
+      "planCueIndex": 0,
+      "status": "rejected",
+      "reasonCodes": [
+        "plan.not-approved"
+      ],
+      "role": "connector-draw",
+      "bindingRole": "connector-draw",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": [
+        "cue-005"
+      ],
+      "semanticEvent": "diagram-build reaches its visible connector-complete state.",
+      "assetId": null,
+      "shotCueId": null,
+      "eventTimeSeconds": null,
+      "offsetMs": null,
+      "gainDb": -21,
+      "event": "draw"
+    },
+    {
+      "planCueId": "sfx-cue-002",
+      "planCueIndex": 1,
+      "status": "rejected",
+      "reasonCodes": [
+        "plan.not-approved"
+      ],
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-015"
+      ],
+      "semanticEvent": "comparison-split reaches its visible state-commit state.",
+      "assetId": null,
+      "shotCueId": null,
+      "eventTimeSeconds": null,
+      "offsetMs": null,
+      "gainDb": -20,
+      "event": "click"
+    },
+    {
+      "planCueId": "sfx-cue-003",
+      "planCueIndex": 2,
+      "status": "rejected",
+      "reasonCodes": [
+        "plan.not-approved"
+      ],
+      "role": "chapter-resolve",
+      "bindingRole": "chapter-resolve",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": [
+        "cue-017"
+      ],
+      "semanticEvent": "diagram-build reaches its visible chapter-terminal state.",
+      "assetId": null,
+      "shotCueId": null,
+      "eventTimeSeconds": null,
+      "offsetMs": null,
+      "gainDb": -21,
+      "event": "resolve"
+    },
+    {
+      "planCueId": "sfx-cue-004",
+      "planCueIndex": 3,
+      "status": "rejected",
+      "reasonCodes": [
+        "plan.not-approved"
+      ],
+      "role": "focus-hit",
+      "bindingRole": "focus-hit",
+      "motionRecipeId": "keyword-handoff",
+      "sourceCueIds": [
+        "cue-027"
+      ],
+      "semanticEvent": "keyword-handoff reaches its visible motion-land state.",
+      "assetId": null,
+      "shotCueId": null,
+      "eventTimeSeconds": null,
+      "offsetMs": null,
+      "gainDb": -19,
+      "event": "enter"
+    },
+    {
+      "planCueId": "sfx-cue-005",
+      "planCueIndex": 4,
+      "status": "rejected",
+      "reasonCodes": [
+        "plan.not-approved"
+      ],
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-039"
+      ],
+      "semanticEvent": "comparison-split reaches its visible state-commit state.",
+      "assetId": null,
+      "shotCueId": null,
+      "eventTimeSeconds": null,
+      "offsetMs": null,
+      "gainDb": -20,
+      "event": "click"
+    },
+    {
+      "planCueId": "sfx-cue-006",
+      "planCueIndex": 5,
+      "status": "rejected",
+      "reasonCodes": [
+        "plan.not-approved"
+      ],
+      "role": "chapter-resolve",
+      "bindingRole": "chapter-resolve",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-044"
+      ],
+      "semanticEvent": "comparison-split reaches its visible chapter-terminal state.",
+      "assetId": null,
+      "shotCueId": null,
+      "eventTimeSeconds": null,
+      "offsetMs": null,
+      "gainDb": -21,
+      "event": "resolve"
+    }
+  ],
+  "errors": [
+    {
+      "code": "plan.not-approved",
+      "message": "Only an approved semantic SFX plan may emit shot references.",
+      "details": {
+        "actualStatus": "candidate"
+      }
+    }
+  ],
+  "warnings": []
+}

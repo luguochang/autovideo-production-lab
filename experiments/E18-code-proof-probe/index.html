@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Code Proof Motion Recipe Probe</title>
+    <script src="./assets/runtime/gsap.min.js"></script>
+    <style>
+      :root {
+        --background: #f2dfc7;
+        --surface: #fbf3e7;
+        --ink: #2a211b;
+        --muted: #675748;
+        --primary: #496958;
+        --secondary: #a94e36;
+        --line: #dcc2a3;
+        --editor: #28231e;
+        --editor-raised: #352e27;
+        --editor-ink: #f7ead9;
+        --editor-muted: #c8b49d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "Noto Sans SC";
+        src: local("Noto Sans SC"), local("Noto Sans CJK SC");
+        font-weight: 100 900;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+        font-weight: 100 900;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--background);
+        color: var(--ink);
+        font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+        letter-spacing: 0;
+      }
+
+      #root,
+      #probe-scene {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      .stage-fill {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--background);
+      }
+
+      .stage-fill::before {
+        content: "";
+        position: absolute;
+        left: 96px;
+        top: 874px;
+        width: 1728px;
+        height: 3px;
+        background: var(--line);
+      }
+
+      .stage-mark {
+        position: absolute;
+        left: 96px;
+        top: 70px;
+        width: 560px;
+        height: 30px;
+        color: var(--muted);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+
+      .stage-mark::before {
+        content: "";
+        display: inline-block;
+        width: 46px;
+        height: 4px;
+        margin-right: 16px;
+        vertical-align: 5px;
+        background: var(--primary);
+      }
+
+      .host-zone {
+        position: absolute;
+        left: 96px;
+        top: 156px;
+        width: 600px;
+        height: 730px;
+        overflow: hidden;
+        z-index: 4;
+        opacity: 0;
+        transform-origin: 50% 100%;
+        will-change: transform, opacity;
+      }
+
+      .host-shadow {
+        position: absolute;
+        left: 112px;
+        bottom: 4px;
+        width: 382px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(73, 105, 88, 0.12);
+        filter: blur(14px);
+      }
+
+      .host-pose {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 600px;
+        height: 730px;
+        object-fit: contain;
+        object-position: 50% 100%;
+      }
+
+      .host-accent {
+        position: absolute;
+        left: 34px;
+        bottom: 18px;
+        width: 510px;
+        height: 5px;
+        background: var(--primary);
+        opacity: 0.72;
+      }
+
+      .content-zone {
+        position: absolute;
+        left: 694px;
+        top: 112px;
+        width: 1130px;
+        height: 760px;
+        overflow: hidden;
+        z-index: 8;
+      }
+
+      .content-world {
+        position: absolute;
+        inset: 0;
+        width: 1130px;
+        height: 760px;
+        overflow: hidden;
+      }
+
+      .content-label {
+        position: absolute;
+        left: 10px;
+        top: 4px;
+        width: 930px;
+        height: 40px;
+        color: var(--muted);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 40px;
+        opacity: 0;
+      }
+
+      .content-label strong {
+        margin-left: 18px;
+        color: var(--secondary);
+        font-weight: 800;
+      }
+
+      .anchor-rule {
+        position: absolute;
+        left: 10px;
+        top: 66px;
+        width: 1068px;
+        height: 5px;
+        background: var(--line);
+        transform-origin: 0 50%;
+        opacity: 0;
+      }
+
+      .anchor-rule::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 286px;
+        background: var(--primary);
+      }
+
+      .editor-camera {
+        position: absolute;
+        left: 30px;
+        top: 96px;
+        width: 1070px;
+        height: 500px;
+        overflow: hidden;
+        transform-origin: 62% 48%;
+        will-change: transform;
+      }
+
+      .editor {
+        position: absolute;
+        inset: 0;
+        width: 1070px;
+        height: 500px;
+        overflow: hidden;
+        border: 3px solid var(--primary);
+        border-radius: 8px;
+        background: var(--editor);
+        box-shadow: 0 18px 36px rgba(42, 33, 27, 0.18);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .editor-titlebar {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 1064px;
+        height: 64px;
+        overflow: hidden;
+        border-bottom: 2px solid #574a3d;
+        background: var(--editor-raised);
+      }
+
+      .window-dots {
+        position: absolute;
+        left: 22px;
+        top: 24px;
+        width: 72px;
+        height: 16px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .window-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+
+      .window-dot.red { background: #da765d; }
+      .window-dot.gold { background: #d9b15f; }
+      .window-dot.green { background: #79ad88; }
+
+      .filename {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 610px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        color: var(--editor-ink);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 20px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .filename span {
+        margin-left: 12px;
+        color: var(--editor-muted);
+        font-weight: 500;
+      }
+
+      .state-chip {
+        position: absolute;
+        right: 24px;
+        top: 14px;
+        width: 236px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #9ebaa9;
+        border-radius: 6px;
+        color: #f7ead9;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 32px;
+        white-space: nowrap;
+      }
+
+      .state-caret {
+        display: inline-block;
+        width: 10px;
+        height: 20px;
+        margin-left: 10px;
+        background: #9ed3b3;
+        opacity: 0.25;
+      }
+
+      .code-surface {
+        position: absolute;
+        left: 3px;
+        top: 67px;
+        width: 1064px;
+        height: 430px;
+        overflow: hidden;
+      }
+
+      .focus-band {
+        position: absolute;
+        left: 30px;
+        top: 36px;
+        width: 1004px;
+        height: 78px;
+        border-left: 5px solid #9ed3b3;
+        border-radius: 4px;
+        background: rgba(73, 105, 88, 0.34);
+        opacity: 0;
+        transform-origin: 0 50%;
+        will-change: transform, opacity;
+      }
+
+      .code-row {
+        position: absolute;
+        left: 34px;
+        width: 990px;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        color: var(--editor-ink);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      #code-row-running { top: 36px; }
+      #code-row-generate { top: 154px; }
+      #code-row-promote { top: 272px; }
+
+      .line-number {
+        display: inline-block;
+        width: 58px;
+        margin-right: 20px;
+        color: #b8a58e;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: right;
+      }
+
+      .tok-keyword { color: #f1a17c; }
+      .tok-function { color: #a6d7be; }
+      .tok-string { color: #e9c786; }
+      .tok-argument { color: #d9b8e7; }
+      .tok-punctuation { color: #f7ead9; }
+
+      .step-note {
+        position: absolute;
+        left: 112px;
+        bottom: 16px;
+        width: 720px;
+        height: 32px;
+        color: var(--editor-muted);
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 32px;
+        white-space: nowrap;
+      }
+
+      .source-note {
+        position: absolute;
+        right: 28px;
+        bottom: 16px;
+        width: 288px;
+        height: 30px;
+        color: #d6c2aa;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .conclusion-band {
+        position: absolute;
+        left: 24px;
+        top: 622px;
+        width: 1060px;
+        height: 86px;
+        overflow: hidden;
+        border-top: 3px solid var(--line);
+        border-bottom: 3px solid var(--line);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .conclusion-label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 220px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .conclusion-copy {
+        position: absolute;
+        left: 220px;
+        top: 0;
+        width: 820px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        color: var(--ink);
+        font-size: 31px;
+        font-weight: 850;
+        line-height: 1.25;
+        white-space: nowrap;
+      }
+
+      .conclusion-copy strong {
+        color: var(--secondary);
+        font-weight: 900;
+      }
+
+      .caption-shell {
+        position: absolute;
+        left: 96px;
+        top: 926px;
+        width: 1728px;
+        height: 88px;
+        overflow: hidden;
+        border-top: 2px solid var(--line);
+        background: var(--surface);
+        z-index: 190;
+      }
+
+      .caption-group {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 1728px;
+        max-width: 1600px;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        padding: 0 34px;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 27px;
+        font-weight: 520;
+        line-height: 1.35;
+        white-space: nowrap;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .caption-group strong {
+        color: var(--primary);
+        font-weight: 850;
+      }
+
+      #caption-c strong {
+        color: var(--secondary);
+      }
+
+      .source-receipt {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="8"
+      data-width="1920"
+      data-height="1080"
+      data-fps="30"
+    >
+      <section id="probe-scene" class="clip" data-start="0" data-duration="8" data-track-index="1">
+        <div class="stage-fill" data-role="persistent-stage" data-zone="stage" data-layout-ignore></div>
+        <div class="stage-mark">CODE PROOF / CANDIDATE PROBE</div>
+
+        <div id="host-zone" class="host-zone" data-role="host" data-zone="host.left">
+          <div class="host-shadow" aria-hidden="true"></div>
+          <img
+            id="host-present"
+            class="host-pose"
+            src="./.media/images/image_001.png"
+            alt=""
+            data-role="host-pose"
+            data-zone="host.left"
+            data-pose-id="present"
+            data-layout-allow-overflow="normalized-host-crop"
+          />
+          <div class="host-accent" aria-hidden="true"></div>
+        </div>
+
+        <div id="content-zone" class="content-zone" data-role="content" data-zone="content.right">
+          <div
+            id="content-world"
+            class="content-world"
+            data-role="content-world"
+            data-zone="content.right"
+            data-camera-scope="content-world-only"
+            data-motion-recipe="code-proof@1.0.0"
+          >
+            <div id="content-label" class="content-label">
+              RECIPE / CODE PROOF <strong>REAL PROJECT EXCERPT</strong>
+            </div>
+            <div id="anchor-rule" class="anchor-rule" aria-hidden="true"></div>
+
+            <div
+              id="editor-camera"
+              class="editor-camera"
+              data-role="content-camera"
+              data-zone="content.right"
+              data-camera-scope="content-world-only"
+            >
+              <div id="editor" class="editor" data-role="code-surface" data-source-ir="CodeProofIR.json">
+                <div class="editor-titlebar">
+                  <div class="window-dots" aria-hidden="true">
+                    <span class="window-dot red"></span>
+                    <span class="window-dot gold"></span>
+                    <span class="window-dot green"></span>
+                  </div>
+                  <div class="filename">server.mjs <span>scheduleGenerationJob()</span></div>
+                  <div class="state-chip">
+                    <span id="state-chip-text">QUEUED</span><span id="state-caret" class="state-caret"></span>
+                  </div>
+                </div>
+
+                <div class="code-surface">
+                  <div id="focus-band" class="focus-band" aria-hidden="true"></div>
+
+                  <div id="code-row-running" class="code-row">
+                    <span class="line-number">281</span>
+                    <span class="tok-keyword">await</span>&nbsp;<span class="tok-function">updateJobRecord</span><span class="tok-punctuation">(job.id, {</span><span class="tok-argument">status</span><span class="tok-punctuation">: </span><span class="tok-string">'running'</span><span class="tok-punctuation">, ...})</span>
+                  </div>
+
+                  <div id="code-row-generate" class="code-row">
+                    <span class="line-number">283</span>
+                    <span class="tok-keyword">const</span>&nbsp;result&nbsp;=&nbsp;<span class="tok-keyword">await</span>&nbsp;<span class="tok-function">generateStage</span><span class="tok-punctuation">(job.projectId, job.stageId)</span>
+                  </div>
+
+                  <div id="code-row-promote" class="code-row">
+                    <span class="line-number">292</span>
+                    <span class="tok-keyword">await</span>&nbsp;<span class="tok-function">markStageGenerated</span><span class="tok-punctuation">(job.projectId, job.stageId, result)</span>
+                  </div>
+
+                  <div id="step-note" class="step-note">任务进入运行态</div>
+                  <div class="source-note">workflow-console/server.mjs</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="conclusion-band" class="conclusion-band" data-role="code-proof-conclusion">
+              <div class="conclusion-label">ENGINEERING CHAIN</div>
+              <div class="conclusion-copy">一个按钮，串起<strong>状态、生成与产物晋级</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="caption-shell" class="caption-shell" data-role="caption" data-zone="caption">
+          <div id="caption-a" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="caption crossfade">
+            第一，平台把系统的<strong>复杂性</strong>给隐藏起来。
+          </div>
+          <div id="caption-b" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="caption crossfade">
+            <strong>低代码、无代码、AI 平台、工作流工具</strong>，
+          </div>
+          <div id="caption-c" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="caption crossfade">
+            把模型调用、API 连接、向量库、工具链调度流程<strong>包装成了按钮和节点</strong>。
+          </div>
+        </div>
+
+        <div
+          class="source-receipt"
+          data-official-registry="code-highlight"
+          data-official-motion-rules="discrete-text-sequence,viewport-change"
+          data-adaptation-receipt="SOURCE_RECEIPT.json"
+          data-license="Apache-2.0"
+          data-audio-state="narration-only"
+        ></div>
+      </section>
+
+      <audio
+        id="probe-narration"
+        src="./.media/audio/voice/voice_001.wav"
+        data-start="0"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const stateChip = document.getElementById("state-chip-text");
+      const stepNote = document.getElementById("step-note");
+      const stateCaret = document.getElementById("state-caret");
+
+      const STATUS_SEQUENCE = [
+        { t: 0, chip: "QUEUED", note: "等待调度" },
+        { t: 1.34, chip: "RUNNING", note: "任务进入运行态" },
+        { t: 3.08, chip: "EXECUTING", note: "执行正式生成器" },
+        { t: 5.42, chip: "PROMOTING", note: "校验并晋级生成产物" },
+        { t: 6.42, chip: "COMPLETE", note: "工程链完成" },
+      ];
+
+      function statusAt(time) {
+        for (let index = STATUS_SEQUENCE.length - 1; index >= 0; index -= 1) {
+          if (time >= STATUS_SEQUENCE[index].t) return STATUS_SEQUENCE[index];
+        }
+        return STATUS_SEQUENCE[0];
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      tl.addLabel("build", 0);
+      tl.addLabel("execute", 3.08);
+      tl.addLabel("promote", 5.42);
+      tl.addLabel("resolve", 6.42);
+
+      tl.fromTo(
+        "#host-zone",
+        { opacity: 0, scale: 0.985 },
+        { opacity: 1, scale: 1, duration: 0.62, ease: "power4.out" },
+        0.12,
+      );
+      tl.fromTo(
+        "#content-label",
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" },
+        0.18,
+      );
+      tl.fromTo(
+        "#anchor-rule",
+        { opacity: 0, scaleX: 0.16 },
+        { opacity: 1, scaleX: 1, duration: 0.58, ease: "power2.out" },
+        0.26,
+      );
+      tl.fromTo(
+        "#editor",
+        { opacity: 0, y: 0, scale: 0.985 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.58, ease: "power3.out" },
+        0.32,
+      );
+      tl.fromTo(
+        ".code-row",
+        { opacity: 0, x: 18 },
+        { opacity: 1, x: 0, duration: 0.34, stagger: 0.16, ease: "power3.out" },
+        0.66,
+      );
+
+      tl.fromTo(
+        "#focus-band",
+        { opacity: 0, scaleX: 0.12, y: 0 },
+        { opacity: 1, scaleX: 1, y: 0, duration: 0.72, ease: "power2.inOut" },
+        1.34,
+      );
+      tl.to("#code-row-generate, #code-row-promote", { opacity: 0.42, duration: 0.36, ease: "power2.out" }, 1.34);
+
+      tl.to("#focus-band", { y: 118, duration: 0.72, ease: "power3.inOut" }, "execute");
+      tl.to("#code-row-running, #code-row-promote", { opacity: 0.42, duration: 0.34, ease: "power2.out" }, "execute");
+      tl.to("#code-row-generate", { opacity: 1, duration: 0.34, ease: "power2.out" }, "execute");
+      tl.to("#editor-camera", { x: -8, scale: 1.025, duration: 0.92, ease: "power2.inOut" }, "execute");
+
+      tl.to("#focus-band", { y: 236, duration: 0.72, ease: "power3.inOut" }, "promote");
+      tl.to("#code-row-running, #code-row-generate", { opacity: 0.42, duration: 0.34, ease: "power2.out" }, "promote");
+      tl.to("#code-row-promote", { opacity: 1, duration: 0.34, ease: "power2.out" }, "promote");
+      tl.to("#focus-band", { scaleX: 1.018, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out" }, 5.96);
+
+      tl.to("#editor-camera", { x: 0, scale: 1, duration: 0.72, ease: "power3.inOut" }, 6.12);
+      tl.to(".code-row", { opacity: 0.78, duration: 0.38, ease: "power2.out" }, "resolve");
+      tl.fromTo(
+        "#conclusion-band",
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.46, ease: "power3.out" },
+        "resolve",
+      );
+
+      tl.fromTo("#caption-a", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 0.12);
+      tl.to("#caption-a", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 3.04);
+      tl.fromTo("#caption-b", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 3.16);
+      tl.to("#caption-b", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 5.3);
+      tl.fromTo("#caption-c", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 5.42);
+
+      const statusDriver = { t: 0 };
+      tl.to(
+        statusDriver,
+        {
+          t: 8,
+          duration: 8,
+          ease: "none",
+          onUpdate: () => {
+            const state = statusAt(statusDriver.t);
+            stateChip.textContent = state.chip;
+            stepNote.textContent = state.note;
+          },
+        },
+        0,
+      );
+
+      const caretDriver = { phase: 0 };
+      tl.to(
+        caretDriver,
+        {
+          phase: Math.PI * 20,
+          duration: 8,
+          ease: "none",
+          onUpdate: () => {
+            stateCaret.style.opacity = Math.sin(caretDriver.phase) > 0 ? "1" : "0.25";
+          },
+        },
+        0,
+      );
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

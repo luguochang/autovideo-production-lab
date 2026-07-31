@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "autovideo-narration-lock/v1",
+  "projectId": "demoText-mainstream-landscape",
+  "sourcePath": "content/demoText-20s-excerpt.txt",
+  "frozenPath": "input/narration.txt",
+  "sourceSha256": "ef5f13d308a560648d67d0470fa233932baa2062198a488b738dd235919249a3",
+  "normalizedSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+  "normalization": "UTF-8 text; CRLF converted to LF; surrounding whitespace trimmed",
+  "createdAt": "2026-07-17T02:14:58.535Z",
+  "immutable": true
+}

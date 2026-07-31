@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Diagram Build Motion Recipe Probe</title>
+    <script src="./assets/runtime/gsap.min.js"></script>
+    <style>
+      :root {
+        --background: #f2dfc7;
+        --surface: #fbf3e7;
+        --surface-focus: #fffaf2;
+        --ink: #2a211b;
+        --muted: #675748;
+        --primary: #496958;
+        --secondary: #a94e36;
+        --line: #dcc2a3;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "Noto Sans SC";
+        src: local("Noto Sans SC"), local("Noto Sans CJK SC");
+        font-weight: 100 900;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+        font-weight: 100 900;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--background);
+        color: var(--ink);
+        font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      }
+
+      #root,
+      #probe-scene,
+      .stage-fill {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      .stage-fill {
+        position: absolute;
+        inset: 0;
+        background: var(--background);
+      }
+
+      .stage-fill::before {
+        content: "";
+        position: absolute;
+        left: 96px;
+        top: 874px;
+        width: 1728px;
+        height: 3px;
+        background: var(--line);
+      }
+
+      .stage-mark {
+        position: absolute;
+        left: 96px;
+        top: 70px;
+        width: 500px;
+        height: 30px;
+        color: var(--muted);
+        font-family: monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0;
+      }
+
+      .stage-mark::before {
+        content: "";
+        display: inline-block;
+        width: 46px;
+        height: 4px;
+        margin-right: 16px;
+        vertical-align: 5px;
+        background: var(--primary);
+      }
+
+      .host-zone {
+        position: absolute;
+        left: 96px;
+        top: 156px;
+        width: 600px;
+        height: 730px;
+        overflow: hidden;
+        z-index: 4;
+        opacity: 0;
+        transform-origin: 50% 100%;
+        will-change: transform, opacity;
+      }
+
+      .host-shadow {
+        position: absolute;
+        left: 112px;
+        bottom: 4px;
+        width: 382px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(73, 105, 88, 0.12);
+        filter: blur(14px);
+      }
+
+      .host-pose {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 600px;
+        height: 730px;
+        object-fit: contain;
+        object-position: 50% 100%;
+        transform-origin: 50% 100%;
+      }
+
+      .host-accent {
+        position: absolute;
+        left: 34px;
+        bottom: 18px;
+        width: 510px;
+        height: 5px;
+        background: var(--primary);
+        transform-origin: 0 50%;
+        opacity: 0.72;
+      }
+
+      .content-zone {
+        position: absolute;
+        left: 694px;
+        top: 112px;
+        width: 1130px;
+        height: 760px;
+        overflow: hidden;
+        z-index: 8;
+      }
+
+      .content-world {
+        position: absolute;
+        inset: 0;
+        width: 1130px;
+        height: 760px;
+        overflow: hidden;
+      }
+
+      .content-label {
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        width: 900px;
+        height: 40px;
+        color: var(--muted);
+        font-family: monospace;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0;
+        opacity: 0;
+      }
+
+      .content-label strong {
+        margin-left: 18px;
+        color: var(--secondary);
+        font-weight: 800;
+      }
+
+      .anchor-rule {
+        position: absolute;
+        left: 8px;
+        top: 66px;
+        width: 930px;
+        height: 6px;
+        background: var(--line);
+        transform-origin: 0 50%;
+        opacity: 0;
+      }
+
+      .anchor-rule::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 286px;
+        background: var(--primary);
+      }
+
+      .diagram-camera {
+        position: absolute;
+        left: 20px;
+        top: 94px;
+        width: 1050px;
+        height: 624px;
+        overflow: hidden;
+        transform-origin: 50% 48%;
+        will-change: transform;
+      }
+
+      .diagram-heading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1030px;
+        height: 98px;
+        opacity: 0;
+      }
+
+      .diagram-kicker {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 620px;
+        height: 28px;
+        color: var(--muted);
+        font-family: monospace;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0;
+      }
+
+      .diagram-title {
+        position: absolute;
+        left: 0;
+        top: 36px;
+        width: 980px;
+        height: 66px;
+        color: var(--ink);
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .diagram-title strong {
+        color: var(--secondary);
+        font-weight: 900;
+      }
+
+      .graph-canvas {
+        position: absolute;
+        left: 0;
+        top: 122px;
+        width: 1050px;
+        height: 358px;
+        overflow: hidden;
+      }
+
+      .graph-connectors {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1050px;
+        height: 358px;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .connector-base,
+      .connector-active,
+      .connector-head-base,
+      .connector-head-active {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .connector-base,
+      .connector-head-base {
+        opacity: 0;
+        stroke: var(--primary);
+        stroke-width: 5;
+      }
+
+      .connector-active,
+      .connector-head-active {
+        opacity: 0;
+        stroke: var(--secondary);
+        stroke-width: 8;
+      }
+
+      .edge-label {
+        position: absolute;
+        top: 136px;
+        width: 84px;
+        height: 26px;
+        color: var(--muted);
+        background: var(--background);
+        font-family: monospace;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0;
+        opacity: 0;
+        z-index: 3;
+      }
+
+      #edge-label-model-api {
+        left: 303px;
+      }
+
+      #edge-label-api-tools {
+        left: 663px;
+      }
+
+      .graph-node {
+        position: absolute;
+        top: 72px;
+        width: 270px;
+        height: 224px;
+        overflow: hidden;
+        border: 3px solid var(--line);
+        border-radius: 6px;
+        background: var(--surface);
+        opacity: 0;
+        transform-origin: 50% 50%;
+        will-change: transform, opacity;
+        z-index: 5;
+      }
+
+      #graph-node-model {
+        left: 30px;
+      }
+
+      #graph-node-api {
+        left: 390px;
+      }
+
+      #graph-node-tools {
+        left: 750px;
+      }
+
+      .node-rule {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 8px;
+        background: var(--primary);
+      }
+
+      #graph-node-tools .node-rule {
+        background: var(--secondary);
+      }
+
+      .node-index {
+        position: absolute;
+        left: 24px;
+        top: 32px;
+        width: 54px;
+        height: 54px;
+        border: 3px solid var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-family: monospace;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      #graph-node-tools .node-index {
+        border-color: var(--secondary);
+        color: var(--secondary);
+      }
+
+      .node-meta {
+        position: absolute;
+        left: 96px;
+        top: 34px;
+        width: 142px;
+        height: 24px;
+        color: var(--muted);
+        font-family: monospace;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
+
+      .node-title {
+        position: absolute;
+        left: 24px;
+        top: 108px;
+        width: 222px;
+        height: 48px;
+        color: var(--ink);
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .node-detail {
+        position: absolute;
+        left: 24px;
+        top: 166px;
+        width: 222px;
+        height: 32px;
+        color: var(--muted);
+        font-size: 21px;
+        font-weight: 650;
+        line-height: 32px;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .relation-summary {
+        position: absolute;
+        left: 30px;
+        top: 512px;
+        width: 990px;
+        height: 84px;
+        overflow: hidden;
+        border-top: 3px solid var(--line);
+        border-bottom: 3px solid var(--line);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .summary-label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 196px;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        font-family: monospace;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .summary-copy {
+        position: absolute;
+        left: 196px;
+        top: 0;
+        width: 770px;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        color: var(--ink);
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1.3;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .summary-copy strong {
+        color: var(--secondary);
+        font-weight: 900;
+      }
+
+      .caption-shell {
+        position: absolute;
+        left: 96px;
+        top: 926px;
+        width: 1728px;
+        height: 88px;
+        overflow: hidden;
+        border-top: 2px solid var(--line);
+        background: var(--surface);
+        z-index: 190;
+      }
+
+      .caption-group {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 1728px;
+        height: 82px;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .caption-copy {
+        position: absolute;
+        left: 34px;
+        top: 0;
+        width: 1640px;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .caption-copy.emphasis {
+        color: var(--ink);
+        font-weight: 700;
+        opacity: 0;
+      }
+
+      .caption-copy.emphasis strong {
+        color: var(--primary);
+        font-weight: 900;
+      }
+
+      #caption-c .caption-copy.emphasis strong {
+        color: var(--secondary);
+      }
+
+      .source-receipt {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="8"
+      data-width="1920"
+      data-height="1080"
+      data-fps="30"
+    >
+      <section id="probe-scene" class="clip" data-start="0" data-duration="8.033" data-track-index="1">
+        <div class="stage-fill" data-role="persistent-stage" data-zone="stage" data-layout-ignore></div>
+        <div class="stage-mark">KNOWLEDGE EXPLAINER / MOTION PROBE</div>
+
+        <div id="host-zone" class="host-zone" data-role="host" data-zone="host.left">
+          <div class="host-shadow" aria-hidden="true"></div>
+          <img
+            id="host-present"
+            class="host-pose"
+            src="./.media/images/image_001.png"
+            alt=""
+            data-role="host-pose"
+            data-zone="host.left"
+            data-pose-id="present"
+            data-layout-allow-overflow="normalized-host-crop"
+          />
+          <div id="host-accent" class="host-accent" aria-hidden="true"></div>
+        </div>
+
+        <div id="content-zone" class="content-zone" data-role="content" data-zone="content.right">
+          <div
+            id="content-world"
+            class="content-world"
+            data-role="content-world"
+            data-zone="content.right"
+            data-camera-scope="content-world-only"
+            data-motion-recipe="diagram-build@1.0.0"
+          >
+            <div id="content-label" class="content-label">RECIPE / DIAGRAM BUILD <strong>BASE STYLE LOCKED</strong></div>
+            <div id="anchor-rule" class="anchor-rule" aria-hidden="true"></div>
+
+            <div
+              id="diagram-camera"
+              class="diagram-camera"
+              data-role="content-camera"
+              data-zone="content.right"
+              data-camera-scope="content-world-only"
+            >
+              <div id="diagram-heading" class="diagram-heading">
+                <div class="diagram-kicker">SIMPLE ENTRY / HIDDEN PIPELINE</div>
+                <div class="diagram-title">一个按钮背后，运行着<strong>整条工程链</strong></div>
+              </div>
+
+              <div
+                id="graph-canvas"
+                class="graph-canvas"
+                data-role="graph"
+                data-zone="content.right"
+                data-graph-ir="GraphIR.json#graph-hidden-pipeline"
+                data-source-block="flowchart"
+              >
+                <svg
+                  class="graph-connectors"
+                  width="1050"
+                  height="358"
+                  viewBox="0 0 1050 358"
+                  aria-hidden="true"
+                  data-layout-ignore
+                  data-layout-allow-overlap="connectors pass behind graph nodes"
+                >
+                  <path id="edge-model-api-base" class="connector-base" d="M 300 184 C 332 184 358 184 390 184" />
+                  <path id="edge-model-api-head-base" class="connector-head-base" d="M 370 173 L 390 184 L 370 195" />
+                  <path id="edge-api-tools-base" class="connector-base" d="M 660 184 C 692 184 718 184 750 184" />
+                  <path id="edge-api-tools-head-base" class="connector-head-base" d="M 730 173 L 750 184 L 730 195" />
+                  <path id="edge-model-api-active" class="connector-active" d="M 300 184 C 332 184 358 184 390 184" />
+                  <path id="edge-model-api-head-active" class="connector-head-active" d="M 370 173 L 390 184 L 370 195" />
+                  <path id="edge-api-tools-active" class="connector-active" d="M 660 184 C 692 184 718 184 750 184" />
+                  <path id="edge-api-tools-head-active" class="connector-head-active" d="M 730 173 L 750 184 L 730 195" />
+                </svg>
+
+                <div id="edge-label-model-api" class="edge-label">连接上下文</div>
+                <div id="edge-label-api-tools" class="edge-label">编排执行</div>
+
+                <article
+                  id="graph-node-model"
+                  class="graph-node"
+                  data-role="graph-node"
+                  data-zone="content.right"
+                  data-graph-node-id="graph-node-model"
+                  data-source-cue="cue-003"
+                  data-text-type="generated-summary"
+                  data-layout-allow-overlap="connector passes behind node"
+                >
+                  <div class="node-rule" aria-hidden="true"></div>
+                  <div class="node-index">01</div>
+                  <div class="node-meta">CAPABILITY</div>
+                  <div class="node-title">模型调用</div>
+                  <div class="node-detail">调用推理能力</div>
+                </article>
+
+                <article
+                  id="graph-node-api"
+                  class="graph-node"
+                  data-role="graph-node"
+                  data-zone="content.right"
+                  data-graph-node-id="graph-node-api"
+                  data-source-cue="cue-003"
+                  data-text-type="generated-summary"
+                  data-layout-allow-overlap="connector passes behind node"
+                >
+                  <div class="node-rule" aria-hidden="true"></div>
+                  <div class="node-index">02</div>
+                  <div class="node-meta">CONTEXT</div>
+                  <div class="node-title">API 连接</div>
+                  <div class="node-detail">数据与向量检索</div>
+                </article>
+
+                <article
+                  id="graph-node-tools"
+                  class="graph-node"
+                  data-role="graph-node"
+                  data-zone="content.right"
+                  data-graph-node-id="graph-node-tools"
+                  data-source-cue="cue-003"
+                  data-text-type="generated-summary"
+                  data-layout-allow-overlap="connector passes behind node"
+                >
+                  <div class="node-rule" aria-hidden="true"></div>
+                  <div class="node-index">03</div>
+                  <div class="node-meta">ORCHESTRATE</div>
+                  <div class="node-title">工具链调度</div>
+                  <div class="node-detail">编排实际动作</div>
+                </article>
+              </div>
+
+              <div id="relation-summary" class="relation-summary" data-role="graph-conclusion" data-zone="content.right">
+                <div class="summary-label">COMPLETE RELATION</div>
+                <div class="summary-copy">你看到的是入口，系统运行的是<strong>整条链路</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="caption-shell" class="caption-shell" data-role="caption" data-zone="caption">
+          <div id="caption-a" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="weight shift crossfade">
+            <div class="caption-copy">第一，平台把系统的复杂性给隐藏起来。</div>
+            <div class="caption-copy emphasis">第一，平台把系统的<strong>复杂性</strong>给隐藏起来。</div>
+          </div>
+          <div id="caption-b" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="weight shift crossfade">
+            <div class="caption-copy">低代码、无代码、AI 平台、工作流工具，</div>
+            <div class="caption-copy emphasis"><strong>低代码、无代码、AI 平台、工作流工具</strong>，</div>
+          </div>
+          <div id="caption-c" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="weight shift crossfade">
+            <div class="caption-copy">把模型调用、API 连接、向量库、工具链调度流程包装成了按钮和节点。</div>
+            <div class="caption-copy emphasis">把模型调用、API 连接、向量库、工具链调度流程<strong>包装成了按钮和节点</strong>。</div>
+          </div>
+        </div>
+
+        <div
+          class="source-receipt"
+          data-official-registry="flowchart"
+          data-official-motion-rule="svg-path-draw"
+          data-adaptation-receipt="SOURCE_RECEIPT.json"
+          data-license="Apache-2.0"
+        ></div>
+      </section>
+
+      <audio
+        id="probe-narration"
+        src="./.media/audio/voice/voice_001.wav"
+        data-start="0"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const drawPaths = document.querySelectorAll(
+        ".connector-base, .connector-active, .connector-head-base, .connector-head-active",
+      );
+      drawPaths.forEach((path) => {
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = `${length}`;
+        path.style.strokeDashoffset = `${length}`;
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      tl.addLabel("establish", 0);
+      tl.addLabel("focus", 2.72);
+      tl.addLabel("pullback", 6.24);
+      tl.addLabel("finalHold", 7.1);
+
+      tl.fromTo("#host-zone", { opacity: 0, scale: 0.985 }, { opacity: 1, scale: 1, duration: 0.62, ease: "power4.out" }, 0.12);
+      tl.fromTo("#content-label", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" }, 0.18);
+      tl.fromTo("#anchor-rule", { opacity: 0, scaleX: 0.16 }, { opacity: 1, scaleX: 1, duration: 0.58, ease: "power2.out" }, 0.26);
+      tl.fromTo("#diagram-heading", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.54, ease: "power3.out" }, 0.34);
+
+      tl.fromTo("#graph-node-model", { opacity: 0, y: 26, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power3.out" }, 0.62);
+      tl.to("#edge-model-api-base", { opacity: 1, duration: 0.01, ease: "none" }, 1.02);
+      tl.to("#edge-model-api-base", { strokeDashoffset: 0, duration: 0.44, ease: "none" }, 1.02);
+      tl.to("#edge-model-api-head-base", { opacity: 1, duration: 0.01, ease: "none" }, 1.38);
+      tl.to("#edge-model-api-head-base", { strokeDashoffset: 0, duration: 0.18, ease: "none" }, 1.38);
+      tl.fromTo("#edge-label-model-api", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.24, ease: "power2.out" }, 1.22);
+      tl.fromTo("#graph-node-api", { opacity: 0, y: 26, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power3.out" }, 1.48);
+      tl.to("#edge-api-tools-base", { opacity: 1, duration: 0.01, ease: "none" }, 1.84);
+      tl.to("#edge-api-tools-base", { strokeDashoffset: 0, duration: 0.44, ease: "none" }, 1.84);
+      tl.to("#edge-api-tools-head-base", { opacity: 1, duration: 0.01, ease: "none" }, 2.2);
+      tl.to("#edge-api-tools-head-base", { strokeDashoffset: 0, duration: 0.18, ease: "none" }, 2.2);
+      tl.fromTo("#edge-label-api-tools", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.24, ease: "power2.out" }, 2.04);
+      tl.fromTo("#graph-node-tools", { opacity: 0, y: 26, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "power3.out" }, 2.26);
+
+      tl.to("#diagram-camera", { x: 8, scale: 1.02, duration: 0.48, ease: "power2.inOut" }, "focus");
+      tl.to("#graph-node-model", { scale: 1.035, backgroundColor: "#fffaf2", borderColor: "#496958", duration: 0.34, ease: "power2.out" }, "focus");
+      tl.to("#graph-node-api, #graph-node-tools", { opacity: 0.52, duration: 0.3, ease: "power1.out" }, "focus");
+
+      tl.to("#edge-model-api-active, #edge-model-api-head-active", { opacity: 1, duration: 0.01, ease: "none" }, 3.36);
+      tl.to("#edge-model-api-active", { strokeDashoffset: 0, duration: 0.54, ease: "none" }, 3.36);
+      tl.to("#edge-model-api-head-active", { strokeDashoffset: 0, duration: 0.18, ease: "none" }, 3.82);
+      tl.to("#diagram-camera", { x: 0, scale: 1.02, duration: 0.5, ease: "power2.inOut" }, 3.58);
+      tl.to("#graph-node-model", { scale: 1, opacity: 0.64, backgroundColor: "#fbf3e7", borderColor: "#dcc2a3", duration: 0.34, ease: "power2.inOut" }, 3.66);
+      tl.to("#graph-node-api", { scale: 1.035, opacity: 1, backgroundColor: "#fffaf2", borderColor: "#496958", duration: 0.36, ease: "power2.out" }, 3.74);
+
+      tl.to("#edge-api-tools-active, #edge-api-tools-head-active", { opacity: 1, duration: 0.01, ease: "none" }, 4.72);
+      tl.to("#edge-api-tools-active", { strokeDashoffset: 0, duration: 0.54, ease: "none" }, 4.72);
+      tl.to("#edge-api-tools-head-active", { strokeDashoffset: 0, duration: 0.18, ease: "none" }, 5.18);
+      tl.to("#diagram-camera", { x: -8, scale: 1.02, duration: 0.5, ease: "power2.inOut" }, 4.94);
+      tl.to("#graph-node-api", { scale: 1, opacity: 0.64, backgroundColor: "#fbf3e7", borderColor: "#dcc2a3", duration: 0.34, ease: "power2.inOut" }, 5.02);
+      tl.to("#graph-node-tools", { scale: 1.035, opacity: 1, backgroundColor: "#fffaf2", borderColor: "#a94e36", duration: 0.36, ease: "power2.out" }, 5.1);
+
+      tl.to("#diagram-camera", { x: 0, scale: 1, duration: 0.86, ease: "power3.inOut" }, "pullback");
+      tl.to("#graph-node-model, #graph-node-api, #graph-node-tools", { scale: 1, opacity: 1, backgroundColor: "#fbf3e7", borderColor: "#dcc2a3", duration: 0.56, ease: "power2.inOut" }, "pullback");
+      tl.fromTo("#relation-summary", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.46, ease: "power3.out" }, 6.48);
+
+      tl.fromTo("#caption-a", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 0.12);
+      tl.to("#caption-a .caption-copy:not(.emphasis)", { opacity: 0, duration: 0.18, ease: "power1.in" }, 0.76);
+      tl.to("#caption-a .caption-copy.emphasis", { opacity: 1, duration: 0.26, ease: "power2.out" }, 0.84);
+      tl.to("#caption-a", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 3.04);
+      tl.fromTo("#caption-b", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 3.16);
+      tl.to("#caption-b .caption-copy:not(.emphasis)", { opacity: 0, duration: 0.16, ease: "power1.in" }, 3.62);
+      tl.to("#caption-b .caption-copy.emphasis", { opacity: 1, duration: 0.24, ease: "power2.out" }, 3.68);
+      tl.to("#caption-b", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 5.3);
+      tl.fromTo("#caption-c", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 5.42);
+      tl.to("#caption-c .caption-copy:not(.emphasis)", { opacity: 0, duration: 0.16, ease: "power1.in" }, 5.96);
+      tl.to("#caption-c .caption-copy.emphasis", { opacity: 1, duration: 0.26, ease: "power2.out" }, 6.02);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

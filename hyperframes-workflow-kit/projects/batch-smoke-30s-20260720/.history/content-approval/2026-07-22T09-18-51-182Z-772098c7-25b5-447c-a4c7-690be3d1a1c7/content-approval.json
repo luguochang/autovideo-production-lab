@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "autovideo-content-approval/v2",
+  "projectId": "batch-smoke-30s-20260720",
+  "bindings": {
+    "sourcesSha256": "7d0bf05c2507dbbf424c5dfb44d28c346cc1a44730f77969bfdde2775952d71c",
+    "suitabilitySha256": "5817339e963f59a34ba288095be44f0da5777e9e4c86e3670df1990bd21cc8f1",
+    "evidenceSha256": "ffb233e1b211a1dd7fd079a8a625e0c4b8edfa7f27716a2c59ae5f3d74720065",
+    "spokenRewriteSha256": "8b21763c28f1499a7e8903d050a5d82f492b8e7b56e169b994eeb85617b0c13f",
+    "claimSourceReviewSha256": "abcddd32fca593e3ff6e70e26eb19600f4b733b098f969ada49a7c17f79fb87f"
+  },
+  "approvedNarration": {
+    "path": "script.approved.txt",
+    "sha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+    "bytes": 538
+  },
+  "status": "approved",
+  "approvalScope": "human-review",
+  "approvedBy": "creator-confirmed",
+  "approvedAt": "2026-07-20T12:44:28.278Z",
+  "wordingPolicy": "immutable-after-approval",
+  "acceptedWarnings": []
+}

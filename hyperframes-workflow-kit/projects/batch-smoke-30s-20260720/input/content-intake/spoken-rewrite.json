@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "autovideo-spoken-rewrite/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "sourceRegisterSha256": "b56525b35939eb05e6005342e22b41fcc331811fa50b50174f4a9096723d689e",
+  "suitabilitySha256": "8807ad06fd7bd60a0ce43dd42c31cae98d4d0611017e72fc6700d18a9d7c1b64",
+  "evidenceSha256": "1b1160fefe868d4e6320c83704c916c6e13382eb878518418fb78505dce2755f",
+  "title": "Imported batch-smoke-30s-20260720",
+  "language": "zh-CN",
+  "sections": [
+    {
+      "id": "section-01",
+      "kind": "creator-opinion",
+      "targetSeconds": 30,
+      "narration": "第一，平台会把系统的复杂性藏起来。低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。\n\n这样做的好处，是普通人可以很快上手。但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。\n\n真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？这才是系统真正复杂的地方。",
+      "claimIds": [
+        "claim-script-001",
+        "claim-script-002",
+        "claim-script-003"
+      ],
+      "sourceIds": [
+        "source-001-61c17637"
+      ],
+      "framing": "User marked this wording as an approved-script candidate; factual coverage remains subject to claim/source review.",
+      "onscreen": []
+    }
+  ],
+  "reviewNotes": [
+    "Exact user wording preserved because the intake was explicitly marked approved-script."
+  ],
+  "generatedAt": "2026-07-22T09:06:34.024Z"
+}

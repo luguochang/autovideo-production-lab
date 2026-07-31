@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "autovideo-content-prompt-candidate/v1",
+  "caseId": "zh-ai-terms-001",
+  "stage": "oralizer",
+  "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+  "prompt": {
+    "id": "oralizer",
+    "path": "tools/content-pipeline/prompt-chain/prompts/04-oralizer.md",
+    "sha256": "44d1335ec261095683553b87a1d0bd3bafc7bec068f063922410f6c8f7aa8085"
+  },
+  "generator": {
+    "provider": "precomputed-fixture",
+    "model": "fixture-output",
+    "configSha256": "90a5cec52b9c61ed148258fed8843149391a4956b7c3ffe37072b46bd0b502c2"
+  },
+  "outputCanonicalization": "stable-json-v1",
+  "output": {
+    "schemaVersion": "autovideo-spoken-rewrite/v1",
+    "projectId": "zh-ai-terms-001",
+    "sourceRegisterSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "suitabilitySha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evidenceSha256": "130b1ea0867424235e0cf1ab6282f89a848fa4c677ad4edc30e5247ac7527f62",
+    "scriptDraftSha256": "7ece51aaa49d8aa420df228ce0443e1add437174ec631c8954b6e4a15c765460",
+    "prompt": {
+      "id": "oralizer",
+      "sha256": "44d1335ec261095683553b87a1d0bd3bafc7bec068f063922410f6c8f7aa8085"
+    },
+    "title": "先核对技术词，再判断流程是否成熟",
+    "language": "zh-CN",
+    "sections": [
+      {
+        "id": "section-01",
+        "kind": "sourced",
+        "targetSeconds": 14,
+        "narration": "截至2026年7月，这个测试记录了30次 API 调用。它说明流程有可复核的样本，但不代表所有场景都已经准备好。",
+        "claimIds": [
+          "claim-sample-run"
+        ],
+        "sourceIds": [
+          "source-001"
+        ],
+        "framing": "这是对登记材料中样本记录的事实转述。",
+        "onscreen": [
+          {
+            "text": "30次 API 调用",
+            "kind": "generated_summary"
+          },
+          {
+            "text": "可复核样本",
+            "kind": "generated_summary"
+          }
+        ]
+      },
+      {
+        "id": "section-02",
+        "kind": "creator-opinion",
+        "targetSeconds": 16,
+        "narration": "我的看法是，demo 只是起点。Codex、GPT-4o 和 camelCase 这类技术词，仍要单独检查文字形式和实际发音。",
+        "claimIds": [
+          "claim-terms-need-review"
+        ],
+        "sourceIds": [
+          "source-001"
+        ],
+        "framing": "明确标记为创作者判断，不把发音建议包装成外部统计事实。",
+        "onscreen": [
+          {
+            "text": "demo 只是起点",
+            "kind": "generated_summary"
+          },
+          {
+            "text": "文字与发音分开审",
+            "kind": "generated_summary"
+          }
+        ]
+      }
+    ],
+    "reviewNotes": [
+      "Synthetic contract fixture only; no human gold or NarrationLock authority."
+    ],
+    "generatedAt": "2026-07-22T00:00:00.000Z"
+  },
+  "outputSha256": "c6eb91f7e219600f1a80a4541695c13bdd4dd82908b2d032034c4dc4b2f26a4a"
+}

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Modern IP Host Content-Layer Probe</title>
+    <script src="./assets/runtime/gsap.min.js"></script>
+    <style>
+      :root {
+        --bg: #F2DFC7;
+        --surface: #FBF3E7;
+        --ink: #2A211B;
+        --muted: #675748;
+        --primary: #496958;
+        --secondary: #A94E36;
+        --content-secondary: #9E4732;
+        --line: #DCC2A3;
+        --host-zone-left: 96px;
+        --host-zone-top: 156px;
+        --content-zone-left: 694px;
+        --content-zone-top: 112px;
+      }
+
+      * { box-sizing: border-box; }
+      @font-face { font-family: "Noto Sans SC"; src: local("Noto Sans SC"), local("Noto Sans CJK SC"); font-weight: 100 900; }
+      @font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); font-weight: 100 900; }
+      html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: var(--bg); }
+      body { color: var(--ink); font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+
+      .stage-fill { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); }
+      .stage-fill::before { content: ""; position: absolute; left: -250px; top: 92px; width: 820px; height: 820px; border: 2px solid var(--line); border-radius: 50%; opacity: .62; }
+      .stage-fill::after { content: ""; position: absolute; left: 96px; top: 874px; width: 1728px; height: 3px; background: var(--line); }
+
+      .host-zone { position: absolute; left: var(--host-zone-left); top: var(--host-zone-top); width: 600px; height: 730px; overflow: hidden; z-index: 4; }
+      .host-shadow { position: absolute; left: 110px; bottom: 2px; width: 380px; height: 44px; border-radius: 50%; background: rgba(73, 105, 88, .12); filter: blur(14px); }
+      .host-pose { position: absolute; inset: 0; width: 600px; height: 730px; object-fit: contain; object-position: 50% 100%; transform-origin: 50% 0; opacity: 0; }
+      .host-pose.initial { opacity: 1; }
+      .host-accent { position: absolute; left: 34px; bottom: 18px; width: 510px; height: 5px; background: var(--primary); transform-origin: 0 50%; opacity: .7; }
+
+      .content-zone { position: absolute; left: var(--content-zone-left); top: var(--content-zone-top); width: 1130px; height: 760px; overflow: hidden; z-index: 8; }
+      .content-world { position: absolute; inset: 0; width: 1130px; height: 760px; overflow: hidden; }
+      .probe-kicker { position: absolute; left: 0; top: 0; color: var(--muted); font: 800 19px/1 Consolas, monospace; letter-spacing: .04em; }
+      .probe-title { position: absolute; left: 0; top: 34px; max-width: 1000px; color: var(--ink); font-size: 64px; font-weight: 850; line-height: 1.06; }
+      .probe-rule { position: absolute; left: 0; top: 132px; width: 600px; height: 7px; background: var(--primary); transform-origin: 0 50%; }
+
+      .scene { position: absolute; left: 0; top: 170px; width: 1130px; height: 560px; opacity: 0; transform-origin: 35% 32%; overflow: hidden; }
+      .scene.initial { opacity: 1; }
+      .scene-label { position: absolute; left: 0; top: 0; color: var(--content-secondary); font: 800 18px/1 Consolas, monospace; letter-spacing: .06em; }
+      .scene-note { position: absolute; left: 0; bottom: 10px; color: var(--muted); font-size: 24px; font-weight: 600; }
+
+      .app-window { position: absolute; left: 0; top: 58px; width: 960px; height: 360px; overflow: hidden; border: 2px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 22px 40px rgba(42, 33, 27, .10); transform-origin: 15% 50%; }
+      .app-topbar { position: absolute; left: 0; top: 0; right: 0; height: 62px; display: flex; align-items: center; gap: 18px; padding: 0 26px; border-bottom: 2px solid var(--line); }
+      .app-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--secondary); }
+      .app-dot:nth-child(2) { background: #D7A343; }
+      .app-dot:nth-child(3) { background: var(--primary); }
+      .app-name { margin-left: 8px; color: var(--ink); font: 800 22px/1 Consolas, monospace; }
+      .app-main { position: absolute; left: 34px; right: 34px; top: 100px; display: flex; align-items: center; gap: 24px; }
+      .app-pill { padding: 14px 22px; border: 2px solid var(--line); border-radius: 12px; color: var(--ink); font-size: 28px; font-weight: 800; background: rgba(255,255,255,.42); transform-origin: 50% 50%; }
+      .app-pill.active { border-color: var(--primary); color: var(--primary); }
+      .app-arrow { color: var(--secondary); font-size: 44px; font-weight: 800; }
+      .app-connector { position: absolute; left: 70px; right: 70px; top: 222px; height: 5px; background: var(--primary); transform-origin: 0 50%; }
+      .app-connector::after { content: ""; position: absolute; right: -2px; top: -8px; width: 20px; height: 20px; border-top: 5px solid var(--primary); border-right: 5px solid var(--primary); transform: rotate(45deg); }
+
+      .code-window { position: absolute; left: 0; top: 36px; width: 1000px; height: 430px; overflow: hidden; border: 2px solid var(--line); border-radius: 18px; background: #26332E; box-shadow: 0 22px 40px rgba(42, 33, 27, .13); transform-origin: 12% 50%; }
+      .code-topbar { position: absolute; left: 0; top: 0; right: 0; height: 58px; display: flex; align-items: center; gap: 14px; padding: 0 24px; color: #E8F0E7; border-bottom: 1px solid rgba(251, 243, 231, .20); font: 700 20px/1 Consolas, monospace; }
+      .code-line { position: absolute; left: 34px; right: 34px; height: 48px; display: flex; align-items: center; color: #E8F0E7; font: 600 25px/1 Consolas, monospace; white-space: pre; }
+      .code-line span { opacity: .86; }
+      .code-line .accent { color: #E7B75A; }
+      .code-line .good { color: #9FD3A2; }
+      .code-line .warn { color: #E79A84; }
+      .code-line.highlight { padding: 0 16px; border-left: 6px solid var(--secondary); background: rgba(169, 78, 54, .18); }
+      .code-line:nth-child(2) { top: 108px; }
+      .code-line:nth-child(3) { top: 156px; }
+      .code-line:nth-child(4) { top: 204px; }
+      .code-line:nth-child(5) { top: 252px; }
+      .code-line:nth-child(6) { top: 300px; }
+      .code-callout { position: absolute; right: 38px; bottom: 32px; color: #F6D8C8; font-size: 22px; font-weight: 800; opacity: 0; }
+
+      .compare-layout { position: absolute; left: 0; top: 50px; width: 1040px; height: 390px; display: grid; grid-template-columns: 1fr 92px 1fr; align-items: center; }
+      .compare-state { position: relative; height: 310px; padding: 34px 30px; border: 2px solid var(--line); border-radius: 18px; background: rgba(251, 243, 231, .68); transform-origin: 50% 50%; }
+      .compare-state.bad { border-color: #D59A84; }
+      .compare-state.good { border-color: var(--primary); }
+      .compare-state small { display: block; margin-bottom: 26px; color: var(--muted); font: 800 18px/1 Consolas, monospace; letter-spacing: .06em; }
+      .compare-state strong { display: block; max-width: 390px; color: var(--ink); font-size: 46px; font-weight: 850; line-height: 1.08; }
+      .compare-state em { display: block; margin-top: 28px; color: var(--muted); font-size: 24px; font-style: normal; font-weight: 600; }
+      .compare-state.good strong { color: var(--primary); }
+      .compare-arrow { color: var(--secondary); font-size: 70px; font-weight: 300; text-align: center; opacity: 0; }
+
+      .caption-shell { position: absolute; left: 96px; top: 926px; width: 1728px; height: 88px; border-top: 2px solid var(--line); background: var(--surface); z-index: 190; }
+      .caption { position: absolute; left: 96px; top: 926px; width: 1728px; height: 88px; padding: 0 34px; display: flex; align-items: center; overflow: hidden; z-index: 200; color: #493C31; font-size: 27px; font-weight: 550; line-height: 1.35; opacity: 0; }
+      .caption.initial { opacity: 1; }
+      .caption span { display: block; width: 1660px; max-height: 76px; overflow: hidden; text-align: left; }
+      .probe-stamp { position: absolute; right: 0; top: 4px; color: var(--muted); font: 700 17px/1 Consolas, monospace; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="modern-host-content-probe" data-start="0" data-duration="10" data-width="1920" data-height="1080" data-fps="30">
+      <div class="stage-fill" data-role="persistent-stage" data-zone="stage"></div>
+
+      <div class="host-zone" data-role="host" data-zone="host.left">
+        <div class="host-shadow" aria-hidden="true"></div>
+        <img id="host-point" class="host-pose initial" src="./assets/host/point-right.png" alt="" data-pose-id="point-right" data-layout-allow-overflow="host-pose-normalized" style="transform:scaleX(-1) scale(1.1)" />
+        <img id="host-explain" class="host-pose" src="./assets/host/explain.png" alt="" data-pose-id="explain" data-layout-allow-overflow="host-pose-normalized" />
+        <img id="host-present" class="host-pose" src="./assets/host/present.png" alt="" data-pose-id="present" data-layout-allow-overflow="host-pose-normalized" />
+        <div id="host-accent" class="host-accent" aria-hidden="true"></div>
+      </div>
+
+      <div class="content-zone" data-role="content" data-zone="content.right">
+        <div class="probe-kicker">CONTENT-LAYER PROBE / BASE STYLE LOCKED</div>
+        <div class="probe-title">人物不动，内容自己讲清楚</div>
+        <div class="probe-rule" aria-hidden="true"></div>
+        <div class="probe-stamp">modern-ip-host-explainer / v1.0.0</div>
+
+        <div class="content-world" data-role="content-world" data-camera-scope="content-world-only">
+          <section id="scene-app" class="scene initial" data-visual-type="device-surface" data-recipe="device-surface-tour@1.0.0">
+            <div class="scene-label">01 / TOOL ENTRY</div>
+            <div class="app-window">
+              <div class="app-topbar"><span class="app-dot"></span><span class="app-dot"></span><span class="app-dot"></span><span class="app-name">AI 工具入口</span></div>
+              <div class="app-main"><div class="app-pill active">Coze</div><div class="app-arrow">→</div><div class="app-pill">Dify</div><div class="app-arrow">→</div><div class="app-pill">工作流</div></div>
+              <div class="app-connector" aria-hidden="true"></div>
+            </div>
+            <div class="scene-note">先看入口，再看它有没有真正的工程边界。</div>
+          </section>
+
+          <section id="scene-code" class="scene" data-visual-type="code-surface" data-recipe="code-proof@1.0.0">
+            <div class="scene-label">02 / CODE EVIDENCE</div>
+            <div class="code-window">
+              <div class="code-topbar"><span>●</span><span>●</span><span>●</span><span>agent-runtime.ts</span></div>
+              <div class="code-line"><span>01&nbsp; </span><span class="accent">const</span><span>&nbsp;result = </span><span class="good">await</span><span>&nbsp;runAgent(input)</span></div>
+              <div class="code-line highlight"><span>02&nbsp; </span><span class="accent">if</span><span>&nbsp;(!result.ok) </span><span class="warn">return</span><span>&nbsp;rollback()</span></div>
+              <div class="code-line"><span>03&nbsp; </span><span>recordTelemetry(result)</span></div>
+              <div class="code-line"><span>04&nbsp; </span><span>keepContext(result.id)</span></div>
+              <div class="code-line"><span>05&nbsp; </span><span class="good">return</span><span>&nbsp;deliver(result)</span></div>
+              <div class="code-callout">失败、日志、回滚，才是产品证据。</div>
+            </div>
+            <div class="scene-note">把一个“能跑”的 Demo，变成可维护的系统。</div>
+          </section>
+
+          <section id="scene-compare" class="scene" data-visual-type="comparison" data-recipe="comparison-split@1.0.0">
+            <div class="scene-label">03 / CHANGE THE FRAME</div>
+            <div class="compare-layout">
+              <div class="compare-state bad"><small>DEMO</small><strong>只展示成功</strong><em>看起来很快，但无法回答失败。</em></div>
+              <div class="compare-arrow">→</div>
+              <div class="compare-state good"><small>PRODUCT</small><strong>能解释边界</strong><em>可观察、可维护、可交接。</em></div>
+            </div>
+            <div class="scene-note">画面不堆字，只留下一个可记住的判断。</div>
+          </section>
+        </div>
+      </div>
+
+      <div class="caption-shell" data-role="caption-shell" data-zone="caption"></div>
+      <div id="caption-app" class="caption initial" data-role="caption" data-zone="caption" data-text-type="probe-summary"><span>先看工具入口：Coze、Dify 只是入口，不等于系统。</span></div>
+      <div id="caption-code" class="caption" data-role="caption" data-zone="caption" data-text-type="probe-summary"><span>真正的工程能力，要能解释失败、日志和回滚。</span></div>
+      <div id="caption-compare" class="caption" data-role="caption" data-zone="caption" data-text-type="probe-summary"><span>画面只提炼判断，完整口播仍然留在字幕轨。</span></div>
+
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+        tl.to({}, { duration: 10 }, 0);
+        tl.fromTo(".probe-title", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.56 }, 0.1);
+        tl.fromTo(".probe-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.42, ease: "power2.out" }, 0.24);
+        tl.fromTo("#scene-app .app-window", { opacity: 0, scale: 0.96, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.62 }, 0.36);
+        tl.fromTo("#scene-app .app-pill", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.34, stagger: 0.14 }, 0.86);
+        tl.fromTo("#scene-app .app-connector", { scaleX: 0 }, { scaleX: 1, duration: 0.56, ease: "none" }, 1.48);
+        tl.fromTo("#scene-app .scene-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.32 }, 1.88);
+
+        tl.to("#scene-app", { opacity: 0, scale: 0.96, duration: 0.36, ease: "power2.in" }, 3.04);
+        tl.to("#caption-app", { opacity: 0, y: -5, duration: 0.18, ease: "power2.in" }, 3.08);
+        tl.to("#host-point", { opacity: 0, duration: 0.24, ease: "power2.inOut" }, 3.02);
+        tl.to("#host-explain", { opacity: 1, duration: 0.24, ease: "power2.inOut" }, 3.02);
+        tl.fromTo("#scene-code", { opacity: 0, scale: 0.96, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: 0.52 }, 3.22);
+        tl.fromTo("#scene-code .code-line", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.28, stagger: 0.10 }, 3.62);
+        tl.fromTo("#scene-code .code-callout", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.32 }, 4.62);
+        tl.fromTo("#caption-code", { opacity: 0, y: 7 }, { opacity: 1, y: 0, duration: 0.24 }, 3.24);
+
+        tl.to("#scene-code", { opacity: 0, scale: 0.96, duration: 0.36, ease: "power2.in" }, 6.34);
+        tl.to("#caption-code", { opacity: 0, y: -5, duration: 0.18, ease: "power2.in" }, 6.38);
+        tl.to("#host-explain", { opacity: 0, duration: 0.24, ease: "power2.inOut" }, 6.32);
+        tl.to("#host-present", { opacity: 1, duration: 0.24, ease: "power2.inOut" }, 6.32);
+        tl.fromTo("#scene-compare", { opacity: 0, scale: 0.96, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: 0.52 }, 6.52);
+        tl.fromTo("#scene-compare .compare-state", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.42, stagger: 0.16 }, 6.92);
+        tl.to("#scene-compare .compare-arrow", { opacity: 1, duration: 0.24 }, 7.42);
+        tl.fromTo("#scene-compare .scene-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.32 }, 7.76);
+        tl.fromTo("#caption-compare", { opacity: 0, y: 7 }, { opacity: 1, y: 0, duration: 0.24 }, 6.54);
+        tl.set("#host-accent", { scaleX: 0.74 }, 3.02);
+        tl.to("#host-accent", { scaleX: 1, duration: 0.34, ease: "power3.out" }, 3.02);
+        tl.set("#host-accent", { scaleX: 0.74 }, 6.32);
+        tl.to("#host-accent", { scaleX: 1, duration: 0.34, ease: "power3.out" }, 6.32);
+        window.__timelines["modern-host-content-probe"] = tl;
+      </script>
+    </div>
+  </body>
+</html>

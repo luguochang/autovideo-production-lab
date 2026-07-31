@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "autovideo-evidence/v1",
+  "claims": [
+    {
+      "id": "claim-prototype-not-product",
+      "statement": "A workflow running once proves a demonstrable prototype, not a maintainable system.",
+      "status": "supported",
+      "sourceId": "source-001-9d748887",
+      "quote": "工作流能跑通一次，只能证明原型可演示，不能证明系统可维护。",
+      "locator": "materials.md:3"
+    },
+    {
+      "id": "claim-production-checks",
+      "statement": "Production readiness requires retry, permission, observability, and rollback checks.",
+      "status": "supported",
+      "sourceId": "source-001-9d748887",
+      "quote": "上线前至少要检查失败重试、权限边界、日志监控和回滚路径。",
+      "locator": "materials.md:5"
+    },
+    {
+      "id": "claim-human-capability",
+      "statement": "Understanding, judgment, maintenance, and responsibility remain product capabilities.",
+      "status": "opinion",
+      "sourceId": "source-001-9d748887",
+      "quote": "生成速度正在变快，但理解、判断、维护和负责仍然是产品能力的一部分。",
+      "locator": "materials.md:7"
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "autovideo-voice-candidate-human-review/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "status": "ready-for-approval",
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f"
+    },
+    "pronunciation": {
+      "path": "input/pronunciation.effective.json",
+      "sha256": "9b847fa2c6b053ecd3f20e1bbb69736669732e83bc6a185e19cf960beb33921f"
+    },
+    "pronunciationApproval": {
+      "path": "qa/pronunciation-approval.json",
+      "sha256": "e491faa69b4db00b2ed9f9400f4c76a4caa7e589999398ee82ca85e85e741aff"
+    },
+    "index": {
+      "path": "audio/voice-candidates/index.json",
+      "sha256": "46079d82dc6e27575506a6d5c28f8cb99e43e2403185858d087a1de72c6c87a6"
+    },
+    "candidates": [
+      {
+        "candidateId": "candidate-001",
+        "manifestSha256": "7bdfbc458087473c4f2229cb66e51ab13bce6b0966f6525a57966e89ee16aec2",
+        "audioSha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702"
+      }
+    ]
+  },
+  "decision": "accepted",
+  "selectedCandidateId": "candidate-001",
+  "playedCandidateIds": [
+    "candidate-001"
+  ],
+  "checklist": {
+    "naturalness": true,
+    "breathing": true,
+    "pronunciation": true,
+    "segmentJoins": true,
+    "noArtifacts": true
+  },
+  "notes": "User explicitly confirmed full manual playback completed. The Workbench browser ended event did not persist, so this review records the direct human attestation without automated playback or seeking.",
+  "reviewedBy": "user",
+  "updatedAt": "2026-07-28T15:09:10.365Z"
+}

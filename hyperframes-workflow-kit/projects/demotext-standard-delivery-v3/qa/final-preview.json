@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "autovideo-final-preview/v2",
+  "projectId": "demotext-standard-delivery-v3",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "approvedBy": "codex-autonomous-internal-review",
+  "approvedAt": "2026-07-19T08:07:02.653Z",
+  "previewStartedAt": "2026-07-19T08:07:02.507Z",
+  "composition": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v3/production/hyperframes",
+  "compositionDigest": "bc3d9612c5f79e9c008c9b7034cc44e70974eef5cda38c69ff82b9f68d0b85c6",
+  "fileCount": 50,
+  "files": [
+    {
+      "path": "assets/audio/narration.final.wav",
+      "bytes": 23318866,
+      "sha256": "9586d1476e1022308249bf2996776487f9059fc1e84dabe7cfbf2258c02503b9"
+    },
+    {
+      "path": "assets/host/close.png",
+      "bytes": 305939,
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/emphasis.png",
+      "bytes": 426512,
+      "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c"
+    },
+    {
+      "path": "assets/host/encourage.png",
+      "bytes": 404031,
+      "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "bytes": 390781,
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "bytes": 353487,
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "bytes": 420078,
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "bytes": 382765,
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/host/read.png",
+      "bytes": 413640,
+      "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388"
+    },
+    {
+      "path": "assets/host/think.png",
+      "bytes": 363756,
+      "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "bytes": 72779,
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.html",
+      "bytes": 8815,
+      "sha256": "06b552e4ed48c2bd9c9706806e903e96f371c003b78227f834c64c163bccfbbe"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.motion.json",
+      "bytes": 413,
+      "sha256": "7662d3f9f3377acb1092ae949bc668382ec13e31be602e861a09115541cd3c69"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.html",
+      "bytes": 9695,
+      "sha256": "7b7536106da9e57b28f2428d699f349111cbfddf6d1da777560f918354003a70"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.motion.json",
+      "bytes": 414,
+      "sha256": "e7b6fc32d60913a8075aeccdfb25351b569a20e29938a83416b467e1d9d16da5"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.html",
+      "bytes": 9606,
+      "sha256": "227e7f23306ad6055557e6bedd4ca6d8331c437609c3507c86af0b167a4dfb74"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.motion.json",
+      "bytes": 413,
+      "sha256": "b0b7038e96a8b014aa4c5bc08501d26bc40ee9b97e36f48b6850315ed36b25cc"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.html",
+      "bytes": 10869,
+      "sha256": "43bbb52a790c8f874d31769dfe844e14bbf0781574cc0e2ff24cccda6ab74a2e"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.motion.json",
+      "bytes": 414,
+      "sha256": "74cd72ade2ee2f5c9994a41693ce0adc3f5b7de2461489f67c94b847c90f7ea1"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.html",
+      "bytes": 8895,
+      "sha256": "dfc758f020a50a2792778ff5b3c7159a6f5d446f4ec826861e8d5e2e245e8a4a"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.motion.json",
+      "bytes": 413,
+      "sha256": "2a8781d2788ae5455a1296b9c7d6e9ca9def3aa8086d9eef699cd2938d51af02"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.html",
+      "bytes": 11649,
+      "sha256": "de88005e839a79f8628d6a0319cb3de6458346f2c8e9167236ddad25a87b4f23"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.motion.json",
+      "bytes": 414,
+      "sha256": "5b39db718bd30e96ae62796a1ed144feac0dac8211f6a0f9d27b6c4e2861eca6"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.html",
+      "bytes": 11197,
+      "sha256": "666afa902036a443dad59464e9021012c40368183cc78a5811b904b366d5c54a"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.motion.json",
+      "bytes": 413,
+      "sha256": "a623eaf5414d5071413bacdab166d949896ef5005530adf92fe8952fa1c6e8b4"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.html",
+      "bytes": 10828,
+      "sha256": "81e53ac0d3f57c8a30837345677955632f9b5fadd0b449b70abcf6dc240493f6"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.motion.json",
+      "bytes": 413,
+      "sha256": "5cd7dc6acda988026027268d926b66a310c1e70e0346f184acb137b2e4149053"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.html",
+      "bytes": 12371,
+      "sha256": "5337c07f1d2e013556aaad33c11be3ed0ab20d5b27f031255793aa8c3cd0f078"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.motion.json",
+      "bytes": 414,
+      "sha256": "0e8b24b32a8e3de01307987fa8903d92334892451cb028ca3721077b59084fe1"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.html",
+      "bytes": 15828,
+      "sha256": "76361ab7df398ff5742038aa637a955c356898c0ee7bb379cb64039697bccddc"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.motion.json",
+      "bytes": 414,
+      "sha256": "1566cf5cf107a42fb9c03a9c42f72583152820010d1bf99af875d493b243a91a"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.html",
+      "bytes": 11647,
+      "sha256": "e3d911e041cc6697e335441fcf9cc24e55a855f7b75030c75b703af95b77c158"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.motion.json",
+      "bytes": 414,
+      "sha256": "a11101ec61c59c0235133c4f5b8f4b9b79006e54e9c3248ad7542b7f2a7c58e0"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.html",
+      "bytes": 8870,
+      "sha256": "984dd78b30f62953f2d9e208c9b7f191c5b369e877795d4ad47b2294967a5367"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.motion.json",
+      "bytes": 414,
+      "sha256": "17b30920effa2ba1f43d77f119f073204d35f34e74b112bb4fcf8e1ee8cd12a6"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.html",
+      "bytes": 10410,
+      "sha256": "523eff38d6c306e4ede99ad4c7f34c620ed412db8cafb1a598bed38372598a30"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.motion.json",
+      "bytes": 414,
+      "sha256": "0c3ba650ad679c844db12f833180950f67b61c69650a88fb9ce0ae0ce4b2bea1"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.html",
+      "bytes": 11027,
+      "sha256": "870ed86052ac30e8c3d07e657f5e956d189e5c386cfacb0e9023a028b2660e89"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.motion.json",
+      "bytes": 415,
+      "sha256": "1713cbac052e70da42571dd2d11bdadb2b4a9bd1c0833272615928f77d8b4938"
+    },
+    {
+      "path": "data/alignment.json",
+      "bytes": 205955,
+      "sha256": "8286be91146a7378625d6398b7136c090cd02d2277289c25fb9e70277cdca6de"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "bytes": 16167,
+      "sha256": "e878e4d36abdc2a8c9812b8dd3e2bb05c5b37cdc083dcb1ba3a5ff734b433aea"
+    },
+    {
+      "path": "data/overrides.json",
+      "bytes": 1368,
+      "sha256": "30af3be1b24409e6b02992c4aca7051cc570a1953780e76998ccf40dff76239c"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "bytes": 16003,
+      "sha256": "13bd1dfdb1d19006e7ebb7e93ff6c96b09900bc12df28b3f71342f6d714bbf81"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "bytes": 32301,
+      "sha256": "3a8c9a3980dc5b2194cb0767b16f85787b12604799579bb3c8f3e97e23857dd1"
+    },
+    {
+      "path": "data/source-map.json",
+      "bytes": 5166,
+      "sha256": "d1920f50afdc07f013ec0e8dd409a76a5ab4011849f2064202053a74918d5a55"
+    },
+    {
+      "path": "hyperframes.json",
+      "bytes": 318,
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "index.html",
+      "bytes": 24115,
+      "sha256": "b0e496af36623787ba79598785a2cc7e369a060a965f49f5a9c4b700e56a2a08"
+    },
+    {
+      "path": "index.motion.json",
+      "bytes": 226,
+      "sha256": "3282050662ccc1a7f206ea4f4eb2fc60ecb1263f94faf8ccb77c209fa1749fe8"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 712,
+      "sha256": "4b3a86ccd0184c225bdecc174cf0a5f65d0031fb0785973b2e4340239c493373"
+    },
+    {
+      "path": "package.json",
+      "bytes": 401,
+      "sha256": "cdbf01de2bd2d2aa7b090bb42f13f42aee5858b866551f9edb66b9ceb5ffae78"
+    }
+  ]
+}

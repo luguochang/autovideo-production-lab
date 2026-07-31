@@ -1,0 +1,9 @@
+{
+  "id": "E16-comparison-split-probe",
+  "name": "Comparison Split Probe",
+  "duration": 6,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "releaseScope": "internal-review"
+}

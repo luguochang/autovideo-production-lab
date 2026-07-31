@@ -1,0 +1,125 @@
+{
+  "id": "e02-rag-board",
+  "layoutOptions": {
+    "elk.algorithm": "layered",
+    "elk.direction": "RIGHT",
+    "elk.spacing.nodeNode": "50",
+    "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+  },
+  "children": [
+    {
+      "id": "node-source",
+      "width": 150,
+      "height": 64,
+      "$H": 277,
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "node-retrieve",
+      "width": 150,
+      "height": 64,
+      "$H": 279,
+      "x": 242,
+      "y": 12
+    },
+    {
+      "id": "node-model",
+      "width": 150,
+      "height": 64,
+      "$H": 281,
+      "x": 472,
+      "y": 12
+    },
+    {
+      "id": "node-answer",
+      "width": 150,
+      "height": 64,
+      "$H": 283,
+      "x": 702,
+      "y": 12
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-source-retrieve",
+      "sources": [
+        "node-source"
+      ],
+      "targets": [
+        "node-retrieve"
+      ],
+      "sections": [
+        {
+          "id": "edge-source-retrieve_s0",
+          "startPoint": {
+            "x": 162,
+            "y": 44
+          },
+          "endPoint": {
+            "x": 242,
+            "y": 44
+          },
+          "incomingShape": "node-source",
+          "outgoingShape": "node-retrieve"
+        }
+      ],
+      "container": "e02-rag-board"
+    },
+    {
+      "id": "edge-retrieve-model",
+      "sources": [
+        "node-retrieve"
+      ],
+      "targets": [
+        "node-model"
+      ],
+      "sections": [
+        {
+          "id": "edge-retrieve-model_s0",
+          "startPoint": {
+            "x": 392,
+            "y": 44
+          },
+          "endPoint": {
+            "x": 472,
+            "y": 44
+          },
+          "incomingShape": "node-retrieve",
+          "outgoingShape": "node-model"
+        }
+      ],
+      "container": "e02-rag-board"
+    },
+    {
+      "id": "edge-model-answer",
+      "sources": [
+        "node-model"
+      ],
+      "targets": [
+        "node-answer"
+      ],
+      "sections": [
+        {
+          "id": "edge-model-answer_s0",
+          "startPoint": {
+            "x": 622,
+            "y": 44
+          },
+          "endPoint": {
+            "x": 702,
+            "y": 44
+          },
+          "incomingShape": "node-model",
+          "outgoingShape": "node-answer"
+        }
+      ],
+      "container": "e02-rag-board"
+    }
+  ],
+  "$H": 13,
+  "x": 0,
+  "y": 0,
+  "width": 864,
+  "height": 88
+}

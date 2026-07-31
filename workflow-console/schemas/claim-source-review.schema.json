@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo claim and source review",
+  "type": "object",
+  "required": [
+    "schemaVersion", "projectId", "bindings", "status", "checks", "issues",
+    "reviewedAt", "reviewerType"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-claim-source-review/v1"},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "bindings": {
+      "type": "object",
+      "required": ["sourcesSha256", "suitabilitySha256", "evidenceSha256", "spokenRewriteSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "sourcesSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "suitabilitySha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "evidenceSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "spokenRewriteSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "durationFitSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "status": {"type": "string", "enum": ["passed", "needs-human-review", "failed"]},
+    "checks": {
+      "type": "object",
+      "required": ["registeredSources", "knownClaims", "sourceBindings", "exactQuotes", "sectionPolicies"],
+      "additionalProperties": false,
+      "properties": {
+        "registeredSources": {"type": "boolean"},
+        "knownClaims": {"type": "boolean"},
+        "sourceBindings": {"type": "boolean"},
+        "exactQuotes": {"type": "boolean"},
+        "sectionPolicies": {"type": "boolean"}
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "code", "message"],
+        "additionalProperties": false,
+        "properties": {
+          "severity": {"type": "string", "enum": ["warning", "error"]},
+          "code": {"type": "string", "minLength": 1},
+          "sectionId": {"type": "string"},
+          "claimId": {"type": "string"},
+          "citationId": {"type": "string"},
+          "sourceId": {"type": "string"},
+          "message": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "reviewedAt": {"type": "string", "minLength": 1},
+    "reviewerType": {"type": "string", "const": "machine-contract"}
+  }
+}

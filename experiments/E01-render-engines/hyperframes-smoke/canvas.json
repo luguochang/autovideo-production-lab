@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Continuous Canvas Smoke Test",
+    "duration": 8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "canvas": {
+    "width": 3200,
+    "height": 1400,
+    "background": "#f4f0e8"
+  },
+  "objects": [
+    {
+      "id": "rag",
+      "type": "card",
+      "text": "RAG",
+      "subtitle": "先检索，再生成",
+      "x": 280,
+      "y": 330,
+      "color": "#167d7f"
+    },
+    {
+      "id": "retrieval",
+      "type": "card",
+      "text": "检索",
+      "subtitle": "找到可信上下文",
+      "x": 1040,
+      "y": 240,
+      "color": "#db695f"
+    },
+    {
+      "id": "generation",
+      "type": "card",
+      "text": "生成",
+      "subtitle": "基于证据回答",
+      "x": 1800,
+      "y": 500,
+      "color": "#5e72b8"
+    }
+  ],
+  "operations": [
+    {"at": 0.2, "op": "add", "target": "rag", "duration": 0.7},
+    {"at": 1.2, "op": "highlight", "target": "rag", "duration": 0.45, "scale": 1.12},
+    {"at": 2.1, "op": "move", "target": "rag", "duration": 0.8, "x": 120, "y": 120, "scale": 0.72},
+    {"at": 2.7, "op": "add", "target": "retrieval", "duration": 0.65},
+    {"at": 3.5, "op": "camera", "duration": 1.2, "x": -620, "y": 35, "zoom": 0.9},
+    {"at": 4.7, "op": "highlight", "target": "retrieval", "duration": 0.45, "scale": 1.1},
+    {"at": 5.2, "op": "add", "target": "generation", "duration": 0.65},
+    {"at": 5.8, "op": "camera", "duration": 1.35, "x": -1240, "y": -70, "zoom": 0.82},
+    {"at": 6.7, "op": "highlight", "target": "generation", "duration": 0.45, "scale": 1.12}
+  ]
+}

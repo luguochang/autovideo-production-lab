@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-sources/v1",
+  "projectId": "batch-smoke-20260720",
+  "root": "content/demoText-20s-excerpt.txt",
+  "generatedAt": "2026-07-20T12:23:32.344Z",
+  "sources": [
+    {
+      "id": "source-001-ef5f13d3",
+      "path": "content/demoText-20s-excerpt.txt",
+      "type": "txt",
+      "bytes": 303,
+      "modifiedAt": "2026-07-16T14:41:00.279Z",
+      "sha256": "ef5f13d308a560648d67d0470fa233932baa2062198a488b738dd235919249a3",
+      "source": "user-provided",
+      "license": "user-provided; publication rights not implied",
+      "status": "registered"
+    }
+  ],
+  "skipped": [],
+  "warnings": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "a-system-map",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.59 preview",
+    "lint": "npx --yes hyperframes@0.7.59 lint",
+    "check": "npx --yes hyperframes@0.7.59 check --snapshots",
+    "render": "npx --yes hyperframes@0.7.59 render"
+  }
+}

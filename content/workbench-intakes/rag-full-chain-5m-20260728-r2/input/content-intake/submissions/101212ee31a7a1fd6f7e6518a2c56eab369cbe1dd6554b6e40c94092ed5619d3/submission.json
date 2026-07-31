@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "autovideo-content-intake-submission/v1",
+  "id": "101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "inputType": "pasted-text",
+  "route": "script",
+  "createdAt": "2026-07-28T08:58:58.920Z",
+  "source": {
+    "kind": "pasted-text",
+    "label": "user-approved-editorial-narration",
+    "license": "user-provided; publication rights not implied"
+  },
+  "payload": {
+    "path": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+    "sha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+    "bytes": 28116,
+    "fileCount": 1,
+    "hashAlgorithm": "sha256-bytes",
+    "files": [
+      {
+        "relativePath": "pasted.txt",
+        "path": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+        "sha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+        "bytes": 28116
+      }
+    ],
+    "skipped": []
+  },
+  "registration": {
+    "schemaVersion": "autovideo-content-pipeline-registration/v1",
+    "projectId": "rag-full-chain-5m-20260728-r2",
+    "route": "script",
+    "workbenchInput": {
+      "route": "script",
+      "sourcePath": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt"
+    },
+    "pipelineIntakePath": "content/intakes/rag-full-chain-5m-20260728-r2-101212ee31a7",
+    "commands": {
+      "register": {
+        "executable": "npm.cmd",
+        "args": [
+          "run",
+          "content:register",
+          "--",
+          "--id",
+          "rag-full-chain-5m-20260728-r2",
+          "--materials",
+          "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+          "--out",
+          "content/intakes/rag-full-chain-5m-20260728-r2-101212ee31a7"
+        ]
+      },
+      "diagnose": {
+        "executable": "npm.cmd",
+        "args": [
+          "run",
+          "content:diagnose",
+          "--",
+          "--intake",
+          "content/intakes/rag-full-chain-5m-20260728-r2-101212ee31a7",
+          "--route",
+          "script"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "schemaVersion": "autovideo-publication-rights/v2",
+  "projectId": "batch-smoke-30s-20260720",
+  "declaration": "internal-only",
+  "notes": "Creator-delegated internal workflow simulation only. Public rights are not cleared and public release remains blocked.",
+  "generatedAt": "2026-07-22T12:20:20.714Z",
+  "inventoryBindings": [
+    {
+      "scope": "project",
+      "path": "AssetManifest.json",
+      "sha256": "dcf61099ce1093ef926cb28ee773f2325579937072934b6dc0c13289a882be4e",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": ".media/manifest.jsonl",
+      "sha256": "8114eb368ec692cde2e80b273bbd6d61253b9d7a8283d12470a54f062cd4d6da",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": "template-lock.json",
+      "sha256": "157f1ff6a5b38649a8319b272aaba53e9997a4c8738b41570791d46a2226f8ca",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": "audio/narration.final.wav",
+      "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": "audio/voice.recipe.json",
+      "sha256": "852379a8b7c9a2fc30bec53e94f309fe1cbd522098dcd36567db982baa461ae6",
+      "currentAtGeneration": true
+    }
+  ],
+  "items": [
+    {
+      "id": "source-source-001-61c17637",
+      "category": "input-source",
+      "subject": "hyperframes-workflow-kit/projects/batch-smoke-30s-20260720/input/narration.txt",
+      "source": "hyperframes-workflow-kit/projects/batch-smoke-30s-20260720/input/narration.txt",
+      "license": "user-provided; publication rights not implied",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "workspace",
+          "path": "hyperframes-workflow-kit/projects/batch-smoke-30s-20260720/input/narration.txt",
+          "sha256": "61c1763700a77ffa654c910e5f88f1b2a981529561befeb8fdbe70f01e1eecb1",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "User possession or source registration does not itself prove publication rights."
+    },
+    {
+      "id": "media-voice_001",
+      "category": "voice",
+      "subject": "narration.final.wav",
+      "source": "ingested",
+      "license": "internal-only:voice-rights-needs-review",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": ".media/audio/voice/voice_001.wav",
+          "sha256": "4862800600e4dbc6df0107cebda153102999092920080495f3eaf83e5712e838",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "A catalog/license label is provenance, not a frozen publication-rights credential. Attach a local receipt before clearing."
+    },
+    {
+      "id": "media-sfx-whoosh-short",
+      "category": "sfx",
+      "subject": "Short movement accent for a meaningful bounded content transition.",
+      "source": "local-asset-library",
+      "license": "Pixabay Content License",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": ".media/audio/sfx/sfx-whoosh-short.mp3",
+          "sha256": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "A catalog/license label is provenance, not a frozen publication-rights credential. Attach a local receipt before clearing."
+    },
+    {
+      "id": "media-sfx-click-soft",
+      "category": "sfx",
+      "subject": "Quiet UI click for a real selection, focus landing, or confirmed interaction.",
+      "source": "local-asset-library",
+      "license": "Pixabay Content License",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": ".media/audio/sfx/sfx-click-soft.mp3",
+          "sha256": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "A catalog/license label is provenance, not a frozen publication-rights credential. Attach a local receipt before clearing."
+    },
+    {
+      "id": "asset-approved-narration-source",
+      "category": "text",
+      "subject": "approved-narration-source",
+      "source": "hyperframes-workflow-kit/projects/batch-smoke-30s-20260720/input/script.approved.txt",
+      "license": "user-provided",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "input/narration.txt",
+          "sha256": "61c1763700a77ffa654c910e5f88f1b2a981529561befeb8fdbe70f01e1eecb1",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-use-approved. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-cosyvoice14-final-audio",
+      "category": "audio",
+      "subject": "cosyvoice14-final-audio",
+      "source": "CosyVoice preset 14 deterministic generation for batch-smoke-30s-20260720",
+      "license": "Apache-2.0 code/model; speaker rights separate",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "audio/narration.final.wav",
+          "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=needs-review. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-locked-subtitles",
+      "category": "subtitle",
+      "subject": "locked-subtitles",
+      "source": "NarrationLock exact alignment cues",
+      "license": "project-generated",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "captions/narration.zh-CN.srt",
+          "sha256": "0c7bbf10a9f0be181e160d5e9313a9b6ce5d63c67f86604936f97593d7284d8a",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-only. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-host-normalized-production-set",
+      "category": "derived-image-set",
+      "subject": "host-normalized-production-set",
+      "source": "Deterministic scripts/build-host-pose-assets.py output",
+      "license": "inherits source licenses",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "production-assets/host-assets.manifest.json",
+          "sha256": "f8994903ff77c602a27271422de7804b29fb169c37e4d77f79a6c385261f84a2",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/greet.png",
+          "sha256": "520d36926ee82b4d3d42cd2da92e14fdda70b301d94819063158d3fb6f67e84a",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/emphasis.png",
+          "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/present.png",
+          "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/think.png",
+          "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/encourage.png",
+          "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/question.png",
+          "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/read.png",
+          "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/explain.png",
+          "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/point-right.png",
+          "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "production-assets/host/close.png",
+          "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=needs-review: inherits user-provided POSE_MANIFEST source rights. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-style-probe-still",
+      "category": "image",
+      "subject": "style-probe-still",
+      "source": "Hash-bound batch-smoke-30s-20260720 probe still",
+      "license": "project-generated",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "review/stills/style-probe-hidden-complexity.png",
+          "sha256": "eb16f0fa7e9aa8af2677372c1ac5d709bbda15f2ad7df0ca0a358f0d19e36f8a",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-only. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-style-probe-motion",
+      "category": "video",
+      "subject": "style-probe-motion",
+      "source": "Hash-bound batch-smoke-30s-20260720 HyperFrames 0.7.68 probe render",
+      "license": "project-generated",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "review/probes/style-probe-hidden-complexity.mp4",
+          "sha256": "e7ff08927c86dc259ea3bf70f6c924bbe97f9437c5ed7aa497641d7fc597ae3f",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-only. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-scene-composition-set",
+      "category": "hyperframes-composition-set",
+      "subject": "scene-composition-set",
+      "source": "Deterministic AutoVideo HyperFrames compiler",
+      "license": "project-authored with Apache-2.0 HyperFrames references",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "production/hyperframes/data/composition-build.json",
+          "sha256": "2da17ecd4252c925677ff26851f51e0a59351b61eeb8e9b10bfbcd677faaf704",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-only while dependent media rights remain unresolved. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-delivery-internal-review-video",
+      "category": "video",
+      "subject": "delivery-internal-review-video",
+      "source": "HyperFrames 0.7.68 high-quality render",
+      "license": "project-generated",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+          "sha256": "8485b31870a1270c7cc7e3fb99b529856e85b2e2826914c437ce073b5013d531",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-only. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "asset-delivery-cover",
+      "category": "image",
+      "subject": "delivery-cover",
+      "source": "FFmpeg frame extraction at 2 seconds",
+      "license": "project-generated",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "renders/batch-smoke-30s-20260720-cover.png",
+          "sha256": "449f6e4be3f57bedb92629b9f2597340bd400d33932f4b854a2ba53c78ba0be9",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Imported from AssetManifest rightsStatus=internal-only. Cleared status still requires a frozen local credential."
+    },
+    {
+      "id": "voice-speaker-rights",
+      "category": "voice",
+      "subject": "CosyVoice built-in 中文女 speaker",
+      "source": "preset14",
+      "license": "Code/model license does not prove speaker publication rights.",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "audio/narration.final.wav",
+          "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "audio/voice.recipe.json",
+          "sha256": "852379a8b7c9a2fc30bec53e94f309fe1cbd522098dcd36567db982baa461ae6",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Attach a local commercial/publication rights statement or use a separately licensed voice route."
+    },
+    {
+      "id": "host-artwork-rights",
+      "category": "host-artwork",
+      "subject": "modern-ip-host-explainer",
+      "source": "style-library/styles/project/modern-ip-host-explainer",
+      "license": "User-provided artwork; possession and generation provenance do not imply publication rights.",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "workspace",
+          "path": "style-library/styles/project/modern-ip-host-explainer/frame.md",
+          "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "workspace",
+          "path": "style-library/styles/project/modern-ip-host-explainer/STYLE_GUIDE.md",
+          "sha256": "02e550777227ef60cd3ed247c2c6da3524fca055ed85c978287af44c08facb77",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "workspace",
+          "path": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+          "sha256": "70872749953cfd53d32d2740385aed37082b1e3552e3e8bb7e9a06b2d3bace0f",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Attach a local creator/commission/license attestation covering social publication and reuse."
+    },
+    {
+      "id": "noto-sans-sc-font",
+      "category": "font",
+      "subject": "@fontsource-variable/noto-sans-sc@5.2.10",
+      "source": "npm package",
+      "license": "OFL-1.1",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [],
+      "evidence": [],
+      "notes": "Freeze the package LICENSE or an equivalent local license receipt before public clearance."
+    },
+    {
+      "id": "hyperframes-runtime",
+      "category": "software",
+      "subject": "HyperFrames runtime",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "license": "Apache-2.0",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [],
+      "evidence": [],
+      "notes": "Freeze the pinned release license receipt before distributing editable source."
+    },
+    {
+      "id": "ffmpeg-build",
+      "category": "build-tool",
+      "subject": "Local FFmpeg binary",
+      "source": "local build tool only",
+      "license": "Build-dependent; binary is not included in the deliverable.",
+      "status": "not-applicable",
+      "notApplicableReason": "The FFmpeg executable is used locally and is not copied into the video or standard delivery package.",
+      "assetBindings": [],
+      "evidence": [],
+      "notes": ""
+    }
+  ],
+  "policy": {
+    "publicRelease": "Every item must be cleared or not-applicable. Cleared items require at least one hash-bound local evidence file.",
+    "internalOnly": "Unresolved items may remain, but every listed asset binding must still match current bytes."
+  }
+}

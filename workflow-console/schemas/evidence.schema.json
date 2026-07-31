@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo evidence ledger v1/v2",
+  "type": "object",
+  "required": ["schemaVersion", "claims", "gaps"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "enum": ["autovideo-evidence/v1", "autovideo-evidence/v2"]},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "sourceRegisterSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "suitabilitySha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "prompt": {
+      "type": "object",
+      "required": ["id", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "const": "evidence-extractor"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "generatedAt": {"type": "string", "minLength": 1},
+    "claims": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["id", "statement", "status", "sourceId", "quote", "locator"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "statement": {"type": "string"},
+              "status": {"type": "string", "enum": ["supported", "opinion", "disputed"]},
+              "sourceId": {"type": "string"},
+              "quote": {"type": "string"},
+              "locator": {"type": "string"},
+              "notes": {"type": "string"}
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "id", "claimKind", "supportStatus", "statement", "citations", "protectedAtomIds"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "claimKind": {"type": "string", "enum": ["fact", "source-opinion", "creator-opinion"]},
+              "supportStatus": {"type": "string", "enum": ["supported", "disputed", "insufficient"]},
+              "statement": {"type": "string", "minLength": 1},
+              "citations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id", "sourceId", "quote", "locator", "canonicalQuoteSha256"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {"type": "string"},
+                    "sourceId": {"type": "string"},
+                    "quote": {"type": "string", "minLength": 1},
+                    "locator": {
+                      "type": "object",
+                      "required": ["scheme", "startLine", "endLine", "occurrence"],
+                      "additionalProperties": false,
+                      "properties": {
+                        "scheme": {"type": "string", "const": "line-range"},
+                        "startLine": {"type": "integer", "minimum": 1},
+                        "endLine": {"type": "integer", "minimum": 1},
+                        "occurrence": {"type": "integer", "minimum": 1}
+                      }
+                    },
+                    "canonicalQuoteSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+                  }
+                }
+              },
+              "protectedAtomIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+              "notes": {"type": "string"}
+            }
+          }
+        ]
+      }
+    },
+    "protectedAtoms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "sourceSurface", "canonicalValue", "allowedNarrationForms", "omissionPolicy"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["number", "percentage", "currency", "date", "duration", "version", "proper-name", "english-term", "qualification"]
+          },
+          "sourceSurface": {"type": "string", "minLength": 1},
+          "canonicalValue": {"type": "string", "minLength": 1},
+          "unit": {"type": "string"},
+          "allowedNarrationForms": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+          "omissionPolicy": {"type": "string", "enum": ["required", "optional"]}
+        }
+      }
+    },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "token", "tokenClass", "caseSensitive", "allowedWrittenForms", "spokenPolicy", "requiresListeningReview"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string"},
+          "token": {"type": "string", "minLength": 1},
+          "tokenClass": {"type": "string", "enum": ["english-word", "initialism", "brand", "mixed-version", "code-identifier"]},
+          "caseSensitive": {"type": "boolean"},
+          "allowedWrittenForms": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+          "spokenPolicy": {"type": "string", "enum": ["whole-word", "letter-by-letter", "brand-pronunciation", "listening-review"]},
+          "requiresListeningReview": {"type": "boolean"}
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "question": {"type": "string"},
+          "reason": {"type": "string"}
+        }
+      }
+    }
+  }
+}

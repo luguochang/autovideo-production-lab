@@ -1,0 +1,34 @@
+{
+  "duration": 20,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#headline",
+      "bySec": 1.2
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#surface",
+      "bySec": 3.6
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#conclusion",
+      "bySec": 16.2
+    },
+    {
+      "kind": "before",
+      "a": "#surface",
+      "b": "#conclusion"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": ".caption-rail"
+    },
+    {
+      "kind": "keepsMoving",
+      "withinSelector": ".world",
+      "maxStaticSec": 2.2
+    }
+  ]
+}

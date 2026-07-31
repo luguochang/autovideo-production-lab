@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "autovideo-workbench-receipts/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "generatedBy": "scripts/finalize-delivery-manifest.mjs",
+  "policy": "Present artifacts are byte-for-byte snapshots. Missing artifacts are recorded but never synthesized.",
+  "artifacts": [
+    {
+      "id": "sourceRegistration",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v4/artifacts/source-register/sources.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/sources.json",
+      "size": 609,
+      "sha256": "8f7df8ed8ad9a5bf6b1f606e809f64c9f60904e7dde75575993feffe82e8ffae"
+    },
+    {
+      "id": "evidenceLedger",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v4/artifacts/evidence-ledger/evidence.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/evidence.json"
+    },
+    {
+      "id": "scriptDraft",
+      "status": "missing",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v4/artifacts/script-draft/script.draft.json",
+      "sourceAvailable": false,
+      "receiptPath": "receipts/content/script.draft.json"
+    },
+    {
+      "id": "scriptApproval",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v4/artifacts/script-review/script.approved.txt",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/content/script.approved.txt",
+      "size": 4374,
+      "sha256": "1d2e145372944e0a77f1e730d5bcff1140b88fbc52c3face506110b15c10e0d0"
+    },
+    {
+      "id": "publicationRights",
+      "status": "present",
+      "sourcePath": "workflow-console/data/projects/demotext-standard-delivery-v4/artifacts/rights-clearance/publication-rights.json",
+      "sourceAvailable": true,
+      "receiptPath": "receipts/rights/publication-rights.json",
+      "size": 2687,
+      "sha256": "ae5e76ac295fc392bcf94ae9f470359e732400fef67a7fa088be172b24160942"
+    }
+  ]
+}

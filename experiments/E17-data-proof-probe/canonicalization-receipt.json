@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-motion-probe-canonicalization-receipt/v1",
+  "projectId": "E17-data-proof-probe",
+  "recipeId": "data-proof",
+  "recipeVersion": "1.0.0",
+  "recipeDefinitionSha256": "a8892f55d3038fccae78517a00868bf079b1322c8526f0cb26c3240ccd3dcf59",
+  "canonicalizer": "tools/motion-recipe-lifecycle/canonicalize-probe.mjs",
+  "inputs": {
+    "config": {
+      "path": "experiments/E17-data-proof-probe/probe-canonicalization.json",
+      "sha256": "4317796cc8f054f92ce0708ce80b978c34942946f28779a6c798e894e03c2f84"
+    },
+    "narrationLock": {
+      "path": "experiments/E17-data-proof-probe/NarrationLock.json",
+      "sha256": "98dbb0ba853f95d6f668a1492df329bf7fb1d6634ff290958a5e88a573923783"
+    },
+    "invariantAudit": {
+      "path": "experiments/E17-data-proof-probe/INVARIANT_AUDIT.json",
+      "sha256": "ceea17951379a03b67ac0abf3662ffef3b5bd96ef0f01ce7de2cbd0947f53998"
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E17-data-proof-probe/AssetManifest.json",
+      "sha256": "555f1eecb3b21b4485a1e01db9bf8a783c85d517cecec8df4e394ff2d05f9700"
+    },
+    "strictCheck": {
+      "path": "experiments/E17-data-proof-probe/strict-check.log",
+      "sha256": "0b4249508f86314ffdb6e13cb6337076c69b537ade8976f47be2786d9d7dead5"
+    },
+    "render": {
+      "path": "experiments/E17-data-proof-probe/renders/data-proof-probe.mp4",
+      "sha256": "00e86adb64321a4cb8add020b30f7421bb029ecb151a343f04dd1c1c46cb7859"
+    }
+  },
+  "humanReviewInvented": false,
+  "lifecycleMutationApplied": false,
+  "evidence": {
+    "path": "experiments/E17-data-proof-probe/lifecycle-evidence.draft.json",
+    "sha256": "4a478242ebf134082beb938bbe498f1dc84637a8f3e40513212d0f26f35d1bf0"
+  }
+}

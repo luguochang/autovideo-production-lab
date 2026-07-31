@@ -1,0 +1,304 @@
+{
+  "schemaVersion": "autovideo-sop-status/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "generatedBy": "scripts/sync-project-sop-status.mjs",
+  "evidence": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "exists": true,
+      "sha256": "f3bf8e7366c45e99f5f517791349380a94da517abd916b7f5b959bc3afdd6572"
+    },
+    "templateLock": {
+      "path": "template-lock.json",
+      "exists": true,
+      "sha256": "90e505464f55fe45748a56d635a2b5251c5b152330d3a678b26309bb94cb1f06"
+    },
+    "contentApproval": {
+      "path": "input/content-approval.json",
+      "exists": true,
+      "sha256": "e5979fcb4f3b2a9701d08f1274d7de1d04969af3a1548a1f2d368247d8c25a6b"
+    },
+    "claimLedger": {
+      "path": "input/claim-ledger.json",
+      "exists": true,
+      "sha256": "468a7e038f902ad520ad416a9a0033890e2b091096902000d0b67c089afa8a14"
+    },
+    "pronunciation": {
+      "path": "input/pronunciation.json",
+      "exists": true,
+      "sha256": "0b800ff50f1a3761a61cb35b759246cf5b375c382271ca79465c5b512467051a"
+    },
+    "voiceRecipe": {
+      "path": "audio/voice.recipe.json",
+      "exists": true,
+      "sha256": "7666165edbc1e9ecad73db3a8bbe0c64da703fe25a9dc7c9bad5797e48a39452"
+    },
+    "finalAudio": {
+      "path": "audio/narration.final.wav",
+      "exists": true,
+      "sha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f"
+    },
+    "audioQa": {
+      "path": "audio/qa-report.json",
+      "exists": true,
+      "sha256": "9c9dc331a68116cb7410bad7a44b87388622064e7848d6123b48a0ea062e18e4"
+    },
+    "audioApproval": {
+      "path": "audio/approval.json",
+      "exists": true,
+      "sha256": "81477e09306647f7469ae9912702c045c52669037fdd6a68a4f6295b11822d87",
+      "approvalScope": "technical-only",
+      "humanListeningStatus": "not-performed",
+      "bindingStatus": "valid",
+      "projectIdMatches": true,
+      "narrationSha256Matches": true,
+      "audioSha256Matches": true,
+      "listeningReviewReceiptValid": false
+    },
+    "listeningReview": {
+      "path": "audio/listening-review.json",
+      "exists": false,
+      "sha256": null,
+      "status": "not-started",
+      "bindingStatus": "missing",
+      "projectIdMatches": false,
+      "narrationSha256Matches": false,
+      "audioPathMatches": false,
+      "audioSha256Matches": false,
+      "acceptedTerms": []
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "exists": true,
+      "sha256": "379d9fb05def883bca9c44a559180b55cd61c8ecab430b7fd363df982bfb6512"
+    },
+    "alignmentValidation": {
+      "path": "captions/alignment-validation.json",
+      "exists": true,
+      "sha256": "b8409f6fadf47ec1400332f26fe551c8e1feed845dcd22c00e291735c77bdf61"
+    },
+    "subtitles": {
+      "path": "captions/narration.zh-CN.srt",
+      "exists": true,
+      "sha256": "c3f52112e2c7b0b19a1633bc29a92af432ed1d3939db13db25f6b8a138e2a376"
+    },
+    "audioHandoff": {
+      "path": "audio-handoff.json",
+      "exists": true,
+      "sha256": "6464e365435f13bb6aaafecfa9d7b9ae3b0e8d37088a7dfa772cf6351f7d1414"
+    },
+    "videoTask": {
+      "path": "VIDEO_TASK.md",
+      "exists": true,
+      "sha256": "004090af300979ba2884aa93904db3b2d1e368689bfcd5aa505d8430b2255f50"
+    },
+    "styleReview": {
+      "path": "STYLE_REVIEW.md",
+      "exists": true,
+      "sha256": "2470bfb4bdd2ac1fd287ec4759d52b1e70db6f8c7e1dde70ab4bbc4961a623e9"
+    },
+    "styleSelection": {
+      "path": "style-selection.json",
+      "exists": true,
+      "sha256": "87d27c62aa9607ebda422b2942d2ed0a9fb3b902e517a5757a847d307b2635ef"
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "exists": true,
+      "sha256": "938739f0fa83d45cf6ea1891c61f2b029c9f21d2a556498a0df9d97db90bea45"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "exists": true,
+      "sha256": "aa62f0c4949250576aac5890788a64f934fa790519e2ccb086123ae834dbe1e7"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "exists": true,
+      "sha256": "2399a1a8266aef8f086cabd486eb3c8fe2a5aae5db93659cfc79ef87ad59415d"
+    },
+    "productionManifest": {
+      "path": "plan/production-manifest.json",
+      "exists": true,
+      "sha256": "bbb85a6413619c8a43a068ea838c2c221d71d37f4c92f5c3a8615b6d1d7818e3"
+    },
+    "assetManifest": {
+      "path": "AssetManifest.json",
+      "exists": true,
+      "sha256": "c16a8fa43190e2059821b2a36346202ed55e4abd870a5ec4ba04e456ed85b7a2"
+    },
+    "probeReview": {
+      "path": "review/probe-review.json",
+      "exists": true,
+      "sha256": "5a748e7c51dbe771ee71482258342f5732eb1c7f80f55baf77eedb766a98a36b"
+    },
+    "probeStill": {
+      "path": "review/stills/style-probe-hidden-complexity.png",
+      "exists": true,
+      "sha256": "0c8ae9301dc2efea7ee1257c28ca694da2ed5a023b532a0666edd0acda871b4b"
+    },
+    "probeMotion": {
+      "path": "review/probes/style-probe-hidden-complexity.mp4",
+      "exists": true,
+      "sha256": "64fb583d61faf3153e298a21ee284af84a513ee486bffec321da9d9eb14ccdaf"
+    },
+    "overrides": {
+      "path": "overrides/overrides.json",
+      "exists": true,
+      "sha256": "0c3a0e8c25ed39ff33513129c54704d5fec4187437b1220aced0f16e23fde8c8"
+    },
+    "fullComposition": {
+      "path": "production/hyperframes/index.html",
+      "exists": true,
+      "sha256": "57e7a0a8e3b47280663ff7181f57105b30d5d578fcba05bcf3955e2f87106baf"
+    },
+    "compositionBuild": {
+      "path": "production/hyperframes/data/composition-build.json",
+      "exists": true,
+      "sha256": "34b269f729d0dbce604f84c344fdc544f459f59c7302a4f7320a865dbfffb5eb"
+    },
+    "hyperframesCheck": {
+      "path": "qa/hyperframes-check.json",
+      "exists": true,
+      "sha256": "554f197b74c9a58a5c0e487a45389134b27a7a80719e257c2d35e714e7dbc94f"
+    },
+    "finalQa": {
+      "path": "qa/report.json",
+      "exists": true,
+      "sha256": "e35a27507d32e72ab3d2d9add730893828b0874b3079db8b7ac8fa383c7f22e2"
+    },
+    "finalPreview": {
+      "path": "qa/final-preview.json",
+      "exists": true,
+      "sha256": "ce81aa085622f44b8427bb61b418e25e9c1219882c37dd8ba4c02af22f9dfeae"
+    },
+    "humanFinalReview": {
+      "path": "qa/human-final-review.json",
+      "exists": false,
+      "sha256": null,
+      "status": "not-started",
+      "bindingStatus": "missing",
+      "projectIdMatches": false,
+      "compositionMatches": false,
+      "previewReceiptMatches": false,
+      "approvalReferenceMatches": false
+    },
+    "visualReview": {
+      "path": "qa/visual-review.json",
+      "exists": true,
+      "sha256": "a0113b921c640cda04291da603f26e14428504305c15e4282dc67106b5c91cef"
+    },
+    "deliveryQa": {
+      "path": "qa/delivery-report.json",
+      "exists": true,
+      "sha256": "a8e58625a248fa5513ecd8dad9876a601a90dd874f97912a11d61830eff26a05"
+    },
+    "deliveryManifest": {
+      "path": "delivery/delivery-manifest.json",
+      "exists": true,
+      "sha256": "e5179240e4bbbea1cb7f587e59d0d0897af3a521deab884ef71bf555f49f86a3"
+    },
+    "cover": {
+      "path": "renders/demotext-standard-delivery-v2-cover.png",
+      "exists": true,
+      "sha256": "e777778c9afcbace9515781f855f2f4c3f6b23f4928e413fd1eccd2d3070b661"
+    },
+    "internalReviewVideo": {
+      "path": "renders/demotext-standard-delivery-v2-internal-review.mp4",
+      "exists": true,
+      "sha256": "e0c4ea6bc7c2c9d603dddc2c904355ebc95d3abb6f575cb5579bd51460bc48db"
+    },
+    "masterVideo": {
+      "path": "renders/master.mp4",
+      "exists": false,
+      "sha256": null
+    }
+  },
+  "verification": {
+    "composition": {
+      "directoryExists": true,
+      "indexExists": true,
+      "buildReceiptExists": true,
+      "strictCheckExists": true,
+      "strictCheckPassed": true,
+      "digestMatchesCheck": true,
+      "fileCountMatchesCheck": true,
+      "buildReceiptHashMatchesCheck": true,
+      "sourceAudioContractPassed": true
+    },
+    "finalPreviewMatchesComposition": true,
+    "visualReviewMatchesComposition": true,
+    "delivery": {
+      "internalVideoShaMatchesQa": true,
+      "deliveryManifestExists": true,
+      "deliveryManifestIntegrityValid": true,
+      "deliveryManifestFilesChecked": 34,
+      "deliveryManifestFileFailures": [],
+      "deliveryVideoEntryMatchesQa": true
+    }
+  },
+  "approvals": {
+    "content": {
+      "status": "approved-internal-only",
+      "approvedBy": "user-requested-standard-run",
+      "approvedAt": "2026-07-19T00:14:56.470Z",
+      "scope": "internal-only"
+    },
+    "task": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T01:34:46.367Z",
+      "scope": "project-task"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T01:34:46.453Z",
+      "scope": "still-and-motion-probe"
+    },
+    "audio": {
+      "status": "approved",
+      "approvedBy": "codex-technical-review-v2",
+      "approvedAt": "2026-07-19T00:18:59.753Z",
+      "scope": "technical-only"
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T04:36:43.564Z",
+      "scope": "internal-autonomous-review"
+    }
+  },
+  "milestones": {
+    "contentLock": "passed",
+    "audioTechnical": "passed",
+    "humanListening": "blocked",
+    "planningContracts": "passed",
+    "projectProbe": "passed-internal-review",
+    "overridesContract": "passed-empty",
+    "fullComposition": "verified",
+    "finalPreview": "approved-internal-only",
+    "humanFinalReview": "pending",
+    "deliveryQa": "passed-internal-only",
+    "internalDelivery": "ready"
+  },
+  "readiness": {
+    "internalPlanningAndProbeReady": true,
+    "internalCompositionReady": true,
+    "internalDeliveryReady": true,
+    "formalReadyForComposition": false,
+    "readyForFinalRender": false
+  },
+  "release": {
+    "scope": "internal-only",
+    "publicReleaseBlocked": true,
+    "blockers": [
+      "CosyVoice built-in speaker publication rights are unresolved.",
+      "Numeric claims 99%, 90% and 30K have no external evidence package and must be presented as creator opinion.",
+      "Final narration has not received human-listening approval.",
+      "Audio rights status is needs-review.",
+      "Pronunciation listening review remains for: Coze, Dify, Codex, Claude Code, Agent, Demo, Magic, Engineering, 30K, Token.",
+      "HyperFrames Studio full-timeline human review has not been approved."
+    ]
+  }
+}

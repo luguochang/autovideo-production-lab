@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-receipt/v1",
+  "receiptId": "motion-lifecycle-keyword-handoff-probe-passed-20260720121500",
+  "action": "transition",
+  "outcome": "blocked",
+  "createdAt": "2026-07-20T12:15:00.000Z",
+  "actor": "autovideo-e05-audit",
+  "library": {
+    "id": "knowledge-explainer",
+    "version": "1.0.0",
+    "path": "style-library/motion-library/knowledge-explainer-v1.json",
+    "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+  },
+  "recipe": {
+    "id": "keyword-handoff",
+    "version": "1.0.0",
+    "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3"
+  },
+  "fromState": "candidate",
+  "requestedState": "probe-passed",
+  "effectiveState": "candidate",
+  "invariantSnapshot": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "baseStyleVersion": "1.0.0",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionZone": "caption",
+    "cameraScope": "content-world-only",
+    "hostReplacementAllowed": false,
+    "paletteReplacementAllowed": false
+  },
+  "evidence": {
+    "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+    "recipeId": "keyword-handoff",
+    "recipeVersion": "1.0.0",
+    "requestedState": "probe-passed",
+    "probe": {
+      "kind": "batch-contract",
+      "projectId": "demotext-standard-delivery-v5",
+      "path": "experiments/E05-batch-contract-probe",
+      "durationSeconds": 239.678,
+      "sameNarrationWindow": true,
+      "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+      "audioSha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+      "invariants": {
+        "baseStyleId": "modern-ip-host-explainer",
+        "baseStyleVersion": "1.0.0",
+        "paletteId": "light-apricot",
+        "background": "#F2DFC7",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption",
+        "cameraScope": "content-world-only",
+        "hostReplacementAllowed": false,
+        "paletteReplacementAllowed": false
+      },
+      "invariantAudit": null,
+      "hostAssetManifest": null,
+      "stills": [],
+      "motionProbe": null,
+      "hyperframesCheck": {
+        "binding": {
+          "path": "experiments/E05-batch-contract-probe/check.capture.log",
+          "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+        },
+        "ok": true,
+        "strict": true,
+        "snapshotsEnabled": false,
+        "findingCount": 0,
+        "version": "0.7.64"
+      },
+      "visualReview": null,
+      "officialReuseObserved": []
+    }
+  },
+  "gateResults": [
+    {"id": "transition.allowed", "passed": true, "details": {"from": "candidate", "to": "probe-passed"}},
+    {"id": "probe.kind", "passed": false, "details": "batch-contract"},
+    {"id": "probe.duration", "passed": false, "details": {"duration": 239.678, "minimum": 3, "maximum": 8}},
+    {"id": "probe.same-narration-window", "passed": true, "details": true},
+    {
+      "id": "probe.invariants",
+      "passed": true,
+      "details": {
+        "baseStyleId": "modern-ip-host-explainer",
+        "baseStyleVersion": "1.0.0",
+        "paletteId": "light-apricot",
+        "background": "#F2DFC7",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption",
+        "cameraScope": "content-world-only",
+        "hostReplacementAllowed": false,
+        "paletteReplacementAllowed": false
+      }
+    },
+    {
+      "id": "probe.invariant-audit",
+      "passed": false,
+      "details": {
+        "binding": "probe.invariantAudit requires path and SHA-256.",
+        "passed": false,
+        "checks": {}
+      }
+    },
+    {
+      "id": "probe.host-assets",
+      "passed": false,
+      "details": "probe.hostAssetManifest requires path and SHA-256."
+    },
+    {"id": "probe.stills", "passed": false, "details": "probe.stills is empty."},
+    {"id": "probe.motion", "passed": false, "details": "probe.motionProbe requires path and SHA-256."},
+    {
+      "id": "probe.check-binding",
+      "passed": true,
+      "details": {
+        "path": "experiments/E05-batch-contract-probe/check.capture.log",
+        "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+      }
+    },
+    {
+      "id": "probe.hyperframes-check",
+      "passed": false,
+      "details": {
+        "binding": {
+          "path": "experiments/E05-batch-contract-probe/check.capture.log",
+          "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+        },
+        "ok": true,
+        "strict": true,
+        "snapshotsEnabled": false,
+        "findingCount": 0,
+        "version": "0.7.64"
+      }
+    },
+    {"id": "probe.visual-review", "passed": false, "details": null},
+    {
+      "id": "probe.official-reuse",
+      "passed": false,
+      "details": {
+        "requiredTier": {"kind": "official-registry", "ids": ["morph-text", "caption-weight-shift"]},
+        "observed": []
+      }
+    }
+  ],
+  "blockedReasons": [
+    "not-a-motion-probe",
+    "probe-duration-out-of-range",
+    "missing-or-failed-invariant-audit",
+    "missing-host-asset-binding",
+    "missing-still-evidence",
+    "missing-motion-probe",
+    "hyperframes-check-incomplete",
+    "missing-visual-review",
+    "official-reuse-not-observed"
+  ]
+}

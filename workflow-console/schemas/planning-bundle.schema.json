@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo canonical planning bundle",
+  "type": "object",
+  "required": ["schemaVersion", "projectId", "workbenchRevision", "provenance", "planningDigestSha256", "storyboard", "graphIr", "shotManifest"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-planning-bundle/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "workbenchRevision": {"type": "integer", "minimum": 1},
+    "planningDigestSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "provenance": {
+      "type": "object",
+      "required": ["mode", "inputs"],
+      "additionalProperties": true,
+      "properties": {
+        "mode": {"type": "string", "enum": ["formal-project-import", "workbench-generated", "legacy-artifact-import", "deterministic-baseline"]},
+        "formalProjectPath": {"type": "string"},
+        "inputs": {"type": "object"}
+      }
+    },
+    "storyboard": {"type": "object"},
+    "graphIr": {"type": ["object", "null"]},
+    "shotManifest": {"type": ["object", "null"]}
+  }
+}

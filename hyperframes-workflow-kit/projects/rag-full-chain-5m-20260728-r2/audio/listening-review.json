@@ -1,0 +1,476 @@
+{
+  "schemaVersion": "autovideo-listening-review/v2",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "narrationSha256": "bdf2796e70774507b7ccfc50a66f925ae6b51917f188b976a8c6bb4691cfcf94",
+  "status": "ready-for-approval",
+  "decision": "accepted",
+  "selectedCandidateId": "candidate-001",
+  "playedCandidateIds": [
+    "candidate-001"
+  ],
+  "candidateChecklist": {
+    "naturalness": true,
+    "breathing": true,
+    "pronunciation": true,
+    "segmentJoins": true,
+    "noArtifacts": true
+  },
+  "checklist": {
+    "fullPlayback": true,
+    "terminology": true,
+    "pauses": true,
+    "clipping": true,
+    "segmentJoins": true
+  },
+  "terms": [
+    {
+      "token": "RAG",
+      "kind": "letter-acronym",
+      "spokenAs": "R A G",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "API",
+      "kind": "letter-acronym",
+      "spokenAs": "A P I",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "PDF",
+      "kind": "letter-acronym",
+      "spokenAs": "P D F",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Word",
+      "kind": "english-word",
+      "spokenAs": "Word",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "HTML",
+      "kind": "letter-acronym",
+      "spokenAs": "H T M L",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Confluence",
+      "kind": "english-word",
+      "spokenAs": "Confluence",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "PyMuPDF",
+      "kind": "code-identifier",
+      "spokenAs": "Py Mu P D F",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "pdfplumber",
+      "kind": "english-word",
+      "spokenAs": "P D F plumber",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Unstructured",
+      "kind": "english-word",
+      "spokenAs": "Un structured",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "MinerU",
+      "kind": "code-identifier",
+      "spokenAs": "Miner U",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Docling",
+      "kind": "english-word",
+      "spokenAs": "Docling",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "LlamaParse",
+      "kind": "code-identifier",
+      "spokenAs": "Llama Parse",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "LLM",
+      "kind": "letter-acronym",
+      "spokenAs": "L L M",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "ColPali",
+      "kind": "code-identifier",
+      "spokenAs": "Col Pali",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "LangChain",
+      "kind": "code-identifier",
+      "spokenAs": "Lang Chain",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "markdown",
+      "kind": "english-word",
+      "spokenAs": "markdown",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "LlamaIndex",
+      "kind": "code-identifier",
+      "spokenAs": "Llama Index",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Jina",
+      "kind": "english-word",
+      "spokenAs": "Jina",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Anthropic",
+      "kind": "english-word",
+      "spokenAs": "Anthropic",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "BM25",
+      "kind": "numeric-version",
+      "spokenAs": "B M 25",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "BGE",
+      "kind": "letter-acronym",
+      "spokenAs": "B G E",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "ColBERT",
+      "kind": "code-identifier",
+      "spokenAs": "Col BERT",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "bge-m3",
+      "kind": "numeric-version",
+      "spokenAs": "B G E M 3",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "OpenAI",
+      "kind": "brand-product",
+      "spokenAs": "Open A I",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Voyage",
+      "kind": "english-word",
+      "spokenAs": "Voyage",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Cohere",
+      "kind": "english-word",
+      "spokenAs": "Cohere",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "MTEB",
+      "kind": "letter-acronym",
+      "spokenAs": "M T E B",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Matryoshka",
+      "kind": "english-word",
+      "spokenAs": "Matryoshka",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "pgvector",
+      "kind": "english-word",
+      "spokenAs": "P G vector",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Milvus",
+      "kind": "english-word",
+      "spokenAs": "Milvus",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Weaviate",
+      "kind": "english-word",
+      "spokenAs": "Weaviate",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Qdrant",
+      "kind": "english-word",
+      "spokenAs": "Qdrant",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Chroma",
+      "kind": "english-word",
+      "spokenAs": "Chroma",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Elasticsearch",
+      "kind": "english-word",
+      "spokenAs": "Elastic search",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "PostgreSQL",
+      "kind": "code-identifier",
+      "spokenAs": "Postgre S Q L",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "HNSW",
+      "kind": "letter-acronym",
+      "spokenAs": "H N S W",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "IVF",
+      "kind": "letter-acronym",
+      "spokenAs": "I V F",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Flat",
+      "kind": "english-word",
+      "spokenAs": "Flat",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "SQL",
+      "kind": "letter-acronym",
+      "spokenAs": "S Q L",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "ANN",
+      "kind": "letter-acronym",
+      "spokenAs": "A N N",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "QPS",
+      "kind": "letter-acronym",
+      "spokenAs": "Q P S",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "P99",
+      "kind": "numeric-version",
+      "spokenAs": "P 99",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "HyDE",
+      "kind": "code-identifier",
+      "spokenAs": "Hyde",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Adaptive",
+      "kind": "english-word",
+      "spokenAs": "Adaptive",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Redis",
+      "kind": "english-word",
+      "spokenAs": "red is",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "GB",
+      "kind": "letter-acronym",
+      "spokenAs": "G B",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "jieba",
+      "kind": "english-word",
+      "spokenAs": "结巴",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "RRF",
+      "kind": "letter-acronym",
+      "spokenAs": "R R F",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "nDCG",
+      "kind": "code-identifier",
+      "spokenAs": "N D C G",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Transformer",
+      "kind": "english-word",
+      "spokenAs": "Transformer",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "MRR",
+      "kind": "letter-acronym",
+      "spokenAs": "M R R",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "CRAG",
+      "kind": "letter-acronym",
+      "spokenAs": "C R A G",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Self-RAG",
+      "kind": "code-identifier",
+      "spokenAs": "Self R A G",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "Reflexion",
+      "kind": "english-word",
+      "spokenAs": "Reflexion",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "LangGraph",
+      "kind": "code-identifier",
+      "spokenAs": "Lang Graph",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "RAGAS",
+      "kind": "letter-acronym",
+      "spokenAs": "R A G A S",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "TruLens",
+      "kind": "code-identifier",
+      "spokenAs": "Tru Lens",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "DeepEval",
+      "kind": "code-identifier",
+      "spokenAs": "Deep Eval",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    },
+    {
+      "token": "SLA",
+      "kind": "letter-acronym",
+      "spokenAs": "S L A",
+      "decision": "accepted",
+      "note": "Accepted while reviewing the selected full-length voice candidate."
+    }
+  ],
+  "audio": {
+    "path": "audio/narration.final.wav",
+    "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+    "durationSeconds": 1880.218458
+  },
+  "playbackSeconds": 1880.218458,
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f"
+    },
+    "pronunciation": {
+      "path": "input/pronunciation.effective.json",
+      "sha256": "9b847fa2c6b053ecd3f20e1bbb69736669732e83bc6a185e19cf960beb33921f"
+    },
+    "pronunciationApproval": {
+      "path": "qa/pronunciation-approval.json",
+      "sha256": "e491faa69b4db00b2ed9f9400f4c76a4caa7e589999398ee82ca85e85e741aff"
+    },
+    "index": {
+      "path": "audio/voice-candidates/index.json",
+      "sha256": "46079d82dc6e27575506a6d5c28f8cb99e43e2403185858d087a1de72c6c87a6"
+    },
+    "candidates": [
+      {
+        "candidateId": "candidate-001",
+        "manifestSha256": "7bdfbc458087473c4f2229cb66e51ab13bce6b0966f6525a57966e89ee16aec2",
+        "audioSha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702"
+      }
+    ]
+  },
+  "notes": "User explicitly confirmed full manual playback completed. The Workbench browser ended event did not persist, so this review records the direct human attestation without automated playback or seeking.",
+  "reviewedBy": "user",
+  "updatedAt": "2026-07-28T15:09:11.065Z",
+  "promotedAt": "2026-07-28T15:09:11.065Z",
+  "delegatedSimulation": null
+}

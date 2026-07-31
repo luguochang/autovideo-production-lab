@@ -1,0 +1,5091 @@
+{
+  "schemaVersion": "autovideo-storyboard/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "status": "deterministic-baseline",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "audioDurationSeconds": 1880.218458,
+    "timelineEndSeconds": 1880.218
+  },
+  "style": {
+    "id": "modern-ip-host-explainer",
+    "version": "1.0.0",
+    "palette": "light-apricot",
+    "templateLock": "template-lock.json",
+    "projectApproval": "pending"
+  },
+  "persistentZones": [
+    "host",
+    "content",
+    "caption"
+  ],
+  "defaultVisualOperation": "replace",
+  "allowedMotionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "scale-swap-transition",
+    "card-morph-anchor"
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "order": 1,
+      "title": "我按数据流把 RAG 全链路讲一",
+      "role": "hook",
+      "cueRange": {
+        "start": "cue-001",
+        "end": "cue-004"
+      },
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003",
+        "cue-004"
+      ],
+      "timing": {
+        "start": 0,
+        "end": 29.32,
+        "duration": 29.32
+      },
+      "plannedSrc": "production/compositions/scenes/01-scene-01.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "question",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "hold"
+      ],
+      "screenText": [
+        {
+          "id": "scene-01-text-01",
+          "text": "我按数据流把 RAG",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-001"
+          ]
+        },
+        {
+          "id": "scene-01-text-02",
+          "text": "整个链路分两段：离线建库把文档变成可检索的库，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-002"
+          ]
+        },
+        {
+          "id": "scene-01-text-03",
+          "text": "我顺着数据流一步步讲，每一步都说清楚有哪些选型、生产上一",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-003"
+          ]
+        },
+        {
+          "id": "scene-01-text-04",
+          "text": "因为 RAG 的每一步都不是非此即彼的单选",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-004"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-01-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-02",
+      "order": 2,
+      "title": "把这些判断讲清楚，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-005",
+        "end": "cue-009"
+      },
+      "cueIds": [
+        "cue-005",
+        "cue-006",
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "timing": {
+        "start": 29.32,
+        "end": 55.56,
+        "duration": 26.24
+      },
+      "plannedSrc": "production/compositions/scenes/02-scene-02.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-02-text-01",
+          "text": "把这些判断讲清楚，才能体现真正做过，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        },
+        {
+          "id": "scene-02-text-02",
+          "text": "链路第一站是文档解析。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        },
+        {
+          "id": "scene-02-text-03",
+          "text": "原始文档可能来自 PDF、Word、HTML 或 Con",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-007"
+          ]
+        },
+        {
+          "id": "scene-02-text-04",
+          "text": "这一步的目标是把异构文档变成结构化文本加元数据，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-008"
+          ]
+        },
+        {
+          "id": "scene-02-text-05",
+          "text": "先看解析工具，大致有这么几类。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-009"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-02-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-02"
+      ]
+    },
+    {
+      "id": "scene-03",
+      "order": 3,
+      "title": "一类是通用解析库，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-010",
+        "end": "cue-011"
+      },
+      "cueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "timing": {
+        "start": 55.56,
+        "end": 83.76,
+        "duration": 28.2
+      },
+      "plannedSrc": "production/compositions/scenes/03-scene-03.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-03-text-01",
+          "text": "一类是通用解析库，PyMuPDF、pdfplumber，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-010"
+          ]
+        },
+        {
+          "id": "scene-03-text-02",
+          "text": "它们支持的格式、中文复杂文档效果、公式和表格还原能力，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-03-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-04",
+      "order": 4,
+      "title": "具体到解析工具，先看文档复杂度。",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-012",
+        "end": "cue-014"
+      },
+      "cueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "timing": {
+        "start": 83.76,
+        "end": 109.7,
+        "duration": 25.94
+      },
+      "plannedSrc": "production/compositions/scenes/04-scene-04.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-04-text-01",
+          "text": "具体到解析工具，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-012"
+          ]
+        },
+        {
+          "id": "scene-04-text-02",
+          "text": "简单纯文本可以先用 PyMuPDF，速度快，成本也低；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-013"
+          ]
+        },
+        {
+          "id": "scene-04-text-03",
+          "text": "我自己的判断是，中文复杂文档场景 MinerU 优先，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-014"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-04-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-05",
+      "order": 5,
+      "title": "落地时，还有一个关键点：",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-015",
+        "end": "cue-016"
+      },
+      "cueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "timing": {
+        "start": 110.24,
+        "end": 140.44,
+        "duration": 30.2
+      },
+      "plannedSrc": "production/compositions/scenes/05-scene-05.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-05-text-01",
+          "text": "落地时，还有一个关键点：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-015"
+          ]
+        },
+        {
+          "id": "scene-05-text-02",
+          "text": "主解析用 MinerU 或 Unstructured 跑",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-016"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-05-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-05"
+      ]
+    },
+    {
+      "id": "scene-06",
+      "order": 6,
+      "title": "表格要单独整块保留，别被切碎。",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-017",
+        "end": "cue-021"
+      },
+      "cueIds": [
+        "cue-017",
+        "cue-018",
+        "cue-019",
+        "cue-020",
+        "cue-021"
+      ],
+      "timing": {
+        "start": 140.44,
+        "end": 159.84,
+        "duration": 19.4
+      },
+      "plannedSrc": "production/compositions/scenes/06-scene-06.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-06-text-01",
+          "text": "表格要单独整块保留，别被切碎。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-017"
+          ]
+        },
+        {
+          "id": "scene-06-text-02",
+          "text": "所以，只说“用 Mine",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-018"
+          ]
+        },
+        {
+          "id": "scene-06-text-03",
+          "text": "更准确的说法是：以 MinerU 为主解析，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-019"
+          ]
+        },
+        {
+          "id": "scene-06-text-04",
+          "text": "MinerU 是主引擎",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-020"
+          ]
+        },
+        {
+          "id": "scene-06-text-05",
+          "text": "那解析质量怎么验收？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-021"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-06-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-07",
+      "order": 7,
+      "title": "这一步自动化指标不多，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-022",
+        "end": "cue-023"
+      },
+      "cueIds": [
+        "cue-022",
+        "cue-023"
+      ],
+      "timing": {
+        "start": 159.84,
+        "end": 177.32,
+        "duration": 17.48
+      },
+      "plannedSrc": "production/compositions/scenes/07-scene-07.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-07-text-01",
+          "text": "这一步自动化指标不多，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-022"
+          ]
+        },
+        {
+          "id": "scene-07-text-02",
+          "text": "建立几十篇文档的评测集，人工标注正确解析结果，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-023"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-07-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-08",
+      "order": 8,
+      "title": "把基础解析跑稳以后，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-024",
+        "end": "cue-026"
+      },
+      "cueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "timing": {
+        "start": 177.32,
+        "end": 201.96,
+        "duration": 24.64
+      },
+      "plannedSrc": "production/compositions/scenes/08-scene-08.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-08-text-01",
+          "text": "把基础解析跑稳以后，还可以从三条线继续提升：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-024"
+          ]
+        },
+        {
+          "id": "scene-08-text-02",
+          "text": "解析完拿到结构化文本，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-025"
+          ]
+        },
+        {
+          "id": "scene-08-text-03",
+          "text": "为什么切？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-026"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-08-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-09",
+      "order": 9,
+      "title": "两个原因：LLM 上下文有上限，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-027",
+        "end": "cue-030"
+      },
+      "cueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029",
+        "cue-030"
+      ],
+      "timing": {
+        "start": 201.96,
+        "end": 223.02,
+        "duration": 21.06
+      },
+      "plannedSrc": "production/compositions/scenes/09-scene-09.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-09-text-01",
+          "text": "两个原因：LLM 上下文有上限，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-027"
+          ]
+        },
+        {
+          "id": "scene-09-text-02",
+          "text": "一篇文档既讲主题一又讲主题二，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-028"
+          ]
+        },
+        {
+          "id": "scene-09-text-03",
+          "text": "切成小片段，每片语义聚焦",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-029"
+          ]
+        },
+        {
+          "id": "scene-09-text-04",
+          "text": "分块方式主要有五种。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-030"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-09-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-10",
+      "order": 10,
+      "title": "固定长度切，简单但会切断句子；",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-031",
+        "end": "cue-032"
+      },
+      "cueIds": [
+        "cue-031",
+        "cue-032"
+      ],
+      "timing": {
+        "start": 223.02,
+        "end": 274.34,
+        "duration": 51.32
+      },
+      "plannedSrc": "production/compositions/scenes/10-scene-10.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-10-text-01",
+          "text": "固定长度切，简单但会切断句子；递归字符切分，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-031"
+          ]
+        },
+        {
+          "id": "scene-10-text-02",
+          "text": "分块怎么选，核心看文档结构。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-032"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-10-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-11",
+      "order": 11,
+      "title": "结构化文档——技术文档、知识库、",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-033",
+        "end": "cue-035"
+      },
+      "cueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "timing": {
+        "start": 274.34,
+        "end": 301.28,
+        "duration": 26.94
+      },
+      "plannedSrc": "production/compositions/scenes/11-scene-11.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-11-text-01",
+          "text": "结构化文档——技术文档、知识库、规范——按标题或条款切，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-033"
+          ]
+        },
+        {
+          "id": "scene-11-text-02",
+          "text": "一个常见起点是 512 词元配 10% 重叠比例，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-034"
+          ]
+        },
+        {
+          "id": "scene-11-text-03",
+          "text": "真正落地时，仍然是组合策略。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-035"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-11-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-12",
+      "order": 12,
+      "title": "生产上一般按文档类型分策略，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-036",
+        "end": "cue-038"
+      },
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "timing": {
+        "start": 301.28,
+        "end": 326.92,
+        "duration": 25.64
+      },
+      "plannedSrc": "production/compositions/scenes/12-scene-12.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-12-text-01",
+          "text": "生产上一般按文档类型分策略，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-036"
+          ]
+        },
+        {
+          "id": "scene-12-text-02",
+          "text": "比如同一个库里，施工规范按条款条文切，工艺手册按步骤切，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-037"
+          ]
+        },
+        {
+          "id": "scene-12-text-03",
+          "text": "而且切完每个文本块都要带上元数据——来源、章节、页码、条",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-038"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-12-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-12"
+      ]
+    },
+    {
+      "id": "scene-13",
+      "order": 13,
+      "title": "还有一个容易忽略的点，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-039",
+        "end": "cue-040"
+      },
+      "cueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "timing": {
+        "start": 326.92,
+        "end": 347.84,
+        "duration": 20.92
+      },
+      "plannedSrc": "production/compositions/scenes/13-scene-13.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-13-text-01",
+          "text": "还有一个容易忽略的点，LlamaIndex 生产指南强调",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-039"
+          ]
+        },
+        {
+          "id": "scene-13-text-02",
+          "text": "朴素 RAG 往往把两者当成同一个对象，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-040"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-13-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-14",
+      "order": 14,
+      "title": "分块效果不能只凭感觉，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-041",
+        "end": "cue-042"
+      },
+      "cueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "timing": {
+        "start": 348.38,
+        "end": 380.5,
+        "duration": 32.12
+      },
+      "plannedSrc": "production/compositions/scenes/14-scene-14.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-14-text-01",
+          "text": "分块效果不能只凭感觉，至少要看三类信号：文本块内聚度，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-041"
+          ]
+        },
+        {
+          "id": "scene-14-text-02",
+          "text": "分块还想继续提升，可以沿三个方向走：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-042"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-14-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-14"
+      ]
+    },
+    {
+      "id": "scene-15",
+      "order": 15,
+      "title": "分块后、向量化前，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-043",
+        "end": "cue-047"
+      },
+      "cueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045",
+        "cue-046",
+        "cue-047"
+      ],
+      "timing": {
+        "start": 381.04,
+        "end": 404.48,
+        "duration": 23.44
+      },
+      "plannedSrc": "production/compositions/scenes/15-scene-15.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-15-text-01",
+          "text": "分块后、向量化前，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-043"
+          ]
+        },
+        {
+          "id": "scene-15-text-02",
+          "text": "这一步经常被跳过，但我认为它是值得优先评估",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-044"
+          ]
+        },
+        {
+          "id": "scene-15-text-03",
+          "text": "问题在哪：一个文本块脱离原文",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-045"
+          ]
+        },
+        {
+          "id": "scene-15-text-04",
+          "text": "比如，某个文本块只写“它的定价",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-046"
+          ]
+        },
+        {
+          "id": "scene-15-text-05",
+          "text": "脱离原文，你根本不知道这里的“它”指谁，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-047"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-15-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-16",
+      "order": 16,
+      "title": "这类上下文增强，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-048",
+        "end": "cue-051"
+      },
+      "cueIds": [
+        "cue-048",
+        "cue-049",
+        "cue-050",
+        "cue-051"
+      ],
+      "timing": {
+        "start": 404.96,
+        "end": 434.68,
+        "duration": 29.72
+      },
+      "plannedSrc": "production/compositions/scenes/16-scene-16.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-16-text-01",
+          "text": "这类上下文增强，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-048"
+          ]
+        },
+        {
+          "id": "scene-16-text-02",
+          "text": "一个是 Anthropic 2024 年 9 月的上下文",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-049"
+          ]
+        },
+        {
+          "id": "scene-16-text-03",
+          "text": "上下文检索值不值得上？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-050"
+          ]
+        },
+        {
+          "id": "scene-16-text-04",
+          "text": "公开实验结果很有参考价值，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-051"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-16-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-17",
+      "order": 17,
+      "title": "按 Anthropic 2024",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-052",
+        "end": "cue-055"
+      },
+      "cueIds": [
+        "cue-052",
+        "cue-053",
+        "cue-054",
+        "cue-055"
+      ],
+      "timing": {
+        "start": 434.68,
+        "end": 464.64,
+        "duration": 29.96
+      },
+      "plannedSrc": "production/compositions/scenes/17-scene-17.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-17-text-01",
+          "text": "按 Anthropic 2024 年 9 月发布的材料，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-052"
+          ]
+        },
+        {
+          "id": "scene-17-text-02",
+          "text": "这些数字只代表其公开实验，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-053"
+          ]
+        },
+        {
+          "id": "scene-17-text-03",
+          "text": "它不需要额外训练模型，但如果不给提示词做缓存，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-054"
+          ]
+        },
+        {
+          "id": "scene-17-text-04",
+          "text": "该材料还给出了当时的缓存价格示例；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-055"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-17-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-18",
+      "order": 18,
+      "title": "框架通常需要自己组装这条链路。",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-056",
+        "end": "cue-059"
+      },
+      "cueIds": [
+        "cue-056",
+        "cue-057",
+        "cue-058",
+        "cue-059"
+      ],
+      "timing": {
+        "start": 464.64,
+        "end": 490.98,
+        "duration": 26.34
+      },
+      "plannedSrc": "production/compositions/scenes/18-scene-18.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-18-text-01",
+          "text": "框架通常需要自己组装这条链路。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-056"
+          ]
+        },
+        {
+          "id": "scene-18-text-02",
+          "text": "具体接入链路时，这一步是可选增强，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-057"
+          ]
+        },
+        {
+          "id": "scene-18-text-03",
+          "text": "我的判断是，如果文本块切得比较小、或者文档语义关联强、或",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-058"
+          ]
+        },
+        {
+          "id": "scene-18-text-04",
+          "text": "如果想叠加两路收益，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-059"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-18-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-19",
+      "order": 19,
+      "title": "可以和延迟分块二选一或组合，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-060",
+        "end": "cue-062"
+      },
+      "cueIds": [
+        "cue-060",
+        "cue-061",
+        "cue-062"
+      ],
+      "timing": {
+        "start": 490.98,
+        "end": 520.88,
+        "duration": 29.9
+      },
+      "plannedSrc": "production/compositions/scenes/19-scene-19.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-19-text-01",
+          "text": "可以和延迟分块二选一或组合，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-060"
+          ]
+        },
+        {
+          "id": "scene-19-text-02",
+          "text": "这套增强值不值得上，要靠对照实验回答：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-061"
+          ]
+        },
+        {
+          "id": "scene-19-text-03",
+          "text": "如果对照实验确认有收益，再继续比较三件事：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-062"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-19-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-20",
+      "order": 20,
+      "title": "文本块准备好，接下来向量化。",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-063",
+        "end": "cue-067"
+      },
+      "cueIds": [
+        "cue-063",
+        "cue-064",
+        "cue-065",
+        "cue-066",
+        "cue-067"
+      ],
+      "timing": {
+        "start": 520.98,
+        "end": 550.54,
+        "duration": 29.56
+      },
+      "plannedSrc": "production/compositions/scenes/20-scene-20.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-20-text-01",
+          "text": "文本块准备好，接下来向量化。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-063"
+          ]
+        },
+        {
+          "id": "scene-20-text-02",
+          "text": "向量模型把文本变定长向量，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-064"
+          ]
+        },
+        {
+          "id": "scene-20-text-03",
+          "text": "向量模型先分开源和商业两类。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-065"
+          ]
+        },
+        {
+          "id": "scene-20-text-04",
+          "text": "中文开源候选包括 BGE 系列；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-066"
+          ]
+        },
+        {
+          "id": "scene-20-text-05",
+          "text": "商业候选包括 OpenAI、Voyage 和 Coher",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-067"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-20-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-21",
+      "order": 21,
+      "title": "具体版本、维度和输入类型，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-068",
+        "end": "cue-072"
+      },
+      "cueIds": [
+        "cue-068",
+        "cue-069",
+        "cue-070",
+        "cue-071",
+        "cue-072"
+      ],
+      "timing": {
+        "start": 550.98,
+        "end": 576.92,
+        "duration": 25.94
+      },
+      "plannedSrc": "production/compositions/scenes/21-scene-21.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-21-text-01",
+          "text": "具体版本、维度和输入类型，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-068"
+          ]
+        },
+        {
+          "id": "scene-21-text-02",
+          "text": "向量模型怎么选？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-069"
+          ]
+        },
+        {
+          "id": "scene-21-text-03",
+          "text": "主要看三个方面。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-070"
+          ]
+        },
+        {
+          "id": "scene-21-text-04",
+          "text": "第一是中文效果，BGE 系列通常是中文开源方案的重要候",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-071"
+          ]
+        },
+        {
+          "id": "scene-21-text-05",
+          "text": "第二是部署边界，企业知识不能出域时优先评估本地模型；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-072"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-21-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-21"
+      ]
+    },
+    {
+      "id": "scene-22",
+      "order": 22,
+      "title": "第三是维度，3072 维的存储和",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-073",
+        "end": "cue-076"
+      },
+      "cueIds": [
+        "cue-073",
+        "cue-074",
+        "cue-075",
+        "cue-076"
+      ],
+      "timing": {
+        "start": 577.46,
+        "end": 605.72,
+        "duration": 28.26
+      },
+      "plannedSrc": "production/compositions/scenes/22-scene-22.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-22-text-01",
+          "text": "第三是维度，3072 维的存储和检索成本更高，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-073"
+          ]
+        },
+        {
+          "id": "scene-22-text-02",
+          "text": "我的默认起点是中文企业场景先评估 BGE，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-074"
+          ]
+        },
+        {
+          "id": "scene-22-text-03",
+          "text": "这里有三个很容易踩的坑。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-075"
+          ]
+        },
+        {
+          "id": "scene-22-text-04",
+          "text": "第一，查询和文档要使用相互兼容的向量模型配置；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-076"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-22-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-23",
+      "order": 23,
+      "title": "第二，换模型等于全库重新计算向量",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-077",
+        "end": "cue-079"
+      },
+      "cueIds": [
+        "cue-077",
+        "cue-078",
+        "cue-079"
+      ],
+      "timing": {
+        "start": 606.1,
+        "end": 628.32,
+        "duration": 22.22
+      },
+      "plannedSrc": "production/compositions/scenes/23-scene-23.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-23-text-01",
+          "text": "第二，换模型等于全库重新计算向量，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-077"
+          ]
+        },
+        {
+          "id": "scene-23-text-02",
+          "text": "第三，MTEB 榜单只能作为参考，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-078"
+          ]
+        },
+        {
+          "id": "scene-23-text-03",
+          "text": "向量模型选得对不对，重点看三件事：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-079"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-23-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-23"
+      ]
+    },
+    {
+      "id": "scene-24",
+      "order": 24,
+      "title": "后续优化可以从能力、成本和领域适",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-080",
+        "end": "cue-082"
+      },
+      "cueIds": [
+        "cue-080",
+        "cue-081",
+        "cue-082"
+      ],
+      "timing": {
+        "start": 628.84,
+        "end": 653.34,
+        "duration": 24.5
+      },
+      "plannedSrc": "production/compositions/scenes/24-scene-24.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-24-text-01",
+          "text": "后续优化可以从能力、成本和领域适配三条线展开：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-080"
+          ]
+        },
+        {
+          "id": "scene-24-text-02",
+          "text": "向量存哪、怎么检索，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-081"
+          ]
+        },
+        {
+          "id": "scene-24-text-03",
+          "text": "向量库的候选包括 pgvector、Milvus、Wea",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-082"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-24-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-25",
+      "order": 25,
+      "title": "pgvector 的优势是复用 ",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-083",
+        "end": "cue-085"
+      },
+      "cueIds": [
+        "cue-083",
+        "cue-084",
+        "cue-085"
+      ],
+      "timing": {
+        "start": 653.72,
+        "end": 680.04,
+        "duration": 26.32
+      },
+      "plannedSrc": "production/compositions/scenes/25-scene-25.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-25-text-01",
+          "text": "pgvector 的优势是复用 PostgreSQL 的",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-083"
+          ]
+        },
+        {
+          "id": "scene-25-text-02",
+          "text": "常见索引算法包括 HNSW、",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-084"
+          ]
+        },
+        {
+          "id": "scene-25-text-03",
+          "text": "它们分别偏向低延迟、高规模或精确基线，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-085"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-25-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-26",
+      "order": 26,
+      "title": "向量库怎么选，核心看三件事：",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-086",
+        "end": "cue-088"
+      },
+      "cueIds": [
+        "cue-086",
+        "cue-087",
+        "cue-088"
+      ],
+      "timing": {
+        "start": 680.04,
+        "end": 706.78,
+        "duration": 26.74
+      },
+      "plannedSrc": "production/compositions/scenes/26-scene-26.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-26-text-01",
+          "text": "向量库怎么选，核心看三件事：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-086"
+          ]
+        },
+        {
+          "id": "scene-26-text-02",
+          "text": "我的判断是：在中小规模、已有 PostgreSQL、又需",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-087"
+          ]
+        },
+        {
+          "id": "scene-26-text-03",
+          "text": "理由很实在：后端团队熟悉 SQL，可以先按元数据过滤，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-088"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-26-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-27",
+      "order": 27,
+      "title": "规模、延迟或分片需求超过单库能力",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-089",
+        "end": "cue-093"
+      },
+      "cueIds": [
+        "cue-089",
+        "cue-090",
+        "cue-091",
+        "cue-092",
+        "cue-093"
+      ],
+      "timing": {
+        "start": 706.78,
+        "end": 735.72,
+        "duration": 28.94
+      },
+      "plannedSrc": "production/compositions/scenes/27-scene-27.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-27-text-01",
+          "text": "规模、延迟或分片需求超过单库能力后，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-089"
+          ]
+        },
+        {
+          "id": "scene-27-text-02",
+          "text": "需要内置混合检索时，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-090"
+          ]
+        },
+        {
+          "id": "scene-27-text-03",
+          "text": "具体迁移阈值不能只看片段数量",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-091"
+          ]
+        },
+        {
+          "id": "scene-27-text-04",
+          "text": "以 pgvector 为例，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-092"
+          ]
+        },
+        {
+          "id": "scene-27-text-05",
+          "text": "一个库管理两种索引，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-093"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-27-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-28",
+      "order": 28,
+      "title": "HNSW 参数可以先从常见组合开",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-094",
+        "end": "cue-098"
+      },
+      "cueIds": [
+        "cue-094",
+        "cue-095",
+        "cue-096",
+        "cue-097",
+        "cue-098"
+      ],
+      "timing": {
+        "start": 735.72,
+        "end": 764.18,
+        "duration": 28.46
+      },
+      "plannedSrc": "production/compositions/scenes/28-scene-28.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-28-text-01",
+          "text": "HNSW 参数可以先从常",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-094"
+          ]
+        },
+        {
+          "id": "scene-28-text-02",
+          "text": "构建阶段调整连接度和构建深度，查询阶段再调搜索深度，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-095"
+          ]
+        },
+        {
+          "id": "scene-28-text-03",
+          "text": "还要配合元数据打标，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-096"
+          ]
+        },
+        {
+          "id": "scene-28-text-04",
+          "text": "pgvector 的索引维护和空间回",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-097"
+          ]
+        },
+        {
+          "id": "scene-28-text-05",
+          "text": "在我参与的一个知识智能体项目里，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-098"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-28-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-29",
+      "order": 29,
+      "title": "向量库和索引不能只看速度。",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-099",
+        "end": "cue-100"
+      },
+      "cueIds": [
+        "cue-099",
+        "cue-100"
+      ],
+      "timing": {
+        "start": 764.72,
+        "end": 780.02,
+        "duration": 15.3
+      },
+      "plannedSrc": "production/compositions/scenes/29-scene-29.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-29-text-01",
+          "text": "向量库和索引不能只看速度。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-099"
+          ]
+        },
+        {
+          "id": "scene-29-text-02",
+          "text": "ANN 召回率要先和 Flat 暴力搜索对比，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-100"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-29-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-30",
+      "order": 30,
+      "title": "数据规模继续增长时，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-101",
+        "end": "cue-104"
+      },
+      "cueIds": [
+        "cue-101",
+        "cue-102",
+        "cue-103",
+        "cue-104"
+      ],
+      "timing": {
+        "start": 780.02,
+        "end": 806.62,
+        "duration": 26.6
+      },
+      "plannedSrc": "production/compositions/scenes/30-scene-30.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-30-text-01",
+          "text": "数据规模继续增长时，再逐步考虑 HNSW 参数调优、用乘",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-101"
+          ]
+        },
+        {
+          "id": "scene-30-text-02",
+          "text": "离线建库讲完，进入在线，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-102"
+          ]
+        },
+        {
+          "id": "scene-30-text-03",
+          "text": "查询进来先别急着检索，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-103"
+          ]
+        },
+        {
+          "id": "scene-30-text-04",
+          "text": "查询理解可以拆成两块。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-104"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-30-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-31",
+      "order": 31,
+      "title": "一块是查询改写：多查询扩展，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-105",
+        "end": "cue-106"
+      },
+      "cueIds": [
+        "cue-105",
+        "cue-106"
+      ],
+      "timing": {
+        "start": 806.62,
+        "end": 836.32,
+        "duration": 29.7
+      },
+      "plannedSrc": "production/compositions/scenes/31-scene-31.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-31-text-01",
+          "text": "一块是查询改写：多查询扩展，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-105"
+          ]
+        },
+        {
+          "id": "scene-31-text-02",
+          "text": "另一块是查询路由：Adaptive RAG，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-106"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-31-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-32",
+      "order": 32,
+      "title": "查询改写要不要做，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-107",
+        "end": "cue-110"
+      },
+      "cueIds": [
+        "cue-107",
+        "cue-108",
+        "cue-109",
+        "cue-110"
+      ],
+      "timing": {
+        "start": 836.32,
+        "end": 863.84,
+        "duration": 27.52
+      },
+      "plannedSrc": "production/compositions/scenes/32-scene-32.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-32-text-01",
+          "text": "查询改写要不要做，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-107"
+          ]
+        },
+        {
+          "id": "scene-32-text-02",
+          "text": "简单事实查询直接检索就好，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-108"
+          ]
+        },
+        {
+          "id": "scene-32-text-03",
+          "text": "所以一般先做自适应路由判断，简单的直接走，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-109"
+          ]
+        },
+        {
+          "id": "scene-32-text-04",
+          "text": "改写策略里，多查询扩展适用面相对广；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-110"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-32-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-33",
+      "order": 33,
+      "title": "落地时，我通常把路由判断和按需改",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-111",
+        "end": "cue-113"
+      },
+      "cueIds": [
+        "cue-111",
+        "cue-112",
+        "cue-113"
+      ],
+      "timing": {
+        "start": 863.84,
+        "end": 886.66,
+        "duration": 22.82
+      },
+      "plannedSrc": "production/compositions/scenes/33-scene-33.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-33-text-01",
+          "text": "落地时，我通常把路由判断和按",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-111"
+          ]
+        },
+        {
+          "id": "scene-33-text-02",
+          "text": "先用分类器或大模型路由器判断查询类型，决定走哪条路：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-112"
+          ]
+        },
+        {
+          "id": "scene-33-text-03",
+          "text": "改写也不是四种方法全上，根据查询特点选——模糊的用多查询",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-113"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-33-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-34",
+      "order": 34,
+      "title": "多轮对话场景还要结合会话上下文做",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-114",
+        "end": "cue-116"
+      },
+      "cueIds": [
+        "cue-114",
+        "cue-115",
+        "cue-116"
+      ],
+      "timing": {
+        "start": 886.66,
+        "end": 914.76,
+        "duration": 28.1
+      },
+      "plannedSrc": "production/compositions/scenes/34-scene-34.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-34-text-01",
+          "text": "多轮对话场景还要结合会话上下文做指代消解和条件补全",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-114"
+          ]
+        },
+        {
+          "id": "scene-34-text-02",
+          "text": "查询理解有没有带来收益，主要看改写后前若干结果的召回率是",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-115"
+          ]
+        },
+        {
+          "id": "scene-34-text-03",
+          "text": "查询理解跑稳以后，可以继续评估自适应 RAG 的事前路由",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-116"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-34-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-35",
+      "order": 35,
+      "title": "查询理解完，正式检索。",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-117",
+        "end": "cue-119"
+      },
+      "cueIds": [
+        "cue-117",
+        "cue-118",
+        "cue-119"
+      ],
+      "timing": {
+        "start": 914.76,
+        "end": 938.42,
+        "duration": 23.66
+      },
+      "plannedSrc": "production/compositions/scenes/35-scene-35.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-35-text-01",
+          "text": "查询理解完，正式检索。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-117"
+          ]
+        },
+        {
+          "id": "scene-35-text-02",
+          "text": "这一步是召回的主力。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-118"
+          ]
+        },
+        {
+          "id": "scene-35-text-03",
+          "text": "检索方式可以先分成几类：纯向量检索，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-119"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-35-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-36",
+      "order": 36,
+      "title": "BM25 的参数可以先用论文里的",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-120",
+        "end": "cue-123"
+      },
+      "cueIds": [
+        "cue-120",
+        "cue-121",
+        "cue-122",
+        "cue-123"
+      ],
+      "timing": {
+        "start": 938.42,
+        "end": 963.12,
+        "duration": 24.7
+      },
+      "plannedSrc": "production/compositions/scenes/36-scene-36.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-36-text-01",
+          "text": "BM25 的参数可以先用论文里的常见默认值，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-120"
+          ]
+        },
+        {
+          "id": "scene-36-text-02",
+          "text": "检索这一层，先要认清纯向量检索会在",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-121"
+          ]
+        },
+        {
+          "id": "scene-36-text-03",
+          "text": "第一类是编号查询，比如“GB 50204 第 4.1.",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-122"
+          ]
+        },
+        {
+          "id": "scene-36-text-04",
+          "text": "第二类是术语精确查询，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-123"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-36-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-37",
+      "order": 37,
+      "title": "所以生产上通常至少要评估混合检索",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-124",
+        "end": "cue-127"
+      },
+      "cueIds": [
+        "cue-124",
+        "cue-125",
+        "cue-126",
+        "cue-127"
+      ],
+      "timing": {
+        "start": 963.68,
+        "end": 989.94,
+        "duration": 26.26
+      },
+      "plannedSrc": "production/compositions/scenes/37-scene-37.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-37-text-01",
+          "text": "所以生产上通常至少要评估混合检索，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-124"
+          ]
+        },
+        {
+          "id": "scene-37-text-02",
+          "text": "如果场景里编号、术语、表格多，再评估多路检索，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-125"
+          ]
+        },
+        {
+          "id": "scene-37-text-03",
+          "text": "真正跑在线链路时，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-126"
+          ]
+        },
+        {
+          "id": "scene-37-text-04",
+          "text": "向量路使用 pgvector，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-127"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-37-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-38",
+      "order": 38,
+      "title": "规范文档场景会加到四路：",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-128",
+        "end": "cue-132"
+      },
+      "cueIds": [
+        "cue-128",
+        "cue-129",
+        "cue-130",
+        "cue-131",
+        "cue-132"
+      ],
+      "timing": {
+        "start": 990.58,
+        "end": 1013.04,
+        "duration": 22.46
+      },
+      "plannedSrc": "production/compositions/scenes/38-scene-38.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-38-text-01",
+          "text": "规范文档场景会加到四路：向量、全文、用正则做结构化的编号",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-128"
+          ]
+        },
+        {
+          "id": "scene-38-text-02",
+          "text": "每一路负责一类查询。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-129"
+          ]
+        },
+        {
+          "id": "scene-38-text-03",
+          "text": "BM25 中文要分词，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-130"
+          ]
+        },
+        {
+          "id": "scene-38-text-04",
+          "text": "具体几路要看场景。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-131"
+          ]
+        },
+        {
+          "id": "scene-38-text-05",
+          "text": "每加一路都可能补充召回，也会增加噪声和延迟，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-132"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-38-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-39",
+      "order": 39,
+      "title": "在我参与的一个规范文档项目里，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-133",
+        "end": "cue-135"
+      },
+      "cueIds": [
+        "cue-133",
+        "cue-134",
+        "cue-135"
+      ],
+      "timing": {
+        "start": 1013.56,
+        "end": 1040.26,
+        "duration": 26.7
+      },
+      "plannedSrc": "production/compositions/scenes/39-scene-39.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-39-text-01",
+          "text": "在我参与的一个规范文档项目里，我们采用过四路混合检索，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-133"
+          ]
+        },
+        {
+          "id": "scene-39-text-02",
+          "text": "召回层是否有效，先看前若干结果的召回率和命中率，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-134"
+          ]
+        },
+        {
+          "id": "scene-39-text-03",
+          "text": "召回还不够时，优先从三处优化：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-135"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-39-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-40",
+      "order": 40,
+      "title": "多路检索拿到的是多份候选，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-136",
+        "end": "cue-139"
+      },
+      "cueIds": [
+        "cue-136",
+        "cue-137",
+        "cue-138",
+        "cue-139"
+      ],
+      "timing": {
+        "start": 1040.82,
+        "end": 1067.08,
+        "duration": 26.26
+      },
+      "plannedSrc": "production/compositions/scenes/40-scene-40.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-40-text-01",
+          "text": "多路检索拿到的是多份候选，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-136"
+          ]
+        },
+        {
+          "id": "scene-40-text-02",
+          "text": "融合方案里，RRF 也就是倒数排名融合，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-137"
+          ]
+        },
+        {
+          "id": "scene-40-text-03",
+          "text": "RRF 是常见默认方案。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-138"
+          ]
+        },
+        {
+          "id": "scene-40-text-04",
+          "text": "融合阶段为什么常从 RRF 开始？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-139"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-40-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-41",
+      "order": 41,
+      "title": "先看它的计算方式：",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-140",
+        "end": "cue-143"
+      },
+      "cueIds": [
+        "cue-140",
+        "cue-141",
+        "cue-142",
+        "cue-143"
+      ],
+      "timing": {
+        "start": 1067.08,
+        "end": 1093.98,
+        "duration": 26.9
+      },
+      "plannedSrc": "production/compositions/scenes/41-scene-41.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-41-text-01",
+          "text": "先看它的计算方式：每一路用 1 除以常数加名次，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-140"
+          ]
+        },
+        {
+          "id": "scene-41-text-02",
+          "text": "为什么用排名不用分数？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-141"
+          ]
+        },
+        {
+          "id": "scene-41-text-03",
+          "text": "因为各路尺度不同不可比，直接加权没意义；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-142"
+          ]
+        },
+        {
+          "id": "scene-41-text-04",
+          "text": "常数取 60 是常见的论文经验起点，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-143"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-41-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-42",
+      "order": 42,
+      "title": "LangChain 已经提供混合",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-144",
+        "end": "cue-148"
+      },
+      "cueIds": [
+        "cue-144",
+        "cue-145",
+        "cue-146",
+        "cue-147",
+        "cue-148"
+      ],
+      "timing": {
+        "start": 1094.72,
+        "end": 1124.1,
+        "duration": 29.38
+      },
+      "plannedSrc": "production/compositions/scenes/42-scene-42.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-42-text-01",
+          "text": "LangChain 已经提供混合检索加 RRF ",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-144"
+          ]
+        },
+        {
+          "id": "scene-42-text-02",
+          "text": "工程上，我通常先用标准 RRF。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-145"
+          ]
+        },
+        {
+          "id": "scene-42-text-03",
+          "text": "但如果某一路明显比其他路准，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-146"
+          ]
+        },
+        {
+          "id": "scene-42-text-04",
+          "text": "一般场景可以先从标准 RRF 开始，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-147"
+          ]
+        },
+        {
+          "id": "scene-42-text-05",
+          "text": "融合是否真的有增益，可以看融合后的 nDCG、和单路",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-148"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-42-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-43",
+      "order": 43,
+      "title": "重叠率太低可能没有互补价值，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-149",
+        "end": "cue-152"
+      },
+      "cueIds": [
+        "cue-149",
+        "cue-150",
+        "cue-151",
+        "cue-152"
+      ],
+      "timing": {
+        "start": 1124.1,
+        "end": 1148.16,
+        "duration": 24.06
+      },
+      "plannedSrc": "production/compositions/scenes/43-scene-43.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-43-text-01",
+          "text": "重叠率太低可能没有互补价值，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-149"
+          ]
+        },
+        {
+          "id": "scene-43-text-02",
+          "text": "有了标注数据以后，可以进一步学习融合权重；在此之前，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-150"
+          ]
+        },
+        {
+          "id": "scene-43-text-03",
+          "text": "融合完拿到前五十条候选，还混着噪声，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-151"
+          ]
+        },
+        {
+          "id": "scene-43-text-04",
+          "text": "重排方案主要包括交叉编码器和",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-152"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-43-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-44",
+      "order": 44,
+      "title": "交叉编码器把查询和文档放进同一个",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-153",
+        "end": "cue-156"
+      },
+      "cueIds": [
+        "cue-153",
+        "cue-154",
+        "cue-155",
+        "cue-156"
+      ],
+      "timing": {
+        "start": 1148.16,
+        "end": 1174.16,
+        "duration": 26
+      },
+      "plannedSrc": "production/compositions/scenes/44-scene-44.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-44-text-01",
+          "text": "交叉编码器把查询和文档放进同一个 Transformer",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-153"
+          ]
+        },
+        {
+          "id": "scene-44-text-02",
+          "text": "ColBERT 采用延迟交互，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-154"
+          ]
+        },
+        {
+          "id": "scene-44-text-03",
+          "text": "双塔编码器负责稠密召回，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-155"
+          ]
+        },
+        {
+          "id": "scene-44-text-04",
+          "text": "到了重排这里，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-156"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-44-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-45",
+      "order": 45,
+      "title": "向量召回是双塔，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-157",
+        "end": "cue-158"
+      },
+      "cueIds": [
+        "cue-157",
+        "cue-158"
+      ],
+      "timing": {
+        "start": 1174.16,
+        "end": 1201.98,
+        "duration": 27.82
+      },
+      "plannedSrc": "production/compositions/scenes/45-scene-45.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-45-text-01",
+          "text": "向量召回是双塔，查询和文档各自编码再算相似度，快但粗，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-157"
+          ]
+        },
+        {
+          "id": "scene-45-text-02",
+          "text": "所以架构是先双塔粗召前五十条，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-158"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-45-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-46",
+      "order": 46,
+      "title": "Anthropic 的公开流程示",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-159",
+        "end": "cue-162"
+      },
+      "cueIds": [
+        "cue-159",
+        "cue-160",
+        "cue-161",
+        "cue-162"
+      ],
+      "timing": {
+        "start": 1201.98,
+        "end": 1231.82,
+        "duration": 29.84
+      },
+      "plannedSrc": "production/compositions/scenes/46-scene-46.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-46-text-01",
+          "text": "Anthropic 的公开流程示例采用混合检索取前一百五",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-159"
+          ]
+        },
+        {
+          "id": "scene-46-text-02",
+          "text": "如果采用交叉编码器，可以先评估 BGE 系列的开源重排模",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-160"
+          ]
+        },
+        {
+          "id": "scene-46-text-03",
+          "text": "候选数量要用离线指标和延迟压测共同决定，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-161"
+          ]
+        },
+        {
+          "id": "scene-46-text-04",
+          "text": "LangChain 也可",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-162"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-46-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-46"
+      ]
+    },
+    {
+      "id": "scene-47",
+      "order": 47,
+      "title": "重排值不值得这段额外延迟，",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-163",
+        "end": "cue-165"
+      },
+      "cueIds": [
+        "cue-163",
+        "cue-164",
+        "cue-165"
+      ],
+      "timing": {
+        "start": 1231.98,
+        "end": 1258.06,
+        "duration": 26.08
+      },
+      "plannedSrc": "production/compositions/scenes/47-scene-47.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-47-text-01",
+          "text": "重排值不值得这段额外延迟，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-163"
+          ]
+        },
+        {
+          "id": "scene-47-text-02",
+          "text": "重排层后续可以继续比较 ColBERT 的延迟交互、Co",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-164"
+          ]
+        },
+        {
+          "id": "scene-47-text-03",
+          "text": "检索拿到前若干条证据，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-165"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-47-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-48",
+      "order": 48,
+      "title": "普通 RAG 是直线——检索完直",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-166",
+        "end": "cue-169"
+      },
+      "cueIds": [
+        "cue-166",
+        "cue-167",
+        "cue-168",
+        "cue-169"
+      ],
+      "timing": {
+        "start": 1258.06,
+        "end": 1278.58,
+        "duration": 20.52
+      },
+      "plannedSrc": "production/compositions/scenes/48-scene-48.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-48-text-01",
+          "text": "普通 RAG 是直线——检索完直接生成",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-166"
+          ]
+        },
+        {
+          "id": "scene-48-text-02",
+          "text": "智能体式 RAG 是状态机，拿到证据先评估，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-167"
+          ]
+        },
+        {
+          "id": "scene-48-text-03",
+          "text": "这一步我多讲点，因为这是智能体式之所以",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-168"
+          ]
+        },
+        {
+          "id": "scene-48-text-04",
+          "text": "这些智能体式方案，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-169"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-48-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-49",
+      "order": 49,
+      "title": "事前是自适应 RAG，",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-170",
+        "end": "cue-171"
+      },
+      "cueIds": [
+        "cue-170",
+        "cue-171"
+      ],
+      "timing": {
+        "start": 1278.58,
+        "end": 1323.02,
+        "duration": 44.44
+      },
+      "plannedSrc": "production/compositions/scenes/49-scene-49.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-49-text-01",
+          "text": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-170"
+          ]
+        },
+        {
+          "id": "scene-49-text-02",
+          "text": "智能体式 RAG 怎么落到生产？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-171"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-49-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-50",
+      "order": 50,
+      "title": "自反思 RAG 原版需要微调，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-172",
+        "end": "cue-174"
+      },
+      "cueIds": [
+        "cue-172",
+        "cue-173",
+        "cue-174"
+      ],
+      "timing": {
+        "start": 1323.02,
+        "end": 1342.7,
+        "duration": 19.68
+      },
+      "plannedSrc": "production/compositions/scenes/50-scene-50.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-50-text-01",
+          "text": "自反思 RAG 原版需要微调，实施门槛较高，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-172"
+          ]
+        },
+        {
+          "id": "scene-50-text-02",
+          "text": "生产务实做法是用大模型裁判模拟反思——用提示词让 LLM",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-173"
+          ]
+        },
+        {
+          "id": "scene-50-text-03",
+          "text": "思想来自自反思方案，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-174"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-50-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-51",
+      "order": 51,
+      "title": "四个反思时机里，支持性检查，",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-175",
+        "end": "cue-177"
+      },
+      "cueIds": [
+        "cue-175",
+        "cue-176",
+        "cue-177"
+      ],
+      "timing": {
+        "start": 1342.7,
+        "end": 1369.08,
+        "duration": 26.38
+      },
+      "plannedSrc": "production/compositions/scenes/51-scene-51.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-51-text-01",
+          "text": "四个反思时机里，支持性检查，也就是答案是否被上下文支持，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-175"
+          ]
+        },
+        {
+          "id": "scene-51-text-02",
+          "text": "落地时，生产智能体式通常先做证据充分性评估、改写重试和拒",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-176"
+          ]
+        },
+        {
+          "id": "scene-51-text-03",
+          "text": "拿到前若干条证据，先综合证据数、相关度和引",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-177"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-51-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-52",
+      "order": 52,
+      "title": "不够就改写查询，再检索一次；",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-178",
+        "end": "cue-181"
+      },
+      "cueIds": [
+        "cue-178",
+        "cue-179",
+        "cue-180",
+        "cue-181"
+      ],
+      "timing": {
+        "start": 1369.08,
+        "end": 1395.36,
+        "duration": 26.28
+      },
+      "plannedSrc": "production/compositions/scenes/52-scene-52.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-52-text-01",
+          "text": "不够就改写查询，再检索一次；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-178"
+          ]
+        },
+        {
+          "id": "scene-52-text-02",
+          "text": "够了才生成，实在不够就",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-179"
+          ]
+        },
+        {
+          "id": "scene-52-text-03",
+          "text": "整个决策循环我用 LangGraph 的图状态机实现，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-180"
+          ]
+        },
+        {
+          "id": "scene-52-text-04",
+          "text": "坑是 LLM 自评有偏差偏好自己答案，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-181"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-52-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-53",
+      "order": 53,
+      "title": "在我参与的一个项目里，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-182",
+        "end": "cue-183"
+      },
+      "cueIds": [
+        "cue-182",
+        "cue-183"
+      ],
+      "timing": {
+        "start": 1395.36,
+        "end": 1419.9,
+        "duration": 24.54
+      },
+      "plannedSrc": "production/compositions/scenes/53-scene-53.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-53-text-01",
+          "text": "在我参与的一个项目里，我们采用了这套轻量闭环，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-182"
+          ]
+        },
+        {
+          "id": "scene-53-text-02",
+          "text": "这套闭环不能只看答案漂亮不漂亮，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-183"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-53-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-54",
+      "order": 54,
+      "title": "轻量闭环跑稳以后，",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-184",
+        "end": "cue-186"
+      },
+      "cueIds": [
+        "cue-184",
+        "cue-185",
+        "cue-186"
+      ],
+      "timing": {
+        "start": 1420.4,
+        "end": 1448.74,
+        "duration": 28.34
+      },
+      "plannedSrc": "production/compositions/scenes/54-scene-54.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-54-text-01",
+          "text": "轻量闭环跑稳以后，再逐步评估跨轮能力：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-184"
+          ]
+        },
+        {
+          "id": "scene-54-text-02",
+          "text": "证据够了，生成最终答案。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-185"
+          ]
+        },
+        {
+          "id": "scene-54-text-03",
+          "text": "到了生成阶段，先把提示词约束做好：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-186"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-54-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-55",
+      "order": 55,
+      "title": "引用有三种实现。",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-187",
+        "end": "cue-190"
+      },
+      "cueIds": [
+        "cue-187",
+        "cue-188",
+        "cue-189",
+        "cue-190"
+      ],
+      "timing": {
+        "start": 1448.74,
+        "end": 1473.26,
+        "duration": 24.52
+      },
+      "plannedSrc": "production/compositions/scenes/55-scene-55.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-55-text-01",
+          "text": "引用有三种实现。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-187"
+          ]
+        },
+        {
+          "id": "scene-55-text-02",
+          "text": "第一种是在提示词里让 LLM 自己标来源",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-188"
+          ]
+        },
+        {
+          "id": "scene-55-text-03",
+          "text": "第二种是后处理校验，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-189"
+          ]
+        },
+        {
+          "id": "scene-55-text-04",
+          "text": "第三种是片段级引用，让模型直接指出答案片段对应哪个文本块",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-190"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-55-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-55"
+      ]
+    },
+    {
+      "id": "scene-56",
+      "order": 56,
+      "title": "到了生成环节，防幻觉是命门，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-191",
+        "end": "cue-193"
+      },
+      "cueIds": [
+        "cue-191",
+        "cue-192",
+        "cue-193"
+      ],
+      "timing": {
+        "start": 1473.26,
+        "end": 1494.76,
+        "duration": 21.5
+      },
+      "plannedSrc": "production/compositions/scenes/56-scene-56.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-56-text-01",
+          "text": "到了生成环节，防幻觉是命门，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-191"
+          ]
+        },
+        {
+          "id": "scene-56-text-02",
+          "text": "LLM 会合理化编造，即使上下文没有也可能编一个看似合理",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-192"
+          ]
+        },
+        {
+          "id": "scene-56-text-03",
+          "text": "引用我建议提示词级加后处理校验，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-193"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-56-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-57",
+      "order": 57,
+      "title": "具体到生成链路，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-194",
+        "end": "cue-196"
+      },
+      "cueIds": [
+        "cue-194",
+        "cue-195",
+        "cue-196"
+      ],
+      "timing": {
+        "start": 1495.12,
+        "end": 1520.9,
+        "duration": 25.78
+      },
+      "plannedSrc": "production/compositions/scenes/57-scene-57.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-57-text-01",
+          "text": "具体到生成链路，提示词模板要求每个事实陈述后标来源编号，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-194"
+          ]
+        },
+        {
+          "id": "scene-57-text-02",
+          "text": "多候选场景可以生成多个答案用有用性检查选最优，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-195"
+          ]
+        },
+        {
+          "id": "scene-57-text-03",
+          "text": "答案要返回来源文档、章节、页码、引用片段，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-196"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-57-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-58",
+      "order": 58,
+      "title": "生成环节最后看四个结果：",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-197",
+        "end": "cue-200"
+      },
+      "cueIds": [
+        "cue-197",
+        "cue-198",
+        "cue-199",
+        "cue-200"
+      ],
+      "timing": {
+        "start": 1521.32,
+        "end": 1547.38,
+        "duration": 26.06
+      },
+      "plannedSrc": "production/compositions/scenes/58-scene-58.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-58-text-01",
+          "text": "生成环节最后看四个结果：引用是不是真实对应，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-197"
+          ]
+        },
+        {
+          "id": "scene-58-text-02",
+          "text": "生成侧还可以继续加强四件事：用结构化输出约束引用格式，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-198"
+          ]
+        },
+        {
+          "id": "scene-58-text-03",
+          "text": "不评测的 RAG 就是瞎调，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-199"
+          ]
+        },
+        {
+          "id": "scene-58-text-04",
+          "text": "评测贯穿全链路。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-200"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-58-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-58"
+      ]
+    },
+    {
+      "id": "scene-59",
+      "order": 59,
+      "title": "评测工具里，RAGAS 是常用框",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-201",
+        "end": "cue-203"
+      },
+      "cueIds": [
+        "cue-201",
+        "cue-202",
+        "cue-203"
+      ],
+      "timing": {
+        "start": 1547.38,
+        "end": 1572.4,
+        "duration": 25.02
+      },
+      "plannedSrc": "production/compositions/scenes/59-scene-59.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-59-text-01",
+          "text": "评测工具里，RAGAS ",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-201"
+          ]
+        },
+        {
+          "id": "scene-59-text-02",
+          "text": "它主要看四类指标：忠实度，判断答案是否忠于证据；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-202"
+          ]
+        },
+        {
+          "id": "scene-59-text-03",
+          "text": "TruLens 和 DeepEval 也有类似能力；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-203"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-59-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-60",
+      "order": 60,
+      "title": "检索独立指标有前若干结果的召回率",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-204",
+        "end": "cue-207"
+      },
+      "cueIds": [
+        "cue-204",
+        "cue-205",
+        "cue-206",
+        "cue-207"
+      ],
+      "timing": {
+        "start": 1572.4,
+        "end": 1602.26,
+        "duration": 29.86
+      },
+      "plannedSrc": "production/compositions/scenes/60-scene-60.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-60-text-01",
+          "text": "检索独立指标有前若干结果的召回率、MRR",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-204"
+          ]
+        },
+        {
+          "id": "scene-60-text-02",
+          "text": "评测怎么落地？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-205"
+          ]
+        },
+        {
+          "id": "scene-60-text-03",
+          "text": "先承认 RAGAS 用大模型裁判也有偏差——偏好长答案、",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-206"
+          ]
+        },
+        {
+          "id": "scene-60-text-04",
+          "text": "我的判断是，贴合具体场景的黄金问答集加调用链归因比通用 ",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-207"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-60-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-61",
+      "order": 61,
+      "title": "评测集三种来源混合：",
+      "role": "proof",
+      "cueRange": {
+        "start": "cue-208",
+        "end": "cue-210"
+      },
+      "cueIds": [
+        "cue-208",
+        "cue-209",
+        "cue-210"
+      ],
+      "timing": {
+        "start": 1602.26,
+        "end": 1630.52,
+        "duration": 28.26
+      },
+      "plannedSrc": "production/compositions/scenes/61-scene-61.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "read",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-61-text-01",
+          "text": "评测集三种来源混合：LLM 从文档生成查询做量、人工标注",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-208"
+          ]
+        },
+        {
+          "id": "scene-61-text-02",
+          "text": "评测闭环可以这样搭：先建 200 条左右黄金问答集，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-209"
+          ]
+        },
+        {
+          "id": "scene-61-text-03",
+          "text": "线上每次问答落调用链，记录查询、改写、召回片段、排序分数",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-210"
+          ]
+        }
+      ],
+      "motionRules": [
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-61-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-62",
+      "order": 62,
+      "title": "问题样例通过调用链定位到具体环节",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-211",
+        "end": "cue-212"
+      },
+      "cueIds": [
+        "cue-211",
+        "cue-212"
+      ],
+      "timing": {
+        "start": 1631.08,
+        "end": 1654.18,
+        "duration": 23.1
+      },
+      "plannedSrc": "production/compositions/scenes/62-scene-62.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-62-text-01",
+          "text": "问题样例通过调用链定位到具体环节——是分块切断条文、还是",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-211"
+          ]
+        },
+        {
+          "id": "scene-62-text-02",
+          "text": "在我参与的一个项目里，我们用这套调用链闭环定位并修复问题",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-212"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-62-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-63",
+      "order": 63,
+      "title": "整条评测链要持续追踪前若干结果的",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-213",
+        "end": "cue-215"
+      },
+      "cueIds": [
+        "cue-213",
+        "cue-214",
+        "cue-215"
+      ],
+      "timing": {
+        "start": 1654.18,
+        "end": 1682.74,
+        "duration": 28.56
+      },
+      "plannedSrc": "production/compositions/scenes/63-scene-63.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-63-text-01",
+          "text": "整条评测链要持续追踪前若干结果的召回率、忠实度、答案相关",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-213"
+          ]
+        },
+        {
+          "id": "scene-63-text-02",
+          "text": "评测体系成熟以后，可以进一步全量接入 RAGAS 四类指",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-214"
+          ]
+        },
+        {
+          "id": "scene-63-text-03",
+          "text": "下一步，把线上对照实验和持续集成式回归测试接起来，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-215"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-63-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-64",
+      "order": 64,
+      "title": "从演示到生产，还有几件关键工程能",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-216",
+        "end": "cue-218"
+      },
+      "cueIds": [
+        "cue-216",
+        "cue-217",
+        "cue-218"
+      ],
+      "timing": {
+        "start": 1683.16,
+        "end": 1711,
+        "duration": 27.84
+      },
+      "plannedSrc": "production/compositions/scenes/64-scene-64.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-64-text-01",
+          "text": "从演示到生产，还有几件关键工程能力要补齐，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-216"
+          ]
+        },
+        {
+          "id": "scene-64-text-02",
+          "text": "上线前，通常还要把几组工",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-217"
+          ]
+        },
+        {
+          "id": "scene-64-text-03",
+          "text": "提示词缓存和流式输出，分别控制成本与首字延迟；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-218"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-64-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-64"
+      ]
+    },
+    {
+      "id": "scene-65",
+      "order": 65,
+      "title": "最后看上线工程，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-219",
+        "end": "cue-222"
+      },
+      "cueIds": [
+        "cue-219",
+        "cue-220",
+        "cue-221",
+        "cue-222"
+      ],
+      "timing": {
+        "start": 1711,
+        "end": 1735.14,
+        "duration": 24.14
+      },
+      "plannedSrc": "production/compositions/scenes/65-scene-65.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-65-text-01",
+          "text": "最后看上线工程，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-219"
+          ]
+        },
+        {
+          "id": "scene-65-text-02",
+          "text": "在上下文检索这类重复携带长前缀的流程里，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-220"
+          ]
+        },
+        {
+          "id": "scene-65-text-03",
+          "text": "公开材料给出过显著的成本和首词元延迟改善，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-221"
+          ]
+        },
+        {
+          "id": "scene-65-text-04",
+          "text": "流式输出通常是改善用户体",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-222"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-65-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-65"
+      ]
+    },
+    {
+      "id": "scene-66",
+      "order": 66,
+      "title": "防提示词注入是安全重点，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-223",
+        "end": "cue-225"
+      },
+      "cueIds": [
+        "cue-223",
+        "cue-224",
+        "cue-225"
+      ],
+      "timing": {
+        "start": 1735.14,
+        "end": 1762.52,
+        "duration": 27.38
+      },
+      "plannedSrc": "production/compositions/scenes/66-scene-66.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-66-text-01",
+          "text": "防提示词注入是安全重点，检索到的文档里可能藏恶意指令，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-223"
+          ]
+        },
+        {
+          "id": "scene-66-text-02",
+          "text": "增量索引用内容指纹加版本，文档更新不做全量重建，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-224"
+          ]
+        },
+        {
+          "id": "scene-66-text-03",
+          "text": "换向量模型要版本管理，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-225"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-66-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-67",
+      "order": 67,
+      "title": "这些能力不能各做各的，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-226",
+        "end": "cue-228"
+      },
+      "cueIds": [
+        "cue-226",
+        "cue-227",
+        "cue-228"
+      ],
+      "timing": {
+        "start": 1762.52,
+        "end": 1783.18,
+        "duration": 20.66
+      },
+      "plannedSrc": "production/compositions/scenes/67-scene-67.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-67-text-01",
+          "text": "这些能力不能各做各的，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-226"
+          ]
+        },
+        {
+          "id": "scene-67-text-02",
+          "text": "提示词缓存配上下文检索；增量索引配版本管理；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-227"
+          ]
+        },
+        {
+          "id": "scene-67-text-03",
+          "text": "pgvector 的 HNSW 删除是标记删除，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-228"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-67-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-68",
+      "order": 68,
+      "title": "到了线上，指标还要扩展到工程侧：",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-229",
+        "end": "cue-230"
+      },
+      "cueIds": [
+        "cue-229",
+        "cue-230"
+      ],
+      "timing": {
+        "start": 1783.78,
+        "end": 1800.94,
+        "duration": 17.16
+      },
+      "plannedSrc": "production/compositions/scenes/68-scene-68.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-68-text-01",
+          "text": "到了线上，指标还要扩展到工程侧：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-229"
+          ]
+        },
+        {
+          "id": "scene-68-text-02",
+          "text": "SLA 与缓存收益门槛，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-230"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-68-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-69",
+      "order": 69,
+      "title": "工程侧的下一步，包括多级缓存，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-231",
+        "end": "cue-232"
+      },
+      "cueIds": [
+        "cue-231",
+        "cue-232"
+      ],
+      "timing": {
+        "start": 1801.46,
+        "end": 1818.1,
+        "duration": 16.64
+      },
+      "plannedSrc": "production/compositions/scenes/69-scene-69.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-69-text-01",
+          "text": "工程侧的下一步，包括多级缓存，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-231"
+          ]
+        },
+        {
+          "id": "scene-69-text-02",
+          "text": "第一，RAG 全链路",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-232"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-69-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-69"
+      ]
+    },
+    {
+      "id": "scene-70",
+      "order": 70,
+      "title": "离线建库，包括解析、分块、上下文",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-233",
+        "end": "cue-234"
+      },
+      "cueIds": [
+        "cue-233",
+        "cue-234"
+      ],
+      "timing": {
+        "start": 1818.1,
+        "end": 1858.46,
+        "duration": 40.36
+      },
+      "plannedSrc": "production/compositions/scenes/70-scene-70.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-70-text-01",
+          "text": "离线建库，包括解析、分块、上下文增强和向量化索引，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-233"
+          ]
+        },
+        {
+          "id": "scene-70-text-02",
+          "text": "第二，每一步都不是单一选型，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-234"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-70-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-70"
+      ]
+    },
+    {
+      "id": "scene-71",
+      "order": 71,
+      "title": "第三，每一步都有指标，",
+      "role": "close",
+      "cueRange": {
+        "start": "cue-235",
+        "end": "cue-237"
+      },
+      "cueIds": [
+        "cue-235",
+        "cue-236",
+        "cue-237"
+      ],
+      "timing": {
+        "start": 1858.46,
+        "end": 1880.218,
+        "duration": 21.758
+      },
+      "plannedSrc": "production/compositions/scenes/71-scene-71.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "close",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "compact",
+        "hold"
+      ],
+      "screenText": [
+        {
+          "id": "scene-71-text-01",
+          "text": "第三，每一步都有指标，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-235"
+          ]
+        },
+        {
+          "id": "scene-71-text-02",
+          "text": "上下文检索要看失败率有没有下降；",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-236"
+          ]
+        },
+        {
+          "id": "scene-71-text-03",
+          "text": "归根结底，RAG 是一套工程系统，不是单纯的提示词技巧，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-237"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-71-terminal",
+        "operation": "hold",
+        "minimumHoldSeconds": 0.6,
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-baseline",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.2.0",
+    "reason": "Revised the deterministic board cadence to approximately 30 seconds after the user requested stable one-screen presentation with less frequent page and host changes.",
+    "contentIndependent": false,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 5,
+      "targetSceneSeconds": 30,
+      "numericClaimsAsCharts": false,
+      "semanticCarrierSelection": true,
+      "illustrativeMockCarriers": [
+        "code-surface",
+        "device-surface"
+      ],
+      "llmEnrichmentOptional": true
+    }
+  }
+}

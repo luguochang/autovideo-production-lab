@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo hash-bound prompt candidate",
+  "type": "object",
+  "required": [
+    "schemaVersion", "caseId", "stage", "caseSha256", "prompt", "generator",
+    "outputCanonicalization", "output", "outputSha256"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-content-prompt-candidate/v1"},
+    "caseId": {"type": "string"},
+    "stage": {
+      "type": "string",
+      "enum": [
+        "evidence-extractor", "outline-planner", "narration-writer",
+        "oralizer", "duration-fitter", "claim-verifier"
+      ]
+    },
+    "caseSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "prompt": {
+      "type": "object",
+      "required": ["id", "path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string"},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "generator": {
+      "type": "object",
+      "required": ["provider", "model", "configSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "configSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "outputCanonicalization": {"type": "string", "const": "stable-json-v1"},
+    "output": {"type": "object"},
+    "outputSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

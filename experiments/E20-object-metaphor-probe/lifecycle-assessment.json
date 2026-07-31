@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-assessment/v1",
+  "projectId": "E20-object-metaphor-probe",
+  "recipeId": "object-metaphor",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "readiness": {
+    "compositionPresent": true,
+    "objectAssetPresent": true,
+    "narrationLockPresent": true,
+    "assetManifestPresent": true,
+    "sourceReceiptPresent": true,
+    "strictCheckPassed": true,
+    "renderPresent": true,
+    "decodeQaPassed": true,
+    "audioValidation": "imported-file-in/file-out; null-sink decode; no microphone or external output",
+    "humanReview": "pending"
+  },
+  "audioSafety": {
+    "frozenFileOnly": true,
+    "microphoneUsed": false,
+    "recordingUsed": false,
+    "autoplayUsed": false,
+    "playbackCallUsed": false,
+    "externalSoundOutputUsed": false
+  },
+  "apply": {
+    "executed": false,
+    "reason": "Technical evidence is complete; human visual review and lifecycle acceptance remain pending."
+  },
+  "promotion": {
+    "executed": false,
+    "allowed": false,
+    "blockedBy": ["human-visual-review-pending", "lifecycle-acceptance-pending", "project-approval-pending"]
+  }
+}

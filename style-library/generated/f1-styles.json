@@ -1,0 +1,44 @@
+[
+  {
+    "id": "editorial-data-report",
+    "label": "编辑型数据简报风",
+    "sourceSection": "A1",
+    "provenance": "user-provided-spec-only"
+  },
+  {
+    "id": "apple-clean-product",
+    "label": "苹果风格",
+    "sourceSection": "A2",
+    "provenance": "user-provided-spec-only"
+  },
+  {
+    "id": "pixel-card-platform-ui",
+    "label": "像素卡片 UI",
+    "sourceSection": "A3",
+    "provenance": "user-provided-spec-only"
+  },
+  {
+    "id": "magazine-collage-cards",
+    "label": "轻量杂志拼贴风",
+    "sourceSection": "A4",
+    "provenance": "user-provided-spec-only"
+  },
+  {
+    "id": "monochrome-cyber-editorial-cards",
+    "label": "黑白赛博编辑风 UI 卡片系统",
+    "sourceSection": "A5",
+    "provenance": "user-provided-spec-only"
+  },
+  {
+    "id": "handdrawn-workflow-tutorial",
+    "label": "手绘流程教程演示",
+    "sourceSection": "A6",
+    "provenance": "user-provided-spec-only"
+  },
+  {
+    "id": "data-hud-narration",
+    "label": "深色数据 HUD 口播（显式调用）",
+    "sourceSection": "A7",
+    "provenance": "user-provided-spec-only"
+  }
+]

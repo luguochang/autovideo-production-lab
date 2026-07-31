@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "autovideo-style-sync/v1",
+  "generatedAt": "2026-07-16T06:03:08.822Z",
+  "counts": {
+    "f1Styles": 7,
+    "officialNamedStyles": 8,
+    "framePresets": 13,
+    "officialExamples": 8,
+    "officialBlocks": 109,
+    "officialComponents": 25,
+    "motionRules": 37,
+    "blueprints": 15
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "autovideo-probe-source-receipt/v1",
+  "projectId": "E20-object-metaphor-probe",
+  "recipe": {
+    "id": "object-metaphor",
+    "version": "1.0.0",
+    "status": "candidate"
+  },
+  "composition": {
+    "path": "index.html",
+    "sha256": "9fab982fc1ecfcc478fd6bf10ae4ec53e506c6f05119ebc5481f6ae2430daffc"
+  },
+  "sources": [
+    {
+      "id": "hyperframes-official-spatial-pan-stations",
+      "kind": "official-scene-blueprint",
+      "blueprintName": "spatial-pan-stations",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/blueprints/spatial-pan-stations.md",
+      "localSnapshot": "references/official/spatial-pan-stations.md",
+      "sha256": "25f6d0512bc63ae332e9c4ed8b530052f429441f37664456a88712abd4c1606f",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "hyperframes-official-svg-path-draw",
+      "kind": "official-motion-rule",
+      "ruleName": "svg-path-draw",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/svg-path-draw.md",
+      "sha256": "708afa7eb0843a60a62a8ca4282bb1f20e9f5058bd86b08876fa2ae90eb027ab",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "lucide-layers-0.468.0",
+      "kind": "licensed-icon",
+      "assetPath": ".media/images/system-layers.svg",
+      "assetSha256": "fe49102ea55a73b1ae7d23a90be00e1785b379bbcc412d18577846c8808ee2a6",
+      "sourceUrl": "https://github.com/lucide-icons/lucide/blob/0.468.0/icons/layers.svg",
+      "packageEvidence": "workflow-console/package-lock.json#node_modules/lucide-react",
+      "packageVersion": "0.468.0",
+      "provider": "Lucide",
+      "license": "ISC"
+    }
+  ],
+  "adaptationEvidence": [
+    {
+      "source": "hyperframes-official-spatial-pan-stations",
+      "borrowedContract": "pre-place labeled stations on one oversized world, traverse them with one bounded camera, reveal one station at each stop, and hold on the terminal station",
+      "implementationSelectors": [
+        "#world-viewport",
+        "#station-world",
+        "#station-entry",
+        "#station-model",
+        "#station-api",
+        "#station-data",
+        "#station-orchestration",
+        "#system-object"
+      ],
+      "cameraBounds": {"minX": -1570, "maxX": 0, "minY": -20, "maxY": 20},
+      "projectSpecificChanges": [
+        "camera scope is content.right only; host.left, #F2DFC7 stage, and caption rail stay outside it",
+        "uses one moving Lucide layers object instead of repeated callout cards",
+        "adapts the problem-style station walk into an explanatory depth reveal",
+        "keeps the terminal station static from 7.0s through the 8.0s end"
+      ]
+    },
+    {
+      "source": "hyperframes-official-svg-path-draw",
+      "borrowedContract": "measure each inline route segment with getTotalLength, assign matching strokeDasharray and strokeDashoffset, and animate strokeDashoffset to zero on one paused GSAP timeline",
+      "implementationSelectors": [
+        "#route-entry-model",
+        "#route-model-api",
+        "#route-api-data",
+        "#route-data-orchestration"
+      ],
+      "timelineEvidence": [
+        "entry-model draw starts at 0.90s",
+        "model-API draw starts at 2.00s",
+        "API-data draw starts at 3.10s",
+        "data-orchestration draw starts at 4.22s"
+      ]
+    },
+    {
+      "source": "lucide-layers-0.468.0",
+      "borrowedContract": "one recognizable layers glyph acts as the persistent visual object",
+      "implementationSelectors": ["#system-layers-image"],
+      "instanceEvidence": "index.html contains exactly one src reference to .media/images/system-layers.svg"
+    }
+  ],
+  "scope": {
+    "host": "fixed host.left; one existing Q-version present image",
+    "content": "all station-world pan and route drawing stay inside content-world/content.right",
+    "caption": "persistent fixed rail outside content camera",
+    "audio": "one imported WAV reference; no microphone, recording, autoplay, playback call, or external sound output",
+    "networkRuntimeAssets": false
+  },
+  "promotion": {
+    "lifecycleApplyExecuted": false,
+    "promoted": false,
+    "humanReview": "pending"
+  }
+}

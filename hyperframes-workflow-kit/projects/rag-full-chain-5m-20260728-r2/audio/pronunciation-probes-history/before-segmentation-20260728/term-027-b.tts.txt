@@ -1,0 +1,1 @@
+向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 “Elasticsearch”。

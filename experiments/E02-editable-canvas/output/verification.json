@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "verifiedAt": "2026-07-16T01:37:44.375Z",
+  "checks": {
+    "canonicalIr": {
+      "objectCount": 4,
+      "edgeCount": 3,
+      "timelineReferenceCount": 3
+    },
+    "elk": {
+      "idsPreserved": true,
+      "nodeCount": 4,
+      "routedEdgeCount": 3
+    },
+    "graphviz": {
+      "explicitNodeAndEdgeIdsPreserved": true,
+      "svgBytes": 3765
+    },
+    "fabric": {
+      "svgObjectCount": 14,
+      "customIdsSurviveJsonRoundTrip": true,
+      "graphvizGroupIdsRecoveredByReviver": true,
+      "textObjectEditableAfterRestore": true,
+      "caveat": "One diagram node maps to several Fabric leaf objects; the adapter must group them by sourceGroupId."
+    },
+    "mermaid": {
+      "realChromiumSvgRendered": true,
+      "deterministicIdConfigEnabled": true,
+      "generatedNodeIds": {
+        "source": "mermaid-rag-flowchart-source-0",
+        "retrieve": "mermaid-rag-flowchart-retrieve-1",
+        "model": "mermaid-rag-flowchart-model-3",
+        "answer": "mermaid-rag-flowchart-answer-5"
+      },
+      "generatedEdgeIds": [
+        "mermaid-rag-L_source_retrieve_0",
+        "mermaid-rag-L_retrieve_model_0",
+        "mermaid-rag-L_model_answer_0"
+      ],
+      "semanticDataObjectIdsInjected": true,
+      "caveat": "Mermaid DOM ids contain generated prefixes/suffixes. The adapter must inject canonical data-object-id attributes before animation."
+    },
+    "mermaidToExcalidraw": {
+      "realChromiumConversionTested": true,
+      "elementCount": 11,
+      "elementTypes": [
+        "arrow",
+        "rectangle",
+        "text"
+      ],
+      "idsUniqueAndJsonRoundTripStable": true,
+      "officialSceneSerializationPreservesIds": true,
+      "svgExportTested": true,
+      "semanticIdsInExportedSvgDom": [],
+      "bindingsReferenceExistingElements": true,
+      "deterministicAcrossFreshConversions": false,
+      "semanticMermaidNodeIdsPreserved": true,
+      "canonicalTextMap": {
+        "知识库": {
+          "textElementId": "uQzmjFi62Rogxyutx5VkF",
+          "containerId": "source"
+        },
+        "检索": {
+          "textElementId": "YHt6zzR-eDdkXNNtBfGsa",
+          "containerId": "retrieve"
+        },
+        "大模型": {
+          "textElementId": "IhBRTSWeILreDJ7zMcxLX",
+          "containerId": "model"
+        },
+        "回答": {
+          "textElementId": "WRdiLmiS0aWLVFXbyBRZN",
+          "containerId": "answer"
+        }
+      },
+      "caveat": "Container ids survive conversion, but generated text ids change and exported SVG lacks semantic DOM ids. Persist the scene and map canonical ids; use SVG export as a static snapshot, not as the editable timeline source."
+    },
+    "d2": {
+      "realCliSvgRendered": true,
+      "version": "v0.7.1",
+      "semanticNodeClasses": {
+        "source": "c291cmNl",
+        "retrieve": "cmV0cmlldmU=",
+        "model": "bW9kZWw=",
+        "answer": "YW5zd2Vy"
+      },
+      "semanticIdsRecoverableFromBase64Class": true,
+      "explicitSemanticGroupIdsPresent": false,
+      "caveat": "D2 encodes semantic keys as base64 CSS classes rather than SVG id attributes. An adapter can recover them, but should inject canonical data-object-id attributes before animation."
+    }
+  }
+}

@@ -1,0 +1,799 @@
+{
+  "schemaVersion": "autovideo-asset-library-validation/v1",
+  "validatedAt": "2026-07-22T05:22:24.833Z",
+  "passed": true,
+  "counts": {
+    "assets": 13,
+    "motionComponents": 6
+  },
+  "assertions": [
+    {
+      "name": "registry schema version",
+      "passed": true
+    },
+    {
+      "name": "registry has a versioned library id",
+      "passed": true
+    },
+    {
+      "name": "remote render is disabled",
+      "passed": true
+    },
+    {
+      "name": "frozen source and SHA are required",
+      "passed": true
+    },
+    {
+      "name": "semantic SFX policy is sparse",
+      "passed": true
+    },
+    {
+      "name": "asset ids are unique",
+      "passed": true,
+      "details": [
+        "sfx-click-soft",
+        "sfx-pop",
+        "sfx-chime",
+        "sfx-whoosh-short",
+        "sfx-error",
+        "icon-model-cpu",
+        "icon-workflow",
+        "icon-system-layers",
+        "icon-data-store",
+        "icon-permission-check",
+        "icon-code-braces",
+        "icon-debug-bug",
+        "icon-click-pointer",
+        "flowchart",
+        "data-chart",
+        "app-showcase",
+        "code-diff",
+        "code-highlight",
+        "parallax-unzoom"
+      ]
+    },
+    {
+      "name": "sfx:sfx-click-soft: id is stable",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-click-soft: path is local",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-click-soft: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/click-soft.mp3"
+    },
+    {
+      "name": "sfx:sfx-click-soft: SHA is valid",
+      "passed": true,
+      "details": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    {
+      "name": "sfx:sfx-click-soft: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d",
+        "actual": "075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+      }
+    },
+    {
+      "name": "sfx:sfx-click-soft: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-click-soft: license receipt exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "name": "sfx:sfx-click-soft: duration is finite",
+      "passed": true,
+      "details": 0.37
+    },
+    {
+      "name": "sfx:sfx-click-soft: provider is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-click-soft: semantic roles are known",
+      "passed": true,
+      "details": [
+        "focus-hit",
+        "state-change"
+      ]
+    },
+    {
+      "name": "sfx:sfx-click-soft: canonical content is unique",
+      "passed": true,
+      "details": "sfx:075e17bdac5c13662a1c9530050e0046f81d4138e00eb3bf30427a7b4404103d"
+    },
+    {
+      "name": "sfx:sfx-pop: id is stable",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-pop: path is local",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-pop: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/pop.mp3"
+    },
+    {
+      "name": "sfx:sfx-pop: SHA is valid",
+      "passed": true,
+      "details": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    {
+      "name": "sfx:sfx-pop: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352",
+        "actual": "19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+      }
+    },
+    {
+      "name": "sfx:sfx-pop: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-pop: license receipt exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "name": "sfx:sfx-pop: duration is finite",
+      "passed": true,
+      "details": 0.72
+    },
+    {
+      "name": "sfx:sfx-pop: provider is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-pop: semantic roles are known",
+      "passed": true,
+      "details": [
+        "focus-hit",
+        "state-change"
+      ]
+    },
+    {
+      "name": "sfx:sfx-pop: canonical content is unique",
+      "passed": true,
+      "details": "sfx:19ab7193f626ff57fdeef60b45543bac416fcbcec803cfb417abe4b271c1b352"
+    },
+    {
+      "name": "sfx:sfx-chime: id is stable",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-chime: path is local",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-chime: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/chime.mp3"
+    },
+    {
+      "name": "sfx:sfx-chime: SHA is valid",
+      "passed": true,
+      "details": "74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12"
+    },
+    {
+      "name": "sfx:sfx-chime: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12",
+        "actual": "74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12"
+      }
+    },
+    {
+      "name": "sfx:sfx-chime: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-chime: license receipt exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "name": "sfx:sfx-chime: duration is finite",
+      "passed": true,
+      "details": 2.5
+    },
+    {
+      "name": "sfx:sfx-chime: provider is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-chime: semantic roles are known",
+      "passed": true,
+      "details": [
+        "chapter-resolve"
+      ]
+    },
+    {
+      "name": "sfx:sfx-chime: canonical content is unique",
+      "passed": true,
+      "details": "sfx:74823b1b27703c56e0652db838f503c150ce9c2442d47d27430af3d5121d6d12"
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: id is stable",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: path is local",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/whoosh-short.mp3"
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: SHA is valid",
+      "passed": true,
+      "details": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30",
+        "actual": "c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+      }
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: license receipt exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: duration is finite",
+      "passed": true,
+      "details": 0.57
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: provider is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: semantic roles are known",
+      "passed": true,
+      "details": [
+        "connector-draw",
+        "state-change"
+      ]
+    },
+    {
+      "name": "sfx:sfx-whoosh-short: canonical content is unique",
+      "passed": true,
+      "details": "sfx:c2efd9d902a59bf9ec5019035d7deadd17762136896b6e3cb6dd99ea50997a30"
+    },
+    {
+      "name": "sfx:sfx-error: id is stable",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-error: path is local",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-error: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/error.mp3"
+    },
+    {
+      "name": "sfx:sfx-error: SHA is valid",
+      "passed": true,
+      "details": "b4882e3941ca496b5038e7c7d64318419da9f69d3da9540a1c693adc639cf121"
+    },
+    {
+      "name": "sfx:sfx-error: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "b4882e3941ca496b5038e7c7d64318419da9f69d3da9540a1c693adc639cf121",
+        "actual": "b4882e3941ca496b5038e7c7d64318419da9f69d3da9540a1c693adc639cf121"
+      }
+    },
+    {
+      "name": "sfx:sfx-error: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-error: license receipt exists",
+      "passed": true,
+      "details": "vendor/hyperframes/skills/media-use/audio/assets/sfx/CREDITS.md"
+    },
+    {
+      "name": "sfx:sfx-error: duration is finite",
+      "passed": true,
+      "details": 1.62
+    },
+    {
+      "name": "sfx:sfx-error: provider is present",
+      "passed": true
+    },
+    {
+      "name": "sfx:sfx-error: semantic roles are known",
+      "passed": true,
+      "details": [
+        "error"
+      ]
+    },
+    {
+      "name": "sfx:sfx-error: canonical content is unique",
+      "passed": true,
+      "details": "sfx:b4882e3941ca496b5038e7c7d64318419da9f69d3da9540a1c693adc639cf121"
+    },
+    {
+      "name": "icon:icon-model-cpu: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-model-cpu: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-model-cpu: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-model-cpu.svg"
+    },
+    {
+      "name": "icon:icon-model-cpu: SHA is valid",
+      "passed": true,
+      "details": "6918fbeb538d0a0d278c7ea7696c7681a0d39043c2f9765de49c23a8280582d3"
+    },
+    {
+      "name": "icon:icon-model-cpu: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "6918fbeb538d0a0d278c7ea7696c7681a0d39043c2f9765de49c23a8280582d3",
+        "actual": "6918fbeb538d0a0d278c7ea7696c7681a0d39043c2f9765de49c23a8280582d3"
+      }
+    },
+    {
+      "name": "icon:icon-model-cpu: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-model-cpu: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-workflow: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-workflow: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-workflow: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-workflow.svg"
+    },
+    {
+      "name": "icon:icon-workflow: SHA is valid",
+      "passed": true,
+      "details": "a4bb0b83acb8c79edbc504b3d72d19c75ee676f67b32befedd2a9d49086c3d26"
+    },
+    {
+      "name": "icon:icon-workflow: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "a4bb0b83acb8c79edbc504b3d72d19c75ee676f67b32befedd2a9d49086c3d26",
+        "actual": "a4bb0b83acb8c79edbc504b3d72d19c75ee676f67b32befedd2a9d49086c3d26"
+      }
+    },
+    {
+      "name": "icon:icon-workflow: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-workflow: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-system-layers: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-system-layers: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-system-layers: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-system-layers.svg"
+    },
+    {
+      "name": "icon:icon-system-layers: SHA is valid",
+      "passed": true,
+      "details": "edcf01cee9092a65843eacfae141d3de08c5fcebb2b4c266de87ff7ebeb9db90"
+    },
+    {
+      "name": "icon:icon-system-layers: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "edcf01cee9092a65843eacfae141d3de08c5fcebb2b4c266de87ff7ebeb9db90",
+        "actual": "edcf01cee9092a65843eacfae141d3de08c5fcebb2b4c266de87ff7ebeb9db90"
+      }
+    },
+    {
+      "name": "icon:icon-system-layers: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-system-layers: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-data-store: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-data-store: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-data-store: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-data-store.svg"
+    },
+    {
+      "name": "icon:icon-data-store: SHA is valid",
+      "passed": true,
+      "details": "e2fde4f4685b037a34e3b5513a496c1816b8d07b711090db9c9a95ba1b22c633"
+    },
+    {
+      "name": "icon:icon-data-store: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "e2fde4f4685b037a34e3b5513a496c1816b8d07b711090db9c9a95ba1b22c633",
+        "actual": "e2fde4f4685b037a34e3b5513a496c1816b8d07b711090db9c9a95ba1b22c633"
+      }
+    },
+    {
+      "name": "icon:icon-data-store: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-data-store: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-permission-check: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-permission-check: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-permission-check: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-permission-check.svg"
+    },
+    {
+      "name": "icon:icon-permission-check: SHA is valid",
+      "passed": true,
+      "details": "fb3768dba87352baff423413a58a2a843b26e9e8257d515a2a89af0d229bb441"
+    },
+    {
+      "name": "icon:icon-permission-check: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "fb3768dba87352baff423413a58a2a843b26e9e8257d515a2a89af0d229bb441",
+        "actual": "fb3768dba87352baff423413a58a2a843b26e9e8257d515a2a89af0d229bb441"
+      }
+    },
+    {
+      "name": "icon:icon-permission-check: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-permission-check: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-code-braces: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-code-braces: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-code-braces: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-code-braces.svg"
+    },
+    {
+      "name": "icon:icon-code-braces: SHA is valid",
+      "passed": true,
+      "details": "ae093afdd9353255c45cd35dfac52fc0c7c4b07348d25921b57fa6aaf904818e"
+    },
+    {
+      "name": "icon:icon-code-braces: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "ae093afdd9353255c45cd35dfac52fc0c7c4b07348d25921b57fa6aaf904818e",
+        "actual": "ae093afdd9353255c45cd35dfac52fc0c7c4b07348d25921b57fa6aaf904818e"
+      }
+    },
+    {
+      "name": "icon:icon-code-braces: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-code-braces: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-debug-bug: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-debug-bug: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-debug-bug: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-debug-bug.svg"
+    },
+    {
+      "name": "icon:icon-debug-bug: SHA is valid",
+      "passed": true,
+      "details": "298351793755140330492674051b3877e8314ab7c24aed20efa62bbee6e638b5"
+    },
+    {
+      "name": "icon:icon-debug-bug: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "298351793755140330492674051b3877e8314ab7c24aed20efa62bbee6e638b5",
+        "actual": "298351793755140330492674051b3877e8314ab7c24aed20efa62bbee6e638b5"
+      }
+    },
+    {
+      "name": "icon:icon-debug-bug: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-debug-bug: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "icon:icon-click-pointer: id is stable",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-click-pointer: path is local",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-click-pointer: source exists",
+      "passed": true,
+      "details": "style-library/assets/visual-icons/icon-click-pointer.svg"
+    },
+    {
+      "name": "icon:icon-click-pointer: SHA is valid",
+      "passed": true,
+      "details": "9ce19ab8a47da897fb56dfda2584ef65745c5ed2c4e6f5ef16bf88276568afd2"
+    },
+    {
+      "name": "icon:icon-click-pointer: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "9ce19ab8a47da897fb56dfda2584ef65745c5ed2c4e6f5ef16bf88276568afd2",
+        "actual": "9ce19ab8a47da897fb56dfda2584ef65745c5ed2c4e6f5ef16bf88276568afd2"
+      }
+    },
+    {
+      "name": "icon:icon-click-pointer: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "icon:icon-click-pointer: license receipt exists",
+      "passed": true,
+      "details": "style-library/assets/licenses/lucide-isc.txt"
+    },
+    {
+      "name": "official-registry-block:flowchart: id is stable",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:flowchart: path is local",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:flowchart: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/registry/blocks/flowchart/registry-item.json"
+    },
+    {
+      "name": "official-registry-block:flowchart: SHA is valid",
+      "passed": true,
+      "details": "52d6d3f50e2bc50c72ec923e3c0260e2687b59c78c1ffcdce340a8ba58223424"
+    },
+    {
+      "name": "official-registry-block:flowchart: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "52d6d3f50e2bc50c72ec923e3c0260e2687b59c78c1ffcdce340a8ba58223424",
+        "actual": "52d6d3f50e2bc50c72ec923e3c0260e2687b59c78c1ffcdce340a8ba58223424"
+      }
+    },
+    {
+      "name": "official-registry-block:flowchart: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:data-chart: id is stable",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:data-chart: path is local",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:data-chart: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/registry/blocks/data-chart/registry-item.json"
+    },
+    {
+      "name": "official-registry-block:data-chart: SHA is valid",
+      "passed": true,
+      "details": "606685b75bd4755e45d816fbfc5221f95cbdb5d7d32b51cd0c3a03921143f4e0"
+    },
+    {
+      "name": "official-registry-block:data-chart: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "606685b75bd4755e45d816fbfc5221f95cbdb5d7d32b51cd0c3a03921143f4e0",
+        "actual": "606685b75bd4755e45d816fbfc5221f95cbdb5d7d32b51cd0c3a03921143f4e0"
+      }
+    },
+    {
+      "name": "official-registry-block:data-chart: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:app-showcase: id is stable",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:app-showcase: path is local",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:app-showcase: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/registry/blocks/app-showcase/registry-item.json"
+    },
+    {
+      "name": "official-registry-block:app-showcase: SHA is valid",
+      "passed": true,
+      "details": "c1cc7ac0ec8d959e2c27b2178d770aa9df126967f8e4f866876a9c6053d690dc"
+    },
+    {
+      "name": "official-registry-block:app-showcase: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "c1cc7ac0ec8d959e2c27b2178d770aa9df126967f8e4f866876a9c6053d690dc",
+        "actual": "c1cc7ac0ec8d959e2c27b2178d770aa9df126967f8e4f866876a9c6053d690dc"
+      }
+    },
+    {
+      "name": "official-registry-block:app-showcase: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:code-diff: id is stable",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:code-diff: path is local",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:code-diff: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/registry/blocks/code-diff/registry-item.json"
+    },
+    {
+      "name": "official-registry-block:code-diff: SHA is valid",
+      "passed": true,
+      "details": "e68d7c12d89c91e908ef331f394523e4f98af5d939a94d018fb57bc8bb45e260"
+    },
+    {
+      "name": "official-registry-block:code-diff: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "e68d7c12d89c91e908ef331f394523e4f98af5d939a94d018fb57bc8bb45e260",
+        "actual": "e68d7c12d89c91e908ef331f394523e4f98af5d939a94d018fb57bc8bb45e260"
+      }
+    },
+    {
+      "name": "official-registry-block:code-diff: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:code-highlight: id is stable",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:code-highlight: path is local",
+      "passed": true
+    },
+    {
+      "name": "official-registry-block:code-highlight: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/registry/blocks/code-highlight/registry-item.json"
+    },
+    {
+      "name": "official-registry-block:code-highlight: SHA is valid",
+      "passed": true,
+      "details": "b003cb888898c2e86b0f696fb44395cb2ec7ddc678f270af72393b3502f11495"
+    },
+    {
+      "name": "official-registry-block:code-highlight: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "b003cb888898c2e86b0f696fb44395cb2ec7ddc678f270af72393b3502f11495",
+        "actual": "b003cb888898c2e86b0f696fb44395cb2ec7ddc678f270af72393b3502f11495"
+      }
+    },
+    {
+      "name": "official-registry-block:code-highlight: license receipt is present",
+      "passed": true
+    },
+    {
+      "name": "official-registry-component:parallax-unzoom: id is stable",
+      "passed": true
+    },
+    {
+      "name": "official-registry-component:parallax-unzoom: path is local",
+      "passed": true
+    },
+    {
+      "name": "official-registry-component:parallax-unzoom: source exists",
+      "passed": true,
+      "details": "vendor/hyperframes/registry/components/parallax-unzoom/registry-item.json"
+    },
+    {
+      "name": "official-registry-component:parallax-unzoom: SHA is valid",
+      "passed": true,
+      "details": "3e05264b4a9e6c89c0115a0aea5625c39393ecf591ee4a7205125c74dfc5856c"
+    },
+    {
+      "name": "official-registry-component:parallax-unzoom: SHA matches source",
+      "passed": true,
+      "details": {
+        "expected": "3e05264b4a9e6c89c0115a0aea5625c39393ecf591ee4a7205125c74dfc5856c",
+        "actual": "3e05264b4a9e6c89c0115a0aea5625c39393ecf591ee4a7205125c74dfc5856c"
+      }
+    },
+    {
+      "name": "official-registry-component:parallax-unzoom: license receipt is present",
+      "passed": true
+    }
+  ]
+}

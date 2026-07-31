@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "autovideo-breath-merge/v1",
+  "targetGapSeconds": 0.56,
+  "parts": [
+    {
+      "id": "upper-close-part-01",
+      "path": "upper-close-part-01.wav",
+      "sha256": "30991a3add81ac05f38ba99b9601e8600b763fb71c8d79e6f900c9405e9854ce"
+    },
+    {
+      "id": "upper-close-part-02",
+      "path": "upper-close-part-02.wav",
+      "sha256": "59ba246af6246828d849bd90aac3ae5eb1bfa66ba976e3f070bbc0c6b2cff50e"
+    }
+  ],
+  "output": "upper-close.wav",
+  "receipt": "upper-close.merge.recipe.json"
+}

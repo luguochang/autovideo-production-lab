@@ -1,0 +1,1523 @@
+{
+  "schemaVersion": "autovideo-graph-layout/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "generatedAt": "2026-07-29T00:56:18.345Z",
+  "planning": {
+    "artifactPath": "workflow-console/data/projects/rag-full-chain-5m-20260728-r2/artifacts/visual-plan/planning-bundle.json",
+    "artifactSha256": "76f885fcee52ad89f2fdf8b5513b883e106a4aa2aab8ded891ffe15042e9e7f3",
+    "workbenchRevision": 3,
+    "planningDigestSha256": "5bdbc9fca47a96aa6af170fb0c7cc6170afcd3d83f932cb04fc7c397fac1cdf5",
+    "provenanceMode": "formal-project-import"
+  },
+  "diagrams": [
+    {
+      "graphId": "graph-scene-02",
+      "beatId": "graph-scene-02",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-02",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-02-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "把这些判断讲清楚，才能体现真正做过，",
+            "kind": "exact-source",
+            "$H": 277,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-02-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "链路第一站是文档解析。",
+            "kind": "exact-source",
+            "$H": 279,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-02-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "原始文档可能来自 PDF、Word、",
+            "kind": "exact-source",
+            "$H": 281,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-02-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "这一步的目标是把异构文档变成结构化文",
+            "kind": "exact-source",
+            "$H": 283,
+            "x": 912,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-02-node-05",
+            "width": 220,
+            "height": 96,
+            "label": "先看解析工具，大致有这么几类。",
+            "kind": "exact-source",
+            "$H": 285,
+            "x": 1212,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-02-edge-01",
+            "sources": [
+              "graph-scene-02-node-01"
+            ],
+            "targets": [
+              "graph-scene-02-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-02-node-01",
+                "outgoingShape": "graph-scene-02-node-02"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-02",
+            "sources": [
+              "graph-scene-02-node-02"
+            ],
+            "targets": [
+              "graph-scene-02-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-02-node-02",
+                "outgoingShape": "graph-scene-02-node-03"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-03",
+            "sources": [
+              "graph-scene-02-node-03"
+            ],
+            "targets": [
+              "graph-scene-02-node-04"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-02-node-03",
+                "outgoingShape": "graph-scene-02-node-04"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-04",
+            "sources": [
+              "graph-scene-02-node-04"
+            ],
+            "targets": [
+              "graph-scene-02-node-05"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-04_s0",
+                "startPoint": {
+                  "x": 1132,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 1212,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-02-node-04",
+                "outgoingShape": "graph-scene-02-node-05"
+              }
+            ],
+            "container": "graph-scene-02"
+          }
+        ],
+        "$H": 13,
+        "x": 0,
+        "y": 0,
+        "width": 1444,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-05",
+      "beatId": "graph-scene-05",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-05",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-05-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "落地时，还有一个关键点：",
+            "kind": "exact-source",
+            "$H": 366,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-05-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "主解析用 MinerU 或 Unst",
+            "kind": "exact-source",
+            "$H": 368,
+            "x": 312,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-05-edge-01",
+            "sources": [
+              "graph-scene-05-node-01"
+            ],
+            "targets": [
+              "graph-scene-05-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-05-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-05-node-01",
+                "outgoingShape": "graph-scene-05-node-02"
+              }
+            ],
+            "container": "graph-scene-05"
+          }
+        ],
+        "$H": 364,
+        "x": 0,
+        "y": 0,
+        "width": 544,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-12",
+      "beatId": "graph-scene-12",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-12",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-12-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "生产上一般按文档类型分策略，",
+            "kind": "exact-source",
+            "$H": 382,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-12-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "比如同一个库里，施工规范按条款条文切",
+            "kind": "exact-source",
+            "$H": 384,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-12-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "而且切完每个文本块都要带上元数据——",
+            "kind": "exact-source",
+            "$H": 386,
+            "x": 612,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-12-edge-01",
+            "sources": [
+              "graph-scene-12-node-01"
+            ],
+            "targets": [
+              "graph-scene-12-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-12-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-12-node-01",
+                "outgoingShape": "graph-scene-12-node-02"
+              }
+            ],
+            "container": "graph-scene-12"
+          },
+          {
+            "id": "graph-scene-12-edge-02",
+            "sources": [
+              "graph-scene-12-node-02"
+            ],
+            "targets": [
+              "graph-scene-12-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-12-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-12-node-02",
+                "outgoingShape": "graph-scene-12-node-03"
+              }
+            ],
+            "container": "graph-scene-12"
+          }
+        ],
+        "$H": 380,
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-14",
+      "beatId": "graph-scene-14",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-14",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-14-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "分块效果不能只凭感觉，",
+            "kind": "exact-source",
+            "$H": 407,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-14-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "分块还想继续提升，可以沿三个方向走：",
+            "kind": "exact-source",
+            "$H": 409,
+            "x": 312,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-14-edge-01",
+            "sources": [
+              "graph-scene-14-node-01"
+            ],
+            "targets": [
+              "graph-scene-14-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-14-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-14-node-01",
+                "outgoingShape": "graph-scene-14-node-02"
+              }
+            ],
+            "container": "graph-scene-14"
+          }
+        ],
+        "$H": 405,
+        "x": 0,
+        "y": 0,
+        "width": 544,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-21",
+      "beatId": "graph-scene-21",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-21",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-21-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "具体版本、维度和输入类型，",
+            "kind": "exact-source",
+            "$H": 423,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-21-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "向量模型怎么选？",
+            "kind": "exact-source",
+            "$H": 425,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-21-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "主要看三个方面。",
+            "kind": "exact-source",
+            "$H": 427,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-21-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "第一是中文效果，BGE 系列通常是中",
+            "kind": "exact-source",
+            "$H": 429,
+            "x": 912,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-21-node-05",
+            "width": 220,
+            "height": 96,
+            "label": "第二是部署边界，企业知识不能出域时优",
+            "kind": "exact-source",
+            "$H": 431,
+            "x": 1212,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-21-edge-01",
+            "sources": [
+              "graph-scene-21-node-01"
+            ],
+            "targets": [
+              "graph-scene-21-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-21-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-21-node-01",
+                "outgoingShape": "graph-scene-21-node-02"
+              }
+            ],
+            "container": "graph-scene-21"
+          },
+          {
+            "id": "graph-scene-21-edge-02",
+            "sources": [
+              "graph-scene-21-node-02"
+            ],
+            "targets": [
+              "graph-scene-21-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-21-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-21-node-02",
+                "outgoingShape": "graph-scene-21-node-03"
+              }
+            ],
+            "container": "graph-scene-21"
+          },
+          {
+            "id": "graph-scene-21-edge-03",
+            "sources": [
+              "graph-scene-21-node-03"
+            ],
+            "targets": [
+              "graph-scene-21-node-04"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-21-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-21-node-03",
+                "outgoingShape": "graph-scene-21-node-04"
+              }
+            ],
+            "container": "graph-scene-21"
+          },
+          {
+            "id": "graph-scene-21-edge-04",
+            "sources": [
+              "graph-scene-21-node-04"
+            ],
+            "targets": [
+              "graph-scene-21-node-05"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-21-edge-04_s0",
+                "startPoint": {
+                  "x": 1132,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 1212,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-21-node-04",
+                "outgoingShape": "graph-scene-21-node-05"
+              }
+            ],
+            "container": "graph-scene-21"
+          }
+        ],
+        "$H": 421,
+        "x": 0,
+        "y": 0,
+        "width": 1444,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-23",
+      "beatId": "graph-scene-23",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-23",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-23-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "第二，换模型等于全库重新计算向量，",
+            "kind": "exact-source",
+            "$H": 466,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-23-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "第三，MTEB 榜单只能作为参考，",
+            "kind": "exact-source",
+            "$H": 468,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-23-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "向量模型选得对不对，重点看三件事：",
+            "kind": "exact-source",
+            "$H": 470,
+            "x": 612,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-23-edge-01",
+            "sources": [
+              "graph-scene-23-node-01"
+            ],
+            "targets": [
+              "graph-scene-23-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-23-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-23-node-01",
+                "outgoingShape": "graph-scene-23-node-02"
+              }
+            ],
+            "container": "graph-scene-23"
+          },
+          {
+            "id": "graph-scene-23-edge-02",
+            "sources": [
+              "graph-scene-23-node-02"
+            ],
+            "targets": [
+              "graph-scene-23-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-23-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-23-node-02",
+                "outgoingShape": "graph-scene-23-node-03"
+              }
+            ],
+            "container": "graph-scene-23"
+          }
+        ],
+        "$H": 464,
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-46",
+      "beatId": "graph-scene-46",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-46",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-46-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "Anthropic 的公开流程示例采",
+            "kind": "exact-source",
+            "$H": 491,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-46-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "如果采用交叉编码器，",
+            "kind": "exact-source",
+            "$H": 493,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-46-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "候选数量要用离线指标和延迟压测共同决",
+            "kind": "exact-source",
+            "$H": 495,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-46-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "LangChain 也可以接入重排模",
+            "kind": "exact-source",
+            "$H": 497,
+            "x": 912,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-46-edge-01",
+            "sources": [
+              "graph-scene-46-node-01"
+            ],
+            "targets": [
+              "graph-scene-46-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-46-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-46-node-01",
+                "outgoingShape": "graph-scene-46-node-02"
+              }
+            ],
+            "container": "graph-scene-46"
+          },
+          {
+            "id": "graph-scene-46-edge-02",
+            "sources": [
+              "graph-scene-46-node-02"
+            ],
+            "targets": [
+              "graph-scene-46-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-46-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-46-node-02",
+                "outgoingShape": "graph-scene-46-node-03"
+              }
+            ],
+            "container": "graph-scene-46"
+          },
+          {
+            "id": "graph-scene-46-edge-03",
+            "sources": [
+              "graph-scene-46-node-03"
+            ],
+            "targets": [
+              "graph-scene-46-node-04"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-46-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-46-node-03",
+                "outgoingShape": "graph-scene-46-node-04"
+              }
+            ],
+            "container": "graph-scene-46"
+          }
+        ],
+        "$H": 489,
+        "x": 0,
+        "y": 0,
+        "width": 1144,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-55",
+      "beatId": "graph-scene-55",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-55",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-55-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "引用有三种实现。",
+            "kind": "exact-source",
+            "$H": 525,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-55-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "第一种是在提示词里让 LLM 自己标",
+            "kind": "exact-source",
+            "$H": 527,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-55-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "第二种是后处理校验，",
+            "kind": "exact-source",
+            "$H": 529,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-55-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "第三种是片段级引用，",
+            "kind": "exact-source",
+            "$H": 531,
+            "x": 912,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-55-edge-01",
+            "sources": [
+              "graph-scene-55-node-01"
+            ],
+            "targets": [
+              "graph-scene-55-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-55-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-55-node-01",
+                "outgoingShape": "graph-scene-55-node-02"
+              }
+            ],
+            "container": "graph-scene-55"
+          },
+          {
+            "id": "graph-scene-55-edge-02",
+            "sources": [
+              "graph-scene-55-node-02"
+            ],
+            "targets": [
+              "graph-scene-55-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-55-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-55-node-02",
+                "outgoingShape": "graph-scene-55-node-03"
+              }
+            ],
+            "container": "graph-scene-55"
+          },
+          {
+            "id": "graph-scene-55-edge-03",
+            "sources": [
+              "graph-scene-55-node-03"
+            ],
+            "targets": [
+              "graph-scene-55-node-04"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-55-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-55-node-03",
+                "outgoingShape": "graph-scene-55-node-04"
+              }
+            ],
+            "container": "graph-scene-55"
+          }
+        ],
+        "$H": 523,
+        "x": 0,
+        "y": 0,
+        "width": 1144,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-58",
+      "beatId": "graph-scene-58",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-58",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-58-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "生成环节最后看四个结果：",
+            "kind": "exact-source",
+            "$H": 559,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-58-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "生成侧还可以继续加强四件事：",
+            "kind": "exact-source",
+            "$H": 561,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-58-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "不评测的 RAG 就是瞎调，",
+            "kind": "exact-source",
+            "$H": 563,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-58-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "评测贯穿全链路。",
+            "kind": "exact-source",
+            "$H": 565,
+            "x": 912,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-58-edge-01",
+            "sources": [
+              "graph-scene-58-node-01"
+            ],
+            "targets": [
+              "graph-scene-58-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-58-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-58-node-01",
+                "outgoingShape": "graph-scene-58-node-02"
+              }
+            ],
+            "container": "graph-scene-58"
+          },
+          {
+            "id": "graph-scene-58-edge-02",
+            "sources": [
+              "graph-scene-58-node-02"
+            ],
+            "targets": [
+              "graph-scene-58-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-58-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-58-node-02",
+                "outgoingShape": "graph-scene-58-node-03"
+              }
+            ],
+            "container": "graph-scene-58"
+          },
+          {
+            "id": "graph-scene-58-edge-03",
+            "sources": [
+              "graph-scene-58-node-03"
+            ],
+            "targets": [
+              "graph-scene-58-node-04"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-58-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-58-node-03",
+                "outgoingShape": "graph-scene-58-node-04"
+              }
+            ],
+            "container": "graph-scene-58"
+          }
+        ],
+        "$H": 557,
+        "x": 0,
+        "y": 0,
+        "width": 1144,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-64",
+      "beatId": "graph-scene-64",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-64",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-64-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "从演示到生产，还有几件关键工程能力要",
+            "kind": "exact-source",
+            "$H": 593,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-64-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "上线前，通常还要把几组工程能力补齐。",
+            "kind": "exact-source",
+            "$H": 595,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-64-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "提示词缓存和流式输出，",
+            "kind": "exact-source",
+            "$H": 597,
+            "x": 612,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-64-edge-01",
+            "sources": [
+              "graph-scene-64-node-01"
+            ],
+            "targets": [
+              "graph-scene-64-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-64-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-64-node-01",
+                "outgoingShape": "graph-scene-64-node-02"
+              }
+            ],
+            "container": "graph-scene-64"
+          },
+          {
+            "id": "graph-scene-64-edge-02",
+            "sources": [
+              "graph-scene-64-node-02"
+            ],
+            "targets": [
+              "graph-scene-64-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-64-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-64-node-02",
+                "outgoingShape": "graph-scene-64-node-03"
+              }
+            ],
+            "container": "graph-scene-64"
+          }
+        ],
+        "$H": 591,
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-65",
+      "beatId": "graph-scene-65",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-65",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-65-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "最后看上线工程，这些能力要组合着选。",
+            "kind": "exact-source",
+            "$H": 618,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-65-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "在上下文检索这类重复携带长前缀的流程",
+            "kind": "exact-source",
+            "$H": 620,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-65-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "公开材料给出过显著的成本和首词元延迟",
+            "kind": "exact-source",
+            "$H": 622,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-65-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "流式输出通常是改善用户体验的重要手段",
+            "kind": "exact-source",
+            "$H": 624,
+            "x": 912,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-65-edge-01",
+            "sources": [
+              "graph-scene-65-node-01"
+            ],
+            "targets": [
+              "graph-scene-65-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-65-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-65-node-01",
+                "outgoingShape": "graph-scene-65-node-02"
+              }
+            ],
+            "container": "graph-scene-65"
+          },
+          {
+            "id": "graph-scene-65-edge-02",
+            "sources": [
+              "graph-scene-65-node-02"
+            ],
+            "targets": [
+              "graph-scene-65-node-03"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-65-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-65-node-02",
+                "outgoingShape": "graph-scene-65-node-03"
+              }
+            ],
+            "container": "graph-scene-65"
+          },
+          {
+            "id": "graph-scene-65-edge-03",
+            "sources": [
+              "graph-scene-65-node-03"
+            ],
+            "targets": [
+              "graph-scene-65-node-04"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-65-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-65-node-03",
+                "outgoingShape": "graph-scene-65-node-04"
+              }
+            ],
+            "container": "graph-scene-65"
+          }
+        ],
+        "$H": 616,
+        "x": 0,
+        "y": 0,
+        "width": 1144,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-69",
+      "beatId": "graph-scene-69",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-69",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-69-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "工程侧的下一步，包括多级缓存，",
+            "kind": "exact-source",
+            "$H": 652,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-69-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "第一，RAG 全链路是一条数据流。",
+            "kind": "exact-source",
+            "$H": 654,
+            "x": 312,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-69-edge-01",
+            "sources": [
+              "graph-scene-69-node-01"
+            ],
+            "targets": [
+              "graph-scene-69-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-69-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-69-node-01",
+                "outgoingShape": "graph-scene-69-node-02"
+              }
+            ],
+            "container": "graph-scene-69"
+          }
+        ],
+        "$H": 650,
+        "x": 0,
+        "y": 0,
+        "width": 544,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-70",
+      "beatId": "graph-scene-70",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-70",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-70-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "离线建库，包括解析、分块、上下文增强",
+            "kind": "exact-source",
+            "$H": 668,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-70-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "第二，每一步都不是单一选型，",
+            "kind": "exact-source",
+            "$H": 670,
+            "x": 312,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-70-edge-01",
+            "sources": [
+              "graph-scene-70-node-01"
+            ],
+            "targets": [
+              "graph-scene-70-node-02"
+            ],
+            "label": "next",
+            "sections": [
+              {
+                "id": "graph-scene-70-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-70-node-01",
+                "outgoingShape": "graph-scene-70-node-02"
+              }
+            ],
+            "container": "graph-scene-70"
+          }
+        ],
+        "$H": 666,
+        "x": 0,
+        "y": 0,
+        "width": 544,
+        "height": 120
+      }
+    }
+  ]
+}

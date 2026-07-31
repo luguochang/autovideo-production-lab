@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "autovideo-publication-rights/v2",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "declaration": "internal-only",
+  "notes": "首条样片内部听审与全片验收；公开发布权利另行确认。",
+  "generatedAt": "2026-07-29T00:37:32.016Z",
+  "inventoryBindings": [
+    {
+      "scope": "project",
+      "path": "AssetManifest.json",
+      "sha256": "4d46232faea6f9bb1ca7fea6036828f5e367897724cf264c08db5f665d9a7048",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": "template-lock.json",
+      "sha256": "da73dfdb899f2384189161c1123e15b35ceebb282ce9c344854ae32c704de6ec",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": "audio/narration.final.wav",
+      "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+      "currentAtGeneration": true
+    },
+    {
+      "scope": "project",
+      "path": "audio/voice.recipe.json",
+      "sha256": "3ded7c2be02d146907c4dbcb9c6322f14b21dbf64b3cda477c5ec1b7d3ed2d78",
+      "currentAtGeneration": true
+    }
+  ],
+  "items": [
+    {
+      "id": "source-source-001-0bd400ff",
+      "category": "input-source",
+      "subject": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+      "source": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+      "license": "user-provided; publication rights not implied",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "workspace",
+          "path": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+          "sha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "User possession or source registration does not itself prove publication rights."
+    },
+    {
+      "id": "voice-speaker-rights",
+      "category": "voice",
+      "subject": "CosyVoice built-in 中文女 speaker",
+      "source": "preset14",
+      "license": "Code/model license does not prove speaker publication rights.",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "project",
+          "path": "audio/narration.final.wav",
+          "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "project",
+          "path": "audio/voice.recipe.json",
+          "sha256": "3ded7c2be02d146907c4dbcb9c6322f14b21dbf64b3cda477c5ec1b7d3ed2d78",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Attach a local commercial/publication rights statement or use a separately licensed voice route."
+    },
+    {
+      "id": "host-artwork-rights",
+      "category": "host-artwork",
+      "subject": "modern-ip-host-explainer",
+      "source": "style-library/styles/project/modern-ip-host-explainer",
+      "license": "User-provided artwork; possession and generation provenance do not imply publication rights.",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [
+        {
+          "scope": "workspace",
+          "path": "style-library/styles/project/modern-ip-host-explainer/frame.md",
+          "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "workspace",
+          "path": "style-library/styles/project/modern-ip-host-explainer/STYLE_GUIDE.md",
+          "sha256": "02e550777227ef60cd3ed247c2c6da3524fca055ed85c978287af44c08facb77",
+          "currentAtGeneration": true
+        },
+        {
+          "scope": "workspace",
+          "path": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+          "sha256": "70872749953cfd53d32d2740385aed37082b1e3552e3e8bb7e9a06b2d3bace0f",
+          "currentAtGeneration": true
+        }
+      ],
+      "evidence": [],
+      "notes": "Attach a local creator/commission/license attestation covering social publication and reuse."
+    },
+    {
+      "id": "noto-sans-sc-font",
+      "category": "font",
+      "subject": "@fontsource-variable/noto-sans-sc@5.2.10",
+      "source": "npm package",
+      "license": "OFL-1.1",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [],
+      "evidence": [],
+      "notes": "Freeze the package LICENSE or an equivalent local license receipt before public clearance."
+    },
+    {
+      "id": "hyperframes-runtime",
+      "category": "software",
+      "subject": "HyperFrames runtime",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "license": "Apache-2.0",
+      "status": "needs-review",
+      "notApplicableReason": "",
+      "assetBindings": [],
+      "evidence": [],
+      "notes": "Freeze the pinned release license receipt before distributing editable source."
+    },
+    {
+      "id": "ffmpeg-build",
+      "category": "build-tool",
+      "subject": "Local FFmpeg binary",
+      "source": "local build tool only",
+      "license": "Build-dependent; binary is not included in the deliverable.",
+      "status": "not-applicable",
+      "notApplicableReason": "The FFmpeg executable is used locally and is not copied into the video or standard delivery package.",
+      "assetBindings": [],
+      "evidence": [],
+      "notes": ""
+    }
+  ],
+  "policy": {
+    "publicRelease": "Every item must be cleared or not-applicable. Cleared items require at least one hash-bound local evidence file.",
+    "internalOnly": "Unresolved items may remain, but every listed asset binding must still match current bytes."
+  }
+}

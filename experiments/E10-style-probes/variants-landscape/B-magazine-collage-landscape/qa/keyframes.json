@@ -1,0 +1,980 @@
+{
+  "project": "B-magazine-collage-landscape",
+  "runtime": "all",
+  "compositions": [
+    {
+      "composition": "index.html",
+      "source": "index.html",
+      "tweens": [
+        {
+          "id": "#eyebrow-fromTo-100",
+          "target": "#eyebrow",
+          "method": "fromTo",
+          "start": 0.1,
+          "duration": 0.32,
+          "end": 0.42,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.1,
+              "properties": {
+                "x": -24,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.42,
+              "properties": {
+                "x": 0,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -24,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#index-mark-fromTo-160",
+          "target": "#index-mark",
+          "method": "fromTo",
+          "start": 0.16,
+          "duration": 0.4,
+          "end": 0.56,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.16,
+              "properties": {
+                "x": -28,
+                "y": -8,
+                "rotation": -18,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.56,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "rotation": -8,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -28,
+              "y": -8
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#desk-rule-to-200-scale",
+          "target": "#desk-rule",
+          "method": "to",
+          "group": "scale",
+          "start": 0.2,
+          "duration": 0.46,
+          "end": 0.66,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.2,
+              "properties": {
+                "scaleX": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.66,
+              "properties": {
+                "scaleX": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#rail-note-fromTo-280",
+          "target": "#rail-note",
+          "method": "fromTo",
+          "start": 0.28,
+          "duration": 0.38,
+          "end": 0.66,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.28,
+              "properties": {
+                "x": 28,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.66,
+              "properties": {
+                "x": 0,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 28,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#surface-card-fromTo-380",
+          "target": "#surface-card",
+          "method": "fromTo",
+          "start": 0.38,
+          "duration": 0.7,
+          "end": 1.08,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.38,
+              "properties": {
+                "x": -620,
+                "y": 20,
+                "rotation": -7,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.08,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "rotation": -0.8,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -620,
+              "y": 20
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#surface-inner-fromTo-800",
+          "target": "#surface-inner",
+          "method": "fromTo",
+          "start": 0.8,
+          "duration": 0.42,
+          "end": 1.22,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.8,
+              "properties": {
+                "y": 18,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.22,
+              "properties": {
+                "y": 0,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 18
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#surface-card",
+              "summary": "x -620..0, y 0..20, rotation -7..0, opacity 0..1"
+            }
+          ]
+        },
+        {
+          "id": "#tape-a-fromTo-1040",
+          "target": "#tape-a",
+          "method": "fromTo",
+          "start": 1.04,
+          "duration": 0.34,
+          "end": 1.38,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.04,
+              "properties": {
+                "y": -26,
+                "rotation": -15,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.38,
+              "properties": {
+                "y": 0,
+                "rotation": -6,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": -26
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#marker-sweep-to-1400-scale",
+          "target": "#marker-sweep",
+          "method": "to",
+          "group": "scale",
+          "start": 1.4,
+          "duration": 0.5,
+          "end": 1.9,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.4,
+              "properties": {
+                "scaleX": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.9,
+              "properties": {
+                "scaleX": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#surface-inner",
+              "summary": "y 0..18, opacity 0..1"
+            },
+            {
+              "selector": "#surface-card",
+              "summary": "x -620..0, y 0..20, rotation -7..0, opacity 0..1"
+            }
+          ]
+        },
+        {
+          "id": "#tape-b-fromTo-1760",
+          "target": "#tape-b",
+          "method": "fromTo",
+          "start": 1.76,
+          "duration": 0.3,
+          "end": 2.06,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.76,
+              "properties": {
+                "y": -22,
+                "rotation": 16,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.06,
+              "properties": {
+                "y": 0,
+                "rotation": 8,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": -22
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#hinge-to-1960-scale",
+          "target": "#hinge",
+          "method": "to",
+          "group": "scale",
+          "start": 1.96,
+          "duration": 0.48,
+          "end": 2.44,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.96,
+              "properties": {
+                "scaleY": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.44,
+              "properties": {
+                "scaleY": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#evidence-heading-fromTo-2040",
+          "target": "#evidence-heading",
+          "method": "fromTo",
+          "start": 2.04,
+          "duration": 0.38,
+          "end": 2.42,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.04,
+              "properties": {
+                "x": -22,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.42,
+              "properties": {
+                "x": 0,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -22,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#surface-card-to-2120",
+          "target": "#surface-card",
+          "method": "to",
+          "start": 2.12,
+          "duration": 0.68,
+          "end": 2.8,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.12,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.8,
+              "properties": {
+                "x": -12,
+                "y": 5,
+                "scale": 0.92,
+                "rotation": -1.4
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -12,
+              "y": 5
+            }
+          ]
+        },
+        {
+          "id": "#surface-inner-to-2120-visual",
+          "target": "#surface-inner",
+          "method": "to",
+          "group": "visual",
+          "start": 2.12,
+          "duration": 0.44,
+          "end": 2.56,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.12,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.56,
+              "properties": {
+                "opacity": 0.7
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#surface-card",
+              "summary": "x -620..0, y 0..20, rotation -7..0, opacity 0..1"
+            }
+          ]
+        },
+        {
+          "id": "#route-model-to-2260-other",
+          "target": "#route-model",
+          "method": "to",
+          "group": "other",
+          "start": 2.26,
+          "duration": 0.5,
+          "end": 2.76,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.26,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.76,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#evidence-model-fromTo-2340",
+          "target": "#evidence-model",
+          "method": "fromTo",
+          "start": 2.34,
+          "duration": 0.5,
+          "end": 2.84,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.34,
+              "properties": {
+                "x": -72,
+                "y": -16,
+                "rotation": -8,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.84,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "rotation": -2.4,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -72,
+              "y": -16
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#route-api-to-2800-other",
+          "target": "#route-api",
+          "method": "to",
+          "group": "other",
+          "start": 2.8,
+          "duration": 0.52,
+          "end": 3.32,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.8,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.32,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#evidence-api-fromTo-2880",
+          "target": "#evidence-api",
+          "method": "fromTo",
+          "start": 2.88,
+          "duration": 0.52,
+          "end": 3.4,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.88,
+              "properties": {
+                "x": -96,
+                "y": -18,
+                "rotation": -5,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.4,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "rotation": 2.2,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -96,
+              "y": -18
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#route-vector-to-3360-other",
+          "target": "#route-vector",
+          "method": "to",
+          "group": "other",
+          "start": 3.36,
+          "duration": 0.54,
+          "end": 3.9,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.36,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.9,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#evidence-vector-fromTo-3440",
+          "target": "#evidence-vector",
+          "method": "fromTo",
+          "start": 3.44,
+          "duration": 0.52,
+          "end": 3.96,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.44,
+              "properties": {
+                "x": -74,
+                "y": 18,
+                "rotation": 7,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.96,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "rotation": 2,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -74,
+              "y": 18
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#route-tools-to-3920-other",
+          "target": "#route-tools",
+          "method": "to",
+          "group": "other",
+          "start": 3.92,
+          "duration": 0.56,
+          "end": 4.48,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.92,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.48,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#evidence-tools-fromTo-4000",
+          "target": "#evidence-tools",
+          "method": "fromTo",
+          "start": 4,
+          "duration": 0.54,
+          "end": 4.54,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 4,
+              "properties": {
+                "x": -98,
+                "y": 20,
+                "rotation": 5,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.54,
+              "properties": {
+                "x": 0,
+                "y": 0,
+                "rotation": -2,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": -98,
+              "y": 20
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": ".evidence-card-to-5160-position",
+          "target": ".evidence-card",
+          "method": "to",
+          "group": "position",
+          "start": 5.16,
+          "duration": 0.22,
+          "end": 5.38,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.16,
+              "properties": {
+                "y": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.38,
+              "properties": {
+                "y": -4
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -4
+            }
+          ]
+        },
+        {
+          "id": "#surface-card-to-5480-visual",
+          "target": "#surface-card",
+          "method": "to",
+          "group": "visual",
+          "start": 5.48,
+          "duration": 0.4,
+          "end": 5.88,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.48,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.88,
+              "properties": {
+                "opacity": 0.8
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#conclusion-stamp-fromTo-6140",
+          "target": "#conclusion-stamp",
+          "method": "fromTo",
+          "start": 6.14,
+          "duration": 0.48,
+          "end": 6.62,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.14,
+              "properties": {
+                "y": 18,
+                "rotation": -10,
+                "opacity": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.62,
+              "properties": {
+                "y": 0,
+                "rotation": -3,
+                "opacity": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 18
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#conclusion-stamp-to-6680-scale",
+          "target": "#conclusion-stamp",
+          "method": "to",
+          "group": "scale",
+          "start": 6.68,
+          "duration": 0.22,
+          "end": 6.9,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.68,
+              "properties": {
+                "scale": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.9,
+              "properties": {
+                "scale": 1.035
+              }
+            }
+          ],
+          "path": null
+        }
+      ],
+      "traces": [
+        {
+          "target": "#surface-card",
+          "strokes": [
+            {
+              "id": "#surface-card-fromTo-380",
+              "start": 0.38,
+              "end": 1.08,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 0.38,
+                  "properties": {
+                    "x": -620,
+                    "y": 20,
+                    "rotation": -7,
+                    "opacity": 0
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 1.08,
+                  "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "rotation": -0.8,
+                    "opacity": 1
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": -620,
+                  "y": 20
+                },
+                {
+                  "x": 0,
+                  "y": 0
+                }
+              ]
+            },
+            {
+              "id": "#surface-card-to-2120",
+              "start": 2.12,
+              "end": 2.8,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 2.12,
+                  "properties": {
+                    "x": 0,
+                    "y": 0,
+                    "scale": 1,
+                    "rotation": 0
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 2.8,
+                  "properties": {
+                    "x": -12,
+                    "y": 5,
+                    "scale": 0.92,
+                    "rotation": -1.4
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": -12,
+                  "y": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cssKeyframes": [],
+      "anime": []
+    }
+  ],
+  "_meta": {
+    "version": "0.7.59",
+    "latestVersion": "0.7.59",
+    "updateAvailable": false
+  }
+}

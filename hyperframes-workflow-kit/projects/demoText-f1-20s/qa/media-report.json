@@ -1,0 +1,348 @@
+{
+  "schemaVersion": "autovideo-f1-style-review-qa/v1",
+  "expected": {
+    "duration": 20,
+    "width": 720,
+    "height": 1280,
+    "fps": "30/1"
+  },
+  "ok": true,
+  "probes": [
+    {
+      "id": "editorial-data-report",
+      "file": "review/probes/editorial-data-report.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "2897108"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "apple-clean-product",
+      "file": "review/probes/apple-clean-product.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "3370649"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "pixel-card-platform-ui",
+      "file": "review/probes/pixel-card-platform-ui.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "2974844"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "magazine-collage-cards",
+      "file": "review/probes/magazine-collage-cards.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "3246937"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "monochrome-cyber-editorial-cards",
+      "file": "review/probes/monochrome-cyber-editorial-cards.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "2360076"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "handdrawn-workflow-tutorial",
+      "file": "review/probes/handdrawn-workflow-tutorial.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "3360471"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    },
+    {
+      "id": "data-hud-narration",
+      "file": "review/probes/data-hud-narration.mp4",
+      "exists": true,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "20.010667",
+          "size": "2297438"
+        }
+      },
+      "duration": 20.010667,
+      "video": {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "r_frame_rate": "30/1"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      },
+      "decodeOk": true,
+      "blackDetectOk": true,
+      "blackIntervals": 0,
+      "ok": true
+    }
+  ]
+}

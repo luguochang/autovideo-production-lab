@@ -1,0 +1,1524 @@
+{
+  "schemaVersion": "autovideo-delivery-qa/v2",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "output": "hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2/renders/rag-full-chain-5m-20260728-r2-internal-review.mp4",
+  "outputSha256": "87b83ea59c300473cc869d1acffa94bde0a7abba871b392465fd74506691d7b6",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "checkedAt": "2026-07-29T07:49:39.437Z",
+  "ok": true,
+  "blockers": [],
+  "warnings": [
+    "Freeze 58.633333-65.266667s requires visual review.",
+    "Freeze 72.5-80.7s requires visual review.",
+    "Freeze 90.266667-98.3s requires visual review.",
+    "Freeze 103.466667-110.366667s requires visual review.",
+    "Freeze 111.033333-116.766667s requires visual review.",
+    "Freeze 117.4-140.566667s requires visual review.",
+    "Freeze 166-174.366667s requires visual review.",
+    "Freeze 180-193.566667s requires visual review.",
+    "Freeze 225.633333-230.833333s requires visual review.",
+    "Freeze 230.833333-259.8s requires visual review.",
+    "Freeze 259.8-271.566667s requires visual review.",
+    "Freeze 275-280.833333s requires visual review.",
+    "Freeze 280.833333-289.266667s requires visual review.",
+    "Freeze 289.666667-298.3s requires visual review.",
+    "Freeze 306.233333-315.933333s requires visual review.",
+    "Freeze 329.633333-338.333333s requires visual review.",
+    "Freeze 349.3-365.5s requires visual review.",
+    "Freeze 366.133333-381.166667s requires visual review.",
+    "Freeze 410.866667-423.3s requires visual review.",
+    "Freeze 475.3-480.833333s requires visual review.",
+    "Freeze 511.066667-518.266667s requires visual review.",
+    "Freeze 536.4-543.133333s requires visual review.",
+    "Freeze 578.133333-586s requires visual review.",
+    "Freeze 597.5-603.5s requires visual review.",
+    "Freeze 619.8-625.166667s requires visual review.",
+    "Freeze 632-638.566667s requires visual review.",
+    "Freeze 656.366667-664.366667s requires visual review.",
+    "Freeze 680.733333-686.533333s requires visual review.",
+    "Freeze 697.466667-704.3s requires visual review.",
+    "Freeze 767.7-780.1s requires visual review.",
+    "Freeze 782.7-791.7s requires visual review.",
+    "Freeze 814.166667-820.233333s requires visual review.",
+    "Freeze 820.466667-826.6s requires visual review.",
+    "Freeze 840.833333-845.966667s requires visual review.",
+    "Freeze 868.833333-877.566667s requires visual review.",
+    "Freeze 894.666667-903.7s requires visual review.",
+    "Freeze 906.2-912.5s requires visual review.",
+    "Freeze 921.2-934.033333s requires visual review.",
+    "Freeze 1014.233333-1021.466667s requires visual review.",
+    "Freeze 1021.933333-1030s requires visual review.",
+    "Freeze 1053.6-1059.933333s requires visual review.",
+    "Freeze 1087.966667-1094.833333s requires visual review.",
+    "Freeze 1148.833333-1155.5s requires visual review.",
+    "Freeze 1155.5-1162.633333s requires visual review.",
+    "Freeze 1174.833333-1192.233333s requires visual review.",
+    "Freeze 1192.766667-1202.1s requires visual review.",
+    "Freeze 1202.8-1213.966667s requires visual review.",
+    "Freeze 1214.6-1223.533333s requires visual review.",
+    "Freeze 1224.066667-1230s requires visual review.",
+    "Freeze 1234.666667-1240.866667s requires visual review.",
+    "Freeze 1281.2-1310.766667s requires visual review.",
+    "Freeze 1310.9-1321.133333s requires visual review.",
+    "Freeze 1363.633333-1369.2s requires visual review.",
+    "Freeze 1406.966667-1420.5s requires visual review.",
+    "Freeze 1423.4-1430.5s requires visual review.",
+    "Freeze 1451.9-1457.1s requires visual review.",
+    "Freeze 1473.933333-1482.266667s requires visual review.",
+    "Freeze 1495.8-1503.733333s requires visual review.",
+    "Freeze 1506.366667-1513.566667s requires visual review.",
+    "Freeze 1514.033333-1521.433333s requires visual review.",
+    "Freeze 1522.2-1530.966667s requires visual review.",
+    "Freeze 1531.6-1541.9s requires visual review.",
+    "Freeze 1554.666667-1561.266667s requires visual review.",
+    "Freeze 1595.2-1600.333333s requires visual review.",
+    "Freeze 1614.2-1619.5s requires visual review.",
+    "Freeze 1631.733333-1637.066667s requires visual review.",
+    "Freeze 1637.066667-1642.733333s requires visual review.",
+    "Freeze 1643.166667-1654.266667s requires visual review.",
+    "Freeze 1684-1690.033333s requires visual review.",
+    "Freeze 1695.833333-1707.1s requires visual review.",
+    "Freeze 1715.533333-1721.466667s requires visual review.",
+    "Freeze 1735.833333-1749.233333s requires visual review.",
+    "Freeze 1749.666667-1757.866667s requires visual review.",
+    "Freeze 1768.5-1773.7s requires visual review.",
+    "Freeze 1786.9-1792.233333s requires visual review.",
+    "Freeze 1802.266667-1814.766667s requires visual review.",
+    "Freeze 1820.666667-1826.733333s requires visual review.",
+    "Freeze 1826.733333-1836.2s requires visual review.",
+    "Freeze 1836.2-1841.533333s requires visual review.",
+    "Freeze 1842.133333-1858.566667s requires visual review."
+  ],
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640032",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 50,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 28886016,
+        "duration": "1880.600000",
+        "bit_rate": "618319",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "56418",
+        "extradata_size": 50,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.35.100 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 90250464,
+        "duration": "1880.218000",
+        "bit_rate": "179594",
+        "nb_frames": "88137",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\rag-full-chain-5m-20260728-r2\\renders\\rag-full-chain-5m-20260728-r2-internal-review.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "1880.600000",
+      "size": "189185788",
+      "bit_rate": "804789",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.19.100"
+      }
+    }
+  },
+  "loudness": {
+    "integratedLufs": -17.8,
+    "truePeakDbfs": -3.7
+  },
+  "blackSegments": [],
+  "silenceSegments": [],
+  "freezeSegments": [
+    {
+      "start": 0,
+      "end": 2.833333,
+      "duration": 2.833333
+    },
+    {
+      "start": 5.6,
+      "end": 8.333333,
+      "duration": 2.733333
+    },
+    {
+      "start": 9.4,
+      "end": 12,
+      "duration": 2.6
+    },
+    {
+      "start": 16.666667,
+      "end": 20.366667,
+      "duration": 3.7
+    },
+    {
+      "start": 21.266667,
+      "end": 24.366667,
+      "duration": 3.1
+    },
+    {
+      "start": 24.8,
+      "end": 29.433333,
+      "duration": 4.633333
+    },
+    {
+      "start": 30.166667,
+      "end": 34.3,
+      "duration": 4.133333
+    },
+    {
+      "start": 39.666667,
+      "end": 41.766667,
+      "duration": 2.1
+    },
+    {
+      "start": 46.866667,
+      "end": 50,
+      "duration": 3.133333
+    },
+    {
+      "start": 50.866667,
+      "end": 53.7,
+      "duration": 2.833333
+    },
+    {
+      "start": 58.633333,
+      "end": 65.266667,
+      "duration": 6.633333
+    },
+    {
+      "start": 66.2,
+      "end": 69.3,
+      "duration": 3.1
+    },
+    {
+      "start": 72.5,
+      "end": 80.7,
+      "duration": 8.2
+    },
+    {
+      "start": 80.7,
+      "end": 83.866667,
+      "duration": 3.166667
+    },
+    {
+      "start": 90.266667,
+      "end": 98.3,
+      "duration": 8.033333
+    },
+    {
+      "start": 98.5,
+      "end": 102.966667,
+      "duration": 4.466667
+    },
+    {
+      "start": 103.466667,
+      "end": 110.366667,
+      "duration": 6.9
+    },
+    {
+      "start": 111.033333,
+      "end": 116.766667,
+      "duration": 5.733333
+    },
+    {
+      "start": 117.4,
+      "end": 140.566667,
+      "duration": 23.166667
+    },
+    {
+      "start": 141.1,
+      "end": 144.4,
+      "duration": 3.3
+    },
+    {
+      "start": 144.833333,
+      "end": 147.7,
+      "duration": 2.866667
+    },
+    {
+      "start": 150.466667,
+      "end": 152.866667,
+      "duration": 2.4
+    },
+    {
+      "start": 153.266667,
+      "end": 155.333333,
+      "duration": 2.066667
+    },
+    {
+      "start": 155.8,
+      "end": 158.533333,
+      "duration": 2.733333
+    },
+    {
+      "start": 166,
+      "end": 174.366667,
+      "duration": 8.366667
+    },
+    {
+      "start": 174.533333,
+      "end": 177.533333,
+      "duration": 3
+    },
+    {
+      "start": 180,
+      "end": 193.566667,
+      "duration": 13.566667
+    },
+    {
+      "start": 193.7,
+      "end": 198.4,
+      "duration": 4.7
+    },
+    {
+      "start": 198.866667,
+      "end": 201.6,
+      "duration": 2.733333
+    },
+    {
+      "start": 205.833333,
+      "end": 208.8,
+      "duration": 2.966667
+    },
+    {
+      "start": 208.966667,
+      "end": 211.433333,
+      "duration": 2.466667
+    },
+    {
+      "start": 217.933333,
+      "end": 221.866667,
+      "duration": 3.933333
+    },
+    {
+      "start": 225.633333,
+      "end": 230.833333,
+      "duration": 5.2
+    },
+    {
+      "start": 230.833333,
+      "end": 259.8,
+      "duration": 28.966667
+    },
+    {
+      "start": 259.8,
+      "end": 271.566667,
+      "duration": 11.766667
+    },
+    {
+      "start": 272.033333,
+      "end": 274.466667,
+      "duration": 2.433333
+    },
+    {
+      "start": 275,
+      "end": 280.833333,
+      "duration": 5.833333
+    },
+    {
+      "start": 280.833333,
+      "end": 289.266667,
+      "duration": 8.433333
+    },
+    {
+      "start": 289.666667,
+      "end": 298.3,
+      "duration": 8.633333
+    },
+    {
+      "start": 298.766667,
+      "end": 301.4,
+      "duration": 2.633333
+    },
+    {
+      "start": 302.1,
+      "end": 305.533333,
+      "duration": 3.433333
+    },
+    {
+      "start": 306.233333,
+      "end": 315.933333,
+      "duration": 9.7
+    },
+    {
+      "start": 318.733333,
+      "end": 322.5,
+      "duration": 3.766667
+    },
+    {
+      "start": 324.633333,
+      "end": 327.033333,
+      "duration": 2.4
+    },
+    {
+      "start": 329.633333,
+      "end": 338.333333,
+      "duration": 8.7
+    },
+    {
+      "start": 338.466667,
+      "end": 341.633333,
+      "duration": 3.166667
+    },
+    {
+      "start": 349.3,
+      "end": 365.5,
+      "duration": 16.2
+    },
+    {
+      "start": 366.133333,
+      "end": 381.166667,
+      "duration": 15.033333
+    },
+    {
+      "start": 381.7,
+      "end": 385.266667,
+      "duration": 3.566667
+    },
+    {
+      "start": 390.666667,
+      "end": 394.033333,
+      "duration": 3.366667
+    },
+    {
+      "start": 394.533333,
+      "end": 397.566667,
+      "duration": 3.033333
+    },
+    {
+      "start": 400.366667,
+      "end": 402.766667,
+      "duration": 2.4
+    },
+    {
+      "start": 402.966667,
+      "end": 405.1,
+      "duration": 2.133333
+    },
+    {
+      "start": 405.633333,
+      "end": 408.4,
+      "duration": 2.766667
+    },
+    {
+      "start": 410.866667,
+      "end": 423.3,
+      "duration": 12.433333
+    },
+    {
+      "start": 423.433333,
+      "end": 427.8,
+      "duration": 4.366667
+    },
+    {
+      "start": 430.833333,
+      "end": 434.866667,
+      "duration": 4.033333
+    },
+    {
+      "start": 437.866667,
+      "end": 441.833333,
+      "duration": 3.966667
+    },
+    {
+      "start": 442.5,
+      "end": 445.566667,
+      "duration": 3.066667
+    },
+    {
+      "start": 446.033333,
+      "end": 449.3,
+      "duration": 3.266667
+    },
+    {
+      "start": 451.766667,
+      "end": 455.9,
+      "duration": 4.133333
+    },
+    {
+      "start": 460.233333,
+      "end": 463.333333,
+      "duration": 3.1
+    },
+    {
+      "start": 465.3,
+      "end": 467.733333,
+      "duration": 2.433333
+    },
+    {
+      "start": 468.133333,
+      "end": 472.5,
+      "duration": 4.366667
+    },
+    {
+      "start": 475.3,
+      "end": 480.833333,
+      "duration": 5.533333
+    },
+    {
+      "start": 482.9,
+      "end": 485.866667,
+      "duration": 2.966667
+    },
+    {
+      "start": 500.466667,
+      "end": 505.066667,
+      "duration": 4.6
+    },
+    {
+      "start": 505.8,
+      "end": 508.566667,
+      "duration": 2.766667
+    },
+    {
+      "start": 511.066667,
+      "end": 518.266667,
+      "duration": 7.2
+    },
+    {
+      "start": 518.4,
+      "end": 521.133333,
+      "duration": 2.733333
+    },
+    {
+      "start": 521.633333,
+      "end": 524.933333,
+      "duration": 3.3
+    },
+    {
+      "start": 527.7,
+      "end": 530.466667,
+      "duration": 2.766667
+    },
+    {
+      "start": 530.833333,
+      "end": 533.066667,
+      "duration": 2.233333
+    },
+    {
+      "start": 536.4,
+      "end": 543.133333,
+      "duration": 6.733333
+    },
+    {
+      "start": 548.8,
+      "end": 551.066667,
+      "duration": 2.266667
+    },
+    {
+      "start": 551.8,
+      "end": 556.433333,
+      "duration": 4.633333
+    },
+    {
+      "start": 562.333333,
+      "end": 565,
+      "duration": 2.666667
+    },
+    {
+      "start": 570.1,
+      "end": 574.233333,
+      "duration": 4.133333
+    },
+    {
+      "start": 574.5,
+      "end": 577.6,
+      "duration": 3.1
+    },
+    {
+      "start": 578.133333,
+      "end": 586,
+      "duration": 7.866667
+    },
+    {
+      "start": 597.5,
+      "end": 603.5,
+      "duration": 6
+    },
+    {
+      "start": 603.5,
+      "end": 605.833333,
+      "duration": 2.333333
+    },
+    {
+      "start": 606.933333,
+      "end": 611.7,
+      "duration": 4.766667
+    },
+    {
+      "start": 612.3,
+      "end": 616.966667,
+      "duration": 4.666667
+    },
+    {
+      "start": 619.8,
+      "end": 625.166667,
+      "duration": 5.366667
+    },
+    {
+      "start": 625.366667,
+      "end": 628.933333,
+      "duration": 3.566667
+    },
+    {
+      "start": 632,
+      "end": 638.566667,
+      "duration": 6.566667
+    },
+    {
+      "start": 639.166667,
+      "end": 642.566667,
+      "duration": 3.4
+    },
+    {
+      "start": 643.066667,
+      "end": 647.5,
+      "duration": 4.433333
+    },
+    {
+      "start": 650.033333,
+      "end": 652.333333,
+      "duration": 2.3
+    },
+    {
+      "start": 656.366667,
+      "end": 664.366667,
+      "duration": 8
+    },
+    {
+      "start": 664.5,
+      "end": 667.466667,
+      "duration": 2.966667
+    },
+    {
+      "start": 674.8,
+      "end": 677.933333,
+      "duration": 3.133333
+    },
+    {
+      "start": 678.1,
+      "end": 680.133333,
+      "duration": 2.033333
+    },
+    {
+      "start": 680.733333,
+      "end": 686.533333,
+      "duration": 5.8
+    },
+    {
+      "start": 689.033333,
+      "end": 693.166667,
+      "duration": 4.133333
+    },
+    {
+      "start": 697.466667,
+      "end": 704.3,
+      "duration": 6.833333
+    },
+    {
+      "start": 704.433333,
+      "end": 706.933333,
+      "duration": 2.5
+    },
+    {
+      "start": 717.4,
+      "end": 721.6,
+      "duration": 4.2
+    },
+    {
+      "start": 724.133333,
+      "end": 728.966667,
+      "duration": 4.833333
+    },
+    {
+      "start": 728.966667,
+      "end": 730.966667,
+      "duration": 2
+    },
+    {
+      "start": 742.5,
+      "end": 745.233333,
+      "duration": 2.733333
+    },
+    {
+      "start": 759.3,
+      "end": 762.766667,
+      "duration": 3.466667
+    },
+    {
+      "start": 767.7,
+      "end": 780.1,
+      "duration": 12.4
+    },
+    {
+      "start": 782.7,
+      "end": 791.7,
+      "duration": 9
+    },
+    {
+      "start": 791.833333,
+      "end": 795.1,
+      "duration": 3.266667
+    },
+    {
+      "start": 809.633333,
+      "end": 814.166667,
+      "duration": 4.533333
+    },
+    {
+      "start": 814.166667,
+      "end": 820.233333,
+      "duration": 6.066667
+    },
+    {
+      "start": 820.466667,
+      "end": 826.6,
+      "duration": 6.133333
+    },
+    {
+      "start": 829.566667,
+      "end": 833.666667,
+      "duration": 4.1
+    },
+    {
+      "start": 834.366667,
+      "end": 836.433333,
+      "duration": 2.066667
+    },
+    {
+      "start": 837,
+      "end": 839.166667,
+      "duration": 2.166667
+    },
+    {
+      "start": 840.833333,
+      "end": 845.966667,
+      "duration": 5.133333
+    },
+    {
+      "start": 853.8,
+      "end": 855.833333,
+      "duration": 2.033333
+    },
+    {
+      "start": 855.833333,
+      "end": 860.2,
+      "duration": 4.366667
+    },
+    {
+      "start": 861.133333,
+      "end": 864,
+      "duration": 2.866667
+    },
+    {
+      "start": 864.5,
+      "end": 868.4,
+      "duration": 3.9
+    },
+    {
+      "start": 868.833333,
+      "end": 877.566667,
+      "duration": 8.733333
+    },
+    {
+      "start": 880.833333,
+      "end": 884.2,
+      "duration": 3.366667
+    },
+    {
+      "start": 884.5,
+      "end": 886.8,
+      "duration": 2.3
+    },
+    {
+      "start": 889.666667,
+      "end": 892.2,
+      "duration": 2.533333
+    },
+    {
+      "start": 894.666667,
+      "end": 903.7,
+      "duration": 9.033333
+    },
+    {
+      "start": 906.2,
+      "end": 912.5,
+      "duration": 6.3
+    },
+    {
+      "start": 921.2,
+      "end": 934.033333,
+      "duration": 12.833333
+    },
+    {
+      "start": 934.2,
+      "end": 938.566667,
+      "duration": 4.366667
+    },
+    {
+      "start": 941.133333,
+      "end": 943.966667,
+      "duration": 2.833333
+    },
+    {
+      "start": 954.533333,
+      "end": 957.8,
+      "duration": 3.266667
+    },
+    {
+      "start": 960.7,
+      "end": 963.8,
+      "duration": 3.1
+    },
+    {
+      "start": 972.266667,
+      "end": 975.333333,
+      "duration": 3.066667
+    },
+    {
+      "start": 975.5,
+      "end": 978.1,
+      "duration": 2.6
+    },
+    {
+      "start": 984.733333,
+      "end": 988.433333,
+      "duration": 3.7
+    },
+    {
+      "start": 988.566667,
+      "end": 990.733333,
+      "duration": 2.166667
+    },
+    {
+      "start": 993.3,
+      "end": 998.233333,
+      "duration": 4.933333
+    },
+    {
+      "start": 1014.233333,
+      "end": 1021.466667,
+      "duration": 7.233333
+    },
+    {
+      "start": 1021.933333,
+      "end": 1030,
+      "duration": 8.066667
+    },
+    {
+      "start": 1032.966667,
+      "end": 1037.433333,
+      "duration": 4.466667
+    },
+    {
+      "start": 1038.166667,
+      "end": 1040.933333,
+      "duration": 2.766667
+    },
+    {
+      "start": 1043.5,
+      "end": 1047.166667,
+      "duration": 3.666667
+    },
+    {
+      "start": 1048.9,
+      "end": 1051.033333,
+      "duration": 2.133333
+    },
+    {
+      "start": 1053.6,
+      "end": 1059.933333,
+      "duration": 6.333333
+    },
+    {
+      "start": 1059.933333,
+      "end": 1062.433333,
+      "duration": 2.5
+    },
+    {
+      "start": 1069.8,
+      "end": 1073.633333,
+      "duration": 3.833333
+    },
+    {
+      "start": 1073.866667,
+      "end": 1075.933333,
+      "duration": 2.066667
+    },
+    {
+      "start": 1080.5,
+      "end": 1085.066667,
+      "duration": 4.566667
+    },
+    {
+      "start": 1085.066667,
+      "end": 1087.5,
+      "duration": 2.433333
+    },
+    {
+      "start": 1087.966667,
+      "end": 1094.833333,
+      "duration": 6.866667
+    },
+    {
+      "start": 1097.166667,
+      "end": 1100.366667,
+      "duration": 3.2
+    },
+    {
+      "start": 1105.1,
+      "end": 1109.766667,
+      "duration": 4.666667
+    },
+    {
+      "start": 1124.8,
+      "end": 1128.933333,
+      "duration": 4.133333
+    },
+    {
+      "start": 1131.4,
+      "end": 1135.166667,
+      "duration": 3.766667
+    },
+    {
+      "start": 1135.333333,
+      "end": 1137.466667,
+      "duration": 2.133333
+    },
+    {
+      "start": 1140.266667,
+      "end": 1142.833333,
+      "duration": 2.566667
+    },
+    {
+      "start": 1143.233333,
+      "end": 1145.333333,
+      "duration": 2.1
+    },
+    {
+      "start": 1148.833333,
+      "end": 1155.5,
+      "duration": 6.666667
+    },
+    {
+      "start": 1155.5,
+      "end": 1162.633333,
+      "duration": 7.133333
+    },
+    {
+      "start": 1163.833333,
+      "end": 1166.033333,
+      "duration": 2.2
+    },
+    {
+      "start": 1174.833333,
+      "end": 1192.233333,
+      "duration": 17.4
+    },
+    {
+      "start": 1192.766667,
+      "end": 1202.1,
+      "duration": 9.333333
+    },
+    {
+      "start": 1202.8,
+      "end": 1213.966667,
+      "duration": 11.166667
+    },
+    {
+      "start": 1214.6,
+      "end": 1223.533333,
+      "duration": 8.933333
+    },
+    {
+      "start": 1224.066667,
+      "end": 1230,
+      "duration": 5.933333
+    },
+    {
+      "start": 1234.666667,
+      "end": 1240.866667,
+      "duration": 6.2
+    },
+    {
+      "start": 1241,
+      "end": 1243.9,
+      "duration": 2.9
+    },
+    {
+      "start": 1247.166667,
+      "end": 1251.633333,
+      "duration": 4.466667
+    },
+    {
+      "start": 1252.366667,
+      "end": 1255.266667,
+      "duration": 2.9
+    },
+    {
+      "start": 1258.733333,
+      "end": 1262.666667,
+      "duration": 3.933333
+    },
+    {
+      "start": 1265.533333,
+      "end": 1268.333333,
+      "duration": 2.8
+    },
+    {
+      "start": 1270.966667,
+      "end": 1275.3,
+      "duration": 4.333333
+    },
+    {
+      "start": 1275.8,
+      "end": 1278.766667,
+      "duration": 2.966667
+    },
+    {
+      "start": 1281.2,
+      "end": 1310.766667,
+      "duration": 29.566667
+    },
+    {
+      "start": 1310.9,
+      "end": 1321.133333,
+      "duration": 10.233333
+    },
+    {
+      "start": 1326.033333,
+      "end": 1328.133333,
+      "duration": 2.1
+    },
+    {
+      "start": 1328.4,
+      "end": 1330.4,
+      "duration": 2
+    },
+    {
+      "start": 1333,
+      "end": 1337.433333,
+      "duration": 4.433333
+    },
+    {
+      "start": 1339.766667,
+      "end": 1342.833333,
+      "duration": 3.066667
+    },
+    {
+      "start": 1347.166667,
+      "end": 1350.666667,
+      "duration": 3.5
+    },
+    {
+      "start": 1350.833333,
+      "end": 1354.466667,
+      "duration": 3.633333
+    },
+    {
+      "start": 1357.3,
+      "end": 1360.733333,
+      "duration": 3.433333
+    },
+    {
+      "start": 1363.633333,
+      "end": 1369.2,
+      "duration": 5.566667
+    },
+    {
+      "start": 1369.733333,
+      "end": 1372.166667,
+      "duration": 2.433333
+    },
+    {
+      "start": 1372.166667,
+      "end": 1375.433333,
+      "duration": 3.266667
+    },
+    {
+      "start": 1376,
+      "end": 1379.133333,
+      "duration": 3.133333
+    },
+    {
+      "start": 1381.566667,
+      "end": 1386.166667,
+      "duration": 4.6
+    },
+    {
+      "start": 1386.3,
+      "end": 1388.9,
+      "duration": 2.6
+    },
+    {
+      "start": 1391.733333,
+      "end": 1393.733333,
+      "duration": 2
+    },
+    {
+      "start": 1398.366667,
+      "end": 1403.066667,
+      "duration": 4.7
+    },
+    {
+      "start": 1403.7,
+      "end": 1406.466667,
+      "duration": 2.766667
+    },
+    {
+      "start": 1406.966667,
+      "end": 1420.5,
+      "duration": 13.533333
+    },
+    {
+      "start": 1423.4,
+      "end": 1430.5,
+      "duration": 7.1
+    },
+    {
+      "start": 1433.666667,
+      "end": 1438,
+      "duration": 4.333333
+    },
+    {
+      "start": 1442.233333,
+      "end": 1446.933333,
+      "duration": 4.7
+    },
+    {
+      "start": 1451.9,
+      "end": 1457.1,
+      "duration": 5.2
+    },
+    {
+      "start": 1465.533333,
+      "end": 1470.366667,
+      "duration": 4.833333
+    },
+    {
+      "start": 1471.133333,
+      "end": 1473.366667,
+      "duration": 2.233333
+    },
+    {
+      "start": 1473.933333,
+      "end": 1482.266667,
+      "duration": 8.333333
+    },
+    {
+      "start": 1485.066667,
+      "end": 1487.6,
+      "duration": 2.533333
+    },
+    {
+      "start": 1487.866667,
+      "end": 1490.1,
+      "duration": 2.233333
+    },
+    {
+      "start": 1495.8,
+      "end": 1503.733333,
+      "duration": 7.933333
+    },
+    {
+      "start": 1503.733333,
+      "end": 1505.933333,
+      "duration": 2.2
+    },
+    {
+      "start": 1506.366667,
+      "end": 1513.566667,
+      "duration": 7.2
+    },
+    {
+      "start": 1514.033333,
+      "end": 1521.433333,
+      "duration": 7.4
+    },
+    {
+      "start": 1522.2,
+      "end": 1530.966667,
+      "duration": 8.766667
+    },
+    {
+      "start": 1531.6,
+      "end": 1541.9,
+      "duration": 10.3
+    },
+    {
+      "start": 1554.666667,
+      "end": 1561.266667,
+      "duration": 6.6
+    },
+    {
+      "start": 1562.466667,
+      "end": 1565.3,
+      "duration": 2.833333
+    },
+    {
+      "start": 1568.266667,
+      "end": 1570.566667,
+      "duration": 2.3
+    },
+    {
+      "start": 1575.1,
+      "end": 1577.266667,
+      "duration": 2.166667
+    },
+    {
+      "start": 1583.033333,
+      "end": 1587.066667,
+      "duration": 4.033333
+    },
+    {
+      "start": 1587.066667,
+      "end": 1590.033333,
+      "duration": 2.966667
+    },
+    {
+      "start": 1590.033333,
+      "end": 1592.7,
+      "duration": 2.666667
+    },
+    {
+      "start": 1595.2,
+      "end": 1600.333333,
+      "duration": 5.133333
+    },
+    {
+      "start": 1605.433333,
+      "end": 1608.866667,
+      "duration": 3.433333
+    },
+    {
+      "start": 1614.2,
+      "end": 1619.5,
+      "duration": 5.3
+    },
+    {
+      "start": 1620.4,
+      "end": 1622.8,
+      "duration": 2.4
+    },
+    {
+      "start": 1625.3,
+      "end": 1629.033333,
+      "duration": 3.733333
+    },
+    {
+      "start": 1629.2,
+      "end": 1631.2,
+      "duration": 2
+    },
+    {
+      "start": 1631.733333,
+      "end": 1637.066667,
+      "duration": 5.333333
+    },
+    {
+      "start": 1637.066667,
+      "end": 1642.733333,
+      "duration": 5.666667
+    },
+    {
+      "start": 1643.166667,
+      "end": 1654.266667,
+      "duration": 11.1
+    },
+    {
+      "start": 1657.2,
+      "end": 1660.366667,
+      "duration": 3.166667
+    },
+    {
+      "start": 1662.066667,
+      "end": 1664.4,
+      "duration": 2.333333
+    },
+    {
+      "start": 1666.9,
+      "end": 1671.5,
+      "duration": 4.6
+    },
+    {
+      "start": 1671.666667,
+      "end": 1674.066667,
+      "duration": 2.4
+    },
+    {
+      "start": 1681,
+      "end": 1683.3,
+      "duration": 2.3
+    },
+    {
+      "start": 1684,
+      "end": 1690.033333,
+      "duration": 6.033333
+    },
+    {
+      "start": 1690.666667,
+      "end": 1693.366667,
+      "duration": 2.7
+    },
+    {
+      "start": 1695.833333,
+      "end": 1707.1,
+      "duration": 11.266667
+    },
+    {
+      "start": 1707.233333,
+      "end": 1711.166667,
+      "duration": 3.933333
+    },
+    {
+      "start": 1711.833333,
+      "end": 1714.833333,
+      "duration": 3
+    },
+    {
+      "start": 1715.533333,
+      "end": 1721.466667,
+      "duration": 5.933333
+    },
+    {
+      "start": 1723.9,
+      "end": 1728.733333,
+      "duration": 4.833333
+    },
+    {
+      "start": 1729.5,
+      "end": 1731.7,
+      "duration": 2.2
+    },
+    {
+      "start": 1735.833333,
+      "end": 1749.233333,
+      "duration": 13.4
+    },
+    {
+      "start": 1749.666667,
+      "end": 1757.866667,
+      "duration": 8.2
+    },
+    {
+      "start": 1763.2,
+      "end": 1765.933333,
+      "duration": 2.733333
+    },
+    {
+      "start": 1768.5,
+      "end": 1773.7,
+      "duration": 5.2
+    },
+    {
+      "start": 1773.866667,
+      "end": 1775.9,
+      "duration": 2.033333
+    },
+    {
+      "start": 1778.4,
+      "end": 1781.8,
+      "duration": 3.4
+    },
+    {
+      "start": 1781.966667,
+      "end": 1783.966667,
+      "duration": 2
+    },
+    {
+      "start": 1786.9,
+      "end": 1792.233333,
+      "duration": 5.333333
+    },
+    {
+      "start": 1793.066667,
+      "end": 1795.633333,
+      "duration": 2.566667
+    },
+    {
+      "start": 1798.033333,
+      "end": 1800.033333,
+      "duration": 2
+    },
+    {
+      "start": 1802.266667,
+      "end": 1814.766667,
+      "duration": 12.5
+    },
+    {
+      "start": 1815.366667,
+      "end": 1818.266667,
+      "duration": 2.9
+    },
+    {
+      "start": 1820.666667,
+      "end": 1826.733333,
+      "duration": 6.066667
+    },
+    {
+      "start": 1826.733333,
+      "end": 1836.2,
+      "duration": 9.466667
+    },
+    {
+      "start": 1836.2,
+      "end": 1841.533333,
+      "duration": 5.333333
+    },
+    {
+      "start": 1842.133333,
+      "end": 1858.566667,
+      "duration": 16.433333
+    },
+    {
+      "start": 1865.066667,
+      "end": 1869.933333,
+      "duration": 4.866667
+    },
+    {
+      "start": 1870.1,
+      "end": 1872.466667,
+      "duration": 2.366667
+    },
+    {
+      "start": 1874.966667,
+      "end": 1878.733333,
+      "duration": 3.766667
+    }
+  ],
+  "reviewFrameTimes": {
+    "cover": 2,
+    "start": 2,
+    "middle": 940.3,
+    "end": 1880.1
+  },
+  "internalReviewReceipt": {
+    "path": "qa/internal-review-delivery.json",
+    "sha256": "6758885590d0a4ab717a42744d33e80fb11f3b1502a79695365cab68c435b810",
+    "machineStatus": "passed"
+  },
+  "reviewFrames": [
+    "renders/rag-full-chain-5m-20260728-r2-cover.png",
+    "qa/stills/delivery-start.png",
+    "qa/stills/delivery-middle.png",
+    "qa/stills/delivery-end.png"
+  ],
+  "deliveryManifest": "delivery/delivery-manifest.json",
+  "scope": "Machine media QA plus deterministic review-frame extraction. Release eligibility is derived separately from current hash-bound human approvals and rights receipts.",
+  "okForInternalReview": true,
+  "okForPublicRelease": false,
+  "releaseBlockers": [
+    "The current render is not an unblocked public-release master.",
+    "Publication rights are not fully cleared by the current approved rights receipt.",
+    "Pronunciation review was not completed through full listening or an acronym-only machine approval.",
+    "Human subtitle and screen-text review approvals are required for public release.",
+    "Human final review is missing or stale for the current preview and composition."
+  ]
+}

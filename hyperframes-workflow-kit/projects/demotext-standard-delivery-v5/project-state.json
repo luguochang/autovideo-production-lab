@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "stage": "internal-delivery-ready",
+  "createdAt": "2026-07-19T14:02:11.537Z",
+  "updatedAt": "2026-07-22T01:33:23.074Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "275s",
+    "platform": "Douyin",
+    "audience": null,
+    "rememberedOutcome": null,
+    "forbiddenTreatments": null,
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T14:33:18.631Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T14:54:14.535Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T14:55:36.137Z",
+      "approvalScope": "internal-autonomous-review",
+      "publicReleaseBlocked": true,
+      "compositionDigest": "1c5b30c857564639527b5feb952d3d6816c45fcbad6b31b3a3078d3bf07dbd96",
+      "compositionFileCount": 54,
+      "checkEvidence": "workflow-console/data/projects/demotext-standard-delivery-v5/artifacts/qa-review/report.json",
+      "notes": "Internal review only. This does not represent user approval or public-release clearance."
+    },
+    "deliveryQa": {
+      "status": "passed-internal-only",
+      "checkedAt": "2026-07-19T15:01:49.080Z",
+      "report": "qa/delivery-report.json",
+      "outputSha256": "63aba1a214450c6cfb8d56f8694280bc6447d32e8df46dc41a53966ecb971d8d",
+      "publicReleaseBlocked": true
+    }
+  },
+  "nextAction": "Workbench reopened package-export: Added the operator-facing Chinese quick-start manual to the standard package.",
+  "handoffs": {
+    "audio": {
+      "status": "approved",
+      "rightsStatus": "needs-review",
+      "approvalScope": "technical-only",
+      "humanListeningStatus": "not-performed",
+      "publicReleaseBlocked": true,
+      "lock": "audio-handoff.json",
+      "durationSeconds": 239.328167
+    }
+  },
+  "invalidations": [
+    {
+      "at": "2026-07-19T14:17:53.023Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    }
+  ],
+  "deliveries": {
+    "internalReview": {
+      "status": "ready",
+      "video": "renders/demotext-standard-delivery-v5-internal-review.mp4",
+      "cover": "renders/demotext-standard-delivery-v5-cover.png",
+      "manifest": "delivery/delivery-manifest.json",
+      "outputSha256": "63aba1a214450c6cfb8d56f8694280bc6447d32e8df46dc41a53966ecb971d8d"
+    }
+  },
+  "release": {
+    "phase": "production",
+    "technicalVideoGenerationReady": false,
+    "internalReviewReady": false,
+    "publicMasterReady": false,
+    "publicReleaseBlocked": true,
+    "receipt": null,
+    "video": null,
+    "cover": null
+  }
+}

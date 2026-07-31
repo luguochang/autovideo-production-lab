@@ -1,0 +1,1837 @@
+{
+  "schemaVersion": "autovideo-pronunciation/v2",
+  "projectId": "rag-full-chain-5m-20260728",
+  "narrationSha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+  "policy": "Preview only: generated from an unapproved editorial draft. Regenerate input/pronunciation.json from the final NarrationLock before TTS. Letter acronyms may use explicit spelling; every other Latin token still requires a hash-bound in-context listening probe.",
+  "entries": [
+    {
+      "token": "RAG",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "R A G",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 7,
+          "end": 10,
+          "contextText": "我按数据流把 RAG 全链路讲一遍。",
+          "contextSha256": "5840c104e9397f14d1e28c852fe9c8ef0adbc3f2170833f6acdd08b965339543"
+        },
+        {
+          "start": 138,
+          "end": 141,
+          "contextText": "因为 RAG 的每一步都不是非此即彼的单选，实际生产更多是组合使用。",
+          "contextSha256": "8160bc3785e125543b302d5eacde51e5080bbd947d697ffbdb7cb3ab64fe32b7"
+        },
+        {
+          "start": 1886,
+          "end": 1889,
+          "contextText": "朴素 RAG 往往把两者当成同一个对象，生产上需要把检索块和合成块解耦。",
+          "contextSha256": "3a058b5cd12e0e9eeb2d090e0fbb22ab65f9919af415183e023a71835176cc3d"
+        },
+        {
+          "start": 4653,
+          "end": 4656,
+          "contextText": "另一块是查询路由：Adaptive RAG，也就是自适应 RAG 的思路，事前判断查询复杂度路由到不检索、单次检索、多跳检索。",
+          "contextSha256": "cc2610fdfe2df40b1915b674f47c1da7c89c434c10c391cac348a895698c4972"
+        },
+        {
+          "start": 4664,
+          "end": 4667,
+          "contextText": "另一块是查询路由：Adaptive RAG，也就是自适应 RAG 的思路，事前判断查询复杂度路由到不检索、单次检索、多跳检索。",
+          "contextSha256": "cc2610fdfe2df40b1915b674f47c1da7c89c434c10c391cac348a895698c4972"
+        },
+        {
+          "start": 5098,
+          "end": 5101,
+          "contextText": "查询理解跑稳以后，可以继续评估自适应 RAG 的事前路由，也可以微调查询改写模型，或者利用历史日志学习改写策略。",
+          "contextSha256": "5666b866f48dc9ebb4325ccb6553d48dfcf17daa0dea32125ea23988b1e27a7b"
+        },
+        {
+          "start": 7037,
+          "end": 7040,
+          "contextText": "普通 RAG 是直线——检索完直接生成，不管证据够不够都硬答。",
+          "contextSha256": "eadfbdec46d7186566149ff14d11c74e5e8fa7599d00de343cd89c6c473f45f4"
+        },
+        {
+          "start": 7070,
+          "end": 7073,
+          "contextText": "智能体式 RAG 是状态机，拿到证据先评估，不够就改写重检，够了才生成，实在不够就拒答。",
+          "contextSha256": "7e779db52ccf7efc5c1ace8a24ebf27d2e9e65d77343796bf401294858d98cbc"
+        },
+        {
+          "start": 7165,
+          "end": 7168,
+          "contextText": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "contextSha256": "1a0aab4958ff30855a74570e9a44009f02624a701094d0d8724c4b6218023110"
+        },
+        {
+          "start": 7193,
+          "end": 7196,
+          "contextText": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "contextSha256": "1a0aab4958ff30855a74570e9a44009f02624a701094d0d8724c4b6218023110"
+        },
+        {
+          "start": 7263,
+          "end": 7266,
+          "contextText": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "contextSha256": "1a0aab4958ff30855a74570e9a44009f02624a701094d0d8724c4b6218023110"
+        },
+        {
+          "start": 7367,
+          "end": 7370,
+          "contextText": "智能体式 RAG 怎么落到生产？",
+          "contextSha256": "0432e3bbc59b8a73ab6de28be03eef20f3ad78c3890bebb866d54613c218164a"
+        },
+        {
+          "start": 7382,
+          "end": 7385,
+          "contextText": "自反思 RAG 原版需要微调，实施门槛较高，多数团队不会直接照搬完整方案。",
+          "contextSha256": "f20754b94efa9e5d950ebd12186c84c877025de374fea15e2773736720ff33aa"
+        },
+        {
+          "start": 7947,
+          "end": 7950,
+          "contextText": "轻量闭环跑稳以后，再逐步评估跨轮能力：用反思记忆从失败中学习，按需要尝试自反思 RAG 微调、纠错型 RAG 的网络检索兜底、图谱 RAG 的跨文档推理和全局总结，以及多智能体互评。",
+          "contextSha256": "081203225d51cd0a9d5e82f60188cb8a2e0e225aa00e870203b49b09b6ea6878"
+        },
+        {
+          "start": 7958,
+          "end": 7961,
+          "contextText": "轻量闭环跑稳以后，再逐步评估跨轮能力：用反思记忆从失败中学习，按需要尝试自反思 RAG 微调、纠错型 RAG 的网络检索兜底、图谱 RAG 的跨文档推理和全局总结，以及多智能体互评。",
+          "contextSha256": "081203225d51cd0a9d5e82f60188cb8a2e0e225aa00e870203b49b09b6ea6878"
+        },
+        {
+          "start": 7973,
+          "end": 7976,
+          "contextText": "轻量闭环跑稳以后，再逐步评估跨轮能力：用反思记忆从失败中学习，按需要尝试自反思 RAG 微调、纠错型 RAG 的网络检索兜底、图谱 RAG 的跨文档推理和全局总结，以及多智能体互评。",
+          "contextSha256": "081203225d51cd0a9d5e82f60188cb8a2e0e225aa00e870203b49b09b6ea6878"
+        },
+        {
+          "start": 8443,
+          "end": 8446,
+          "contextText": "答案要返回来源文档、章节、页码、引用片段，这是 RAG 相比纯 LLM 的可信度优势。",
+          "contextSha256": "7e83be84e44dc2d046573f5ff385f8ca73fb301335d96c56092d8febd8c22e72"
+        },
+        {
+          "start": 8581,
+          "end": 8584,
+          "contextText": "不评测的 RAG 就是瞎调，每改一环都要有指标量化。",
+          "contextSha256": "6cbd23ddb4a6d59525d50db888c541345a48c15853c109d52fc3631781b2cda7"
+        },
+        {
+          "start": 10029,
+          "end": 10032,
+          "contextText": "第一，RAG 全链路是一条数据流。",
+          "contextSha256": "38cff0cc39663e5739b9f76b35aef0478529c92ae9fcdd1c62bd4078955ffca1"
+        },
+        {
+          "start": 10322,
+          "end": 10325,
+          "contextText": "归根结底，RAG 是一套工程系统，不是单纯的提示词技巧，讲究的是每一环都可控、可测、可迭代。",
+          "contextSha256": "c229b1dd12c2976d47096e28f176add056ade75cf83be0012521fa39308b38af"
+        }
+      ]
+    },
+    {
+      "token": "API",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "A P I",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 194,
+          "end": 197,
+          "contextText": "把这些判断讲清楚，才能体现真正做过，而不只是会调 API。",
+          "contextSha256": "e513dc1124b2ce63037d362c7d44cc8c6520598f0b202cc0e732e9fda42a3835"
+        },
+        {
+          "start": 10237,
+          "end": 10240,
+          "contextText": "第二，每一步都不是单一选型，生产多是组合——解析是主引擎加规则清洗加多模态兜底，检索是多路混合，智能体式是轻量闭环不微调，关键是要有选型判断和理由，不是调 API。",
+          "contextSha256": "fe66e16fa900b8c5e6cfa2de1ef7e365fecf6be743e3c535ec2a28024799a714"
+        }
+      ]
+    },
+    {
+      "token": "PDF",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "P D F",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 220,
+          "end": 223,
+          "contextText": "原始文档可能来自 PDF、Word、HTML 或 Confluence，格式复杂，既有表格、图片，也有扫描件。",
+          "contextSha256": "ef3882a374a73dceb323466fdf0b2849b732b7a7597282ad8eeb57bf93e99232"
+        }
+      ]
+    },
+    {
+      "token": "Word",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Word",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 224,
+          "end": 228,
+          "contextText": "原始文档可能来自 PDF、Word、HTML 或 Confluence，格式复杂，既有表格、图片，也有扫描件。",
+          "contextSha256": "ef3882a374a73dceb323466fdf0b2849b732b7a7597282ad8eeb57bf93e99232"
+        }
+      ]
+    },
+    {
+      "token": "HTML",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "H T M L",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 229,
+          "end": 233,
+          "contextText": "原始文档可能来自 PDF、Word、HTML 或 Confluence，格式复杂，既有表格、图片，也有扫描件。",
+          "contextSha256": "ef3882a374a73dceb323466fdf0b2849b732b7a7597282ad8eeb57bf93e99232"
+        }
+      ]
+    },
+    {
+      "token": "Confluence",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Confluence",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 236,
+          "end": 246,
+          "contextText": "原始文档可能来自 PDF、Word、HTML 或 Confluence，格式复杂，既有表格、图片，也有扫描件。",
+          "contextSha256": "ef3882a374a73dceb323466fdf0b2849b732b7a7597282ad8eeb57bf93e99232"
+        }
+      ]
+    },
+    {
+      "token": "PyMuPDF",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "PyMuPDF",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 342,
+          "end": 349,
+          "contextText": "一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。",
+          "contextSha256": "135c6cd615eb2b34c4a63dc4a902701c872efca1f55d0e03b67378234a673658"
+        },
+        {
+          "start": 538,
+          "end": 545,
+          "contextText": "简单纯文本可以先用 PyMuPDF，速度快，成本也低；复杂文档——表格多、层级深、有规范编号——通常要用结构化解析，因为后面要按结构分块、要表格检索，丢了结构这些全做不了。",
+          "contextSha256": "59b5190760949b20559df775670e9b6cf2f12b43b5e67fac358da24cbe3e1523"
+        }
+      ]
+    },
+    {
+      "token": "pdfplumber",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "pdfplumber",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 350,
+          "end": 360,
+          "contextText": "一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。",
+          "contextSha256": "135c6cd615eb2b34c4a63dc4a902701c872efca1f55d0e03b67378234a673658"
+        }
+      ]
+    },
+    {
+      "token": "Unstructured",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Unstructured",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 390,
+          "end": 402,
+          "contextText": "一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。",
+          "contextSha256": "135c6cd615eb2b34c4a63dc4a902701c872efca1f55d0e03b67378234a673658"
+        },
+        {
+          "start": 649,
+          "end": 661,
+          "contextText": "我自己的判断是，中文复杂文档场景 MinerU 优先，通用多格式场景 Unstructured 优先。",
+          "contextSha256": "ff5c0e43e9e5e3403b381d9bfcb25151758ff30c1525e10555c421674a8dc5dc"
+        },
+        {
+          "start": 715,
+          "end": 727,
+          "contextText": "主解析用 MinerU 或 Unstructured 跑全量，拿到标题树、表格、阅读顺序；然后过一层规则清洗，去页眉页脚、修乱码、补页码缺失；碰到扫描件、复杂图表、公式这种主解析搞不定的，再触发多模态 LLM 二次解析，成本更高，但更适合处理这些难页，只在需要时使用。",
+          "contextSha256": "9f3fef30a7b464939784ab0391bdcea087bfea5b88842862bafb764676ebdae2"
+        }
+      ]
+    },
+    {
+      "token": "MinerU",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "MinerU",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 403,
+          "end": 409,
+          "contextText": "一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。",
+          "contextSha256": "135c6cd615eb2b34c4a63dc4a902701c872efca1f55d0e03b67378234a673658"
+        },
+        {
+          "start": 631,
+          "end": 637,
+          "contextText": "我自己的判断是，中文复杂文档场景 MinerU 优先，通用多格式场景 Unstructured 优先。",
+          "contextSha256": "ff5c0e43e9e5e3403b381d9bfcb25151758ff30c1525e10555c421674a8dc5dc"
+        },
+        {
+          "start": 706,
+          "end": 712,
+          "contextText": "主解析用 MinerU 或 Unstructured 跑全量，拿到标题树、表格、阅读顺序；然后过一层规则清洗，去页眉页脚、修乱码、补页码缺失；碰到扫描件、复杂图表、公式这种主解析搞不定的，再触发多模态 LLM 二次解析，成本更高，但更适合处理这些难页，只在需要时使用。",
+          "contextSha256": "9f3fef30a7b464939784ab0391bdcea087bfea5b88842862bafb764676ebdae2"
+        },
+        {
+          "start": 858,
+          "end": 864,
+          "contextText": "所以，只说“用 MinerU”并不准确。",
+          "contextSha256": "ae542acd7738c941aa4d9029c5ff25403214ea1db21139e6d410db83d1b6df48"
+        },
+        {
+          "start": 880,
+          "end": 886,
+          "contextText": "更准确的说法是：以 MinerU 为主解析，再配规则清洗和多模态 LLM 兜底。",
+          "contextSha256": "7f4815f6122ee7d801b88890aaf2b2614d2394fcd9bed27cdc15c3a0d2a7b509"
+        },
+        {
+          "start": 910,
+          "end": 916,
+          "contextText": "MinerU 是主引擎，但不是全部。",
+          "contextSha256": "6e2a39a06d65b285421f37a9d87e5e2689de4d88d98b45baeb6633a13df5926a"
+        }
+      ]
+    },
+    {
+      "token": "Docling",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Docling",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 412,
+          "end": 419,
+          "contextText": "一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构；一类是结构化解析框架，候选包括 Unstructured、MinerU 和 Docling。",
+          "contextSha256": "135c6cd615eb2b34c4a63dc4a902701c872efca1f55d0e03b67378234a673658"
+        },
+        {
+          "start": 1096,
+          "end": 1103,
+          "contextText": "把基础解析跑稳以后，还可以从三条线继续提升：用多模态 LLM 处理复杂页面，评估 ColPali 这类直接检索页面图像的思路，跟进 Docling 在公式和表格上的能力；解析后的结构校验，也可以用规则加小模型自动完成，减少人工抽检。",
+          "contextSha256": "c1a23ae632e348866af8b9e6e589e8d760c44d76b52ade6956324fadccb0b360"
+        }
+      ]
+    },
+    {
+      "token": "LlamaParse",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "LlamaParse",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 463,
+          "end": 473,
+          "contextText": "它们支持的格式、中文复杂文档效果、公式和表格还原能力，要用同一批样本比较；商业服务如 LlamaParse 也可以列入候选；扫描件和图表可以用多模态 LLM 兜底，但成本通常更高。",
+          "contextSha256": "308b05555d2d4ade7f5f7856be0cc10bdb93a1ea822a96ef809286df926a9184"
+        }
+      ]
+    },
+    {
+      "token": "LLM",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "L L M",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 495,
+          "end": 498,
+          "contextText": "它们支持的格式、中文复杂文档效果、公式和表格还原能力，要用同一批样本比较；商业服务如 LlamaParse 也可以列入候选；扫描件和图表可以用多模态 LLM 兜底，但成本通常更高。",
+          "contextSha256": "308b05555d2d4ade7f5f7856be0cc10bdb93a1ea822a96ef809286df926a9184"
+        },
+        {
+          "start": 802,
+          "end": 805,
+          "contextText": "主解析用 MinerU 或 Unstructured 跑全量，拿到标题树、表格、阅读顺序；然后过一层规则清洗，去页眉页脚、修乱码、补页码缺失；碰到扫描件、复杂图表、公式这种主解析搞不定的，再触发多模态 LLM 二次解析，成本更高，但更适合处理这些难页，只在需要时使用。",
+          "contextSha256": "9f3fef30a7b464939784ab0391bdcea087bfea5b88842862bafb764676ebdae2"
+        },
+        {
+          "start": 903,
+          "end": 906,
+          "contextText": "更准确的说法是：以 MinerU 为主解析，再配规则清洗和多模态 LLM 兜底。",
+          "contextSha256": "7f4815f6122ee7d801b88890aaf2b2614d2394fcd9bed27cdc15c3a0d2a7b509"
+        },
+        {
+          "start": 1057,
+          "end": 1060,
+          "contextText": "把基础解析跑稳以后，还可以从三条线继续提升：用多模态 LLM 处理复杂页面，评估 ColPali 这类直接检索页面图像的思路，跟进 Docling 在公式和表格上的能力；解析后的结构校验，也可以用规则加小模型自动完成，减少人工抽检。",
+          "contextSha256": "c1a23ae632e348866af8b9e6e589e8d760c44d76b52ade6956324fadccb0b360"
+        },
+        {
+          "start": 1176,
+          "end": 1179,
+          "contextText": "两个原因：LLM 上下文有上限，塞太多又贵又中间信息遗失；整篇文档一起向量化，语义会被稀释。",
+          "contextSha256": "83e55b893761e7979dac5ff194b420bedf5369699e9e50f4799ec2d879fa232d"
+        },
+        {
+          "start": 1859,
+          "end": 1862,
+          "contextText": "还有一个容易忽略的点，LlamaIndex 生产指南强调的检索块和合成块要解耦：检索用小文本块精度高，合成喂 LLM 时取该文本块前后窗口或整篇，上下文完整。",
+          "contextSha256": "59076f2cce650d36a6876c0ea9d8c9a3e90cedf339b3f3406d8c22e08eda1887"
+        },
+        {
+          "start": 2284,
+          "end": 2287,
+          "contextText": "一个是 Anthropic 2024 年 9 月的上下文检索，用 LLM 给每个文本块生成 50 到 100 词元的上下文前缀，说明它在整篇里的位置主题，拼到文本块前再向量化；一个是前面讲的延迟分块，从向量化层面让文本块带整篇上下文。",
+          "contextSha256": "deb3e0f520e3620fe29bfa3d8d096da9c340f44eb89528802196572b0b2cec77"
+        },
+        {
+          "start": 4554,
+          "end": 4557,
+          "contextText": "一块是查询改写：多查询扩展，让 LLM 把一个查询改成多个不同角度；HyDE，先让 LLM 生成假设答案文档再用它检索；后退一步改写，把具体问题抽象成更高层问题；问题分解，把复合问题拆成子问题。",
+          "contextSha256": "7c32d9012117a1e1ff4c74f7ca3f996f27a7810c457e5f0975737cf3cb97a2d5"
+        },
+        {
+          "start": 4580,
+          "end": 4583,
+          "contextText": "一块是查询改写：多查询扩展，让 LLM 把一个查询改成多个不同角度；HyDE，先让 LLM 生成假设答案文档再用它检索；后退一步改写，把具体问题抽象成更高层问题；问题分解，把复合问题拆成子问题。",
+          "contextSha256": "7c32d9012117a1e1ff4c74f7ca3f996f27a7810c457e5f0975737cf3cb97a2d5"
+        },
+        {
+          "start": 7440,
+          "end": 7443,
+          "contextText": "生产务实做法是用大模型裁判模拟反思——用提示词让 LLM 输出结构化判断，代替微调的反思词元。",
+          "contextSha256": "9f883cdce0c02c2dda4e56497bc8a11878e8021bd55912a3004e5eb8e4fb40e8"
+        },
+        {
+          "start": 7736,
+          "end": 7739,
+          "contextText": "坑是 LLM 自评有偏差偏好自己答案，关键场景要换更强模型当裁判做交叉评估。",
+          "contextSha256": "e95afa6105995ae2bfcdd28eb726a56bcbf94828d954e0a0791bab2cdd425111"
+        },
+        {
+          "start": 8086,
+          "end": 8089,
+          "contextText": "第一种是在提示词里让 LLM 自己标来源编号，简单，但可能标错。",
+          "contextSha256": "396637f6fee81c831d9ad350cfbd5eb91556d4e6f1ac5405982c261e572e15d8"
+        },
+        {
+          "start": 8248,
+          "end": 8251,
+          "contextText": "LLM 会合理化编造，即使上下文没有也可能编一个看似合理的，支持性检查加引用校验是兜底。",
+          "contextSha256": "cc73f42290f1324d8bce10068723d50f26304034e2376602ad7e1de5293b13ea"
+        },
+        {
+          "start": 8312,
+          "end": 8315,
+          "contextText": "引用我建议提示词级加后处理校验，别光信 LLM 标的号。",
+          "contextSha256": "8385922736595f5e8a368f5dd866032e3465901958e4b0da720527eca24f27f4"
+        },
+        {
+          "start": 8451,
+          "end": 8454,
+          "contextText": "答案要返回来源文档、章节、页码、引用片段，这是 RAG 相比纯 LLM 的可信度优势。",
+          "contextSha256": "7e83be84e44dc2d046573f5ff385f8ca73fb301335d96c56092d8febd8c22e72"
+        },
+        {
+          "start": 8918,
+          "end": 8921,
+          "contextText": "评测集三种来源混合：LLM 从文档生成查询做量、人工标注做质、生产真实查询采样做校准。",
+          "contextSha256": "6f232c6d2169fc5f60adcd51156a0403a34883619d92c1ef1f6b0683140f518f"
+        }
+      ]
+    },
+    {
+      "token": "ColPali",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "ColPali",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 1071,
+          "end": 1078,
+          "contextText": "把基础解析跑稳以后，还可以从三条线继续提升：用多模态 LLM 处理复杂页面，评估 ColPali 这类直接检索页面图像的思路，跟进 Docling 在公式和表格上的能力；解析后的结构校验，也可以用规则加小模型自动完成，减少人工抽检。",
+          "contextSha256": "c1a23ae632e348866af8b9e6e589e8d760c44d76b52ade6956324fadccb0b360"
+        },
+        {
+          "start": 6972,
+          "end": 6979,
+          "contextText": "重排层后续可以继续比较 ColBERT 的延迟交互、ColPali 这类直接处理文档图像的多模态重排，再根据领域数据做模型选型或微调。",
+          "contextSha256": "4fdad7eb9f1bada362b8ab4be893e0f83330fa8dce956ec35106cf6db06699dc"
+        }
+      ]
+    },
+    {
+      "token": "LangChain",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "LangChain",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 1316,
+          "end": 1325,
+          "contextText": "固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+          "contextSha256": "1dbfbbe58936cdbed940f67c0fd96a6fdb24c0628ec677e4c5dce11c0fd3d631"
+        },
+        {
+          "start": 6099,
+          "end": 6108,
+          "contextText": "LangChain 已经提供混合检索加 RRF 的现成组合，可以减少重复实现。",
+          "contextSha256": "69b4246862a74950a1e93f5492fa4ae72acf62e1f6b5ae5d65c6365cd7eb2d5f"
+        },
+        {
+          "start": 6862,
+          "end": 6871,
+          "contextText": "LangChain 也可以接入重排模型。",
+          "contextSha256": "a01904120ed16a490c420bb75c3254123c209340fa8d5ac4a0648998c022eb59"
+        }
+      ]
+    },
+    {
+      "token": "markdown",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "markdown",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 1386,
+          "end": 1394,
+          "contextText": "固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+          "contextSha256": "1dbfbbe58936cdbed940f67c0fd96a6fdb24c0628ec677e4c5dce11c0fd3d631"
+        },
+        {
+          "start": 1425,
+          "end": 1433,
+          "contextText": "固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+          "contextSha256": "1dbfbbe58936cdbed940f67c0fd96a6fdb24c0628ec677e4c5dce11c0fd3d631"
+        }
+      ]
+    },
+    {
+      "token": "LlamaIndex",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "LlamaIndex",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 1412,
+          "end": 1422,
+          "contextText": "固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+          "contextSha256": "1dbfbbe58936cdbed940f67c0fd96a6fdb24c0628ec677e4c5dce11c0fd3d631"
+        },
+        {
+          "start": 1815,
+          "end": 1825,
+          "contextText": "还有一个容易忽略的点，LlamaIndex 生产指南强调的检索块和合成块要解耦：检索用小文本块精度高，合成喂 LLM 时取该文本块前后窗口或整篇，上下文完整。",
+          "contextSha256": "59076f2cce650d36a6876c0ea9d8c9a3e90cedf339b3f3406d8c22e08eda1887"
+        }
+      ]
+    },
+    {
+      "token": "Jina",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Jina",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 1459,
+          "end": 1463,
+          "contextText": "固定长度切，简单但会切断句子；递归字符切分，按段落、行、空格优先级递归切，LangChain 的递归字符切分器是这个，常见兜底选择；语义切分，用向量化算相邻句子相似度，骤降处切，精度潜力较高，但要逐句向量化慢且贵；markdown 标题切分，按标题层级切带祖先路径，LlamaIndex 的 Markdown 节点解析器，更适合标题层级清晰的结构化文档；还有 Jina 2024 年的延迟分块，先整篇用长上下文向量模型整体向量化，再按文本块边界对词元向量做池化，让每个文本块吸收整篇上下文。",
+          "contextSha256": "1dbfbbe58936cdbed940f67c0fd96a6fdb24c0628ec677e4c5dce11c0fd3d631"
+        },
+        {
+          "start": 3025,
+          "end": 3029,
+          "contextText": "商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。",
+          "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4"
+        }
+      ]
+    },
+    {
+      "token": "Anthropic",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Anthropic",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 2255,
+          "end": 2264,
+          "contextText": "一个是 Anthropic 2024 年 9 月的上下文检索，用 LLM 给每个文本块生成 50 到 100 词元的上下文前缀，说明它在整篇里的位置主题，拼到文本块前再向量化；一个是前面讲的延迟分块，从向量化层面让文本块带整篇上下文。",
+          "contextSha256": "deb3e0f520e3620fe29bfa3d8d096da9c340f44eb89528802196572b0b2cec77"
+        },
+        {
+          "start": 2409,
+          "end": 2418,
+          "contextText": "按 Anthropic 2024 年 9 月发布的材料，检索失败率从 5.7% 降到 1.9%，相对下降 67%。",
+          "contextSha256": "5a19ae9072af4283530a8da1dadf091075d3251a0e12be2db823c34e541e61ab"
+        },
+        {
+          "start": 6702,
+          "end": 6711,
+          "contextText": "Anthropic 的公开流程示例采用混合检索取前一百五十条，再重排到前二十条；这是一种参考配置，不是所有模型和任务的统一最优值。",
+          "contextSha256": "35c980966eca88d9a66ef6f56d5db6347fd46d4b42ce3cef170574e886a5e1b9"
+        }
+      ]
+    },
+    {
+      "token": "BM25",
+      "kind": "numeric-version",
+      "locale": "mixed",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "BM25",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 2700,
+          "end": 2704,
+          "contextText": "如果想叠加两路收益，向量化和 BM25 都要使用增强后的文本。",
+          "contextSha256": "9a30357bafafae9f00a962a6df599729705691d5c0a25e529dd707e7186612d5"
+        },
+        {
+          "start": 5191,
+          "end": 5195,
+          "contextText": "检索方式可以先分成几类：纯向量检索，懂语义但关键词匹配弱；纯 BM25，精确关键词但不懂语义；混合检索，BM25 加向量两路互补；更激进的多路，向量加全文加编号精确加表格，各管一类。",
+          "contextSha256": "82ed671d62f6410f46583586b061e903d85a768379214ceb5e670af133884a08"
+        },
+        {
+          "start": 5212,
+          "end": 5216,
+          "contextText": "检索方式可以先分成几类：纯向量检索，懂语义但关键词匹配弱；纯 BM25，精确关键词但不懂语义；混合检索，BM25 加向量两路互补；更激进的多路，向量加全文加编号精确加表格，各管一类。",
+          "contextSha256": "82ed671d62f6410f46583586b061e903d85a768379214ceb5e670af133884a08"
+        },
+        {
+          "start": 5251,
+          "end": 5255,
+          "contextText": "BM25 的参数可以先用论文里的常见默认值，再用自己的领域数据校准。",
+          "contextSha256": "6f1207c4c67c2ac8ddac0b1c9931c53b3b64f0aa4f7132181c8b4d24437bf775"
+        },
+        {
+          "start": 5400,
+          "end": 5404,
+          "contextText": "所以生产上通常至少要评估混合检索，补 BM25 关键词路。",
+          "contextSha256": "62d78308210222ef3a2adece13a511f4fdfa07d5dfd9125240bbe7474b00e0c8"
+        },
+        {
+          "start": 5589,
+          "end": 5593,
+          "contextText": "BM25 中文要分词，用 jieba。",
+          "contextSha256": "c5d2a4464c9adbb8fc758dc71360f995e53be16db43fd057c230f77dfde024cb"
+        },
+        {
+          "start": 5841,
+          "end": 5845,
+          "contextText": "多路检索拿到的是多份候选，各路分数尺度不一样——向量相似度 0 到 1，全文是 BM25 分，编号是 0 或 1，不能直接加，要融合。",
+          "contextSha256": "d626ec142ba5eb24af51514587af81e0a71050710040b24ce4e8eb571f92269e"
+        }
+      ]
+    },
+    {
+      "token": "BGE",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "B G E",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 2947,
+          "end": 2950,
+          "contextText": "中文开源候选包括 BGE 系列；需要稠密、稀疏和 ColBERT 多种模式时，可以评估 bge-m3。",
+          "contextSha256": "3eb731dfd0d7e82db18e26da4c31e9af28775177711cdbbf6270df8cc3eba18b"
+        },
+        {
+          "start": 3102,
+          "end": 3105,
+          "contextText": "第一是中文效果，BGE 系列通常是中文开源方案的重要候选，但仍要用领域评测集比较。",
+          "contextSha256": "4d139ec012b751941850cf3bf5a3b66f42ed5f8a7866f646fbf86dafb490dd6d"
+        },
+        {
+          "start": 3260,
+          "end": 3263,
+          "contextText": "我的默认起点是中文企业场景先评估 BGE，需要 ColBERT 能力时再评估 bge-m3。",
+          "contextSha256": "0ac0664c824b358f08c97c9e91968f907e4c71e93cb8d010e4e987e57ca68aad"
+        },
+        {
+          "start": 6469,
+          "end": 6472,
+          "contextText": "交叉编码器把查询和文档放进同一个 Transformer 做全注意力交互，通常比双塔召回更精细；开源可以看 BGE 系列重排模型，商业服务可以评估 Cohere 和 Voyage。",
+          "contextSha256": "4c8e30b46508ec20e04d65ef8f2de3b68238a79eefc81ef869907c759b06a9fd"
+        },
+        {
+          "start": 6785,
+          "end": 6788,
+          "contextText": "如果采用交叉编码器，可以先评估 BGE 系列的开源重排模型；需要速度和精度折中时，再评估 ColBERT。",
+          "contextSha256": "e8fe00094b5b1d555b4d51b68d2b62098372b2a177f978aa1c56f36f774b7cb1"
+        }
+      ]
+    },
+    {
+      "token": "ColBERT",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "ColBERT",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 2963,
+          "end": 2970,
+          "contextText": "中文开源候选包括 BGE 系列；需要稠密、稀疏和 ColBERT 多种模式时，可以评估 bge-m3。",
+          "contextSha256": "3eb731dfd0d7e82db18e26da4c31e9af28775177711cdbbf6270df8cc3eba18b"
+        },
+        {
+          "start": 3267,
+          "end": 3274,
+          "contextText": "我的默认起点是中文企业场景先评估 BGE，需要 ColBERT 能力时再评估 bge-m3。",
+          "contextSha256": "0ac0664c824b358f08c97c9e91968f907e4c71e93cb8d010e4e987e57ca68aad"
+        },
+        {
+          "start": 6407,
+          "end": 6414,
+          "contextText": "重排方案主要包括交叉编码器和 ColBERT。",
+          "contextSha256": "638661b0bacc35c47b0869f28c98ab78436e717bfb4b6cb53f7b6b86a5a493c5"
+        },
+        {
+          "start": 6505,
+          "end": 6512,
+          "contextText": "ColBERT 采用延迟交互，在精度和速度之间折中。",
+          "contextSha256": "4bc0fb0ae45e98067d99fb63632b75c2a43a96edfc590746454329080d82a48c"
+        },
+        {
+          "start": 6814,
+          "end": 6821,
+          "contextText": "如果采用交叉编码器，可以先评估 BGE 系列的开源重排模型；需要速度和精度折中时，再评估 ColBERT。",
+          "contextSha256": "e8fe00094b5b1d555b4d51b68d2b62098372b2a177f978aa1c56f36f774b7cb1"
+        },
+        {
+          "start": 6958,
+          "end": 6965,
+          "contextText": "重排层后续可以继续比较 ColBERT 的延迟交互、ColPali 这类直接处理文档图像的多模态重排，再根据领域数据做模型选型或微调。",
+          "contextSha256": "4fdad7eb9f1bada362b8ab4be893e0f83330fa8dce956ec35106cf6db06699dc"
+        }
+      ]
+    },
+    {
+      "token": "bge-m3",
+      "kind": "numeric-version",
+      "locale": "mixed",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "bge-m3",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 2982,
+          "end": 2988,
+          "contextText": "中文开源候选包括 BGE 系列；需要稠密、稀疏和 ColBERT 多种模式时，可以评估 bge-m3。",
+          "contextSha256": "3eb731dfd0d7e82db18e26da4c31e9af28775177711cdbbf6270df8cc3eba18b"
+        },
+        {
+          "start": 3282,
+          "end": 3288,
+          "contextText": "我的默认起点是中文企业场景先评估 BGE，需要 ColBERT 能力时再评估 bge-m3。",
+          "contextSha256": "0ac0664c824b358f08c97c9e91968f907e4c71e93cb8d010e4e987e57ca68aad"
+        },
+        {
+          "start": 3513,
+          "end": 3519,
+          "contextText": "后续优化可以从能力、成本和领域适配三条线展开：评估 bge-m3 的多模态能力，用 Matryoshka 降维节省存储；有标注数据时，再考虑领域微调和指令微调。",
+          "contextSha256": "dd67bff4011859b3b25b8c50cf9bdcabaea39b43a0b2fbe79367fb9e24ebafc1"
+        }
+      ]
+    },
+    {
+      "token": "OpenAI",
+      "kind": "brand-product",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "OpenAI",
+      "status": "needs-listening-review",
+      "source": "project-lexicon-and-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 2996,
+          "end": 3002,
+          "contextText": "商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。",
+          "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4"
+        },
+        {
+          "start": 3172,
+          "end": 3178,
+          "contextText": "第二是部署边界，企业知识不能出域时优先评估本地模型；允许外部服务时，再把 OpenAI、Voyage 等商业方案放进同一评测。",
+          "contextSha256": "62e6c5944be63edd5596c0f14db4b6a77c7998e6c300b1539cf162c471bd8822"
+        }
+      ]
+    },
+    {
+      "token": "Voyage",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Voyage",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3003,
+          "end": 3009,
+          "contextText": "商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。",
+          "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4"
+        },
+        {
+          "start": 3179,
+          "end": 3185,
+          "contextText": "第二是部署边界，企业知识不能出域时优先评估本地模型；允许外部服务时，再把 OpenAI、Voyage 等商业方案放进同一评测。",
+          "contextSha256": "62e6c5944be63edd5596c0f14db4b6a77c7998e6c300b1539cf162c471bd8822"
+        },
+        {
+          "start": 6498,
+          "end": 6504,
+          "contextText": "交叉编码器把查询和文档放进同一个 Transformer 做全注意力交互，通常比双塔召回更精细；开源可以看 BGE 系列重排模型，商业服务可以评估 Cohere 和 Voyage。",
+          "contextSha256": "4c8e30b46508ec20e04d65ef8f2de3b68238a79eefc81ef869907c759b06a9fd"
+        }
+      ]
+    },
+    {
+      "token": "Cohere",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Cohere",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3012,
+          "end": 3018,
+          "contextText": "商业候选包括 OpenAI、Voyage 和 Cohere 的向量模型；Jina 的长上下文模型可以配合延迟分块。",
+          "contextSha256": "f0e75a71f4037dd09a5317b41fdc2a11572849041cb493d90c8b7e1e9ba21aa4"
+        },
+        {
+          "start": 6489,
+          "end": 6495,
+          "contextText": "交叉编码器把查询和文档放进同一个 Transformer 做全注意力交互，通常比双塔召回更精细；开源可以看 BGE 系列重排模型，商业服务可以评估 Cohere 和 Voyage。",
+          "contextSha256": "4c8e30b46508ec20e04d65ef8f2de3b68238a79eefc81ef869907c759b06a9fd"
+        },
+        {
+          "start": 8185,
+          "end": 8191,
+          "contextText": "第三种是片段级引用，让模型直接指出答案片段对应哪个文本块；这种方式通常能给出更细的引用对应，Cohere 提供了相关能力。",
+          "contextSha256": "41c75ea9f6a4ee960ff437255fd46233fdf6fcdb5876d950a095c981b95efc5c"
+        }
+      ]
+    },
+    {
+      "token": "MTEB",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "M T E B",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3392,
+          "end": 3396,
+          "contextText": "第三，MTEB 榜单只能作为参考，最终要看自建领域评测集的召回率。",
+          "contextSha256": "ee13ff9d892757d03130e516c2e852b860c533faeb5b4445e140aa2c2492a45a"
+        },
+        {
+          "start": 3441,
+          "end": 3445,
+          "contextText": "向量模型选得对不对，重点看三件事：MTEB 榜单只作参考，领域评测集前若干结果的召回率才是关键，同时还要看向量化计算吞吐。",
+          "contextSha256": "5da16488b9061d4fe580e9aa36aff53e4e7286112248bfb2482fb42623583e06"
+        }
+      ]
+    },
+    {
+      "token": "Matryoshka",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Matryoshka",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3529,
+          "end": 3539,
+          "contextText": "后续优化可以从能力、成本和领域适配三条线展开：评估 bge-m3 的多模态能力，用 Matryoshka 降维节省存储；有标注数据时，再考虑领域微调和指令微调。",
+          "contextSha256": "dd67bff4011859b3b25b8c50cf9bdcabaea39b43a0b2fbe79367fb9e24ebafc1"
+        }
+      ]
+    },
+    {
+      "token": "pgvector",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "pgvector",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3601,
+          "end": 3609,
+          "contextText": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。",
+          "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b"
+        },
+        {
+          "start": 3656,
+          "end": 3664,
+          "contextText": "pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。",
+          "contextSha256": "94475c6fec266eb427e047c5c6c4e11a45a32da308c8cba37b656c73251a749b"
+        },
+        {
+          "start": 3902,
+          "end": 3910,
+          "contextText": "我的判断是：在中小规模、已有 PostgreSQL、又需要事务和联表的场景里，可以先评估 pgvector。",
+          "contextSha256": "59b0f8b0d8ef42ea8d09c4bab96b2ae433ae764f80d226d8379107e4cf798c01"
+        },
+        {
+          "start": 4060,
+          "end": 4068,
+          "contextText": "以 pgvector 为例，一般同时建 HNSW 向量索引和 PostgreSQL 全文索引，为在线多路检索铺路。",
+          "contextSha256": "deca471c9150fdfc59b47f94eb49bb0426e06db57848cdb956310ba3ead01685"
+        },
+        {
+          "start": 4227,
+          "end": 4235,
+          "contextText": "pgvector 的索引维护和空间回收也要进入运维计划。",
+          "contextSha256": "d6957e7bf267c2902ade2143b7e302760544a4165af59a5ad80579a494bd86fb"
+        },
+        {
+          "start": 4276,
+          "end": 4284,
+          "contextText": "在我参与的一个知识智能体项目里，我们选择 pgvector 的重要原因之一，就是它能和业务数据共享事务边界。",
+          "contextSha256": "38ab69ee21033b96449f6f937b602ec6d69b0501abd308be508a584aebbeb6b8"
+        },
+        {
+          "start": 5482,
+          "end": 5490,
+          "contextText": "向量路使用 pgvector，关键词路使用 PostgreSQL 全文检索，两路并行，各取前五十条候选。",
+          "contextSha256": "d02d0e44eded19dad923d30d20e83a6fd9c81b4b0deaf00cc8be821857f5d2bf"
+        },
+        {
+          "start": 9812,
+          "end": 9820,
+          "contextText": "pgvector 的 HNSW 删除是标记删除，定期重建索引回收空间，这个运维细节要注意。",
+          "contextSha256": "fbbe7aeefda938da5da7f3d9c99a1c9a8691d871355c25851ab122324f35e075"
+        }
+      ]
+    },
+    {
+      "token": "Milvus",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Milvus",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3610,
+          "end": 3616,
+          "contextText": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。",
+          "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b"
+        },
+        {
+          "start": 3692,
+          "end": 3698,
+          "contextText": "pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。",
+          "contextSha256": "94475c6fec266eb427e047c5c6c4e11a45a32da308c8cba37b656c73251a749b"
+        },
+        {
+          "start": 3992,
+          "end": 3998,
+          "contextText": "规模、延迟或分片需求超过单库能力后，再评估 Milvus 等分布式方案。",
+          "contextSha256": "93cddb3fcf86ae853bdf79a1961421c38b2b68aa104e32c12fadad198ff20198"
+        }
+      ]
+    },
+    {
+      "token": "Weaviate",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Weaviate",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3617,
+          "end": 3625,
+          "contextText": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。",
+          "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b"
+        },
+        {
+          "start": 3707,
+          "end": 3715,
+          "contextText": "pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。",
+          "contextSha256": "94475c6fec266eb427e047c5c6c4e11a45a32da308c8cba37b656c73251a749b"
+        },
+        {
+          "start": 4020,
+          "end": 4028,
+          "contextText": "需要内置混合检索时，可以把 Weaviate 放进候选。",
+          "contextSha256": "7cba582fc63474034dc43a12d01f476ce973e0e1878141d75c2a34a849552dd0"
+        }
+      ]
+    },
+    {
+      "token": "Qdrant",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Qdrant",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3626,
+          "end": 3632,
+          "contextText": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。",
+          "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b"
+        }
+      ]
+    },
+    {
+      "token": "Chroma",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Chroma",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3633,
+          "end": 3639,
+          "contextText": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。",
+          "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b"
+        }
+      ]
+    },
+    {
+      "token": "Elasticsearch",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Elasticsearch",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3642,
+          "end": 3655,
+          "contextText": "向量库的候选包括 pgvector、Milvus、Weaviate、Qdrant、Chroma 和 Elasticsearch。",
+          "contextSha256": "282f4ed7d25a4a644207aad76cfa81c5bce3dca3e47072c01c39372ef787909b"
+        },
+        {
+          "start": 3726,
+          "end": 3739,
+          "contextText": "pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。",
+          "contextSha256": "94475c6fec266eb427e047c5c6c4e11a45a32da308c8cba37b656c73251a749b"
+        },
+        {
+          "start": 4133,
+          "end": 4146,
+          "contextText": "一个库管理两种索引，不用再单独引入 Elasticsearch。",
+          "contextSha256": "e55c7f3ecd114d456de97cea67c0f58836757497edd247158846a60a701bea4f"
+        }
+      ]
+    },
+    {
+      "token": "PostgreSQL",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "PostgreSQL",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3672,
+          "end": 3682,
+          "contextText": "pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展；Weaviate 内置混合检索；已有 Elasticsearch 技术栈时，也可以复用它的全文和向量能力。",
+          "contextSha256": "94475c6fec266eb427e047c5c6c4e11a45a32da308c8cba37b656c73251a749b"
+        },
+        {
+          "start": 3872,
+          "end": 3882,
+          "contextText": "我的判断是：在中小规模、已有 PostgreSQL、又需要事务和联表的场景里，可以先评估 pgvector。",
+          "contextSha256": "59b0f8b0d8ef42ea8d09c4bab96b2ae433ae764f80d226d8379107e4cf798c01"
+        },
+        {
+          "start": 4089,
+          "end": 4099,
+          "contextText": "以 pgvector 为例，一般同时建 HNSW 向量索引和 PostgreSQL 全文索引，为在线多路检索铺路。",
+          "contextSha256": "deca471c9150fdfc59b47f94eb49bb0426e06db57848cdb956310ba3ead01685"
+        },
+        {
+          "start": 5498,
+          "end": 5508,
+          "contextText": "向量路使用 pgvector，关键词路使用 PostgreSQL 全文检索，两路并行，各取前五十条候选。",
+          "contextSha256": "d02d0e44eded19dad923d30d20e83a6fd9c81b4b0deaf00cc8be821857f5d2bf"
+        }
+      ]
+    },
+    {
+      "token": "HNSW",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "H N S W",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3769,
+          "end": 3773,
+          "contextText": "常见索引算法包括 HNSW、IVF 和 Flat。",
+          "contextSha256": "245e2d6d0b9904171d8f7ea9e7e7dff28bb7ffe4225f4519f948a0a2b5adc242"
+        },
+        {
+          "start": 4078,
+          "end": 4082,
+          "contextText": "以 pgvector 为例，一般同时建 HNSW 向量索引和 PostgreSQL 全文索引，为在线多路检索铺路。",
+          "contextSha256": "deca471c9150fdfc59b47f94eb49bb0426e06db57848cdb956310ba3ead01685"
+        },
+        {
+          "start": 4147,
+          "end": 4151,
+          "contextText": "HNSW 参数可以先从常见组合开始压测。",
+          "contextSha256": "3eedd8e92bc99912b76122e88961919ba052adfe90238892f11e89a93e651b99"
+        },
+        {
+          "start": 4420,
+          "end": 4424,
+          "contextText": "数据规模继续增长时，再逐步考虑 HNSW 参数调优、用乘积量化或标量量化降低内存，以及多级索引、分片和倒排文件索引配乘积量化这类超大规模组合。",
+          "contextSha256": "0f13ff7cd3862d04f4e573501e39ef208f587f15b64d4c82b287e4c6ebbde67b"
+        },
+        {
+          "start": 9823,
+          "end": 9827,
+          "contextText": "pgvector 的 HNSW 删除是标记删除，定期重建索引回收空间，这个运维细节要注意。",
+          "contextSha256": "fbbe7aeefda938da5da7f3d9c99a1c9a8691d871355c25851ab122324f35e075"
+        }
+      ]
+    },
+    {
+      "token": "IVF",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "I V F",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3774,
+          "end": 3777,
+          "contextText": "常见索引算法包括 HNSW、IVF 和 Flat。",
+          "contextSha256": "245e2d6d0b9904171d8f7ea9e7e7dff28bb7ffe4225f4519f948a0a2b5adc242"
+        }
+      ]
+    },
+    {
+      "token": "Flat",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Flat",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3780,
+          "end": 3784,
+          "contextText": "常见索引算法包括 HNSW、IVF 和 Flat。",
+          "contextSha256": "245e2d6d0b9904171d8f7ea9e7e7dff28bb7ffe4225f4519f948a0a2b5adc242"
+        },
+        {
+          "start": 4335,
+          "end": 4339,
+          "contextText": "ANN 召回率要先和 Flat 暴力搜索对比，再结合 QPS、延迟 P99 和内存占用设定业务门槛；95% 可以作为一个评估起点，但不是所有场景的统一标准。",
+          "contextSha256": "2fe0e794c7801f28639b90ca7c96eece1eb450533cdff88a5314bf87b6f99c1f"
+        }
+      ]
+    },
+    {
+      "token": "SQL",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "S Q L",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 3924,
+          "end": 3927,
+          "contextText": "理由很实在：后端团队熟悉 SQL，可以先按元数据过滤，再按向量相似度排序，还能跟业务表联表、走事务，少运维一个中间件。",
+          "contextSha256": "97a0bacb2dfd6c857b16ec6340c42d4a00bf23a1c9f030402147a4d5957e8f67"
+        }
+      ]
+    },
+    {
+      "token": "ANN",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "A N N",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 4324,
+          "end": 4327,
+          "contextText": "ANN 召回率要先和 Flat 暴力搜索对比，再结合 QPS、延迟 P99 和内存占用设定业务门槛；95% 可以作为一个评估起点，但不是所有场景的统一标准。",
+          "contextSha256": "2fe0e794c7801f28639b90ca7c96eece1eb450533cdff88a5314bf87b6f99c1f"
+        }
+      ]
+    },
+    {
+      "token": "QPS",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Q P S",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 4351,
+          "end": 4354,
+          "contextText": "ANN 召回率要先和 Flat 暴力搜索对比，再结合 QPS、延迟 P99 和内存占用设定业务门槛；95% 可以作为一个评估起点，但不是所有场景的统一标准。",
+          "contextSha256": "2fe0e794c7801f28639b90ca7c96eece1eb450533cdff88a5314bf87b6f99c1f"
+        }
+      ]
+    },
+    {
+      "token": "P99",
+      "kind": "numeric-version",
+      "locale": "mixed",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "P99",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 4358,
+          "end": 4361,
+          "contextText": "ANN 召回率要先和 Flat 暴力搜索对比，再结合 QPS、延迟 P99 和内存占用设定业务门槛；95% 可以作为一个评估起点，但不是所有场景的统一标准。",
+          "contextSha256": "2fe0e794c7801f28639b90ca7c96eece1eb450533cdff88a5314bf87b6f99c1f"
+        },
+        {
+          "start": 6940,
+          "end": 6943,
+          "contextText": "重排值不值得这段额外延迟，关键看重排前后的 nDCG 和 MRR，确认相关项有没有排得更靠前，同时盯住重排延迟 P99。",
+          "contextSha256": "55fb2a4c4da447f827f3f343d37910b299781bff491c2f6d5d70a6ce2c38f643"
+        },
+        {
+          "start": 9886,
+          "end": 9889,
+          "contextText": "到了线上，指标还要扩展到工程侧：可用性 SLA、延迟 P99、单次查询成本、缓存命中率、注入拦截率、增量索引正确性和版本切换稳定性。",
+          "contextSha256": "424659a74fdf5291b13943b3ee74af026774626c012b985afcc012a6083213b4"
+        }
+      ]
+    },
+    {
+      "token": "HyDE",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "HyDE",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 4572,
+          "end": 4576,
+          "contextText": "一块是查询改写：多查询扩展，让 LLM 把一个查询改成多个不同角度；HyDE，先让 LLM 生成假设答案文档再用它检索；后退一步改写，把具体问题抽象成更高层问题；问题分解，把复合问题拆成子问题。",
+          "contextSha256": "7c32d9012117a1e1ff4c74f7ca3f996f27a7810c457e5f0975737cf3cb97a2d5"
+        },
+        {
+          "start": 4804,
+          "end": 4808,
+          "contextText": "改写策略里，多查询扩展适用面相对广；HyDE 对概念性、方法性查询可能有效，但在事实查询里也可能因为假设错误把检索带偏，这个风险要单独评测。",
+          "contextSha256": "6383cce4e51f1e33bbc00a7898679d24bab4772844cc3738a0ca039aa7413b51"
+        },
+        {
+          "start": 4966,
+          "end": 4970,
+          "contextText": "改写也不是四种方法全上，根据查询特点选——模糊的用多查询扩展，概念性的用 HyDE，复合的用问题分解。",
+          "contextSha256": "1878e6bf4449160b1bba00b53c7050c6df817f8b74247e64f70f9b9e002b6cb0"
+        }
+      ]
+    },
+    {
+      "token": "Adaptive",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Adaptive",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 4644,
+          "end": 4652,
+          "contextText": "另一块是查询路由：Adaptive RAG，也就是自适应 RAG 的思路，事前判断查询复杂度路由到不检索、单次检索、多跳检索。",
+          "contextSha256": "cc2610fdfe2df40b1915b674f47c1da7c89c434c10c391cac348a895698c4972"
+        }
+      ]
+    },
+    {
+      "token": "Redis",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Redis",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 5010,
+          "end": 5015,
+          "contextText": "多轮对话场景还要结合会话上下文做指代消解和条件补全，这个用 Redis 管会话。",
+          "contextSha256": "74be0b26e120740fa88791f9f32877eff02717e348f11a017b252c64910453aa"
+        }
+      ]
+    },
+    {
+      "token": "GB",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "G B",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 5324,
+          "end": 5326,
+          "contextText": "第一类是编号查询，比如“GB 50204 第 4.1.2 条”，向量容易把编号当普通文本，匹配不准。",
+          "contextSha256": "756c84d52a89d50b1b18f5b83a575c5b3dfa5440b095963d1f911de648aa39da"
+        }
+      ]
+    },
+    {
+      "token": "jieba",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "jieba",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 5602,
+          "end": 5607,
+          "contextText": "BM25 中文要分词，用 jieba。",
+          "contextSha256": "c5d2a4464c9adbb8fc758dc71360f995e53be16db43fd057c230f77dfde024cb"
+        }
+      ]
+    },
+    {
+      "token": "RRF",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "R R F",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 5876,
+          "end": 5879,
+          "contextText": "融合方案里，RRF 也就是倒数排名融合，只用排名不用分数；加权分数融合，各路加权求和但要先归一化；凸组合。",
+          "contextSha256": "9ddc50b6564d67a7823ae016ac7a64c58c3125e8d7a394dd5fd1c9132e7a0563"
+        },
+        {
+          "start": 5923,
+          "end": 5926,
+          "contextText": "RRF 是常见默认方案。",
+          "contextSha256": "1cc4ca61bd921ca791ac3c6494e3bf292f0ea473fce4409fbbb3f1277588dcb4"
+        },
+        {
+          "start": 5947,
+          "end": 5950,
+          "contextText": "融合阶段为什么常从 RRF 开始？",
+          "contextSha256": "5ab3a339dd7cc31cf51c7afa4e174ec981d3707aa59956f0cf6f3ed7279f9482"
+        },
+        {
+          "start": 6028,
+          "end": 6031,
+          "contextText": "因为各路尺度不同不可比，直接加权没意义；RRF 只用排名，尺度无关，简单鲁棒，像多评委投票不比绝对分比平均名次。",
+          "contextSha256": "5bf87bccc559f0120d9db241b2db89cdab7282b2b41ec86fe54fa18c8f4c0aa1"
+        },
+        {
+          "start": 6119,
+          "end": 6122,
+          "contextText": "LangChain 已经提供混合检索加 RRF 的现成组合，可以减少重复实现。",
+          "contextSha256": "69b4246862a74950a1e93f5492fa4ae72acf62e1f6b5ae5d65c6365cd7eb2d5f"
+        },
+        {
+          "start": 6152,
+          "end": 6155,
+          "contextText": "工程上，我通常先用标准 RRF。",
+          "contextSha256": "c2b150487cd29cb7e9359459f1ca39ab3d3d3952a0e5c6ce9bdc65e0158446a3"
+        },
+        {
+          "start": 6198,
+          "end": 6201,
+          "contextText": "但如果某一路明显比其他路准，比如编号精确匹配在格式规则清晰时通常更可靠，可以用加权 RRF 给它更高权重。",
+          "contextSha256": "30b90108dc4cc04b33cf61c57cf3621f05cb6064e523d7abb427dcebc90a8ec7"
+        },
+        {
+          "start": 6220,
+          "end": 6223,
+          "contextText": "一般场景可以先从标准 RRF 开始，再看离线指标是否需要加权。",
+          "contextSha256": "9196968277d47b5f3d67f022d780f3da3248e53c46de288fbe12bb3fdcb877be"
+        },
+        {
+          "start": 6339,
+          "end": 6342,
+          "contextText": "有了标注数据以后，可以进一步学习融合权重；在此之前，先从加权 RRF 这类可解释方案开始。",
+          "contextSha256": "4e50ec88f8e6d98d8c5cb7d5c0d61f67f49a3e2a24b5ff7467273fb1f9a6aa93"
+        },
+        {
+          "start": 10092,
+          "end": 10095,
+          "contextText": "离线建库，包括解析、分块、上下文增强和向量化索引，决定系统上限；在线检索，包括查询理解、多路混合、RRF 和重排，决定召回效果；智能体式决策，通过评估、改写重试和拒答，决定回答是否可信；最后，评测闭环决定这套系统能不能持续迭代。",
+          "contextSha256": "7045ae4c8358cefdee05703d17b6fc0557389b36e7ded87c58589dde2410d9b1"
+        }
+      ]
+    },
+    {
+      "token": "nDCG",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "nDCG",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 6260,
+          "end": 6264,
+          "contextText": "融合是否真的有增益，可以看融合后的 nDCG、和单路结果的对比，以及双路重叠率。",
+          "contextSha256": "46adad81b2f4dc2dfab8c1d68223fe51b37dd910170712e8f9468eb33948b475"
+        },
+        {
+          "start": 6906,
+          "end": 6910,
+          "contextText": "重排值不值得这段额外延迟，关键看重排前后的 nDCG 和 MRR，确认相关项有没有排得更靠前，同时盯住重排延迟 P99。",
+          "contextSha256": "55fb2a4c4da447f827f3f343d37910b299781bff491c2f6d5d70a6ce2c38f643"
+        },
+        {
+          "start": 8775,
+          "end": 8779,
+          "contextText": "检索独立指标有前若干结果的召回率、MRR、nDCG、命中率。",
+          "contextSha256": "fc94079b89447863bd0a1c7ca8065a60f95abe0cb2f05d6e28072fbe5ee46a86"
+        }
+      ]
+    },
+    {
+      "token": "Transformer",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Transformer",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 6432,
+          "end": 6443,
+          "contextText": "交叉编码器把查询和文档放进同一个 Transformer 做全注意力交互，通常比双塔召回更精细；开源可以看 BGE 系列重排模型，商业服务可以评估 Cohere 和 Voyage。",
+          "contextSha256": "4c8e30b46508ec20e04d65ef8f2de3b68238a79eefc81ef869907c759b06a9fd"
+        }
+      ]
+    },
+    {
+      "token": "MRR",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "M R R",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 6913,
+          "end": 6916,
+          "contextText": "重排值不值得这段额外延迟，关键看重排前后的 nDCG 和 MRR，确认相关项有没有排得更靠前，同时盯住重排延迟 P99。",
+          "contextSha256": "55fb2a4c4da447f827f3f343d37910b299781bff491c2f6d5d70a6ce2c38f643"
+        },
+        {
+          "start": 8771,
+          "end": 8774,
+          "contextText": "检索独立指标有前若干结果的召回率、MRR、nDCG、命中率。",
+          "contextSha256": "fc94079b89447863bd0a1c7ca8065a60f95abe0cb2f05d6e28072fbe5ee46a86"
+        }
+      ]
+    },
+    {
+      "token": "CRAG",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "C R A G",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 7181,
+          "end": 7185,
+          "contextText": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "contextSha256": "1a0aab4958ff30855a74570e9a44009f02624a701094d0d8724c4b6218023110"
+        }
+      ]
+    },
+    {
+      "token": "Self-RAG",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Self-RAG",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 7247,
+          "end": 7255,
+          "contextText": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "contextSha256": "1a0aab4958ff30855a74570e9a44009f02624a701094d0d8724c4b6218023110"
+        }
+      ]
+    },
+    {
+      "token": "Reflexion",
+      "kind": "english-word",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "Reflexion",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 7318,
+          "end": 7327,
+          "contextText": "事前是自适应 RAG，负责检索前路由；事后是 CRAG，也就是纠错型 RAG，检索后用评估器判断检索质量，证据正确就直接用，证据模糊就补网络检索，证据错误就转向网络检索；事中是 Self-RAG，也就是自反思 RAG，用四个反思词元，也就是是否检索、是否相关、是否支持和是否有用，贯穿检索与生成全程，但它需要微调；还有 Reflexion，也就是反思记忆，把每轮失败的反思存进情景记忆，让智能体跨轮学习。",
+          "contextSha256": "1a0aab4958ff30855a74570e9a44009f02624a701094d0d8724c4b6218023110"
+        }
+      ]
+    },
+    {
+      "token": "LangGraph",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "LangGraph",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 7675,
+          "end": 7684,
+          "contextText": "整个决策循环我用 LangGraph 的图状态机实现，不是手搓条件判断和循环，LangGraph 更适合表达带条件分支和循环的决策流。",
+          "contextSha256": "60785013e29b5e6c2ec12a16597450dcc8e9bbe796e01097de8d4f9a06482a2f"
+        },
+        {
+          "start": 7705,
+          "end": 7714,
+          "contextText": "整个决策循环我用 LangGraph 的图状态机实现，不是手搓条件判断和循环，LangGraph 更适合表达带条件分支和循环的决策流。",
+          "contextSha256": "60785013e29b5e6c2ec12a16597450dcc8e9bbe796e01097de8d4f9a06482a2f"
+        }
+      ]
+    },
+    {
+      "token": "RAGAS",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "R A G A S",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 8618,
+          "end": 8623,
+          "contextText": "评测工具里，RAGAS 是常用框架之一。",
+          "contextSha256": "e4f81c5ead80a2db7b4c03a943c0ccccb27fdc05f67ee4b9c1843c1501d33dc6"
+        },
+        {
+          "start": 8797,
+          "end": 8802,
+          "contextText": "先承认 RAGAS 用大模型裁判也有偏差——偏好长答案、偏好自己风格，要换不同强模型当裁判交叉、多次评判取平均、关键场景加人工校准。",
+          "contextSha256": "0db1aa4fa303351fea567bbace9a7ece8b68af2f55b28f54b20ae10d6d8fcc14"
+        },
+        {
+          "start": 8887,
+          "end": 8892,
+          "contextText": "我的判断是，贴合具体场景的黄金问答集加调用链归因比通用 RAGAS 更实用，因为能定位到具体环节。",
+          "contextSha256": "8422cee4e4240951bca3b320d0ee2f25ccb800e6659be14fa6cb5fc2e3779435"
+        },
+        {
+          "start": 9261,
+          "end": 9266,
+          "contextText": "评测体系成熟以后，可以进一步全量接入 RAGAS 四类指标，再校准大模型裁判偏差，自动归因问题样例。",
+          "contextSha256": "d5d8c6f96ac9250580da5489569cedf836a18a38d2a9f768d1cbd43907e854af"
+        },
+        {
+          "start": 10300,
+          "end": 10305,
+          "contextText": "上下文检索要看失败率有没有下降；反思记忆要看智能体能不能从失败中学习；RAGAS 则用四类指标量化质量。",
+          "contextSha256": "76dbd258a97cc08a222abe876275215b5b82883300a6db8bc2b3707f890e7e81"
+        }
+      ]
+    },
+    {
+      "token": "TruLens",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "TruLens",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 8704,
+          "end": 8711,
+          "contextText": "TruLens 和 DeepEval 也有类似能力；除此之外，还可以用自建黄金问答集配合调用链归因。",
+          "contextSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c"
+        }
+      ]
+    },
+    {
+      "token": "DeepEval",
+      "kind": "code-identifier",
+      "locale": "und",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "DeepEval",
+      "status": "needs-listening-review",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 8714,
+          "end": 8722,
+          "contextText": "TruLens 和 DeepEval 也有类似能力；除此之外，还可以用自建黄金问答集配合调用链归因。",
+          "contextSha256": "be59c451a76aced6750ddd4644170cd72d8a1a15f8bb9e152c812502b30f610c"
+        }
+      ]
+    },
+    {
+      "token": "SLA",
+      "kind": "letter-acronym",
+      "locale": "en-US",
+      "targetIpa": null,
+      "targetCmu": null,
+      "spokenAs": "S L A",
+      "status": "approved-default",
+      "source": "automatic-classification-requires-human-review",
+      "contextProbeReceipt": null,
+      "occurrences": [
+        {
+          "start": 9879,
+          "end": 9882,
+          "contextText": "到了线上，指标还要扩展到工程侧：可用性 SLA、延迟 P99、单次查询成本、缓存命中率、注入拦截率、增量索引正确性和版本切换稳定性。",
+          "contextSha256": "424659a74fdf5291b13943b3ee74af026774626c012b985afcc012a6083213b4"
+        },
+        {
+          "start": 9925,
+          "end": 9928,
+          "contextText": "SLA 与缓存收益门槛，要按业务目标和成本模型单独设定。",
+          "contextSha256": "b84a93778623db21f8249b26c2eb1f527932c40c0d5615e69fd396f8f281e21f"
+        }
+      ]
+    }
+  ]
+}

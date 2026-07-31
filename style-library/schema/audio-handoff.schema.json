@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/audio-handoff.json",
+  "title": "AutoVideo Audio Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "projectId",
+    "narrationSha256",
+    "status",
+    "approvedBy",
+    "approvalScope",
+    "humanListeningStatus",
+    "attachedAt",
+    "provider",
+    "rightsStatus",
+    "publicReleaseBlocked",
+    "audio",
+    "alignment",
+    "recipe",
+    "immutable"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-audio-handoff/v2"},
+    "projectId": {"type": "string", "minLength": 1},
+    "narrationSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "status": {"const": "approved"},
+    "approvedBy": {"type": "string", "minLength": 1},
+    "approvalScope": {"enum": ["technical-only", "human-listening"]},
+    "humanListeningStatus": {"enum": ["not-performed", "approved"]},
+    "attachedAt": {"type": "string", "format": "date-time"},
+    "provider": {"type": "string", "minLength": 1},
+    "rightsStatus": {"enum": ["approved", "needs-review"]},
+    "publicReleaseBlocked": {"type": "boolean"},
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "source", "sha256", "codec", "sampleRate", "channels", "durationSeconds"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "source": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "codec": {"type": "string", "pattern": "^pcm_"},
+        "sampleRate": {"const": 48000},
+        "channels": {"const": 1},
+        "durationSeconds": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "alignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "source", "sha256", "entryCount", "firstStartSeconds", "lastEndSeconds"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "source": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "entryCount": {"type": "integer", "minimum": 1},
+        "firstStartSeconds": {"type": "number", "minimum": 0},
+        "lastEndSeconds": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "recipe": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "source", "sha256"],
+          "properties": {
+            "path": {"type": "string", "minLength": 1},
+            "source": {"type": "string", "minLength": 1},
+            "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        }
+      ]
+    },
+    "immutable": {"const": true}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"approvalScope": {"const": "technical-only"}}},
+      "then": {
+        "properties": {
+          "humanListeningStatus": {"const": "not-performed"},
+          "publicReleaseBlocked": {"const": true}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"rightsStatus": {"const": "approved"}}},
+      "then": {
+        "properties": {
+          "approvalScope": {"const": "human-listening"},
+          "humanListeningStatus": {"const": "approved"},
+          "publicReleaseBlocked": {"const": false}
+        }
+      }
+    }
+  ]
+}

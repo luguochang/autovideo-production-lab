@@ -1,0 +1,14 @@
+{
+  "duration": 808.826,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-overview-header",
+      "bySec": 3.105
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-overview .visual-world"
+    }
+  ]
+}

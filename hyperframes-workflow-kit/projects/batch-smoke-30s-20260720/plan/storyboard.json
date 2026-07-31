@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "autovideo-storyboard/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "deterministic-baseline",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "audioDurationSeconds": 31.807896,
+    "timelineEndSeconds": 31.808
+  },
+  "style": {
+    "id": "modern-ip-host-explainer",
+    "version": "1.0.0",
+    "palette": "light-apricot",
+    "templateLock": "template-lock.json",
+    "projectApproval": "creator-confirmed"
+  },
+  "persistentZones": [
+    "host",
+    "content",
+    "caption"
+  ],
+  "defaultVisualOperation": "replace",
+  "allowedMotionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "scale-swap-transition",
+    "card-morph-anchor"
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "order": 1,
+      "title": "第一，平台会把系统的复杂性藏起来",
+      "role": "hook",
+      "cueRange": {
+        "start": "cue-001",
+        "end": "cue-003"
+      },
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "timing": {
+        "start": 0,
+        "end": 16.06,
+        "duration": 16.06
+      },
+      "plannedSrc": "production/compositions/scenes/01-scene-01.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "question",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "hold"
+      ],
+      "screenText": [
+        {
+          "id": "scene-01-text-01",
+          "text": "复杂系统",
+          "type": "generated-summary",
+          "sourceCueIds": [
+            "cue-001"
+          ]
+        },
+        {
+          "id": "scene-01-text-02",
+          "text": "按钮 · 节点",
+          "type": "generated-summary",
+          "sourceCueIds": [
+            "cue-002"
+          ]
+        },
+        {
+          "id": "scene-01-text-03",
+          "text": "快速上手",
+          "type": "generated-summary",
+          "sourceCueIds": [
+            "cue-003"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-01-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-01"
+      ]
+    },
+    {
+      "id": "scene-02",
+      "order": 2,
+      "title": "但问题也在这里：",
+      "role": "close",
+      "cueRange": {
+        "start": "cue-004",
+        "end": "cue-006"
+      },
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "timing": {
+        "start": 16.06,
+        "end": 31.808,
+        "duration": 15.748
+      },
+      "plannedSrc": "production/compositions/scenes/02-scene-02.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "close",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "compact",
+        "hold"
+      ],
+      "screenText": [
+        {
+          "id": "scene-02-text-01",
+          "text": "拖拽 ≠ 架构理解",
+          "type": "generated-summary",
+          "sourceCueIds": [
+            "cue-004"
+          ]
+        },
+        {
+          "id": "scene-02-text-02",
+          "text": "问题在哪一层？",
+          "type": "generated-summary",
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        },
+        {
+          "id": "scene-02-text-03",
+          "text": "先定位问题层",
+          "type": "generated-summary",
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-02-terminal",
+        "operation": "hold",
+        "minimumHoldSeconds": 0.6,
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-02"
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "alignment-timing-rebase",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.0.0",
+    "reason": "Creator-approved Candidate A; deterministic cue planning preserves the fixed Q-version host shell and content-world-only motion.",
+    "contentIndependent": true,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 3,
+      "targetSceneSeconds": 18,
+      "numericClaimsAsCharts": false,
+      "llmEnrichmentOptional": true
+    },
+    "inputs": {
+      "sourcePlanningBundle": {
+        "role": "previous-approved-planning-bundle",
+        "path": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/visual-plan/.history/2026-07-22T10-59-56-294Z-planning-bundle.json",
+        "sha256": "c7f4e63872d52d302d11b906d8d7a1e06478d333feada736ef7d7189dc9e8db6",
+        "schemaVersion": "autovideo-planning-bundle/v1"
+      }
+    },
+    "sourcePlanningDigestSha256": "cfbeb733ee70c389979a13a9b1cdae1411cf04e68c13e51a4026329391621b97",
+    "sourceMode": "formal-project-import",
+    "rebasedAt": "2026-07-22T11:05:52.171Z",
+    "policy": "Narration and cue IDs must remain byte-exact; only shot and scene timing fields may change."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "duration": 3.22,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#probe-headline", "bySec": 0.7},
+    {"kind": "before", "a": "#platform-card", "b": "#node-state"},
+    {"kind": "staysInFrame", "selector": "#probe-host"},
+    {"kind": "staysInFrame", "selector": "#node-model"},
+    {"kind": "staysInFrame", "selector": "#node-access"},
+    {"kind": "staysInFrame", "selector": "#node-state"},
+    {"kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 1.1}
+  ]
+}

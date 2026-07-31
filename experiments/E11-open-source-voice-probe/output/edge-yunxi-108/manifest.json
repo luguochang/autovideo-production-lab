@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-07-16T09:35:49.827Z",
+  "source": "experiments/E11-open-source-voice-probe/target-text.txt",
+  "sourceSha256": "b18a4c86d41d0b274f2548567ff8a78bcd2f3902ed7e4c209420b5fed1ef8eaf",
+  "sourceCharacters": 60,
+  "sourceNonWhitespaceCharacters": 59,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": 1.08,
+  "segmentCount": 1,
+  "durationSeconds": 10.312125,
+  "wordBoundaryCount": 33,
+  "sentenceBoundaryCount": 1,
+  "captionCueCount": 5,
+  "serviceTranscriptMatchesSource": true,
+  "outputs": {
+    "webm": "narration.webm",
+    "mp3": "narration.mp3",
+    "words": "words.json",
+    "sentences": "sentences.json",
+    "captions": "captions.json",
+    "srt": "subtitles.srt",
+    "vtt": "subtitles.vtt",
+    "sentenceSrt": "sentences.srt"
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "text": "真正可靠的人工智能工作流，不是让模型替你盲目做决定，而是让每一步都有清晰的输入、可验证的结果，以及随时可以回退的边界。",
+      "start": 0,
+      "duration": 10.312125,
+      "end": 10.312125,
+      "audio": "chunks/000/audio.webm",
+      "metadata": "chunks/000/metadata.json"
+    }
+  ]
+}

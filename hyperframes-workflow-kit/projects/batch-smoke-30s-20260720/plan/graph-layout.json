@@ -1,0 +1,414 @@
+{
+  "schemaVersion": "autovideo-graph-layout/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-22T12:27:06.106Z",
+  "planning": {
+    "artifactPath": "workflow-console/data/projects/batch-smoke-30s-20260720/artifacts/visual-plan/planning-bundle.json",
+    "artifactSha256": "d01b8f46269aae890b2bdaae13e6b94c0d4906a62d736e8aa3fd4d12d0ed843e",
+    "workbenchRevision": 6,
+    "planningDigestSha256": "c8fa2a83e05016fb0243641e269afcaadcad8841a8a85e79f4cc09e50fc9412a",
+    "provenanceMode": "formal-project-import"
+  },
+  "diagrams": [
+    {
+      "graphId": "graph-scene-01",
+      "beatId": "graph-scene-01",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-01",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-01-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "复杂系统",
+            "kind": "generated-summary",
+            "$H": 277,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-01-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "模型 / 接口",
+            "kind": "generated-summary",
+            "$H": 279,
+            "x": 312,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-01-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "向量库",
+            "kind": "generated-summary",
+            "$H": 281,
+            "x": 612,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-01-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "工具调度",
+            "kind": "generated-summary",
+            "$H": 283,
+            "x": 912,
+            "y": 12
+          },
+          {
+            "id": "graph-scene-01-node-05",
+            "width": 220,
+            "height": 96,
+            "label": "快速上手",
+            "kind": "generated-summary",
+            "$H": 285,
+            "x": 1212,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-01-edge-01",
+            "sources": [
+              "graph-scene-01-node-01"
+            ],
+            "targets": [
+              "graph-scene-01-node-02"
+            ],
+            "label": "封装",
+            "sections": [
+              {
+                "id": "graph-scene-01-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-01-node-01",
+                "outgoingShape": "graph-scene-01-node-02"
+              }
+            ],
+            "container": "graph-scene-01"
+          },
+          {
+            "id": "graph-scene-01-edge-02",
+            "sources": [
+              "graph-scene-01-node-02"
+            ],
+            "targets": [
+              "graph-scene-01-node-03"
+            ],
+            "label": "连接",
+            "sections": [
+              {
+                "id": "graph-scene-01-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-01-node-02",
+                "outgoingShape": "graph-scene-01-node-03"
+              }
+            ],
+            "container": "graph-scene-01"
+          },
+          {
+            "id": "graph-scene-01-edge-03",
+            "sources": [
+              "graph-scene-01-node-03"
+            ],
+            "targets": [
+              "graph-scene-01-node-04"
+            ],
+            "label": "调度",
+            "sections": [
+              {
+                "id": "graph-scene-01-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-01-node-03",
+                "outgoingShape": "graph-scene-01-node-04"
+              }
+            ],
+            "container": "graph-scene-01"
+          },
+          {
+            "id": "graph-scene-01-edge-04",
+            "sources": [
+              "graph-scene-01-node-04"
+            ],
+            "targets": [
+              "graph-scene-01-node-05"
+            ],
+            "label": "上手",
+            "sections": [
+              {
+                "id": "graph-scene-01-edge-04_s0",
+                "startPoint": {
+                  "x": 1132,
+                  "y": 60
+                },
+                "endPoint": {
+                  "x": 1212,
+                  "y": 60
+                },
+                "incomingShape": "graph-scene-01-node-04",
+                "outgoingShape": "graph-scene-01-node-05"
+              }
+            ],
+            "container": "graph-scene-01"
+          }
+        ],
+        "$H": 13,
+        "x": 0,
+        "y": 0,
+        "width": 1444,
+        "height": 120
+      }
+    },
+    {
+      "graphId": "graph-scene-02",
+      "beatId": "graph-scene-02",
+      "source": "graph-ir",
+      "layout": {
+        "id": "graph-scene-02",
+        "layoutOptions": {
+          "elk.algorithm": "layered",
+          "elk.direction": "RIGHT",
+          "elk.spacing.nodeNode": "48",
+          "elk.layered.spacing.nodeNodeBetweenLayers": "80"
+        },
+        "children": [
+          {
+            "id": "graph-scene-02-node-01",
+            "width": 220,
+            "height": 96,
+            "label": "拖拽 ≠ 架构理解",
+            "kind": "generated-summary",
+            "$H": 366,
+            "x": 12,
+            "y": 128
+          },
+          {
+            "id": "graph-scene-02-node-02",
+            "width": 220,
+            "height": 96,
+            "label": "模型",
+            "kind": "generated-summary",
+            "$H": 368,
+            "x": 312,
+            "y": 128
+          },
+          {
+            "id": "graph-scene-02-node-03",
+            "width": 220,
+            "height": 96,
+            "label": "接口",
+            "kind": "generated-summary",
+            "$H": 370,
+            "x": 612,
+            "y": 128
+          },
+          {
+            "id": "graph-scene-02-node-04",
+            "width": 220,
+            "height": 96,
+            "label": "权限",
+            "kind": "generated-summary",
+            "$H": 372,
+            "x": 912,
+            "y": 128
+          },
+          {
+            "id": "graph-scene-02-node-05",
+            "width": 220,
+            "height": 96,
+            "label": "数据",
+            "kind": "generated-summary",
+            "$H": 374,
+            "x": 1212,
+            "y": 128
+          },
+          {
+            "id": "graph-scene-02-node-06",
+            "width": 220,
+            "height": 96,
+            "label": "上下游 / 状态",
+            "kind": "generated-summary",
+            "$H": 376,
+            "x": 1512,
+            "y": 128
+          },
+          {
+            "id": "graph-scene-02-node-07",
+            "width": 220,
+            "height": 96,
+            "label": "先定位问题层",
+            "kind": "generated-summary",
+            "$H": 378,
+            "x": 12,
+            "y": 12
+          }
+        ],
+        "edges": [
+          {
+            "id": "graph-scene-02-edge-01",
+            "sources": [
+              "graph-scene-02-node-01"
+            ],
+            "targets": [
+              "graph-scene-02-node-02"
+            ],
+            "label": "先看",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-01_s0",
+                "startPoint": {
+                  "x": 232,
+                  "y": 176
+                },
+                "endPoint": {
+                  "x": 312,
+                  "y": 176
+                },
+                "incomingShape": "graph-scene-02-node-01",
+                "outgoingShape": "graph-scene-02-node-02"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-02",
+            "sources": [
+              "graph-scene-02-node-02"
+            ],
+            "targets": [
+              "graph-scene-02-node-03"
+            ],
+            "label": "再查",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-02_s0",
+                "startPoint": {
+                  "x": 532,
+                  "y": 176
+                },
+                "endPoint": {
+                  "x": 612,
+                  "y": 176
+                },
+                "incomingShape": "graph-scene-02-node-02",
+                "outgoingShape": "graph-scene-02-node-03"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-03",
+            "sources": [
+              "graph-scene-02-node-03"
+            ],
+            "targets": [
+              "graph-scene-02-node-04"
+            ],
+            "label": "再查",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-03_s0",
+                "startPoint": {
+                  "x": 832,
+                  "y": 176
+                },
+                "endPoint": {
+                  "x": 912,
+                  "y": 176
+                },
+                "incomingShape": "graph-scene-02-node-03",
+                "outgoingShape": "graph-scene-02-node-04"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-04",
+            "sources": [
+              "graph-scene-02-node-04"
+            ],
+            "targets": [
+              "graph-scene-02-node-05"
+            ],
+            "label": "继续",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-04_s0",
+                "startPoint": {
+                  "x": 1132,
+                  "y": 176
+                },
+                "endPoint": {
+                  "x": 1212,
+                  "y": 176
+                },
+                "incomingShape": "graph-scene-02-node-04",
+                "outgoingShape": "graph-scene-02-node-05"
+              }
+            ],
+            "container": "graph-scene-02"
+          },
+          {
+            "id": "graph-scene-02-edge-05",
+            "sources": [
+              "graph-scene-02-node-05"
+            ],
+            "targets": [
+              "graph-scene-02-node-06"
+            ],
+            "label": "最后",
+            "sections": [
+              {
+                "id": "graph-scene-02-edge-05_s0",
+                "startPoint": {
+                  "x": 1432,
+                  "y": 176
+                },
+                "endPoint": {
+                  "x": 1512,
+                  "y": 176
+                },
+                "incomingShape": "graph-scene-02-node-05",
+                "outgoingShape": "graph-scene-02-node-06"
+              }
+            ],
+            "container": "graph-scene-02"
+          }
+        ],
+        "$H": 364,
+        "x": 0,
+        "y": 0,
+        "width": 1744,
+        "height": 236
+      }
+    }
+  ]
+}

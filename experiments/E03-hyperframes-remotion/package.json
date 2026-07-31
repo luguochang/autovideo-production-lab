@@ -1,0 +1,15 @@
+{
+  "name": "e03-hyperframes-remotion-bridge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "remotion:render": "node ../../node_modules/@remotion/cli/remotion-cli.js render remotion/src/index.ts RemotionBridge hyperframes/a-video/assets/remotion-bridge.mp4 --codec=h264 --crf=20 --overwrite",
+    "remotion:still:0": "node ../../node_modules/@remotion/cli/remotion-cli.js still remotion/src/index.ts RemotionBridge hyperframes/b-stills/assets/remotion-frame-000.png --frame=0",
+    "remotion:still:60": "node ../../node_modules/@remotion/cli/remotion-cli.js still remotion/src/index.ts RemotionBridge hyperframes/b-stills/assets/remotion-frame-060.png --frame=60",
+    "remotion:still:120": "node ../../node_modules/@remotion/cli/remotion-cli.js still remotion/src/index.ts RemotionBridge hyperframes/b-stills/assets/remotion-frame-120.png --frame=120",
+    "hf:check:a": "npx --yes hyperframes@0.7.64 check hyperframes/a-video --strict --snapshots --at 0.5,2.5,4.5,5.8",
+    "hf:check:b": "npx --yes hyperframes@0.7.64 check hyperframes/b-stills --strict --snapshots --at 0.5,2.5,4.5,5.8",
+    "hf:render:a": "npx --yes hyperframes@0.7.64 render hyperframes/a-video --quality draft --fps 30 --output hyperframes/a-video/renders/a-video.mp4",
+    "hf:render:b": "npx --yes hyperframes@0.7.64 render hyperframes/b-stills --quality draft --fps 30 --output hyperframes/b-stills/renders/b-stills.mp4"
+  }
+}

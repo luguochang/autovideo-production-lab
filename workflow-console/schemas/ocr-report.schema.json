@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schemas/ocr-report.schema.json",
+  "title": "AutoVideo OCR report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "projectId", "status", "generatedAt", "engine", "compositionDigest", "frameSetDigest", "hyperframesCheckSha256", "bindings", "confidencePolicy", "unresolvedCount", "issues", "frames"],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-ocr-report/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "status": {"enum": ["passed", "unresolved", "unavailable"]},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "engine": {
+      "type": "object",
+      "required": ["name", "version", "runtime", "license"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": ["string", "null"]},
+        "runtime": {"type": "string", "minLength": 1},
+        "source": {"type": "string"},
+        "modelSource": {"type": "string"},
+        "license": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "compositionDigest": {"$ref": "#/$defs/sha256"},
+    "frameSetDigest": {"$ref": "#/$defs/sha256"},
+    "hyperframesCheckSha256": {"$ref": "#/$defs/sha256"},
+    "bindings": {
+      "type": "object",
+      "required": ["composition", "frameSet", "hyperframesCheck"],
+      "additionalProperties": false,
+      "properties": {
+        "composition": {"type": "object"},
+        "frameSet": {"type": "object"},
+        "hyperframesCheck": {"type": "object"}
+      }
+    },
+    "confidencePolicy": {
+      "type": "object",
+      "required": ["minimum", "lowConfidenceDisposition"],
+      "additionalProperties": false,
+      "properties": {
+        "minimum": {"type": "number", "minimum": 0, "maximum": 1},
+        "lowConfidenceDisposition": {"const": "unresolved"}
+      }
+    },
+    "unresolvedCount": {"type": "integer", "minimum": 0},
+    "issues": {"type": "array", "items": {"type": "object"}},
+    "frames": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "sha256", "status", "recognizedText", "detectionCount", "detections", "issues"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "status": {"enum": ["passed", "unresolved", "unavailable"]},
+          "recognizedText": {"type": "string"},
+          "detectionCount": {"type": "integer", "minimum": 0},
+          "minimumConfidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+          "elapsedMs": {"type": ["number", "null"], "minimum": 0},
+          "detections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["text", "confidence", "polygon"],
+              "properties": {
+                "text": {"type": "string"},
+                "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+                "polygon": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number"}}
+                }
+              }
+            }
+          },
+          "issues": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

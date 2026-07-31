@@ -1,0 +1,450 @@
+{
+  "schemaVersion": "autovideo-evidence/v2",
+  "claims": [
+    {
+      "id": "claim-main-dataflow",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "RAG 全链路可以按离线建库、在线检索、Agentic 决策和评测闭环来理解。",
+      "citations": [
+        {
+          "id": "citation-main-flow",
+          "sourceId": "source-001-41d218d3",
+          "quote": "整个链路分两段:离线建库把文档变成可检索的库,在线检索把 query 变成答案,中间 Agentic 决策是分水岭。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 20,
+            "endLine": 20,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "fd5edc5a9f3d4e5f5a71983632e1d407eeadf0269fc51334324f71c0fbc82604"
+        },
+        {
+          "id": "citation-evaluation-loop",
+          "sourceId": "source-001-41d218d3",
+          "quote": "不评测的 RAG 就是瞎调,每改一环都要有指标量化。评测贯穿全链路。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 204,
+            "endLine": 204,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "b8c17605d5b03978cf07c093b0899939fbd456fefc7a129f0bc79136caf70f96"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "作为完整长版的主线主张；外部数字和项目效果数字仍作为证据缺口，未完成来源或授权处理前不得用于公开结论。"
+    },
+    {
+      "id": "claim-parsing-layered",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "生产文档解析应采用主解析、规则清洗和困难页面兜底的分层组合。",
+      "citations": [
+        {
+          "id": "citation-parsing-layered",
+          "sourceId": "source-001-41d218d3",
+          "quote": "生产上几乎不会单一用一个解析器,而是**分层组合**。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 32,
+            "endLine": 32,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "9ad65313217110dde27f087b9b9372e88a8ce543a5ba679c10e0ae72fbc69400"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "具体解析器名称留在屏幕选型摘要，不进入主张。"
+    },
+    {
+      "id": "claim-chunk-by-document",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "分块策略应随文档类型变化，并保留来源、章节、页码和版本等元数据。",
+      "citations": [
+        {
+          "id": "citation-chunk-strategy",
+          "sourceId": "source-001-41d218d3",
+          "quote": "生产上一般**按文档类型分策略**,不是全局一个切法。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 48,
+            "endLine": 48,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "30566564d02cf451126a8c359d37bdd53dc48fff0864e43e717f541052b3d90b"
+        },
+        {
+          "id": "citation-chunk-metadata",
+          "sourceId": "source-001-41d218d3",
+          "quote": "而且切完每个 chunk 必须绑元数据--来源、章节、页码、条文号、版本,这些后面条件过滤、引用展示、索引重建全要用。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 48,
+            "endLine": 48,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "6c14869fd730e2221ba490742c99c061988101804350b527cb986674ee2823b0"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "检索块与合成块解耦作为画面辅助关系，不展开品牌框架。"
+    },
+    {
+      "id": "claim-context-enhancement",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "分块后、向量化前可增加上下文增强，使片段脱离原文后仍更容易被正确理解。",
+      "citations": [
+        {
+          "id": "citation-context-stage",
+          "sourceId": "source-001-41d218d3",
+          "quote": "分块后、向量化前,其实可以插一步上下文增强。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 58,
+            "endLine": 58,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "98399b03957178dd9767a31054f69211171e75218329b259963fe8430251d3d2"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "不采用原稿中的外部提升百分比。"
+    },
+    {
+      "id": "claim-model-index-selection",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "向量模型和索引的生产选择，应同时考虑中文效果、数据边界、数据规模和运维成本。",
+      "citations": [
+        {
+          "id": "citation-embedding-considerations",
+          "sourceId": "source-001-41d218d3",
+          "quote": "**生产怎么选、为什么**,三个考量。一是中文效果",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 80,
+            "endLine": 80,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "1058f4de4d1543cd2e91ad6876b83b69100a57a664aa83837b73fa26e74625b8"
+        },
+        {
+          "id": "citation-index-considerations",
+          "sourceId": "source-001-41d218d3",
+          "quote": "核心看三件事:规模、是否要事务和 join、运维成本。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 96,
+            "endLine": 96,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "9b93397ff3b028a71dded6b15c504162b05a45a92d117e0844db882e64d4ec8a"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "产品名和具体维度不进入生产旁白。"
+    },
+    {
+      "id": "claim-query-routing",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "在线查询应先判断复杂度，再按需执行改写、多路或多跳检索。",
+      "citations": [
+        {
+          "id": "citation-query-routing",
+          "sourceId": "source-001-41d218d3",
+          "quote": "生产上是**路由判断 + 按需改写**的组合。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 114,
+            "endLine": 114,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "fa40cf8e6b0ae54a0defcaf78e8e6147c109a18aa6bc8107ef252a1bf591e6dd"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "不把所有查询都强制改写。"
+    },
+    {
+      "id": "claim-hybrid-fusion-rerank",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "生产检索通常组合语义召回和关键词召回，再用排名融合与精排收窄候选。",
+      "citations": [
+        {
+          "id": "citation-hybrid-retrieval",
+          "sourceId": "source-001-41d218d3",
+          "quote": "所以生产上几乎都上 hybrid,补 BM25 关键词路。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 128,
+            "endLine": 128,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "be770c2c603243b7e53c01deaea1670b6d735a5a06a6d9a698b9da7d64d4e606"
+        },
+        {
+          "id": "citation-rank-fusion",
+          "sourceId": "source-001-41d218d3",
+          "quote": "RRF 只用排名,尺度无关,简单鲁棒,像多评委投票不比绝对分比平均名次。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 144,
+            "endLine": 144,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "0104a96a5a733c1ee4649974be343b3e1fc7d60895acd4b45d60e89d3bc71b8e"
+        },
+        {
+          "id": "citation-rerank-distinction",
+          "sourceId": "source-001-41d218d3",
+          "quote": "关键要分清 cross-encoder 和双塔的区别。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 160,
+            "endLine": 160,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "9787bc7ecc8f6861e195d6926261ef13630f8ba2b4574c7dc6fb83ae711f6ac3"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "具体候选数量作为屏幕辅助，不写入口播。"
+    },
+    {
+      "id": "claim-agentic-loop",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "智能体式 RAG 的生产核心是证据充分性评估、改写重试和拒答组成的有界闭环。",
+      "citations": [
+        {
+          "id": "citation-agentic-loop",
+          "sourceId": "source-001-41d218d3",
+          "quote": "生产 Agentic 一般是**证据充分性评估 + 改写重试 + 拒答**的轻量闭环,不微调。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 178,
+            "endLine": 178,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "7e729c3ca1e4bb7f490ad5741ac86e982640f384229e7a9b088c2eb5ed32f4e9"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "不采用原稿中的项目引用支持率。"
+    },
+    {
+      "id": "claim-generation-evaluation",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "生成阶段需要支持性检查、低发散、明确拒答和引用校验，所有改动还要回到评测闭环。",
+      "citations": [
+        {
+          "id": "citation-generation-guards",
+          "sourceId": "source-001-41d218d3",
+          "quote": "防幻觉是命门,要四道防线--IsSup 检查、温度调低、明确说不知道、引用校验。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 192,
+            "endLine": 192,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "69a3d255473047db46281c0704a31e9070a0d8b92d3952b7f29f89e91abc3786"
+        },
+        {
+          "id": "citation-evaluation-required",
+          "sourceId": "source-001-41d218d3",
+          "quote": "不评测的 RAG 就是瞎调,每改一环都要有指标量化。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 204,
+            "endLine": 204,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "3ca407f710ce6cdd224f338daa0cb3765c27d730219c4cc31a6e9b4b1c5bca2e"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "评测指标在画面中分层展示，旁白只讲目的。"
+    },
+    {
+      "id": "claim-production-engineering",
+      "claimKind": "source-opinion",
+      "supportStatus": "supported",
+      "statement": "从原型到生产还需要缓存、增量索引、版本管理、安全隔离和全链路监控。",
+      "citations": [
+        {
+          "id": "citation-production-gap",
+          "sourceId": "source-001-41d218d3",
+          "quote": "从 demo 到生产,还有几件事必须做,这步往往是被忽视但决定能不能上线的。",
+          "locator": {
+            "scheme": "line-range",
+            "startLine": 220,
+            "endLine": 220,
+            "occurrence": 1
+          },
+          "canonicalQuoteSha256": "35c35157fbb38565c3c272e3212848ba7d65a1d11b72df6c3f02419884994669"
+        }
+      ],
+      "protectedAtomIds": [],
+      "notes": "不采用未经外部验证的缓存收益数字和可用性阈值。"
+    }
+  ],
+  "protectedAtoms": [],
+  "terms": [
+    {
+      "id": "term-rag",
+      "token": "RAG",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "RAG"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-query",
+      "token": "query",
+      "tokenClass": "english-word",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "query"
+      ],
+      "spokenPolicy": "whole-word",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-agentic",
+      "token": "Agentic",
+      "tokenClass": "english-word",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "Agentic"
+      ],
+      "spokenPolicy": "whole-word",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-api",
+      "token": "API",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "API"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-chunk",
+      "token": "chunk",
+      "tokenClass": "english-word",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "chunk"
+      ],
+      "spokenPolicy": "whole-word",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-join",
+      "token": "join",
+      "tokenClass": "english-word",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "join"
+      ],
+      "spokenPolicy": "whole-word",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-hybrid",
+      "token": "hybrid",
+      "tokenClass": "english-word",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "hybrid"
+      ],
+      "spokenPolicy": "whole-word",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-bm25",
+      "token": "BM25",
+      "tokenClass": "mixed-version",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "BM25"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-rrf",
+      "token": "RRF",
+      "tokenClass": "initialism",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "RRF"
+      ],
+      "spokenPolicy": "letter-by-letter",
+      "requiresListeningReview": false
+    },
+    {
+      "id": "term-cross-encoder",
+      "token": "cross-encoder",
+      "tokenClass": "code-identifier",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "cross-encoder"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-issup",
+      "token": "IsSup",
+      "tokenClass": "code-identifier",
+      "caseSensitive": true,
+      "allowedWrittenForms": [
+        "IsSup"
+      ],
+      "spokenPolicy": "listening-review",
+      "requiresListeningReview": true
+    },
+    {
+      "id": "term-demo",
+      "token": "demo",
+      "tokenClass": "english-word",
+      "caseSensitive": false,
+      "allowedWrittenForms": [
+        "demo"
+      ],
+      "spokenPolicy": "whole-word",
+      "requiresListeningReview": true
+    }
+  ],
+  "gaps": [
+    {
+      "question": "原稿中的外部提升百分比和项目效果数字是否具备可公开引用的来源？",
+      "reason": "当前只有用户口播稿；完整内部候选暂保留原述，NarrationLock 前需补公开来源、改为明确的个人经验陈述或删除。"
+    },
+    {
+      "question": "原稿中项目名称和客户指标是否允许公开？",
+      "reason": "当前没有公开权利和客户授权回执；完整内部候选暂保留待处理，授权前不得用于公开版。"
+    }
+  ],
+  "projectId": "rag-full-chain-5m-20260728-v1",
+  "sourceRegisterSha256": "0f98597e945eccc2a2e71450d56b766235ad04495cb34f2dafde431c1cae3c36",
+  "suitabilitySha256": "090465e3a23a317823fe127a47a06e3ade9b3bdb5ad54672b26e1a5b64745248",
+  "prompt": {
+    "id": "evidence-extractor",
+    "sha256": "afbc91550a50988e4db3759a4515ede6f86b580aa9d052c37130efe7776c5df1"
+  },
+  "generatedAt": "2026-07-28T05:45:26.594Z"
+}

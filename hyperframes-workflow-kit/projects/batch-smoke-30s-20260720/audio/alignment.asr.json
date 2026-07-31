@@ -1,0 +1,1812 @@
+{
+  "schemaVersion": "autovideo-alignment-whisper/v1",
+  "engine": "openai-whisper/small",
+  "device": "cuda",
+  "language": "zh",
+  "limitation": "ASR-derived word timestamps; this is not forced alignment. Re-run WhisperX for phoneme or lip-sync precision.",
+  "source": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\narration.final.wav",
+  "sourceSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+  "narrationLock": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\NarrationLock.json",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "durationSeconds": 31.807896,
+  "firstStartSeconds": 0.0,
+  "lastEndSeconds": 31.64,
+  "transcriptText": "第一 平台会把系统的复杂性藏起来第一代码五代码还有各种AI工作流工具或把模型调用API连接向量库和工具链调度包装成爱妞和节点这样做的好处是普通人可以很快上手但问题也在这里很多人会拖拽节点就以为自己已经懂了系统架构真正遇到爆错时你可能根本不知道问题出在哪里是模型 接口权 线数据还是上下有关系和状态管理这才是系统真正复杂的地方",
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.24,
+      "text": "第一",
+      "probability": 0.684025
+    },
+    {
+      "start": 0.76,
+      "end": 0.9,
+      "text": " 平",
+      "probability": 0.993272
+    },
+    {
+      "start": 0.9,
+      "end": 1.1,
+      "text": "台",
+      "probability": 0.980032
+    },
+    {
+      "start": 1.1,
+      "end": 1.3,
+      "text": "会",
+      "probability": 0.895245
+    },
+    {
+      "start": 1.3,
+      "end": 1.58,
+      "text": "把",
+      "probability": 0.992419
+    },
+    {
+      "start": 1.58,
+      "end": 2.38,
+      "text": "系",
+      "probability": 0.982601
+    },
+    {
+      "start": 2.38,
+      "end": 2.5,
+      "text": "统",
+      "probability": 0.998806
+    },
+    {
+      "start": 2.5,
+      "end": 2.64,
+      "text": "的",
+      "probability": 0.976837
+    },
+    {
+      "start": 2.64,
+      "end": 2.78,
+      "text": "复",
+      "probability": 0.985403
+    },
+    {
+      "start": 2.78,
+      "end": 2.94,
+      "text": "杂",
+      "probability": 0.999026
+    },
+    {
+      "start": 2.94,
+      "end": 3.14,
+      "text": "性",
+      "probability": 0.994766
+    },
+    {
+      "start": 3.14,
+      "end": 3.36,
+      "text": "藏",
+      "probability": 0.998073
+    },
+    {
+      "start": 3.36,
+      "end": 3.54,
+      "text": "起",
+      "probability": 0.996648
+    },
+    {
+      "start": 3.54,
+      "end": 3.98,
+      "text": "来",
+      "probability": 0.988467
+    },
+    {
+      "start": 3.98,
+      "end": 4.34,
+      "text": "第一",
+      "probability": 0.584393
+    },
+    {
+      "start": 4.34,
+      "end": 4.46,
+      "text": "代",
+      "probability": 0.983636
+    },
+    {
+      "start": 4.46,
+      "end": 4.62,
+      "text": "码",
+      "probability": 0.930333
+    },
+    {
+      "start": 4.62,
+      "end": 5.16,
+      "text": "五",
+      "probability": 0.022132
+    },
+    {
+      "start": 5.16,
+      "end": 5.3,
+      "text": "代",
+      "probability": 0.999087
+    },
+    {
+      "start": 5.3,
+      "end": 5.72,
+      "text": "码",
+      "probability": 0.996784
+    },
+    {
+      "start": 5.72,
+      "end": 5.9,
+      "text": "还有",
+      "probability": 0.573122
+    },
+    {
+      "start": 5.9,
+      "end": 6.22,
+      "text": "各",
+      "probability": 0.975423
+    },
+    {
+      "start": 6.22,
+      "end": 6.34,
+      "text": "种",
+      "probability": 0.941216
+    },
+    {
+      "start": 6.34,
+      "end": 6.52,
+      "text": "AI",
+      "probability": 0.810314
+    },
+    {
+      "start": 6.52,
+      "end": 6.8,
+      "text": "工作",
+      "probability": 0.992546
+    },
+    {
+      "start": 6.8,
+      "end": 7.04,
+      "text": "流",
+      "probability": 0.574824
+    },
+    {
+      "start": 7.04,
+      "end": 7.22,
+      "text": "工",
+      "probability": 0.964004
+    },
+    {
+      "start": 7.22,
+      "end": 7.38,
+      "text": "具",
+      "probability": 0.728773
+    },
+    {
+      "start": 7.38,
+      "end": 7.54,
+      "text": "或",
+      "probability": 0.750135
+    },
+    {
+      "start": 7.54,
+      "end": 7.7,
+      "text": "把",
+      "probability": 0.988992
+    },
+    {
+      "start": 7.7,
+      "end": 7.88,
+      "text": "模",
+      "probability": 0.997086
+    },
+    {
+      "start": 7.88,
+      "end": 8.08,
+      "text": "型",
+      "probability": 0.99807
+    },
+    {
+      "start": 8.08,
+      "end": 8.28,
+      "text": "调",
+      "probability": 0.984089
+    },
+    {
+      "start": 8.28,
+      "end": 8.52,
+      "text": "用",
+      "probability": 0.997545
+    },
+    {
+      "start": 8.52,
+      "end": 9.06,
+      "text": "AP",
+      "probability": 0.781494
+    },
+    {
+      "start": 9.06,
+      "end": 9.3,
+      "text": "I",
+      "probability": 0.976044
+    },
+    {
+      "start": 9.3,
+      "end": 9.44,
+      "text": "连",
+      "probability": 0.985588
+    },
+    {
+      "start": 9.44,
+      "end": 9.68,
+      "text": "接",
+      "probability": 0.998559
+    },
+    {
+      "start": 9.68,
+      "end": 10.02,
+      "text": "向",
+      "probability": 0.568432
+    },
+    {
+      "start": 10.02,
+      "end": 10.2,
+      "text": "量",
+      "probability": 0.453743
+    },
+    {
+      "start": 10.2,
+      "end": 10.42,
+      "text": "库",
+      "probability": 0.936346
+    },
+    {
+      "start": 10.42,
+      "end": 10.56,
+      "text": "和",
+      "probability": 0.990417
+    },
+    {
+      "start": 10.56,
+      "end": 10.72,
+      "text": "工",
+      "probability": 0.998152
+    },
+    {
+      "start": 10.72,
+      "end": 10.84,
+      "text": "具",
+      "probability": 0.983554
+    },
+    {
+      "start": 10.84,
+      "end": 10.98,
+      "text": "链",
+      "probability": 0.985388
+    },
+    {
+      "start": 10.98,
+      "end": 11.2,
+      "text": "调",
+      "probability": 0.990845
+    },
+    {
+      "start": 11.2,
+      "end": 11.4,
+      "text": "度",
+      "probability": 0.977042
+    },
+    {
+      "start": 11.4,
+      "end": 11.64,
+      "text": "包",
+      "probability": 0.987642
+    },
+    {
+      "start": 11.64,
+      "end": 11.82,
+      "text": "装",
+      "probability": 0.999587
+    },
+    {
+      "start": 11.82,
+      "end": 11.98,
+      "text": "成",
+      "probability": 0.976883
+    },
+    {
+      "start": 11.98,
+      "end": 12.16,
+      "text": "爱",
+      "probability": 0.388605
+    },
+    {
+      "start": 12.16,
+      "end": 12.28,
+      "text": "妞",
+      "probability": 0.786467
+    },
+    {
+      "start": 12.28,
+      "end": 12.46,
+      "text": "和",
+      "probability": 0.980881
+    },
+    {
+      "start": 12.46,
+      "end": 12.64,
+      "text": "节",
+      "probability": 0.92908
+    },
+    {
+      "start": 12.64,
+      "end": 12.82,
+      "text": "点",
+      "probability": 0.995667
+    },
+    {
+      "start": 12.82,
+      "end": 13.54,
+      "text": "这样",
+      "probability": 0.985016
+    },
+    {
+      "start": 13.54,
+      "end": 13.74,
+      "text": "做",
+      "probability": 0.998768
+    },
+    {
+      "start": 13.74,
+      "end": 13.86,
+      "text": "的",
+      "probability": 0.931447
+    },
+    {
+      "start": 13.86,
+      "end": 14.04,
+      "text": "好",
+      "probability": 0.996973
+    },
+    {
+      "start": 14.04,
+      "end": 14.3,
+      "text": "处",
+      "probability": 0.999741
+    },
+    {
+      "start": 14.3,
+      "end": 14.8,
+      "text": "是",
+      "probability": 0.901192
+    },
+    {
+      "start": 14.8,
+      "end": 15.0,
+      "text": "普",
+      "probability": 0.99237
+    },
+    {
+      "start": 15.0,
+      "end": 15.1,
+      "text": "通",
+      "probability": 0.998999
+    },
+    {
+      "start": 15.1,
+      "end": 15.2,
+      "text": "人",
+      "probability": 0.999209
+    },
+    {
+      "start": 15.2,
+      "end": 15.38,
+      "text": "可以",
+      "probability": 0.99265
+    },
+    {
+      "start": 15.38,
+      "end": 15.52,
+      "text": "很",
+      "probability": 0.996244
+    },
+    {
+      "start": 15.52,
+      "end": 15.66,
+      "text": "快",
+      "probability": 0.997703
+    },
+    {
+      "start": 15.66,
+      "end": 15.88,
+      "text": "上",
+      "probability": 0.996311
+    },
+    {
+      "start": 15.88,
+      "end": 16.06,
+      "text": "手",
+      "probability": 0.999252
+    },
+    {
+      "start": 16.06,
+      "end": 16.26,
+      "text": "但",
+      "probability": 0.892816
+    },
+    {
+      "start": 16.26,
+      "end": 16.5,
+      "text": "问题",
+      "probability": 0.998607
+    },
+    {
+      "start": 16.5,
+      "end": 16.72,
+      "text": "也",
+      "probability": 0.974136
+    },
+    {
+      "start": 16.72,
+      "end": 16.88,
+      "text": "在",
+      "probability": 0.998727
+    },
+    {
+      "start": 16.88,
+      "end": 17.18,
+      "text": "这里",
+      "probability": 0.997755
+    },
+    {
+      "start": 17.18,
+      "end": 17.56,
+      "text": "很多",
+      "probability": 0.887596
+    },
+    {
+      "start": 17.56,
+      "end": 17.76,
+      "text": "人",
+      "probability": 0.99937
+    },
+    {
+      "start": 17.76,
+      "end": 17.88,
+      "text": "会",
+      "probability": 0.995454
+    },
+    {
+      "start": 17.88,
+      "end": 18.08,
+      "text": "拖",
+      "probability": 0.832383
+    },
+    {
+      "start": 18.08,
+      "end": 18.22,
+      "text": "拽",
+      "probability": 0.962966
+    },
+    {
+      "start": 18.22,
+      "end": 18.46,
+      "text": "节",
+      "probability": 0.996333
+    },
+    {
+      "start": 18.46,
+      "end": 18.72,
+      "text": "点",
+      "probability": 0.999054
+    },
+    {
+      "start": 18.72,
+      "end": 19.02,
+      "text": "就",
+      "probability": 0.94368
+    },
+    {
+      "start": 19.02,
+      "end": 19.18,
+      "text": "以",
+      "probability": 0.993045
+    },
+    {
+      "start": 19.18,
+      "end": 19.26,
+      "text": "为",
+      "probability": 0.9994
+    },
+    {
+      "start": 19.26,
+      "end": 19.42,
+      "text": "自己",
+      "probability": 0.995779
+    },
+    {
+      "start": 19.42,
+      "end": 19.7,
+      "text": "已经",
+      "probability": 0.871637
+    },
+    {
+      "start": 19.7,
+      "end": 19.9,
+      "text": "懂",
+      "probability": 0.997937
+    },
+    {
+      "start": 19.9,
+      "end": 20.08,
+      "text": "了",
+      "probability": 0.446745
+    },
+    {
+      "start": 20.08,
+      "end": 20.28,
+      "text": "系",
+      "probability": 0.996754
+    },
+    {
+      "start": 20.28,
+      "end": 20.4,
+      "text": "统",
+      "probability": 0.998813
+    },
+    {
+      "start": 20.4,
+      "end": 20.6,
+      "text": "架",
+      "probability": 0.978681
+    },
+    {
+      "start": 20.6,
+      "end": 20.82,
+      "text": "构",
+      "probability": 0.998742
+    },
+    {
+      "start": 20.82,
+      "end": 21.5,
+      "text": "真",
+      "probability": 0.524955
+    },
+    {
+      "start": 21.5,
+      "end": 21.62,
+      "text": "正",
+      "probability": 0.981763
+    },
+    {
+      "start": 21.62,
+      "end": 21.74,
+      "text": "遇",
+      "probability": 0.992575
+    },
+    {
+      "start": 21.74,
+      "end": 21.86,
+      "text": "到",
+      "probability": 0.997949
+    },
+    {
+      "start": 21.86,
+      "end": 22.06,
+      "text": "爆",
+      "probability": 0.688773
+    },
+    {
+      "start": 22.06,
+      "end": 22.24,
+      "text": "错",
+      "probability": 0.645801
+    },
+    {
+      "start": 22.24,
+      "end": 22.58,
+      "text": "时",
+      "probability": 0.991111
+    },
+    {
+      "start": 22.58,
+      "end": 23.0,
+      "text": "你",
+      "probability": 0.882428
+    },
+    {
+      "start": 23.0,
+      "end": 23.16,
+      "text": "可能",
+      "probability": 0.971925
+    },
+    {
+      "start": 23.16,
+      "end": 23.38,
+      "text": "根",
+      "probability": 0.991975
+    },
+    {
+      "start": 23.38,
+      "end": 23.5,
+      "text": "本",
+      "probability": 0.999366
+    },
+    {
+      "start": 23.5,
+      "end": 23.78,
+      "text": "不知道",
+      "probability": 0.997255
+    },
+    {
+      "start": 23.78,
+      "end": 24.12,
+      "text": "问题",
+      "probability": 0.997455
+    },
+    {
+      "start": 24.12,
+      "end": 24.36,
+      "text": "出",
+      "probability": 0.976387
+    },
+    {
+      "start": 24.36,
+      "end": 24.48,
+      "text": "在",
+      "probability": 0.998855
+    },
+    {
+      "start": 24.48,
+      "end": 24.66,
+      "text": "哪",
+      "probability": 0.994036
+    },
+    {
+      "start": 24.66,
+      "end": 24.96,
+      "text": "里",
+      "probability": 0.99446
+    },
+    {
+      "start": 24.96,
+      "end": 25.34,
+      "text": "是",
+      "probability": 0.93861
+    },
+    {
+      "start": 25.34,
+      "end": 25.54,
+      "text": "模",
+      "probability": 0.994526
+    },
+    {
+      "start": 25.54,
+      "end": 25.88,
+      "text": "型",
+      "probability": 0.996542
+    },
+    {
+      "start": 26.22,
+      "end": 26.28,
+      "text": " 接",
+      "probability": 0.892344
+    },
+    {
+      "start": 26.28,
+      "end": 26.54,
+      "text": "口",
+      "probability": 0.99767
+    },
+    {
+      "start": 26.54,
+      "end": 26.72,
+      "text": "权",
+      "probability": 0.930865
+    },
+    {
+      "start": 26.94,
+      "end": 26.94,
+      "text": " 线",
+      "probability": 0.968259
+    },
+    {
+      "start": 26.94,
+      "end": 27.2,
+      "text": "数",
+      "probability": 0.902921
+    },
+    {
+      "start": 27.2,
+      "end": 27.42,
+      "text": "据",
+      "probability": 0.995661
+    },
+    {
+      "start": 27.42,
+      "end": 27.58,
+      "text": "还是",
+      "probability": 0.918774
+    },
+    {
+      "start": 27.58,
+      "end": 27.86,
+      "text": "上",
+      "probability": 0.990824
+    },
+    {
+      "start": 27.86,
+      "end": 28.04,
+      "text": "下",
+      "probability": 0.997113
+    },
+    {
+      "start": 28.04,
+      "end": 28.22,
+      "text": "有",
+      "probability": 0.707845
+    },
+    {
+      "start": 28.22,
+      "end": 28.44,
+      "text": "关",
+      "probability": 0.999187
+    },
+    {
+      "start": 28.44,
+      "end": 28.72,
+      "text": "系",
+      "probability": 0.996073
+    },
+    {
+      "start": 28.72,
+      "end": 28.9,
+      "text": "和",
+      "probability": 0.922656
+    },
+    {
+      "start": 28.9,
+      "end": 29.06,
+      "text": "状",
+      "probability": 0.997309
+    },
+    {
+      "start": 29.06,
+      "end": 29.22,
+      "text": "态",
+      "probability": 0.99977
+    },
+    {
+      "start": 29.22,
+      "end": 29.44,
+      "text": "管",
+      "probability": 0.998185
+    },
+    {
+      "start": 29.44,
+      "end": 29.66,
+      "text": "理",
+      "probability": 0.999723
+    },
+    {
+      "start": 29.66,
+      "end": 30.08,
+      "text": "这",
+      "probability": 0.718983
+    },
+    {
+      "start": 30.08,
+      "end": 30.24,
+      "text": "才",
+      "probability": 0.997776
+    },
+    {
+      "start": 30.24,
+      "end": 30.38,
+      "text": "是",
+      "probability": 0.990375
+    },
+    {
+      "start": 30.38,
+      "end": 30.54,
+      "text": "系",
+      "probability": 0.973549
+    },
+    {
+      "start": 30.54,
+      "end": 30.7,
+      "text": "统",
+      "probability": 0.998823
+    },
+    {
+      "start": 30.7,
+      "end": 30.84,
+      "text": "真",
+      "probability": 0.980172
+    },
+    {
+      "start": 30.84,
+      "end": 30.96,
+      "text": "正",
+      "probability": 0.995189
+    },
+    {
+      "start": 30.96,
+      "end": 31.14,
+      "text": "复",
+      "probability": 0.991061
+    },
+    {
+      "start": 31.14,
+      "end": 31.32,
+      "text": "杂",
+      "probability": 0.999762
+    },
+    {
+      "start": 31.32,
+      "end": 31.42,
+      "text": "的",
+      "probability": 0.996429
+    },
+    {
+      "start": 31.42,
+      "end": 31.64,
+      "text": "地方",
+      "probability": 0.989971
+    }
+  ],
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.98,
+      "text": "第一 平台会把系统的复杂性藏起来",
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.24,
+          "text": "第一",
+          "probability": 0.684025
+        },
+        {
+          "start": 0.76,
+          "end": 0.9,
+          "text": " 平",
+          "probability": 0.993272
+        },
+        {
+          "start": 0.9,
+          "end": 1.1,
+          "text": "台",
+          "probability": 0.980032
+        },
+        {
+          "start": 1.1,
+          "end": 1.3,
+          "text": "会",
+          "probability": 0.895245
+        },
+        {
+          "start": 1.3,
+          "end": 1.58,
+          "text": "把",
+          "probability": 0.992419
+        },
+        {
+          "start": 1.58,
+          "end": 2.38,
+          "text": "系",
+          "probability": 0.982601
+        },
+        {
+          "start": 2.38,
+          "end": 2.5,
+          "text": "统",
+          "probability": 0.998806
+        },
+        {
+          "start": 2.5,
+          "end": 2.64,
+          "text": "的",
+          "probability": 0.976837
+        },
+        {
+          "start": 2.64,
+          "end": 2.78,
+          "text": "复",
+          "probability": 0.985403
+        },
+        {
+          "start": 2.78,
+          "end": 2.94,
+          "text": "杂",
+          "probability": 0.999026
+        },
+        {
+          "start": 2.94,
+          "end": 3.14,
+          "text": "性",
+          "probability": 0.994766
+        },
+        {
+          "start": 3.14,
+          "end": 3.36,
+          "text": "藏",
+          "probability": 0.998073
+        },
+        {
+          "start": 3.36,
+          "end": 3.54,
+          "text": "起",
+          "probability": 0.996648
+        },
+        {
+          "start": 3.54,
+          "end": 3.98,
+          "text": "来",
+          "probability": 0.988467
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "start": 3.98,
+      "end": 4.62,
+      "text": "第一代码",
+      "words": [
+        {
+          "start": 3.98,
+          "end": 4.34,
+          "text": "第一",
+          "probability": 0.584393
+        },
+        {
+          "start": 4.34,
+          "end": 4.46,
+          "text": "代",
+          "probability": 0.983636
+        },
+        {
+          "start": 4.46,
+          "end": 4.62,
+          "text": "码",
+          "probability": 0.930333
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 4.62,
+      "end": 5.72,
+      "text": "五代码",
+      "words": [
+        {
+          "start": 4.62,
+          "end": 5.16,
+          "text": "五",
+          "probability": 0.022132
+        },
+        {
+          "start": 5.16,
+          "end": 5.3,
+          "text": "代",
+          "probability": 0.999087
+        },
+        {
+          "start": 5.3,
+          "end": 5.72,
+          "text": "码",
+          "probability": 0.996784
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 5.72,
+      "end": 8.52,
+      "text": "还有各种AI工作流工具或把模型调用",
+      "words": [
+        {
+          "start": 5.72,
+          "end": 5.9,
+          "text": "还有",
+          "probability": 0.573122
+        },
+        {
+          "start": 5.9,
+          "end": 6.22,
+          "text": "各",
+          "probability": 0.975423
+        },
+        {
+          "start": 6.22,
+          "end": 6.34,
+          "text": "种",
+          "probability": 0.941216
+        },
+        {
+          "start": 6.34,
+          "end": 6.52,
+          "text": "AI",
+          "probability": 0.810314
+        },
+        {
+          "start": 6.52,
+          "end": 6.8,
+          "text": "工作",
+          "probability": 0.992546
+        },
+        {
+          "start": 6.8,
+          "end": 7.04,
+          "text": "流",
+          "probability": 0.574824
+        },
+        {
+          "start": 7.04,
+          "end": 7.22,
+          "text": "工",
+          "probability": 0.964004
+        },
+        {
+          "start": 7.22,
+          "end": 7.38,
+          "text": "具",
+          "probability": 0.728773
+        },
+        {
+          "start": 7.38,
+          "end": 7.54,
+          "text": "或",
+          "probability": 0.750135
+        },
+        {
+          "start": 7.54,
+          "end": 7.7,
+          "text": "把",
+          "probability": 0.988992
+        },
+        {
+          "start": 7.7,
+          "end": 7.88,
+          "text": "模",
+          "probability": 0.997086
+        },
+        {
+          "start": 7.88,
+          "end": 8.08,
+          "text": "型",
+          "probability": 0.99807
+        },
+        {
+          "start": 8.08,
+          "end": 8.28,
+          "text": "调",
+          "probability": 0.984089
+        },
+        {
+          "start": 8.28,
+          "end": 8.52,
+          "text": "用",
+          "probability": 0.997545
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 8.52,
+      "end": 12.82,
+      "text": "API连接向量库和工具链调度包装成爱妞和节点",
+      "words": [
+        {
+          "start": 8.52,
+          "end": 9.06,
+          "text": "AP",
+          "probability": 0.781494
+        },
+        {
+          "start": 9.06,
+          "end": 9.3,
+          "text": "I",
+          "probability": 0.976044
+        },
+        {
+          "start": 9.3,
+          "end": 9.44,
+          "text": "连",
+          "probability": 0.985588
+        },
+        {
+          "start": 9.44,
+          "end": 9.68,
+          "text": "接",
+          "probability": 0.998559
+        },
+        {
+          "start": 9.68,
+          "end": 10.02,
+          "text": "向",
+          "probability": 0.568432
+        },
+        {
+          "start": 10.02,
+          "end": 10.2,
+          "text": "量",
+          "probability": 0.453743
+        },
+        {
+          "start": 10.2,
+          "end": 10.42,
+          "text": "库",
+          "probability": 0.936346
+        },
+        {
+          "start": 10.42,
+          "end": 10.56,
+          "text": "和",
+          "probability": 0.990417
+        },
+        {
+          "start": 10.56,
+          "end": 10.72,
+          "text": "工",
+          "probability": 0.998152
+        },
+        {
+          "start": 10.72,
+          "end": 10.84,
+          "text": "具",
+          "probability": 0.983554
+        },
+        {
+          "start": 10.84,
+          "end": 10.98,
+          "text": "链",
+          "probability": 0.985388
+        },
+        {
+          "start": 10.98,
+          "end": 11.2,
+          "text": "调",
+          "probability": 0.990845
+        },
+        {
+          "start": 11.2,
+          "end": 11.4,
+          "text": "度",
+          "probability": 0.977042
+        },
+        {
+          "start": 11.4,
+          "end": 11.64,
+          "text": "包",
+          "probability": 0.987642
+        },
+        {
+          "start": 11.64,
+          "end": 11.82,
+          "text": "装",
+          "probability": 0.999587
+        },
+        {
+          "start": 11.82,
+          "end": 11.98,
+          "text": "成",
+          "probability": 0.976883
+        },
+        {
+          "start": 11.98,
+          "end": 12.16,
+          "text": "爱",
+          "probability": 0.388605
+        },
+        {
+          "start": 12.16,
+          "end": 12.28,
+          "text": "妞",
+          "probability": 0.786467
+        },
+        {
+          "start": 12.28,
+          "end": 12.46,
+          "text": "和",
+          "probability": 0.980881
+        },
+        {
+          "start": 12.46,
+          "end": 12.64,
+          "text": "节",
+          "probability": 0.92908
+        },
+        {
+          "start": 12.64,
+          "end": 12.82,
+          "text": "点",
+          "probability": 0.995667
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 12.82,
+      "end": 16.06,
+      "text": "这样做的好处是普通人可以很快上手",
+      "words": [
+        {
+          "start": 12.82,
+          "end": 13.54,
+          "text": "这样",
+          "probability": 0.985016
+        },
+        {
+          "start": 13.54,
+          "end": 13.74,
+          "text": "做",
+          "probability": 0.998768
+        },
+        {
+          "start": 13.74,
+          "end": 13.86,
+          "text": "的",
+          "probability": 0.931447
+        },
+        {
+          "start": 13.86,
+          "end": 14.04,
+          "text": "好",
+          "probability": 0.996973
+        },
+        {
+          "start": 14.04,
+          "end": 14.3,
+          "text": "处",
+          "probability": 0.999741
+        },
+        {
+          "start": 14.3,
+          "end": 14.8,
+          "text": "是",
+          "probability": 0.901192
+        },
+        {
+          "start": 14.8,
+          "end": 15.0,
+          "text": "普",
+          "probability": 0.99237
+        },
+        {
+          "start": 15.0,
+          "end": 15.1,
+          "text": "通",
+          "probability": 0.998999
+        },
+        {
+          "start": 15.1,
+          "end": 15.2,
+          "text": "人",
+          "probability": 0.999209
+        },
+        {
+          "start": 15.2,
+          "end": 15.38,
+          "text": "可以",
+          "probability": 0.99265
+        },
+        {
+          "start": 15.38,
+          "end": 15.52,
+          "text": "很",
+          "probability": 0.996244
+        },
+        {
+          "start": 15.52,
+          "end": 15.66,
+          "text": "快",
+          "probability": 0.997703
+        },
+        {
+          "start": 15.66,
+          "end": 15.88,
+          "text": "上",
+          "probability": 0.996311
+        },
+        {
+          "start": 15.88,
+          "end": 16.06,
+          "text": "手",
+          "probability": 0.999252
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 16.06,
+      "end": 17.18,
+      "text": "但问题也在这里",
+      "words": [
+        {
+          "start": 16.06,
+          "end": 16.26,
+          "text": "但",
+          "probability": 0.892816
+        },
+        {
+          "start": 16.26,
+          "end": 16.5,
+          "text": "问题",
+          "probability": 0.998607
+        },
+        {
+          "start": 16.5,
+          "end": 16.72,
+          "text": "也",
+          "probability": 0.974136
+        },
+        {
+          "start": 16.72,
+          "end": 16.88,
+          "text": "在",
+          "probability": 0.998727
+        },
+        {
+          "start": 16.88,
+          "end": 17.18,
+          "text": "这里",
+          "probability": 0.997755
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 17.18,
+      "end": 18.72,
+      "text": "很多人会拖拽节点",
+      "words": [
+        {
+          "start": 17.18,
+          "end": 17.56,
+          "text": "很多",
+          "probability": 0.887596
+        },
+        {
+          "start": 17.56,
+          "end": 17.76,
+          "text": "人",
+          "probability": 0.99937
+        },
+        {
+          "start": 17.76,
+          "end": 17.88,
+          "text": "会",
+          "probability": 0.995454
+        },
+        {
+          "start": 17.88,
+          "end": 18.08,
+          "text": "拖",
+          "probability": 0.832383
+        },
+        {
+          "start": 18.08,
+          "end": 18.22,
+          "text": "拽",
+          "probability": 0.962966
+        },
+        {
+          "start": 18.22,
+          "end": 18.46,
+          "text": "节",
+          "probability": 0.996333
+        },
+        {
+          "start": 18.46,
+          "end": 18.72,
+          "text": "点",
+          "probability": 0.999054
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 18.72,
+      "end": 20.82,
+      "text": "就以为自己已经懂了系统架构",
+      "words": [
+        {
+          "start": 18.72,
+          "end": 19.02,
+          "text": "就",
+          "probability": 0.94368
+        },
+        {
+          "start": 19.02,
+          "end": 19.18,
+          "text": "以",
+          "probability": 0.993045
+        },
+        {
+          "start": 19.18,
+          "end": 19.26,
+          "text": "为",
+          "probability": 0.9994
+        },
+        {
+          "start": 19.26,
+          "end": 19.42,
+          "text": "自己",
+          "probability": 0.995779
+        },
+        {
+          "start": 19.42,
+          "end": 19.7,
+          "text": "已经",
+          "probability": 0.871637
+        },
+        {
+          "start": 19.7,
+          "end": 19.9,
+          "text": "懂",
+          "probability": 0.997937
+        },
+        {
+          "start": 19.9,
+          "end": 20.08,
+          "text": "了",
+          "probability": 0.446745
+        },
+        {
+          "start": 20.08,
+          "end": 20.28,
+          "text": "系",
+          "probability": 0.996754
+        },
+        {
+          "start": 20.28,
+          "end": 20.4,
+          "text": "统",
+          "probability": 0.998813
+        },
+        {
+          "start": 20.4,
+          "end": 20.6,
+          "text": "架",
+          "probability": 0.978681
+        },
+        {
+          "start": 20.6,
+          "end": 20.82,
+          "text": "构",
+          "probability": 0.998742
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 20.82,
+      "end": 22.58,
+      "text": "真正遇到爆错时",
+      "words": [
+        {
+          "start": 20.82,
+          "end": 21.5,
+          "text": "真",
+          "probability": 0.524955
+        },
+        {
+          "start": 21.5,
+          "end": 21.62,
+          "text": "正",
+          "probability": 0.981763
+        },
+        {
+          "start": 21.62,
+          "end": 21.74,
+          "text": "遇",
+          "probability": 0.992575
+        },
+        {
+          "start": 21.74,
+          "end": 21.86,
+          "text": "到",
+          "probability": 0.997949
+        },
+        {
+          "start": 21.86,
+          "end": 22.06,
+          "text": "爆",
+          "probability": 0.688773
+        },
+        {
+          "start": 22.06,
+          "end": 22.24,
+          "text": "错",
+          "probability": 0.645801
+        },
+        {
+          "start": 22.24,
+          "end": 22.58,
+          "text": "时",
+          "probability": 0.991111
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 22.58,
+      "end": 24.96,
+      "text": "你可能根本不知道问题出在哪里",
+      "words": [
+        {
+          "start": 22.58,
+          "end": 23.0,
+          "text": "你",
+          "probability": 0.882428
+        },
+        {
+          "start": 23.0,
+          "end": 23.16,
+          "text": "可能",
+          "probability": 0.971925
+        },
+        {
+          "start": 23.16,
+          "end": 23.38,
+          "text": "根",
+          "probability": 0.991975
+        },
+        {
+          "start": 23.38,
+          "end": 23.5,
+          "text": "本",
+          "probability": 0.999366
+        },
+        {
+          "start": 23.5,
+          "end": 23.78,
+          "text": "不知道",
+          "probability": 0.997255
+        },
+        {
+          "start": 23.78,
+          "end": 24.12,
+          "text": "问题",
+          "probability": 0.997455
+        },
+        {
+          "start": 24.12,
+          "end": 24.36,
+          "text": "出",
+          "probability": 0.976387
+        },
+        {
+          "start": 24.36,
+          "end": 24.48,
+          "text": "在",
+          "probability": 0.998855
+        },
+        {
+          "start": 24.48,
+          "end": 24.66,
+          "text": "哪",
+          "probability": 0.994036
+        },
+        {
+          "start": 24.66,
+          "end": 24.96,
+          "text": "里",
+          "probability": 0.99446
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 24.96,
+      "end": 27.42,
+      "text": "是模型 接口权 线数据",
+      "words": [
+        {
+          "start": 24.96,
+          "end": 25.34,
+          "text": "是",
+          "probability": 0.93861
+        },
+        {
+          "start": 25.34,
+          "end": 25.54,
+          "text": "模",
+          "probability": 0.994526
+        },
+        {
+          "start": 25.54,
+          "end": 25.88,
+          "text": "型",
+          "probability": 0.996542
+        },
+        {
+          "start": 26.22,
+          "end": 26.28,
+          "text": " 接",
+          "probability": 0.892344
+        },
+        {
+          "start": 26.28,
+          "end": 26.54,
+          "text": "口",
+          "probability": 0.99767
+        },
+        {
+          "start": 26.54,
+          "end": 26.72,
+          "text": "权",
+          "probability": 0.930865
+        },
+        {
+          "start": 26.94,
+          "end": 26.94,
+          "text": " 线",
+          "probability": 0.968259
+        },
+        {
+          "start": 26.94,
+          "end": 27.2,
+          "text": "数",
+          "probability": 0.902921
+        },
+        {
+          "start": 27.2,
+          "end": 27.42,
+          "text": "据",
+          "probability": 0.995661
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 27.42,
+      "end": 29.66,
+      "text": "还是上下有关系和状态管理",
+      "words": [
+        {
+          "start": 27.42,
+          "end": 27.58,
+          "text": "还是",
+          "probability": 0.918774
+        },
+        {
+          "start": 27.58,
+          "end": 27.86,
+          "text": "上",
+          "probability": 0.990824
+        },
+        {
+          "start": 27.86,
+          "end": 28.04,
+          "text": "下",
+          "probability": 0.997113
+        },
+        {
+          "start": 28.04,
+          "end": 28.22,
+          "text": "有",
+          "probability": 0.707845
+        },
+        {
+          "start": 28.22,
+          "end": 28.44,
+          "text": "关",
+          "probability": 0.999187
+        },
+        {
+          "start": 28.44,
+          "end": 28.72,
+          "text": "系",
+          "probability": 0.996073
+        },
+        {
+          "start": 28.72,
+          "end": 28.9,
+          "text": "和",
+          "probability": 0.922656
+        },
+        {
+          "start": 28.9,
+          "end": 29.06,
+          "text": "状",
+          "probability": 0.997309
+        },
+        {
+          "start": 29.06,
+          "end": 29.22,
+          "text": "态",
+          "probability": 0.99977
+        },
+        {
+          "start": 29.22,
+          "end": 29.44,
+          "text": "管",
+          "probability": 0.998185
+        },
+        {
+          "start": 29.44,
+          "end": 29.66,
+          "text": "理",
+          "probability": 0.999723
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 29.66,
+      "end": 31.64,
+      "text": "这才是系统真正复杂的地方",
+      "words": [
+        {
+          "start": 29.66,
+          "end": 30.08,
+          "text": "这",
+          "probability": 0.718983
+        },
+        {
+          "start": 30.08,
+          "end": 30.24,
+          "text": "才",
+          "probability": 0.997776
+        },
+        {
+          "start": 30.24,
+          "end": 30.38,
+          "text": "是",
+          "probability": 0.990375
+        },
+        {
+          "start": 30.38,
+          "end": 30.54,
+          "text": "系",
+          "probability": 0.973549
+        },
+        {
+          "start": 30.54,
+          "end": 30.7,
+          "text": "统",
+          "probability": 0.998823
+        },
+        {
+          "start": 30.7,
+          "end": 30.84,
+          "text": "真",
+          "probability": 0.980172
+        },
+        {
+          "start": 30.84,
+          "end": 30.96,
+          "text": "正",
+          "probability": 0.995189
+        },
+        {
+          "start": 30.96,
+          "end": 31.14,
+          "text": "复",
+          "probability": 0.991061
+        },
+        {
+          "start": 31.14,
+          "end": 31.32,
+          "text": "杂",
+          "probability": 0.999762
+        },
+        {
+          "start": 31.32,
+          "end": 31.42,
+          "text": "的",
+          "probability": 0.996429
+        },
+        {
+          "start": 31.42,
+          "end": 31.64,
+          "text": "地方",
+          "probability": 0.989971
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-07-22T10:57:28.512279+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-claim-source-review/v1",
+  "projectId": "batch-smoke-20260720",
+  "bindings": {
+    "sourcesSha256": "9d5420c2d88141ef4db3525f6acba5071604737746c0afdff6693a5cda70c4a1",
+    "suitabilitySha256": "87c45d93d6e501b3078fa56f2c89ea2510b808f75994c4d738559659546253fc",
+    "evidenceSha256": "1b9f5b9cf6af4ac84673caed5a845e21451fb6910f2e735b4e3e400c05936898",
+    "spokenRewriteSha256": "c2bb2cf27babde367b0a95a50ee52af666ca97638d79edd8bae9d45e10386760"
+  },
+  "status": "passed",
+  "checks": {
+    "registeredSources": true,
+    "knownClaims": true,
+    "sourceBindings": true,
+    "exactQuotes": true,
+    "sectionPolicies": true
+  },
+  "issues": [],
+  "reviewedAt": "2026-07-20T12:31:45.063Z",
+  "reviewerType": "machine-contract"
+}

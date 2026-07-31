@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 7.242254,
+    "samples": [
+      0,
+      1.2,
+      3,
+      5.6,
+      7.24
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "E:\\project\\study\\codex\\autoVideo\\experiments\\E10-style-probes\\variants-landscape\\B-magazine-collage-landscape\\B-magazine-collage-landscape.motion.json",
+    "samples": 146
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0,
+      1.2,
+      3,
+      5.6,
+      7.24
+    ],
+    "checked": 83,
+    "passed": 83
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      "snapshots\\frame-00-at-0.0s.png",
+      "snapshots\\frame-01-at-1.2s.png",
+      "snapshots\\frame-02-at-3.0s.png",
+      "snapshots\\frame-03-at-5.6s.png",
+      "snapshots\\frame-04-at-7.2s.png"
+    ],
+    "times": [
+      0,
+      1.2,
+      3,
+      5.6,
+      7.24
+    ],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.7.59",
+    "latestVersion": "0.7.59",
+    "updateAvailable": false
+  }
+}

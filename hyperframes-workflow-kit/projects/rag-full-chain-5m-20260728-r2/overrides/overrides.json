@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-overrides/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "revision": 0,
+  "createdAt": "2026-07-29T02:20:35.263Z",
+  "createdBy": "automation:sop-status-sync",
+  "approvalStatus": "not-applicable-empty",
+  "base": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f"
+    },
+    "templateLock": {
+      "path": "template-lock.json",
+      "sha256": "da73dfdb899f2384189161c1123e15b35ceebb282ce9c344854ae32c704de6ec"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "e3193c3da74e3ef6d0ae0672ca352513cc8268ce1aafff5658574d84198fe572"
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "a5f6cc8a7752b09aa626f0743a93f09a22366a2610e96e0bb7d9dbab39e6f38c"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "b741e35c878d47c1dc7d9710b8cac9704629b6785d1263347f91465b46aef827"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "50fc40f4193a6490b5a2e39a00ee88abb6d637c53b8d5a4a673a08d36be12db5"
+    }
+  },
+  "policy": {
+    "emptyMeans": "No manual overrides have been recorded.",
+    "stableTargetIdsRequired": true,
+    "invalidationReceiptRequired": true,
+    "directProductionEditsAllowed": false
+  },
+  "overrides": []
+}

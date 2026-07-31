@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "autovideo-recipe-lifecycle-assessment/v1",
+  "projectId": "E18-code-proof-probe",
+  "recipeId": "code-proof",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "readiness": {
+    "compositionPresent": true,
+    "codeProofIrPresent": true,
+    "narrationLockPresent": true,
+    "assetManifestPresent": true,
+    "sourceReceiptPresent": true,
+    "strictCheckPassed": true,
+    "renderPresent": true,
+    "renderQaPassed": true,
+    "humanReview": "pending"
+  },
+  "apply": {
+    "executed": false,
+    "reason": "Probe is awaiting user visual approval and should not be promoted automatically."
+  }
+}

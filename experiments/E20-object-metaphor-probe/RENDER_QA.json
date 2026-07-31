@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "autovideo-render-qa/v1",
+  "projectId": "E20-object-metaphor-probe",
+  "scope": "internal-review",
+  "artifact": {
+    "path": "renders/object-metaphor-probe.mp4",
+    "sha256": "8cfb3eec66985839e360bb2ccedcb11d5d27fbc086a3f75fea840534274a7bd3",
+    "sizeBytes": 1889840,
+    "durationSeconds": 8,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "fps": 30, "frames": 240},
+    "audio": {"codec": "aac", "sampleRate": 48000, "channels": 2}
+  },
+  "sourceAudio": {
+    "path": ".media/audio/voice/narration.wav",
+    "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "format": "PCM s16le, 48 kHz, mono",
+    "durationSeconds": 8,
+    "testMode": "imported-file-in/file-out; no microphone or external sound output"
+  },
+  "checks": {
+    "highQualityRenderCompleted": true,
+    "fullDecodePassed": true,
+    "audioLevelPassed": true,
+    "blackFrameScanPassed": true,
+    "strictHyperframesCheckPassed": true,
+    "renderFrameInspectionPassed": true,
+    "publicReleaseApproved": false
+  },
+  "contactSheet": {
+    "path": "review/render-qa/render-contact-sheet.png",
+    "sha256": "360f2131bffb4a9dbd0d8a8a4ab2e9a5deeb0a64bc9759d24e37375f6427adf5"
+  },
+  "humanVisualReview": null
+}

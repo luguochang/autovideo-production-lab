@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "autovideo-audio-qa/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "scope": "internal-production-technical-approval",
+  "checkedAt": "2026-07-22T12:00:15.262Z",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "audio": {
+    "path": "audio/narration.final.wav",
+    "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+    "durationSeconds": 31.807896,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "bitsPerSample": 16
+  },
+  "segmentation": {
+    "recipeMode": "batch",
+    "parts": 4,
+    "minimumDurationSeconds": 3.6571458333333333,
+    "maximumDurationSeconds": 10.425770833333333,
+    "singleModelLoad": true,
+    "seed": 7,
+    "sourceReconstructionMatchesNarrationLock": true,
+    "allPartHashesValid": true,
+    "allPartsSingleInternalUtterance": true,
+    "allPartsSingleOutputChunk": true,
+    "batchManifestHashValid": true,
+    "merge": {
+      "mode": "breath-aware",
+      "valid": true,
+      "manifestSha256": "8e932cca2d0f1768ab4e159e5fcf325363ecaa2fafb21c5bda0b9cee0e247033",
+      "receiptSha256": "a50501a2d98c34290d169737bca9480883b3f7c36995c038012d3503005da715",
+      "targetActiveVoiceGapSeconds": 0.56,
+      "gaps": [
+        {
+          "afterPartIndex": 0,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 1,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        },
+        {
+          "afterPartIndex": 2,
+          "targetActiveVoiceGapSeconds": 0.56,
+          "retainedTrailingSilenceSeconds": 0,
+          "retainedNextLeadingSilenceSeconds": 0,
+          "insertedSilenceSeconds": 0.56,
+          "actualActiveVoiceGapSeconds": 0.56
+        }
+      ]
+    }
+  },
+  "signal": {
+    "fullDecodePassed": true,
+    "integratedLufs": -16,
+    "truePeakDbfs": -1.5,
+    "meanVolumeDb": -16,
+    "maxVolumeDb": -1.5,
+    "silenceSegmentsOver0_8Seconds": 0,
+    "silenceSegments": []
+  },
+  "pacing": {
+    "status": "passed-technical-targets",
+    "leadingSilenceSeconds": 0.754417,
+    "recommendedLeadingSilenceSeconds": {
+      "minimum": 0.25,
+      "target": 0.35
+    },
+    "introWindowSeconds": 15,
+    "recommendedIntroMaximumCps": 7.5,
+    "introCueMetrics": [
+      {
+        "cueId": "cue-001",
+        "durationSeconds": 3.98,
+        "characters": 17,
+        "cps": 4.27
+      },
+      {
+        "cueId": "cue-002",
+        "durationSeconds": 8.84,
+        "characters": 55,
+        "cps": 6.22
+      },
+      {
+        "cueId": "cue-003",
+        "durationSeconds": 3.2399999999999984,
+        "characters": 18,
+        "cps": 5.56
+      }
+    ],
+    "fastIntroCues": [],
+    "warnings": [],
+    "remediation": "If listening confirms a rushed opening, regenerate the affected CosyVoice part with punctuation/pause tuning, then rebuild final WAV, alignment, captions, planning, motion and renders."
+  },
+  "alignment": {
+    "status": "passed-for-internal-subtitle-and-motion-timing",
+    "path": "audio/alignment.json",
+    "sha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e",
+    "asrEvidencePath": "audio/alignment.asr.json",
+    "asrEvidenceSha256": "6ac012a98fb7009d6a88ebcc3d4b87d87ad43ca9548164f8e123cc1c3a9fcfff",
+    "validationReport": "captions/alignment-validation.json",
+    "validationReportSha256": "26764e418d060019b263ca18f8d6134affbb99387463b15c3c54f0a3f891cf84",
+    "hashesBound": true,
+    "wordTimelineMonotonic": true,
+    "cueTimelineMonotonic": true,
+    "cueCount": 6,
+    "cueTextReconstructsNarrationLock": true,
+    "maximumCueCps": 6.513,
+    "maximumCueCpsThreshold": 15,
+    "rawAsrTranscriptPolicy": "evidence-only; downstream consumers must use alignment.cues",
+    "limitation": "Locked-text timing derived from ASR words; use WhisperX/MFA for phoneme or lip-sync precision."
+  },
+  "subtitles": {
+    "status": "generated-for-internal-review",
+    "path": "captions/narration.zh-CN.srt",
+    "sha256": "0c7bbf10a9f0be181e160d5e9313a9b6ce5d63c67f86604936f97593d7284d8a",
+    "cueCount": 6,
+    "textSource": "alignment.cues (NarrationLock exact text)",
+    "humanReviewRequiredBeforePublicRelease": true
+  },
+  "pronunciation": {
+    "autoApplied": [
+      "AI",
+      "API"
+    ],
+    "requiresListeningReview": []
+  },
+  "humanListening": {
+    "status": "not-performed",
+    "requiredBeforePublicRelease": true
+  },
+  "technicalApproval": {
+    "status": "passed",
+    "approvedFor": "internal composition, alignment, probe and review render",
+    "publicReleaseApproved": false,
+    "pacingReviewRequired": false
+  }
+}

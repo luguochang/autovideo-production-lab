@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "autovideo-pose-manifest/v1",
+  "styleId": "modern-ip-host-explainer",
+  "status": "approved",
+  "sourceRoot": "demo/persondesign/persondesign",
+  "normalization": {
+    "background": "solid-peach",
+    "requiresBackgroundRemoval": true,
+    "anchor": "eyes-and-head-top",
+    "targetHostHeightPx": 730,
+    "mirrorPolicy": "only when the scene explicitly selects host.right"
+  },
+  "transitionPolicy": {
+    "trigger": "semantic-handoff-only",
+    "maxChangesPer8Seconds": 2,
+    "opacityHandoffMs": "180-280",
+    "normalize": ["eye-line", "head-scale", "head-top", "host-zone-anchor", "bottom-crop"],
+    "animateSharedHostWrapperOnly": true,
+    "forbidRapidSwap": true
+  },
+  "poses": [
+    {
+      "id": "greet",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (1).png",
+      "sha256": "53906666df1a499e8b5b395a7e29c042140e7b583a469a28009e98ef50d2598c",
+      "dimensions": "1122x1402",
+      "use": "开场、转场、轻量承接",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "emphasis",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (2).png",
+      "sha256": "6ad9b540b165d459025c70b98b8030b0110bf83db6e14fbd70337115c57b4882",
+      "dimensions": "1122x1402",
+      "use": "单个核心词、结论强调",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "present",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+      "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780",
+      "dimensions": "1122x1402",
+      "use": "展示一个对象或两个选项",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "think",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (4).png",
+      "sha256": "167f1fdcaab9ef90c26371219987e5dda992ae79556a0ae1ea53b5f2fc8e173a",
+      "dimensions": "1122x1402",
+      "use": "提出问题、解释隐藏条件",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "encourage",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (6).png",
+      "sha256": "6a0613b91c5f9da47f6b00d725bdd789daeb6c62420b81c1fce0e6df178808eb",
+      "dimensions": "1122x1402",
+      "use": "鼓励、正向结果、行动提示",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "question",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (8).png",
+      "sha256": "e24615751116f6ed2a8cbc836d0b180ef916fcd551867d3171f3f5f094193556",
+      "dimensions": "1122x1402",
+      "use": "疑问场景；图内问号已经存在，不再叠加第二个问号",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "read",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (9).png",
+      "sha256": "d7f54247bbc18fde1fcf3bd874b26ee19e5a1d212ccfc0e36836be535489cf3a",
+      "dimensions": "1122x1402",
+      "use": "资料、证据、来源说明",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "explain",
+      "file": "ChatGPT Image 2026年7月17日 15_32_04 (10).png",
+      "sha256": "42e9970aad64fe0bb8be92f5d6c297a082c281f286bfa40c4e6434a3a55d75d5",
+      "dimensions": "1122x1402",
+      "use": "持续讲解、补充说明",
+      "mirrorAllowed": true
+    },
+    {
+      "id": "point-right",
+      "file": "ChatGPT Image 2026年7月17日 15_32_16 (9).png",
+      "sha256": "c364da9a33891ee139df5a9ef53592d814426dd3186123d9762186ad8a12f61f",
+      "dimensions": "1024x1536",
+      "use": "指向右侧信息；默认镜像后使用",
+      "mirrorAllowed": true,
+      "requiresMirrorFor": ["host.left"]
+    },
+    {
+      "id": "close",
+      "file": "ChatGPT Image 2026年7月17日 15_32_16 (10).png",
+      "sha256": "0aee211bc4a7f7230e7581cfeccc82b2b0ba715f4e8538fb8c000afdb49267e3",
+      "dimensions": "1024x1536",
+      "use": "收束、总结、结束保持",
+      "mirrorAllowed": true
+    }
+  ],
+  "receipts": [
+    {
+      "source": "demo/persondesign/persondesign/designdoc/standard.md",
+      "kind": "user-provided",
+      "license": "user-provided"
+    },
+    {
+      "source": "demo/persondesign/persondesign/designdoc/ScreenShot_2026-07-17_161127_189.png",
+      "kind": "user-provided",
+      "license": "user-provided"
+    },
+    {
+      "source": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 14_15_25.png",
+      "kind": "user-provided",
+      "license": "user-provided"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280, height=720" />
+    <title>HyperFrames Continuous Canvas Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; }
+      body { font-family: "Microsoft YaHei", system-ui, sans-serif; color: #27343b; }
+      #root { position: relative; width: 1280px; height: 720px; overflow: hidden; }
+      #paper { position: absolute; inset: 0; background: #f3e5cf; }
+      #paper::after { content: ""; position: absolute; inset: 0; opacity: .13; background-size: 100% 48px; background-image: linear-gradient(#8d806f 1px, transparent 1px); }
+      #world { position: absolute; left: 0; top: 0; width: 2100px; height: 900px; transform-origin: 0 0; }
+      .title { position: absolute; margin: 0; font-size: 46px; line-height: 1.2; letter-spacing: 0; }
+      .rule { position: absolute; width: 600px; height: 4px; background: #8d806f; transform-origin: left center; }
+      .tag { position: absolute; padding: 11px 18px; border: 2px solid #8d806f; border-radius: 3px; box-shadow: 3px 4px 0 rgba(80,65,45,.16); font-size: 28px; font-weight: 700; white-space: nowrap; }
+      .blue { background: #c9e3ec; }
+      .mint { background: #b7e5d0; }
+      .coral { background: #efb6b4; }
+      .arrow { position: absolute; font-size: 40px; color: #8d806f; }
+      #caption { position: absolute; z-index: 4; left: 150px; right: 150px; bottom: 26px; min-height: 48px; display: grid; place-items: center; padding: 7px 20px; background: rgba(39,52,59,.9); color: #fffdf8; font-size: 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1280" data-height="720">
+      <section id="canvas" class="clip" data-start="0" data-duration="12" data-track-index="1" style="position:absolute;inset:0;overflow:hidden">
+        <div id="paper"></div>
+        <div id="world" data-layout-allow-overflow>
+          <h1 id="input-title" class="title" style="left:150px;top:95px">实时语音 Agent 的输入链</h1>
+          <div id="input-rule" class="rule" style="left:150px;top:165px"></div>
+          <div id="websocket" class="tag blue" style="left:160px;top:255px">WebSocket</div>
+          <div id="arrow-1" class="arrow" style="left:355px;top:250px">→</div>
+          <div id="vad" class="tag mint" style="left:420px;top:255px">VAD 分段</div>
+          <div id="arrow-2" class="arrow" style="left:600px;top:250px">→</div>
+          <div id="asr" class="tag mint" style="left:665px;top:255px">ASR 文字</div>
+          <h1 id="output-title" data-hf-id="hf-output-title" class="title" style="left:1280px;top:105px">输出也必须是流式的</h1>
+          <div id="output-rule" class="rule" style="left:1280px;top:175px"></div>
+          <div id="llm" class="tag coral" style="left:1320px;top:275px">LLM Token</div>
+          <div id="splitter" class="tag blue" style="left:1550px;top:275px">Sentence Splitter</div>
+          <div id="tts" class="tag mint" style="left:1880px;top:275px">TTS Task</div>
+          <div id="summary" style="position:absolute;left:1410px;top:450px;font-size:42px;font-weight:900">边生成 → 边分句 → 边播放</div>
+        </div>
+        <div id="caption">同一画板上的对象持续存在，讲解过程只改变它们的位置、大小和强调状态。</div>
+      </section>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#input-title", { y: 24, opacity: 0, duration: .55, ease: "power3.out" }, .2)
+        .from("#input-rule", { scaleX: 0, duration: .5, ease: "power2.out" }, .35)
+        .from(["#websocket", "#vad", "#asr"], { y: 26, opacity: 0, duration: .5, stagger: .65, ease: "back.out(1.25)" }, 1)
+        .from(["#arrow-1", "#arrow-2"], { opacity: 0, scale: .7, duration: .35, stagger: .65, ease: "power2.out" }, 1.45)
+        .to("#world", { x: -850, y: 15, scale: .9, duration: 1.7, ease: "power3.inOut" }, 5.1)
+        .to(["#input-title", "#input-rule", "#websocket", "#vad", "#asr", "#arrow-1", "#arrow-2"], { scale: .72, duration: 1.3, ease: "power3.inOut", transformOrigin: "left top" }, 5.2)
+        .from("#output-title", { y: 24, opacity: 0, duration: .55, ease: "power3.out", immediateRender: false }, 6.2)
+        .from("#output-rule", { scaleX: 0, duration: .5, ease: "power2.out", immediateRender: false }, 6.35)
+        .from(["#llm", "#splitter", "#tts"], { y: 26, opacity: 0, duration: .5, stagger: .65, ease: "back.out(1.2)", immediateRender: false }, 7)
+        .from("#summary", { y: 28, opacity: 0, duration: .7, ease: "power3.out", immediateRender: false }, 9.4);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

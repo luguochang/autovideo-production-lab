@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "autovideo-voice-candidate/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "candidateId": "candidate-003",
+  "role": "generated",
+  "selectable": true,
+  "generatedAt": "2026-07-22T09:28:46.520Z",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "audio": {
+    "path": "audio/voice-candidates/candidate-003/narration.candidate.wav",
+    "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+  },
+  "recipe": {
+    "path": "audio/voice-candidates/candidate-003/voice.candidate.recipe.json",
+    "sha256": "7237e9b29afa898602e92ab24026dae50fd8ffd676ac6efe92e435d5c3888a26"
+  },
+  "pronunciation": {
+    "path": "input/pronunciation.effective.json",
+    "sha256": "f750463416837f3d0f914873b9ffc44ef4c4fcd2b8728c6f90902440ea38706e"
+  },
+  "pronunciationApproval": {
+    "path": "qa/pronunciation-approval.json",
+    "sha256": "2766d429bd3a3e389f6810a171cdd01710c18d4998d38627bf8066cf585c8e48"
+  },
+  "technicalQa": {
+    "status": "passed",
+    "durationSeconds": 31.807896,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "fullDecodePassed": true,
+    "integratedLufs": -16,
+    "truePeakDbfs": -1.5,
+    "maxVolumeDb": -1.5,
+    "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+  },
+  "selectionBlocker": null
+}

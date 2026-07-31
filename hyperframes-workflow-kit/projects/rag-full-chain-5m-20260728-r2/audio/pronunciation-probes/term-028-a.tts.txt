@@ -1,0 +1,1 @@
+pgvector 的优势是复用 PostgreSQL 的事务和联表能力；Milvus 面向分布式扩展

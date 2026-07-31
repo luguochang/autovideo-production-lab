@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "autovideo-narration-slice/v1",
+  "source": "demo/demoText.txt",
+  "sourceSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "sourceNarration": "experiments/E08-demo-candidates/shared/narration.json",
+  "voice": "zh-CN-YunxiNeural",
+  "rate": 1.08,
+  "sourceStart": 57.0486088,
+  "sourceEnd": 64.29086274615385,
+  "duration": 7.242254,
+  "text": "第一，平台把系统的复杂性给隐藏起来。低代码、无代码、AI平台、工作流工具，",
+  "audio": "narration-slice.wav"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-motion-probe-canonicalization-receipt/v1",
+  "projectId": "E18-code-proof-probe",
+  "recipeId": "code-proof",
+  "recipeVersion": "1.0.0",
+  "recipeDefinitionSha256": "81c5952915d0cf80491934de2b9577d6acd26c432bf3434630497cf0ff0f159d",
+  "canonicalizer": "tools/motion-recipe-lifecycle/canonicalize-probe.mjs",
+  "inputs": {
+    "config": {
+      "path": "experiments/E18-code-proof-probe/probe-canonicalization.json",
+      "sha256": "1f5be7838d187f5bcd71e4ae9378b962b41eb3b3c48bbe97a92f0a4a123bb26c"
+    },
+    "narrationLock": {
+      "path": "experiments/E18-code-proof-probe/NarrationLock.json",
+      "sha256": "94fc95ce2b07dbbb2eb7745e2bc4856d209ffcfdc9b5df98bd45a1ad3ed141fa"
+    },
+    "invariantAudit": {
+      "path": "experiments/E18-code-proof-probe/INVARIANT_AUDIT.json",
+      "sha256": "4cbf92a9442345d33d925168b8dd7dd3f1caef9ae0c8009fb0d1a9a7e6e5e749"
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E18-code-proof-probe/AssetManifest.json",
+      "sha256": "0453c1989a8fc1dece06be7ef8fb629a788bd4e5afd4d203483fcbd02b06cd70"
+    },
+    "strictCheck": {
+      "path": "experiments/E18-code-proof-probe/check.strict.log",
+      "sha256": "59ba3e55e762b23b0bf945fa6d48844af4c16ed4e5a35a844c6333493ec7bb70"
+    },
+    "render": {
+      "path": "experiments/E18-code-proof-probe/renders/code-proof-probe.mp4",
+      "sha256": "52d780dcda1b4914160f01e00ea7b7334b7d651cf5654d455703104f8b2fe061"
+    }
+  },
+  "humanReviewInvented": false,
+  "lifecycleMutationApplied": false,
+  "evidence": {
+    "path": "experiments/E18-code-proof-probe/lifecycle-evidence.draft.json",
+    "sha256": "362f47fcd959ed2a0e76010e964fb1e38412188d2feaf2d4c2506842e9ec03c9"
+  }
+}

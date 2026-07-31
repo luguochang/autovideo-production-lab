@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "autovideo-visual-review/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "status": "passed-internal-sample-review",
+  "reviewedBy": "codex-autonomous-internal-review",
+  "reviewScope": "HyperFrames strict check plus one midpoint frame for every one of 14 scenes and Studio timeline load verification.",
+  "checkedAt": "2026-07-19T05:19:32.726Z",
+  "compositionDigest": "511dabbb70c3a7cff499b9084e3726fb47859fb254c1d7a197c2d8acac8c6b75",
+  "checks": {
+    "hostContentCaptionCollision": "passed",
+    "textOverflow": "passed",
+    "chineseReadability": "passed-at-sampled-frames",
+    "exactSourceVersusGeneratedSummaryLabels": "passed",
+    "unverifiedNumericClaimsNotCharted": "passed",
+    "terminalFrameReadability": "passed-at-sampled-frames",
+    "studioTimelineLoaded": {
+      "status": "passed",
+      "scenes": 14,
+      "captions": 46,
+      "durationSeconds": 239.328167
+    }
+  },
+  "frames": [
+    {
+      "path": "qa/composition-snapshots/frame-00-at-2.39s.png",
+      "sha256": "885d5bc8c9a28d8487dbfd4e69714c6e90f16733d1fcaf187ff01db7cfeeceb4",
+      "size": 428234
+    },
+    {
+      "path": "qa/composition-snapshots/frame-01-at-9.96s.png",
+      "sha256": "d297bde949b6428d0a9d4a1821717bf018eb26b0eabe56c0f206b002d2972c44",
+      "size": 413536
+    },
+    {
+      "path": "qa/composition-snapshots/frame-02-at-21.22s.png",
+      "sha256": "ff3d8aa125282602e2ac6298c1606dfeb128df128146c41af8956e7bd19321c6",
+      "size": 399343
+    },
+    {
+      "path": "qa/composition-snapshots/frame-03-at-36.02s.png",
+      "sha256": "2364fc95374c13588f0643a65f78756b6e17d17f3fd86b69b9114dcd97cf9058",
+      "size": 412883
+    },
+    {
+      "path": "qa/composition-snapshots/frame-04-at-47.04s.png",
+      "sha256": "9d3e5ec39aad8baa5b02e9c62fff1d69d8aa9c11f669ce2850e183ecf77a8fb1",
+      "size": 415441
+    },
+    {
+      "path": "qa/composition-snapshots/frame-05-at-62.12s.png",
+      "sha256": "237ed61d6aca4a3f5d53a60a6d2603c44b42c7d054630156eedefb968ceb71cc",
+      "size": 418696
+    },
+    {
+      "path": "qa/composition-snapshots/frame-06-at-88.32s.png",
+      "sha256": "6074b11be699e849b1972e916ea98374bf6d7d3608f8a880bfd7d29585a8fa16",
+      "size": 439826
+    },
+    {
+      "path": "qa/composition-snapshots/frame-07-at-112.85s.png",
+      "sha256": "e0bf099711eae6577dcf5d08305213b293cc56c56348eb4fc76ef1e9a8b88743",
+      "size": 437446
+    },
+    {
+      "path": "qa/composition-snapshots/frame-08-at-135.62s.png",
+      "sha256": "1efa275d69ebc80e08db113f7230497aae68aa7c227bfbf2f1aaae2977605427",
+      "size": 379012
+    },
+    {
+      "path": "qa/composition-snapshots/frame-09-at-158.82s.png",
+      "sha256": "3aff8d1d6a8698f5352981ac8f687dd049b3f7d563290d75dfb0b883a48078a5",
+      "size": 402873
+    },
+    {
+      "path": "qa/composition-snapshots/frame-10-at-176.4s.png",
+      "sha256": "d6bab65f4a7a6977b1a1b3d8d0ee5bacf70cfcf2dc7b1eb7a2569b7e5be14a9a",
+      "size": 373422
+    },
+    {
+      "path": "qa/composition-snapshots/frame-11-at-187.14s.png",
+      "sha256": "10b0de933d6f120a55c7794746461e22b516719a1d7ad4608f68d5f90e8d27a4",
+      "size": 413675
+    },
+    {
+      "path": "qa/composition-snapshots/frame-12-at-203.26s.png",
+      "sha256": "ff889d50bc86671639a3f21056e87a1e8e33326480aaa6d74084886d914d1965",
+      "size": 414401
+    },
+    {
+      "path": "qa/composition-snapshots/frame-13-at-227.004s.png",
+      "sha256": "370c911f21c41c2ae18208f711d4701c9134cae54b4895e1179a8042f980acce",
+      "size": 414943
+    }
+  ],
+  "limitations": [
+    "Not a user final review.",
+    "No automated OCR engine is connected.",
+    "Full human semantic/subtitle review remains required before public release."
+  ],
+  "publicReleaseBlocked": true
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "autovideo-voice-promotion/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "transactionId": "8fce26ee-ad19-402e-86c2-d267ffc425d3",
+  "status": "committed",
+  "selectedCandidateId": "candidate-003",
+  "reviewSha256": "8e4579ba00de304481767319b154391149d6683c2ccd6addda08cd1689565b56",
+  "startedAt": "2026-07-22T09:34:05.680Z",
+  "committedAt": "2026-07-22T09:34:05.726Z",
+  "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+  "recipeSha256": "852379a8b7c9a2fc30bec53e94f309fe1cbd522098dcd36567db982baa461ae6",
+  "approvalSha256": "65840835e2d90acb27e2e1ea70a3b0efa59d5373af6b694633c6ced955491709"
+}

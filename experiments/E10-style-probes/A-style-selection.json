@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "demoText-e10-a-handdrawn-board",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "baseStyleId": "handdrawn-workflow-tutorial",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": ["flowchart-vertical", "grain-overlay"],
+  "blueprints": ["spatial-pan-stations"],
+  "motionRules": ["viewport-change", "svg-path-draw", "css-marker-patterns"],
+  "status": "draft",
+  "approvedBy": null,
+  "notes": "Seven-second continuous-board motion probe using the shared narration slice.",
+  "receipts": [
+    {"source": "demo/f1/HF_风格与动效库_分享包搭建说明 (1).md", "kind": "user-provided", "license": "unknown"},
+    {"source": "vendor/hyperframes/skills/hyperframes-animation/blueprints/spatial-pan-stations.md", "kind": "official", "license": "Apache-2.0"},
+    {"source": "vendor/hyperframes/skills/hyperframes-animation/rules", "kind": "official", "license": "Apache-2.0"}
+  ]
+}

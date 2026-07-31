@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "autovideo-semantic-sfx-plan/v1",
+  "planId": "knowledge-explainer-sparse-sfx-example",
+  "version": "1.0.0",
+  "status": "example",
+  "styleLock": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "requiredBackground": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionZone": "caption",
+    "cameraScope": "content-world-only"
+  },
+  "motionLibraryRef": {
+    "libraryId": "knowledge-explainer",
+    "version": "1.0.0",
+    "path": "style-library/motion-library/knowledge-explainer-v1.json"
+  },
+  "timelineDurationSeconds": 60,
+  "policy": {
+    "mode": "semantic-only",
+    "maxPerMinute": 6,
+    "minGapSeconds": 2.4,
+    "maxSimultaneous": 1,
+    "narrationPriority": true,
+    "allowAmbientLoops": false,
+    "allowDecorativeHits": false,
+    "assetPolicy": {
+      "resolver": "media-use",
+      "manifestPath": ".media/manifest.jsonl",
+      "pathPrefix": ".media/audio/sfx/",
+      "mediaType": "sfx",
+      "allowRemoteAtRender": false,
+      "allowUnregisteredAssets": false,
+      "requireSha256": true
+    },
+    "mix": {
+      "defaultCueGainDb": -12,
+      "narrationGainChangeDb": 0,
+      "peakDbfsMax": -6,
+      "fadeInMs": 8,
+      "fadeOutMs": 80
+    }
+  },
+  "bindings": [
+    {
+      "role": "focus-hit",
+      "intent": "short dry soft focus tick with no cinematic tail",
+      "resolutionStatus": "unresolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": null,
+      "path": null,
+      "sha256": null,
+      "provider": null,
+      "licenseReceipt": null
+    },
+    {
+      "role": "connector-draw",
+      "intent": "short restrained line draw accent without a scene whoosh",
+      "resolutionStatus": "unresolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": null,
+      "path": null,
+      "sha256": null,
+      "provider": null,
+      "licenseReceipt": null
+    },
+    {
+      "role": "state-change",
+      "intent": "quiet interface state commit click with a compact decay",
+      "resolutionStatus": "unresolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": null,
+      "path": null,
+      "sha256": null,
+      "provider": null,
+      "licenseReceipt": null
+    },
+    {
+      "role": "chapter-resolve",
+      "intent": "soft low chapter resolution chime without bass impact",
+      "resolutionStatus": "unresolved",
+      "manifestPath": ".media/manifest.jsonl",
+      "mediaType": "sfx",
+      "assetId": null,
+      "path": null,
+      "sha256": null,
+      "provider": null,
+      "licenseReceipt": null
+    }
+  ],
+  "cues": [
+    {
+      "id": "sfx-cue-001",
+      "timeSeconds": 6.2,
+      "role": "focus-hit",
+      "bindingRole": "focus-hit",
+      "motionRecipeId": "keyword-handoff",
+      "sourceCueIds": ["cue-003"],
+      "semanticEvent": "The first chapter keyword becomes the stable content anchor.",
+      "anchor": "motion-land",
+      "offsetSeconds": 0,
+      "gainDb": -13,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-002",
+      "timeSeconds": 22.4,
+      "role": "connector-draw",
+      "bindingRole": "connector-draw",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": ["cue-011"],
+      "semanticEvent": "The causal connector reaches its destination node.",
+      "anchor": "connector-complete",
+      "offsetSeconds": 0,
+      "gainDb": -15,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-003",
+      "timeSeconds": 39.8,
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": ["cue-019"],
+      "semanticEvent": "The comparison commits from the rejected state to the selected state.",
+      "anchor": "state-commit",
+      "offsetSeconds": 0,
+      "gainDb": -14,
+      "targetLayer": "content-world"
+    },
+    {
+      "id": "sfx-cue-004",
+      "timeSeconds": 56,
+      "role": "chapter-resolve",
+      "bindingRole": "chapter-resolve",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": ["cue-027"],
+      "semanticEvent": "The chapter terminal state is fully readable and held.",
+      "anchor": "chapter-terminal",
+      "offsetSeconds": 0,
+      "gainDb": -12,
+      "targetLayer": "content-world"
+    }
+  ]
+}

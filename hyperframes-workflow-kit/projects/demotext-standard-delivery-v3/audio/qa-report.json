@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "autovideo-audio-qa/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "scope": "internal-production-technical-approval",
+  "checkedAt": "2026-07-19T08:22:32.376Z",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "audio": {
+    "path": "audio/narration.final.wav",
+    "sha256": "9586d1476e1022308249bf2996776487f9059fc1e84dabe7cfbf2258c02503b9",
+    "durationSeconds": 242.904042,
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "bitsPerSample": 16
+  },
+  "segmentation": {
+    "parts": 18,
+    "minimumDurationSeconds": 6.3622708333333335,
+    "maximumDurationSeconds": 18.146395833333333,
+    "singleModelLoad": true,
+    "seed": 7,
+    "sourceReconstructionMatchesNarrationLock": true,
+    "allPartHashesValid": true,
+    "batchManifestHashValid": true
+  },
+  "signal": {
+    "fullDecodePassed": true,
+    "integratedLufs": -16.2,
+    "truePeakDbfs": -1.5,
+    "meanVolumeDb": -16.2,
+    "maxVolumeDb": -1.5,
+    "silenceSegmentsOver0_8Seconds": 0,
+    "silenceSegments": []
+  },
+  "alignment": {
+    "status": "passed-for-internal-subtitle-and-motion-timing",
+    "path": "audio/alignment.json",
+    "sha256": "8286be91146a7378625d6398b7136c090cd02d2277289c25fb9e70277cdca6de",
+    "asrEvidencePath": "audio/alignment.asr.json",
+    "asrEvidenceSha256": "229fbba40ce803ca286ff0f777353ae6e45b857f60bacf213375665349de2c7d",
+    "validationReport": "captions/alignment-validation.json",
+    "validationReportSha256": "d4ea49b3bad7ce286099c3e44b47220fa960c120e55e818f8a15deb729e5dce7",
+    "hashesBound": true,
+    "wordTimelineMonotonic": true,
+    "cueTimelineMonotonic": true,
+    "cueCount": 46,
+    "cueTextReconstructsNarrationLock": true,
+    "maximumCueCps": 9.639,
+    "maximumCueCpsThreshold": 15,
+    "rawAsrTranscriptPolicy": "evidence-only; downstream consumers must use alignment.cues",
+    "limitation": "Locked-text timing derived from ASR words; use WhisperX/MFA for phoneme or lip-sync precision."
+  },
+  "subtitles": {
+    "status": "generated-for-internal-review",
+    "path": "captions/narration.zh-CN.srt",
+    "sha256": "4d4ca9f9aa185a6a6bfb6e781ef9e03a415d54c2f2430c891e0cb26721b224bd",
+    "cueCount": 46,
+    "textSource": "alignment.cues (NarrationLock exact text)",
+    "humanReviewRequiredBeforePublicRelease": true
+  },
+  "pronunciation": {
+    "autoApplied": [
+      "AI",
+      "MCP",
+      "API",
+      "666"
+    ],
+    "requiresListeningReview": [
+      "Coze",
+      "Dify",
+      "Codex",
+      "Claude Code",
+      "Agent",
+      "Demo",
+      "Magic",
+      "Engineering",
+      "30K",
+      "Token"
+    ]
+  },
+  "humanListening": {
+    "status": "not-performed",
+    "requiredBeforePublicRelease": true
+  },
+  "technicalApproval": {
+    "status": "passed",
+    "approvedFor": "internal composition, alignment, probe and review render",
+    "publicReleaseApproved": false
+  }
+}

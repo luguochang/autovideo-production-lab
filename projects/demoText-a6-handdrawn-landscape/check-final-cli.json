@@ -1,0 +1,158 @@
+﻿{
+  "ok": true,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "pointer_events_none",
+        "severity": "info",
+        "message": "`#paper-fill::after` sets `pointer-events: none`. Elements matching this selector are harder to select in the Studio preview.",
+        "selector": "#paper-fill::after",
+        "dataAttributes": {},
+        "sourceFile": "E:\\project\\study\\codex\\autoVideo\\projects\\demoText-a6-handdrawn-landscape\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "If these elements should be selectable in the Studio, remove `pointer-events: none` or move it to a wrapper that doesn't contain editable content."
+      },
+      {
+        "code": "pointer_events_none",
+        "severity": "info",
+        "message": "`.routes` sets `pointer-events: none`. Elements matching this selector are harder to select in the Studio preview.",
+        "selector": ".routes",
+        "dataAttributes": {},
+        "sourceFile": "E:\\project\\study\\codex\\autoVideo\\projects\\demoText-a6-handdrawn-landscape\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "If these elements should be selectable in the Studio, remove `pointer-events: none` or move it to a wrapper that doesn't contain editable content."
+      },
+      {
+        "code": "pointer_events_none",
+        "severity": "info",
+        "message": "`#caption-stage` sets `pointer-events: none`. Elements matching this selector are harder to select in the Studio preview.",
+        "selector": "#caption-stage",
+        "dataAttributes": {},
+        "sourceFile": "E:\\project\\study\\codex\\autoVideo\\projects\\demoText-a6-handdrawn-landscape\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "If these elements should be selectable in the Studio, remove `pointer-events: none` or move it to a wrapper that doesn't contain editable content."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 377 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "E:\\project\\study\\codex\\autoVideo\\projects\\demoText-a6-handdrawn-landscape\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 274.394667,
+    "samples": [
+      15.244,
+      45.732,
+      76.221,
+      106.709,
+      137.197,
+      167.686,
+      198.174,
+      228.662,
+      259.151
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "E:\\project\\study\\codex\\autoVideo\\projects\\demoText-a6-handdrawn-landscape\\index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      15.244,
+      76.221,
+      137.197,
+      198.174,
+      259.151
+    ],
+    "checked": 40,
+    "passed": 40
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      "snapshots\\frame-00-at-15.2s.png",
+      "snapshots\\frame-01-at-76.2s.png",
+      "snapshots\\frame-02-at-137.2s.png",
+      "snapshots\\frame-03-at-198.2s.png",
+      "snapshots\\frame-04-at-259.2s.png"
+    ],
+    "times": [
+      15.244,
+      76.221,
+      137.197,
+      198.174,
+      259.151
+    ],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.7.59",
+    "latestVersion": "0.7.59",
+    "updateAvailable": false
+  }
+}

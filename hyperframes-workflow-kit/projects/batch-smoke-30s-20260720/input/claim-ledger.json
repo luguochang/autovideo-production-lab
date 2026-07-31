@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "autovideo-claim-ledger/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "policy": "The narration is immutable. This ledger controls visual framing and does not rewrite the narration.",
+  "claims": [
+    {
+      "id": "claim-script-001",
+      "text": "第一，平台会把系统的复杂性藏起来。低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-002",
+      "text": "这样做的好处，是普通人可以很快上手。但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。",
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    },
+    {
+      "id": "claim-script-003",
+      "text": "真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？这才是系统真正复杂的地方。",
+      "notes": "User-provided script wording. The citation proves provenance, not external factual truth."
+    }
+  ]
+}

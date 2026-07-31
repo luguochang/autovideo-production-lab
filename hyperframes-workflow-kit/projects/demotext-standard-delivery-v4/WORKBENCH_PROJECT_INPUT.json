@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "autovideo-workbench-project-input/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "sourcePath": "demo/demoText.txt",
+  "route": "script",
+  "platform": "Douyin",
+  "targetDuration": "275s",
+  "ratio": "16:9",
+  "resolution": "1920x1080",
+  "fps": 30,
+  "voiceRoute": "preset14",
+  "template": "modern-ip-host-explainer@1.0.0",
+  "palette": "light-apricot",
+  "publicationRights": "internal-only",
+  "automation": "critical-gates",
+  "targetOutcome": "Understand that assembling a workflow is not the same as operating a maintainable AI system.",
+  "notes": "Fresh V4 standard-run instance. Use V3 only as a same-narration fallback reference when an upstream planner or probe service is unavailable; record every use."
+}

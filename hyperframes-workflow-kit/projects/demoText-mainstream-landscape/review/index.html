@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>demoText · 主流横屏六风格探索</title>
+    <style>
+      :root { color-scheme: light; --bg: #e6e0d8; --ink: #201d22; --muted: #6c6567; --line: #bdb4ad; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-width: 320px; background: var(--bg); color: var(--ink); font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; letter-spacing: 0; }
+      header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px clamp(18px, 4vw, 64px); background: #211f25; color: #fff7ed; border-bottom: 3px solid #d85a70; }
+      h1 { margin: 0; font-size: 22px; line-height: 1.25; }
+      .summary { color: #e8d9d1; font-size: 13px; font-weight: 500; }
+      .final-link { color: #fff7ed; font-size: 13px; font-weight: 800; text-decoration: none; padding: 9px 12px; border: 1px solid #d85a70; border-radius: 6px; background: #5a3040; }
+      .final-link:hover { background: #71384d; }
+      .controls { display: flex; gap: 8px; }
+      button { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #96858a; border-radius: 6px; background: #342f37; color: #fff7ed; font: 800 16px/1 system-ui, sans-serif; cursor: pointer; }
+      button:hover { background: #49404a; }
+      button:disabled { opacity: .55; cursor: wait; }
+      main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; width: min(1560px, 100%); margin: 0 auto; padding: 28px clamp(18px, 4vw, 64px) 52px; }
+      article { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-top: 6px solid var(--tone); border-radius: 8px; background: #f7f2ec; box-shadow: 0 8px 18px rgba(48, 41, 40, .08); }
+      .candidate-head { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: center; gap: 12px; min-height: 74px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+      .candidate-id { color: var(--tone); font-size: 32px; font-weight: 900; line-height: 1; }
+      h2 { margin: 0; font-size: 18px; line-height: 1.3; }
+      code { color: var(--muted); font-size: 12px; }
+      .video-wrap { padding: 14px; background: #d5cbc2; }
+      video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #111; object-fit: contain; border-radius: 4px; }
+      .meta { min-height: 60px; margin: 0; padding: 12px 16px 16px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+      @media (max-width: 900px) { main { grid-template-columns: 1fr; max-width: 860px; } }
+      @media (max-width: 620px) { header { position: static; align-items: flex-start; } h1 { font-size: 17px; } .summary { display: block; margin-top: 4px; } .controls { flex: 0 0 auto; } main { gap: 18px; padding-top: 18px; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>demoText · 主流横屏六风格 <span class="summary">同一口播 / 16:9 / 20 秒探索</span></h1>
+      <div class="controls" aria-label="同步播放控制">
+        <a class="final-link" href="../production/final/demoText-mainstream-landscape.mp4" title="打开已批准的 A 风格高质量成片">A 成片</a>
+        <button id="play-all" type="button" title="静音同步播放" aria-label="静音同步播放">▶</button>
+        <button id="pause-all" type="button" title="全部暂停" aria-label="全部暂停">Ⅱ</button>
+        <button id="restart-all" type="button" title="全部重新开始" aria-label="全部重新开始">↺</button>
+        <span id="status" class="sr-only" aria-live="polite"></span>
+      </div>
+    </header>
+    <main>
+      <article style="--tone:#cc4964"><div class="candidate-head"><span class="candidate-id">A</span><div><h2>二次元贴纸讲解</h2><code>anime-sticker-explainer</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/anime-sticker-explainer.png" src="probes/anime-sticker-explainer.mp4"></video></div><p class="meta">最接近参考片：原创讲解者、彩色标签、手绘路径和持续画布。</p></article>
+      <article style="--tone:#ef5b4d"><div class="candidate-head"><span class="candidate-id">B</span><div><h2>漫画分镜爆点</h2><code>manga-panel-pop</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/manga-panel-pop.png" src="probes/manga-panel-pop.mp4"></video></div><p class="meta">漫画线框、对话气泡和冲击字，靠 punch-in 和路径建立节奏。</p></article>
+      <article style="--tone:#2b9d91"><div class="candidate-head"><span class="candidate-id">C</span><div><h2>Q版桌面直播</h2><code>chibi-desk-live</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/chibi-desk-live.png" src="probes/chibi-desk-live.mp4"></video></div><p class="meta">把讲解者放进桌面场景，应用对象和聊天气泡从环境中弹出。</p></article>
+      <article style="--tone:#d74287"><div class="candidate-head"><span class="candidate-id">D</span><div><h2>创作者贴纸快切</h2><code>creator-cutout-pop</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/creator-cutout-pop.png" src="probes/creator-cutout-pop.mp4"></video></div><p class="meta">大字、粗描边、标记线和贴纸爆点，偏短视频创作者语法。</p></article>
+      <article style="--tone:#7de0d0"><div class="candidate-head"><span class="candidate-id">E</span><div><h2>Lo-fi 二次元夜景</h2><code>lofi-anime-night</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/lofi-anime-night.png" src="probes/lofi-anime-night.mp4"></video></div><p class="meta">暖暗空间、屏幕光和轻微景深，保留信息层级但增加情绪。</p></article>
+      <article style="--tone:#3867d6"><div class="candidate-head"><span class="candidate-id">F</span><div><h2>空间漫画景深</h2><code>motion-comic-depth</code></div></div><div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/motion-comic-depth.png" src="probes/motion-comic-depth.mp4"></video></div><p class="meta">前中后景和连续路径让概念在一个宽画面里向深处展开。</p></article>
+    </main>
+    <script>
+      const videos = [...document.querySelectorAll('video')];
+      const play = document.getElementById('play-all');
+      const status = document.getElementById('status');
+      play.addEventListener('click', async () => {
+        const ended = videos.every((video) => video.ended || (video.duration && video.currentTime >= video.duration - .05));
+        const time = ended ? 0 : Math.min(...videos.map((video) => video.currentTime || 0));
+        videos.forEach((video) => { video.currentTime = time; video.muted = true; });
+        play.disabled = true;
+        const results = await Promise.allSettled(videos.map((video) => video.play()));
+        const failed = results.filter((result) => result.status === 'rejected').length;
+        status.textContent = failed ? `${failed} 个视频未能自动播放` : '六个视频已静音同步播放';
+        play.disabled = false;
+      });
+      document.getElementById('pause-all').addEventListener('click', () => videos.forEach((video) => video.pause()));
+      document.getElementById('restart-all').addEventListener('click', () => { videos.forEach((video) => { video.pause(); video.currentTime = 0; video.muted = false; }); status.textContent = '六个视频已回到开头'; });
+    </script>
+  </body>
+</html>

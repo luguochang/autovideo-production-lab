@@ -1,0 +1,12 @@
+{
+  "name": "c-editorial-data",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.59 preview",
+    "lint": "npx --yes hyperframes@0.7.59 lint",
+    "check": "npx --yes hyperframes@0.7.59 check --snapshots",
+    "keyframes": "npx --yes hyperframes@0.7.59 keyframes",
+    "render": "npx --yes hyperframes@0.7.59 render --output renders/C-editorial-data.mp4"
+  }
+}

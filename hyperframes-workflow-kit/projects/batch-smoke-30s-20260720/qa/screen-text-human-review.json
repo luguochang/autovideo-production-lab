@@ -1,0 +1,245 @@
+{
+  "schemaVersion": "autovideo-screen-text-internal-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "accepted-for-internal-only",
+  "approvalScope": "internal-autonomous-review",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "bindings": {
+    "hyperframesCheck": {
+      "path": "qa/hyperframes-check.json",
+      "sha256": "17124f4387a8ebb30c92ba3689773771912acc6886a76c9f3ac2f932ab986585"
+    },
+    "subtitleApproval": {
+      "path": "qa/subtitle-human-approval.json",
+      "sha256": "6e60b5f386ac18818b17c8776f5b05e228b367ac6c12b64ef21a25ea8e7a3b38"
+    },
+    "composition": {
+      "path": "production/hyperframes",
+      "digest": "a33228e76b3851e1d6c776460241ad71259396810c4f45794f96b01949d8957d",
+      "fileCount": 43
+    },
+    "frameSet": {
+      "path": "qa/screen-text-frame-set.json",
+      "sha256": "639286e0f986a0a2e895abf55b960c4735102111e17b25bc8170866d9c291263",
+      "digest": "ce3e974589caa19ee33c00ab6e625008041d69c68990ae3a31d074388e815f2f"
+    },
+    "frames": [
+      {
+        "id": "frame-d146433cdfd0",
+        "timeSeconds": 0,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-001"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-00-at-0.0s.png",
+        "sha256": "c3e10c85180b3668a0b752ba92c7fafa7e7deb2869e5563d7da4a1ed32c041a4"
+      },
+      {
+        "id": "frame-9dc3c83e1043",
+        "timeSeconds": 1.99,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-001"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-00-at-1.99s.png",
+        "sha256": "fe6552b8105d546a5fec7473c8e46c518bf5528cab4c1ccae26593149776ff06"
+      },
+      {
+        "id": "frame-dfb9a24a65cf",
+        "timeSeconds": 13.1,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-003"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-01-at-13.1s.png",
+        "sha256": "8bd1b559564e14d6d54a1449ca78308364f3271b3d5e1a2cb689246b47bb2c5a"
+      },
+      {
+        "id": "frame-61107a2faa52",
+        "timeSeconds": 8.4,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-002"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-01-at-8.4s.png",
+        "sha256": "7c2c0464615a9ace95ab0287337428099765db1eef86605098eab850ed181395"
+      },
+      {
+        "id": "frame-82ede7bf478b",
+        "timeSeconds": 14.44,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-003"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-02-at-14.44s.png",
+        "sha256": "3dbcf7353145e7c092d28a71199f8885569cbada96caadf87d48e5fbe8ee5011"
+      },
+      {
+        "id": "frame-0f8558479f46",
+        "timeSeconds": 16.4,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-004"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-02-at-16.4s.png",
+        "sha256": "36a3857320a99351c58b80d71b108f8e8930b9800f6b43ce1a253db3b831fa76"
+      },
+      {
+        "id": "frame-ce658af61581",
+        "timeSeconds": 18.44,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-004"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-03-at-18.44s.png",
+        "sha256": "ce579254a15427ba5d2978a0032086a26923dadd5a621c056d82a26685fd073e"
+      },
+      {
+        "id": "frame-da92167aa69e",
+        "timeSeconds": 21.4,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-005"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-03-at-21.4s.png",
+        "sha256": "64396b81e7c1b93f623a7741cffe693d8897068c87e0efd5bfdbd2eff0c9d968"
+      },
+      {
+        "id": "frame-ac1c0af41ba5",
+        "timeSeconds": 25.24,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-005"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-04-at-25.24s.png",
+        "sha256": "95e23ca08159272d1dcf4584407444258f2dd330f041973fdb8558fc294f6ee8"
+      },
+      {
+        "id": "frame-7a1f252bcca9",
+        "timeSeconds": 32.2,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [],
+        "sceneId": null,
+        "path": "production/hyperframes/snapshots/frame-04-at-32.2s.png",
+        "sha256": "0824ef2c8fcaedf40c039c2063a5fe3a250fc2edd15c6c6bd7568ca8ef9e78b2"
+      },
+      {
+        "id": "frame-72b6e226c0ea",
+        "timeSeconds": 30.734,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-006"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-05-at-30.734s.png",
+        "sha256": "95aa28a550384894c13de4b063ae96af4e47562a45e7febe97c2530dcb80247a"
+      },
+      {
+        "id": "frame-4e31efd3bc32",
+        "timeSeconds": 31.193,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-006"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-06-at-31.193s.png",
+        "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+      }
+    ],
+    "ocr": null
+  },
+  "checklist": {
+    "allReviewFramesChecked": false,
+    "subtitleSafeArea": false,
+    "noOcclusion": false,
+    "screenTextAccuracy": false,
+    "contrastAndLegibility": false,
+    "lineBreakAndOverflow": false,
+    "duplicateTextRestraint": false
+  },
+  "frames": [
+    {
+      "id": "frame-d146433cdfd0",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-9dc3c83e1043",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-dfb9a24a65cf",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-61107a2faa52",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-82ede7bf478b",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-0f8558479f46",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-ce658af61581",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-da92167aa69e",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-ac1c0af41ba5",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-7a1f252bcca9",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-72b6e226c0ea",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-4e31efd3bc32",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    }
+  ],
+  "reviewMode": "technical-only",
+  "machineAssistance": {
+    "ocrStatus": "passed",
+    "ocrAvailable": true,
+    "unresolvedCount": 0
+  },
+  "notes": "Creator requested closeout self-test before concentrated human review. Internal-only screen-text and OCR consistency simulation; no human frame review or public approval is claimed.",
+  "reviewedBy": "codex-creator-delegated",
+  "updatedAt": "2026-07-23T05:20:27.849Z",
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

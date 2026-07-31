@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-narration-lock/v1",
+  "projectId": "E16-comparison-split-probe",
+  "sourceProjectId": "persondesign-modern-host-probe",
+  "parentProbeId": "E06-keyword-handoff-probe",
+  "sourcePath": "hyperframes-workflow-kit/projects/persondesign-modern-host-probe/input/narration.txt",
+  "frozenPath": "input/narration.txt",
+  "sourceSha256": "ef5f13d308a560648d67d0470fa233932baa2062198a488b738dd235919249a3",
+  "normalizedSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+  "window": {
+    "startSeconds": 0,
+    "durationSeconds": 6,
+    "audioPath": "input/narration-window.wav",
+    "audioSha256": "cf6f008124dd10bd4f7aafe97f3b7807400fc2e3775a52bccd122b80955d33c1",
+    "derivedFromPath": "experiments/E06-keyword-handoff-probe/.media/audio/voice/voice_002.wav",
+    "derivedFromSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "cutRecipe": "ffmpeg -t 6 -c:a pcm_s16le -ar 48000 -ac 1"
+  },
+  "normalization": "UTF-8 text; CRLF converted to LF; surrounding whitespace trimmed",
+  "immutable": true
+}

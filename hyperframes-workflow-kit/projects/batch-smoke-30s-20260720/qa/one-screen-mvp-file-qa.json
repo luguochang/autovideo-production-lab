@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "autovideo-file-only-media-qa/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-28T03:20:29.430Z",
+  "generatedBy": "scripts/verify-internal-video-file.mjs",
+  "status": "passed",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "humanReviewPerformed": false,
+  "safety": {
+    "microphoneUsed": false,
+    "playbackUsed": false,
+    "soundOutputUsed": false
+  },
+  "source": {
+    "path": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+    "sha256": "166f9ca9a52158cc260a6a35c7ac03cb9c54f5929fbf28b2210d3887de2573fc",
+    "bytes": 2348323
+  },
+  "media": {
+    "durationSeconds": 32.166667,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frameCount": 965,
+    "videoCodec": "h264",
+    "pixelFormat": "yuv420p",
+    "colorSpace": "bt709",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "checks": {
+    "fullDecode": "passed",
+    "loudness": {
+      "integratedLufs": -13.2,
+      "truePeakDbfs": -1.32,
+      "loudnessRangeLu": 2.4,
+      "thresholdLufs": -23.42
+    },
+    "silenceSegments": [],
+    "blackFrames": {
+      "sampleWidth": 160,
+      "sampleHeight": 90,
+      "totalFrames": 965,
+      "darkRuns": [],
+      "blockingRuns": []
+    }
+  },
+  "contractErrors": [],
+  "notes": "File-only internal QA. No microphone, media playback, sound output, human listening, or public-release approval is claimed."
+}

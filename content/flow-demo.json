@@ -1,0 +1,569 @@
+{
+  "narration": "我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。AI也并不是你想的那么简单。我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。",
+  "audio": "flow-demo/audio.webm",
+  "duration": 1165,
+  "words": [
+    {
+      "text": "我",
+      "start": 0.097625,
+      "duration": 0.15475
+    },
+    {
+      "text": "奉劝",
+      "start": 0.252375,
+      "duration": 0.321416
+    },
+    {
+      "text": "很多",
+      "start": 0.585708,
+      "duration": 0.380958
+    },
+    {
+      "text": "人",
+      "start": 0.966666,
+      "duration": 0.273791
+    },
+    {
+      "text": "对",
+      "start": 1.514291,
+      "duration": 0.273791
+    },
+    {
+      "text": "AI",
+      "start": 1.871416,
+      "duration": 0.34525
+    },
+    {
+      "text": "技术",
+      "start": 2.228583,
+      "duration": 0.464291
+    },
+    {
+      "text": "一定",
+      "start": 2.716666,
+      "duration": 0.25
+    },
+    {
+      "text": "要",
+      "start": 2.978583,
+      "duration": 0.15475
+    },
+    {
+      "text": "有",
+      "start": 3.133333,
+      "duration": 0.130958
+    },
+    {
+      "text": "敬畏",
+      "start": 3.288083,
+      "duration": 0.309541
+    },
+    {
+      "text": "之",
+      "start": 3.609541,
+      "duration": 0.142833
+    },
+    {
+      "text": "心",
+      "start": 3.752375,
+      "duration": 0.309541
+    },
+    {
+      "text": "也",
+      "start": 4.311916,
+      "duration": 0.130958
+    },
+    {
+      "text": "希望",
+      "start": 4.45475,
+      "duration": 0.321416
+    },
+    {
+      "text": "大家",
+      "start": 4.788083,
+      "duration": 0.309541
+    },
+    {
+      "text": "擦亮",
+      "start": 5.121416,
+      "duration": 0.309541
+    },
+    {
+      "text": "双",
+      "start": 5.442875,
+      "duration": 0.21425
+    },
+    {
+      "text": "眼",
+      "start": 5.657125,
+      "duration": 0.309541
+    },
+    {
+      "text": "这个",
+      "start": 6.5,
+      "duration": 0.238083
+    },
+    {
+      "text": "市场",
+      "start": 6.75,
+      "duration": 0.357125
+    },
+    {
+      "text": "上",
+      "start": 7.107125,
+      "duration": 0.297625
+    },
+    {
+      "text": "有",
+      "start": 7.5,
+      "duration": 0.142875
+    },
+    {
+      "text": "无数",
+      "start": 7.65475,
+      "duration": 0.321416
+    },
+    {
+      "text": "所谓",
+      "start": 7.988083,
+      "duration": 0.357125
+    },
+    {
+      "text": "的",
+      "start": 8.34525,
+      "duration": 0.202375
+    },
+    {
+      "text": "AI",
+      "start": 8.642875,
+      "duration": 0.428583
+    },
+    {
+      "text": "Coze",
+      "start": 9.285708,
+      "duration": 0.476208
+    },
+    {
+      "text": "Dify",
+      "start": 9.940458,
+      "duration": 0.297625
+    },
+    {
+      "text": "社群",
+      "start": 10.25,
+      "duration": 0.559541
+    },
+    {
+      "text": "告诉",
+      "start": 11.047625,
+      "duration": 0.321416
+    },
+    {
+      "text": "你",
+      "start": 11.369041,
+      "duration": 0.130958
+    },
+    {
+      "text": "应该",
+      "start": 11.523791,
+      "duration": 0.226208
+    },
+    {
+      "text": "怎么",
+      "start": 11.761916,
+      "duration": 0.214291
+    },
+    {
+      "text": "做",
+      "start": 11.976208,
+      "duration": 0.273791
+    },
+    {
+      "text": "但是",
+      "start": 12.785708,
+      "duration": 0.285708
+    },
+    {
+      "text": "这",
+      "start": 13.09525,
+      "duration": 0.15475
+    },
+    {
+      "text": "里面",
+      "start": 13.25,
+      "duration": 0.309541
+    },
+    {
+      "text": "99%",
+      "start": 13.583333,
+      "duration": 0.9166669
+    },
+    {
+      "text": "的",
+      "start": 14.5,
+      "duration": 0.130958
+    },
+    {
+      "text": "人",
+      "start": 14.630958,
+      "duration": 0.261916
+    },
+    {
+      "text": "他",
+      "start": 15.130958,
+      "duration": 0.142875
+    },
+    {
+      "text": "并",
+      "start": 15.285708,
+      "duration": 0.190458
+    },
+    {
+      "text": "不",
+      "start": 15.476208,
+      "duration": 0.083333
+    },
+    {
+      "text": "具备",
+      "start": 15.571416,
+      "duration": 0.285708
+    },
+    {
+      "text": "开发",
+      "start": 15.880958,
+      "duration": 0.40475
+    },
+    {
+      "text": "和",
+      "start": 16.309541,
+      "duration": 0.142875
+    },
+    {
+      "text": "维护",
+      "start": 16.464291,
+      "duration": 0.428583
+    },
+    {
+      "text": "AI",
+      "start": 16.90475,
+      "duration": 0.34525
+    },
+    {
+      "text": "的",
+      "start": 17.25,
+      "duration": 0.083333
+    },
+    {
+      "text": "能力",
+      "start": 17.34525,
+      "duration": 0.416666
+    },
+    {
+      "text": "他",
+      "start": 17.976208,
+      "duration": 0.15475
+    },
+    {
+      "text": "完全",
+      "start": 18.130958,
+      "duration": 0.40475
+    },
+    {
+      "text": "看",
+      "start": 18.547625,
+      "duration": 0.178583
+    },
+    {
+      "text": "不",
+      "start": 18.726208,
+      "duration": 0.083333
+    },
+    {
+      "text": "懂底层",
+      "start": 18.809541,
+      "duration": 0.5595
+    },
+    {
+      "text": "的",
+      "start": 19.369041,
+      "duration": 0.083333
+    },
+    {
+      "text": "代码",
+      "start": 19.464291,
+      "duration": 0.464291
+    },
+    {
+      "text": "AI",
+      "start": 20.476208,
+      "duration": 0.523791
+    },
+    {
+      "text": "也",
+      "start": 21.107125,
+      "duration": 0.15475
+    },
+    {
+      "text": "并",
+      "start": 21.273791,
+      "duration": 0.178583
+    },
+    {
+      "text": "不是",
+      "start": 21.452375,
+      "duration": 0.202375
+    },
+    {
+      "text": "你",
+      "start": 21.666666,
+      "duration": 0.130958
+    },
+    {
+      "text": "想",
+      "start": 21.797625,
+      "duration": 0.202375
+    },
+    {
+      "text": "的",
+      "start": 22,
+      "duration": 0.071416
+    },
+    {
+      "text": "那么",
+      "start": 22.09525,
+      "duration": 0.178583
+    },
+    {
+      "text": "简单",
+      "start": 22.285708,
+      "duration": 0.476208
+    },
+    {
+      "text": "我",
+      "start": 23.309541,
+      "duration": 0.119041
+    },
+    {
+      "text": "看到",
+      "start": 23.440458,
+      "duration": 0.261916
+    },
+    {
+      "text": "很多",
+      "start": 23.726208,
+      "duration": 0.345208
+    },
+    {
+      "text": "人",
+      "start": 24.071416,
+      "duration": 0.142875
+    },
+    {
+      "text": "用",
+      "start": 24.226208,
+      "duration": 0.166666
+    },
+    {
+      "text": "完",
+      "start": 24.392875,
+      "duration": 0.297625
+    },
+    {
+      "text": "Codex",
+      "start": 24.773791,
+      "duration": 0.630958
+    },
+    {
+      "text": "Claude",
+      "start": 25.583333,
+      "duration": 0.321416
+    },
+    {
+      "text": "Code",
+      "start": 25.916666,
+      "duration": 0.40475
+    },
+    {
+      "text": "都",
+      "start": 26.619041,
+      "duration": 0.166666
+    },
+    {
+      "text": "觉得",
+      "start": 26.785708,
+      "duration": 0.214291
+    },
+    {
+      "text": "自己",
+      "start": 27.023791,
+      "duration": 0.261916
+    },
+    {
+      "text": "是",
+      "start": 27.285708,
+      "duration": 0.119041
+    },
+    {
+      "text": "大神",
+      "start": 27.416666,
+      "duration": 0.535708
+    },
+    {
+      "text": "就",
+      "start": 28.142875,
+      "duration": 0.119041
+    },
+    {
+      "text": "一下子",
+      "start": 28.273791,
+      "duration": 0.476208
+    },
+    {
+      "text": "支棱",
+      "start": 28.773791,
+      "duration": 0.25
+    },
+    {
+      "text": "起来",
+      "start": 29.023791,
+      "duration": 0.333333
+    },
+    {
+      "text": "了",
+      "start": 29.357125,
+      "duration": 0.190458
+    },
+    {
+      "text": "觉得",
+      "start": 29.761916,
+      "duration": 0.273791
+    },
+    {
+      "text": "自己",
+      "start": 30.047625,
+      "duration": 0.369041
+    },
+    {
+      "text": "是",
+      "start": 30.440458,
+      "duration": 0.15475
+    },
+    {
+      "text": "被",
+      "start": 30.59525,
+      "duration": 0.15475
+    },
+    {
+      "text": "掩埋",
+      "start": 30.761916,
+      "duration": 0.345208
+    },
+    {
+      "text": "的",
+      "start": 31.107125,
+      "duration": 0.09525
+    },
+    {
+      "text": "技术",
+      "start": 31.226208,
+      "duration": 0.273791
+    },
+    {
+      "text": "天才",
+      "start": 31.511916,
+      "duration": 0.571416
+    },
+    {
+      "text": "强",
+      "start": 32.273791,
+      "duration": 0.238083
+    },
+    {
+      "text": "得",
+      "start": 32.511916,
+      "duration": 0.083333
+    },
+    {
+      "text": "可怕",
+      "start": 32.607125,
+      "duration": 0.452375
+    },
+    {
+      "text": "会",
+      "start": 33.321416,
+      "duration": 0.166666
+    },
+    {
+      "text": "搭",
+      "start": 33.488083,
+      "duration": 0.142875
+    },
+    {
+      "text": "工作流",
+      "start": 33.642875,
+      "duration": 0.678583
+    },
+    {
+      "text": "会",
+      "start": 34.523791,
+      "duration": 0.15475
+    },
+    {
+      "text": "写",
+      "start": 34.690458,
+      "duration": 0.190458
+    },
+    {
+      "text": "提示词",
+      "start": 34.880958,
+      "duration": 0.690458
+    },
+    {
+      "text": "然后",
+      "start": 35.84525,
+      "duration": 0.309541
+    },
+    {
+      "text": "生成",
+      "start": 36.166666,
+      "duration": 0.333333
+    },
+    {
+      "text": "一个",
+      "start": 36.511916,
+      "duration": 0.369041
+    },
+    {
+      "text": "Agent",
+      "start": 36.976208,
+      "duration": 0.535708
+    }
+  ],
+  "sentences": [
+    {
+      "text": "我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。",
+      "start": 0.1,
+      "duration": 6.4023812
+    },
+    {
+      "text": "这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。",
+      "start": 6.4523812,
+      "duration": 6.2857145
+    },
+    {
+      "text": "但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。",
+      "start": 12.7380958,
+      "duration": 7.6904765
+    },
+    {
+      "text": "AI也并不是你想的那么简单。",
+      "start": 20.4285723,
+      "duration": 2.8333334
+    },
+    {
+      "text": "我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。",
+      "start": 23.2619058,
+      "duration": 14.7500006
+    }
+  ]
+}

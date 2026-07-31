@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "autovideo-internal-review-delivery/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "generatedAt": "2026-07-29T07:49:37.890Z",
+  "generatedBy": "scripts/finalize-internal-review.mjs",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "machine": {
+    "status": "passed"
+  },
+  "composition": {
+    "path": "production/hyperframes",
+    "digest": "dd7423319c215b63f34922063304d1eee9830dc786173bc4931778896fa8dffd",
+    "fileCount": 403,
+    "buildReceipt": {
+      "path": "production/hyperframes/data/composition-build.json",
+      "sha256": "2ae7238e3cbf34d8332d190d935515b35fb19311ee93fec4d8dbdb27d63ad927"
+    },
+    "hyperframesCheck": {
+      "path": "qa/hyperframes-check.json",
+      "sha256": "edb612b3bd0026f051d3e2d34355615a449b9ad55eb2a18df7bf08c8e4d6078f"
+    }
+  },
+  "renderReceipt": {
+    "path": "renders/rag-full-chain-5m-20260728-r2-internal-review.receipt.json",
+    "sha256": "1d513829cdf944cb14b63e23a5f0f03dc0055151d36cb7a0a720632bc0e47dbe"
+  },
+  "video": {
+    "path": "renders/rag-full-chain-5m-20260728-r2-internal-review.mp4",
+    "sha256": "87b83ea59c300473cc869d1acffa94bde0a7abba871b392465fd74506691d7b6",
+    "bytes": 189185788,
+    "durationSeconds": 1880.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frameCount": 56418,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "pixelFormat": "yuv420p",
+    "colorSpace": "bt709"
+  },
+  "cover": {
+    "path": "renders/rag-full-chain-5m-20260728-r2-cover.png",
+    "sha256": "11de8253802a071091b77fa761d398fcbf52ac48761ba1392dd386495c8e0a59",
+    "bytes": 455463
+  },
+  "ffprobe": {
+    "path": "qa/internal-review.ffprobe.json",
+    "sha256": "f817a4766a3e01c7679c9851564c19f212225203b9fb4b6098735bf80768140e"
+  },
+  "fullDecode": {
+    "status": "passed",
+    "command": "ffmpeg -v error -i <internal-review.mp4> -f null <null-device>",
+    "log": {
+      "path": "qa/internal-review.decode.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "diagnostics": {
+    "blackSegments": [],
+    "loudness": {
+      "integratedLufs": -17.8,
+      "truePeakDbfs": -3.7
+    }
+  },
+  "sampledFrames": [
+    {
+      "path": "renders/qa-frames/delivery-start.png",
+      "sha256": "11de8253802a071091b77fa761d398fcbf52ac48761ba1392dd386495c8e0a59",
+      "bytes": 455463,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "renders/qa-frames/delivery-middle.png",
+      "sha256": "e57c4a5c591ce442d6e845c1dcf86439536fa9732634ceff43c0e498e98d20cd",
+      "bytes": 481603,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "renders/qa-frames/delivery-end.png",
+      "sha256": "1f1d91d1abde98b0373ea58db3f9e5eccd6adde575dcb50098a131ff045da299",
+      "bytes": 462374,
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "humanGates": {
+    "listening": "pending",
+    "subtitleReview": "pending",
+    "screenTextReview": "pending",
+    "studioFinalReview": "pending",
+    "publicationRights": "pending"
+  },
+  "notes": "Machine-verified internal-review video. This receipt does not imply human approval or public-release clearance."
+}

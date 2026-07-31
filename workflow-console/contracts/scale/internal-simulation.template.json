@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-scale-metrics-simulation/v1",
+  "projectId": "PROJECT_ID",
+  "generatedAt": null,
+  "status": "internal-simulation-only",
+  "countsForMaturity": false,
+  "generatedBy": "codex-creator-delegated-internal-simulation",
+  "metrics": {
+    "elapsedSeconds": {"state": "derived", "value": null, "source": null, "method": null},
+    "humanMinutes": {"state": "unavailable", "value": null, "reason": "A trustworthy human timer is required."},
+    "cpuSeconds": {"state": "unavailable", "value": null, "reason": "Runner telemetry is required."},
+    "gpuSeconds": {"state": "unavailable", "value": null, "reason": "Runner telemetry is required."},
+    "modelCalls": {"state": "unavailable", "value": null, "reason": "Provider usage receipts are required."},
+    "retryCount": {"state": "derived", "value": null, "source": null, "method": null},
+    "overrideCount": {"state": "derived", "value": null, "source": null, "method": null},
+    "assetReuseCount": {"state": "derived", "value": null, "source": null, "method": null},
+    "assetCandidateCount": {"state": "derived", "value": null, "source": null, "method": null},
+    "recipeReuseCount": {"state": "derived", "value": null, "source": null, "method": null},
+    "recipeOpportunityCount": {"state": "derived", "value": null, "source": null, "method": null},
+    "reworkCount": {"state": "derived", "value": null, "source": null, "method": null}
+  },
+  "policy": {
+    "unknownIsNeverZero": true,
+    "simulationCountsAsHuman": false,
+    "microphoneUsed": false,
+    "mediaPlaybackInvoked": false
+  }
+}

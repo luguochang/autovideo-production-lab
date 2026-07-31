@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "code-proof",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E18-code-proof-probe",
+    "path": "experiments/E18-code-proof-probe",
+    "durationSeconds": 8,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E18-code-proof-probe/INVARIANT_AUDIT.json",
+        "sha256": "4cbf92a9442345d33d925168b8dd7dd3f1caef9ae0c8009fb0d1a9a7e6e5e749"
+      },
+      "passed": true,
+      "checks": {
+        "landscape16x9": true,
+        "lightApricotBackground": true,
+        "qVersionHostAssets": true,
+        "hostLeft": true,
+        "contentRight": true,
+        "captionPersistent": true,
+        "contentWorldOnlyCamera": true
+      }
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E18-code-proof-probe/AssetManifest.json",
+      "sha256": "0453c1989a8fc1dece06be7ef8fb629a788bd4e5afd4d203483fcbd02b06cd70"
+    },
+    "stills": [
+      {
+        "path": "experiments/E18-code-proof-probe/snapshots/frame-03-at-3.08s.png",
+        "sha256": "c967bea0ea93475962105388edbd39cb4c0cc4bb899da268af9deb71395a16ca"
+      },
+      {
+        "path": "experiments/E18-code-proof-probe/snapshots/frame-07-at-7.76s.png",
+        "sha256": "b3be9aefff9c8c7141aa6df631371a0f4e1f649539d40a1542f1cdd81b49b7c0"
+      },
+      {
+        "path": "experiments/E18-code-proof-probe/snapshots/contact-sheet.jpg",
+        "sha256": "10cab90b459e82611f82de88d977d61acfe671760f72639ee592313cd7c5d076"
+      }
+    ],
+    "motionProbe": {
+      "path": "experiments/E18-code-proof-probe/renders/code-proof-probe.mp4",
+      "sha256": "52d780dcda1b4914160f01e00ea7b7334b7d651cf5654d455703104f8b2fe061"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E18-code-proof-probe/check.strict.log",
+        "sha256": "59ba3e55e762b23b0bf945fa6d48844af4c16ed4e5a35a844c6333493ec7bb70"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": true,
+      "findingCount": 0,
+      "version": "0.7.64"
+    },
+    "visualReview": null,
+    "officialReuseObserved": [
+      {
+        "kind": "official-registry",
+        "id": "code-highlight",
+        "implementation": {
+          "path": "experiments/E18-code-proof-probe/references/official/code-highlight.html",
+          "sha256": "2e28ffdb11fe7b595e47488f2dfb93db514f315dd5f334c902540fcbebf2bb2f"
+        }
+      },
+      {
+        "kind": "official-motion-rule",
+        "id": "viewport-change",
+        "implementation": {
+          "path": "experiments/E18-code-proof-probe/index.html",
+          "sha256": "111fed9560a9ed19de874a6ec150b3dc74d3c5387db663417e6be1d68f3958c9"
+        }
+      }
+    ]
+  }
+}

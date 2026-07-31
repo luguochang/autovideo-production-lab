@@ -1,0 +1,12 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "registry": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry",
+  "composition": {
+    "id": "main",
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "duration": 20
+  },
+  "style": "magazine-collage-cards"
+}

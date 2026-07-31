@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-audio-handoff/v2",
+  "projectId": "demotext-standard-delivery-v1",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "status": "approved",
+  "approvedBy": "codex-technical-review",
+  "approvalScope": "technical-only",
+  "humanListeningStatus": "not-performed",
+  "attachedAt": "2026-07-18T19:22:48.022Z",
+  "provider": "cosyvoice-preset-14",
+  "rightsStatus": "needs-review",
+  "publicReleaseBlocked": true,
+  "audio": {
+    "path": "audio/narration.final.wav",
+    "source": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v1/audio/narration.final.wav",
+    "sha256": "97eb104ae0155ffb66a431c3f7aa4101c51eda708b5a8e8da3150c893d048527",
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "durationSeconds": 239.908667
+  },
+  "alignment": {
+    "path": "audio/alignment.json",
+    "source": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v1/audio/alignment.json",
+    "sha256": "d1b272b7d4246e6adb846da5830d7680efe79ee51f457577de66cd8eb886d405",
+    "entryCount": 1378,
+    "firstStartSeconds": 0,
+    "lastEndSeconds": 239.909
+  },
+  "recipe": {
+    "path": "audio/voice.recipe.json",
+    "source": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v1/audio/voice.recipe.json",
+    "sha256": "5e080e59bb8f886fa3bbcbda2c23250c22fdb553b2a5d02f83be4a248c3ae4f7"
+  },
+  "immutable": true
+}

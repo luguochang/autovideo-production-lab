@@ -1,0 +1,11 @@
+{
+  "name": "e18-code-proof-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.64 preview",
+    "check": "npx --yes hyperframes@0.7.64 check --strict --snapshots --samples 18 --at-transitions",
+    "snapshot": "npx --yes hyperframes@0.7.64 snapshot --at 0.8,1.5,2.4,3.08,4.4,5.42,6.42,7.76",
+    "render:probe": "npx --yes hyperframes@0.7.64 render --quality high --fps 30 --output renders/code-proof-probe.mp4"
+  }
+}

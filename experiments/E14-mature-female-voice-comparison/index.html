@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E14 成熟普通话女声盲听</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      --ink: #18212c;
+      --muted: #687586;
+      --line: #d8dee6;
+      --paper: #fff;
+      --bg: #f5f7f9;
+      --green: #167d58;
+      --amber: #9a5b00;
+      --blue: #175ea8;
+    }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; }
+    header { background: #17212b; color: #fff; border-bottom: 4px solid #35a36f; }
+    .shell { width: min(1240px, calc(100% - 28px)); margin: 0 auto; }
+    .header-inner { padding: 18px 0 15px; }
+    h1 { margin: 0; font-size: 24px; letter-spacing: 0; }
+    header p { margin: 4px 0 0; color: #c9d3de; }
+    main { padding: 0 0 38px; }
+    .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); background: var(--paper); }
+    .fact { padding: 12px 14px; border-right: 1px solid var(--line); }
+    .fact:last-child { border-right: 0; }
+    .fact span { display: block; color: var(--muted); font-size: 12px; }
+    .fact strong { display: block; margin-top: 2px; font-size: 15px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    [role="tablist"], .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+    button, select, input { font: inherit; }
+    button { border: 1px solid #b9c2cc; border-radius: 5px; background: #fff; color: var(--ink); padding: 7px 10px; cursor: pointer; }
+    button[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+    button:hover { border-color: #6b7785; }
+    .toggle { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+    .candidate { display: grid; grid-template-columns: 260px minmax(340px, 1fr) 350px; gap: 18px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .candidate.preferred { padding-right: 12px; padding-left: 12px; background: #eef8f3; box-shadow: inset 4px 0 0 var(--green); }
+    .candidate[hidden] { display: none; }
+    .identity h2 { margin: 0 0 4px; font-size: 16px; letter-spacing: 0; }
+    .identity p { margin: 0; color: var(--muted); }
+    .meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+    .badge { padding: 2px 6px; border-radius: 4px; background: #e7edf3; color: #405064; font-size: 12px; }
+    .badge.vc { background: #e5f4ed; color: #126746; }
+    .badge.direct { background: #e8f0fa; color: #174f87; }
+    .badge.eval { background: #fff1d7; color: var(--amber); }
+    .preferred-marker { display: inline-block; margin-left: 7px; padding: 2px 6px; border-radius: 4px; background: var(--green); color: #fff; font-size: 12px; vertical-align: 2px; }
+    .media img { display: block; width: 100%; height: 74px; object-fit: fill; border-radius: 4px; background: #121a24; }
+    audio { display: block; width: 100%; height: 36px; margin-top: 7px; }
+    .scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .scores label { color: var(--muted); font-size: 12px; }
+    .scores select, .note { width: 100%; margin-top: 3px; border: 1px solid #c8d0d9; border-radius: 4px; background: #fff; padding: 6px; }
+    .note { grid-column: 1 / -1; }
+    footer { padding: 14px 0 28px; color: var(--muted); }
+    .blind .real-name, .blind .real-detail, .blind .meta { display: none; }
+    .blind .preferred-marker { display: none; }
+    .blind .candidate.preferred { padding-right: 0; padding-left: 0; background: transparent; box-shadow: none; }
+    .blind .preference-summary { display: none; }
+    .blind .blind-summary { display: inline; }
+    .blind .blind-name { display: block; }
+    .blind-name { display: none; }
+    .blind-summary { display: none; }
+    @media (max-width: 1000px) {
+      .candidate { grid-template-columns: 220px 1fr; }
+      .scores { grid-column: 1 / -1; }
+    }
+    @media (max-width: 680px) {
+      .facts { grid-template-columns: repeat(2, 1fr); }
+      .fact:nth-child(2) { border-right: 0; }
+      .fact:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .candidate { grid-template-columns: 1fr; }
+      .scores { grid-column: auto; grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell header-inner">
+      <h1>E14 成熟普通话女声盲听</h1>
+      <p>本地开源模型 · 同一口播窗口 · 响度统一 · 原节奏与重生成分组比较</p>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="facts" aria-label="实验信息">
+      <div class="fact"><span>原始口播</span><strong>15.00 秒</strong></div>
+      <div class="fact"><span>试听响度</span><strong>-16 LUFS</strong></div>
+      <div class="fact"><span>源声中位音高</span><strong>120 Hz</strong></div>
+      <div class="fact"><span>硬件</span><strong>RTX 4060 Ti 8GB</strong></div>
+    </section>
+    <div class="toolbar">
+      <div role="tablist" aria-label="候选类型">
+        <button type="button" role="tab" aria-selected="true" data-filter="all">全部</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="source">原声</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="direct">直接生成</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="vc">保留节奏变声</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="hybrid">组合方案</button>
+      </div>
+      <div class="actions">
+        <label class="toggle"><input id="blind" type="checkbox"> 盲听</label>
+        <button id="reveal" type="button">显示身份</button>
+        <button id="export" type="button">导出评分</button>
+      </div>
+    </div>
+    <section id="candidates" aria-label="试听候选"></section>
+    <footer><span class="preference-summary">当前暂定最终使用 14；10 / 02 / 06 作为历史候选保留，尚未完成正式发布授权确认。</span><span class="blind-summary">盲听模式已隐藏当前优选状态。</span> 评分只保存在当前浏览器。01 为旧合成音色技术基线；内置或模型设计音色均只完成本地选型，正式发布前仍需核对模型卡与声音权利来源。</footer>
+  </main>
+  <script>
+    const data = [
+      {id:'00', group:'source', name:'原声基线', detail:'用户口播前 15 秒，仅统一试听响度', file:'00-original-15s.wav', wave:'00-original-15s.png', tags:['原节奏','120 Hz']},
+      {id:'01', group:'vc', name:'CosyVoice VC · 旧 Xiaoxiao 技术基线', detail:'保留原停顿与语速；旧合成参考，仅用于确认链路', file:'01-cosyvoice-vc-xiaoxiao-tech.wav', wave:'01-cosyvoice-vc-xiaoxiao-tech.png', tags:['原节奏','205 Hz','评估限定'], eval:true},
+      {id:'02', group:'direct', name:'VoxCPM2 · 成熟中低音女声', detail:'历史候选；Voice Design 直接重生成前两句，温暖克制、自然语速', file:'02-voxcpm2-mature-female.wav', wave:'02-voxcpm2-mature-female.png', tags:['历史候选','177 Hz','5.12 秒']},
+      {id:'03', group:'hybrid', name:'VoxCPM2 目标 + CosyVoice VC · 中低音', detail:'用 02 作目标音色，转换原 15 秒口播', file:'03-cosyvoice-vc-voxcpm2-target.wav', wave:'03-cosyvoice-vc-voxcpm2-target.png', tags:['原节奏','153 Hz','14.98 秒']},
+      {id:'04', group:'direct', name:'VoxCPM2 · 中音偏明亮女声', detail:'Voice Design 直接重生成前两句；用于测试更明确的女性音高', file:'04-voxcpm2-mature-female-mid.wav', wave:'04-voxcpm2-mature-female-mid.png', tags:['重生成','271 Hz','4.48 秒']},
+      {id:'05', group:'hybrid', name:'VoxCPM2 目标 + CosyVoice VC · 中音', detail:'用 04 作目标音色，转换原 15 秒口播', file:'05-cosyvoice-vc-voxcpm2-mid-target.wav', wave:'05-cosyvoice-vc-voxcpm2-mid-target.png', tags:['原节奏','211 Hz','14.98 秒']},
+      {id:'06', group:'direct', name:'CosyVoice SFT · 内置中文女', detail:'历史基线；固定音色直接重生成前两句，不保留原录音节奏', file:'06-cosyvoice-sft-zh-female.wav', wave:'06-cosyvoice-sft-zh-female.png', tags:['历史候选','193 Hz','4.39 秒'], eval:true},
+      {id:'07', group:'direct', name:'Qwen3-TTS · Serena', detail:'现成温暖柔和中文女声；官方描述偏年轻，不支持风格提示词', file:'07-qwen3-serena.wav', wave:'07-qwen3-serena.png', tags:['重生成','276 Hz','5.36 秒'], eval:true},
+      {id:'08', group:'direct', name:'Qwen3-TTS · Vivian', detail:'现成明亮略锐中文女声；官方描述偏年轻，不支持风格提示词', file:'08-qwen3-vivian.wav', wave:'08-qwen3-vivian.png', tags:['重生成','238 Hz','6.48 秒'], eval:true},
+      {id:'09', group:'direct', name:'CosyVoice SFT · 中文女 · speed 0.94', detail:'沿 06 做轻微节奏邻近测试；FP32、非流式生成', file:'09-cosyvoice-sft-zh-female-speed094.wav', wave:'09-cosyvoice-sft-zh-female-speed094.png', tags:['重生成','193 Hz','4.66 秒'], eval:true},
+      {id:'10', group:'direct', name:'CosyVoice SFT · 中文女 · speed 1.03', detail:'上一轮优选；FP32、非流式生成，未固定抽样 seed', file:'10-cosyvoice-sft-zh-female-speed103.wav', wave:'10-cosyvoice-sft-zh-female-speed103.png', tags:['历史候选','182 Hz','4.70 秒'], eval:true},
+      {id:'11', group:'direct', name:'VoxCPM2 · 成熟松弛女声 · seed 17', detail:'沿 02 强化自然交谈和放松句尾，减少播音腔', file:'11-voxcpm2-mature-relaxed-seed17.wav', wave:'11-voxcpm2-mature-relaxed-seed17.png', tags:['重生成','177 Hz','5.28 秒']},
+      {id:'12', group:'direct', name:'VoxCPM2 · 成熟松弛女声 · seed 73', detail:'与 11 使用同一成熟中低音描述，比较随机种子差异', file:'12-voxcpm2-mature-relaxed-seed73.wav', wave:'12-voxcpm2-mature-relaxed-seed73.png', tags:['重生成','169 Hz','6.56 秒']},
+      {id:'13', group:'direct', name:'Qwen3-TTS 1.7B VoiceDesign · 成熟中低音女声', detail:'按中文描述从零设计非特定真人声线；温暖克制、句尾自然收住', file:'13-qwen3-1.7b-voice-design-mature-female.wav', wave:'13-qwen3-1.7b-voice-design-mature-female.png', tags:['新模型','193 Hz','5.76 秒']},
+      {id:'14', group:'direct', name:'CosyVoice SFT · 中文女 · speed 1.03 · seed 7', detail:'当前暂定最终使用；只需提供文字，由同一内置 speaker 重新朗读', file:'14-cosyvoice-sft-zh-female-speed103-seed7.wav', wave:'14-cosyvoice-sft-zh-female-speed103-seed7.png', tags:['当前选择','187 Hz','5.11 秒'], eval:true, preferred:true},
+      {id:'15', group:'direct', name:'CosyVoice SFT · 中文女 · speed 1.03 · seed 42', detail:'与 10 使用同一 speaker 和速度，只比较可复现抽样表达', file:'15-cosyvoice-sft-zh-female-speed103-seed42.wav', wave:'15-cosyvoice-sft-zh-female-speed103-seed42.png', tags:['10 近邻','183 Hz','5.15 秒'], eval:true},
+      {id:'16', group:'direct', name:'CosyVoice SFT · 中文女 · speed 1.03 · seed 73', detail:'与 10 使用同一 speaker 和速度，只比较可复现抽样表达', file:'16-cosyvoice-sft-zh-female-speed103-seed73.wav', wave:'16-cosyvoice-sft-zh-female-speed103-seed73.png', tags:['10 近邻','191 Hz','4.89 秒'], eval:true},
+      {id:'17', group:'hybrid', name:'10 目标 + CosyVoice VC · 保留本人节奏', detail:'用 10 作为目标音色，转换原 15 秒口播；测试声线与原节奏组合', file:'17-cosyvoice-vc-favorite10-target.wav', wave:'17-cosyvoice-vc-favorite10-target.png', tags:['原节奏','161 Hz','14.98 秒'], eval:true}
+    ];
+    const root = document.getElementById('candidates');
+    const options = '<option value="">-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>';
+    root.innerHTML = data.map((item, index) => `
+      <article class="candidate${item.preferred ? ' preferred' : ''}" data-group="${item.group}" data-id="${item.id}" data-preferred="${item.preferred ? 'true' : 'false'}">
+        <div class="identity">
+          <h2 class="real-name">${item.id} · ${item.name}${item.preferred ? '<span class="preferred-marker">人工优选</span>' : ''}</h2>
+          <h2 class="blind-name">候选 ${String.fromCharCode(65 + index)}</h2>
+          <p class="real-detail">${item.detail}</p>
+          <div class="meta">${item.tags.map(tag => `<span class="badge ${item.group === 'vc' || item.group === 'hybrid' ? 'vc' : item.group === 'direct' ? 'direct' : ''} ${item.eval ? 'eval' : ''}">${tag}</span>`).join('')}</div>
+        </div>
+        <div class="media">
+          <img src="assets/waveforms/${item.wave}" alt="${item.name} 波形" data-real-alt="${item.name} 波形">
+          <audio controls preload="metadata" src="outputs/listen/${item.file}"></audio>
+        </div>
+        <div class="scores">
+          <label>自然度<select data-key="natural">${options}</select></label>
+          <label>普通话<select data-key="mandarin">${options}</select></label>
+          <label>女性感<select data-key="female">${options}</select></label>
+          <label>耐听度<select data-key="comfort">${options}</select></label>
+          <input class="note" data-key="note" type="text" placeholder="听感笔记">
+        </div>
+      </article>`).join('');
+
+    const storageKey = 'voice-comparison-e14';
+    const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    document.querySelectorAll('.candidate').forEach(row => {
+      row.querySelectorAll('[data-key]').forEach(control => {
+        control.value = saved[row.dataset.id]?.[control.dataset.key] || '';
+        control.addEventListener('change', save);
+        control.addEventListener('input', save);
+      });
+    });
+    document.querySelectorAll('audio').forEach(player => player.addEventListener('play', () => {
+      document.querySelectorAll('audio').forEach(other => { if (other !== player) other.pause(); });
+    }));
+    function save() {
+      const result = {};
+      document.querySelectorAll('.candidate').forEach(row => {
+        result[row.dataset.id] = {};
+        row.querySelectorAll('[data-key]').forEach(control => result[row.dataset.id][control.dataset.key] = control.value);
+      });
+      localStorage.setItem(storageKey, JSON.stringify(result));
+    }
+    document.querySelectorAll('[role="tab"]').forEach(tab => tab.addEventListener('click', () => {
+      document.querySelectorAll('[role="tab"]').forEach(item => item.setAttribute('aria-selected', item === tab ? 'true' : 'false'));
+      document.querySelectorAll('.candidate').forEach(row => row.hidden = tab.dataset.filter !== 'all' && row.dataset.group !== tab.dataset.filter);
+    }));
+    const blind = document.getElementById('blind');
+    function setBlindMode(enabled) {
+      document.body.classList.toggle('blind', enabled);
+      const rows = [...document.querySelectorAll('.candidate')];
+      if (enabled) {
+        for (let index = rows.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [rows[index], rows[swapIndex]] = [rows[swapIndex], rows[index]];
+        }
+      } else {
+        rows.sort((left, right) => left.dataset.id.localeCompare(right.dataset.id));
+      }
+      rows.forEach((row, index) => {
+        root.appendChild(row);
+        const label = `候选 ${String.fromCharCode(65 + index)}`;
+        row.querySelector('.blind-name').textContent = label;
+        const image = row.querySelector('img');
+        image.alt = enabled ? `${label} 波形` : image.dataset.realAlt;
+      });
+    }
+    blind.addEventListener('change', () => setBlindMode(blind.checked));
+    document.getElementById('reveal').addEventListener('click', () => { blind.checked = false; setBlindMode(false); });
+    document.getElementById('export').addEventListener('click', () => {
+      save();
+      const payload = {generated_at:new Date().toISOString(), ratings:JSON.parse(localStorage.getItem(storageKey) || '{}')};
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'}));
+      link.download = 'E14-voice-ratings.json';
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+  </script>
+</body>
+</html>

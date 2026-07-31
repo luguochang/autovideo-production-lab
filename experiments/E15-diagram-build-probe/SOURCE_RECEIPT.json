@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "autovideo-probe-source-receipt/v1",
+  "projectId": "E15-diagram-build-probe",
+  "recipe": {
+    "id": "diagram-build",
+    "version": "1.0.0",
+    "status": "candidate"
+  },
+  "composition": {
+    "path": "index.html",
+    "sha256": "5219c2a8219c75141df3e91991ba02f5fd4b150bf671ec4309b54120da39e573"
+  },
+  "sources": [
+    {
+      "id": "hyperframes-official-flowchart",
+      "kind": "official-registry-block",
+      "registryName": "flowchart",
+      "path": "vendor/hyperframes/registry/blocks/flowchart/flowchart.html",
+      "sha256": "0b3455fe4f185351ff9cf2d7a6230ea2f1440709443ed9fbf3852852c1ef603a",
+      "registryItemPath": "vendor/hyperframes/registry/blocks/flowchart/registry-item.json",
+      "registryItemSha256": "52d6d3f50e2bc50c72ec923e3c0260e2687b59c78c1ffcdce340a8ba58223424",
+      "provider": "HyperFrames official registry",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "hyperframes-official-svg-path-draw",
+      "kind": "official-motion-rule",
+      "ruleName": "svg-path-draw",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/svg-path-draw.md",
+      "sha256": "708afa7eb0843a60a62a8ca4282bb1f20e9f5058bd86b08876fa2ae90eb027ab",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0"
+    }
+  ],
+  "adaptationEvidence": [
+    {
+      "source": "hyperframes-official-flowchart",
+      "borrowedContract": "absolute-positioned nodes in one bounded canvas with inline SVG connectors and connector-before-destination-node choreography",
+      "implementationSelectors": [
+        "#graph-canvas",
+        "#graph-node-model",
+        "#graph-node-api",
+        "#graph-node-tools",
+        "#edge-model-api-base",
+        "#edge-api-tools-base"
+      ],
+      "timelineEvidence": [
+        "node model arrives at 0.62s",
+        "edge model-api draws at 1.02s and its arrow head trails at 1.38s",
+        "node api arrives at 1.48s",
+        "edge api-tools draws at 1.84s and its arrow head trails at 2.20s",
+        "node tools arrives at 2.26s"
+      ],
+      "projectSpecificChanges": [
+        "reduced the source decision tree to the three Graph IR nodes required by the narration",
+        "removed sticky-note colors, dotted canvas, cursor interaction, emoji, typing correction, and full-frame white style",
+        "restyled nodes as restrained project surfaces inside content.right",
+        "kept the Q-version host, #F2DFC7 stage, and caption rail outside the graph camera"
+      ]
+    },
+    {
+      "source": "hyperframes-official-svg-path-draw",
+      "borrowedContract": "measure every inline SVG path with getTotalLength, assign matching strokeDasharray and strokeDashoffset, then animate strokeDashoffset to zero on one paused GSAP timeline",
+      "implementationSelectors": [
+        ".connector-base",
+        ".connector-active",
+        ".connector-head-base",
+        ".connector-head-active"
+      ],
+      "timelineEvidence": [
+        "base relation uses constant-speed deterministic draws",
+        "active relation redraws model-api at 3.36s and api-tools at 4.72s",
+        "arrow heads trail their connector bodies",
+        "active paths are opacity-gated until their semantic focus beat"
+      ]
+    }
+  ],
+  "scope": {
+    "host": "fixed host.left; one existing Q-version present image",
+    "content": "all adapted diagram code and camera motion are inside content-world/content.right",
+    "caption": "persistent fixed rail outside content camera",
+    "networkRuntimeAssets": false
+  },
+  "promotion": {
+    "lifecycleApplyExecuted": false,
+    "promoted": false,
+    "humanReview": "pending"
+  }
+}

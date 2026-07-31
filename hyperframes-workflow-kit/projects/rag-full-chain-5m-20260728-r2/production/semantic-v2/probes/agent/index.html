@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920,height=1080" />
+  <title>RAG semantic probe - agent</title>
+  <script src="./assets/gsap.min.js"></script>
+  <style>
+  @font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');font-weight:100 900}
+  @font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');font-weight:400 800}
+  @font-face{font-family:JetBrainsMono;src:url('./assets/JetBrainsMono-400.woff2') format('woff2');font-weight:400}
+  @font-face{font-family:JetBrainsMono;src:url('./assets/JetBrainsMono-700.woff2') format('woff2');font-weight:700}
+  *{box-sizing:border-box}
+  html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#F2DFC7;font-family:Inter,'Noto Sans SC','Microsoft YaHei',sans-serif;color:#2A211B}
+  #root{position:relative;width:1920px;height:1080px;overflow:hidden}
+  .clip{position:absolute}
+  .stage-scene{inset:0;width:1920px;height:1080px;overflow:hidden}
+  .stage-fill{position:absolute;inset:0;background:#F2DFC7;overflow:hidden;z-index:0}
+  .stage-fill::before{content:'';position:absolute;left:0;right:0;top:126px;height:2px;background:#DCC2A3}
+  .stage-fill::after{content:'';position:absolute;left:96px;right:96px;bottom:143px;height:1px;background:#DCC2A3}
+  .stage-header{position:absolute;left:96px;right:96px;top:48px;height:64px;display:flex;align-items:center;gap:22px;letter-spacing:0;z-index:2}
+  .stage-kicker{font-family:JetBrainsMono,monospace;font-size:20px;font-weight:700;color:#2A211B}
+  .stage-header h1{margin:0;font-size:46px;line-height:1;font-weight:800;letter-spacing:0}
+  .stage-progress{margin-left:auto;display:flex;gap:8px;align-items:center}
+  .stage-progress i{display:block;width:34px;height:5px;background:#DCC2A3}
+  .stage-progress i.done{background:#496958}
+  .canvas-shell{position:absolute;left:96px;top:150px;width:1728px;height:730px;overflow:hidden;z-index:2}
+  .canvas-shell.has-host .visual-world{width:1260px}
+  .visual-world{position:absolute;left:0;top:0;width:1400px;height:610px;transform-origin:50% 50%;overflow:visible}
+  .diagram-svg{position:absolute;left:0;top:0;width:1400px;height:610px;overflow:visible}
+  .draw-path{fill:none;stroke:#496958;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  .diagram-node{position:absolute;width:230px;height:146px;display:grid;place-items:center;text-align:center;font-size:30px;font-weight:800;letter-spacing:0;color:#2A211B;background:#F2DFC7;z-index:2}
+  .diagram-node::before{content:'';position:absolute;inset:18px;border:3px solid #496958;border-radius:50%;opacity:.22}
+  .diagram-node.node-large{width:250px;height:180px;font-size:31px}
+  .pulse-core{position:relative;display:block;max-width:210px}
+  .plain-label{position:absolute;font-size:30px;font-weight:700;color:#675748;letter-spacing:0}
+  .flow-token,.agent-token,.lane-token,.rail-token{position:absolute;width:22px;height:22px;border-radius:50%;background:#A94E36;box-shadow:0 0 0 10px rgba(169,78,54,.13);z-index:1}
+  .host-figure{position:absolute;right:10px;bottom:0;width:430px;height:690px;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 16px 20px rgba(70,42,26,.14))}
+  .state-note{position:absolute;left:80px;right:80px;bottom:26px;min-height:86px;display:flex;align-items:center;font-size:62px;line-height:1.1;font-weight:800;color:#496958;letter-spacing:0;opacity:0;visibility:hidden}
+  .state-note::before{content:'';width:54px;height:6px;background:#A94E36;margin-right:22px;flex:none}
+  .caption-cue{left:96px;top:926px;width:1728px;height:92px;padding:0 30px;display:flex;align-items:center;background:rgba(251,243,231,.96);border-top:3px solid #496958;font-size:29px;font-weight:600;line-height:1.42;letter-spacing:0;overflow:hidden;z-index:200}
+  .caption-cue span{display:block;width:100%;max-height:82px;overflow:hidden}
+  .document-page{position:absolute;width:330px;height:410px;padding:34px;background:#FBF3E7;border:3px solid #2A211B;box-shadow:12px 16px 0 rgba(73,105,88,.12);transform:rotate(-2deg)}
+  .document-page strong{display:block;font-size:31px;margin-bottom:28px}
+  .document-page i{display:block;width:100%;height:7px;background:#DCC2A3;margin:15px 0}.document-page i.short{width:62%}
+  .table-grid{height:120px;margin-top:28px;border:3px solid #496958;background:linear-gradient(90deg,transparent 49%,#DCC2A3 50%,transparent 51%),linear-gradient(0deg,transparent 49%,#DCC2A3 50%,transparent 51%);background-size:50% 50%}
+  .document-badge,.fallback-mark{position:absolute;font-size:26px;font-weight:800;color:#A94E36}
+  .source-ribbon{position:absolute;width:1260px;height:134px;display:grid;grid-template-columns:repeat(4,1fr);border-top:4px solid #2A211B;border-bottom:4px solid #2A211B}
+  .source-ribbon span{display:flex;align-items:center;padding:20px;font-size:24px;font-weight:700;border-right:2px solid #DCC2A3}
+  .cut-mark{position:absolute;width:5px;height:185px;background:#A94E36;transform-origin:50% 0}
+  .chunk-piece{position:absolute;width:276px;height:150px;padding:26px 24px;border-top:6px solid #496958;background:rgba(251,243,231,.72)}
+  .chunk-piece b{display:block;font-size:35px}.chunk-piece small{display:block;margin-top:18px;font-size:22px;color:#675748}
+  .orphan-sentence,.resolved-sentence{position:absolute;font-size:47px;font-weight:800}.orphan-sentence em,.resolved-sentence em{font-style:normal;color:#A94E36;font-size:72px}
+  .question-ring{position:absolute;width:72px;height:72px;border:4px solid #A94E36;border-radius:50%;display:grid;place-items:center;font-size:48px;font-weight:900;color:#A94E36}
+  .context-prefix{position:absolute;width:500px;padding:28px 0;border-top:5px solid #496958}
+  .context-prefix small{display:block;font:700 19px JetBrainsMono;color:#A94E36;margin-bottom:15px}.context-prefix strong{font-size:34px}
+  .metric-drop{position:absolute;display:flex;align-items:center;gap:24px;font:700 42px JetBrainsMono}.metric-drop strong{color:#496958;font-size:60px}.metric-drop span{color:#675748}
+  .term-cloud{position:absolute;width:340px;display:grid;gap:42px}.term-cloud span{font-size:42px;font-weight:800;color:#2A211B}
+  .vector-axis{position:absolute;width:650px;height:470px;border-left:4px solid #2A211B;border-bottom:4px solid #2A211B}.vector-axis span{position:absolute;left:10px;top:10px}.vector-axis b{position:absolute;right:10px;bottom:10px}
+  .vector-dot{position:absolute;width:18px;height:18px;border-radius:50%;background:#496958}.vector-dot:nth-of-type(3n){background:#A94E36}.vector-label{position:absolute;font-size:26px;font-weight:700;color:#675748}
+  .db-cylinder{position:absolute;width:310px;height:280px;border:4px solid #496958;border-radius:50% / 18%;display:grid;place-items:center;text-align:center;background:rgba(251,243,231,.55)}.db-cylinder::before{content:'';position:absolute;left:-4px;right:-4px;top:42px;border-top:4px solid #496958;border-radius:50%}.db-cylinder span{font:700 42px JetBrainsMono}.db-cylinder small{font-size:23px;color:#675748}
+  .index-gate{position:absolute;width:240px;height:210px;border-left:6px solid #A94E36;padding:24px}.index-gate strong{display:block;font-size:30px;margin-bottom:20px}.index-gate span{display:inline-block;font:700 22px JetBrainsMono;margin:7px 12px 7px 0}
+  .network-svg{position:absolute;width:420px;height:440px}.network-svg path{fill:none;stroke:#DCC2A3;stroke-width:4}.network-node{fill:#496958;stroke:#FBF3E7;stroke-width:4}
+  .query-seed,.router-node{position:absolute;width:260px;height:140px;display:grid;place-items:center;font-size:35px;font-weight:800}.query-seed{border-bottom:7px solid #A94E36}.router-node{border:4px solid #496958;border-radius:50%}
+  .query-methods{position:absolute;font-size:30px;font-weight:700;color:#675748}
+  .retrieval-lane{position:absolute;left:260px;width:780px;height:76px;border-bottom:4px solid #DCC2A3}.retrieval-lane strong{position:absolute;left:0;bottom:20px;width:210px;font-size:26px;background:#F2DFC7;z-index:2}.retrieval-lane i{position:absolute;left:210px;right:0;bottom:-4px;height:4px;background:#496958}.retrieval-lane .lane-token{top:31px;width:16px;height:16px}
+  .retrieval-query{position:absolute;width:150px;height:150px;border:4px solid #A94E36;border-radius:50%;display:grid;place-items:center;font-size:32px;font-weight:800}.candidate-pool{position:absolute;width:230px;height:230px;border:5px solid #496958;border-radius:50%;display:grid;place-items:center;text-align:center}.candidate-pool strong{font-size:35px}.candidate-pool span{font-size:22px;color:#675748}
+  .rank-column{position:absolute;width:230px;padding-top:20px;border-top:6px solid #496958}.rank-column strong{display:block;font-size:30px;margin-bottom:22px}.rank-column span{display:block;font:700 25px JetBrainsMono;padding:15px 0;border-bottom:2px solid #DCC2A3}.final-rank{border-color:#A94E36}
+  .rrf-symbol{position:absolute;font-size:44px;font-weight:900;color:#A94E36}
+  .candidate-field{position:absolute;width:390px;height:420px}.candidate-dot{position:absolute;width:36px;height:36px;border-radius:50%;background:#DCC2A3}.candidate-field strong{position:absolute;bottom:-5px;left:0;font-size:30px}
+  .encoder-lens{position:absolute;width:260px;height:260px;border:10px solid #496958;border-radius:50%;display:grid;place-items:center;text-align:center;box-shadow:0 0 0 22px rgba(73,105,88,.12)}.encoder-lens strong{font-size:31px}.encoder-lens small{font:700 18px JetBrainsMono}
+  .top-results{position:absolute;display:flex;gap:13px;align-items:flex-end}.top-results span{width:52px;height:240px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;background:#496958;color:#FBF3E7;font:700 20px JetBrainsMono}.top-results span:nth-child(n+4){height:150px;background:#DCC2A3;color:#2A211B}.top-results strong{position:absolute;left:0;top:270px;width:300px;font-size:30px}
+  .agent-node{width:260px}.reject-node{position:absolute;width:280px;height:120px;display:grid;place-items:center;border-top:6px solid #A94E36;font-size:26px;font-weight:800}
+  .evidence-stack{position:absolute;width:500px;display:grid;gap:22px}.evidence-snippet{padding:22px 24px;border-left:6px solid #496958;background:rgba(251,243,231,.72)}.evidence-snippet b{display:block;font-size:24px}.evidence-snippet span{display:block;margin-top:12px;font-size:22px;color:#675748}
+  .answer-sheet{position:absolute;width:500px;height:430px;padding:34px 42px;border-top:8px solid #A94E36;background:#FBF3E7;box-shadow:14px 16px 0 rgba(73,105,88,.11)}.answer-sheet strong{font-size:46px}.answer-sheet p{font-size:27px;margin:30px 0;border-bottom:2px solid #DCC2A3;padding-bottom:12px}.answer-sheet small{font-size:21px;color:#675748}
+  .metric-bars{position:absolute;width:560px;display:grid;gap:38px}.metric-row strong{display:block;font-size:25px;margin-bottom:10px}.metric-row>i{display:block;width:540px;height:20px;background:#DCC2A3;overflow:hidden}.bar-fill{display:block;width:100%;height:100%;background:#496958;transform-origin:0 50%}
+  .trace-line{position:absolute;width:600px;display:flex;align-items:center;gap:14px}.trace-line span{font-size:24px;font-weight:800}.trace-line b{display:block;width:45px;height:4px;background:#A94E36}
+  .issue-loop{position:absolute;width:340px;height:170px;border:5px solid #496958;border-radius:50%;display:grid;place-items:center;text-align:center}.issue-loop strong{font-size:31px}.issue-loop i{font-style:normal;color:#496958;font-weight:800}.issue-loop span{font-size:22px}
+  .production-rail{position:absolute;width:1080px;height:32px}.production-rail i{position:absolute;left:0;right:0;top:14px;height:5px;background:#496958}.production-rail .rail-token{top:5px;left:0}
+  .monitor-ring{position:absolute;width:240px;height:240px;border:6px solid #A94E36;border-radius:50%;display:grid;place-items:center;text-align:center}.monitor-ring strong{font-size:38px}.monitor-ring span{font:700 21px JetBrainsMono}
+  .summary-principles{position:absolute;display:flex;gap:90px}.summary-principles strong{font-size:46px;color:#A94E36}
+</style>
+</head>
+<body>
+  <div id="root" data-composition-id="probe-agent" data-start="0" data-width="1920" data-height="1080" data-duration="8">
+    <audio id="narration" class="clip" src="./assets/audio/agent.wav" data-start="0" data-duration="8" data-track-index="50" data-volume="1"></audio>
+    <section id="scene-agent" class="clip stage-scene" data-visual="agent" data-start="0" data-duration="8" data-track-index="1">
+    <div class="stage-fill" data-layout-ignore></div>
+    <header class="stage-header" id="scene-agent-header">
+      <span class="stage-kicker">阶段 01</span>
+      <h1>智能体决策</h1>
+      <div class="stage-progress"><i class="done"></i></div>
+    </header>
+    <div class="canvas-shell ">
+      <div class="visual-world agent-world">
+        <svg class="diagram-svg" viewBox="0 0 1400 610" aria-hidden="true"><path id="scene-agent-path-0" class="draw-path" d="M250 300 C250 150 440 100 590 180" /><path id="scene-agent-path-1" class="draw-path" d="M720 180 C900 100 1100 170 1110 300" /><path id="scene-agent-path-2" class="draw-path" d="M1110 330 C1080 490 870 510 720 420" /><path id="scene-agent-path-3" class="draw-path" d="M590 420 C410 510 250 455 250 330" /><path id="scene-agent-path-4" class="draw-path" d="M590 180 C640 230 640 370 590 420" /></svg>
+        <div class="diagram-node reveal focus-target agent-node" data-focus="0" style="left:125px;top:230px"><span class="pulse-core">检索证据</span></div><div class="diagram-node reveal focus-target agent-node" data-focus="1" style="left:520px;top:80px"><span class="pulse-core">充分性评估</span></div><div class="diagram-node reveal focus-target agent-node" data-focus="2" style="left:1040px;top:230px"><span class="pulse-core">生成答案</span></div><div class="diagram-node reveal focus-target agent-node" data-focus="3" style="left:520px;top:390px"><span class="pulse-core">改写重检</span></div>
+        <div class="reject-node reveal focus-target" data-focus="4" style="left:600px;top:238px">实在不够 → 拒答</div>
+        <div class="agent-token reveal" style="left:235px;top:293px"></div>
+        <div class="plain-label reveal" style="left:430px;top:545px">最大跳数限制 · 防止死循环</div>
+      </div>
+      
+      <div class="state-note" id="scene-agent-state-0" data-at="0.8">证据充分性是分水岭</div><div class="state-note" id="scene-agent-state-1" data-at="2.6">评估 → 改写 → 重检</div><div class="state-note" id="scene-agent-state-2" data-at="4.5">生产先做轻量闭环</div><div class="state-note" id="scene-agent-state-3" data-at="6.3">支持性检查守住幻觉</div>
+    </div>
+  </section>
+    <div id="caption-0001" class="clip caption-cue" data-start="0" data-duration="4.972" data-track-index="30" data-source-cue="cue-177"><span>拿到前若干条证据，先综合证据数、相关度和引用支持率，</span></div>
+<div id="caption-0002" class="clip caption-cue" data-start="4.972" data-duration="1.148" data-track-index="30" data-source-cue="cue-177"><span>判断够不够。</span></div>
+<div id="caption-0003" class="clip caption-cue" data-start="6.12" data-duration="0.752" data-track-index="30" data-source-cue="cue-178"><span>不够就改写查询，再检索一次；</span></div>
+<div id="caption-0004" class="clip caption-cue" data-start="6.872" data-duration="1.128" data-track-index="30" data-source-cue="cue-178"><span>同时把最大跳数限制在三跳左右，防止死循环。</span></div>
+  </div>
+  <script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({paused:true});
+  document.querySelectorAll('.stage-scene').forEach((scene) => {
+    const sceneStart = Number(scene.dataset.start);
+    const sceneDuration = Number(scene.dataset.duration);
+    const scope = '#' + scene.id;
+    tl.fromTo(scope + ' .stage-header', {opacity:0,y:-20}, {opacity:1,y:0,duration:.52,ease:'power3.out'}, sceneStart + .12);
+    tl.fromTo(scope + ' .visual-world', {opacity:0,scale:.975}, {opacity:1,scale:1,duration:.72,ease:'expo.out'}, sceneStart + .22);
+    const revealItems = Array.from(scene.querySelectorAll('.reveal'));
+    revealItems.forEach((element,index) => {
+      const variants = [{x:-26,y:0,scale:1},{x:0,y:24,scale:1},{x:0,y:0,scale:.88},{x:28,y:0,scale:1}];
+      const from = variants[index % variants.length];
+      tl.fromTo(element,{opacity:0,...from},{opacity:1,x:0,y:0,scale:1,duration:.46 + (index % 3) * .08,ease:index % 2 ? 'power3.out' : 'expo.out'},sceneStart + .42 + Math.min(index * .06,.48));
+    });
+    scene.querySelectorAll('.draw-path').forEach((element,index) => {
+      const length = Math.max(1, element.getTotalLength());
+      element.style.strokeDasharray = String(length);
+      element.style.strokeDashoffset = String(length);
+      tl.to(element,{strokeDashoffset:0,duration:.58 + index * .08,ease:'power2.out'},sceneStart + .58 + index * .09);
+    });
+    scene.querySelectorAll('.cut-mark').forEach((element,index) => {
+      tl.fromTo(element,{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:.42,ease:'power3.out'},sceneStart + .7 + index * .1);
+    });
+    scene.querySelectorAll('.scatter-node').forEach((element,index) => {
+      const offsetX = ((index % 5) - 2) * 34;
+      const offsetY = ((index % 4) - 1.5) * 28;
+      tl.fromTo(element,{opacity:0,x:offsetX,y:offsetY,scale:.45},{opacity:1,x:0,y:0,scale:1,duration:.5,ease:'power3.out'},sceneStart + .7 + Math.min(index * .045,.5));
+    });
+    scene.querySelectorAll('.bar-fill').forEach((element,index) => {
+      tl.fromTo(element,{scaleX:0},{scaleX:Number(element.dataset.fill || .8),duration:.8,ease:'power2.out'},sceneStart + .75 + index * .12);
+    });
+    scene.querySelectorAll('.lane-token').forEach((element,index) => {
+      tl.fromTo(element,{opacity:0,x:-40},{opacity:1,x:560,duration:1.7 + (index % 3) * .25,ease:'power2.inOut'},sceneStart + .75 + (index % 3) * .16);
+      tl.to(element,{opacity:0,duration:.18,ease:'power1.in'},sceneStart + 2.55 + (index % 3) * .2);
+    });
+    const railToken = scene.querySelector('.rail-token');
+    if (railToken) tl.fromTo(railToken,{x:0},{x:1030,duration:2.8,ease:'power2.inOut'},sceneStart + .8);
+    const flowToken = scene.querySelector('.flow-token');
+    if (flowToken) tl.fromTo(flowToken,{x:0},{x:1160,duration:3.2,ease:'power2.inOut'},sceneStart + .85);
+    const agentToken = scene.querySelector('.agent-token');
+    if (agentToken) {
+      tl.to(agentToken,{x:400,y:-155,duration:1.0,ease:'power2.inOut'},sceneStart + 1.0);
+      tl.to(agentToken,{x:800,y:0,duration:1.0,ease:'power2.inOut'},sceneStart + 2.15);
+      tl.to(agentToken,{x:400,y:150,duration:1.0,ease:'power2.inOut'},sceneStart + 3.3);
+      tl.to(agentToken,{x:0,y:0,duration:1.0,ease:'power2.inOut'},sceneStart + 4.45);
+    }
+    const host = scene.querySelector('.host-figure');
+    if (host && sceneDuration > 4) {
+      const repeats = Math.max(0, Math.floor((sceneDuration - 1) / 4) - 1);
+      tl.to(host,{y:-6,duration:2,ease:'sine.inOut',yoyo:true,repeat:repeats},sceneStart + 1.1);
+    }
+    const states = Array.from(scene.querySelectorAll('.state-note'));
+    states.forEach((state,index) => {
+      const at = Number(state.dataset.at);
+      const nextAt = index < states.length - 1 ? Number(states[index + 1].dataset.at) : sceneStart + sceneDuration;
+      tl.set(state,{visibility:'visible'},at);
+      tl.fromTo(state,{opacity:0,x:-26},{opacity:1,x:0,duration:.38,ease:'power3.out'},at + .01);
+      if (nextAt - at > .8) {
+        tl.to(state,{opacity:0,x:18,duration:.2,ease:'power2.in'},Math.max(at + .5,nextAt - .24));
+        tl.set(state,{visibility:'hidden'},nextAt);
+      }
+      const focus = scene.querySelector('[data-focus="' + index + '"] .pulse-core') || scene.querySelector('[data-focus="' + index + '"]');
+      if (focus) {
+        tl.to(focus,{scale:1.055,color:'#496958',duration:.28,ease:'power2.out'},at + .08);
+        tl.to(focus,{scale:1,color:'#2A211B',duration:.42,ease:'power2.inOut'},at + .52);
+      }
+    });
+  });
+  window.__timelines['probe-agent'] = tl;
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo material suitability diagnosis",
+  "type": "object",
+  "required": [
+    "schemaVersion", "projectId", "sourceRegister", "assessmentScope", "status",
+    "recommendedRoute", "usableSourceIds", "preparationActions", "blockers",
+    "humanReviewRequired", "rewritePolicy", "generatedAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-material-suitability/v1"},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "sourceRegister": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "const": "sources.json"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "assessmentScope": {"type": "string", "const": "technical-baseline"},
+    "status": {"type": "string", "enum": ["suitable", "needs-preparation", "unsuitable"]},
+    "recommendedRoute": {"type": "string", "enum": ["materials", "script", "audio"]},
+    "usableSourceIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "preparationActions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sourceId", "action", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "sourceId": {"type": "string", "minLength": 1},
+          "action": {"type": "string", "enum": ["none", "extract-text", "transcribe", "ocr", "manual-review"]},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "humanReviewRequired": {"type": "boolean", "const": true},
+    "rewritePolicy": {
+      "type": "object",
+      "required": ["allowNewFacts", "requireClaimMapping", "preserveApprovedWording"],
+      "additionalProperties": false,
+      "properties": {
+        "allowNewFacts": {"type": "boolean", "const": false},
+        "requireClaimMapping": {"type": "boolean", "const": true},
+        "preserveApprovedWording": {"type": "boolean", "const": true}
+      }
+    },
+    "generatedAt": {"type": "string", "minLength": 1}
+  }
+}

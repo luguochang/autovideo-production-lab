@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "autovideo-evidence/v1",
+  "claims": [
+    {
+      "id": "claim-hidden-complexity",
+      "statement": "平台会把模型调用、API连接、向量库和工具链调度包装成按钮与节点。",
+      "status": "opinion",
+      "sourceId": "source-001-ef5f13d3",
+      "quote": "低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。",
+      "locator": "demoText-20s-excerpt.txt:1",
+      "notes": "当前只有用户提供的原稿，没有外部证据；口播中按创作者判断表达。"
+    },
+    {
+      "id": "claim-drag-drop-is-not-understanding",
+      "statement": "会拖拽节点不等于理解系统。",
+      "status": "opinion",
+      "sourceId": "source-001-ef5f13d3",
+      "quote": "坏处是很多人误以为会拖拽节点就等于懂系统。",
+      "locator": "demoText-20s-excerpt.txt:1",
+      "notes": "保留为创作者观点，不呈现为统计事实。"
+    }
+  ],
+  "gaps": [
+    {
+      "question": "哪些具体平台或工具验证了这些接口、权限和状态管理差异？",
+      "reason": "原稿未提供外部来源或可复核案例。"
+    }
+  ]
+}

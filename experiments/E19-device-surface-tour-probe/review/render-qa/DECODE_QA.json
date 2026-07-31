@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "autovideo-decode-qa/v1",
+  "projectId": "E19-device-surface-tour-probe",
+  "scope": "internal-probe-only",
+  "artifact": "renders/device-surface-tour-probe.mp4",
+  "decode": {
+    "ffprobeOk": true,
+    "video": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "displayAspectRatio": "16:9",
+      "fps": 30,
+      "frames": 240,
+      "durationSeconds": 8
+    },
+    "audio": {
+      "codec": "aac",
+      "sampleRateHz": 48000,
+      "channels": 2,
+      "durationSeconds": 8,
+      "meanVolumeDb": -28.0,
+      "maxVolumeDb": -7.6,
+      "nonSilent": true,
+      "validationMode": "file decode to null sink; no playback device"
+    },
+    "frameDecode": {
+      "ok": true,
+      "sampledFrames": [
+        "review/render-qa/frame-0.80.png",
+        "review/render-qa/frame-2.90.png",
+        "review/render-qa/frame-5.90.png",
+        "review/render-qa/frame-7.76.png"
+      ]
+    },
+    "blackFrameScan": {"ok": true, "detectedSegments": 0}
+  },
+  "checks": {
+    "strictHyperframesCheckPassed": true,
+    "microphoneUsed": false,
+    "recordingUsed": false,
+    "autoplayUsed": false,
+    "externalSoundOutputUsed": false
+  },
+  "evidence": {
+    "ffprobe": "review/render-qa/ffprobe.json",
+    "audioVolumeDetect": "review/render-qa/audio-volumedetect.log",
+    "blackDetect": "review/render-qa/blackdetect.log",
+    "strictCheck": "strict-check.log",
+    "contactSheet": "review/render-qa/render-contact-sheet.png"
+  },
+  "humanVisualReview": null,
+  "status": "pass"
+}

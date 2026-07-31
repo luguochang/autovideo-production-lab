@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "autovideo-content-regression-corpus/v1",
+  "corpusId": "zh-content-contract-seed-20260722",
+  "datasetClass": "synthetic-contract-seed",
+  "humanReviewedGoldCases": 0,
+  "cases": [
+    {
+      "caseId": "zh-ai-terms-001",
+      "casePath": "zh-ai-terms-001.case.json",
+      "caseSha256": "0fafbe6c2c7d1b217f5a294e2d41a87d87659e3d08366c6348dc27b533722124",
+      "candidatePath": "zh-ai-terms-001.candidate.json",
+      "candidateSha256": "7e7365c12e4c07342137c7a5778009cce3d3855140a56aa798d7bf795ac35d10"
+    }
+  ],
+  "policy": {
+    "syntheticCasesAuthorizeProduction": false,
+    "humanEvaluationAuthorizesNarrationLock": false
+  }
+}

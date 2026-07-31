@@ -1,0 +1,16 @@
+{
+  "duration": 8,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#host-zone", "bySec": 0.9},
+    {"kind": "appearsBy", "selector": "#evidence-visual", "bySec": 1.0},
+    {"kind": "appearsBy", "selector": "#caption-a", "bySec": 0.6},
+    {"kind": "appearsBy", "selector": "#evidence-cursor", "bySec": 3.05},
+    {"kind": "appearsBy", "selector": "#evidence-callout-body", "bySec": 3.7},
+    {"kind": "before", "a": "#evidence-cursor", "b": "#evidence-callout-body"},
+    {"kind": "staysInFrame", "selector": "#host-zone"},
+    {"kind": "staysInFrame", "selector": "#content-zone"},
+    {"kind": "staysInFrame", "selector": "#caption-shell"},
+    {"kind": "staysInFrame", "selector": "#evidence-grid"},
+    {"kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 2.4}
+  ]
+}

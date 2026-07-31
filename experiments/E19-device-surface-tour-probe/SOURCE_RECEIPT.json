@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "autovideo-probe-source-receipt/v1",
+  "projectId": "E19-device-surface-tour-probe",
+  "recipe": {
+    "id": "device-surface-tour",
+    "version": "1.0.0",
+    "status": "candidate"
+  },
+  "composition": {
+    "path": "index.html",
+    "sha256": "4e470b7e9b484a32efbf3ea2c0d036cedc2081d89993330b5c6c27f5a0ff1392"
+  },
+  "officialSources": [
+    {
+      "id": "hyperframes-official-app-showcase",
+      "kind": "official-registry-block",
+      "registryName": "app-showcase",
+      "path": "references/official/app-showcase.html",
+      "sha256": "c7e1b4d8ec2a2c1f70a8ed67a147ba5c4985074eb475d611b2bec6d921b10ade",
+      "registryItemPath": "references/official/app-showcase.registry-item.json",
+      "registryItemSha256": "c1cc7ac0ec8d959e2c27b2178d770aa9df126967f8e4f866876a9c6053d690dc",
+      "provider": "HyperFrames official registry",
+      "license": "Apache-2.0",
+      "exactVendorCopy": true,
+      "borrowedContract": "three persistent product surfaces remain spatially related while focus advances through them"
+    },
+    {
+      "id": "hyperframes-official-device-surface-showcase",
+      "kind": "official-animation-blueprint",
+      "blueprintName": "device-surface-showcase",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/blueprints/device-surface-showcase.md",
+      "sha256": "4976bbac08adad9cbc8cef08bcf12ccaeb57c0a2d5f50bb0df72649f0b17bb72",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "borrowedContract": "establish one real surface, advance through discrete interface states, and hold the final state"
+    },
+    {
+      "id": "hyperframes-official-viewport-change",
+      "kind": "official-motion-rule",
+      "ruleName": "viewport-change",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/viewport-change.md",
+      "sha256": "86600df8e88e3814fe6fad360cfe524abc65d6689b11a49d8038a7fd368914fa",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "borrowedContract": "one bounded world wrapper moves opposite the intended content camera"
+    }
+  ],
+  "localAssets": [
+    {
+      "id": "host-present-transparent",
+      "path": ".media/images/host.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "existing project-local normalized Q-version host",
+      "license": "derived from user-provided asset; publication rights not implied"
+    },
+    {
+      "id": "workbench-evidence-capture",
+      "path": ".media/images/workbench.png",
+      "sha256": "9665b8c53c9cad5cbb235fa087836e5092405ec5ab18c908cf9aee0f28c15e80",
+      "source": "input/workbench-evidence.png",
+      "license": "project-generated local UI capture; internal probe only"
+    },
+    {
+      "id": "narration-window",
+      "path": ".media/audio/voice/narration.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "source": "input/narration-window.wav",
+      "license": "project-local generated narration; internal probe only",
+      "accessPolicy": "file reference only; no microphone, recording, autoplay, playback call, or external sound output"
+    },
+    {
+      "id": "gsap-runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license"
+    }
+  ],
+  "adaptationEvidence": [
+    {
+      "source": "hyperframes-official-app-showcase",
+      "implementationSelectors": ["#surface-project", "#surface-workflow", "#surface-inspector"],
+      "projectSpecificChanges": [
+        "replaced three synthetic phone screens with three deterministic crops from one frozen real AutoVideo workbench capture",
+        "kept the cards inside content.right and reused only the multi-surface focus relationship",
+        "removed remote fonts, remote runtime assets, dark palette, device-specific claims, and all uncontrolled ambient playback"
+      ]
+    },
+    {
+      "source": "hyperframes-official-device-surface-showcase",
+      "implementationSelectors": ["#state-project", "#state-workflow", "#state-inspector", "#tour-rail"],
+      "timelineEvidence": [
+        "project/input is established first",
+        "workflow graph becomes dominant at 2.48 seconds",
+        "inspector/evidence becomes dominant at 5.46 seconds",
+        "the final evidence surface holds through 8 seconds"
+      ]
+    },
+    {
+      "source": "hyperframes-official-viewport-change",
+      "implementationSelectors": ["#surface-camera"],
+      "timelineEvidence": [
+        "camera moves from x=0 to x=-54 with scales between 1 and 1.02",
+        "all camera transforms remain descendants of #content-world",
+        "host.left and caption are siblings outside the camera wrapper"
+      ]
+    }
+  ],
+  "scope": {
+    "host": "fixed host.left; one existing Q-version present image",
+    "content": "three frozen workbench crops and all camera motion stay inside content-world/content.right",
+    "caption": "persistent fixed rail outside content camera",
+    "networkRuntimeAssets": false,
+    "microphoneOrRecording": false
+  },
+  "promotion": {
+    "lifecycleApplyExecuted": false,
+    "promoted": false,
+    "humanReview": "pending",
+    "hyperframesCheck": "passed on 0.7.67; human review still pending",
+    "render": "internal-probe-rendered; public release not approved"
+  }
+}

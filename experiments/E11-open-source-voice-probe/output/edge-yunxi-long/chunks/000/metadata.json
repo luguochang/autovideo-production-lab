@@ -1,0 +1,292 @@
+{
+  "Metadata": [
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 962910,
+        "Duration": 2546250,
+        "text": {
+          "Text": "如果",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 3509160,
+        "Duration": 1041660,
+        "text": {
+          "Text": "你",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 4666660,
+        "Duration": 1967500,
+        "text": {
+          "Text": "只是",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 6634160,
+        "Duration": 1157500,
+        "text": {
+          "Text": "把",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 8023330,
+        "Duration": 2893330,
+        "text": {
+          "Text": "提示",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 10916660,
+        "Duration": 2199160,
+        "text": {
+          "Text": "词",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 13347080,
+        "Duration": 1157500,
+        "text": {
+          "Text": "丢",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 14504580,
+        "Duration": 810000,
+        "text": {
+          "Text": "给",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 15430410,
+        "Duration": 4861250,
+        "text": {
+          "Text": "模型",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 23185000,
+        "Duration": 2199160,
+        "text": {
+          "Text": "然后",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 25500000,
+        "Duration": 2430410,
+        "text": {
+          "Text": "等待",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 28046250,
+        "Duration": 1273330,
+        "text": {
+          "Text": "一个",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 29550830,
+        "Duration": 3472080,
+        "text": {
+          "Text": "看起来",
+          "Length": 3,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 33254580,
+        "Duration": 2893330,
+        "text": {
+          "Text": "漂亮",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 36148330,
+        "Duration": 694580,
+        "text": {
+          "Text": "的",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 36958330,
+        "Duration": 3356660,
+        "text": {
+          "Text": "答案",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 43671250,
+        "Duration": 3819580,
+        "text": {
+          "Text": "视频",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 47722080,
+        "Duration": 3356660,
+        "text": {
+          "Text": "很快",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 51194580,
+        "Duration": 810000,
+        "text": {
+          "Text": "就",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 52004580,
+        "Duration": 810000,
+        "text": {
+          "Text": "会",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 52930410,
+        "Duration": 2315000,
+        "text": {
+          "Text": "变成",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "SentenceBoundary",
+      "Data": {
+        "Offset": 1000000,
+        "Duration": 67208330,
+        "text": {
+          "Text": "如果你只是把提示词丢给模型，然后等待一个看起来漂亮的答案，视频很快就会变成流水账。",
+          "Length": 41,
+          "BoundaryType": "SentenceBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 55476660,
+        "Duration": 2662080,
+        "text": {
+          "Text": "流水",
+          "Length": 2,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    },
+    {
+      "Type": "WordBoundary",
+      "Data": {
+        "Offset": 58138750,
+        "Duration": 2083330,
+        "text": {
+          "Text": "账",
+          "Length": 1,
+          "BoundaryType": "WordBoundary"
+        }
+      }
+    }
+  ]
+}

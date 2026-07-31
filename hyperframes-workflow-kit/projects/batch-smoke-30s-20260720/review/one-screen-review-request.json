@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "autovideo-one-screen-review-request/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-28T03:28:44.117Z",
+  "status": "ready-for-human-review",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "requiredReview": [
+    "full-timeline listening",
+    "full-picture acceptance"
+  ],
+  "bindings": {
+    "video": {
+      "path": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+      "sha256": "166f9ca9a52158cc260a6a35c7ac03cb9c54f5929fbf28b2210d3887de2573fc"
+    },
+    "storyboard": {
+      "path": "review/one-screen-master-storyboard.png",
+      "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+    },
+    "qa": {
+      "path": "qa/one-screen-mvp-report.json",
+      "sha256": "27f1d74e1dbf82caccaf17c97ce1f43ea4a7120d85fb9d1261a24fbf8fac190d"
+    }
+  },
+  "notes": "Pending user review. This request is not an approval receipt."
+}

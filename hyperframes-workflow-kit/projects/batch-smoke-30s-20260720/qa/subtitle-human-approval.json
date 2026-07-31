@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "autovideo-subtitle-internal-approval/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "approved",
+  "approvalScope": "internal-autonomous-review",
+  "approvedBy": "codex-creator-delegated",
+  "approvedAt": "2026-07-22T12:18:52.063Z",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "review": {
+    "path": "qa/subtitle-human-review.json",
+    "sha256": "57a5473dad885072fb9e98b02e91154e8d4e07ba7a7c758d1afe176982e8517e"
+  },
+  "bindings": {
+    "subtitleQa": {
+      "path": "qa/subtitle-qa.json",
+      "sha256": "9a823a64851b60f6e36d42e962afd6a0b7583abffc0453a961ece7ac35eaf304"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e"
+    },
+    "alignmentValidation": {
+      "path": "captions/alignment-validation.json",
+      "sha256": "26764e418d060019b263ca18f8d6134affbb99387463b15c3c54f0a3f891cf84"
+    },
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c"
+    },
+    "srt": {
+      "path": "captions/narration.zh-CN.srt",
+      "sha256": "0c7bbf10a9f0be181e160d5e9313a9b6ce5d63c67f86604936f97593d7284d8a"
+    }
+  },
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

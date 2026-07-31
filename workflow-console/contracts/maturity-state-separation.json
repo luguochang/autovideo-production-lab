@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "autovideo-workbench-state-separation/v1",
+  "states": {
+    "production": [
+      "generated",
+      "override",
+      "effective"
+    ],
+    "release": [
+      "internal-review-package",
+      "public-master-candidate",
+      "published"
+    ]
+  },
+  "sourceChecks": [
+    {
+      "path": "workflow-console/lib/production-overrides.mjs",
+      "requiredTokens": [
+        "generated: generatedTargets",
+        "override: overrideState.values",
+        "effective: effectiveState",
+        "expectedRevision"
+      ]
+    },
+    {
+      "path": "workflow-console/lib/release-center.mjs",
+      "requiredTokens": [
+        "internal-review-package",
+        "public-master-candidate",
+        "published"
+      ]
+    },
+    {
+      "path": "workflow-console/tests/production-overrides.test.mjs",
+      "requiredTokens": [
+        "generated",
+        "effective",
+        "override"
+      ]
+    },
+    {
+      "path": "workflow-console/tests/release-center.test.mjs",
+      "requiredTokens": [
+        "internal-review-package",
+        "public-master-candidate",
+        "published"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "demoText-mainstream-landscape",
+  "stage": "storyboard-ready",
+  "createdAt": "2026-07-17T02:14:58.535Z",
+  "updatedAt": "2026-07-17T03:21:35.011Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "20s",
+    "platform": "本地横屏主流风格探索",
+    "audience": "AI 学习者和短视频知识内容观众",
+    "rememberedOutcome": "会拖节点，不等于懂系统",
+    "forbiddenTreatments": "PPT 页面翻页、重复卡片网格、企业仪表盘、霓虹 HUD、闪白/闪黑、RGB glitch、粒子堆叠；禁止竖屏和方形输出"
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "user-request",
+      "approvedAt": "2026-07-17T02:25:37.744Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "user-request",
+      "approvedAt": "2026-07-17T03:10:46.834Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    }
+  },
+  "nextAction": "Review the approved A-style high-quality landscape delivery and revise only if needed."
+}

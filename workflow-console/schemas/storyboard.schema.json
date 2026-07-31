@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo formal scene storyboard",
+  "type": "object",
+  "required": ["schemaVersion", "projectId", "scenes"],
+  "additionalProperties": true,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-storyboard/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "status": {"type": "string"},
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": true,
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "order": {"type": "integer", "minimum": 1},
+          "cueIds": {"type": "array", "items": {"type": "string"}},
+          "nodes": {"type": "array"},
+          "edges": {"type": "array"},
+          "screenText": {"type": "array"}
+        }
+      }
+    }
+  }
+}

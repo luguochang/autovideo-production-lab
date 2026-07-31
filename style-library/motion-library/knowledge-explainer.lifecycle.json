@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle/v1",
+  "library": {
+    "id": "knowledge-explainer",
+    "version": "1.0.0",
+    "path": "style-library/motion-library/knowledge-explainer-v1.json",
+    "sha256": "d6271ec6772b54f97d196cd2f7798274861225643560b34dfabec8c5ad8ebaed"
+  },
+  "invariants": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "baseStyleVersion": "1.0.0",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "contentZone": "content.right",
+    "captionZone": "caption",
+    "cameraScope": "content-world-only",
+    "hostReplacementAllowed": false,
+    "paletteReplacementAllowed": false
+  },
+  "catalogBindings": {
+    "officialRegistry": {
+      "path": "style-library/generated/hyperframes-official-registry.json",
+      "sha256": "501174b31add227fe2b63c71b59d232b86935ca93f7075816b75698cf8e05d84"
+    },
+    "officialBlueprints": {
+      "path": "style-library/generated/hyperframes-blueprints.json",
+      "sha256": "fa7ee425ff8cb85f888dfbbcb652fd6927ad7d5ec2aea3b1944ee7eb5fc12e57"
+    },
+    "officialMotionRules": {
+      "path": "style-library/generated/hyperframes-motion-rules.json",
+      "sha256": "29fe6b14082411abe9b6b029daf35f5265c5c7ba10eaddcb1ea417d5039c1b7e"
+    }
+  },
+  "policy": {
+    "states": ["candidate", "probe-passed", "approved-project", "promoted-template", "retired"],
+    "probeDurationSeconds": {"minimum": 3, "maximum": 8},
+    "minimumProjectApprovalsForTemplate": 2,
+    "humanApprovalRequiredFor": ["approved-project", "promoted-template", "retired"],
+    "retirementIsTerminal": true,
+    "officialReuseOrder": ["official-registry", "official-blueprint", "official-motion-rule", "project-local"],
+    "existingLockedProjectsMayReplayRetiredVersions": true
+  },
+  "entries": [
+    {
+      "recipeId": "keyword-handoff",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "408c21cc2aa1c1f441719dd6c4752969db960084023c977c3729568cfb32ece3",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "evidence-pivot",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "c9c8315e136b531f603ac0cb7883d2e8198ea8b38aa3cc6c38d87f8ebe6a9601",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "device-surface-tour",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "ab43b1325584c384dc16717e59d0b2b92ad302edf822c14be63ff574b08f5b43",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "diagram-build",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "45001bc3e8194b942dc46195115bf085923bcd2312969667741d164a7090b92f",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "data-proof",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "a8892f55d3038fccae78517a00868bf079b1322c8526f0cb26c3240ccd3dcf59",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "comparison-split",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "df97aa86525b2a4cce38521abc51d344461f51bdaa4bea56a5cee70e23683dee",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "code-proof",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "81c5952915d0cf80491934de2b9577d6acd26c432bf3434630497cf0ff0f159d",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    },
+    {
+      "recipeId": "object-metaphor",
+      "recipeVersion": "1.0.0",
+      "definitionSha256": "46d9d64cc4e9e6a3602ba9e97634e41634cbe30921990d0b5f4fd04733425561",
+      "state": "candidate",
+      "revision": 0,
+      "receiptRefs": [],
+      "projectApprovals": [],
+      "retirement": null
+    }
+  ]
+}

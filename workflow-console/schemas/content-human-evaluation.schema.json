@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo prompt-regression human evaluation",
+  "type": "object",
+  "required": [
+    "schemaVersion", "caseId", "caseSha256", "referenceOutputSha256",
+    "hardAssertionResultSha256", "evaluationScope", "authorizesNarrationLock",
+    "reviewerType", "reviewer", "reviewedAt", "decision", "scores", "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-content-human-evaluation/v1"},
+    "caseId": {"type": "string"},
+    "caseSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "referenceOutputSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "hardAssertionResultSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "evaluationScope": {"type": "string", "const": "prompt-regression-only"},
+    "authorizesNarrationLock": {"type": "boolean", "const": false},
+    "reviewerType": {"type": "string", "const": "human"},
+    "reviewer": {"type": "string", "minLength": 1},
+    "reviewedAt": {"type": "string", "minLength": 1},
+    "decision": {"type": "string", "enum": ["accepted", "rejected"]},
+    "scores": {
+      "type": "object",
+      "required": ["naturalness", "meaning", "oralDelivery", "screenCompression"],
+      "additionalProperties": false,
+      "properties": {
+        "naturalness": {"type": "integer", "minimum": 1, "maximum": 5},
+        "meaning": {"type": "integer", "minimum": 1, "maximum": 5},
+        "oralDelivery": {"type": "integer", "minimum": 1, "maximum": 5},
+        "screenCompression": {"type": "integer", "minimum": 1, "maximum": 5}
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}

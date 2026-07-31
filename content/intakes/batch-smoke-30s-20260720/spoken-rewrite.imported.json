@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "autovideo-spoken-rewrite/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "sourceRegisterSha256": "7d0bf05c2507dbbf424c5dfb44d28c346cc1a44730f77969bfdde2775952d71c",
+  "suitabilitySha256": "5817339e963f59a34ba288095be44f0da5777e9e4c86e3670df1990bd21cc8f1",
+  "evidenceSha256": "ffb233e1b211a1dd7fd079a8a625e0c4b8edfa7f27716a2c59ae5f3d74720065",
+  "title": "平台为什么让系统看起来很简单",
+  "language": "zh-CN",
+  "sections": [
+    {
+      "id": "section-01",
+      "kind": "creator-opinion",
+      "targetSeconds": 10,
+      "narration": "第一，平台会把系统的复杂性藏起来。低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+      "claimIds": ["claim-platform-hides-complexity"],
+      "sourceIds": ["source-001-acfa947f"],
+      "framing": "这是对原稿观点的自然口播，不声称覆盖所有平台。",
+      "onscreen": [
+        {"text": "复杂系统", "kind": "generated_summary"},
+        {"text": "按钮 · 节点", "kind": "generated_summary"}
+      ]
+    },
+    {
+      "id": "section-02",
+      "kind": "creator-opinion",
+      "targetSeconds": 9,
+      "narration": "这样做的好处，是普通人可以很快上手。但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。",
+      "claimIds": ["claim-easy-start-hides-tradeoff"],
+      "sourceIds": ["source-001-acfa947f"],
+      "framing": "保留原稿的利弊判断，并明确为创作者观点。",
+      "onscreen": [
+        {"text": "快速上手", "kind": "generated_summary"},
+        {"text": "不等于懂架构", "kind": "generated_summary"}
+      ]
+    },
+    {
+      "id": "section-03",
+      "kind": "creator-opinion",
+      "targetSeconds": 11,
+      "narration": "真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？这才是系统真正复杂的地方。",
+      "claimIds": ["claim-failure-has-multiple-layers"],
+      "sourceIds": ["source-001-acfa947f"],
+      "framing": "问题清单来自原稿；“真正复杂的地方”是创作者的总结，不是故障率统计。",
+      "onscreen": [
+        {"text": "模型？接口？权限？", "kind": "generated_summary"},
+        {"text": "先定位问题层", "kind": "generated_summary"}
+      ]
+    }
+  ],
+  "reviewNotes": [
+    "原稿未提供外部平台案例，所有 claim 保留为创作者观点。",
+    "目标时长约 30 秒，最终时长以 CosyVoice 14 WAV 和 alignment 为准。",
+    "这是待人工确认的口播草稿，不是已批准 NarrationLock。"
+  ],
+  "generatedAt": "2026-07-20T12:42:00.000Z"
+}

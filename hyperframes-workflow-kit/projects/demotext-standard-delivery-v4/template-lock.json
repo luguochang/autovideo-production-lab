@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-template-lock/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "styleId": "modern-ip-host-explainer",
+  "styleVersion": "1.0.0",
+  "paletteId": "light-apricot",
+  "ratio": "16:9",
+  "resolution": "1920x1080",
+  "fps": 30,
+  "sourcePath": "style-library/styles/project/modern-ip-host-explainer",
+  "sourceFiles": [
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/frame.md",
+      "sha256": "3bccb9d1ade16d50127308d0a6a0a5195baf2bcadc6455c4cc29bfc6894fdd25"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/STYLE_GUIDE.md",
+      "sha256": "02e550777227ef60cd3ed247c2c6da3524fca055ed85c978287af44c08facb77"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+      "sha256": "70872749953cfd53d32d2740385aed37082b1e3552e3e8bb7e9a06b2d3bace0f"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/LAYOUT_CONTRACT.md",
+      "sha256": "5a50c33d860348c4d1f6608b6cdbc895dbd8c0d5bc2718f1779cf89ea7f0c597"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/PALETTE_VARIANTS.json",
+      "sha256": "f45944c9382537b0c2c34d3417d84a31e773be3f98738ce379b54980c83dcdc7"
+    },
+    {
+      "path": "style-library/styles/project/modern-ip-host-explainer/USAGE.md",
+      "sha256": "464a70503cd328c4ca21332860a7b8e84e285f62b95a527f99929a3e620debce"
+    }
+  ],
+  "appliedAt": "2026-07-19T09:44:40.239Z",
+  "immutable": true,
+  "reviewGate": "project task approval plus same-window still and 3-8s motion probe"
+}

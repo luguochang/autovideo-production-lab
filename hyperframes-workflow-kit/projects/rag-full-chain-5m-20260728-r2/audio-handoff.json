@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "autovideo-audio-handoff/v2",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "narrationSha256": "bdf2796e70774507b7ccfc50a66f925ae6b51917f188b976a8c6bb4691cfcf94",
+  "status": "approved",
+  "approvedBy": "user",
+  "approvalScope": "human-listening",
+  "humanListeningStatus": "approved",
+  "attachedAt": "2026-07-28T23:33:56.999Z",
+  "provider": "cosyvoice-preset-14",
+  "rightsStatus": "needs-review",
+  "publicReleaseBlocked": true,
+  "audio": {
+    "path": "audio/narration.final.wav",
+    "source": "hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2/audio/narration.final.wav",
+    "sha256": "8bc44127b6d4e925491a4d9bc8e09f7abb223b237075c633c48e8d167ea17702",
+    "codec": "pcm_s16le",
+    "sampleRate": 48000,
+    "channels": 1,
+    "durationSeconds": 1880.218458
+  },
+  "alignment": {
+    "path": "audio/alignment.json",
+    "source": "hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2/audio/alignment.json",
+    "sha256": "e3193c3da74e3ef6d0ae0672ca352513cc8268ce1aafff5658574d84198fe572",
+    "entryCount": 8976,
+    "firstStartSeconds": 0,
+    "lastEndSeconds": 1880.218
+  },
+  "recipe": {
+    "path": "audio/voice.recipe.json",
+    "source": "hyperframes-workflow-kit/projects/rag-full-chain-5m-20260728-r2/audio/voice.recipe.json",
+    "sha256": "3ded7c2be02d146907c4dbcb9c6322f14b21dbf64b3cda477c5ec1b7d3ed2d78"
+  },
+  "immutable": true
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "autovideo-asset-manifest/v1",
+  "projectId": "persondesign-modern-host-probe",
+  "assets": [
+    {
+      "id": "style-reference",
+      "path": "input/style-reference.png",
+      "source": "user-provided",
+      "license": "user-provided; publication rights not implied",
+      "purpose": "style analysis only"
+    },
+    {
+      "id": "host-source",
+      "path": "input/host-source.png",
+      "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780",
+      "source": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+      "license": "user-provided; publication rights not implied",
+      "purpose": "canonical presenter pose"
+    },
+    {
+      "id": "host-transparent",
+      "path": ".media/images/image_001.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "local connected-background segmentation from input/host-source.png",
+      "license": "derived from user-provided asset",
+      "purpose": "foreground host cutout"
+    },
+    {
+      "id": "host-emphasis-source",
+      "path": "input/host-emphasis-source.png",
+      "sha256": "6ad9b540b165d459025c70b98b8030b0110bf83db6e14fbd70337115c57b4882",
+      "source": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (2).png",
+      "license": "user-provided; publication rights not implied",
+      "purpose": "semantic emphasis pose source"
+    },
+    {
+      "id": "host-emphasis-transparent",
+      "path": ".media/images/image_002.png",
+      "sha256": "247393d6df391c6488a7aadb0f9639e26154b7eaa75ba0bef8da69078d484e61",
+      "source": "scripts/remove-connected-background.py from input/host-emphasis-source.png; media-use ingested",
+      "license": "derived from user-provided asset",
+      "purpose": "normalized semantic emphasis pose"
+    },
+    {
+      "id": "host-explain-source",
+      "path": "input/host-explain-source.png",
+      "sha256": "42e9970aad64fe0bb8be92f5d6c297a082c281f286bfa40c4e6434a3a55d75d5",
+      "source": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (10).png",
+      "license": "user-provided; publication rights not implied",
+      "purpose": "semantic explain pose source"
+    },
+    {
+      "id": "host-explain-transparent",
+      "path": ".media/images/image_003.png",
+      "sha256": "db18593fa883804fc508eafca0d1e14a94ef2440a251b11290fd67fe969283e9",
+      "source": "scripts/remove-connected-background.py from input/host-explain-source.png; media-use ingested",
+      "license": "derived from user-provided asset",
+      "purpose": "normalized semantic explain pose"
+    },
+    {
+      "id": "narration-audio",
+      "path": "input/narration.wav",
+      "sha256": "f549bccedfdaae4aa7fd89cfc52ed6a130ed7fc7c72667f4386f5f75ee0f49fd",
+      "source": "hyperframes-workflow-kit/projects/demoText-mainstream-landscape/input/narration-excerpt.wav",
+      "license": "project-local generated narration",
+      "purpose": "exact 0-8s probe audio"
+    },
+    {
+      "id": "caption-weight-shift",
+      "path": "references/caption-weight-shift.md",
+      "source": "vendor/hyperframes/registry/components/caption-weight-shift/",
+      "license": "Apache-2.0",
+      "purpose": "official caption behavior reference"
+    },
+    {
+      "id": "gsap-runtime",
+      "path": "assets/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "GSAP 3.14.2 local runtime",
+      "license": "GSAP standard license",
+      "purpose": "deterministic paused composition timeline"
+    }
+  ]
+}

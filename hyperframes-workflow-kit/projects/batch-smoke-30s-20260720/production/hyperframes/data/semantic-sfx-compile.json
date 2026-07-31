@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "autovideo-semantic-sfx-compile-diagnostics/v1",
+  "planId": "batch-smoke-30s-20260720-sparse-sfx",
+  "planStatus": "approved",
+  "mode": "approved-plan-only-silence-default",
+  "committed": true,
+  "policy": {
+    "hardMaxPerMinute": 6,
+    "hardMinGapSeconds": 2.4,
+    "effectiveMaxPerMinute": 6,
+    "effectiveMinGapSeconds": 2.4
+  },
+  "summary": {
+    "requestedCueCount": 2,
+    "appliedCueCount": 2,
+    "rejectedCueCount": 0,
+    "unchangedShotCount": 4
+  },
+  "entries": [
+    {
+      "planCueId": "sfx-cue-001",
+      "planCueIndex": 0,
+      "status": "applied",
+      "reasonCodes": [],
+      "role": "connector-draw",
+      "bindingRole": "connector-draw",
+      "motionRecipeId": "diagram-build",
+      "sourceCueIds": [
+        "cue-002"
+      ],
+      "semanticEvent": "diagram-build reaches its visible connector-complete state.",
+      "assetId": "sfx-whoosh-short",
+      "shotCueId": "cue-002",
+      "eventTimeSeconds": 9.107,
+      "offsetMs": 5127,
+      "gainDb": -21,
+      "event": "draw"
+    },
+    {
+      "planCueId": "sfx-cue-002",
+      "planCueIndex": 1,
+      "status": "applied",
+      "reasonCodes": [],
+      "role": "state-change",
+      "bindingRole": "state-change",
+      "motionRecipeId": "comparison-split",
+      "sourceCueIds": [
+        "cue-004"
+      ],
+      "semanticEvent": "comparison-split reaches its visible state-commit state.",
+      "assetId": "sfx-click-soft",
+      "shotCueId": "cue-004",
+      "eventTimeSeconds": 18.821,
+      "offsetMs": 2761,
+      "gainDb": -20,
+      "event": "click"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "autovideo-one-screen-mvp-qa/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-28T03:28:44.117Z",
+  "status": "passed",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "humanReviewPerformed": false,
+  "safety": {
+    "microphoneUsed": false,
+    "playbackUsed": false,
+    "soundOutputUsed": false
+  },
+  "checks": {
+    "oneScreenContract": {
+      "status": "passed",
+      "mode": "one-screen-master-board",
+      "stepCount": 6,
+      "fixedHostPose": "question",
+      "transition": "progressive-reveal-no-replacement"
+    },
+    "hyperframesStrict": {
+      "status": "passed",
+      "version": "0.7.77",
+      "lintErrors": 0,
+      "runtimeErrors": 0,
+      "layoutErrors": 0,
+      "motionErrors": 0,
+      "contrastErrors": 0,
+      "motionSamples": 300
+    },
+    "fileMediaQa": {
+      "status": "passed",
+      "fullDecode": "passed",
+      "blockingBlackFrameRuns": 0,
+      "loudness": {
+        "integratedLufs": -13.2,
+        "truePeakDbfs": -1.32,
+        "loudnessRangeLu": 2.4,
+        "thresholdLufs": -23.42
+      }
+    },
+    "snapshotEvidence": {
+      "status": "passed",
+      "snapshotCount": 15,
+      "finalSnapshot": "production/hyperframes/snapshots/frame-06-at-31.193s.png",
+      "masterStoryboard": "review/one-screen-master-storyboard.png"
+    }
+  },
+  "bindings": {
+    "build": {
+      "path": "production/hyperframes/data/composition-build.json",
+      "sha256": "fe6c89557619f30d4c2c68c6f1f27836ae96d9d287019fe9b0373aa1a231c4bb"
+    },
+    "hyperframesCheck": {
+      "path": "qa/hyperframes-check.json",
+      "sha256": "c2cd0470c3a070b6a3180301b311a285555ae8a3be53597aa7720a0a3e2b275c"
+    },
+    "fileQa": {
+      "path": "qa/one-screen-mvp-file-qa.json",
+      "sha256": "dac6b42d822985254dece6abfcfcd0f9718904ba5be9c1d48d6729eae5004158"
+    },
+    "video": {
+      "path": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+      "sha256": "166f9ca9a52158cc260a6a35c7ac03cb9c54f5929fbf28b2210d3887de2573fc"
+    },
+    "storyboard": {
+      "path": "review/one-screen-master-storyboard.png",
+      "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+    },
+    "renderReceipt": {
+      "path": "renders/batch-smoke-30s-20260720-internal-review.receipt.json",
+      "sha256": "7b6fae40824ffa3ca06351fd2bf40c787e54c51fb089b493f35db085d1ee67b7"
+    }
+  },
+  "blockers": [],
+  "pendingHumanReview": [
+    "full-timeline listening",
+    "full-picture acceptance"
+  ],
+  "notes": "Machine self-test passed. This receipt deliberately does not claim human listening or final acceptance."
+}

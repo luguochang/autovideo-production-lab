@@ -1,0 +1,1538 @@
+{
+  "schemaVersion": "autovideo-alignment-locked/v1",
+  "engine": "NarrationLock character mapping over openai-whisper/small",
+  "method": "SequenceMatcher exact blocks plus monotonic interpolation for ASR substitutions/deletions",
+  "limitation": "Locked-text timing derived from ASR words; use WhisperX/MFA for phoneme or lip-sync precision.",
+  "source": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\narration.final.wav",
+  "sourceSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+  "narration": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\input\\script.approved.txt",
+  "narrationLock": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\NarrationLock.json",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "asrAlignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\alignment.asr.json",
+  "asrAlignmentSha256": "6ac012a98fb7009d6a88ebcc3d4b87d87ad43ca9548164f8e123cc1c3a9fcfff",
+  "durationSeconds": 31.807896,
+  "firstStartSeconds": 0.0,
+  "lastEndSeconds": 31.808,
+  "referenceCharacters": 158,
+  "asrCharacters": 159,
+  "editDistance": 9,
+  "cer": 0.056962,
+  "exactMappedCharacters": 150,
+  "interpolatedCharacters": 8,
+  "transcriptText": "第一 平台会把系统的复杂性藏起来第一代码五代码还有各种AI工作流工具或把模型调用API连接向量库和工具链调度包装成爱妞和节点这样做的好处是普通人可以很快上手但问题也在这里很多人会拖拽节点就以为自己已经懂了系统架构真正遇到爆错时你可能根本不知道问题出在哪里是模型 接口权 线数据还是上下有关系和状态管理这才是系统真正复杂的地方",
+  "transcriptTextRole": "raw-asr-evidence-only",
+  "downstreamTextSource": "cues",
+  "words": [
+    {
+      "index": 0,
+      "text": "第",
+      "start": 0.0,
+      "end": 0.12,
+      "asrWordStart": 0.0,
+      "asrWordEnd": 0.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 1,
+      "text": "一",
+      "start": 0.12,
+      "end": 0.24,
+      "asrWordStart": 0.0,
+      "asrWordEnd": 0.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 2,
+      "text": "平",
+      "start": 0.76,
+      "end": 0.9,
+      "asrWordStart": 0.76,
+      "asrWordEnd": 0.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 3,
+      "text": "台",
+      "start": 0.9,
+      "end": 1.1,
+      "asrWordStart": 0.9,
+      "asrWordEnd": 1.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 4,
+      "text": "会",
+      "start": 1.1,
+      "end": 1.3,
+      "asrWordStart": 1.1,
+      "asrWordEnd": 1.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 5,
+      "text": "把",
+      "start": 1.3,
+      "end": 1.58,
+      "asrWordStart": 1.3,
+      "asrWordEnd": 1.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 6,
+      "text": "系",
+      "start": 1.58,
+      "end": 2.38,
+      "asrWordStart": 1.58,
+      "asrWordEnd": 2.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 7,
+      "text": "统",
+      "start": 2.38,
+      "end": 2.5,
+      "asrWordStart": 2.38,
+      "asrWordEnd": 2.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 8,
+      "text": "的",
+      "start": 2.5,
+      "end": 2.64,
+      "asrWordStart": 2.5,
+      "asrWordEnd": 2.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 9,
+      "text": "复",
+      "start": 2.64,
+      "end": 2.78,
+      "asrWordStart": 2.64,
+      "asrWordEnd": 2.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 10,
+      "text": "杂",
+      "start": 2.78,
+      "end": 2.94,
+      "asrWordStart": 2.78,
+      "asrWordEnd": 2.94,
+      "mapping": "exact"
+    },
+    {
+      "index": 11,
+      "text": "性",
+      "start": 2.94,
+      "end": 3.14,
+      "asrWordStart": 2.94,
+      "asrWordEnd": 3.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 12,
+      "text": "藏",
+      "start": 3.14,
+      "end": 3.36,
+      "asrWordStart": 3.14,
+      "asrWordEnd": 3.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 13,
+      "text": "起",
+      "start": 3.36,
+      "end": 3.54,
+      "asrWordStart": 3.36,
+      "asrWordEnd": 3.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 14,
+      "text": "来",
+      "start": 3.54,
+      "end": 3.98,
+      "asrWordStart": 3.54,
+      "asrWordEnd": 3.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 15,
+      "text": "低",
+      "start": 4.16,
+      "end": 4.34,
+      "asrWordStart": 3.98,
+      "asrWordEnd": 4.34,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 16,
+      "text": "代",
+      "start": 4.34,
+      "end": 4.46,
+      "asrWordStart": 4.34,
+      "asrWordEnd": 4.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 17,
+      "text": "码",
+      "start": 4.46,
+      "end": 4.62,
+      "asrWordStart": 4.46,
+      "asrWordEnd": 4.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 18,
+      "text": "无",
+      "start": 4.62,
+      "end": 5.16,
+      "asrWordStart": 4.62,
+      "asrWordEnd": 5.16,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 19,
+      "text": "代",
+      "start": 5.16,
+      "end": 5.3,
+      "asrWordStart": 5.16,
+      "asrWordEnd": 5.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 20,
+      "text": "码",
+      "start": 5.3,
+      "end": 5.72,
+      "asrWordStart": 5.3,
+      "asrWordEnd": 5.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 21,
+      "text": "还",
+      "start": 5.72,
+      "end": 5.81,
+      "asrWordStart": 5.72,
+      "asrWordEnd": 5.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 22,
+      "text": "有",
+      "start": 5.81,
+      "end": 5.9,
+      "asrWordStart": 5.72,
+      "asrWordEnd": 5.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 23,
+      "text": "各",
+      "start": 5.9,
+      "end": 6.22,
+      "asrWordStart": 5.9,
+      "asrWordEnd": 6.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 24,
+      "text": "种",
+      "start": 6.22,
+      "end": 6.34,
+      "asrWordStart": 6.22,
+      "asrWordEnd": 6.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 25,
+      "text": "a",
+      "start": 6.34,
+      "end": 6.43,
+      "asrWordStart": 6.34,
+      "asrWordEnd": 6.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 26,
+      "text": "i",
+      "start": 6.43,
+      "end": 6.52,
+      "asrWordStart": 6.34,
+      "asrWordEnd": 6.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 27,
+      "text": "工",
+      "start": 6.52,
+      "end": 6.66,
+      "asrWordStart": 6.52,
+      "asrWordEnd": 6.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 28,
+      "text": "作",
+      "start": 6.66,
+      "end": 6.8,
+      "asrWordStart": 6.52,
+      "asrWordEnd": 6.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 29,
+      "text": "流",
+      "start": 6.8,
+      "end": 7.04,
+      "asrWordStart": 6.8,
+      "asrWordEnd": 7.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 30,
+      "text": "工",
+      "start": 7.04,
+      "end": 7.22,
+      "asrWordStart": 7.04,
+      "asrWordEnd": 7.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 31,
+      "text": "具",
+      "start": 7.22,
+      "end": 7.38,
+      "asrWordStart": 7.22,
+      "asrWordEnd": 7.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 32,
+      "text": "会",
+      "start": 7.38,
+      "end": 7.54,
+      "asrWordStart": 7.38,
+      "asrWordEnd": 7.54,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 33,
+      "text": "把",
+      "start": 7.54,
+      "end": 7.7,
+      "asrWordStart": 7.54,
+      "asrWordEnd": 7.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 34,
+      "text": "模",
+      "start": 7.7,
+      "end": 7.88,
+      "asrWordStart": 7.7,
+      "asrWordEnd": 7.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 35,
+      "text": "型",
+      "start": 7.88,
+      "end": 8.08,
+      "asrWordStart": 7.88,
+      "asrWordEnd": 8.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 36,
+      "text": "调",
+      "start": 8.08,
+      "end": 8.28,
+      "asrWordStart": 8.08,
+      "asrWordEnd": 8.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 37,
+      "text": "用",
+      "start": 8.28,
+      "end": 8.52,
+      "asrWordStart": 8.28,
+      "asrWordEnd": 8.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 38,
+      "text": "a",
+      "start": 8.52,
+      "end": 8.79,
+      "asrWordStart": 8.52,
+      "asrWordEnd": 9.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 39,
+      "text": "p",
+      "start": 8.79,
+      "end": 9.06,
+      "asrWordStart": 8.52,
+      "asrWordEnd": 9.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 40,
+      "text": "i",
+      "start": 9.06,
+      "end": 9.3,
+      "asrWordStart": 9.06,
+      "asrWordEnd": 9.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 41,
+      "text": "连",
+      "start": 9.3,
+      "end": 9.44,
+      "asrWordStart": 9.3,
+      "asrWordEnd": 9.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 42,
+      "text": "接",
+      "start": 9.44,
+      "end": 9.68,
+      "asrWordStart": 9.44,
+      "asrWordEnd": 9.68,
+      "mapping": "exact"
+    },
+    {
+      "index": 43,
+      "text": "向",
+      "start": 9.68,
+      "end": 10.02,
+      "asrWordStart": 9.68,
+      "asrWordEnd": 10.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 44,
+      "text": "量",
+      "start": 10.02,
+      "end": 10.2,
+      "asrWordStart": 10.02,
+      "asrWordEnd": 10.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 45,
+      "text": "库",
+      "start": 10.2,
+      "end": 10.42,
+      "asrWordStart": 10.2,
+      "asrWordEnd": 10.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 46,
+      "text": "和",
+      "start": 10.42,
+      "end": 10.56,
+      "asrWordStart": 10.42,
+      "asrWordEnd": 10.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 47,
+      "text": "工",
+      "start": 10.56,
+      "end": 10.72,
+      "asrWordStart": 10.56,
+      "asrWordEnd": 10.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 48,
+      "text": "具",
+      "start": 10.72,
+      "end": 10.84,
+      "asrWordStart": 10.72,
+      "asrWordEnd": 10.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 49,
+      "text": "链",
+      "start": 10.84,
+      "end": 10.98,
+      "asrWordStart": 10.84,
+      "asrWordEnd": 10.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 50,
+      "text": "调",
+      "start": 10.98,
+      "end": 11.2,
+      "asrWordStart": 10.98,
+      "asrWordEnd": 11.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 51,
+      "text": "度",
+      "start": 11.2,
+      "end": 11.4,
+      "asrWordStart": 11.2,
+      "asrWordEnd": 11.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 52,
+      "text": "包",
+      "start": 11.4,
+      "end": 11.64,
+      "asrWordStart": 11.4,
+      "asrWordEnd": 11.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 53,
+      "text": "装",
+      "start": 11.64,
+      "end": 11.82,
+      "asrWordStart": 11.64,
+      "asrWordEnd": 11.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 54,
+      "text": "成",
+      "start": 11.82,
+      "end": 11.98,
+      "asrWordStart": 11.82,
+      "asrWordEnd": 11.98,
+      "mapping": "exact"
+    },
+    {
+      "index": 55,
+      "text": "按",
+      "start": 11.98,
+      "end": 12.16,
+      "asrWordStart": 11.98,
+      "asrWordEnd": 12.16,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 56,
+      "text": "钮",
+      "start": 12.16,
+      "end": 12.28,
+      "asrWordStart": 12.16,
+      "asrWordEnd": 12.28,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 57,
+      "text": "和",
+      "start": 12.28,
+      "end": 12.46,
+      "asrWordStart": 12.28,
+      "asrWordEnd": 12.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 58,
+      "text": "节",
+      "start": 12.46,
+      "end": 12.64,
+      "asrWordStart": 12.46,
+      "asrWordEnd": 12.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 59,
+      "text": "点",
+      "start": 12.64,
+      "end": 12.82,
+      "asrWordStart": 12.64,
+      "asrWordEnd": 12.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 60,
+      "text": "这",
+      "start": 12.82,
+      "end": 13.18,
+      "asrWordStart": 12.82,
+      "asrWordEnd": 13.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 61,
+      "text": "样",
+      "start": 13.18,
+      "end": 13.54,
+      "asrWordStart": 12.82,
+      "asrWordEnd": 13.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 62,
+      "text": "做",
+      "start": 13.54,
+      "end": 13.74,
+      "asrWordStart": 13.54,
+      "asrWordEnd": 13.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 63,
+      "text": "的",
+      "start": 13.74,
+      "end": 13.86,
+      "asrWordStart": 13.74,
+      "asrWordEnd": 13.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 64,
+      "text": "好",
+      "start": 13.86,
+      "end": 14.04,
+      "asrWordStart": 13.86,
+      "asrWordEnd": 14.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 65,
+      "text": "处",
+      "start": 14.04,
+      "end": 14.3,
+      "asrWordStart": 14.04,
+      "asrWordEnd": 14.3,
+      "mapping": "exact"
+    },
+    {
+      "index": 66,
+      "text": "是",
+      "start": 14.3,
+      "end": 14.8,
+      "asrWordStart": 14.3,
+      "asrWordEnd": 14.8,
+      "mapping": "exact"
+    },
+    {
+      "index": 67,
+      "text": "普",
+      "start": 14.8,
+      "end": 15.0,
+      "asrWordStart": 14.8,
+      "asrWordEnd": 15.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 68,
+      "text": "通",
+      "start": 15.0,
+      "end": 15.1,
+      "asrWordStart": 15.0,
+      "asrWordEnd": 15.1,
+      "mapping": "exact"
+    },
+    {
+      "index": 69,
+      "text": "人",
+      "start": 15.1,
+      "end": 15.2,
+      "asrWordStart": 15.1,
+      "asrWordEnd": 15.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 70,
+      "text": "可",
+      "start": 15.2,
+      "end": 15.29,
+      "asrWordStart": 15.2,
+      "asrWordEnd": 15.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 71,
+      "text": "以",
+      "start": 15.29,
+      "end": 15.38,
+      "asrWordStart": 15.2,
+      "asrWordEnd": 15.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 72,
+      "text": "很",
+      "start": 15.38,
+      "end": 15.52,
+      "asrWordStart": 15.38,
+      "asrWordEnd": 15.52,
+      "mapping": "exact"
+    },
+    {
+      "index": 73,
+      "text": "快",
+      "start": 15.52,
+      "end": 15.66,
+      "asrWordStart": 15.52,
+      "asrWordEnd": 15.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 74,
+      "text": "上",
+      "start": 15.66,
+      "end": 15.88,
+      "asrWordStart": 15.66,
+      "asrWordEnd": 15.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 75,
+      "text": "手",
+      "start": 15.88,
+      "end": 16.06,
+      "asrWordStart": 15.88,
+      "asrWordEnd": 16.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 76,
+      "text": "但",
+      "start": 16.06,
+      "end": 16.26,
+      "asrWordStart": 16.06,
+      "asrWordEnd": 16.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 77,
+      "text": "问",
+      "start": 16.26,
+      "end": 16.38,
+      "asrWordStart": 16.26,
+      "asrWordEnd": 16.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 78,
+      "text": "题",
+      "start": 16.38,
+      "end": 16.5,
+      "asrWordStart": 16.26,
+      "asrWordEnd": 16.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 79,
+      "text": "也",
+      "start": 16.5,
+      "end": 16.72,
+      "asrWordStart": 16.5,
+      "asrWordEnd": 16.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 80,
+      "text": "在",
+      "start": 16.72,
+      "end": 16.88,
+      "asrWordStart": 16.72,
+      "asrWordEnd": 16.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 81,
+      "text": "这",
+      "start": 16.88,
+      "end": 17.03,
+      "asrWordStart": 16.88,
+      "asrWordEnd": 17.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 82,
+      "text": "里",
+      "start": 17.03,
+      "end": 17.18,
+      "asrWordStart": 16.88,
+      "asrWordEnd": 17.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 83,
+      "text": "很",
+      "start": 17.18,
+      "end": 17.37,
+      "asrWordStart": 17.18,
+      "asrWordEnd": 17.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 84,
+      "text": "多",
+      "start": 17.37,
+      "end": 17.56,
+      "asrWordStart": 17.18,
+      "asrWordEnd": 17.56,
+      "mapping": "exact"
+    },
+    {
+      "index": 85,
+      "text": "人",
+      "start": 17.56,
+      "end": 17.76,
+      "asrWordStart": 17.56,
+      "asrWordEnd": 17.76,
+      "mapping": "exact"
+    },
+    {
+      "index": 86,
+      "text": "会",
+      "start": 17.76,
+      "end": 17.88,
+      "asrWordStart": 17.76,
+      "asrWordEnd": 17.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 87,
+      "text": "拖",
+      "start": 17.88,
+      "end": 18.08,
+      "asrWordStart": 17.88,
+      "asrWordEnd": 18.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 88,
+      "text": "拽",
+      "start": 18.08,
+      "end": 18.22,
+      "asrWordStart": 18.08,
+      "asrWordEnd": 18.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 89,
+      "text": "节",
+      "start": 18.22,
+      "end": 18.46,
+      "asrWordStart": 18.22,
+      "asrWordEnd": 18.46,
+      "mapping": "exact"
+    },
+    {
+      "index": 90,
+      "text": "点",
+      "start": 18.46,
+      "end": 18.72,
+      "asrWordStart": 18.46,
+      "asrWordEnd": 18.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 91,
+      "text": "就",
+      "start": 18.72,
+      "end": 19.02,
+      "asrWordStart": 18.72,
+      "asrWordEnd": 19.02,
+      "mapping": "exact"
+    },
+    {
+      "index": 92,
+      "text": "以",
+      "start": 19.02,
+      "end": 19.18,
+      "asrWordStart": 19.02,
+      "asrWordEnd": 19.18,
+      "mapping": "exact"
+    },
+    {
+      "index": 93,
+      "text": "为",
+      "start": 19.18,
+      "end": 19.26,
+      "asrWordStart": 19.18,
+      "asrWordEnd": 19.26,
+      "mapping": "exact"
+    },
+    {
+      "index": 94,
+      "text": "自",
+      "start": 19.26,
+      "end": 19.34,
+      "asrWordStart": 19.26,
+      "asrWordEnd": 19.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 95,
+      "text": "己",
+      "start": 19.34,
+      "end": 19.42,
+      "asrWordStart": 19.26,
+      "asrWordEnd": 19.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 96,
+      "text": "已",
+      "start": 19.42,
+      "end": 19.56,
+      "asrWordStart": 19.42,
+      "asrWordEnd": 19.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 97,
+      "text": "经",
+      "start": 19.56,
+      "end": 19.7,
+      "asrWordStart": 19.42,
+      "asrWordEnd": 19.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 98,
+      "text": "懂",
+      "start": 19.7,
+      "end": 19.9,
+      "asrWordStart": 19.7,
+      "asrWordEnd": 19.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 99,
+      "text": "了",
+      "start": 19.9,
+      "end": 20.08,
+      "asrWordStart": 19.9,
+      "asrWordEnd": 20.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 100,
+      "text": "系",
+      "start": 20.08,
+      "end": 20.28,
+      "asrWordStart": 20.08,
+      "asrWordEnd": 20.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 101,
+      "text": "统",
+      "start": 20.28,
+      "end": 20.4,
+      "asrWordStart": 20.28,
+      "asrWordEnd": 20.4,
+      "mapping": "exact"
+    },
+    {
+      "index": 102,
+      "text": "架",
+      "start": 20.4,
+      "end": 20.6,
+      "asrWordStart": 20.4,
+      "asrWordEnd": 20.6,
+      "mapping": "exact"
+    },
+    {
+      "index": 103,
+      "text": "构",
+      "start": 20.6,
+      "end": 20.82,
+      "asrWordStart": 20.6,
+      "asrWordEnd": 20.82,
+      "mapping": "exact"
+    },
+    {
+      "index": 104,
+      "text": "真",
+      "start": 20.82,
+      "end": 21.5,
+      "asrWordStart": 20.82,
+      "asrWordEnd": 21.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 105,
+      "text": "正",
+      "start": 21.5,
+      "end": 21.62,
+      "asrWordStart": 21.5,
+      "asrWordEnd": 21.62,
+      "mapping": "exact"
+    },
+    {
+      "index": 106,
+      "text": "遇",
+      "start": 21.62,
+      "end": 21.74,
+      "asrWordStart": 21.62,
+      "asrWordEnd": 21.74,
+      "mapping": "exact"
+    },
+    {
+      "index": 107,
+      "text": "到",
+      "start": 21.74,
+      "end": 21.86,
+      "asrWordStart": 21.74,
+      "asrWordEnd": 21.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 108,
+      "text": "报",
+      "start": 21.86,
+      "end": 22.06,
+      "asrWordStart": 21.86,
+      "asrWordEnd": 22.06,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 109,
+      "text": "错",
+      "start": 22.06,
+      "end": 22.24,
+      "asrWordStart": 22.06,
+      "asrWordEnd": 22.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 110,
+      "text": "时",
+      "start": 22.24,
+      "end": 22.58,
+      "asrWordStart": 22.24,
+      "asrWordEnd": 22.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 111,
+      "text": "你",
+      "start": 22.58,
+      "end": 23.0,
+      "asrWordStart": 22.58,
+      "asrWordEnd": 23.0,
+      "mapping": "exact"
+    },
+    {
+      "index": 112,
+      "text": "可",
+      "start": 23.0,
+      "end": 23.08,
+      "asrWordStart": 23.0,
+      "asrWordEnd": 23.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 113,
+      "text": "能",
+      "start": 23.08,
+      "end": 23.16,
+      "asrWordStart": 23.0,
+      "asrWordEnd": 23.16,
+      "mapping": "exact"
+    },
+    {
+      "index": 114,
+      "text": "根",
+      "start": 23.16,
+      "end": 23.38,
+      "asrWordStart": 23.16,
+      "asrWordEnd": 23.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 115,
+      "text": "本",
+      "start": 23.38,
+      "end": 23.5,
+      "asrWordStart": 23.38,
+      "asrWordEnd": 23.5,
+      "mapping": "exact"
+    },
+    {
+      "index": 116,
+      "text": "不",
+      "start": 23.5,
+      "end": 23.593,
+      "asrWordStart": 23.5,
+      "asrWordEnd": 23.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 117,
+      "text": "知",
+      "start": 23.593,
+      "end": 23.687,
+      "asrWordStart": 23.5,
+      "asrWordEnd": 23.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 118,
+      "text": "道",
+      "start": 23.687,
+      "end": 23.78,
+      "asrWordStart": 23.5,
+      "asrWordEnd": 23.78,
+      "mapping": "exact"
+    },
+    {
+      "index": 119,
+      "text": "问",
+      "start": 23.78,
+      "end": 23.95,
+      "asrWordStart": 23.78,
+      "asrWordEnd": 24.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 120,
+      "text": "题",
+      "start": 23.95,
+      "end": 24.12,
+      "asrWordStart": 23.78,
+      "asrWordEnd": 24.12,
+      "mapping": "exact"
+    },
+    {
+      "index": 121,
+      "text": "出",
+      "start": 24.12,
+      "end": 24.36,
+      "asrWordStart": 24.12,
+      "asrWordEnd": 24.36,
+      "mapping": "exact"
+    },
+    {
+      "index": 122,
+      "text": "在",
+      "start": 24.36,
+      "end": 24.48,
+      "asrWordStart": 24.36,
+      "asrWordEnd": 24.48,
+      "mapping": "exact"
+    },
+    {
+      "index": 123,
+      "text": "哪",
+      "start": 24.48,
+      "end": 24.66,
+      "asrWordStart": 24.48,
+      "asrWordEnd": 24.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 124,
+      "text": "里",
+      "start": 24.66,
+      "end": 24.96,
+      "asrWordStart": 24.66,
+      "asrWordEnd": 24.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 125,
+      "text": "是",
+      "start": 24.96,
+      "end": 25.34,
+      "asrWordStart": 24.96,
+      "asrWordEnd": 25.34,
+      "mapping": "exact"
+    },
+    {
+      "index": 126,
+      "text": "模",
+      "start": 25.34,
+      "end": 25.54,
+      "asrWordStart": 25.34,
+      "asrWordEnd": 25.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 127,
+      "text": "型",
+      "start": 25.54,
+      "end": 25.88,
+      "asrWordStart": 25.54,
+      "asrWordEnd": 25.88,
+      "mapping": "exact"
+    },
+    {
+      "index": 128,
+      "text": "接",
+      "start": 26.22,
+      "end": 26.28,
+      "asrWordStart": 26.22,
+      "asrWordEnd": 26.28,
+      "mapping": "exact"
+    },
+    {
+      "index": 129,
+      "text": "口",
+      "start": 26.28,
+      "end": 26.54,
+      "asrWordStart": 26.28,
+      "asrWordEnd": 26.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 130,
+      "text": "权",
+      "start": 26.54,
+      "end": 26.72,
+      "asrWordStart": 26.54,
+      "asrWordEnd": 26.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 131,
+      "text": "限",
+      "start": 26.94,
+      "end": 26.941,
+      "asrWordStart": 26.94,
+      "asrWordEnd": 26.94,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 132,
+      "text": "数",
+      "start": 26.94,
+      "end": 27.2,
+      "asrWordStart": 26.94,
+      "asrWordEnd": 27.2,
+      "mapping": "exact"
+    },
+    {
+      "index": 133,
+      "text": "据",
+      "start": 27.2,
+      "end": 27.42,
+      "asrWordStart": 27.2,
+      "asrWordEnd": 27.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 134,
+      "text": "还",
+      "start": 27.42,
+      "end": 27.5,
+      "asrWordStart": 27.42,
+      "asrWordEnd": 27.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 135,
+      "text": "是",
+      "start": 27.5,
+      "end": 27.58,
+      "asrWordStart": 27.42,
+      "asrWordEnd": 27.58,
+      "mapping": "exact"
+    },
+    {
+      "index": 136,
+      "text": "上",
+      "start": 27.58,
+      "end": 27.86,
+      "asrWordStart": 27.58,
+      "asrWordEnd": 27.86,
+      "mapping": "exact"
+    },
+    {
+      "index": 137,
+      "text": "下",
+      "start": 27.86,
+      "end": 28.04,
+      "asrWordStart": 27.86,
+      "asrWordEnd": 28.04,
+      "mapping": "exact"
+    },
+    {
+      "index": 138,
+      "text": "游",
+      "start": 28.04,
+      "end": 28.22,
+      "asrWordStart": 28.04,
+      "asrWordEnd": 28.22,
+      "mapping": "interpolated"
+    },
+    {
+      "index": 139,
+      "text": "关",
+      "start": 28.22,
+      "end": 28.44,
+      "asrWordStart": 28.22,
+      "asrWordEnd": 28.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 140,
+      "text": "系",
+      "start": 28.44,
+      "end": 28.72,
+      "asrWordStart": 28.44,
+      "asrWordEnd": 28.72,
+      "mapping": "exact"
+    },
+    {
+      "index": 141,
+      "text": "和",
+      "start": 28.72,
+      "end": 28.9,
+      "asrWordStart": 28.72,
+      "asrWordEnd": 28.9,
+      "mapping": "exact"
+    },
+    {
+      "index": 142,
+      "text": "状",
+      "start": 28.9,
+      "end": 29.06,
+      "asrWordStart": 28.9,
+      "asrWordEnd": 29.06,
+      "mapping": "exact"
+    },
+    {
+      "index": 143,
+      "text": "态",
+      "start": 29.06,
+      "end": 29.22,
+      "asrWordStart": 29.06,
+      "asrWordEnd": 29.22,
+      "mapping": "exact"
+    },
+    {
+      "index": 144,
+      "text": "管",
+      "start": 29.22,
+      "end": 29.44,
+      "asrWordStart": 29.22,
+      "asrWordEnd": 29.44,
+      "mapping": "exact"
+    },
+    {
+      "index": 145,
+      "text": "理",
+      "start": 29.44,
+      "end": 29.66,
+      "asrWordStart": 29.44,
+      "asrWordEnd": 29.66,
+      "mapping": "exact"
+    },
+    {
+      "index": 146,
+      "text": "这",
+      "start": 29.66,
+      "end": 30.08,
+      "asrWordStart": 29.66,
+      "asrWordEnd": 30.08,
+      "mapping": "exact"
+    },
+    {
+      "index": 147,
+      "text": "才",
+      "start": 30.08,
+      "end": 30.24,
+      "asrWordStart": 30.08,
+      "asrWordEnd": 30.24,
+      "mapping": "exact"
+    },
+    {
+      "index": 148,
+      "text": "是",
+      "start": 30.24,
+      "end": 30.38,
+      "asrWordStart": 30.24,
+      "asrWordEnd": 30.38,
+      "mapping": "exact"
+    },
+    {
+      "index": 149,
+      "text": "系",
+      "start": 30.38,
+      "end": 30.54,
+      "asrWordStart": 30.38,
+      "asrWordEnd": 30.54,
+      "mapping": "exact"
+    },
+    {
+      "index": 150,
+      "text": "统",
+      "start": 30.54,
+      "end": 30.7,
+      "asrWordStart": 30.54,
+      "asrWordEnd": 30.7,
+      "mapping": "exact"
+    },
+    {
+      "index": 151,
+      "text": "真",
+      "start": 30.7,
+      "end": 30.84,
+      "asrWordStart": 30.7,
+      "asrWordEnd": 30.84,
+      "mapping": "exact"
+    },
+    {
+      "index": 152,
+      "text": "正",
+      "start": 30.84,
+      "end": 30.96,
+      "asrWordStart": 30.84,
+      "asrWordEnd": 30.96,
+      "mapping": "exact"
+    },
+    {
+      "index": 153,
+      "text": "复",
+      "start": 30.96,
+      "end": 31.14,
+      "asrWordStart": 30.96,
+      "asrWordEnd": 31.14,
+      "mapping": "exact"
+    },
+    {
+      "index": 154,
+      "text": "杂",
+      "start": 31.14,
+      "end": 31.32,
+      "asrWordStart": 31.14,
+      "asrWordEnd": 31.32,
+      "mapping": "exact"
+    },
+    {
+      "index": 155,
+      "text": "的",
+      "start": 31.32,
+      "end": 31.42,
+      "asrWordStart": 31.32,
+      "asrWordEnd": 31.42,
+      "mapping": "exact"
+    },
+    {
+      "index": 156,
+      "text": "地",
+      "start": 31.42,
+      "end": 31.53,
+      "asrWordStart": 31.42,
+      "asrWordEnd": 31.64,
+      "mapping": "exact"
+    },
+    {
+      "index": 157,
+      "text": "方",
+      "start": 31.53,
+      "end": 31.808,
+      "asrWordStart": 31.42,
+      "asrWordEnd": 31.64,
+      "mapping": "exact"
+    }
+  ],
+  "segments": [
+    {
+      "id": "cue-001",
+      "start": 0.0,
+      "end": 3.98,
+      "text": "第一，平台会把系统的复杂性藏起来。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-002",
+      "start": 3.98,
+      "end": 12.82,
+      "text": "低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-003",
+      "start": 12.82,
+      "end": 16.06,
+      "text": "这样做的好处，是普通人可以很快上手。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-004",
+      "start": 16.06,
+      "end": 20.82,
+      "text": "但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-005",
+      "start": 20.82,
+      "end": 29.66,
+      "text": "真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-006",
+      "start": 29.66,
+      "end": 31.808,
+      "text": "这才是系统真正复杂的地方。",
+      "source": "NarrationLock exact text"
+    }
+  ],
+  "cues": [
+    {
+      "id": "cue-001",
+      "start": 0.0,
+      "end": 3.98,
+      "text": "第一，平台会把系统的复杂性藏起来。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-002",
+      "start": 3.98,
+      "end": 12.82,
+      "text": "低代码、无代码，还有各种 AI 工作流工具，会把模型调用、API 连接、向量库和工具链调度，包装成按钮和节点。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-003",
+      "start": 12.82,
+      "end": 16.06,
+      "text": "这样做的好处，是普通人可以很快上手。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-004",
+      "start": 16.06,
+      "end": 20.82,
+      "text": "但问题也在这里：很多人会拖拽节点，就以为自己已经懂了系统架构。",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-005",
+      "start": 20.82,
+      "end": 29.66,
+      "text": "真正遇到报错时，你可能根本不知道问题出在哪里：是模型、接口、权限、数据，还是上下游关系和状态管理？",
+      "source": "NarrationLock exact text"
+    },
+    {
+      "id": "cue-006",
+      "start": 29.66,
+      "end": 31.808,
+      "text": "这才是系统真正复杂的地方。",
+      "source": "NarrationLock exact text"
+    }
+  ],
+  "generatedAt": "2026-07-22T10:57:29.179879+00:00"
+}

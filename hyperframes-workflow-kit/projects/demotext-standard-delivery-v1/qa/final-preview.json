@@ -1,0 +1,694 @@
+{
+  "schemaVersion": "autovideo-final-preview/v2",
+  "projectId": "demotext-standard-delivery-v1",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "approvedBy": "codex-autonomous-internal-review",
+  "approvedAt": "2026-07-18T22:23:47.612Z",
+  "previewStartedAt": "2026-07-18T22:23:38.264Z",
+  "composition": "hyperframes-workflow-kit/projects/demotext-standard-delivery-v1/production/hyperframes",
+  "compositionDigest": "008821f817c795c5e1b8d49bc3f8d6bb1ed6a1d74fc604c189797e8ca9a1c617",
+  "fileCount": 136,
+  "files": [
+    {
+      "path": ".hyperframes/anim-map/animation-map.json",
+      "bytes": 1073811,
+      "sha256": "b7ae80dbc000633338f900ecaa340d4d822332ba4b5da64542ed758244ad900c"
+    },
+    {
+      "path": ".thumbnails/v4_1784413201107_6763762e05bf50b0_png_index.html_1920x1080_1784412927247_119.77.png",
+      "bytes": 438915,
+      "sha256": "464ef7af9e6f3e7e79d4b77c4605a6df3463de56903ead104ce7813d485aa193"
+    },
+    {
+      "path": ".thumbnails/v4_6763762e05bf50b0_png_index.html_1920x1080_1784412927247_2.00.png",
+      "bytes": 442013,
+      "sha256": "3aa456eb49dda53c737390f30708eefee37503223f1e267a62622432396d2cb7"
+    },
+    {
+      "path": ".thumbnails/v4_6763762e05bf50b0_png_index.html_1920x1080_1784412927247_238.00.png",
+      "bytes": 402536,
+      "sha256": "2f5516ebadcdc34dea7a3b68f75b12a8684eae9e67c38ba8553d616ac1bd4242"
+    },
+    {
+      "path": ".thumbnails/v4_v3_0d02c2a0f414dcbf_jpeg_compositions_scenes_13-learning-route.html_1920x1080_1784412927667_11.71.jpg",
+      "bytes": 78983,
+      "sha256": "b3e67b82c967a2bc81589aeb981a0cf5a33efc71a4419643bdbe2e8a2c854fb7"
+    },
+    {
+      "path": ".thumbnails/v4_v3_11e28eeab0d8f157_jpeg_compositions_scenes_01-respect-warning.html_1920x1080_1784412928995_2.39.jpg",
+      "bytes": 85326,
+      "sha256": "0f447ad1b1ee83d83c3f3e5dfe7a71b4167c0bea6d41e9bdf79aa4a9fba00d9e"
+    },
+    {
+      "path": ".thumbnails/v4_v3_20aecda12c9b800d_jpeg_compositions_scenes_04-demo-not-system.html_1920x1080_1784412927649_8.72.jpg",
+      "bytes": 75377,
+      "sha256": "b5cf2503f7c3609681ebff2010e390336a9f3531a3dd9011572dd4dc37d7eed5"
+    },
+    {
+      "path": ".thumbnails/v4_v3_25db87833579cb2e_jpeg_compositions_scenes_11-patch-distortion.html_1920x1080_1784412928985_6.04.jpg",
+      "bytes": 80576,
+      "sha256": "a969ed86dcbd230bb42d2caa8914365d8bff013bd966a0ff4576ee788e23d14a"
+    },
+    {
+      "path": ".thumbnails/v4_v3_3037b6f06061003e_jpeg_compositions_scenes_02-community-claim.html_1920x1080_1784412928939_5.18.jpg",
+      "bytes": 80045,
+      "sha256": "9e17eb2a6750e56798d58383cb70445661af819faf67e304b34cc0748fe56a56"
+    },
+    {
+      "path": ".thumbnails/v4_v3_3f810b6236f053fa_jpeg_compositions_scenes_10-agent-engineering-checklist.html_1920x1080_1784412928340_11.54.jpg",
+      "bytes": 83695,
+      "sha256": "4a5610e076e1831a33958b479b9572a01fed2ed50f5fe574c11d8ccff05fa913"
+    },
+    {
+      "path": ".thumbnails/v4_v3_611f429d93262c16_jpeg_compositions_scenes_09-shortcut-misconception.html_1920x1080_1784412928350_11.66.jpg",
+      "bytes": 76616,
+      "sha256": "18f630b8a8d99f38dd9bb0e9d044011e090eaa92f99e6e7b4a78dc09ba842c52"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_104.41__caption-cue-018_0.jpg",
+      "bytes": 16228,
+      "sha256": "2b1196be164734cf0e610bacbdd9bc951a2f40109b3fa1acf50d388162b060ac"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_112.85__scene-08-stage_0.jpg",
+      "bytes": 117099,
+      "sha256": "90ec54ea2e009e1083a74f97cc3f2c92c6e1cd4ac45d8dea173ddad1d04e29b8"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_113.59__caption-cue-019_0.jpg",
+      "bytes": 34168,
+      "sha256": "e3a5515c43b2088cf82a688171c9e0955b93054fc3f784fa6c4dffb438bca6fa"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_12.09__caption-cue-003_0.jpg",
+      "bytes": 17842,
+      "sha256": "b057766118c851bbb8bc4a32e661ba8eaf752e3bdd6687c23d4512377f06b323"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_122.03__caption-cue-020_0.jpg",
+      "bytes": 12283,
+      "sha256": "29bf891541376d622cc19043555d705ec6d603bf14f664aa788d20c2ef6a9e26"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_125.55__caption-cue-021_0.jpg",
+      "bytes": 11184,
+      "sha256": "35d9316ea23bdcddf64ea294b65d25b56dda0a8dd8ffe21ad48cdff75da6873a"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_130.15__caption-cue-022_0.jpg",
+      "bytes": 18177,
+      "sha256": "79ac7a54cc2cb4601a8cc3458459f96890ffc4b140d937e8e3e246814d1d9d6d"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_135.84__caption-cue-023_0.jpg",
+      "bytes": 16467,
+      "sha256": "9dcecaf54e182f4bee997b1c4d4078ca9b44e48f3fc60b282b751aed9b02f38d"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_141.78__caption-cue-024_0.jpg",
+      "bytes": 18436,
+      "sha256": "cb838fc22389ca1adfec017df96bc0406919455dd7fa8f1572fff1c65c8a3e5f"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_146.16__caption-cue-025_0.jpg",
+      "bytes": 8787,
+      "sha256": "d1440884a78b8a528dc0db8ae9581e8b21ec9edf2390ec32609cb98fdb11c301"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_149.51__caption-cue-026_0.jpg",
+      "bytes": 15490,
+      "sha256": "ed1241fd621f3655e069da4ee2f3d987185e27e2fccf6cdd8166ee7c9e5bc2d1"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_15.94__caption-cue-004_0.jpg",
+      "bytes": 8974,
+      "sha256": "032bb8b1ca342a5a4bcf907909be11d74d863a97c51e7ca4b85a5f4da7335d2c"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_152.42__caption-cue-027_0.jpg",
+      "bytes": 7961,
+      "sha256": "5f7d050a4a89d0bedccb835d8bbf20f482079fca1ad8979fbaef5e43ff97ba4f"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_154.11__caption-cue-028_0.jpg",
+      "bytes": 8403,
+      "sha256": "ada29a4a8d79feb7a85c379daf1e9ea0aff32214777bf4a9e58c7dac24ee80c1"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_156.27__caption-cue-029_0.jpg",
+      "bytes": 9754,
+      "sha256": "fa6c7bedc6aab4f044ff4b479901e1a488168aab8ac5f0fc7ba7d23c957f99b8"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_158.53__caption-cue-030_0.jpg",
+      "bytes": 8570,
+      "sha256": "6c643d2c1e4b7ba7048a71e6c1fc828132c5105a02a6692cb2bdb845f0a5d454"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_160.76__caption-cue-031_0.jpg",
+      "bytes": 9318,
+      "sha256": "b1006f2ace60fe1615195588af1e7ca776edd2c731445466dbd9b91fed2b717c"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_163.05__caption-cue-032_0.jpg",
+      "bytes": 9624,
+      "sha256": "413a526f8f345cbc987354857535636a3a0e63b194db24ae5c09c6929e245d8b"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_165.66__caption-cue-033_0.jpg",
+      "bytes": 9954,
+      "sha256": "cdeed6c2a04897e5702167463fb4679a6de4db8f5475de7dbeb4db7bbebdd2c1"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_167.73__caption-cue-034_0.jpg",
+      "bytes": 7455,
+      "sha256": "54951694d3828a0606472c13a66bd0482c6223bf97606193e6021bdb8cb4e71b"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_169.36__caption-cue-035_0.jpg",
+      "bytes": 9164,
+      "sha256": "4f047c8e1f73cc8d2283848dc4090048f6cc71f7410ceabc283d7720e0daf5b5"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_171.91__caption-cue-036_0.jpg",
+      "bytes": 11275,
+      "sha256": "d6adfceae48e35fb79f1659281b331225f73f01efc49de21013fe79582af9e6b"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_175.50__caption-cue-037_0.jpg",
+      "bytes": 14162,
+      "sha256": "d0cee28f8ba66e78f4e52000d7a389bb77419eb5bdf87cbaa501400b972d7bfa"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_178.64__caption-cue-038_0.jpg",
+      "bytes": 8927,
+      "sha256": "dbb1205f15b8622c0c4c6bc8ac48fbc34259cd81da216a29274b688d31b90782"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_181.09__caption-cue-039_0.jpg",
+      "bytes": 11164,
+      "sha256": "5d27216f15677bf64a11688b450000eb918da345d5fd4c7886df2af7a9c28792"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_187.14__caption-cue-040_0.jpg",
+      "bytes": 23674,
+      "sha256": "894f8b2d71121c9ee875381b45820398517743123aa776bfc1a9b048b3ef7fac"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_195.63__caption-cue-041_0.jpg",
+      "bytes": 20718,
+      "sha256": "f209cb1dc3ff81ccf685b39ceaed595898a0d192dcffb63ff03c54777555cfec"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_2.39__caption-cue-001_0.jpg",
+      "bytes": 14973,
+      "sha256": "233c7f0df7758e6c9cc31eedf674d0bb3808fc0ffc3a36c82cae054912b32e24"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_2.39__scene-01-stage_0.jpg",
+      "bytes": 99262,
+      "sha256": "75597d7ed9694c0d3343c396f2af34fc1d2eb5591eea3f5605fefd3a2a51db36"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_204.23__caption-cue-042_0.jpg",
+      "bytes": 23669,
+      "sha256": "9b41644fed2d9b8c06e3c38eb5c68fa710dc5cba5948a48aa4005cd97f8ee9da"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_212.15__caption-cue-043_0.jpg",
+      "bytes": 19453,
+      "sha256": "582925ca8f6e3bfb3eed111c5698dca597b82fd7ff05001c0f504e45dd550627"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_218.05__caption-cue-044_0.jpg",
+      "bytes": 14416,
+      "sha256": "d68d176cf976814c1429b7a759414cbea4ef6392e4e38d23ab7d87e5fc229506"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_22.02__caption-cue-005_0.jpg",
+      "bytes": 30043,
+      "sha256": "1ee270cdfa0be29c3412d91fa0dfb17d54d9dc881fb42a81a53420d5706029bd"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_223.51__caption-cue-045_0.jpg",
+      "bytes": 15562,
+      "sha256": "5fedcf58285c05daa6e6403fefbfd1268c1b5ea711abb988a676f8016ec679e3"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_233.04__caption-cue-046_0.jpg",
+      "bytes": 34019,
+      "sha256": "30ba42d41da3222f215f9a45c359cec2a06ac3763063972556cb1d8aaf7cf86f"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_29.40__caption-cue-006_0.jpg",
+      "bytes": 12271,
+      "sha256": "f19186af8eac4882f4f64b3c5b6b1e9daa2730c32387c3c0d27428d510e5c824"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_35.12__caption-cue-007_0.jpg",
+      "bytes": 17416,
+      "sha256": "d6053173053797142f5b0e08dc3afe8b080dc1830cc77b4f65cb1e95f24c190e"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_41.74__caption-cue-008_0.jpg",
+      "bytes": 15819,
+      "sha256": "400029184ddc10d2c94a0dccbc3aefb52df8dc1c166f09c34dfe96efa3a775f6"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_47.04__caption-cue-009_0.jpg",
+      "bytes": 13049,
+      "sha256": "205ac7017d7f8f443d09180608dc3355d6a39e0f0944134eecfdb27ce8206357"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_50.95__caption-cue-010_0.jpg",
+      "bytes": 10674,
+      "sha256": "3daf5e867131d19fb1d61310b69efdf1a6b35bc30129caa651dfc6720dcec59b"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_57.12__caption-cue-011_0.jpg",
+      "bytes": 20772,
+      "sha256": "a7f0fc3112e0d6553ce3ca6f237b4bd90d0052557bdcebec78b0639da0c0ca0a"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_6.91__caption-cue-002_0.jpg",
+      "bytes": 14492,
+      "sha256": "29f5c6d6c06e2c4c460e6c9471a73a8591aeae330dcc99572374b378202ea925"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_64.62__caption-cue-012_0.jpg",
+      "bytes": 17546,
+      "sha256": "c6a8dc04ecb9830776750a2bac13ae7e83ccb9041002491437cb7647ef99b0fd"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_71.23__caption-cue-013_0.jpg",
+      "bytes": 21413,
+      "sha256": "fae395e8eb85a8a3dcc2ad5f5a436b856de6a56ffdb84ddb976e6cf1d5a0af5a"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_76.96__caption-cue-014_0.jpg",
+      "bytes": 11779,
+      "sha256": "9df179e81fa25be8a3a8eac4b36baf8607fc8bcf70f84b3c29fe219a8f9593c7"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_81.70__caption-cue-015_0.jpg",
+      "bytes": 16171,
+      "sha256": "b7b319de333257053d71e9d1789ef7369ed8751ed5587219198c0b5b7ee90592"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_90.95__caption-cue-016_0.jpg",
+      "bytes": 28003,
+      "sha256": "7a7209aaebfbba41a0adf595b9a2c29556aa015d14ab0a0965cdaef4c9aee060"
+    },
+    {
+      "path": ".thumbnails/v4_v3_6763762e05bf50b0_jpeg_index.html_1920x1080_1784412927247_99.63__caption-cue-017_0.jpg",
+      "bytes": 14403,
+      "sha256": "26fcf3ee6ea75b6d62c37714bbba23a65df0b8693e26660eebd6d23bb7c64169"
+    },
+    {
+      "path": ".thumbnails/v4_v3_71bc4acefac4957d_jpeg_compositions_scenes_03-confidence-illusion.html_1920x1080_1784412928813_6.08.jpg",
+      "bytes": 75361,
+      "sha256": "26a50b42b5b69059bd7bb773ee9d3729253c0c0b6eecba48aaeb90fff42a8361"
+    },
+    {
+      "path": ".thumbnails/v4_v3_89a7d7b1519e92e9_jpeg_compositions_scenes_06-hidden-complexity.html_1920x1080_1784412928412_12.78.jpg",
+      "bytes": 81801,
+      "sha256": "0d17ba0cfed22565de098d53939126470aab99e7bb7cf3391999c55628ec0b45"
+    },
+    {
+      "path": ".thumbnails/v4_v3_a43558a239ad10d8_jpeg_compositions_scenes_08-results-vs-maintenance.html_1920x1080_1784412927598_11.11.jpg",
+      "bytes": 81980,
+      "sha256": "5f66e2a5c6c90d45964dd89389564cb153804593673482006dd3dec07f428747"
+    },
+    {
+      "path": ".thumbnails/v4_v3_bb3a5b8ba0c1cb51_jpeg_compositions_scenes_12-maturity-ladder.html_1920x1080_1784412927850_4.70.jpg",
+      "bytes": 79801,
+      "sha256": "9988a1f07a37a664e52f2f24d4fe95d84aa1856ed6e1ec19e3f5c6e08103c5c5"
+    },
+    {
+      "path": ".thumbnails/v4_v3_c65db68c1f8e2299_jpeg_compositions_scenes_07-prototype-vs-product.html_1920x1080_1784412928431_13.42.jpg",
+      "bytes": 87247,
+      "sha256": "c932716f70e3d60f6d52bc7406b847855d49651794e087310c07a75548327077"
+    },
+    {
+      "path": ".thumbnails/v4_v3_d1688955e125e854_jpeg_compositions_scenes_14-value-close.html_1920x1080_1784412928395_12.32.jpg",
+      "bytes": 88772,
+      "sha256": "75bf10b85136e741d647fb292d901af9178e9c730c95da17a90a62a8ef93b469"
+    },
+    {
+      "path": ".thumbnails/v4_v3_e2f8f51b89ddff12_jpeg_compositions_scenes_05-five-reasons.html_1920x1080_1784412927620_2.30.jpg",
+      "bytes": 75386,
+      "sha256": "0e8f2855fec499390d119f00bf317b61c44d8160d2b6ac540b7bc7ee04403c23"
+    },
+    {
+      "path": ".waveform-cache/v2_assets_audio_narration.final.wav.json",
+      "bytes": 77578,
+      "sha256": "4904fdabd5b6efba7afa5f6ac1e2d80a41ce7abd56a916fd2849d1e601ae446e"
+    },
+    {
+      "path": "assets/audio/narration.final.wav",
+      "bytes": 23031310,
+      "sha256": "97eb104ae0155ffb66a431c3f7aa4101c51eda708b5a8e8da3150c893d048527"
+    },
+    {
+      "path": "assets/host/close.png",
+      "bytes": 305939,
+      "sha256": "528d78fcee1787de37df84e83b4c80e58e13c14bde1add5141738660f6994cdb"
+    },
+    {
+      "path": "assets/host/emphasis.png",
+      "bytes": 426512,
+      "sha256": "c18efd189ad6cbebbe4d697308cd4a35a65c10fe8bb5d71684f232fc41937b7c"
+    },
+    {
+      "path": "assets/host/encourage.png",
+      "bytes": 404031,
+      "sha256": "f2a56d2740d8da918a340abc9e97ab01f611bc1d1f1db8cf08dcc3581ccbb0fa"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "bytes": 390781,
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    },
+    {
+      "path": "assets/host/point-right.png",
+      "bytes": 353487,
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015"
+    },
+    {
+      "path": "assets/host/present.png",
+      "bytes": 420078,
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a"
+    },
+    {
+      "path": "assets/host/question.png",
+      "bytes": 382765,
+      "sha256": "cc5382f8cca215594b5833702b7238c9fe270f8438bc0fd7b6196c1ddd629ab3"
+    },
+    {
+      "path": "assets/host/read.png",
+      "bytes": 413640,
+      "sha256": "26fa061e9aa0467dd5ee1701ff09b6c0b08285240880c458a9b11a32af3b2388"
+    },
+    {
+      "path": "assets/host/think.png",
+      "bytes": 363756,
+      "sha256": "f9b6273bae7a4c3ee9310f29a97406a97b4f15ad4a0e2788279f709ebb4fc21c"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "bytes": 72779,
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.html",
+      "bytes": 8639,
+      "sha256": "8d14da23250bc430277d77f6a884f3d3809341c8c9d6802b19944adcc9b00bb7"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.motion.json",
+      "bytes": 413,
+      "sha256": "144cef0ff465bec284a7517b82d8ffd0335db7d3f3ab3f136e2dc7c87f538936"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.html",
+      "bytes": 9437,
+      "sha256": "b8f8e5c22d07f534965d00e296ab3e81ff70a0c2637c698e4447e980c810f9ac"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.motion.json",
+      "bytes": 414,
+      "sha256": "30ec6cb9465b4a24a9f8cab7fe697cbc9e1730575136684897a9a013497b2934"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.html",
+      "bytes": 9370,
+      "sha256": "418457f48edd37a3b5c1b2e6bf1b37acae6e9d9d3fae487978245f74abea0249"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.motion.json",
+      "bytes": 414,
+      "sha256": "f583c9b62de4f18aba5c34315733bbcd5af88477e14d6a360545d9282abcbfba"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.html",
+      "bytes": 10448,
+      "sha256": "e55d9d4202dc9457438f70c738a6a195624609c51cb5237a97f94d5ce06e5ebb"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.motion.json",
+      "bytes": 414,
+      "sha256": "3b2c78549491f7d67316521de156d19f6304d36a519be6e7cff2ea2aa7f5983e"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.html",
+      "bytes": 8696,
+      "sha256": "32b8d8b4b558304bb528f2b3f9eea637970576c72f5b02d5da0f32a98a5caece"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.motion.json",
+      "bytes": 412,
+      "sha256": "af61185c0d59e4c325c55e64a42a3a172c85ad9470699f4a7a31d76a18e007d6"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.html",
+      "bytes": 15765,
+      "sha256": "3ee86a00416feb42290f917b64deb6a428145a38a5c86cef8c4238fbd7b77926"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.motion.json",
+      "bytes": 414,
+      "sha256": "f4289deeeb38971fa0652455e7eedf3b55dc51a313e41c5ccaf30fd82de4df74"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.html",
+      "bytes": 10841,
+      "sha256": "5bc03856ce8b3d9be593ccda04bf82801bda51796dae45dbe972a0f18a6bbed0"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.motion.json",
+      "bytes": 414,
+      "sha256": "a596ceb4303cde69ef701916d93befd3e922c82928f4a328bdaa4e6be13b6b72"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.html",
+      "bytes": 10427,
+      "sha256": "4c0747bd5bfd381039aa3a1a905d3726a4976fa593e4d0414f7d005e44c1ec6b"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.motion.json",
+      "bytes": 414,
+      "sha256": "a52b052ee208b0433b214a66bcfe0f33f6975531dd6196c08b5546c5de2cf753"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.html",
+      "bytes": 11846,
+      "sha256": "ebc983abb50c402d8a307ea5844afb254322048fdd835fedbf4fa784501c8e39"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.motion.json",
+      "bytes": 414,
+      "sha256": "f347f054ebdeb688f46ee6508e3a026122c4e60e9bc3eb44e4f69b61cb931305"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.html",
+      "bytes": 15745,
+      "sha256": "cc94cb52683168524d9989443ce89747a8d76ea72da3be029fc73ab13d424d34"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.motion.json",
+      "bytes": 414,
+      "sha256": "ac0f3df2e7f70b72eb00ae1bbba7fdfeed4a9dcbdab4c6055bee45bfd0822ce2"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.html",
+      "bytes": 11181,
+      "sha256": "19493cdcc6d75f2bc86ebb74e39adcddea3732d88f9a1903a2c396c510e1a12d"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.motion.json",
+      "bytes": 414,
+      "sha256": "09a52b36cd8a80cccda1bba0dbeba758ca0a975ed5a19dd0ffd91f45f42787f6"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.html",
+      "bytes": 13215,
+      "sha256": "84ce8398fd6af8d4c260a830afe3665e250a7202114bf617d4e48d9a7cadc086"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.motion.json",
+      "bytes": 412,
+      "sha256": "d3b89fc5938630bcfe871ce2d4c2faa4701671c6a814faaeebb2fb68387c7843"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.html",
+      "bytes": 13611,
+      "sha256": "564d3fe32206ae453180e6b6b1fd91756d9ed3990d6089ebd98dcc7fd80fc565"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.motion.json",
+      "bytes": 414,
+      "sha256": "a1cf82d37f7711950db9c9a492572296c52275cf94d738184ef3dad4ea3933f1"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.html",
+      "bytes": 10522,
+      "sha256": "99f10b8ca4df596988049e15956c3b2e7ad701750abd8dc8e362712629d8480d"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.motion.json",
+      "bytes": 415,
+      "sha256": "c0345e1e853576c3043d93c69d282cd436a399003b1a89aacb83204f1174751e"
+    },
+    {
+      "path": "data/alignment.json",
+      "bytes": 205861,
+      "sha256": "d1b272b7d4246e6adb846da5830d7680efe79ee51f457577de66cd8eb886d405"
+    },
+    {
+      "path": "data/composition-build.json",
+      "bytes": 5928,
+      "sha256": "cdafd0898ac83c222f476455e8ae40dc3274a2ccc7ff9951c009acd97c5aa174"
+    },
+    {
+      "path": "data/graph-ir.json",
+      "bytes": 9992,
+      "sha256": "9a66c57ad4ec0114ab91745481f722837b89fc8b6dd01d46f90cf48af091a012"
+    },
+    {
+      "path": "data/overrides.json",
+      "bytes": 1368,
+      "sha256": "71917fce9302bc5638f712ab76bcc0972b954c85d3938cc22d88a3ced064f838"
+    },
+    {
+      "path": "data/production-manifest.json",
+      "bytes": 17134,
+      "sha256": "46e038cbf3417e42240626ee79f2e6080e2af04f3759041fb007ca7dc1063dab"
+    },
+    {
+      "path": "data/shot-manifest.json",
+      "bytes": 26971,
+      "sha256": "a87b9910be8116372e647b0ad833707eab0caf967024af304c8013e449cc2363"
+    },
+    {
+      "path": "data/source-map.json",
+      "bytes": 5245,
+      "sha256": "91e70bdf801609578f99a617edc20043b889d8efe3a14b68bc211b5a65148f63"
+    },
+    {
+      "path": "hyperframes.json",
+      "bytes": 318,
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    {
+      "path": "index.html",
+      "bytes": 23485,
+      "sha256": "751d4806e9b7b5211051c8c6a84e2b697ac4ffb8ddf2bd950b26f38ea4257861"
+    },
+    {
+      "path": "index.motion.json",
+      "bytes": 226,
+      "sha256": "251fda14d163f3dde5ca57100e61ab3d433d4a4a2467d82cd576baf455db2fd2"
+    },
+    {
+      "path": "meta.json",
+      "bytes": 93,
+      "sha256": "3266f978ac0f20347e99a8a93de8109628080143c0315cb84ffe3283cd18724f"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 652,
+      "sha256": "03e0b0f807e3b3031a64d4632f3be5f0d2a91b5f239069c6d13c9b26fca3555a"
+    },
+    {
+      "path": "package.json",
+      "bytes": 371,
+      "sha256": "b41db5f2ff2432253e843e767b40e2dcaea32fa1da97dc714cffc38ce5fbaeba"
+    },
+    {
+      "path": "snapshots/contact-sheet-1.jpg",
+      "bytes": 236193,
+      "sha256": "703745bc1881aa8b188e89c252dc70e349643b612285872f38c7ff8926fabf32"
+    },
+    {
+      "path": "snapshots/contact-sheet-2.jpg",
+      "bytes": 166928,
+      "sha256": "3e3f8d14cedfa344deaa1072f4f28f47ded53ce74fd23e5a7f2876fffca075e2"
+    },
+    {
+      "path": "snapshots/frame-00-at-2.39s.png",
+      "bytes": 428234,
+      "sha256": "885d5bc8c9a28d8487dbfd4e69714c6e90f16733d1fcaf187ff01db7cfeeceb4"
+    },
+    {
+      "path": "snapshots/frame-01-at-9.96s.png",
+      "bytes": 413536,
+      "sha256": "d297bde949b6428d0a9d4a1821717bf018eb26b0eabe56c0f206b002d2972c44"
+    },
+    {
+      "path": "snapshots/frame-02-at-21.22s.png",
+      "bytes": 399343,
+      "sha256": "ff3d8aa125282602e2ac6298c1606dfeb128df128146c41af8956e7bd19321c6"
+    },
+    {
+      "path": "snapshots/frame-03-at-36.02s.png",
+      "bytes": 412883,
+      "sha256": "2364fc95374c13588f0643a65f78756b6e17d17f3fd86b69b9114dcd97cf9058"
+    },
+    {
+      "path": "snapshots/frame-04-at-47.04s.png",
+      "bytes": 415441,
+      "sha256": "9d3e5ec39aad8baa5b02e9c62fff1d69d8aa9c11f669ce2850e183ecf77a8fb1"
+    },
+    {
+      "path": "snapshots/frame-05-at-62.12s.png",
+      "bytes": 409504,
+      "sha256": "5b768e4c38350d584452ae77ae69f8e85262d93914f13126e559eedaec41e8d8"
+    },
+    {
+      "path": "snapshots/frame-06-at-88.32s.png",
+      "bytes": 439826,
+      "sha256": "6074b11be699e849b1972e916ea98374bf6d7d3608f8a880bfd7d29585a8fa16"
+    },
+    {
+      "path": "snapshots/frame-07-at-112.85s.png",
+      "bytes": 437446,
+      "sha256": "e0bf099711eae6577dcf5d08305213b293cc56c56348eb4fc76ef1e9a8b88743"
+    },
+    {
+      "path": "snapshots/frame-08-at-135.62s.png",
+      "bytes": 379012,
+      "sha256": "1efa275d69ebc80e08db113f7230497aae68aa7c227bfbf2f1aaae2977605427"
+    },
+    {
+      "path": "snapshots/frame-09-at-158.82s.png",
+      "bytes": 420335,
+      "sha256": "30f5df47456c250f0ad55aa803ebff69ed167833b0dbbb3037daf9f8fc166643"
+    },
+    {
+      "path": "snapshots/frame-10-at-176.4s.png",
+      "bytes": 373422,
+      "sha256": "d6bab65f4a7a6977b1a1b3d8d0ee5bacf70cfcf2dc7b1eb7a2569b7e5be14a9a"
+    },
+    {
+      "path": "snapshots/frame-11-at-187.14s.png",
+      "bytes": 403782,
+      "sha256": "db73b83a080b48d46ad0ae6f8e6877b8748a632a3f4c530b5747cf6fc58026b3"
+    },
+    {
+      "path": "snapshots/frame-12-at-203.55s.png",
+      "bytes": 419352,
+      "sha256": "896ecc2d01b40070078e6f012e25882f26a412bfa968ef9ee0634db0305a6b5b"
+    },
+    {
+      "path": "snapshots/frame-13-at-227.58s.png",
+      "bytes": 415356,
+      "sha256": "39a904a065d44bc43a0f2d98c713208a3d6cb8322a10ebe1acdcdfdd796bbf94"
+    },
+    {
+      "path": "snapshots/frame-14-at-232.712s.png",
+      "bytes": 422932,
+      "sha256": "5e606f1642c715c65d6ec75a5b39627d0847f49cb024bb9eee3d9ad9d8e7a877"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+281:     await updateJobRecord(job.id, {status: 'running', startedAt: new Date().toISOString()});
+282:     try {
+283:       const result = await generateStage(job.projectId, job.stageId);
+284:       const latest = await getJobRecord(job.id);
+285:       if (latest?.status === 'cancel-requested') {
+286:         const message = 'Generation finished after cancellation was requested; its output was not promoted.';
+287:         await markStageFailed(job.projectId, job.stageId, message);
+288:         await updateJobRecord(job.id, {status: 'canceled', finishedAt: new Date().toISOString(), error: null});
+289:         await refreshBatchStatus(job.batchId);
+290:         return;
+291:       }
+292:       await markStageGenerated(job.projectId, job.stageId, result);
+293:       await updateJobRecord(job.id, {status: 'complete', finishedAt: new Date().toISOString(), result});

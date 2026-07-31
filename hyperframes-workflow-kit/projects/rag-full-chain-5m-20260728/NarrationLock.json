@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "autovideo-narration-lock/v1",
+  "projectId": "rag-full-chain-5m-20260728",
+  "sourcePath": "demo/RAG全链路口播-选型生产实践与提升.md",
+  "frozenPath": "input/narration.md",
+  "sourceSha256": "41d218d326099ce40fe43b0a1d3bd70925a94fea7819d16f90f6acc43ef55906",
+  "normalizedSha256": "aed7f4d3133193b252e1aaa4c2b87afac9b40b7ce9ade8fed38b65d6cd046527",
+  "normalization": "UTF-8 text; CRLF converted to LF; surrounding whitespace trimmed",
+  "createdAt": "2026-07-28T05:37:48.872Z",
+  "immutable": true
+}

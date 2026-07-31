@@ -1,0 +1,1224 @@
+{
+  "schemaVersion": "autovideo-subtitle-human-review/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "status": "ready-for-approval",
+  "bindings": {
+    "subtitleQa": {
+      "path": "qa/subtitle-qa.json",
+      "sha256": "39044a656bacfa8cc2ca73ad415b9613a6ee4d2af4921c898ddacd3053b63b80"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "e3193c3da74e3ef6d0ae0672ca352513cc8268ce1aafff5658574d84198fe572"
+    },
+    "alignmentValidation": {
+      "path": "captions/alignment-validation.json",
+      "sha256": "0aa997dc019d26c180feac207ee3c24d269e1b6f78d21da72f9fe4ac94ee4bdc"
+    },
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "588f0e3de8f92b647965ff1f3dbafdd1d27507a035c9a9763bb0011a62fddd8f"
+    },
+    "srt": {
+      "path": "captions/narration.zh-CN.srt",
+      "sha256": "650a9b9de704335ce7a65e86d204af6ba464d6c04e68f9225e16a5d7c249445e"
+    }
+  },
+  "checklist": {
+    "meaning": true,
+    "terminology": true,
+    "segmentation": true,
+    "punctuation": true,
+    "timingReadability": true
+  },
+  "cues": [
+    {
+      "id": "cue-001",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-002",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-003",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-004",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-005",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-006",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-007",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-008",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-009",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-010",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-011",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-012",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-013",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-014",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-015",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-016",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-017",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-018",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-019",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-020",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-021",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-022",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-023",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-024",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-025",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-026",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-027",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-028",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-029",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-030",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-031",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-032",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-033",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-034",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-035",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-036",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-037",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-038",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-039",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-040",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-041",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-042",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-043",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-044",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-045",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-046",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-047",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-048",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-049",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-050",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-051",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-052",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-053",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-054",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-055",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-056",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-057",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-058",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-059",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-060",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-061",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-062",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-063",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-064",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-065",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-066",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-067",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-068",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-069",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-070",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-071",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-072",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-073",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-074",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-075",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-076",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-077",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-078",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-079",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-080",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-081",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-082",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-083",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-084",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-085",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-086",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-087",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-088",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-089",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-090",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-091",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-092",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-093",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-094",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-095",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-096",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-097",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-098",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-099",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-100",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-101",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-102",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-103",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-104",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-105",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-106",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-107",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-108",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-109",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-110",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-111",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-112",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-113",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-114",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-115",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-116",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-117",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-118",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-119",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-120",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-121",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-122",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-123",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-124",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-125",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-126",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-127",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-128",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-129",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-130",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-131",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-132",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-133",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-134",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-135",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-136",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-137",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-138",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-139",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-140",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-141",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-142",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-143",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-144",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-145",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-146",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-147",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-148",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-149",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-150",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-151",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-152",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-153",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-154",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-155",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-156",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-157",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-158",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-159",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-160",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-161",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-162",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-163",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-164",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-165",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-166",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-167",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-168",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-169",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-170",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-171",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-172",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-173",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-174",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-175",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-176",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-177",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-178",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-179",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-180",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-181",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-182",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-183",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-184",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-185",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-186",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-187",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-188",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-189",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-190",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-191",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-192",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-193",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-194",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-195",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-196",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-197",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-198",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-199",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-200",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-201",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-202",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-203",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-204",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-205",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-206",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-207",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-208",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-209",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-210",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-211",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-212",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-213",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-214",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-215",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-216",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-217",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-218",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-219",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-220",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-221",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-222",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-223",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-224",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-225",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-226",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-227",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-228",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-229",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-230",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-231",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-232",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-233",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-234",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-235",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-236",
+      "decision": "accepted",
+      "note": ""
+    },
+    {
+      "id": "cue-237",
+      "decision": "accepted",
+      "note": ""
+    }
+  ],
+  "notes": "用户于当前会话明确授权：本次字幕暂时全部通过并进入下一步。",
+  "reviewedBy": "user-confirmed-batch-acceptance",
+  "updatedAt": "2026-07-28T15:48:56.044Z"
+}

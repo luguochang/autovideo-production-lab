@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "autovideo-route-gold-approval/v1",
+  "projectId": "PROJECT_ID",
+  "route": "script",
+  "status": "human-approved",
+  "review": {
+    "confirmedHuman": false,
+    "reviewerType": "human",
+    "reviewer": "REAL_HUMAN_NAME_REQUIRED",
+    "reviewedAt": null
+  },
+  "criteria": {
+    "inputAuthentic": true,
+    "outputQualityApproved": true,
+    "routeWorkflowValidated": true
+  },
+  "bindings": {
+    "realProject": {
+      "path": "receipts/scale/real-project.json",
+      "sha256": "SHA256_REQUIRED"
+    },
+    "qualityReview": {
+      "path": "review/route-gold-quality-review.json",
+      "sha256": "SHA256_REQUIRED"
+    }
+  }
+}

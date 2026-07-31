@@ -1,0 +1,11 @@
+{
+  "name": "e17-evidence-pivot-click-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.64 preview",
+    "check": "npx --yes hyperframes@0.7.64 check --strict --snapshots --samples 15 --at-transitions",
+    "snapshot": "npx --yes hyperframes@0.7.64 snapshot --at 0.8,2.56,3.1,3.5,5.76,6.4,6.9,7.7",
+    "render:probe": "npx --yes hyperframes@0.7.64 render --quality high --fps 30 --output renders/evidence-pivot-click-probe.mp4"
+  }
+}

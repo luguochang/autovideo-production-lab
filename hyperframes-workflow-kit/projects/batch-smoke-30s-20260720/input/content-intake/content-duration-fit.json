@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-content-duration-fit/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "spokenRewriteSha256": "1210a0c82f5d78b2e9fc4ae5e4f788c14a635303da95524846284f3254106f85",
+  "ruleVersion": "zh-cn-text-budget-v1",
+  "status": "passed",
+  "modifiesWording": false,
+  "targetSeconds": 30,
+  "toleranceSeconds": 3,
+  "budgetSeconds": 30,
+  "narrationGraphemes": 187,
+  "graphemesPerSecond": 6.233333333333333,
+  "acceptedDensityBand": {
+    "min": 3.2,
+    "max": 8
+  },
+  "sections": [
+    {
+      "id": "section-01",
+      "targetSeconds": 30,
+      "graphemes": 187,
+      "graphemesPerSecond": 6.233333333333333,
+      "passed": true
+    }
+  ],
+  "issues": [],
+  "assessedAt": "2026-07-22T09:06:48.116Z"
+}

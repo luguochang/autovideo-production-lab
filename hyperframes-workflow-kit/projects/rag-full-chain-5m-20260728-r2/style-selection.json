@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "narrationSha256": "bdf2796e70774507b7ccfc50a66f925ae6b51917f188b976a8c6bb4691cfcf94",
+  "baseStyleId": "modern-ip-host-explainer",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [],
+  "blueprints": [],
+  "motionRules": [
+    "svg-path-draw",
+    "viewport-change",
+    "card-morph-anchor",
+    "scale-swap-transition"
+  ],
+  "status": "approved",
+  "approvedBy": "user",
+  "notes": "Approved after still and motion-probe review.",
+  "receipts": [
+    {
+      "source": "style-library/styles/project/modern-ip-host-explainer/",
+      "kind": "project-local",
+      "license": "project-generated; user-provided character rights not implied"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

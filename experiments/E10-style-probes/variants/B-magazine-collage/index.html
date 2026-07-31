@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=720,height=1280" />
+    <meta name="hf-style" content="magazine-collage-cards" />
+    <title>平台把复杂性隐藏起来</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --ink: #2b2623;
+        --muted: #756b61;
+        --paper: #f7f0e4;
+        --paper-light: #fffaf0;
+        --paper-shadow: #d6c6b1;
+        --red: #c84d43;
+        --blue: #3f6e9d;
+        --green: #5b8a74;
+        --yellow: #f3d45c;
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+      }
+      @font-face {
+        font-family: "Noto Sans CJK SC";
+        src: local("Noto Sans CJK SC");
+      }
+
+      * { box-sizing: border-box; }
+      html, body {
+        width: 720px;
+        height: 1280px;
+        margin: 0;
+        overflow: hidden;
+        background: #e8ddce;
+        color: var(--ink);
+        font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+        letter-spacing: 0;
+      }
+
+      body { position: relative; }
+      #root {
+        position: relative;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+      }
+
+      #board {
+        position: absolute;
+        inset: 0;
+        width: 720px;
+        height: 1280px;
+        overflow: hidden;
+        background: var(--paper);
+        isolation: isolate;
+      }
+
+      #board::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.22;
+        background-image:
+          linear-gradient(90deg, rgba(120, 94, 70, 0.06) 1px, transparent 1px),
+          linear-gradient(rgba(120, 94, 70, 0.045) 1px, transparent 1px);
+        background-size: 34px 34px;
+        z-index: 0;
+      }
+
+      .eyebrow,
+      .index-mark,
+      .rail-note,
+      .paper-card,
+      .tape,
+      .routes,
+      .evidence-card,
+      .conclusion-stamp,
+      .footer-note {
+        position: absolute;
+      }
+
+      .eyebrow {
+        left: 48px;
+        top: 44px;
+        color: var(--muted);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .index-mark {
+        left: 48px;
+        top: 82px;
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border: 4px solid var(--red);
+        border-radius: 50%;
+        color: var(--red);
+        font-family: "Microsoft YaHei", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        transform: rotate(-8deg);
+      }
+
+      .rail-note {
+        right: 46px;
+        top: 56px;
+        width: 260px;
+        padding: 13px 16px;
+        border-left: 5px solid var(--blue);
+        color: var(--ink);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.35;
+        text-align: right;
+      }
+      .rail-note span { display: block; }
+
+      .paper-card {
+        left: 46px;
+        top: 228px;
+        width: 628px;
+        height: 366px;
+        padding: 36px 38px 30px;
+        border: 3px solid var(--ink);
+        border-radius: 5px;
+        background: var(--paper-light);
+        box-shadow: 12px 16px 0 var(--paper-shadow);
+        transform-origin: 22% 18%;
+        z-index: 8;
+      }
+
+      .paper-card::after {
+        content: "";
+        position: absolute;
+        right: 26px;
+        bottom: 22px;
+        width: 82px;
+        height: 8px;
+        background: var(--red);
+        transform: rotate(-3deg);
+      }
+
+      .surface-inner { position: relative; width: 100%; height: 100%; }
+      .paper-kicker {
+        margin: 0 0 16px;
+        color: var(--red);
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+      }
+
+      .paper-title {
+        max-width: 540px;
+        margin: 0;
+        font-size: 46px;
+        line-height: 1.17;
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .word-mark {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        z-index: 0;
+      }
+
+      .word-text { position: relative; z-index: 1; }
+
+      .marker-sweep {
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        bottom: 7px;
+        display: block;
+        width: calc(100% + 8px);
+        height: 22px;
+        border-radius: 4px;
+        background: var(--yellow);
+        opacity: 0.9;
+        transform: scaleX(0);
+        transform-origin: left center;
+        z-index: 0;
+      }
+
+      .paper-copy {
+        max-width: 526px;
+        margin: 18px 0 22px;
+        color: var(--muted);
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.46;
+      }
+
+      .node-row { display: flex; gap: 12px; flex-wrap: wrap; }
+      .mini-node {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 6px 13px;
+        border: 2px solid var(--ink);
+        border-radius: 3px;
+        background: #f2e3c5;
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .mini-node:nth-child(2) { background: #dfe9ef; }
+      .mini-node:nth-child(3) { background: #e5eedf; }
+      .mini-node:nth-child(4) { background: #f4deda; }
+
+      .tape {
+        width: 132px;
+        height: 40px;
+        border: 1px solid rgba(132, 107, 46, 0.22);
+        background: rgba(243, 212, 92, 0.78);
+        box-shadow: 0 2px 0 rgba(80, 65, 30, 0.12);
+        opacity: 1;
+        z-index: 14;
+      }
+      #tape-a { left: 154px; top: 206px; transform: rotate(-7deg); }
+      #tape-b { right: 120px; top: 584px; transform: rotate(8deg); }
+
+      .routes {
+        left: 0;
+        top: 0;
+        width: 720px;
+        height: 1280px;
+        overflow: visible;
+        z-index: 3;
+        pointer-events: none;
+      }
+      .route {
+        fill: none;
+        stroke: var(--blue);
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        opacity: 0.82;
+      }
+      #route-api, #route-tools { stroke: var(--green); }
+
+      .evidence-card {
+        width: 286px;
+        height: 158px;
+        padding: 20px 22px 18px;
+        border: 3px solid var(--ink);
+        border-radius: 4px;
+        background: #fffdf7;
+        box-shadow: 9px 10px 0 rgba(184, 161, 134, 0.68);
+        z-index: 11;
+        transform-origin: 20% 20%;
+      }
+      #evidence-model { left: 42px; top: 738px; transform: rotate(-2.8deg); }
+      #evidence-api { right: 42px; top: 738px; transform: rotate(2.6deg); }
+      #evidence-vector { left: 42px; top: 932px; transform: rotate(2.4deg); }
+      #evidence-tools { right: 42px; top: 932px; transform: rotate(-2deg); }
+      .evidence-label {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+      }
+      .evidence-title {
+        margin: 0;
+        font-size: 32px;
+        line-height: 1.15;
+        font-weight: 900;
+      }
+      .evidence-detail {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 19px;
+        font-weight: 700;
+      }
+      .evidence-card::before {
+        content: "";
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        width: 26px;
+        height: 26px;
+        border: 3px solid var(--red);
+        border-radius: 50%;
+      }
+      #evidence-api::before, #evidence-tools::before { border-color: var(--green); }
+
+      .conclusion-stamp {
+        left: 252px;
+        top: 1108px;
+        width: 216px;
+        min-height: 78px;
+        display: grid;
+        place-items: center;
+        padding: 12px 18px;
+        border: 4px solid var(--red);
+        color: var(--red);
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1.1;
+        text-align: center;
+        transform: rotate(-4deg);
+        z-index: 16;
+      }
+
+      .footer-note {
+        left: 48px;
+        bottom: 34px;
+        color: var(--muted);
+        font-size: 21px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="7.242254"
+      data-width="720"
+      data-height="1280"
+      data-fps="30"
+    >
+      <audio
+        id="narration"
+        src="assets/narration.wav"
+        data-start="0"
+        data-duration="7.242254"
+        data-track-index="9"
+        data-volume="1"
+      ></audio>
+
+      <section id="board" class="clip" data-start="0" data-duration="7.242254" data-track-index="0" data-layout-allow-overlap>
+        <p id="eyebrow" class="eyebrow">系统拆解 · 01</p>
+        <div id="index-mark" class="index-mark" aria-label="第一">01</div>
+        <p id="rail-note" class="rail-note"><span>表面是按钮</span><span>底层仍是一套系统</span></p>
+
+        <svg class="routes" viewBox="0 0 720 1280" aria-hidden="true">
+          <path id="route-model" class="route" pathLength="1" d="M 186 562 C 175 624 160 680 170 738" />
+          <path id="route-api" class="route" pathLength="1" d="M 474 562 C 505 620 526 680 526 738" />
+          <path id="route-vector" class="route" pathLength="1" d="M 264 572 C 244 700 186 820 176 932" />
+          <path id="route-tools" class="route" pathLength="1" d="M 430 572 C 490 700 536 820 524 932" />
+        </svg>
+
+        <article id="surface-card" class="paper-card" data-layout-allow-overlap>
+          <div id="surface-inner" class="surface-inner">
+            <p class="paper-kicker">平台的“简单”</p>
+            <h1 class="paper-title">第一，平台把系统的复杂性给<span class="word-mark"><span id="marker-sweep" class="marker-sweep"></span><span class="word-text">隐藏</span></span>起来。</h1>
+            <p class="paper-copy">低代码、无代码、AI 平台和工作流工具，把底层能力收进看得见的按钮与节点。</p>
+            <div class="node-row" aria-label="表层工具">
+              <span class="mini-node">低代码</span>
+              <span class="mini-node">无代码</span>
+              <span class="mini-node">AI 平台</span>
+              <span class="mini-node">工作流工具</span>
+            </div>
+          </div>
+        </article>
+
+        <div id="tape-a" class="tape" data-layout-allow-overlap aria-hidden="true"></div>
+        <div id="tape-b" class="tape" data-layout-allow-overlap aria-hidden="true"></div>
+
+        <article id="evidence-model" class="evidence-card" data-layout-allow-overlap>
+          <p class="evidence-label">证据 01</p>
+          <h2 class="evidence-title">模型调用</h2>
+          <p class="evidence-detail">输入 · 推理 · 输出</p>
+        </article>
+        <article id="evidence-api" class="evidence-card" data-layout-allow-overlap>
+          <p class="evidence-label">证据 02</p>
+          <h2 class="evidence-title">API 连接</h2>
+          <p class="evidence-detail">请求 · 鉴权 · 返回</p>
+        </article>
+        <article id="evidence-vector" class="evidence-card" data-layout-allow-overlap>
+          <p class="evidence-label">证据 03</p>
+          <h2 class="evidence-title">向量库</h2>
+          <p class="evidence-detail">检索 · 召回 · 上下文</p>
+        </article>
+        <article id="evidence-tools" class="evidence-card" data-layout-allow-overlap>
+          <p class="evidence-label">证据 04</p>
+          <h2 class="evidence-title">工具链</h2>
+          <p class="evidence-detail">编排 · 调度 · 状态</p>
+        </article>
+
+        <div id="conclusion-stamp" class="conclusion-stamp" data-layout-allow-overlap>复杂性仍在</div>
+        <p class="footer-note">看见按钮，不等于看见系统。</p>
+      </section>
+    </main>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.from("#eyebrow", { x: -24, opacity: 0, duration: 0.34, ease: "power2.out" }, 0.08);
+      tl.from("#index-mark", { x: -28, y: -8, opacity: 0, duration: 0.42, ease: "back.out(1.18)" }, 0.16);
+      tl.from("#rail-note", { x: 26, opacity: 0, duration: 0.38, ease: "power2.out" }, 0.28);
+
+      tl.from("#surface-card", {
+        x: -520,
+        y: 32,
+        rotation: -9,
+        opacity: 0,
+        duration: 0.72,
+        ease: "power3.out"
+      }, 0.38);
+      tl.from("#surface-inner", { y: 20, opacity: 0, duration: 0.42, ease: "power2.out" }, 0.82);
+      tl.from("#tape-a", { y: -28, rotation: -15, opacity: 0, duration: 0.34, ease: "power2.out" }, 1.05);
+      tl.to("#marker-sweep", { scaleX: 1, duration: 0.5, ease: "power2.out" }, 1.42);
+      tl.from("#tape-b", { y: -24, rotation: 16, opacity: 0, duration: 0.32, ease: "power2.out" }, 1.78);
+
+      // Anchor the old surface while the hidden layers are exposed.
+      tl.to("#surface-card", { x: -8, y: 5, scale: 0.93, rotation: -1.6, duration: 0.7, ease: "power2.inOut" }, 2.12);
+      tl.to("#surface-inner", { opacity: 0.6, duration: 0.46, ease: "power1.out" }, 2.12);
+
+      tl.to("#route-model", { strokeDashoffset: 0, duration: 0.52, ease: "power2.out" }, 2.28);
+      tl.from("#evidence-model", { x: -74, y: -30, rotation: -8, opacity: 0, duration: 0.52, ease: "power2.out" }, 2.34);
+      tl.to("#route-api", { strokeDashoffset: 0, duration: 0.52, ease: "power2.out" }, 2.78);
+      tl.from("#evidence-api", { x: 76, y: -30, rotation: 8, opacity: 0, duration: 0.52, ease: "power2.out" }, 2.84);
+      tl.to("#route-vector", { strokeDashoffset: 0, duration: 0.56, ease: "power2.out" }, 3.34);
+      tl.from("#evidence-vector", { x: -70, y: 34, rotation: 8, opacity: 0, duration: 0.54, ease: "power2.out" }, 3.4);
+      tl.to("#route-tools", { strokeDashoffset: 0, duration: 0.56, ease: "power2.out" }, 3.92);
+      tl.from("#evidence-tools", { x: 70, y: 34, rotation: -8, opacity: 0, duration: 0.54, ease: "power2.out" }, 3.98);
+
+      tl.to(".evidence-card", { y: "-=5", duration: 0.24, yoyo: true, repeat: 1, ease: "power1.inOut" }, 5.18);
+      tl.to("#surface-card", { opacity: 0.76, duration: 0.42, ease: "power1.out" }, 5.48);
+      tl.from("#conclusion-stamp", { y: 22, opacity: 0, rotation: -10, duration: 0.5, ease: "back.out(1.12)" }, 6.18);
+      tl.to("#conclusion-stamp", { scale: 1.04, duration: 0.22, yoyo: true, repeat: 1, ease: "power1.inOut" }, 6.72);
+
+      window.__timelines.main = tl;
+    </script>
+  </body>
+</html>

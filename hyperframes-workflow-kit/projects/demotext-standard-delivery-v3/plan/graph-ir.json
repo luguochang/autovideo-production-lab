@@ -1,0 +1,703 @@
+{
+  "schemaVersion": "autovideo-graph-ir/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "purpose": "Stable process nodes and edges for HyperFrames scene generation.",
+  "globalPolicy": {
+    "maxActiveNodesPerState": 3,
+    "defaultStateTransition": "replace",
+    "completedGroupTreatment": "compact",
+    "allowedMotionRules": [
+      "viewport-change",
+      "svg-path-draw",
+      "scale-swap-transition",
+      "card-morph-anchor"
+    ],
+    "forbidGraphKinds": [
+      "chart",
+      "stat",
+      "count"
+    ],
+    "excludedNumericClaims": [
+      "99%",
+      "90%",
+      "30K"
+    ],
+    "numericClaimReason": "Creator opinions are not verified measurements and may not be graphed."
+  },
+  "graphs": [
+    {
+      "id": "graph-hidden-complexity",
+      "sceneId": "scene-06",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-010",
+        "cue-011",
+        "cue-012",
+        "cue-013"
+      ],
+      "nodes": [
+        {
+          "id": "hc-platform",
+          "label": "低代码 / AI平台",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        },
+        {
+          "id": "hc-button",
+          "label": "按钮和节点",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        },
+        {
+          "id": "hc-model-api",
+          "label": "模型调用 / API连接",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        },
+        {
+          "id": "hc-vector-tools",
+          "label": "向量库 / 工具链调度",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        },
+        {
+          "id": "hc-error-core",
+          "label": "模型 / 接口 / 权限 / 数据",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-013"
+          ]
+        },
+        {
+          "id": "hc-error-system",
+          "label": "上下游 / 状态管理",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-013"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "hc-e01",
+          "from": "hc-platform",
+          "to": "hc-button",
+          "relation": "packages-as"
+        },
+        {
+          "id": "hc-e02",
+          "from": "hc-button",
+          "to": "hc-model-api",
+          "relation": "hides"
+        },
+        {
+          "id": "hc-e03",
+          "from": "hc-button",
+          "to": "hc-vector-tools",
+          "relation": "hides"
+        },
+        {
+          "id": "hc-e04",
+          "from": "hc-model-api",
+          "to": "hc-error-core",
+          "relation": "failure-source"
+        },
+        {
+          "id": "hc-e05",
+          "from": "hc-vector-tools",
+          "to": "hc-error-system",
+          "relation": "failure-source"
+        }
+      ],
+      "states": [
+        {
+          "id": "hc-state-01",
+          "cueIds": [
+            "cue-010"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "hc-platform",
+            "hc-button"
+          ],
+          "activeEdgeIds": [
+            "hc-e01"
+          ]
+        },
+        {
+          "id": "hc-state-02",
+          "cueIds": [
+            "cue-011"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "hc-button",
+            "hc-model-api",
+            "hc-vector-tools"
+          ],
+          "activeEdgeIds": [
+            "hc-e02",
+            "hc-e03"
+          ],
+          "compactedNodeIds": [
+            "hc-platform"
+          ]
+        },
+        {
+          "id": "hc-state-03",
+          "cueIds": [
+            "cue-012"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "hc-platform",
+            "hc-button"
+          ],
+          "activeEdgeIds": [
+            "hc-e01"
+          ],
+          "compactedNodeIds": [
+            "hc-model-api",
+            "hc-vector-tools"
+          ]
+        },
+        {
+          "id": "hc-state-04",
+          "cueIds": [
+            "cue-013"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "hc-model-api",
+            "hc-error-core",
+            "hc-error-system"
+          ],
+          "activeEdgeIds": [
+            "hc-e04"
+          ],
+          "compactedNodeIds": [
+            "hc-button",
+            "hc-vector-tools"
+          ]
+        }
+      ],
+      "terminalStateId": "hc-state-04",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change",
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "id": "graph-agent-engineering",
+      "sceneId": "scene-10",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-026",
+        "cue-027",
+        "cue-028",
+        "cue-029",
+        "cue-030",
+        "cue-031",
+        "cue-032",
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "nodes": [
+        {
+          "id": "ae-boundary",
+          "label": "任务边界",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-026"
+          ]
+        },
+        {
+          "id": "ae-failure",
+          "label": "失败处理",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-027"
+          ]
+        },
+        {
+          "id": "ae-context",
+          "label": "上下文",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-028"
+          ]
+        },
+        {
+          "id": "ae-output",
+          "label": "输出可靠性",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-029"
+          ]
+        },
+        {
+          "id": "ae-tools",
+          "label": "工具调用失败",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-030"
+          ]
+        },
+        {
+          "id": "ae-data",
+          "label": "数据可信",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-031"
+          ]
+        },
+        {
+          "id": "ae-permission",
+          "label": "权限与安全",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-032"
+          ]
+        },
+        {
+          "id": "ae-observe",
+          "label": "日志 / 监控 / 测试 / 回滚",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-033"
+          ]
+        },
+        {
+          "id": "ae-cost",
+          "label": "成本可控",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-034"
+          ]
+        },
+        {
+          "id": "ae-maintain",
+          "label": "他人可维护",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-035"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "ae-e01",
+          "from": "ae-boundary",
+          "to": "ae-failure",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e02",
+          "from": "ae-failure",
+          "to": "ae-context",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e03",
+          "from": "ae-context",
+          "to": "ae-output",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e04",
+          "from": "ae-output",
+          "to": "ae-tools",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e05",
+          "from": "ae-tools",
+          "to": "ae-data",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e06",
+          "from": "ae-data",
+          "to": "ae-permission",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e07",
+          "from": "ae-permission",
+          "to": "ae-observe",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e08",
+          "from": "ae-observe",
+          "to": "ae-cost",
+          "relation": "requires"
+        },
+        {
+          "id": "ae-e09",
+          "from": "ae-cost",
+          "to": "ae-maintain",
+          "relation": "enables"
+        }
+      ],
+      "states": [
+        {
+          "id": "ae-state-01",
+          "cueIds": [
+            "cue-026",
+            "cue-027",
+            "cue-028"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "ae-boundary",
+            "ae-failure",
+            "ae-context"
+          ],
+          "activeEdgeIds": [
+            "ae-e01",
+            "ae-e02"
+          ]
+        },
+        {
+          "id": "ae-state-02",
+          "cueIds": [
+            "cue-029",
+            "cue-030",
+            "cue-031"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "ae-output",
+            "ae-tools",
+            "ae-data"
+          ],
+          "activeEdgeIds": [
+            "ae-e04",
+            "ae-e05"
+          ],
+          "compactedNodeIds": [
+            "ae-boundary",
+            "ae-failure",
+            "ae-context"
+          ]
+        },
+        {
+          "id": "ae-state-03",
+          "cueIds": [
+            "cue-032",
+            "cue-033",
+            "cue-034"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "ae-permission",
+            "ae-observe",
+            "ae-cost"
+          ],
+          "activeEdgeIds": [
+            "ae-e07",
+            "ae-e08"
+          ],
+          "compactedNodeIds": [
+            "ae-output",
+            "ae-tools",
+            "ae-data"
+          ]
+        },
+        {
+          "id": "ae-state-04",
+          "cueIds": [
+            "cue-035"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "ae-maintain"
+          ],
+          "activeEdgeIds": [],
+          "compactedNodeIds": [
+            "ae-permission",
+            "ae-observe",
+            "ae-cost"
+          ]
+        }
+      ],
+      "terminalStateId": "ae-state-04",
+      "motionRules": [
+        "viewport-change",
+        "svg-path-draw",
+        "card-morph-anchor"
+      ]
+    },
+    {
+      "id": "graph-maturity-ladder",
+      "sceneId": "scene-12",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-040"
+      ],
+      "nodes": [
+        {
+          "id": "ml-toy",
+          "label": "玩具",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-040"
+          ]
+        },
+        {
+          "id": "ml-tool",
+          "label": "工具",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-040"
+          ]
+        },
+        {
+          "id": "ml-product",
+          "label": "产品",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-040"
+          ]
+        },
+        {
+          "id": "ml-infrastructure",
+          "label": "业务基础设施",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-040"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "ml-e01",
+          "from": "ml-toy",
+          "to": "ml-tool",
+          "relation": "matures-to"
+        },
+        {
+          "id": "ml-e02",
+          "from": "ml-tool",
+          "to": "ml-product",
+          "relation": "matures-to"
+        },
+        {
+          "id": "ml-e03",
+          "from": "ml-product",
+          "to": "ml-infrastructure",
+          "relation": "matures-to"
+        }
+      ],
+      "states": [
+        {
+          "id": "ml-state-01",
+          "cueIds": [
+            "cue-040"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "ml-toy",
+            "ml-tool"
+          ],
+          "activeEdgeIds": [
+            "ml-e01"
+          ]
+        },
+        {
+          "id": "ml-state-02",
+          "cueIds": [
+            "cue-040"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "ml-tool",
+            "ml-product"
+          ],
+          "activeEdgeIds": [
+            "ml-e02"
+          ],
+          "compactedNodeIds": [
+            "ml-toy"
+          ]
+        },
+        {
+          "id": "ml-state-03",
+          "cueIds": [
+            "cue-040"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "ml-product",
+            "ml-infrastructure"
+          ],
+          "activeEdgeIds": [
+            "ml-e03"
+          ],
+          "compactedNodeIds": [
+            "ml-tool"
+          ]
+        }
+      ],
+      "terminalStateId": "ml-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-learning-route",
+      "sceneId": "scene-13",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-041",
+        "cue-042",
+        "cue-043"
+      ],
+      "nodes": [
+        {
+          "id": "lr-serious",
+          "label": "真正地学起来",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-041"
+          ]
+        },
+        {
+          "id": "lr-foundation",
+          "label": "基础知识点",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-042"
+          ],
+          "generationReceipt": "VIDEO_TASK.md#Beat-Plan"
+        },
+        {
+          "id": "lr-agent-mcp",
+          "label": "Agent集群 / MCP",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-042"
+          ]
+        },
+        {
+          "id": "lr-project",
+          "label": "项目实践",
+          "textType": "generated-summary",
+          "sourceCueIds": [
+            "cue-042"
+          ]
+        },
+        {
+          "id": "lr-online-product",
+          "label": "能够上线的产品",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-043"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "lr-e01",
+          "from": "lr-serious",
+          "to": "lr-foundation",
+          "relation": "starts-with"
+        },
+        {
+          "id": "lr-e02",
+          "from": "lr-foundation",
+          "to": "lr-agent-mcp",
+          "relation": "includes"
+        },
+        {
+          "id": "lr-e03",
+          "from": "lr-agent-mcp",
+          "to": "lr-project",
+          "relation": "applies-in"
+        },
+        {
+          "id": "lr-e04",
+          "from": "lr-project",
+          "to": "lr-online-product",
+          "relation": "enables"
+        }
+      ],
+      "states": [
+        {
+          "id": "lr-state-01",
+          "cueIds": [
+            "cue-041"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "lr-serious",
+            "lr-foundation"
+          ],
+          "activeEdgeIds": [
+            "lr-e01"
+          ]
+        },
+        {
+          "id": "lr-state-02",
+          "cueIds": [
+            "cue-042"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "lr-foundation",
+            "lr-agent-mcp",
+            "lr-project"
+          ],
+          "activeEdgeIds": [
+            "lr-e02",
+            "lr-e03"
+          ],
+          "compactedNodeIds": [
+            "lr-serious"
+          ]
+        },
+        {
+          "id": "lr-state-03",
+          "cueIds": [
+            "cue-043"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "lr-project",
+            "lr-online-product"
+          ],
+          "activeEdgeIds": [
+            "lr-e04"
+          ],
+          "compactedNodeIds": [
+            "lr-agent-mcp"
+          ]
+        }
+      ],
+      "terminalStateId": "lr-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change",
+        "card-morph-anchor"
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-reference-fallback",
+    "referenceProjectId": "demotext-standard-delivery-v2",
+    "reason": "visual-plan structured adapter failed with upstream 502 after retry timeout.",
+    "referenceArtifactsAreStructureOnly": true
+  }
+}

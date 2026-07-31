@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "autovideo-spoken-rewrite/v1",
+  "projectId": "batch-smoke-20260720",
+  "sourceRegisterSha256": "9d5420c2d88141ef4db3525f6acba5071604737746c0afdff6693a5cda70c4a1",
+  "suitabilitySha256": "87c45d93d6e501b3078fa56f2c89ea2510b808f75994c4d738559659546253fc",
+  "evidenceSha256": "1b9f5b9cf6af4ac84673caed5a845e21451fb6910f2e735b4e3e400c05936898",
+  "title": "会拖拽节点，不等于懂系统",
+  "language": "zh-CN",
+  "sections": [
+    {
+      "id": "section-01",
+      "kind": "sourced",
+      "targetSeconds": 6,
+      "narration": "现在很多低代码、无代码和 AI 工作流平台，会把模型调用、API 连接、向量库和工具调度，包装成按钮和节点。",
+      "claimIds": [
+        "claim-hidden-complexity"
+      ],
+      "sourceIds": [
+        "source-001-ef5f13d3"
+      ],
+      "framing": "这是对原稿创作者判断的口语化转述，不声称覆盖所有平台。",
+      "onscreen": [
+        {
+          "text": "复杂系统 → 按钮与节点",
+          "kind": "generated_summary"
+        }
+      ]
+    },
+    {
+      "id": "section-02",
+      "kind": "creator-opinion",
+      "targetSeconds": 6,
+      "narration": "这样做的好处，是普通人更容易上手；但在我看来，会拖拽节点，远远不等于真正理解系统。",
+      "claimIds": [
+        "claim-drag-drop-is-not-understanding"
+      ],
+      "sourceIds": [
+        "source-001-ef5f13d3"
+      ],
+      "framing": "明确使用“在我看来”标记创作者观点，避免包装成外部统计结论。",
+      "onscreen": [
+        {
+          "text": "会上手 ≠ 懂系统",
+          "kind": "generated_summary"
+        }
+      ]
+    },
+    {
+      "id": "section-03",
+      "kind": "transition",
+      "targetSeconds": 4,
+      "narration": "所以，真正要练的不是拖得更快，而是看懂系统背后的关系。",
+      "claimIds": [],
+      "sourceIds": [],
+      "framing": "结构性收束，不新增事实 claim。",
+      "onscreen": [
+        {
+          "text": "看懂关系，再谈效率",
+          "kind": "generated_summary"
+        }
+      ]
+    }
+  ],
+  "reviewNotes": [
+    "外部平台案例和统计证据尚未提供；保留创作者观点 framing。",
+    "这是待人工确认的口播草稿，不是已批准 NarrationLock。"
+  ],
+  "generatedAt": "2026-07-20T12:32:00.000Z"
+}

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>A6 Handdrawn Workflow Tutorial</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Noto Sans SC";
+        src: local("Noto Sans SC");
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+      }
+
+      :root {
+        --paper: #fbfaf4;
+        --ink: #151515;
+        --cyan: #ddf4f5;
+        --red: #d81e45;
+        --muted: #64615b;
+        --line: #151515;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--paper);
+      }
+
+      body {
+        color: var(--ink);
+        font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+        letter-spacing: 0;
+      }
+
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--paper);
+      }
+
+      #board-clip,
+      #caption-clip {
+        position: absolute;
+        inset: 0;
+      }
+
+      #paper-fill {
+        position: absolute;
+        inset: 0;
+        background-color: var(--paper);
+        background-image:
+          repeating-linear-gradient(0deg, rgba(21, 21, 21, 0.018) 0, rgba(21, 21, 21, 0.018) 1px, transparent 1px, transparent 5px),
+          repeating-linear-gradient(90deg, rgba(216, 30, 69, 0.012) 0, rgba(216, 30, 69, 0.012) 1px, transparent 1px, transparent 7px),
+          radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.55), transparent 34%),
+          radial-gradient(circle at 90% 92%, rgba(216, 30, 69, 0.035), transparent 28%);
+      }
+
+      #paper-fill::after {
+        content: "";
+        position: absolute;
+        inset: 24px;
+        border: 2px solid rgba(21, 21, 21, 0.12);
+        pointer-events: none;
+      }
+
+      #world {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 26800px;
+        height: 3600px;
+        transform-origin: 0 0;
+        will-change: transform;
+      }
+
+      .board-heading {
+        position: absolute;
+        left: 460px;
+        top: 520px;
+        width: 1080px;
+        color: var(--ink);
+      }
+
+      .board-heading .eyebrow {
+        display: inline-block;
+        margin: 0 0 22px;
+        padding: 8px 18px;
+        border: 3px solid var(--ink);
+        border-radius: 4px;
+        background: var(--cyan);
+        font-size: 24px;
+        font-weight: 800;
+        transform: rotate(-1deg);
+      }
+
+      .board-heading h1 {
+        margin: 0;
+        max-width: 980px;
+        font-size: 88px;
+        line-height: 1.06;
+        font-weight: 900;
+      }
+
+      .board-heading h1 span,
+      .board-stamp span {
+        display: block;
+      }
+
+      .board-heading .underline {
+        width: 460px;
+        height: 13px;
+        margin-top: 24px;
+        border-radius: 8px;
+        background: var(--red);
+        transform: rotate(-1.5deg) scaleX(0);
+        transform-origin: left center;
+      }
+
+      .board-heading .note {
+        margin-top: 24px;
+        font-size: 30px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .board-stamp {
+        position: absolute;
+        left: 1500px;
+        top: 570px;
+        width: 240px;
+        height: 150px;
+        display: grid;
+        place-items: center;
+        border: 4px solid var(--red);
+        color: var(--red);
+        font-size: 28px;
+        font-weight: 900;
+        text-align: center;
+        transform: rotate(7deg) scale(0.8);
+        opacity: 0;
+      }
+
+      .routes {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        pointer-events: none;
+      }
+
+      .route {
+        fill: none;
+        stroke: var(--ink);
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        opacity: 0.72;
+      }
+
+      .route.route-active {
+        stroke: var(--red);
+        stroke-width: 9;
+      }
+
+      .route-dot {
+        fill: var(--paper);
+        stroke: var(--ink);
+        stroke-width: 6;
+        opacity: 0;
+      }
+
+      .station {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(28px);
+        transform-origin: center center;
+      }
+
+      .station-panel {
+        position: relative;
+        width: 100%;
+        min-height: 470px;
+        padding: 34px 38px 38px;
+        border: 4px solid var(--ink);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 14px 16px 0 rgba(21, 21, 21, 0.12);
+      }
+
+      .station-panel::after {
+        content: "";
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 14px;
+        height: 7px;
+        border-radius: 8px;
+        background: var(--ink);
+        opacity: 0.32;
+        transform: rotate(-1deg);
+      }
+
+      .station-kicker {
+        margin: 0 0 12px;
+        color: var(--ink);
+        font-size: 24px;
+        font-weight: 900;
+      }
+
+      .station-title {
+        margin: 0;
+        max-width: 100%;
+        font-size: 56px;
+        line-height: 1.12;
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .station-subtitle {
+        margin: 16px 0 24px;
+        color: var(--muted);
+        font-size: 27px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .station-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .station-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .node-card {
+        position: relative;
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        padding: 16px 18px;
+        border: 3px solid var(--ink);
+        border-radius: 7px;
+        background: var(--cyan);
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 800;
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      .node-card.paper {
+        background: #fff;
+      }
+
+      .node-card.red {
+        color: #fff;
+        background: var(--red);
+        border-color: var(--red);
+      }
+
+      .node-card .marker {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 8px;
+        height: 7px;
+        border-radius: 8px;
+        background: var(--red);
+        opacity: 0.7;
+        transform: scaleX(0);
+        transform-origin: left center;
+      }
+
+      .node-card.red .marker {
+        background: #fff;
+      }
+
+      .station-metric {
+        min-height: 188px;
+        display: grid;
+        place-items: center;
+        padding: 18px;
+        border: 4px solid var(--ink);
+        border-radius: 8px;
+        background: var(--paper);
+        font-size: 44px;
+        line-height: 1.05;
+        font-weight: 900;
+        text-align: center;
+        transform: rotate(2deg);
+      }
+
+      .station-metric.red {
+        color: #fff;
+        border-color: var(--red);
+        background: var(--red);
+      }
+
+      .rail {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+        padding-top: 30px;
+      }
+
+      .rail::before {
+        content: "";
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        top: 41px;
+        height: 6px;
+        border-radius: 6px;
+        background: var(--ink);
+      }
+
+      .rail-node {
+        position: relative;
+        z-index: 1;
+        min-height: 94px;
+        display: grid;
+        place-items: center;
+        padding: 12px 10px;
+        border: 3px solid var(--ink);
+        border-radius: 50%;
+        background: var(--paper);
+        font-size: 21px;
+        line-height: 1.15;
+        font-weight: 900;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      .rail-node.active {
+        color: #fff;
+        border-color: var(--red);
+        background: var(--red);
+      }
+
+      .checklist {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .check-item {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border: 3px solid var(--ink);
+        border-radius: 6px;
+        background: #fff;
+        font-size: 21px;
+        line-height: 1.15;
+        font-weight: 800;
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      .check-item::before {
+        content: "□";
+        color: var(--red);
+        font-size: 25px;
+        font-weight: 900;
+      }
+
+      .check-item.checked {
+        background: var(--cyan);
+      }
+
+      .check-item.checked::before {
+        content: "✓";
+      }
+
+      .flow-steps {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 26px;
+      }
+
+      .flow-step {
+        position: relative;
+        min-height: 114px;
+        display: grid;
+        place-items: center;
+        padding: 14px;
+        border: 4px solid var(--ink);
+        border-radius: 8px;
+        background: var(--cyan);
+        font-size: 28px;
+        line-height: 1.15;
+        font-weight: 900;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-18px);
+      }
+
+      .flow-step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -36px;
+        color: var(--red);
+        font-size: 34px;
+        font-weight: 900;
+      }
+
+      .route-note {
+        position: absolute;
+        max-width: 370px;
+        padding: 14px 18px;
+        border: 3px solid var(--ink);
+        border-radius: 6px;
+        background: #fff;
+        font-size: 22px;
+        line-height: 1.25;
+        font-weight: 800;
+        opacity: 0;
+        transform: rotate(-2deg) translateY(12px);
+      }
+
+      .action-pill {
+        position: absolute;
+        right: 48px;
+        top: 36px;
+        min-width: 176px;
+        padding: 12px 20px;
+        border-radius: 999px;
+        color: #fff;
+        background: var(--red);
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.76) rotate(-2deg);
+      }
+
+      #caption-stage {
+        position: absolute;
+        inset: 0;
+        z-index: 20;
+        pointer-events: none;
+      }
+
+      .caption-item {
+        position: absolute;
+        left: 150px;
+        right: 150px;
+        bottom: 48px;
+        min-height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 34px;
+        border: 3px solid var(--ink);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 7px 8px 0 rgba(21, 21, 21, 0.14);
+        color: var(--ink);
+        font-size: 31px;
+        line-height: 1.32;
+        font-weight: 800;
+        text-align: center;
+        overflow-wrap: anywhere;
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      .caption-item::before {
+        content: "口播原文";
+        position: absolute;
+        left: 18px;
+        top: -22px;
+        padding: 3px 10px;
+        border: 2px solid var(--ink);
+        border-bottom: 0;
+        border-radius: 6px 6px 0 0;
+        background: var(--cyan);
+        font-size: 14px;
+        line-height: 1.1;
+        font-weight: 900;
+      }
+
+      .safe-rule {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 22px;
+        height: 2px;
+        background: rgba(21, 21, 21, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-4ek9" id="root" data-composition-id="main" data-start="0" data-duration="274.394667" data-width="1920" data-height="1080" data-fps="30" data-layout-allow-overflow="">
+      <audio data-hf-id="hf-kbwd" id="narration" src="assets/narration.wav" data-start="0" data-duration="274.424526" data-track-index="99"></audio>
+
+      <div data-hf-id="hf-69j3" id="board-clip" class="clip" data-start="0" data-duration="274.394667" data-track-index="0">
+        <div data-hf-id="hf-9gl1" id="paper-fill"></div>
+        <div data-hf-id="hf-k6zw" id="world" data-layout-allow-overflow="">
+          <div data-hf-id="hf-3vkc" id="board-heading" class="board-heading" data-source-range="S01" data-source-type="exact-source" data-layout-allow-overlap="" data-layout-allow-occlusion="">
+            <p data-hf-id="hf-1354" class="eyebrow">AI 技术 / 口播原文</p>
+            <h1 data-hf-id="hf-5069" data-layout-allow-overlap=""><span data-hf-id="hf-rjjq">对 AI 技术保持敬畏之心</span></h1>
+            <div data-hf-id="hf-7dyz" id="heading-underline" class="underline"></div>
+            <p data-hf-id="hf-g0ca" class="note" data-layout-allow-occlusion>也希望大家擦亮双眼。</p>
+          </div>
+          <div data-hf-id="hf-gux6" id="board-stamp" class="board-stamp" data-source-range="S01" data-source-type="exact-source"><span data-hf-id="hf-9lf2">敬畏之心</span></div>
+
+          <svg data-hf-id="hf-51ds" class="routes" viewBox="0 0 26800 3600" aria-hidden="true">
+            <defs data-hf-id="hf-mh0t">
+              <marker data-hf-id="hf-rkm5" id="arrow-ink" markerWidth="14" markerHeight="14" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+                <path data-hf-id="hf-vzos" d="M0,0 L10,5 L0,10" fill="none" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </marker>
+              <marker data-hf-id="hf-u604" id="arrow-red" markerWidth="14" markerHeight="14" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+                <path data-hf-id="hf-36wp" d="M0,0 L10,5 L0,10" fill="none" stroke="#D81E45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </marker>
+            </defs>
+            <path data-hf-id="hf-hm2z" id="route-01-02" class="route" marker-end="url(#arrow-ink)" d="M1880 1130 C2010 1040 2100 1040 2210 1090" />
+            <path data-hf-id="hf-r5pd" id="route-02-03" class="route" marker-end="url(#arrow-ink)" d="M3680 1090 C3820 1000 3910 980 4080 1030" />
+            <path data-hf-id="hf-ngkw" id="route-03-04" class="route" marker-end="url(#arrow-ink)" d="M5480 1050 C5660 980 5760 960 5930 1000" />
+            <path data-hf-id="hf-bxn2" id="route-04-05" class="route" marker-end="url(#arrow-ink)" d="M7250 1000 C7470 930 7620 960 7790 1050" />
+            <path data-hf-id="hf-9h44" id="route-05-06" class="route" marker-end="url(#arrow-ink)" d="M9040 1050 C9220 960 9360 950 9530 1010" />
+            <path data-hf-id="hf-rr5w" id="route-06-07" class="route" marker-end="url(#arrow-ink)" d="M10840 1010 C11020 930 11160 930 11340 1000" />
+            <path data-hf-id="hf-4rfg" id="route-07-08" class="route" marker-end="url(#arrow-ink)" d="M12630 1000 C12820 900 12990 920 13180 990" />
+            <path data-hf-id="hf-w4gt" id="route-08-09" class="route" marker-end="url(#arrow-ink)" d="M14430 990 C14620 900 14790 920 14970 1010" />
+            <path data-hf-id="hf-15ft" id="route-09-10" class="route" marker-end="url(#arrow-ink)" d="M16220 1010 C16420 900 16580 930 16760 1000" />
+            <path data-hf-id="hf-8rio" id="route-10-11" class="route" marker-end="url(#arrow-ink)" d="M18010 1000 C18220 900 18360 930 18560 1020" />
+            <path data-hf-id="hf-ey8l" id="route-11-12" class="route" marker-end="url(#arrow-ink)" d="M19820 1020 C20030 920 20200 930 20390 1010" />
+            <path data-hf-id="hf-hfir" id="route-12-13" class="route" marker-end="url(#arrow-ink)" d="M21620 1010 C21800 920 21980 930 22180 1000" />
+            <path data-hf-id="hf-vowv" id="route-13-14" class="route" marker-end="url(#arrow-ink)" d="M23420 1000 C23620 900 23820 930 24020 1010" />
+            <circle data-hf-id="hf-hp0z" class="route-dot" cx="1880" cy="1130" r="18" />
+            <circle data-hf-id="hf-sdty" class="route-dot" cx="3680" cy="1090" r="18" />
+            <circle data-hf-id="hf-n18e" class="route-dot" cx="5480" cy="1050" r="18" />
+            <circle data-hf-id="hf-dzxu" class="route-dot" cx="7250" cy="1000" r="18" />
+            <circle data-hf-id="hf-d602" class="route-dot" cx="9040" cy="1050" r="18" />
+            <circle data-hf-id="hf-if6s" class="route-dot" cx="10840" cy="1010" r="18" />
+            <circle data-hf-id="hf-ihtq" class="route-dot" cx="12630" cy="1000" r="18" />
+            <circle data-hf-id="hf-wp73" class="route-dot" cx="14430" cy="990" r="18" />
+            <circle data-hf-id="hf-644e" class="route-dot" cx="16220" cy="1010" r="18" />
+            <circle data-hf-id="hf-s6k0" class="route-dot" cx="18010" cy="1000" r="18" />
+            <circle data-hf-id="hf-545w" class="route-dot" cx="19820" cy="1020" r="18" />
+            <circle data-hf-id="hf-lktw" class="route-dot" cx="21620" cy="1010" r="18" />
+            <circle data-hf-id="hf-pakt" class="route-dot" cx="23420" cy="1000" r="18" />
+          </svg>
+
+          <div data-hf-id="hf-377j" id="station-layer"></div>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-nvrw" id="caption-clip" class="clip" data-start="0" data-duration="274.394667" data-track-index="1">
+        <div data-hf-id="hf-kkhk" id="caption-stage"></div>
+        <div data-hf-id="hf-pjq2" class="safe-rule"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const stationDefs = [
+        { id: "s01", index: "01", range: "S01", x: 420, y: 720, w: 1400, title: "对 AI 技术保持敬畏之心", subtitle: "也希望大家擦亮双眼", metric: "敬畏", cards: ["AI 技术", "敬畏之心", "擦亮双眼"], tone: "paper" },
+        { id: "s02", index: "02", range: "S02–S03", x: 2220, y: 700, w: 1400, title: "AI、Coze、Dify 社群", subtitle: "99% 的人看不懂底层的代码", metric: "99%", cards: ["AI", "Coze / Dify", "开发和维护", "底层代码"], tone: "cyan" },
+        { id: "s03", index: "03", range: "S04–S05", x: 4020, y: 720, w: 1400, title: "AI 也并不简单", subtitle: "Codex、Claude Code、工作流、提示词与 Agent", metric: "Agent", cards: ["Codex", "Claude Code", "工作流", "提示词", "Agent"], tone: "paper" },
+        { id: "s04", index: "04", range: "S06–S08", x: 5820, y: 700, w: 1400, title: "Demo 不是可维护系统", subtitle: "90% 的人对底层逻辑完全不清晰", metric: "90%", cards: ["应届生", "底层逻辑", "可维护系统", "Demo"], tone: "cyan" },
+        { id: "s05", index: "05", range: "S09", x: 7600, y: 700, w: 1400, title: "五个原因", subtitle: "自己能理解的，月薪都不会低于 30K", metric: "30K", rail: ["复杂性被隐藏", "原型不等于产品", "不只展示结果", "弯道超车", "工程问题"], tone: "paper" },
+        { id: "s06", index: "06", range: "S10–S13", x: 9380, y: 700, w: 1400, title: "平台把复杂性隐藏起来", subtitle: "按钮和节点背后仍然是模型、接口、数据与状态", metric: "01", cards: ["低代码 / 无代码", "模型调用", "API 连接", "向量库", "工具链调度", "权限 / 状态"], tone: "cyan" },
+        { id: "s07", index: "07", range: "S14–S17", x: 11160, y: 700, w: 1400, title: "原型能力不等于产品能力", subtitle: "跑通一次容易，长期稳定运行真实业务很难", metric: "0 → 1", cards: ["Demo 跑通", "脏数据", "异常输入", "并发请求", "成本控制", "隐私安全"], tone: "paper" },
+        { id: "s08", index: "08", range: "S18–S20", x: 12940, y: 700, w: 1400, title: "展示结果，也要展示维护", subtitle: "真正的工程发生在失败之后", metric: "Magic?", cards: ["生成报告", "回复客户", "剪辑视频", "失败排查", "日志怎么读", "测试 / 边界"], tone: "cyan" },
+        { id: "s09", index: "09", range: "S21–S25", x: 14720, y: 610, w: 1400, title: "低门槛不等于不需要工程", subtitle: "AI 降低表达和原型门槛，没有消除系统能力", metric: "不能", cards: ["不懂代码也能做软件", "不会开发也能创业", "表达需求", "生成原型", "系统能力仍在", "自欺欺人"], tone: "paper", action: "不能" },
+        { id: "s10", index: "10", range: "S26–S35", x: 16500, y: 700, w: 1400, title: "真正的智能体要回答十个问题", subtitle: "边界、失败、上下文、可信度和维护性", metric: "10 问", checklist: ["任务边界", "失败处理", "上下文", "输出可靠", "工具失败", "数据可信", "权限安全", "日志测试", "成本可控", "别人维护"], tone: "cyan" },
+        { id: "s11", index: "11", range: "S36–S39", x: 18280, y: 700, w: 1400, title: "AI 补丁会越打越大", subtitle: "回答不了工程问题，它就只是个演示", metric: "Bug", cards: ["AI 打补丁", "补丁变大", "结果失真", "回答不上来"], tone: "paper", action: "只是个演示" },
+        { id: "s12", index: "12", range: "S40", x: 20060, y: 700, w: 1400, title: "从玩具到工具到产品", subtitle: "最后成为业务的基础设施", metric: "4 层", flow: ["玩具", "工具", "产品", "业务基础设施"], tone: "cyan" },
+        { id: "s13", index: "13", range: "S41–S43", x: 21840, y: 700, w: 1400, title: "把路线和项目系统地过一遍", subtitle: "决定做出来的不是 Demo，而是能够上线的产品", metric: "666", cards: ["Agent 集群", "MCP 基础", "项目实践", "系统过一遍", "上线的产品", "自己的工作"], tone: "paper" },
+        { id: "s14", index: "14", range: "S44–S46", x: 23620, y: 680, w: 1800, title: "创建变得廉价，理解变得珍贵", subtitle: "理解、判断、维护、负责，让 Demo 跑通业务", metric: "珍贵", cards: ["创建", "理解", "判断", "维护", "负责", "业务跑通"], tone: "cyan", action: "珍贵" }
+      ];
+
+      // Each visual object waits for the cue that introduces its meaning. This keeps
+      // later narration terms off the board until they are spoken.
+      const stationRevealTimes = {
+        s01: [0.24, 1.2, 3.0],
+        s02: [6.42, 7.0, 12.56, 14.0],
+        s03: [19.35, 21.95, 25.0, 29.0, 32.0],
+        s04: [35.08, 40.02, 46.63, 48.1],
+        s05: [52.18, 52.78, 53.38, 54.05, 54.72],
+        s06: [57.22, 60.70, 70.92, 78.10, 82.0, 85.0],
+        s07: [87.78, 92.16, 97.96, 104.0, 110.0, 112.5],
+        s08: [114.25, 120.48, 126.1, 129.35, 131.0, 132.75],
+        s09: [139.90, 143.65, 151.34, 157.55, 164.48, 165.2],
+        s10: [167.24, 172.98, 175.14, 177.88, 180.82, 182.84, 185.84, 188.65, 192.84, 194.84],
+        s11: [197.62, 201.72, 207.48, 210.18],
+        s12: [214.24, 216.0, 218.0, 220.6],
+        s13: [224.84, 232.48, 242.34, 245.0, 247.0, 248.0],
+        s14: [249.38, 255.72, 261.0, 263.5, 266.5, 269.55]
+      };
+      const stationMetricTimes = {
+        s01: 0.34,
+        s02: 12.48,
+        s03: 21.95,
+        s04: 39.98,
+        s05: 52.22,
+        s06: 57.22,
+        s07: 87.78,
+        s08: 114.25,
+        s09: 139.90,
+        s10: 167.24,
+        s11: 197.62,
+        s12: 214.24,
+        s13: 232.48,
+        s14: 272.38
+      };
+      const stationActionTimes = { s09: 164.38, s11: 210.18, s14: 272.38 };
+
+      const stationLayer = document.getElementById("station-layer");
+      const stationElements = {};
+
+      function makeCard(text, index, station) {
+        const el = document.createElement("div");
+        const tone = index % 2 === 1 ? " paper" : "";
+        el.className = "node-card" + tone;
+        el.id = `${station.id}-card-${index + 1}`;
+        el.dataset.sourceRange = station.range;
+        el.dataset.sourceType = station.sourceType || "generated-summary";
+        el.textContent = text;
+        const marker = document.createElement("span");
+        marker.className = "marker";
+        el.appendChild(marker);
+        return el;
+      }
+
+      stationDefs.forEach((station, stationIndex) => {
+        const root = document.createElement("article");
+        root.id = station.id;
+        root.className = "station";
+        root.style.left = `${station.x}px`;
+        root.style.top = `${station.y}px`;
+        root.style.width = `${station.w}px`;
+        root.dataset.sourceRange = station.range;
+        root.dataset.sourceType = station.sourceType || "generated-summary";
+
+        const panel = document.createElement("div");
+        panel.className = "station-panel";
+        const kicker = document.createElement("p");
+        kicker.className = "station-kicker";
+        kicker.textContent = `${station.index} / 连续画板`;
+        const title = document.createElement("h2");
+        title.className = "station-title";
+        title.textContent = station.title;
+        const subtitle = document.createElement("p");
+        subtitle.className = "station-subtitle";
+        subtitle.textContent = station.subtitle;
+        const layout = document.createElement("div");
+        layout.className = "station-layout";
+        const body = document.createElement("div");
+
+        if (station.rail) {
+          const rail = document.createElement("div");
+          rail.className = "rail";
+          station.rail.forEach((text, index) => {
+            const node = document.createElement("div");
+            node.className = "rail-node" + (index === 0 ? " active" : "");
+            node.id = `${station.id}-rail-${index + 1}`;
+            node.dataset.sourceRange = station.range;
+            node.dataset.sourceType = station.sourceType || "generated-summary";
+            node.textContent = text;
+            rail.appendChild(node);
+          });
+          body.appendChild(rail);
+        } else if (station.checklist) {
+          const list = document.createElement("div");
+          list.className = "checklist";
+          station.checklist.forEach((text, index) => {
+            const item = document.createElement("div");
+            item.className = "check-item" + (index < 2 ? " checked" : "");
+            item.id = `${station.id}-check-${index + 1}`;
+            item.dataset.sourceRange = station.range;
+            item.dataset.sourceType = station.sourceType || "generated-summary";
+            item.textContent = text;
+            list.appendChild(item);
+          });
+          body.appendChild(list);
+        } else if (station.flow) {
+          const flow = document.createElement("div");
+          flow.className = "flow-steps";
+          station.flow.forEach((text, index) => {
+            const step = document.createElement("div");
+            step.className = "flow-step";
+            step.id = `${station.id}-flow-${index + 1}`;
+            step.dataset.sourceRange = station.range;
+            step.dataset.sourceType = station.sourceType || "generated-summary";
+            step.textContent = text;
+            flow.appendChild(step);
+          });
+          body.appendChild(flow);
+        } else {
+          const cards = document.createElement("div");
+          cards.className = "station-cards";
+          station.cards.forEach((text, index) => cards.appendChild(makeCard(text, index, station)));
+          body.appendChild(cards);
+        }
+
+        const metric = document.createElement("div");
+        metric.className = "station-metric";
+        metric.id = `${station.id}-metric`;
+        metric.dataset.sourceRange = station.range;
+        metric.dataset.sourceType = station.sourceType || "generated-summary";
+        metric.textContent = station.metric;
+        layout.appendChild(body);
+        layout.appendChild(metric);
+        panel.appendChild(kicker);
+        panel.appendChild(title);
+        panel.appendChild(subtitle);
+        panel.appendChild(layout);
+        if (station.action) {
+          const action = document.createElement("div");
+          action.className = "action-pill";
+          action.id = `${station.id}-action`;
+          action.dataset.sourceRange = station.range;
+          action.dataset.sourceType = "exact-source";
+          action.textContent = station.action;
+          panel.appendChild(action);
+        }
+        root.appendChild(panel);
+        stationLayer.appendChild(root);
+        stationElements[station.id] = root;
+      });
+
+      const cueData = [
+        ["我奉劝很多人，对AI技术一定要有敬畏之心，也希望大家擦亮双眼。", 0.1, 6.1884256],
+        ["这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。", 6.2384256, 6.1574071],
+        ["但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。", 12.3958328, 6.6898145],
+        ["AI也并不是你想的那么简单。", 19.0856473, 2.7546295],
+        ["我看到很多人用完Codex、Claude Code，都觉得自己是大神，就一下子支棱起来了，觉得自己是被掩埋的技术天才，强得可怕，会搭工作流，会写提示词，然后生成一个Agent。", 21.8402769, 13.1134254],
+        ["尤其是应届生，投了很多简历，说AI并不好找工作。", 34.9537023, 4.9421294],
+        ["我可以非常明确地告诉你，这个市场上90%的人，他对底层逻辑是完全不清晰的。", 39.8958317, 6.608796],
+        ["他不是在构建一个可维护的系统，而是在拼接一个能演示的流程、一个Demo。", 46.5046277, 5.5439812],
+        ["五个原因，对照一下，自己能理解的，月薪都不会低于30K。", 52.048609, 4.9999998],
+        ["第一，平台把系统的复杂性给隐藏起来。", 57.0486088, 3.4953702],
+        ["低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。", 60.543979, 10.2546292],
+        ["好处是普通人可以快速上手，坏处是很多人误以为会拖拽节点就等于懂系统架构。", 70.7986082, 7.1527774],
+        ["但一旦报错，你根本就不知道是模型问题、接口问题、权限问题、数据问题，还是上下游问题、状态管理问题。", 77.9513857, 9.6643514],
+        ["第二点，很多人把原型能力误判成是产品能力。", 87.6157372, 4.3981479],
+        ["AI最擅长帮你从0到1做一个Demo，每次帮你跑通一次，你就觉得自己做成了。", 92.0138852, 5.7870368],
+        ["但是真实的产品不是跑通一次就可以了，而是能够长期稳定地运行真实的业务，是有脏数据、异常输入、并发请求、成本控制、隐私安全等一系列的问题。", 97.800922, 11.8865736],
+        ["当没有工程底座的时候，你的Demo越漂亮，后面塌得就越快。", 109.6874956, 4.3981479],
+        ["第三点，就是我觉得现在短视频它疯狂地在展示结果，没有去展示维护。", 114.0856436, 6.2268516],
+        ["一个智能体自动生成报告、自动回复客户、自动剪辑视频，它看起来很震惊，但是没有人展示它失败的时候怎么去排查，没人展示日志怎么读，没人展示测试怎么做，没人展示边界条件怎么处理。", 120.3124952, 14.4749994],
+        ["于是大家看到的是魔法，Magic，它不是Engineering。", 134.7874946, 4.9305553],
+        ["第四点，很多人有强烈的弯道超车的心理。", 139.71805, 3.7731479],
+        ["AI给了所有非技术的人一个巨大的想象：我不懂代码也能做软件，我不会开发也能创业。", 143.491198, 7.6851848],
+        ["这种心理有一部分是真的，因为AI确实降低了表达需求和生成原型的门槛。", 151.1763828, 6.2152775],
+        ["但危险在于，有些人进一步误解为，不需要懂代码、不需要懂系统、不需要懂工程就能够。", 157.3916604, 6.9444441],
+        ["不能，最后只是一种自欺欺人。", 164.3361045, 2.7430554],
+        ["第五点，真正的智能体至少要能回答一些问题：它的任务边界是什么？", 167.07916, 5.7407405],
+        ["它失败时应该怎么办？", 172.8199005, 2.1643517],
+        ["该如何保存和调用上下文？", 174.9842523, 2.7430554],
+        ["该怎么判断模型输出是否靠谱？", 177.7273077, 2.9398146],
+        ["它怎么处理工具调用失败？", 180.6671224, 2.0138888],
+        ["它的数据从哪里来，是否可信？", 182.6810112, 2.997685],
+        ["它有没有权限控制和安全机制？", 185.6786963, 2.8124998],
+        ["有没有日志、监控、测试、回滚机制？", 188.4911962, 4.1898146],
+        ["它的成本是否可控？", 192.6810108, 2.0023147],
+        ["最后，它能不能被别人去维护？", 194.6833256, 2.7777776],
+        ["很多人出了Bug以后，他用AI来去打这个补丁。", 197.4611032, 4.097222],
+        ["我说实话，AI打补丁，这个补丁会打得非常大，而且一定是失真的。", 201.5583253, 5.7638886],
+        ["这些问题，有人回答得上来吗？", 207.3222139, 2.7199072],
+        ["你回答不上来，它就不是产品，它只是个演示。", 210.0421212, 4.0046294],
+        ["今年，真正懂系统的人已经开始胜出了，因为他们把AI从玩具变成了工具，将工具变成了产品，从产品变成了业务的基础设施。", 214.0467507, 10.6018514],
+        ["如果你也想把Agent真正地学起来，不只是随便玩一下，而是当作自己的工作，就能拿到一个还不错的薪资。", 224.6486021, 7.6273145],
+        ["666，拿着我这份耗时三周整理出来的路线和教程，里面就包含了Agent集群、MCP等基础的知识点，以及要去做什么项目。", 232.2759167, 9.8842588],
+        ["把这些东西都要系统地过一遍，这才是决定你做出来的东西不是Demo，而是能够上线的产品。", 242.1601755, 7.0254626],
+        ["当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。", 249.1856382, 6.3657404],
+        ["就是你去做这个提示词，这个动作是很廉价的，只需要消耗一点Token。", 255.5513787, 5.3009257],
+        ["但是后面如何去理解你的这个Agent，如何去判断，如何去维护，如何去负责，让它从一个Demo变成一个真正的产品，让它能够跑通你的业务，这个过程是很复杂的，所以这个过程也是很珍贵的。", 260.8523044, 13.5722216]
+      ];
+
+      const captionStage = document.getElementById("caption-stage");
+      const captionElements = [];
+      cueData.forEach((cue, index) => {
+        const caption = document.createElement("div");
+        caption.className = "caption-item";
+        caption.id = `caption-${String(index + 1).padStart(2, "0")}`;
+        caption.dataset.sourceRange = `S${String(index + 1).padStart(2, "0")}`;
+        caption.dataset.sourceType = "exact-source";
+        caption.textContent = cue[0];
+        captionStage.appendChild(caption);
+        captionElements.push(caption);
+      });
+
+      const world = document.getElementById("world");
+      gsap.set(world, { x: -185, y: -100, scale: 1 });
+
+      const tl = gsap.timeline({ paused: true, defaults: { ease: "power2.out" } });
+
+      // Stroke paths are measured once, then drawn by the single seekable timeline.
+      document.querySelectorAll(".route").forEach((path) => {
+        const length = path.getTotalLength ? path.getTotalLength() : 1;
+        path.style.strokeDasharray = `${length}`;
+        path.style.strokeDashoffset = `${length}`;
+      });
+
+      tl.to("#heading-underline", { scaleX: 1, duration: 0.62, ease: "power2.out" }, 0.28);
+      tl.fromTo("#board-stamp", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.48, ease: "power2.out" }, 1.5);
+
+      const chapterStarts = [0.1, 6.2384256, 19.0856473, 34.9537023, 52.048609, 57.0486088, 87.6157372, 114.0856436, 139.71805, 167.07916, 197.4611032, 214.0467507, 224.6486021, 249.1856382];
+      const cameraTargets = stationDefs.map((station) => ({
+        x: 960 - (station.x + station.w / 2),
+        y: 540 - (station.y + 235),
+      }));
+
+      stationDefs.forEach((station, stationIndex) => {
+        const start = chapterStarts[stationIndex];
+        const element = stationElements[station.id];
+        const previous = stationIndex > 0 ? stationElements[stationDefs[stationIndex - 1].id] : null;
+        if (previous) {
+          tl.to(previous, { opacity: 0.58, scale: 0.96, duration: 0.62, ease: "power1.inOut" }, start + 0.42);
+        }
+        const cameraStart = stationIndex === 0 ? 0 : Math.max(0.1, start - 1.6);
+        const cameraDuration = stationIndex === 0 ? 0.4 : Math.min(1.8, Math.max(0.9, start - chapterStarts[stationIndex - 1] - 0.7));
+        tl.to(world, { x: cameraTargets[stationIndex].x, y: cameraTargets[stationIndex].y, scale: 1, duration: cameraDuration, ease: "power3.inOut" }, cameraStart);
+        const stationReveal = Math.max(0, start - 0.25);
+        tl.to(element, { opacity: 1, y: 0, scale: 1, duration: 0.52, ease: "power2.out" }, stationReveal);
+        tl.fromTo(element.querySelector(".station-kicker"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.24 }, Math.max(0, start - 0.04));
+        tl.fromTo(element.querySelector(".station-title"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.34 }, Math.max(0, start - 0.02));
+        tl.fromTo(element.querySelector(".station-subtitle"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.28 }, start + 0.08);
+        const cards = element.querySelectorAll(".node-card, .rail-node, .check-item, .flow-step");
+        cards.forEach((card, index) => {
+          const revealAt = stationRevealTimes[station.id]?.[index] ?? start + 0.52 + index * 0.18;
+          tl.to(card, { opacity: 1, y: 0, x: 0, scale: 1, duration: 0.3, ease: "power2.out" }, revealAt);
+          const marker = card.querySelector ? card.querySelector(".marker") : null;
+          if (marker) tl.to(marker, { scaleX: 1, duration: 0.28, ease: "power2.out" }, revealAt + 0.2);
+        });
+        const metric = element.querySelector(".station-metric");
+        tl.fromTo(metric, { opacity: 0, rotation: 7, scale: 0.82 }, { opacity: 1, rotation: 2, scale: 1, duration: 0.46, ease: "power2.out" }, stationMetricTimes[station.id] ?? start + 0.42);
+        const action = element.querySelector(".action-pill");
+        if (action) tl.to(action, { opacity: 1, scale: 1, rotation: 0, duration: 0.42, ease: "power2.out" }, stationActionTimes[station.id] ?? start + 1.35);
+      });
+
+      const routeStarts = [6.42, 19.28, 35.15, 52.22, 57.22, 87.80, 114.28, 139.92, 167.28, 197.64, 214.22, 224.82, 249.36];
+      routeStarts.forEach((start, index) => {
+        const route = document.getElementById(`route-${String(index + 1).padStart(2, "0")}-${String(index + 2).padStart(2, "0")}`);
+        if (route) tl.to(route, { strokeDashoffset: 0, duration: 0.72, ease: "power2.out" }, start);
+        const dot = document.querySelectorAll(".route-dot")[index];
+        if (dot) tl.to(dot, { opacity: 1, duration: 0.2, ease: "power1.out" }, Math.max(0, start - 0.08));
+      });
+
+      cueData.forEach((cue, index) => {
+        const caption = captionElements[index];
+        const start = cue[1];
+        const nextStart = cueData[index + 1]?.[1] ?? 274.394667;
+        const end = Math.min(cue[1] + cue[2], nextStart, 274.394667);
+        tl.fromTo(caption, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.16, ease: "power2.out" }, start);
+        tl.to(caption, { opacity: 0, y: 0, duration: 0.12, ease: "power1.in" }, Math.max(start + 0.18, end - 0.12));
+      });
+
+      // Final lock: only the approved red conclusion remains active during the audio tail.
+      tl.to("#s14-action", { opacity: 1, scale: 1.04, rotation: 0, duration: 0.44, ease: "power2.out" }, 272.38);
+      tl.to("#s14 .station-panel", { borderColor: "#D81E45", duration: 0.34, ease: "power1.out" }, 272.44);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

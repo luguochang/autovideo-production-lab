@@ -1,0 +1,379 @@
+{
+  "schemaVersion": "autovideo-alignment-validation/v1",
+  "generatedAt": "2026-07-19T08:22:31.304793+00:00",
+  "status": "passed",
+  "inputs": {
+    "alignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\audio\\alignment.json",
+    "alignmentSha256": "8286be91146a7378625d6398b7136c090cd02d2277289c25fb9e70277cdca6de",
+    "asrAlignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\audio\\alignment.asr.json",
+    "asrAlignmentSha256": "229fbba40ce803ca286ff0f777353ae6e45b857f60bacf213375665349de2c7d",
+    "narration": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\input\\narration.txt",
+    "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+    "narrationLock": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\NarrationLock.json",
+    "audio": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\audio\\narration.final.wav",
+    "audioSha256": "9586d1476e1022308249bf2996776487f9059fc1e84dabe7cfbf2258c02503b9",
+    "audioDurationSeconds": 242.904042
+  },
+  "textPolicy": {
+    "downstreamTextSource": "alignment.cues",
+    "rawAsrTranscriptField": "alignment.transcriptText",
+    "rawAsrTranscriptRole": "evidence-only",
+    "rawAsrTranscriptDownstreamConsumable": false
+  },
+  "checks": {
+    "hashesBound": true,
+    "wordTimeline": {
+      "count": 1378,
+      "firstStartSeconds": 0.0,
+      "lastEndSeconds": 242.904,
+      "overlapCount": 34,
+      "maxGapSeconds": 0.42,
+      "monotonic": true
+    },
+    "cueTimeline": {
+      "count": 46,
+      "firstStartSeconds": 0.0,
+      "lastEndSeconds": 242.904,
+      "overlapCount": 0,
+      "maxGapSeconds": 0.0,
+      "monotonic": true
+    },
+    "wordTextReconstructsNarrationLock": true,
+    "cueTextReconstructsNarrationLock": true,
+    "cueCps": {
+      "thresholdCps": 15.0,
+      "maximumCps": 9.639,
+      "passed": true,
+      "cues": [
+        {
+          "id": "cue-001",
+          "characters": 31,
+          "durationSeconds": 5.48,
+          "cps": 5.657,
+          "passed": true
+        },
+        {
+          "id": "cue-002",
+          "characters": 35,
+          "durationSeconds": 4.92,
+          "cps": 7.114,
+          "passed": true
+        },
+        {
+          "id": "cue-003",
+          "characters": 39,
+          "durationSeconds": 6.2,
+          "cps": 6.29,
+          "passed": true
+        },
+        {
+          "id": "cue-004",
+          "characters": 14,
+          "durationSeconds": 1.88,
+          "cps": 7.447,
+          "passed": true
+        },
+        {
+          "id": "cue-005",
+          "characters": 87,
+          "durationSeconds": 12.22,
+          "cps": 7.119,
+          "passed": true
+        },
+        {
+          "id": "cue-006",
+          "characters": 24,
+          "durationSeconds": 4.0,
+          "cps": 6.0,
+          "passed": true
+        },
+        {
+          "id": "cue-007",
+          "characters": 37,
+          "durationSeconds": 5.94,
+          "cps": 6.229,
+          "passed": true
+        },
+        {
+          "id": "cue-008",
+          "characters": 36,
+          "durationSeconds": 5.44,
+          "cps": 6.618,
+          "passed": true
+        },
+        {
+          "id": "cue-009",
+          "characters": 28,
+          "durationSeconds": 3.72,
+          "cps": 7.527,
+          "passed": true
+        },
+        {
+          "id": "cue-010",
+          "characters": 18,
+          "durationSeconds": 3.16,
+          "cps": 5.696,
+          "passed": true
+        },
+        {
+          "id": "cue-011",
+          "characters": 52,
+          "durationSeconds": 8.84,
+          "cps": 5.882,
+          "passed": true
+        },
+        {
+          "id": "cue-012",
+          "characters": 36,
+          "durationSeconds": 5.88,
+          "cps": 6.122,
+          "passed": true
+        },
+        {
+          "id": "cue-013",
+          "characters": 49,
+          "durationSeconds": 7.34,
+          "cps": 6.676,
+          "passed": true
+        },
+        {
+          "id": "cue-014",
+          "characters": 21,
+          "durationSeconds": 4.1,
+          "cps": 5.122,
+          "passed": true
+        },
+        {
+          "id": "cue-015",
+          "characters": 38,
+          "durationSeconds": 5.82,
+          "cps": 6.529,
+          "passed": true
+        },
+        {
+          "id": "cue-016",
+          "characters": 68,
+          "durationSeconds": 12.18,
+          "cps": 5.583,
+          "passed": true
+        },
+        {
+          "id": "cue-017",
+          "characters": 29,
+          "durationSeconds": 4.2,
+          "cps": 6.905,
+          "passed": true
+        },
+        {
+          "id": "cue-018",
+          "characters": 32,
+          "durationSeconds": 5.36,
+          "cps": 5.97,
+          "passed": true
+        },
+        {
+          "id": "cue-019",
+          "characters": 86,
+          "durationSeconds": 13.02,
+          "cps": 6.605,
+          "passed": true
+        },
+        {
+          "id": "cue-020",
+          "characters": 32,
+          "durationSeconds": 3.32,
+          "cps": 9.639,
+          "passed": true
+        },
+        {
+          "id": "cue-021",
+          "characters": 19,
+          "durationSeconds": 3.34,
+          "cps": 5.689,
+          "passed": true
+        },
+        {
+          "id": "cue-022",
+          "characters": 40,
+          "durationSeconds": 6.82,
+          "cps": 5.865,
+          "passed": true
+        },
+        {
+          "id": "cue-023",
+          "characters": 34,
+          "durationSeconds": 5.14,
+          "cps": 6.615,
+          "passed": true
+        },
+        {
+          "id": "cue-024",
+          "characters": 40,
+          "durationSeconds": 6.82,
+          "cps": 5.865,
+          "passed": true
+        },
+        {
+          "id": "cue-025",
+          "characters": 14,
+          "durationSeconds": 2.14,
+          "cps": 6.542,
+          "passed": true
+        },
+        {
+          "id": "cue-026",
+          "characters": 31,
+          "durationSeconds": 4.4,
+          "cps": 7.045,
+          "passed": true
+        },
+        {
+          "id": "cue-027",
+          "characters": 10,
+          "durationSeconds": 1.38,
+          "cps": 7.246,
+          "passed": true
+        },
+        {
+          "id": "cue-028",
+          "characters": 12,
+          "durationSeconds": 2.02,
+          "cps": 5.941,
+          "passed": true
+        },
+        {
+          "id": "cue-029",
+          "characters": 14,
+          "durationSeconds": 2.28,
+          "cps": 6.14,
+          "passed": true
+        },
+        {
+          "id": "cue-030",
+          "characters": 12,
+          "durationSeconds": 2.22,
+          "cps": 5.405,
+          "passed": true
+        },
+        {
+          "id": "cue-031",
+          "characters": 14,
+          "durationSeconds": 2.24,
+          "cps": 6.25,
+          "passed": true
+        },
+        {
+          "id": "cue-032",
+          "characters": 14,
+          "durationSeconds": 2.34,
+          "cps": 5.983,
+          "passed": true
+        },
+        {
+          "id": "cue-033",
+          "characters": 17,
+          "durationSeconds": 2.88,
+          "cps": 5.903,
+          "passed": true
+        },
+        {
+          "id": "cue-034",
+          "characters": 9,
+          "durationSeconds": 1.26,
+          "cps": 7.143,
+          "passed": true
+        },
+        {
+          "id": "cue-035",
+          "characters": 14,
+          "durationSeconds": 2.26,
+          "cps": 6.195,
+          "passed": true
+        },
+        {
+          "id": "cue-036",
+          "characters": 23,
+          "durationSeconds": 3.46,
+          "cps": 6.647,
+          "passed": true
+        },
+        {
+          "id": "cue-037",
+          "characters": 31,
+          "durationSeconds": 4.3,
+          "cps": 7.209,
+          "passed": true
+        },
+        {
+          "id": "cue-038",
+          "characters": 14,
+          "durationSeconds": 2.38,
+          "cps": 5.882,
+          "passed": true
+        },
+        {
+          "id": "cue-039",
+          "characters": 21,
+          "durationSeconds": 2.74,
+          "cps": 7.664,
+          "passed": true
+        },
+        {
+          "id": "cue-040",
+          "characters": 57,
+          "durationSeconds": 10.76,
+          "cps": 5.297,
+          "passed": true
+        },
+        {
+          "id": "cue-041",
+          "characters": 50,
+          "durationSeconds": 7.22,
+          "cps": 6.925,
+          "passed": true
+        },
+        {
+          "id": "cue-042",
+          "characters": 59,
+          "durationSeconds": 10.62,
+          "cps": 5.556,
+          "passed": true
+        },
+        {
+          "id": "cue-043",
+          "characters": 43,
+          "durationSeconds": 6.22,
+          "cps": 6.913,
+          "passed": true
+        },
+        {
+          "id": "cue-044",
+          "characters": 28,
+          "durationSeconds": 5.58,
+          "cps": 5.018,
+          "passed": true
+        },
+        {
+          "id": "cue-045",
+          "characters": 34,
+          "durationSeconds": 5.32,
+          "cps": 6.391,
+          "passed": true
+        },
+        {
+          "id": "cue-046",
+          "characters": 90,
+          "durationSeconds": 13.744,
+          "cps": 6.548,
+          "passed": true
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "srt": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\demotext-standard-delivery-v3\\captions\\narration.zh-CN.srt",
+    "srtSha256": "4d4ca9f9aa185a6a6bfb6e781ef9e03a415d54c2f2430c891e0cb26721b224bd",
+    "cueCount": 46,
+    "source": "alignment.cues (NarrationLock exact text)"
+  }
+}

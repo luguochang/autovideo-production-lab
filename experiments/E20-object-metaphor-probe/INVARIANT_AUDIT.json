@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "autovideo-invariant-audit/v1",
+  "projectId": "E20-object-metaphor-probe",
+  "status": "technical-probe-ready-human-pending",
+  "composition": {
+    "path": "index.html",
+    "sha256": "9fab982fc1ecfcc478fd6bf10ae4ec53e506c6f05119ebc5481f6ae2430daffc",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "rootDurationSeconds": 8,
+    "sceneGuardDurationSeconds": 8.033
+  },
+  "brandShell": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "hostRect": {"left": 96, "top": 156, "width": 600, "height": 730},
+    "hostAssetPath": ".media/images/host.png",
+    "hostAssetSha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+    "hostPoseCount": 1,
+    "hostPoseSwap": false,
+    "captionZone": "caption",
+    "captionRect": {"left": 96, "top": 926, "width": 1728, "height": 88}
+  },
+  "camera": {
+    "scope": "content-world-only",
+    "viewportSelector": "#world-viewport",
+    "selector": "#station-world",
+    "contentZone": "content.right",
+    "contentRect": {"left": 694, "top": 112, "width": 1130, "height": 760},
+    "worldRect": {"left": 0, "top": 0, "width": 2700, "height": 570},
+    "bounds": {"minX": -1570, "maxX": 0, "minY": -20, "maxY": 20},
+    "authoredStops": [
+      {"id": "entry", "x": 0, "y": 0},
+      {"id": "model", "x": -420, "y": 20},
+      {"id": "api", "x": -910, "y": -20},
+      {"id": "data", "x": -1370, "y": 20},
+      {"id": "orchestration", "x": -1570, "y": 0}
+    ],
+    "hostInCamera": false,
+    "captionInCamera": false,
+    "transformSelectorsOutsideScope": []
+  },
+  "objectMetaphor": {
+    "visualType": "object-metaphor",
+    "recipe": "object-metaphor@1.0.0",
+    "assetId": "system-layers",
+    "assetPath": ".media/images/system-layers.svg",
+    "assetSha256": "fe49102ea55a73b1ae7d23a90be00e1785b379bbcc412d18577846c8808ee2a6",
+    "compositionSelector": "#system-layers-image",
+    "registeredAssetCount": 1,
+    "compositionInstanceCount": 1,
+    "stationIds": ["entry", "model", "api", "data", "orchestration"],
+    "routeSegmentIds": ["route-entry-model", "route-model-api", "route-api-data", "route-data-orchestration"],
+    "cardWallUsed": false
+  },
+  "motion": {
+    "blueprint": "spatial-pan-stations",
+    "rules": ["viewport-change", "svg-path-draw"],
+    "timelineKey": "main",
+    "timelinePaused": true,
+    "pathLengthSource": "SVGPathElement.getTotalLength() during synchronous setup",
+    "randomness": false,
+    "wallClock": false,
+    "infiniteRepeat": false,
+    "finalHold": {"startSeconds": 7, "endSeconds": 8, "durationSeconds": 1}
+  },
+  "timing": {
+    "narrationLockPath": "NarrationLock.json",
+    "narrationLockSha256": "97f1e4ebb84b3ffd1494e389fab487fd059e5bd2fe21c1aaccbe4e4bf3ba555d",
+    "audioPath": ".media/audio/voice/narration.wav",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "audioDurationSeconds": 8,
+    "audioMetadata": "PCM s16le, 48000Hz, mono",
+    "silentValidation": {
+      "method": "file bytes, SHA-256, ffprobe metadata, FFmpeg decode to null sink, volumedetect",
+      "meanVolumeDb": -27.9,
+      "maxVolumeDb": -7.6,
+      "microphoneUsed": false,
+      "recordingUsed": false,
+      "autoplayUsed": false,
+      "playbackCallUsed": false,
+      "externalSoundOutputUsed": false
+    },
+    "phases": {
+      "establish": {"start": 0, "end": 1.04},
+      "traverse": {"start": 1.04, "end": 5.12},
+      "resolve": {"start": 5.12, "end": 7},
+      "finalHold": {"start": 7, "end": 8}
+    }
+  },
+  "provenance": {
+    "assetManifestPath": "AssetManifest.json",
+    "assetManifestSha256": "4564008286b83365fc6881f52aa502a542ac4b8fe41f2d89567337fc150595b3",
+    "mediaManifestPath": ".media/manifest.jsonl",
+    "mediaManifestSha256": "9248106ac7c13387327a15b3faf4b5d08468c4dee542cb4cce0cf10d71f193ce",
+    "sourceReceiptPath": "SOURCE_RECEIPT.json",
+    "sourceReceiptSha256": "f044616c32e71e8e796c8f1d6c1dbbf111b334e96ab891fe64f1aaee98d7369e"
+  },
+  "staticAuthoringEvidence": {
+    "jsonFilesParse": true,
+    "mediaManifestJsonLinesParse": true,
+    "duplicateHtmlIds": 0,
+    "systemLayersSrcReferences": 1,
+    "narrationSrcReferences": 1,
+    "audioElementCount": 1,
+    "rootAudioDirectChild": true,
+    "containsAutoplay": false,
+    "containsPlayCall": false,
+    "containsGetUserMedia": false,
+    "containsMediaRecorder": false,
+    "containsMathRandom": false,
+    "containsWallClock": false,
+    "containsInfiniteRepeat": false,
+    "containsHtmlBreak": false,
+    "externalRuntimeAsset": false
+  },
+  "automatedEvidence": {
+    "strictCheck": {"status": "passed", "path": "strict-check.log", "version": "0.7.67", "findingCount": 0},
+    "render": {"status": "passed", "path": "renders/object-metaphor-probe.mp4", "qa": "RENDER_QA.json"},
+    "snapshots": {"status": "passed", "contactSheet": "snapshots/contact-sheet.jpg"}
+  },
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewDocument": "PROBE_REVIEW.md",
+    "lifecycleApplyExecuted": false,
+    "promotionExecuted": false
+  }
+}

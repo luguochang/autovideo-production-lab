@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "autovideo-qa-report/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "checkedAt": "2026-07-23T05:23:29.299Z",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "okForInternalReview": true,
+  "okForPublicRelease": false,
+  "gates": {
+    "hyperframesCheck": {
+      "status": "passed",
+      "path": "qa/hyperframes-check.json"
+    },
+    "media": {
+      "status": "passed",
+      "path": "qa/delivery-report.json"
+    },
+    "lockedSubtitleReconstruction": {
+      "status": "passed",
+      "path": "qa/subtitle-qa.json",
+      "alignmentValidationPath": "captions/alignment-validation.json",
+      "humanSemanticReview": "needs-review",
+      "ocrReview": "unavailable"
+    },
+    "visualReview": {
+      "status": "passed-internal-sample-review",
+      "path": "qa/visual-review.json",
+      "reviewedBy": "codex-autonomous-internal-review",
+      "scope": "HyperFrames strict check plus one midpoint frame for every one of 2 scenes and Studio timeline load verification."
+    },
+    "audioApproval": {
+      "status": "passed",
+      "approvalScope": "technical-only",
+      "approvedBy": "codex-creator-delegated-simulation",
+      "path": "audio/approval.json"
+    },
+    "textReviews": {
+      "status": "internal-or-missing",
+      "subtitleApprovalScope": "internal-autonomous-review",
+      "screenTextApprovalScope": "internal-autonomous-review",
+      "publicReleaseEligible": false
+    },
+    "finalPreview": {
+      "status": "approved-internal-review",
+      "approvedBy": "codex-creator-delegated",
+      "approvalScope": "internal-autonomous-review",
+      "compositionDigest": "a33228e76b3851e1d6c776460241ad71259396810c4f45794f96b01949d8957d",
+      "path": "qa/final-preview.json"
+    },
+    "humanListening": {
+      "status": "not-performed",
+      "approvedBy": null,
+      "path": "audio/listening-review.json"
+    },
+    "publicationRights": {
+      "status": "internal-only",
+      "declaration": "internal-only",
+      "path": "rights-clearance/publication-rights.json",
+      "unresolvedItemIds": [
+        "source-source-001-61c17637",
+        "media-voice_001",
+        "media-sfx-whoosh-short",
+        "media-sfx-click-soft",
+        "asset-approved-narration-source",
+        "asset-cosyvoice14-final-audio",
+        "asset-locked-subtitles",
+        "asset-host-normalized-production-set",
+        "asset-style-probe-still",
+        "asset-style-probe-motion",
+        "asset-scene-composition-set",
+        "asset-delivery-internal-review-video",
+        "asset-delivery-cover",
+        "voice-speaker-rights",
+        "host-artwork-rights",
+        "noto-sans-sc-font",
+        "hyperframes-runtime"
+      ]
+    }
+  },
+  "releaseBlockers": [
+    "The current render is not an unblocked public-release master.",
+    "Publication rights are not fully cleared by the current approved rights receipt.",
+    "Human listening approval is missing or stale for the current final audio.",
+    "Human subtitle and screen-text review approvals are required for public release.",
+    "Human final review is missing or stale for the current preview and composition."
+  ]
+}

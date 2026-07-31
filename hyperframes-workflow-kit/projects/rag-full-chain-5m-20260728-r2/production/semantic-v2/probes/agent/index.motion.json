@@ -1,0 +1,19 @@
+{
+  "duration": 8,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-agent-header",
+      "bySec": 0.75
+    },
+    {
+      "kind": "before",
+      "a": "#scene-agent-header",
+      "b": "#scene-agent-state-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-agent .visual-world"
+    }
+  ]
+}

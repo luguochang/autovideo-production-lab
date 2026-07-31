@@ -1,0 +1,290 @@
+{
+  "activeStageIds": [
+    "source-register",
+    "material-suitability",
+    "evidence-ledger",
+    "spoken-rewrite",
+    "claim-source-review",
+    "script-review",
+    "content-approval",
+    "narration-lock",
+    "template-lock",
+    "pronunciation-review",
+    "voice-final",
+    "audio-align",
+    "subtitle-qa",
+    "subtitle-review",
+    "rights-clearance",
+    "audio-handoff",
+    "visual-plan",
+    "diagram-assets",
+    "style-probe",
+    "visual-variety-qa",
+    "composition-readiness",
+    "full-production",
+    "qa-review",
+    "screen-text-review",
+    "final-preview",
+    "render-deliver",
+    "delivery-qa",
+    "retrospective",
+    "package-export"
+  ],
+  "currentStageId": "evidence-ledger",
+  "finishedAt": "2026-07-22T08:08:38.203Z",
+  "message": "evidence-ledger is waiting for dedicated human review; downstream generation was not started.",
+  "policy": {
+    "autoApproveHumanGates": false,
+    "mediaPlaybackInvoked": false,
+    "microphoneUsed": false,
+    "publicReleaseApprovalSynthesized": false
+  },
+  "projectId": "batch-smoke-30s-20260720",
+  "projectState": {
+    "contentIntakeSha256": null,
+    "formalProjectPath": "hyperframes-workflow-kit/projects/batch-smoke-30s-20260720",
+    "projectId": "batch-smoke-30s-20260720",
+    "route": "script",
+    "stages": {
+      "audio-align": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "audio-handoff": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "claim-source-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "composition-readiness": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "1a5ab27d91194aaee0b0f78b64296d88b0c66ec487b30946f3921740456b0044",
+        "jobId": null,
+        "revision": 3,
+        "status": "stale"
+      },
+      "content-approval": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "delivery-qa": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "diagram-assets": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "evidence-ledger": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "1b1160fefe868d4e6320c83704c916c6e13382eb878518418fb78505dce2755f",
+        "jobId": null,
+        "revision": 1,
+        "status": "needs-review"
+      },
+      "final-preview": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "full-production": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "7a300d8833219e4f1f50f668fdabe60431ee3eb3bedbb1494b98373725965c3c",
+        "jobId": null,
+        "revision": 2,
+        "status": "stale"
+      },
+      "material-suitability": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": "8807ad06fd7bd60a0ce43dd42c31cae98d4d0611017e72fc6700d18a9d7c1b64",
+        "artifactSha256": "8807ad06fd7bd60a0ce43dd42c31cae98d4d0611017e72fc6700d18a9d7c1b64",
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "narration-lock": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "package-export": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "pronunciation-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "qa-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "ebc81b9eb745e44a911a62a944f36f9642a02d934b5cd72f1d8e20bd399834b2",
+        "jobId": null,
+        "revision": 2,
+        "status": "stale"
+      },
+      "render-deliver": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "retrospective": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "rights-clearance": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "screen-text-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "script-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "source-register": {
+        "approvalScope": "machine",
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "approved"
+      },
+      "spoken-rewrite": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "style-probe": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "subtitle-qa": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "1d669633c7432e26b256cd46b3677b2f8bb54bd6425d16c4e248054db2d20e16",
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "subtitle-review": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 0,
+        "status": "not-started"
+      },
+      "template-lock": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "visual-plan": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "370b5a88ebb5cbac4ee4aef80b20b9685c046abb97a891e6611a99e2bf393a64",
+        "jobId": null,
+        "revision": 2,
+        "status": "stale"
+      },
+      "visual-variety-qa": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": "336a3b93d13836b3fd14996171a6f684c1b39d3395ebda682fe5b99160e656ae",
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      },
+      "voice-final": {
+        "approvalScope": null,
+        "approvedArtifactSha256": null,
+        "artifactSha256": null,
+        "jobId": null,
+        "revision": 1,
+        "status": "stale"
+      }
+    }
+  },
+  "projectStateSha256": "bb1e52878dd3c9c0056860aa05249afb376048337be029ecd882b3b7dbd073b1",
+  "resumesRunId": "06b51efc-ccfb-4801-8f04-227bfe18d1ce",
+  "runId": "72e645c7-3713-4c23-b164-0bcb1ce29acc",
+  "schemaVersion": "autovideo-standard-run-receipt/v1",
+  "startedAt": "2026-07-22T08:08:37.442Z",
+  "status": "waiting-for-human",
+  "updatedAt": "2026-07-22T08:08:38.203Z"
+}

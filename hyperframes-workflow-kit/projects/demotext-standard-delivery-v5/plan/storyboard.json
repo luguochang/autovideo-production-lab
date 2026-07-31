@@ -1,0 +1,1217 @@
+{
+  "schemaVersion": "autovideo-storyboard/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "status": "deterministic-baseline",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "audioDurationSeconds": 239.328167,
+    "timelineEndSeconds": 239.328
+  },
+  "style": {
+    "id": "modern-ip-host-explainer",
+    "version": "1.0.0",
+    "palette": "light-apricot",
+    "templateLock": "template-lock.json",
+    "projectApproval": "pending"
+  },
+  "persistentZones": [
+    "host",
+    "content",
+    "caption"
+  ],
+  "defaultVisualOperation": "replace",
+  "allowedMotionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "scale-swap-transition",
+    "card-morph-anchor"
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "order": 1,
+      "title": "我奉劝很多人，对AI技术一定要有",
+      "role": "hook",
+      "cueRange": {
+        "start": "cue-001",
+        "end": "cue-003"
+      },
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "timing": {
+        "start": 0,
+        "end": 15.14,
+        "duration": 15.14
+      },
+      "plannedSrc": "production/compositions/scenes/01-scene-01.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "question",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "hold"
+      ],
+      "screenText": [
+        {
+          "id": "scene-01-text-01",
+          "text": "我奉劝很多人，对AI技术一定要有敬畏之心，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-001"
+          ]
+        },
+        {
+          "id": "scene-01-text-02",
+          "text": "这个市场上有无数所谓的AI、Coze、Dify社群，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-002"
+          ]
+        },
+        {
+          "id": "scene-01-text-03",
+          "text": "但是这里面99%的人，他并不具备开发和维护AI的能力，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-003"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-01-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-02",
+      "order": 2,
+      "title": "AI也并不是你想的那么简单。",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-004",
+        "end": "cue-006"
+      },
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "timing": {
+        "start": 15.14,
+        "end": 31.5,
+        "duration": 16.36
+      },
+      "plannedSrc": "production/compositions/scenes/02-scene-02.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-02-text-01",
+          "text": "AI也并不是你想的那么简单。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-004"
+          ]
+        },
+        {
+          "id": "scene-02-text-02",
+          "text": "我看到很多人用完Codex、Claude Code，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        },
+        {
+          "id": "scene-02-text-03",
+          "text": "尤其是应届生，投了很多简历，说AI并不好找工作。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-02-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-02"
+      ]
+    },
+    {
+      "id": "scene-03",
+      "order": 3,
+      "title": "我可以非常明确地告诉你，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-007",
+        "end": "cue-009"
+      },
+      "cueIds": [
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "timing": {
+        "start": 31.5,
+        "end": 49.34,
+        "duration": 17.84
+      },
+      "plannedSrc": "production/compositions/scenes/03-scene-03.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-03-text-01",
+          "text": "我可以非常明确地告诉你，这个市场上90%的人，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-007"
+          ]
+        },
+        {
+          "id": "scene-03-text-02",
+          "text": "他不是在构建一个可维护的系统，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-008"
+          ]
+        },
+        {
+          "id": "scene-03-text-03",
+          "text": "五个原因，对照一下，自己能理解的，月薪都不会低于30K。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-009"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-03-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-04",
+      "order": 4,
+      "title": "第一，平台把系统的复杂性给隐藏起",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-010",
+        "end": "cue-011"
+      },
+      "cueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "timing": {
+        "start": 49.34,
+        "end": 61.68,
+        "duration": 12.34
+      },
+      "plannedSrc": "production/compositions/scenes/04-scene-04.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-04-text-01",
+          "text": "第一，平台把系统的复杂性给隐藏起来。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-010"
+          ]
+        },
+        {
+          "id": "scene-04-text-02",
+          "text": "低代码、无代码、AI平台、工作流工具，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-04-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-04"
+      ]
+    },
+    {
+      "id": "scene-05",
+      "order": 5,
+      "title": "好处是普通人可以快速上手，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-012",
+        "end": "cue-014"
+      },
+      "cueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "timing": {
+        "start": 61.68,
+        "end": 79.02,
+        "duration": 17.34
+      },
+      "plannedSrc": "production/compositions/scenes/05-scene-05.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-05-text-01",
+          "text": "好处是普通人可以快速上手，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-012"
+          ]
+        },
+        {
+          "id": "scene-05-text-02",
+          "text": "但一旦报错，你根本就不知道是模型问题、接口问题、权限问题",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-013"
+          ]
+        },
+        {
+          "id": "scene-05-text-03",
+          "text": "第二点，很多人把原型能力误判成是产品能力。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-014"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-05-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-05"
+      ]
+    },
+    {
+      "id": "scene-06",
+      "order": 6,
+      "title": "AI最擅长帮你从0到1做一个De",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-015",
+        "end": "cue-016"
+      },
+      "cueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "timing": {
+        "start": 79.02,
+        "end": 97.52,
+        "duration": 18.5
+      },
+      "plannedSrc": "production/compositions/scenes/06-scene-06.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-06-text-01",
+          "text": "AI最擅长帮你从0到1做一个Demo，每次帮你跑通一次，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-015"
+          ]
+        },
+        {
+          "id": "scene-06-text-02",
+          "text": "但是真实的产品不是跑通一次就可以了，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-016"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-06-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-07",
+      "order": 7,
+      "title": "当没有工程底座的时候，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-017",
+        "end": "cue-018"
+      },
+      "cueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "timing": {
+        "start": 97.52,
+        "end": 107.08,
+        "duration": 9.56
+      },
+      "plannedSrc": "production/compositions/scenes/07-scene-07.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-07-text-01",
+          "text": "当没有工程底座的时候，你的Demo越漂亮，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-017"
+          ]
+        },
+        {
+          "id": "scene-07-text-02",
+          "text": "第三点，就是我觉得现在短视频它疯狂地在展示结果，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-018"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-07-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-07"
+      ]
+    },
+    {
+      "id": "scene-08",
+      "order": 8,
+      "title": "一个智能体自动生成报告、自动回复",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-019",
+        "end": "cue-020"
+      },
+      "cueIds": [
+        "cue-019",
+        "cue-020"
+      ],
+      "timing": {
+        "start": 107.08,
+        "end": 123.96,
+        "duration": 16.88
+      },
+      "plannedSrc": "production/compositions/scenes/08-scene-08.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-08-text-01",
+          "text": "一个智能体自动生成报告、自动回复客户、自动剪辑视频，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-019"
+          ]
+        },
+        {
+          "id": "scene-08-text-02",
+          "text": "于是大家看到的是魔法，Magic，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-020"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-08-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-09",
+      "order": 9,
+      "title": "第四点，很多人有强烈的弯道超车的",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-021",
+        "end": "cue-023"
+      },
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "timing": {
+        "start": 123.96,
+        "end": 138.52,
+        "duration": 14.56
+      },
+      "plannedSrc": "production/compositions/scenes/09-scene-09.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-09-text-01",
+          "text": "第四点，很多人有强烈的弯道超车的心理。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-021"
+          ]
+        },
+        {
+          "id": "scene-09-text-02",
+          "text": "AI给了所有非技术的人一个巨大的想象：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-022"
+          ]
+        },
+        {
+          "id": "scene-09-text-03",
+          "text": "这种心理有一部分是真的，因为AI确实降低了表达需求和生成",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-023"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-09-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-09"
+      ]
+    },
+    {
+      "id": "scene-10",
+      "order": 10,
+      "title": "但危险在于，有些人进一步误解为，",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-024",
+        "end": "cue-026"
+      },
+      "cueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "timing": {
+        "start": 138.52,
+        "end": 151.74,
+        "duration": 13.22
+      },
+      "plannedSrc": "production/compositions/scenes/10-scene-10.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-10-text-01",
+          "text": "但危险在于，有些人进一步误解为，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-024"
+          ]
+        },
+        {
+          "id": "scene-10-text-02",
+          "text": "不能，最后只是一种自欺欺人。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-025"
+          ]
+        },
+        {
+          "id": "scene-10-text-03",
+          "text": "第五点，真正的智能体至少要能回答一些问题：",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-026"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-10-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-10"
+      ]
+    },
+    {
+      "id": "scene-11",
+      "order": 11,
+      "title": "它失败时应该怎么办？",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-027",
+        "end": "cue-029"
+      },
+      "cueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029"
+      ],
+      "timing": {
+        "start": 151.74,
+        "end": 157.42,
+        "duration": 5.68
+      },
+      "plannedSrc": "production/compositions/scenes/11-scene-11.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-11-text-01",
+          "text": "它失败时应该怎么办？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-027"
+          ]
+        },
+        {
+          "id": "scene-11-text-02",
+          "text": "该如何保存和调用上下文？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-028"
+          ]
+        },
+        {
+          "id": "scene-11-text-03",
+          "text": "该怎么判断模型输出是否靠谱？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-029"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-11-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-12",
+      "order": 12,
+      "title": "它怎么处理工具调用失败？",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-030",
+        "end": "cue-032"
+      },
+      "cueIds": [
+        "cue-030",
+        "cue-031",
+        "cue-032"
+      ],
+      "timing": {
+        "start": 157.42,
+        "end": 164.22,
+        "duration": 6.8
+      },
+      "plannedSrc": "production/compositions/scenes/12-scene-12.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-12-text-01",
+          "text": "它怎么处理工具调用失败？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-030"
+          ]
+        },
+        {
+          "id": "scene-12-text-02",
+          "text": "它的数据从哪里来，是否可信？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-031"
+          ]
+        },
+        {
+          "id": "scene-12-text-03",
+          "text": "它有没有权限控制和安全机制？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-032"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-12-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-13",
+      "order": 13,
+      "title": "有没有日志、监控、测试、回滚机制",
+      "role": "process",
+      "cueRange": {
+        "start": "cue-033",
+        "end": "cue-035"
+      },
+      "cueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "timing": {
+        "start": 164.22,
+        "end": 170.36,
+        "duration": 6.14
+      },
+      "plannedSrc": "production/compositions/scenes/13-scene-13.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-13-text-01",
+          "text": "有没有日志、监控、测试、回滚机制？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-033"
+          ]
+        },
+        {
+          "id": "scene-13-text-02",
+          "text": "它的成本是否可控？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-034"
+          ]
+        },
+        {
+          "id": "scene-13-text-03",
+          "text": "最后，它能不能被别人去维护？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-035"
+          ]
+        }
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-13-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        "graph-scene-13"
+      ]
+    },
+    {
+      "id": "scene-14",
+      "order": 14,
+      "title": "很多人出了Bug以后，",
+      "role": "concept",
+      "cueRange": {
+        "start": "cue-036",
+        "end": "cue-038"
+      },
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "timing": {
+        "start": 170.36,
+        "end": 179.74,
+        "duration": 9.38
+      },
+      "plannedSrc": "production/compositions/scenes/14-scene-14.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "screenText": [
+        {
+          "id": "scene-14-text-01",
+          "text": "很多人出了Bug以后，他用AI来去打这个补丁。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-036"
+          ]
+        },
+        {
+          "id": "scene-14-text-02",
+          "text": "我说实话，AI打补丁，这个补丁会打得非常大，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-037"
+          ]
+        },
+        {
+          "id": "scene-14-text-03",
+          "text": "这些问题，有人回答得上来吗？",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-038"
+          ]
+        }
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-14-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-15",
+      "order": 15,
+      "title": "你回答不上来，它就不是产品，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-039",
+        "end": "cue-040"
+      },
+      "cueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "timing": {
+        "start": 179.74,
+        "end": 191.84,
+        "duration": 12.1
+      },
+      "plannedSrc": "production/compositions/scenes/15-scene-15.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-15-text-01",
+          "text": "你回答不上来，它就不是产品，它只是个演示。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-039"
+          ]
+        },
+        {
+          "id": "scene-15-text-02",
+          "text": "今年，真正懂系统的人已经开始胜出了，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-040"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-15-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-16",
+      "order": 16,
+      "title": "如果你也想把Agent真正地学起",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-041",
+        "end": "cue-042"
+      },
+      "cueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "timing": {
+        "start": 191.84,
+        "end": 208.46,
+        "duration": 16.62
+      },
+      "plannedSrc": "production/compositions/scenes/16-scene-16.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-16-text-01",
+          "text": "如果你也想把Agent真正地学起来，不只是随便玩一下，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-041"
+          ]
+        },
+        {
+          "id": "scene-16-text-02",
+          "text": "666，拿着我这份耗时三周整理出来的路线和教程，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-042"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-16-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-17",
+      "order": 17,
+      "title": "把这些东西都要系统地过一遍，",
+      "role": "compare",
+      "cueRange": {
+        "start": "cue-043",
+        "end": "cue-045"
+      },
+      "cueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045"
+      ],
+      "timing": {
+        "start": 208.46,
+        "end": 225.58,
+        "duration": 17.12
+      },
+      "plannedSrc": "production/compositions/scenes/17-scene-17.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "screenText": [
+        {
+          "id": "scene-17-text-01",
+          "text": "把这些东西都要系统地过一遍，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-043"
+          ]
+        },
+        {
+          "id": "scene-17-text-02",
+          "text": "当创建变得廉价，理解、判断、维护、负责就会变得异常珍贵。",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-044"
+          ]
+        },
+        {
+          "id": "scene-17-text-03",
+          "text": "就是你去做这个提示词，这个动作是很廉价的，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-045"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-17-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-18",
+      "order": 18,
+      "title": "但是后面如何去理解你的这个Age",
+      "role": "close",
+      "cueRange": {
+        "start": "cue-046",
+        "end": "cue-046"
+      },
+      "cueIds": [
+        "cue-046"
+      ],
+      "timing": {
+        "start": 225.58,
+        "end": 239.328,
+        "duration": 13.748
+      },
+      "plannedSrc": "production/compositions/scenes/18-scene-18.html",
+      "status": "deterministic-baseline",
+      "layout": {
+        "hostPose": "close",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "compact",
+        "hold"
+      ],
+      "screenText": [
+        {
+          "id": "scene-18-text-01",
+          "text": "但是后面如何去理解你的这个Agent，如何去判断，",
+          "type": "exact-source",
+          "sourceCueIds": [
+            "cue-046"
+          ]
+        }
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-18-terminal",
+        "operation": "hold",
+        "minimumHoldSeconds": 0.6,
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-baseline",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.0.0",
+    "reason": "No reviewed formal planning bundle existed; generated the canonical content-independent baseline before optional enrichment.",
+    "contentIndependent": true,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 3,
+      "targetSceneSeconds": 18,
+      "numericClaimsAsCharts": false,
+      "llmEnrichmentOptional": true
+    }
+  }
+}

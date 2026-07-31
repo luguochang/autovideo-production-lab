@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "autovideo-voice-candidate-simulation/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "skipped-by-creator-delegation",
+  "decision": "accepted-for-internal-simulation",
+  "selectedCandidateId": "candidate-003",
+  "playedCandidateIds": [],
+  "checklist": {
+    "naturalness": false,
+    "breathing": false,
+    "pronunciation": false,
+    "segmentJoins": false,
+    "noArtifacts": false
+  },
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c"
+    },
+    "pronunciation": {
+      "path": "input/pronunciation.effective.json",
+      "sha256": "f750463416837f3d0f914873b9ffc44ef4c4fcd2b8728c6f90902440ea38706e"
+    },
+    "pronunciationApproval": {
+      "path": "qa/pronunciation-approval.json",
+      "sha256": "2766d429bd3a3e389f6810a171cdd01710c18d4998d38627bf8066cf585c8e48"
+    },
+    "index": {
+      "path": "audio/voice-candidates/index.json",
+      "sha256": "7a6181c885a86b1369d90ae5171dcdfbc0daed6c432165565d8399c5a1a9a481"
+    },
+    "candidates": [
+      {
+        "candidateId": "baseline-4862800600e4",
+        "manifestSha256": "fec92aae04ed320179d73411ed58dc0bd182d41fd0ecd605a0c622010cc5ae4b",
+        "audioSha256": "4862800600e4dbc6df0107cebda153102999092920080495f3eaf83e5712e838"
+      },
+      {
+        "candidateId": "candidate-003",
+        "manifestSha256": "395f7b396335fdc48cd214491535cb385327ce5f47b677c085380aeeaead28e4",
+        "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+      }
+    ]
+  },
+  "reason": "Creator explicitly delegated internal workflow decisions to Codex. Audio was not played because microphone, playback, and sound output remain disabled.",
+  "reviewedBy": "codex-creator-delegated-simulation",
+  "updatedAt": "2026-07-22T09:34:05.678Z",
+  "constraints": {
+    "audioPlaybackInvoked": false,
+    "microphoneUsed": false,
+    "publicReleaseApproved": false
+  },
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

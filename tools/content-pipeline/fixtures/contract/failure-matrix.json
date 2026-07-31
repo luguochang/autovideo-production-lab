@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "autovideo-content-failure-matrix/v1",
+  "datasetClass": "synthetic-contract-matrix",
+  "humanGoldEligible": false,
+  "cases": [
+    {"caseId": "ai-application-opinion-laundering", "topicClass": "ai-application", "mutation": "opinion-laundering", "expectedIssueCodes": ["opinion-kind-mismatch"]},
+    {"caseId": "ai-application-new-atom", "topicClass": "ai-application", "mutation": "new-protected-atom", "expectedIssueCodes": ["new-protected-atom"]},
+    {"caseId": "ai-application-screen-overload", "topicClass": "ai-application", "mutation": "screen-overload", "expectedIssueCodes": ["screen-item-count", "screen-item-too-long"]},
+    {"caseId": "ai-application-long-sentence", "topicClass": "ai-application", "mutation": "long-sentence", "expectedIssueCodes": ["sentence-too-long"]},
+    {"caseId": "code-tutorial-opinion-laundering", "topicClass": "code-tutorial", "mutation": "opinion-laundering", "expectedIssueCodes": ["opinion-kind-mismatch"]},
+    {"caseId": "code-tutorial-new-atom", "topicClass": "code-tutorial", "mutation": "new-protected-atom", "expectedIssueCodes": ["new-protected-atom"]},
+    {"caseId": "code-tutorial-screen-overload", "topicClass": "code-tutorial", "mutation": "screen-overload", "expectedIssueCodes": ["screen-item-count", "screen-item-too-long"]},
+    {"caseId": "code-tutorial-long-sentence", "topicClass": "code-tutorial", "mutation": "long-sentence", "expectedIssueCodes": ["sentence-too-long"]},
+    {"caseId": "data-explainer-opinion-laundering", "topicClass": "data-explainer", "mutation": "opinion-laundering", "expectedIssueCodes": ["opinion-kind-mismatch"]},
+    {"caseId": "data-explainer-new-atom", "topicClass": "data-explainer", "mutation": "new-protected-atom", "expectedIssueCodes": ["new-protected-atom"]},
+    {"caseId": "data-explainer-screen-overload", "topicClass": "data-explainer", "mutation": "screen-overload", "expectedIssueCodes": ["screen-item-count", "screen-item-too-long"]},
+    {"caseId": "data-explainer-long-sentence", "topicClass": "data-explainer", "mutation": "long-sentence", "expectedIssueCodes": ["sentence-too-long"]},
+    {"caseId": "product-review-opinion-laundering", "topicClass": "product-review", "mutation": "opinion-laundering", "expectedIssueCodes": ["opinion-kind-mismatch"]},
+    {"caseId": "product-review-new-atom", "topicClass": "product-review", "mutation": "new-protected-atom", "expectedIssueCodes": ["new-protected-atom"]},
+    {"caseId": "product-review-screen-overload", "topicClass": "product-review", "mutation": "screen-overload", "expectedIssueCodes": ["screen-item-count", "screen-item-too-long"]},
+    {"caseId": "product-review-long-sentence", "topicClass": "product-review", "mutation": "long-sentence", "expectedIssueCodes": ["sentence-too-long"]},
+    {"caseId": "creator-opinion-opinion-laundering", "topicClass": "creator-opinion", "mutation": "opinion-laundering", "expectedIssueCodes": ["opinion-kind-mismatch"]},
+    {"caseId": "creator-opinion-new-atom", "topicClass": "creator-opinion", "mutation": "new-protected-atom", "expectedIssueCodes": ["new-protected-atom"]},
+    {"caseId": "creator-opinion-screen-overload", "topicClass": "creator-opinion", "mutation": "screen-overload", "expectedIssueCodes": ["screen-item-count", "screen-item-too-long"]},
+    {"caseId": "creator-opinion-long-sentence", "topicClass": "creator-opinion", "mutation": "long-sentence", "expectedIssueCodes": ["sentence-too-long"]},
+    {"caseId": "workflow-operations-opinion-laundering", "topicClass": "workflow-operations", "mutation": "opinion-laundering", "expectedIssueCodes": ["opinion-kind-mismatch"]},
+    {"caseId": "workflow-operations-new-atom", "topicClass": "workflow-operations", "mutation": "new-protected-atom", "expectedIssueCodes": ["new-protected-atom"]},
+    {"caseId": "workflow-operations-screen-overload", "topicClass": "workflow-operations", "mutation": "screen-overload", "expectedIssueCodes": ["screen-item-count", "screen-item-too-long"]},
+    {"caseId": "workflow-operations-long-sentence", "topicClass": "workflow-operations", "mutation": "long-sentence", "expectedIssueCodes": ["sentence-too-long"]}
+  ]
+}

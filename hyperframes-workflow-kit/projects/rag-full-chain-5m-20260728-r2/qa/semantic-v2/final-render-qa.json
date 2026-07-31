@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "autovideo-semantic-v2-final-qa/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "generatedAt": "2026-07-29T12:28:07.399Z",
+  "generatedBy": "production/semantic-v2/scripts/finalize-semantic-v2-delivery.mjs",
+  "status": "passed-internal-review",
+  "publicReleaseBlocked": true,
+  "hyperframes": {
+    "version": "0.7.81",
+    "latestVersion": "0.7.81",
+    "updateAvailable": false
+  },
+  "preRenderGate": {
+    "episode1": {
+      "samples": 21,
+      "runtimeErrors": 0,
+      "layoutErrors": 0,
+      "motionErrors": 0,
+      "contrastPassed": "61/61"
+    },
+    "episode2": {
+      "samples": 30,
+      "runtimeErrors": 0,
+      "layoutErrors": 0,
+      "motionErrors": 0,
+      "contrastPassed": "66/66"
+    },
+    "acceptedMaintenanceWarnings": [
+      "composition_file_too_large",
+      "timeline_track_too_dense"
+    ]
+  },
+  "episodes": [
+    {
+      "id": "episode-1",
+      "label": "上集：离线建库",
+      "chapterCount": 7,
+      "captionCount": 216,
+      "sourceAudio": {
+        "path": "audio/episodes-v2/episode-1.internal.wav",
+        "bytes": 77647420,
+        "sha256": "1b4c8d370bb3636f8d3807bd6c991359feae6904ec11d364ae632f0aef2ef330",
+        "durationSeconds": 808.826479
+      },
+      "rawRender": {
+        "path": "archive/semantic-v2-raw-renders/rag-full-chain-5m-20260728-r2-semantic-v2-episode-1-render-raw.mp4",
+        "bytes": 40140430,
+        "sha256": "10bb3614a66b3358da76d769fd6f944ed3d02df0e7f281a3c8ee4a484ff06627"
+      },
+      "internalReviewVideo": {
+        "path": "renders/rag-full-chain-5m-20260728-r2-semantic-v2-episode-1-internal-review.mp4",
+        "bytes": 40180651,
+        "sha256": "142cf4711202489df83f2adc0323dbad308ab0b09a78420b9fca7ab99b584f55"
+      },
+      "media": {
+        "durationSeconds": 808.853,
+        "frameCount": 24265,
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "videoCodec": "h264",
+        "pixelFormat": "yuv420p",
+        "colorSpace": "bt709",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "loudness": {
+        "integratedLufs": -16.06,
+        "truePeakDbtp": -3.52,
+        "loudnessRangeLu": 2.6,
+        "thresholdLufs": -26.24
+      },
+      "fullDecode": {
+        "status": "passed",
+        "command": "ffmpeg -v error -i <video> -map 0:v:0 -map 0:a:0 -f null <null-device>"
+      },
+      "videoStreamIdentity": {
+        "status": "passed",
+        "rawSha256": "ded4b6515e35df944516992a15bb32721e501c5d569bba7af2e1691072f5e0eb",
+        "finalSha256": "ded4b6515e35df944516992a15bb32721e501c5d569bba7af2e1691072f5e0eb"
+      }
+    },
+    {
+      "id": "episode-2",
+      "label": "下集：在线链路",
+      "chapterCount": 10,
+      "captionCount": 285,
+      "sourceAudio": {
+        "path": "audio/episodes-v2/episode-2.internal.wav",
+        "bytes": 105572674,
+        "sha256": "255bc4d38c9232e8c8a020fb6e04d06ec78eb82e0c1df74c3da66882e09b183a",
+        "durationSeconds": 1099.714542
+      },
+      "rawRender": {
+        "path": "archive/semantic-v2-raw-renders/rag-full-chain-5m-20260728-r2-semantic-v2-episode-2-render-raw.mp4",
+        "bytes": 56125730,
+        "sha256": "7df8945b21a4f400aae913d3e4d41d6da4f2f1f95d384a9bbbf9c3a25ddca214"
+      },
+      "internalReviewVideo": {
+        "path": "renders/rag-full-chain-5m-20260728-r2-semantic-v2-episode-2-internal-review.mp4",
+        "bytes": 56176384,
+        "sha256": "390a8487e946ea1544be821243c3119f0f706ba60e7dbcc599b9086979c4b735"
+      },
+      "media": {
+        "durationSeconds": 1099.733333,
+        "frameCount": 32992,
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "videoCodec": "h264",
+        "pixelFormat": "yuv420p",
+        "colorSpace": "bt709",
+        "audioCodec": "aac",
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "loudness": {
+        "integratedLufs": -16.05,
+        "truePeakDbtp": -3.59,
+        "loudnessRangeLu": 2.4,
+        "thresholdLufs": -26.24
+      },
+      "fullDecode": {
+        "status": "passed",
+        "command": "ffmpeg -v error -i <video> -map 0:v:0 -map 0:a:0 -f null <null-device>"
+      },
+      "videoStreamIdentity": {
+        "status": "passed",
+        "rawSha256": "b8be996ca4ee9ed61e04990fa4df8db39295a16c51a7d7b03d3598b73a757181",
+        "finalSha256": "b8be996ca4ee9ed61e04990fa4df8db39295a16c51a7d7b03d3598b73a757181"
+      }
+    }
+  ],
+  "finishedFrameReview": {
+    "status": "passed",
+    "frameCount": 21,
+    "coverage": "两集首尾、17 个章节和上下集衔接区域",
+    "checks": [
+      "no-blank-subject",
+      "no-overlap",
+      "no-ghosting",
+      "no-host-occlusion",
+      "no-caption-overflow",
+      "no-transition-residue"
+    ],
+    "contactSheets": [
+      "qa/semantic-v2/finished-frame-review/episode-1-contact-sheet.png",
+      "qa/semantic-v2/finished-frame-review/episode-2-contact-sheet.png"
+    ]
+  },
+  "humanGates": {
+    "transitionVoiceListening": {
+      "humanListeningPerformed": false,
+      "status": "pending"
+    },
+    "fullFilmReview": {
+      "humanReviewPerformed": false,
+      "status": "pending"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "autovideo-screen-text-internal-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "accepted-for-internal-only",
+  "approvalScope": "internal-autonomous-review",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "bindings": {
+    "hyperframesCheck": {
+      "path": "qa/hyperframes-check.json",
+      "sha256": "9ce745286fe8e378c2e6db7a8d868104b879f9dda2e3d57410d59e7263989949"
+    },
+    "subtitleApproval": {
+      "path": "qa/subtitle-human-approval.json",
+      "sha256": "6e60b5f386ac18818b17c8776f5b05e228b367ac6c12b64ef21a25ea8e7a3b38"
+    },
+    "composition": {
+      "path": "production/hyperframes",
+      "digest": "f7aa71d46ca9b6aa8f6acc46b334a2b06f8f2064181f72bb9d85b20f3ff6bf96",
+      "fileCount": 35
+    },
+    "frameSet": {
+      "path": "qa/screen-text-frame-set.json",
+      "sha256": "c2c038cd3e319b55ef6d8096b08a7601a1f51e3dc9cd9c43e109aa3850fe064c",
+      "digest": "ceeb210942da8f2227b19db37ca33b2cad8e9ca0b999c83fa1efc19e7cc77118"
+    },
+    "frames": [
+      {
+        "id": "frame-9dc3c83e1043",
+        "timeSeconds": 1.99,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-001"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-00-at-1.99s.png",
+        "sha256": "fe6552b8105d546a5fec7473c8e46c518bf5528cab4c1ccae26593149776ff06"
+      },
+      {
+        "id": "frame-61107a2faa52",
+        "timeSeconds": 8.4,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-002"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-01-at-8.4s.png",
+        "sha256": "7c2c0464615a9ace95ab0287337428099765db1eef86605098eab850ed181395"
+      },
+      {
+        "id": "frame-82ede7bf478b",
+        "timeSeconds": 14.44,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-003"
+        ],
+        "sceneId": "scene-01",
+        "path": "production/hyperframes/snapshots/frame-02-at-14.44s.png",
+        "sha256": "3dbcf7353145e7c092d28a71199f8885569cbada96caadf87d48e5fbe8ee5011"
+      },
+      {
+        "id": "frame-ce658af61581",
+        "timeSeconds": 18.44,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-004"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-03-at-18.44s.png",
+        "sha256": "ce579254a15427ba5d2978a0032086a26923dadd5a621c056d82a26685fd073e"
+      },
+      {
+        "id": "frame-ac1c0af41ba5",
+        "timeSeconds": 25.24,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-005"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-04-at-25.24s.png",
+        "sha256": "95e23ca08159272d1dcf4584407444258f2dd330f041973fdb8558fc294f6ee8"
+      },
+      {
+        "id": "frame-72b6e226c0ea",
+        "timeSeconds": 30.734,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-006"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-05-at-30.734s.png",
+        "sha256": "95aa28a550384894c13de4b063ae96af4e47562a45e7febe97c2530dcb80247a"
+      },
+      {
+        "id": "frame-4e31efd3bc32",
+        "timeSeconds": 31.193,
+        "reason": "deterministic-timeline-sample",
+        "cueIds": [
+          "cue-006"
+        ],
+        "sceneId": "scene-02",
+        "path": "production/hyperframes/snapshots/frame-06-at-31.193s.png",
+        "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+      }
+    ],
+    "ocr": null
+  },
+  "checklist": {
+    "allReviewFramesChecked": false,
+    "subtitleSafeArea": false,
+    "noOcclusion": false,
+    "screenTextAccuracy": false,
+    "contrastAndLegibility": false,
+    "lineBreakAndOverflow": false,
+    "duplicateTextRestraint": false
+  },
+  "frames": [
+    {
+      "id": "frame-9dc3c83e1043",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-61107a2faa52",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-82ede7bf478b",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-ce658af61581",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-ac1c0af41ba5",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-72b6e226c0ea",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    },
+    {
+      "id": "frame-4e31efd3bc32",
+      "decision": "accepted",
+      "note": "Accepted only for creator-delegated internal workflow simulation."
+    }
+  ],
+  "reviewMode": "technical-only",
+  "machineAssistance": {
+    "ocrStatus": "passed",
+    "ocrAvailable": true,
+    "unresolvedCount": 0
+  },
+  "notes": "Creator-delegated internal-only simulation based on all seven current deterministic static frames and the passing strict HyperFrames machine check. No video playback, audio playback, human sensory review, rights clearance, or public approval is claimed.",
+  "reviewedBy": "codex-creator-delegated",
+  "updatedAt": "2026-07-22T12:35:42.040Z",
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

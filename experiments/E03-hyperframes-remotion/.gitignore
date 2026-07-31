@@ -1,0 +1,7 @@
+node_modules/
+.hyperframes/
+remotion/.remotion/
+remotion/node_modules/
+hyperframes/*/renders/*.mp4
+hyperframes/*/snapshots/
+

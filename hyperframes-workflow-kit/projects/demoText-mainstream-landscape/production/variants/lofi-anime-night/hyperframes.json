@@ -1,0 +1,12 @@
+{
+  "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",
+  "registry": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry",
+  "composition": {
+    "id": "main",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration": 20
+  },
+  "style": "lofi-anime-night"
+}

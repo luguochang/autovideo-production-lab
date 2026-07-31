@@ -1,0 +1,50 @@
+[
+  {
+    "id": "swiss-pulse",
+    "name": "Swiss Pulse",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/swiss-pulse/STYLE_GUIDE.md"
+  },
+  {
+    "id": "velvet-standard",
+    "name": "Velvet Standard",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/velvet-standard/STYLE_GUIDE.md"
+  },
+  {
+    "id": "deconstructed",
+    "name": "Deconstructed",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/deconstructed/STYLE_GUIDE.md"
+  },
+  {
+    "id": "maximalist-type",
+    "name": "Maximalist Type",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/maximalist-type/STYLE_GUIDE.md"
+  },
+  {
+    "id": "data-drift",
+    "name": "Data Drift",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/data-drift/STYLE_GUIDE.md"
+  },
+  {
+    "id": "soft-signal",
+    "name": "Soft Signal",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/soft-signal/STYLE_GUIDE.md"
+  },
+  {
+    "id": "folk-frequency",
+    "name": "Folk Frequency",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/folk-frequency/STYLE_GUIDE.md"
+  },
+  {
+    "id": "shadow-cut",
+    "name": "Shadow Cut",
+    "sourcePath": "vendor/hyperframes/skills/hyperframes-creative/references/visual-styles.md",
+    "guidePath": "style-library/styles/official/shadow-cut/STYLE_GUIDE.md"
+  }
+]

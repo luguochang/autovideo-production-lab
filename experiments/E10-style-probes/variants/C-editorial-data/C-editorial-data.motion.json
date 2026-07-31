@@ -1,0 +1,21 @@
+{
+  "duration": 7.242254,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#index-mark", "bySec": 0.65 },
+    { "kind": "appearsBy", "selector": "#surface-card", "bySec": 2.0 },
+    { "kind": "appearsBy", "selector": "#layer-model", "bySec": 3.0 },
+    { "kind": "appearsBy", "selector": "#layer-tools", "bySec": 4.8 },
+    { "kind": "appearsBy", "selector": "#final-tag", "bySec": 6.0 },
+    { "kind": "before", "a": "#surface-card", "b": "#layer-model" },
+    { "kind": "before", "a": "#layer-model", "b": "#layer-api" },
+    { "kind": "before", "a": "#layer-api", "b": "#layer-vector" },
+    { "kind": "before", "a": "#layer-vector", "b": "#layer-tools" },
+    { "kind": "staysInFrame", "selector": "#surface-card" },
+    { "kind": "staysInFrame", "selector": "#layer-model" },
+    { "kind": "staysInFrame", "selector": "#layer-api" },
+    { "kind": "staysInFrame", "selector": "#layer-vector" },
+    { "kind": "staysInFrame", "selector": "#layer-tools" },
+    { "kind": "staysInFrame", "selector": "#caption-rail" },
+    { "kind": "keepsMoving", "withinSelector": "#board", "maxStaticSec": 1.5 }
+  ]
+}

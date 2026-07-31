@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "autovideo-evidence/v1",
+  "claims": [
+    {
+      "id": "claim-platform-hides-complexity",
+      "statement": "平台把模型调用、API连接、向量库和工具链调度包装成按钮与节点。",
+      "status": "opinion",
+      "sourceId": "source-001-acfa947f",
+      "quote": "低代码、无代码、AI平台、工作流工具，把模型调用、API连接、向量库、工具链调度流程包装成了按钮和节点。",
+      "locator": "demoText-30s-platform-complexity.txt:1",
+      "notes": "只有创作者原稿，没有外部平台清单或可复核统计，按观点呈现。"
+    },
+    {
+      "id": "claim-easy-start-hides-tradeoff",
+      "statement": "把复杂能力包装成节点有利于快速上手，但可能让人误把拖拽节点当成理解系统架构。",
+      "status": "opinion",
+      "sourceId": "source-001-acfa947f",
+      "quote": "好处是普通人可以快速上手，坏处是很多人误以为会拖拽节点就等于懂系统架构。",
+      "locator": "demoText-30s-platform-complexity.txt:1",
+      "notes": "保留原稿的利弊关系，口播避免扩写为普遍统计。"
+    },
+    {
+      "id": "claim-failure-has-multiple-layers",
+      "statement": "出现报错时，问题可能涉及模型、接口、权限、数据、上下游或状态管理。",
+      "status": "opinion",
+      "sourceId": "source-001-acfa947f",
+      "quote": "但一旦报错，你根本就不知道是模型问题、接口问题、权限问题、数据问题，还是上下游问题、状态管理问题。",
+      "locator": "demoText-30s-platform-complexity.txt:1",
+      "notes": "原稿中的风险判断；没有具体故障案例，因此不包装成故障率结论。"
+    }
+  ],
+  "gaps": [
+    {
+      "question": "哪些具体平台、接口或故障案例可以作为外部证据？",
+      "reason": "这段素材只有观点，没有外部来源和可复核案例。"
+    }
+  ]
+}

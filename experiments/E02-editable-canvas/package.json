@@ -1,0 +1,25 @@
+{
+  "name": "autovideo-e02-editable-canvas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bundle:excalidraw": "esbuild src/mermaid-to-excalidraw.browser.js --bundle --format=iife --global-name=ExcalidrawMermaidBridge --outfile=output/mermaid-to-excalidraw.js",
+    "render:d2": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/render-d2.ps1",
+    "verify": "npm run render:d2 && npm run bundle:excalidraw && node src/verify.mjs"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "0.18.1",
+    "@excalidraw/mermaid-to-excalidraw": "2.2.2",
+    "@viz-js/viz": "3.28.0",
+    "elkjs": "0.11.1",
+    "fabric": "7.4.0",
+    "mermaid": "11.16.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "puppeteer-core": "25.3.0"
+  }
+}

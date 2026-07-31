@@ -1,0 +1,18 @@
+{
+  "name": "autovideo-e08-demo-candidates",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install:runtime": "npm install --no-audit --no-fund",
+    "tts": "node scripts/generate-tts.mjs",
+    "build": "node scripts/build-variants.mjs",
+    "normalize": "node scripts/normalize-renders.mjs",
+    "verify": "node scripts/verify-renders.mjs",
+    "prepare:project": "npm run tts && npm run build"
+  },
+  "dependencies": {
+    "gsap": "3.14.2",
+    "msedge-tts": "2.0.7"
+  }
+}

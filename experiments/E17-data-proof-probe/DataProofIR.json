@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "autovideo-data-proof-ir/v1",
+  "projectId": "E17-data-proof-probe",
+  "purpose": "Show the structural expansion from one visible entry to three hidden engineering layers without presenting it as a business-performance claim.",
+  "visualType": "data-proof",
+  "claimType": "structural-derived",
+  "claimText": "一个入口，展开成三层工程关系",
+  "metrics": [
+    {"id":"entry","label":"入口","value":1,"unit":"layer","source":"Graph IR structure in this probe"},
+    {"id":"context","label":"上下文","value":2,"unit":"layers","source":"Graph IR structure in this probe"},
+    {"id":"tools","label":"工具链","value":3,"unit":"layers","source":"Graph IR structure in this probe"}
+  ],
+  "notAnExternalBenchmark": true,
+  "sourceReceipt": "SOURCE_RECEIPT.json",
+  "motionRecipe": "data-proof@1.0.0",
+  "status": "candidate"
+}

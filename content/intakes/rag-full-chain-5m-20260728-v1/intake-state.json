@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "autovideo-content-intake-state/v1",
+  "projectId": "rag-full-chain-5m-20260728-v1",
+  "stage": "extracted",
+  "createdAt": "2026-07-28T05:41:48.750Z",
+  "updatedAt": "2026-07-28T05:52:47.3879479Z",
+  "artifacts": {
+    "sources": {
+      "path": "sources.json",
+      "sha256": "0f98597e945eccc2a2e71450d56b766235ad04495cb34f2dafde431c1cae3c36"
+    },
+    "suitability": {
+      "path": "material-suitability.json",
+      "sha256": "090465e3a23a317823fe127a47a06e3ade9b3bdb5ad54672b26e1a5b64745248"
+    },
+    "evidence": {
+      "path": "evidence.json",
+      "sha256": "8d17f42962056e6ab9ad3d27dcc0f7590537f00fed22c0dc9f7e849ed520c7ad"
+    }
+  },
+  "lockedProjectId": null
+}

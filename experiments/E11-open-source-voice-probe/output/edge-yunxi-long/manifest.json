@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-07-16T09:36:49.795Z",
+  "source": "experiments/E11-open-source-voice-probe/target-text-long.txt",
+  "sourceSha256": "6abde36def1913f22c129964c8025823f077c8a6d622413b234f4658e928b91a",
+  "sourceCharacters": 104,
+  "sourceNonWhitespaceCharacters": 101,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": 1.08,
+  "segmentCount": 3,
+  "durationSeconds": 18.0895,
+  "wordBoundaryCount": 57,
+  "sentenceBoundaryCount": 3,
+  "captionCueCount": 10,
+  "serviceTranscriptMatchesSource": true,
+  "outputs": {
+    "webm": "narration.webm",
+    "mp3": "narration.mp3",
+    "words": "words.json",
+    "sentences": "sentences.json",
+    "captions": "captions.json",
+    "srt": "subtitles.srt",
+    "vtt": "subtitles.vtt",
+    "sentenceSrt": "sentences.srt"
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "text": "如果你只是把提示词丢给模型，然后等待一个看起来漂亮的答案，视频很快就会变成流水账。",
+      "start": 0,
+      "duration": 6.7705416666666665,
+      "end": 6.7705416666666665,
+      "audio": "chunks/000/audio.webm",
+      "metadata": "chunks/000/metadata.json"
+    },
+    {
+      "index": 1,
+      "text": "真正可靠的做法，是先锁定目标，再核对证据，最后让画面和声音一起服务于结论。",
+      "start": 6.7705416666666665,
+      "duration": 7.03675,
+      "end": 13.807291666666666,
+      "audio": "chunks/001/audio.webm",
+      "metadata": "chunks/001/metadata.json"
+    },
+    {
+      "index": 2,
+      "text": "听起来慢一点，但观众会更舒服，也更容易相信你。",
+      "start": 13.807291666666666,
+      "duration": 4.282208333333333,
+      "end": 18.0895,
+      "audio": "chunks/002/audio.webm",
+      "metadata": "chunks/002/metadata.json"
+    }
+  ]
+}

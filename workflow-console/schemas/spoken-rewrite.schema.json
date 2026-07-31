@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo spoken rewrite",
+  "type": "object",
+  "required": [
+    "schemaVersion", "projectId", "sourceRegisterSha256", "suitabilitySha256",
+    "evidenceSha256", "title", "language", "sections", "reviewNotes", "generatedAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-spoken-rewrite/v1"},
+    "projectId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "sourceRegisterSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "suitabilitySha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "evidenceSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "scriptDraftSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "prompt": {
+      "type": "object",
+      "required": ["id", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "const": "oralizer"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "title": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "const": "zh-CN"},
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "targetSeconds", "narration", "claimIds", "sourceIds", "framing", "onscreen"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^section-[0-9]{2,}$"},
+          "kind": {"type": "string", "enum": ["sourced", "creator-opinion", "transition"]},
+          "targetSeconds": {"type": "number", "minimum": 1},
+          "narration": {"type": "string", "minLength": 1},
+          "claimIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "sourceIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "framing": {"type": "string"},
+          "onscreen": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["text", "kind"],
+              "additionalProperties": false,
+              "properties": {
+                "text": {"type": "string", "minLength": 1},
+                "kind": {"type": "string", "enum": ["exact_excerpt", "generated_summary"]}
+              }
+            }
+          }
+        }
+      }
+    },
+    "reviewNotes": {"type": "array", "items": {"type": "string"}},
+    "generatedAt": {"type": "string", "minLength": 1}
+  }
+}

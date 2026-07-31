@@ -1,0 +1,59 @@
+{
+  "titleId": "hf-output-title",
+  "patchEvents": [
+    {
+      "origin": "experiment:manual-edit",
+      "opTypes": [
+        "setText",
+        "setStyle"
+      ],
+      "patches": [
+        {
+          "op": "replace",
+          "path": "/elements/hf-output-title/text",
+          "value": "输出链：边生成、边播放"
+        },
+        {
+          "op": "add",
+          "path": "/elements/hf-output-title/inlineStyles/color",
+          "value": "#8f3141"
+        }
+      ]
+    },
+    {
+      "origin": "@hyperframes/sdk:applyPatches",
+      "opTypes": [
+        "applyPatches"
+      ],
+      "patches": [
+        {
+          "op": "remove",
+          "path": "/elements/hf-output-title/inlineStyles/color"
+        },
+        {
+          "op": "replace",
+          "path": "/elements/hf-output-title/text",
+          "value": "输出也必须是流式的"
+        }
+      ]
+    },
+    {
+      "origin": "@hyperframes/sdk:applyPatches",
+      "opTypes": [
+        "applyPatches"
+      ],
+      "patches": [
+        {
+          "op": "replace",
+          "path": "/elements/hf-output-title/text",
+          "value": "输出链：边生成、边播放"
+        },
+        {
+          "op": "add",
+          "path": "/elements/hf-output-title/inlineStyles/color",
+          "value": "#8f3141"
+        }
+      ]
+    }
+  ]
+}

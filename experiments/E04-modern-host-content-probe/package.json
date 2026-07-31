@@ -1,0 +1,10 @@
+{
+  "name": "e04-modern-host-content-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.7.64 check",
+    "snapshot": "npx --yes hyperframes@0.7.64 snapshot --at 0.8,2.4,3.5,5.2,7.2,9.4",
+    "render": "npx --yes hyperframes@0.7.64 render"
+  }
+}

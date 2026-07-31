@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-semantic-probes/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "items": [
+    {
+      "id": "parsing",
+      "sourceStart": 110.24,
+      "duration": 8,
+      "audio": "probes/parsing/assets/audio/parsing.wav",
+      "visual": "document"
+    },
+    {
+      "id": "chunking",
+      "sourceStart": 301.28,
+      "duration": 8,
+      "audio": "probes/chunking/assets/audio/chunking.wav",
+      "visual": "chunk"
+    },
+    {
+      "id": "retrieval",
+      "sourceStart": 976,
+      "duration": 8,
+      "audio": "probes/retrieval/assets/audio/retrieval.wav",
+      "visual": "retrieval"
+    },
+    {
+      "id": "agent",
+      "sourceStart": 1362.96,
+      "duration": 8,
+      "audio": "probes/agent/assets/audio/agent.wav",
+      "visual": "agent"
+    },
+    {
+      "id": "evaluation",
+      "sourceStart": 1547.38,
+      "duration": 8,
+      "audio": "probes/evaluation/assets/audio/evaluation.wav",
+      "visual": "evaluation"
+    }
+  ]
+}

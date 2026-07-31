@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "autovideo-render-qa/v1",
+  "projectId": "E18-code-proof-probe",
+  "scope": "internal-review",
+  "artifact": {
+    "path": "renders/code-proof-probe.mp4",
+    "sha256": "52d780dcda1b4914160f01e00ea7b7334b7d651cf5654d455703104f8b2fe061",
+    "sizeBytes": 2282777,
+    "durationSeconds": 8,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "fps": 30},
+    "audio": {"codec": "aac", "sampleRate": 48000, "channels": 2}
+  },
+  "sourceAudio": {
+    "path": ".media/audio/voice/voice_001.wav",
+    "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "format": "PCM s16le, 48 kHz, mono",
+    "durationSeconds": 8,
+    "audioCheck": "render.audio.log reports 768000 decoded samples, mean -28.0 dB, max -7.6 dB"
+  },
+  "checks": {
+    "highQualityRenderCompleted": true,
+    "fullDecodePassed": true,
+    "decodeLog": "render.decode.log",
+    "audioLevelPassed": true,
+    "audioLog": "render.audio.log",
+    "blackFrameScanPassed": true,
+    "blackFrameLog": "render.blackdetect.log",
+    "strictHyperframesCheckPassed": true,
+    "strictCheckLog": "check.strict.log",
+    "renderFrameInspectionPassed": true,
+    "publicReleaseApproved": false
+  },
+  "inspectedFrames": [
+    {"timeSeconds": 0.8, "path": "review/render-qa/frame-0.80.png", "sha256": "806593da2dd701ec1d0ce951b35fdadcb0f314df0b5f9923f7aa56e4823c02d5", "observation": "Host, editor and first state establish without a page cut."},
+    {"timeSeconds": 3.08, "path": "review/render-qa/frame-3.08.png", "sha256": "28f9e36e64b122ce6758779918dc43e3cc6f413c9b91a57c0dec02952b66327f", "observation": "Focus band remains in the editor while the host and caption rail stay fixed."},
+    {"timeSeconds": 5.42, "path": "review/render-qa/frame-5.42.png", "sha256": "ee348bd44035bad8c6e839bedd8d8ed1ae8cecc1a23911c5c6f95b52a293ac40", "observation": "Third source-linked call is readable; no content camera escapes the right zone."},
+    {"timeSeconds": 6.42, "path": "review/render-qa/frame-6.42.png", "sha256": "def6f077d2b6d0eb198bfb833e024d8a5c8bb6e69e6a74f8301da33e8bc04bda", "observation": "Completion state and conclusion band begin their shared resolve."},
+    {"timeSeconds": 7.76, "path": "review/render-qa/frame-7.76.png", "sha256": "871b5c19da260b9303caaa02b3f64eeff83203faebfa1a7c47fdd578fbe0cb68", "observation": "Terminal code context and conclusion hold for reading with the exact final caption."}
+  ],
+  "contactSheet": {
+    "path": "review/render-qa/render-contact-sheet.png",
+    "sha256": "d02a1341ae213adfb91ba9201b94bb317a816d47b654d34e3728907563f2f00b"
+  },
+  "humanVisualReview": null
+}

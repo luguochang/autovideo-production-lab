@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/shot-manifest.schema.json",
+  "title": "AutoVideo Shot Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "projectId",
+    "sourceAlignment",
+    "narrationLock",
+    "cueCount",
+    "timingUnit",
+    "captionPolicy",
+    "defaultVisualOperation",
+    "allowedScreenTextTypes",
+    "allowedMotionRules",
+    "shots"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-shot-manifest/v1"},
+    "projectId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "sourceAlignment": {"type": "string", "minLength": 1},
+    "narrationLock": {"type": "string", "minLength": 1},
+    "cueCount": {"type": "integer", "minimum": 1},
+    "timingUnit": {"const": "seconds"},
+    "captionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["zone", "textType", "source", "maxLines"],
+      "properties": {
+        "zone": {"const": "caption"},
+        "textType": {"const": "exact-source"},
+        "source": {"type": "string", "minLength": 1},
+        "maxLines": {"type": "integer", "minimum": 1}
+      }
+    },
+    "defaultVisualOperation": {"type": "string", "minLength": 1},
+    "allowedScreenTextTypes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["exact-source", "approved-summary", "generated-summary"]}
+    },
+    "allowedMotionRules": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "motionRecipeLibrary": {"$ref": "#/$defs/motionRecipeLibrary"},
+    "provenance": {"type": "object", "additionalProperties": true},
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/shot"}
+    }
+  },
+  "$defs": {
+    "cueId": {"type": "string", "pattern": "^cue-[0-9]{3,}$"},
+    "sceneId": {"type": "string", "pattern": "^scene-[0-9]{2,}$"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "visualType": {
+      "enum": ["keyword", "evidence-image", "device-surface", "diagram", "data-proof", "comparison", "code-surface", "object-metaphor"]
+    },
+    "motionRecipeLibrary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["libraryId", "version", "path", "sha256", "schemaVersion"],
+      "properties": {
+        "libraryId": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "schemaVersion": {"const": "autovideo-motion-recipe-library/v1"}
+      }
+    },
+    "motionRecipeRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["libraryId", "libraryVersion", "recipeId", "version", "params", "sourceCueIds"],
+      "properties": {
+        "libraryId": {"type": "string", "minLength": 1},
+        "libraryVersion": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "recipeId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "params": {"type": "object", "additionalProperties": true},
+        "sourceCueIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/cueId"}
+        }
+      }
+    },
+    "assetRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "role", "zone", "required", "sourceCueIds"],
+      "properties": {
+        "assetId": {"type": "string", "pattern": "^[a-z][a-z0-9_-]*$"},
+        "role": {"enum": ["evidence", "illustration", "icon", "interface", "code", "metaphor"]},
+        "zone": {"const": "content.right"},
+        "required": {"type": "boolean"},
+        "sourceCueIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/cueId"}
+        }
+      }
+    },
+    "carrierEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "label"],
+      "properties": {
+        "status": {"enum": ["verified", "illustrative-mock"]},
+        "label": {"type": "string", "minLength": 1, "maxLength": 40},
+        "receipt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "id", "sha256"],
+          "properties": {
+            "kind": {"enum": ["claim", "source", "media"]},
+            "id": {"type": "string", "minLength": 1, "maxLength": 180},
+            "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        }
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "verified"}}}, "then": {"required": ["receipt"]}},
+        {"if": {"properties": {"status": {"const": "illustrative-mock"}}}, "then": {"not": {"required": ["receipt"]}}}
+      ]
+    },
+    "carrierBase": {
+      "type": "object",
+      "required": ["adapterId", "adapterVersion", "zone", "sourceReceipt", "sourceCueIds", "evidence", "data"]
+    },
+    "dataChartCarrier": {
+      "allOf": [{"$ref": "#/$defs/carrierBase"}],
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "adapterId": {"const": "data-chart-bounded"}, "adapterVersion": {"const": "1.0.0"}, "zone": {"const": "content.right"},
+        "sourceReceipt": {"const": "hf-registry:data-chart@02ccb24bfa21850d"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/cueId"}},
+        "evidence": {"$ref": "#/$defs/carrierEvidence"},
+        "data": {"type": "object", "additionalProperties": false, "required": ["title", "series"], "properties": {
+          "title": {"type": "string", "minLength": 1, "maxLength": 36}, "unit": {"type": "string", "maxLength": 12},
+          "highlightIndex": {"type": "integer", "minimum": 0, "maximum": 5},
+          "series": {"type": "array", "minItems": 2, "maxItems": 6, "items": {"type": "object", "additionalProperties": false, "required": ["label", "value"], "properties": {"label": {"type": "string", "minLength": 1, "maxLength": 12}, "value": {"type": "number", "minimum": 0}, "displayValue": {"type": "string", "maxLength": 14}}}}
+        }}
+      }
+    },
+    "codeSurfaceCarrier": {
+      "allOf": [{"$ref": "#/$defs/carrierBase"}],
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "adapterId": {"const": "code-surface-bounded"}, "adapterVersion": {"const": "1.0.0"}, "zone": {"const": "content.right"},
+        "sourceReceipt": {"const": "hf-registry:code-diff+code-highlight@5356890f+2e28ffdb"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/cueId"}},
+        "evidence": {"$ref": "#/$defs/carrierEvidence"},
+        "data": {"type": "object", "additionalProperties": false, "required": ["title", "language", "mode", "lines"], "properties": {
+          "title": {"type": "string", "minLength": 1, "maxLength": 42}, "language": {"type": "string", "minLength": 1, "maxLength": 18}, "mode": {"enum": ["highlight", "diff"]},
+          "lines": {"type": "array", "minItems": 2, "maxItems": 10, "items": {"type": "object", "additionalProperties": false, "required": ["kind", "text"], "properties": {"kind": {"enum": ["context", "add", "remove", "focus"]}, "text": {"type": "string", "minLength": 1, "maxLength": 96}}}}
+        }}
+      }
+    },
+    "deviceSurfaceCarrier": {
+      "allOf": [{"$ref": "#/$defs/carrierBase"}],
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "adapterId": {"const": "device-surface-bounded"}, "adapterVersion": {"const": "1.0.0"}, "zone": {"const": "content.right"},
+        "sourceReceipt": {"const": "hf-registry:app-showcase@c7e1b4d8ec2a2c1f"},
+        "sourceCueIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/cueId"}},
+        "evidence": {"$ref": "#/$defs/carrierEvidence"},
+        "data": {"type": "object", "additionalProperties": false, "required": ["title", "productLabel", "states"], "properties": {
+          "title": {"type": "string", "minLength": 1, "maxLength": 36}, "productLabel": {"type": "string", "minLength": 1, "maxLength": 28}, "activeState": {"type": "integer", "minimum": 0, "maximum": 2},
+          "states": {"type": "array", "minItems": 2, "maxItems": 3, "items": {"type": "object", "additionalProperties": false, "required": ["label", "rows"], "properties": {"label": {"type": "string", "minLength": 1, "maxLength": 18}, "rows": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "string", "minLength": 1, "maxLength": 22}}}}}
+        }}
+      }
+    },
+    "carrierPayload": {
+      "oneOf": [{"$ref": "#/$defs/dataChartCarrier"}, {"$ref": "#/$defs/codeSurfaceCarrier"}, {"$ref": "#/$defs/deviceSurfaceCarrier"}]
+    },
+    "sfxRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "role", "event", "cueId", "offsetMs", "gainDb", "duckingDb"],
+      "properties": {
+        "assetId": {"type": "string", "pattern": "^sfx(?:[-_][a-z0-9]+)+$"},
+        "role": {"enum": ["focus-hit", "connector-draw", "state-change", "error", "chapter-resolve"]},
+        "event": {"enum": ["enter", "draw", "state-change", "error", "resolve", "click"]},
+        "cueId": {"$ref": "#/$defs/cueId"},
+        "offsetMs": {"type": "integer", "minimum": 0, "maximum": 10000},
+        "gainDb": {"type": "number", "minimum": -36, "maximum": 0},
+        "duckingDb": {"type": "number", "minimum": -12, "maximum": 0}
+      }
+    },
+    "screenText": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["text", "type", "sourceCueIds"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "type": {"enum": ["exact-source", "approved-summary", "generated-summary"]},
+        "sourceCueIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/cueId"}
+        },
+        "generationReceipt": {"type": "string", "minLength": 1},
+        "approvalReceipt": {"type": "string", "minLength": 1}
+      }
+    },
+    "shot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cueId",
+        "sceneId",
+        "narration",
+        "start",
+        "end",
+        "duration",
+        "screenText",
+        "hostPose",
+        "zones",
+        "visualOperation",
+        "motionRules"
+      ],
+      "properties": {
+        "cueId": {"$ref": "#/$defs/cueId"},
+        "sceneId": {"$ref": "#/$defs/sceneId"},
+        "narration": {"type": "string", "minLength": 1},
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "minimum": 0},
+        "duration": {"type": "number", "minimum": 0},
+        "screenText": {"$ref": "#/$defs/screenText"},
+        "numericClaimTreatment": {"type": "object", "additionalProperties": true},
+        "hostPose": {"type": "string", "minLength": 1},
+        "zones": {
+          "type": "array",
+          "minItems": 3,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "visualOperation": {"enum": ["enter", "replace", "compact", "compare", "exit", "morph", "hold"]},
+        "motionRules": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "visualType": {"$ref": "#/$defs/visualType"},
+        "motionRecipeRefs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/motionRecipeRef"}},
+        "assetRefs": {"type": "array", "items": {"$ref": "#/$defs/assetRef"}},
+        "carrierPayload": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/carrierPayload"}]},
+        "sfxRefs": {"type": "array", "items": {"$ref": "#/$defs/sfxRef"}},
+        "provenanceRefs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

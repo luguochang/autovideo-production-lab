@@ -1,0 +1,23 @@
+{
+  "duration": 26.08,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-47-host-wrap",
+      "bySec": 0.9
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#scene-47-heading",
+      "bySec": 0.95
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-47-host-wrap"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#scene-47-content-zone"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "autovideo-claim-ledger/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+  "policy": "The narration is immutable. This ledger controls visual framing and does not rewrite the narration.",
+  "claims": [
+    {
+      "id": "claim-99-percent",
+      "sourceLine": 2,
+      "text": "这个市场上有无数所谓的AI、Coze、Dify社群，告诉你应该怎么做。但是这里面99%的人，他并不具备开发和维护AI的能力，他完全看不懂底层的代码。",
+      "kind": "creator-opinion-with-number",
+      "evidenceStatus": "unverified",
+      "visualRule": "Do not render as a statistical chart or surveyed fact. Use an exact quote or creator-view label."
+    },
+    {
+      "id": "claim-90-percent",
+      "sourceLine": 4,
+      "text": "尤其是应届生，投了很多简历，说AI并不好找工作。我可以非常明确地告诉你，这个市场上90%的人，他对底层逻辑是完全不清晰的。他不是在构建一个可维护的系统，而是在拼接一个能演示的流程、一个Demo。",
+      "kind": "creator-opinion-with-number",
+      "evidenceStatus": "unverified",
+      "visualRule": "Do not render as a measured population statistic. Use contrastive typography with a creator-view qualifier."
+    },
+    {
+      "id": "claim-30k",
+      "sourceLine": 5,
+      "text": "五个原因，对照一下，自己能理解的，月薪都不会低于30K。",
+      "kind": "creator-opinion-and-income-claim",
+      "evidenceStatus": "unverified",
+      "visualRule": "Keep as the speaker claim; no salary chart, guarantee badge or platform promise."
+    },
+    {
+      "id": "claim-five-reasons",
+      "sourceLines": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "text": "Five engineering reasons distinguish a demo from a maintainable product.",
+      "kind": "argument-structure",
+      "evidenceStatus": "author-framework",
+      "visualRule": "A five-step structure is allowed, but each step must use approved narration and avoid invented evidence."
+    },
+    {
+      "id": "claim-engineering-thesis",
+      "sourceLines": [
+        11,
+        12,
+        14
+      ],
+      "text": "Creation is becoming cheap while understanding, judgment, maintenance and responsibility remain valuable.",
+      "kind": "creator-thesis",
+      "evidenceStatus": "author-framework",
+      "visualRule": "Use as the final accumulated conclusion, clearly framed as the creator thesis."
+    }
+  ]
+}

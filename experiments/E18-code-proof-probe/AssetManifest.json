@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "autovideo-probe-asset-manifest/v1",
+  "projectId": "E18-code-proof-probe",
+  "releaseScope": "internal-probe-only",
+  "assets": [
+    {
+      "id": "host-present-transparent",
+      "type": "image",
+      "path": ".media/images/image_001.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "experiments/E17-data-proof-probe/.media/images/image_001.png",
+      "provider": "media-use/local-ingest",
+      "license": "derived from user-provided character art; publication rights not implied",
+      "purpose": "single fixed host.left presenter"
+    },
+    {
+      "id": "voice-001",
+      "type": "voice",
+      "path": ".media/audio/voice/voice_001.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "source": "byte-identical E17 0-8 second narration window",
+      "provider": "media-use/local-ingest",
+      "license": "project-local generated narration; internal probe only",
+      "purpose": "immutable NarrationLock timing window"
+    },
+    {
+      "id": "gsap-runtime",
+      "type": "runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "byte-identical E06/E17 checked runtime",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license",
+      "purpose": "single paused seek-safe timeline"
+    },
+    {
+      "id": "official-code-highlight",
+      "type": "official-registry-source",
+      "path": "references/official/code-highlight.html",
+      "sha256": "2e28ffdb11fe7b595e47488f2dfb93db514f315dd5f334c902540fcbebf2bb2f",
+      "source": "HyperFrames official registry code-highlight",
+      "provider": "HyperFrames official registry",
+      "license": "Apache-2.0",
+      "purpose": "frozen reference for highlight-band and context-dimming behavior"
+    }
+  ],
+  "codeEvidence": {
+    "id": "workflow-console-server-source",
+    "type": "source-file",
+    "path": "workflow-console/server.mjs",
+    "sha256": "b3e0183398be326d77e06f256c1ca9f0cd874ec95e95ff02cfb29c1f905f9f9d",
+    "lineRange": "281-293",
+    "frozenExcerptPath": "input/server-source-excerpt.txt",
+    "frozenExcerptSha256": "6a5aa3f402668f1f47153cb3f06559ba772a9abc4c7485a33fbc78126fd02637",
+    "license": "project-local source; internal probe only",
+    "purpose": "real source for the three visible generation-chain calls"
+  }
+}

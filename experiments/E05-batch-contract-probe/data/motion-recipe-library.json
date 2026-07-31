@@ -1,0 +1,304 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-library/v1",
+  "libraryId": "knowledge-explainer",
+  "version": "1.0.0",
+  "status": "candidate",
+  "baseStyleId": "modern-ip-host-explainer",
+  "baseStyleVersion": "1.0.0",
+  "paletteId": "light-apricot",
+  "requiredBackground": "#F2DFC7",
+  "hostAssetPolicy": {
+    "required": true,
+    "source": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+    "defaultZone": "host.left",
+    "cameraScope": "content-world-only",
+    "allowPoseCrossfade": true,
+    "allowHostReplacement": false,
+    "allowPaletteReplacement": false
+  },
+  "contentLayerPolicy": {
+    "changeable": [
+      "keyword",
+      "evidence-image",
+      "device-surface",
+      "diagram",
+      "data-proof",
+      "comparison",
+      "code-surface",
+      "object-metaphor",
+      "sfx",
+      "content-transition"
+    ]
+  },
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "visualTypes": [
+    "keyword",
+    "evidence-image",
+    "device-surface",
+    "diagram",
+    "data-proof",
+    "comparison",
+    "code-surface",
+    "object-metaphor"
+  ],
+  "hostPolicy": {
+    "persistent": true,
+    "defaultZone": "host.left",
+    "cameraScope": "content-world-only",
+    "captionPersistent": true
+  },
+  "sfxPolicy": {
+    "mode": "semantic-only",
+    "contractPath": "style-library/schema/semantic-sfx-plan.schema.json",
+    "examplePath": "style-library/examples/knowledge-explainer-sfx-plan.example.json",
+    "resolver": "media-use",
+    "manifestPath": ".media/manifest.jsonl",
+    "pathPrefix": ".media/audio/sfx/",
+    "allowRemoteAtRender": false,
+    "allowUnregisteredAssets": false,
+    "requireSha256": true,
+    "roles": [
+      "focus-hit",
+      "connector-draw",
+      "state-change",
+      "error",
+      "chapter-resolve"
+    ],
+    "maxPerMinute": 6,
+    "minGapSeconds": 2.4,
+    "duckingDb": -4
+  },
+  "receipts": [
+    {
+      "id": "hyperframes-registry",
+      "kind": "official-registry",
+      "source": "style-library/generated/hyperframes-official-registry.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "hyperframes-blueprints",
+      "kind": "official-blueprint",
+      "source": "style-library/generated/hyperframes-blueprints.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "hyperframes-motion-rules",
+      "kind": "official-motion-rule",
+      "source": "style-library/generated/hyperframes-motion-rules.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "autovideo-continuity",
+      "kind": "project-local",
+      "source": "style-library/styles/project/modern-ip-host-explainer/CONTINUITY_CONTRACT.md",
+      "license": "project-authored"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "keyword-handoff",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "keyword",
+      "purpose": "Keep one short idea at a stable anchor while the previous idea compacts into context.",
+      "semanticTriggers": ["single-concept", "short-conclusion", "chapter-label"],
+      "requiredInputs": ["sourceCueIds", "one-to-four-keywords"],
+      "reuse": {
+        "registryItems": ["morph-text", "caption-weight-shift"],
+        "blueprints": [],
+        "motionRules": ["scale-swap-transition", "card-morph-anchor", "discrete-text-sequence"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.3, "action": "Reveal the main keyword from the fixed content anchor; add one supporting mark."},
+        {"name": "breathe", "startPct": 0.3, "endPct": 0.72, "action": "Hold the keyword and shift caption weight without duplicating narration on screen."},
+        {"name": "resolve", "startPct": 0.72, "endPct": 1, "action": "Compact the current keyword into one history mark before the next keyword claims the anchor."}
+      ],
+      "allowedSfxRoles": ["focus-hit"],
+      "fallbackRecipeId": null,
+      "qa": ["Main-stage text is not a full narration sentence.", "Outgoing and incoming ideas never reach zero opacity in the same frame."]
+    },
+    {
+      "id": "evidence-pivot",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "evidence-image",
+      "purpose": "Show a local screenshot, article crop, or product evidence before handing focus to one conclusion.",
+      "semanticTriggers": ["source-evidence", "article-claim", "product-proof"],
+      "requiredInputs": ["assetId", "assetSha256", "sourceCueIds", "cropOrFocusRegion"],
+      "reuse": {
+        "registryItems": ["parallax-zoom", "parallax-unzoom", "caption-weight-shift"],
+        "blueprints": ["video-text-pivot"],
+        "motionRules": ["viewport-change", "card-morph-anchor"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.32, "action": "Reveal the evidence in a bounded media surface and focus its relevant region."},
+        {"name": "breathe", "startPct": 0.32, "endPct": 0.72, "action": "Keep the evidence visible while a source label and one callout land."},
+        {"name": "resolve", "startPct": 0.72, "endPct": 1, "action": "Slide or unzoom the evidence into context and give visual weight to the conclusion."}
+      ],
+      "allowedSfxRoles": ["focus-hit", "chapter-resolve"],
+      "fallbackRecipeId": "keyword-handoff",
+      "qa": ["Asset path, hash, source, and license receipt are present.", "Image motion is seek-safe and the evidence remains readable at the terminal state."]
+    },
+    {
+      "id": "device-surface-tour",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "device-surface",
+      "purpose": "Explain an app, browser, terminal, or editor by moving through real interface states.",
+      "semanticTriggers": ["app-workflow", "browser-step", "tool-demonstration", "interface-layer"],
+      "requiredInputs": ["assetIds", "assetSha256s", "sourceCueIds", "stateOrder"],
+      "reuse": {
+        "registryItems": ["app-showcase", "ui-3d-reveal", "parallax-zoom"],
+        "blueprints": ["spatial-pan-stations"],
+        "motionRules": ["viewport-change", "card-morph-anchor"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.28, "action": "Stage the first real interface surface and establish its device or window context."},
+        {"name": "breathe", "startPct": 0.28, "endPct": 0.76, "action": "Move the content camera between at most three approved interface states."},
+        {"name": "resolve", "startPct": 0.76, "endPct": 1, "action": "Return to the overview or retain the last state as evidence for the next beat."}
+      ],
+      "allowedSfxRoles": ["state-change", "chapter-resolve"],
+      "fallbackRecipeId": "evidence-pivot",
+      "qa": ["No iframe or live network content is used.", "The host and caption layers do not move with the content camera."]
+    },
+    {
+      "id": "diagram-build",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "diagram",
+      "purpose": "Build a genuine process, dependency, hierarchy, or causal relationship one node at a time.",
+      "semanticTriggers": ["ordered-process", "dependency", "causal-chain", "system-architecture"],
+      "requiredInputs": ["sourceCueIds", "nodes", "edges", "relationshipKind"],
+      "reuse": {
+        "registryItems": ["flowchart"],
+        "blueprints": ["spatial-pan-stations"],
+        "motionRules": ["svg-path-draw", "viewport-change"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.34, "action": "Place the first node, then draw only connectors supported by the narration relationship."},
+        {"name": "breathe", "startPct": 0.34, "endPct": 0.78, "action": "Advance focus through the active nodes while completed nodes remain as context."},
+        {"name": "resolve", "startPct": 0.78, "endPct": 1, "action": "Pull back to the complete readable relationship and hold its conclusion."}
+      ],
+      "allowedSfxRoles": ["connector-draw", "state-change", "chapter-resolve"],
+      "fallbackRecipeId": "keyword-handoff",
+      "qa": ["The relationship is encoded in Graph IR rather than inferred from visual decoration.", "Use the 1920x1080 flowchart block, never flowchart-vertical in a 16:9 project."]
+    },
+    {
+      "id": "data-proof",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "data-proof",
+      "purpose": "Give a sourced numeric claim physical weight with one focused chart or fill.",
+      "semanticTriggers": ["verified-number", "measured-change", "ranked-evidence"],
+      "requiredInputs": ["claimId", "sourceCueIds", "value", "unit", "sourceReceipt"],
+      "reuse": {
+        "registryItems": ["data-chart"],
+        "blueprints": [],
+        "motionRules": ["stat-bars-and-fills", "viewport-change"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.3, "action": "Introduce one sourced metric and grow its proportional visual from a deterministic baseline."},
+        {"name": "breathe", "startPct": 0.3, "endPct": 0.76, "action": "Hold the terminal value with its unit and source label fully readable."},
+        {"name": "resolve", "startPct": 0.76, "endPct": 1, "action": "Dim supporting marks and carry only the conclusion into the next beat."}
+      ],
+      "allowedSfxRoles": ["focus-hit", "chapter-resolve"],
+      "fallbackRecipeId": "keyword-handoff",
+      "qa": ["Claim ledger contains an external source or explicitly marks the value as creator opinion.", "One chart answers one narration claim; no dashboard grids or random numbers."]
+    },
+    {
+      "id": "comparison-split",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "comparison",
+      "purpose": "Keep exactly two states visible so the viewer can compare them without a page flip.",
+      "semanticTriggers": ["before-after", "wrong-right", "demo-product", "magic-engineering"],
+      "requiredInputs": ["sourceCueIds", "leftState", "rightState", "contrastRule"],
+      "reuse": {
+        "registryItems": [],
+        "blueprints": ["comparison-split"],
+        "motionRules": ["card-morph-anchor", "scale-swap-transition"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.32, "action": "Bring the two states in from mirrored directions and keep equal spatial weight."},
+        {"name": "breathe", "startPct": 0.32, "endPct": 0.74, "action": "Shift focus between the states while both remain readable."},
+        {"name": "resolve", "startPct": 0.74, "endPct": 1, "action": "Morph the chosen state into the next beat anchor instead of clearing the frame."}
+      ],
+      "allowedSfxRoles": ["state-change", "chapter-resolve"],
+      "fallbackRecipeId": "keyword-handoff",
+      "qa": ["Exactly two states are present.", "The contrast rule is explicit and source-linked."]
+    },
+    {
+      "id": "code-proof",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "code-surface",
+      "purpose": "Use a real code or terminal surface to explain changes, failures, logs, or maintenance work.",
+      "semanticTriggers": ["code-change", "debugging", "log-reading", "maintenance", "failure-analysis"],
+      "requiredInputs": ["assetOrSnippetId", "sourceCueIds", "focusLines", "language"],
+      "reuse": {
+        "registryItems": ["code-highlight", "code-scroll", "code-diff", "code-morph"],
+        "blueprints": [],
+        "motionRules": ["discrete-text-sequence", "viewport-change"],
+        "runtimeAdapters": ["gsap"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.28, "action": "Reveal the real editor, terminal, diff, or log surface with its focal lines visible."},
+        {"name": "breathe", "startPct": 0.28, "endPct": 0.78, "action": "Highlight or scroll to the exact evidence while the surrounding context remains legible."},
+        {"name": "resolve", "startPct": 0.78, "endPct": 1, "action": "Collapse the evidence into one maintenance or failure conclusion."}
+      ],
+      "allowedSfxRoles": ["state-change", "error", "chapter-resolve"],
+      "fallbackRecipeId": "evidence-pivot",
+      "qa": ["Code is real project evidence or clearly labeled illustrative content.", "No code text smaller than the approved video readability threshold."]
+    },
+    {
+      "id": "object-metaphor",
+      "version": "1.0.0",
+      "status": "candidate",
+      "visualType": "object-metaphor",
+      "purpose": "Use one reusable local object or Lottie motif to make an abstract idea tangible and recall it later.",
+      "semanticTriggers": ["hidden-complexity", "fragile-foundation", "shortcut", "system-layer"],
+      "requiredInputs": ["assetId", "assetSha256", "sourceCueIds", "semanticRole", "callbackCueIds"],
+      "reuse": {
+        "registryItems": [],
+        "blueprints": ["spatial-pan-stations"],
+        "motionRules": ["card-morph-anchor", "svg-path-draw", "viewport-change"],
+        "runtimeAdapters": ["gsap", "lottie"]
+      },
+      "determinism": {"timelineOwner": "hyperframes", "seekSafe": true, "networkAtRender": false},
+      "approval": {"probeReceipt": null, "approvedBy": null, "approvedAt": null},
+      "phases": [
+        {"name": "build", "startPct": 0, "endPct": 0.3, "action": "Introduce one local object with a single declared semantic role."},
+        {"name": "breathe", "startPct": 0.3, "endPct": 0.74, "action": "Transform or traverse the object only as the narration changes its meaning."},
+        {"name": "resolve", "startPct": 0.74, "endPct": 1, "action": "Park the object as context so a later callback can reuse its visual identity."}
+      ],
+      "allowedSfxRoles": ["focus-hit", "state-change", "chapter-resolve"],
+      "fallbackRecipeId": "keyword-handoff",
+      "qa": ["The asset is frozen locally with provenance and license.", "Lottie playback is seeked by HyperFrames and never runs on wall-clock time."]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>demoText 风格确认</title>
+    <style>
+      * { box-sizing: border-box; }
+      :root { color-scheme: light; font-family: "Microsoft YaHei", system-ui, sans-serif; letter-spacing: 0; }
+      body { margin: 0; min-width: 320px; background: #f2f4f3; color: #17201d; }
+      button, a { font: inherit; letter-spacing: 0; }
+      header { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 28px; border-bottom: 1px solid #cdd4d0; background: #fff; }
+      h1 { margin: 0; font-size: 22px; line-height: 1.2; }
+      header p { margin: 5px 0 0; color: #64706a; font-size: 13px; }
+      .status { display: flex; gap: 16px; color: #34413b; font-size: 13px; white-space: nowrap; }
+      .status b { color: #176c55; }
+      .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 28px; border-bottom: 1px solid #cdd4d0; background: #fff; }
+      .segments { display: inline-flex; border: 1px solid #9da8a2; border-radius: 5px; overflow: hidden; }
+      .segments button { min-height: 38px; padding: 8px 14px; border: 0; border-right: 1px solid #9da8a2; background: #fff; color: #334039; cursor: pointer; }
+      .segments button:last-child { border-right: 0; }
+      .segments button[aria-pressed="true"] { background: #17231f; color: #fff; }
+      .download { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 8px 14px; border: 1px solid #17231f; border-radius: 5px; color: #17231f; text-decoration: none; background: #fff; }
+      main { display: grid; grid-template-columns: minmax(360px, 1fr) 340px; min-height: calc(100vh - 139px); }
+      .stage { display: grid; place-items: center; padding: 26px; background: #dfe4e1; }
+      video { display: block; width: min(100%, 405px); max-height: calc(100vh - 195px); aspect-ratio: 9 / 16; background: #101514; box-shadow: 0 8px 24px rgba(17, 27, 23, 0.18); }
+      aside { padding: 28px; border-left: 1px solid #cdd4d0; background: #fff; }
+      .variant-code { display: inline-grid; place-items: center; width: 42px; height: 42px; margin-bottom: 18px; background: #17231f; color: #f0bd3e; font-size: 20px; font-weight: 900; }
+      h2 { margin: 0 0 9px; font-size: 21px; }
+      .summary { min-height: 72px; margin: 0; color: #526059; font-size: 14px; line-height: 1.7; }
+      dl { display: grid; grid-template-columns: 92px 1fr; gap: 11px 14px; margin: 26px 0; padding: 22px 0; border-top: 1px solid #d9dfdc; border-bottom: 1px solid #d9dfdc; font-size: 13px; }
+      dt { color: #77827d; }
+      dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+      .comparison { display: block; width: 100%; margin-top: 20px; border: 1px solid #cdd4d0; }
+      @media (max-width: 820px) {
+        header, .toolbar { align-items: flex-start; padding-left: 16px; padding-right: 16px; }
+        header, .toolbar { flex-direction: column; }
+        .status { white-space: normal; flex-wrap: wrap; }
+        main { grid-template-columns: 1fr; }
+        .stage { padding: 18px; }
+        video { width: min(100%, 360px); max-height: none; }
+        aside { border-left: 0; border-top: 1px solid #cdd4d0; }
+        .segments { max-width: 100%; }
+        .segments button { padding-left: 10px; padding-right: 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>demoText 风格确认</h1>
+        <p>完整原稿 · Edge TTS · 持续单画板</p>
+      </div>
+      <div class="status"><span><b>PASS</b> 3/3 媒体 QA</span><span>720x1280 · 30 fps</span><span>约 275.0 秒</span></div>
+    </header>
+    <div class="toolbar">
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="segments" id="variants" aria-label="风格">
+          <button type="button" data-variant="A" aria-pressed="true">A 工程地图</button>
+          <button type="button" data-variant="B" aria-pressed="false">B 白板脑图</button>
+          <button type="button" data-variant="C" aria-pressed="false">C 诊断台</button>
+        </div>
+        <div class="segments" id="lengths" aria-label="时长">
+          <button type="button" data-length="preview" aria-pressed="true">35 秒</button>
+          <button type="button" data-length="full" aria-pressed="false">完整版</button>
+        </div>
+      </div>
+      <a class="download" id="download" download href="../renders/previews/A-system-map-35s.mp4"><span aria-hidden="true">&#8595;</span> 下载当前视频</a>
+    </div>
+    <main>
+      <section class="stage">
+        <video id="player" controls preload="metadata" poster="posters/A-system-map.png" src="../renders/previews/A-system-map-35s.mp4"></video>
+      </section>
+      <aside>
+        <div class="variant-code" id="code">A</div>
+        <h2 id="title">工程地图巡讲</h2>
+        <p class="summary" id="summary">知识节点沿连续路径展开，讲完后缩小保留，镜头在同一张工程画板上移动。</p>
+        <dl>
+          <dt>口播</dt><dd>原文逐字，未改写</dd>
+          <dt>配音</dt><dd>Yunxi · 1.08x · 约 -16 LUFS</dd>
+          <dt>结构</dt><dd>14 章 · 109 字幕块</dd>
+          <dt>验证</dt><dd>8250 帧 · H.264 + AAC · 无黑帧</dd>
+        </dl>
+        <img class="comparison" src="../qa/style-comparison.png" alt="A、B、C 三种风格同一时刻对比" />
+      </aside>
+    </main>
+    <script>
+      const data = {
+        A: {slug: 'A-system-map', title: '工程地图巡讲', summary: '知识节点沿连续路径展开，讲完后缩小保留，镜头在同一张工程画板上移动。'},
+        B: {slug: 'B-whiteboard-mindmap', title: '中心白板脑图', summary: '文字直接写入网格画板，彩色笔划与脑图连线持续存在，没有整页卡片切换。'},
+        C: {slug: 'C-diagnostic-console', title: '工程诊断台', summary: '知识区采用检查窗口、状态灯和工程标签，强调排错、测试与系统维护。'}
+      };
+      let variant = 'A';
+      let length = 'preview';
+      const player = document.querySelector('#player');
+      const download = document.querySelector('#download');
+      const update = () => {
+        const item = data[variant];
+        const src = length === 'preview'
+          ? `../renders/previews/${item.slug}-35s.mp4`
+          : `../renders/final/${item.slug}.mp4`;
+        const wasPlaying = !player.paused;
+        player.src = src;
+        player.poster = `posters/${item.slug}.png`;
+        if (wasPlaying) player.play().catch(() => {});
+        download.href = src;
+        document.querySelector('#code').textContent = variant;
+        document.querySelector('#title').textContent = item.title;
+        document.querySelector('#summary').textContent = item.summary;
+      };
+      document.querySelector('#variants').addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-variant]');
+        if (!button) return;
+        variant = button.dataset.variant;
+        document.querySelectorAll('[data-variant]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        update();
+      });
+      document.querySelector('#lengths').addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-length]');
+        if (!button) return;
+        length = button.dataset.length;
+        document.querySelectorAll('[data-length]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        update();
+      });
+    </script>
+  </body>
+</html>

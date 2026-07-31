@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "autovideo-pipeline-recipe/v1",
+  "id": "modern-ip-host-cosyvoice14-landscape",
+  "version": "1.0.0",
+  "projectId": "demotext-standard-delivery-v1",
+  "inputRoute": "approved-script",
+  "narration": {
+    "lock": "NarrationLock.json",
+    "normalizedSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+    "allowSilentRewrite": false
+  },
+  "voice": {
+    "route": "cosyvoice-preset-14",
+    "speaker": "中文女",
+    "precision": "FP32",
+    "stream": false,
+    "speed": 1.03,
+    "seed": 7,
+    "segmentSeconds": {"minimum": 8, "target": 16, "maximum": 25},
+    "output": {"sampleRate": 48000, "channels": 1, "codec": "pcm_s16le"}
+  },
+  "video": {
+    "engine": "hyperframes",
+    "template": "modern-ip-host-explainer",
+    "templateVersion": "1.0.0",
+    "palette": "light-apricot",
+    "ratio": "16:9",
+    "resolution": "1920x1080",
+    "fps": 30,
+    "fullProductionReadinessKey": "readyForComposition"
+  },
+  "stageOrder": [
+    "content-approval",
+    "narration-lock",
+    "template-lock",
+    "voice-final",
+    "audio-alignment",
+    "publication-rights",
+    "audio-handoff",
+    "video-task",
+    "storyboard",
+    "same-window-probe",
+    "task-style-approval",
+    "composition-readiness",
+    "full-production",
+    "hyperframes-check",
+    "studio-final-preview",
+    "render",
+    "delivery-qa",
+    "package",
+    "retrospective"
+  ],
+  "humanGates": [
+    "content-approval",
+    "voice-listening",
+    "publication-rights",
+    "same-window-probe",
+    "studio-final-preview",
+    "retrospective"
+  ],
+  "publicReleaseRequiresRightsCleared": true
+}
+

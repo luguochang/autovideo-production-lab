@@ -1,0 +1,15 @@
+{
+  "name": "e01-hyperframes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.59 preview",
+    "check": "npx --yes hyperframes@0.7.59 check",
+    "render": "npx --yes hyperframes@0.7.59 render",
+    "publish": "npx --yes hyperframes@0.7.59 publish",
+    "verify:sdk-edit": "node verify-sdk-edit.mjs"
+  },
+  "dependencies": {
+    "@hyperframes/sdk": "^0.7.59"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "keyword-handoff",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "batch-contract",
+    "projectId": "demotext-standard-delivery-v5",
+    "path": "experiments/E05-batch-contract-probe",
+    "durationSeconds": 239.678,
+    "sameNarrationWindow": true,
+    "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+    "audioSha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": null,
+    "hostAssetManifest": null,
+    "stills": [],
+    "motionProbe": null,
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E05-batch-contract-probe/check.capture.log",
+        "sha256": "930ffb1657194a550e59894c307e4aa1acecb14c7310a7765986e98ecccb954c"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": false,
+      "findingCount": 0,
+      "version": "0.7.64"
+    },
+    "visualReview": null,
+    "officialReuseObserved": []
+  }
+}

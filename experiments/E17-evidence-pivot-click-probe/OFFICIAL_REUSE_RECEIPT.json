@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "autovideo-official-reuse-receipt/v1",
+  "projectId": "E17-evidence-pivot-click-probe",
+  "recipeId": "evidence-pivot",
+  "recipeVersion": "1.0.0",
+  "status": "candidate",
+  "composition": {
+    "path": "experiments/E17-evidence-pivot-click-probe/index.html",
+    "sha256": "6d4a77aea32eb5d9206ff00fe481b7dabcf3e21a6309ed043dd3951a9c813cc9"
+  },
+  "observed": [
+    {
+      "kind": "official-registry",
+      "id": "parallax-unzoom",
+      "license": "Apache-2.0",
+      "source": {
+        "path": "vendor/hyperframes/registry/components/parallax-unzoom/parallax-unzoom.html",
+        "sha256": "0b98917fe6b89bcc054a6f3d33f42d837323e023b87cd2cd6fb15b8ab8284a20"
+      },
+      "installed": {
+        "path": "experiments/E17-evidence-pivot-click-probe/compositions/components/parallax-unzoom.html",
+        "sha256": "0b98917fe6b89bcc054a6f3d33f42d837323e023b87cd2cd6fb15b8ab8284a20",
+        "exactSourceCopy": true
+      },
+      "adaptation": {
+        "selectors": [".parallax-unzoom-grid", ".parallax-unzoom-card", "[data-pu-focus='true']"],
+        "driver": "--pu-progress",
+        "timeRangeSeconds": [5.76, 6.9],
+        "mapping": "The focused screenshot contracts from the cropped evidence view into a final two-part evidence/conclusion layout; the one callout sibling settles from its parallax offset.",
+        "cameraScope": "content-world-only"
+      }
+    },
+    {
+      "kind": "official-motion-rule",
+      "id": "cursor-click-ripple",
+      "license": "Apache-2.0",
+      "source": {
+        "path": "vendor/hyperframes/skills/hyperframes-animation/rules/cursor-click-ripple.md",
+        "sha256": "e095aada6dce26112d5afd98abaf96531c9eacca5d9ac321cb670956862e2fb7"
+      },
+      "adaptation": {
+        "cursorOrigin": {"x": 910, "y": 620},
+        "cursorTip": {"x": 4, "y": 3},
+        "clickPoint": {"x": 334, "y": 285},
+        "cursorTween": {"x": -580, "y": -338, "startSeconds": 2.56, "durationSeconds": 0.46},
+        "clickSeconds": 3.1,
+        "ringCount": 1,
+        "audioCue": null,
+        "runtimeMeasurement": false,
+        "mapping": "Move, press, and single attack-decay ring are preserved; multiple rings and SFX are deliberately omitted."
+      }
+    }
+  ],
+  "approval": null,
+  "promotionAllowed": false
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "autovideo-asset-manifest/v1",
+  "assets": [
+    {
+      "path": "assets/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "experiments/E10-style-probes/variants/B-magazine-collage/assets/gsap.min.js",
+      "upstream": "gsap@3.14.2",
+      "license": "GSAP Standard License",
+      "receipt": "style-library/SOURCES.md"
+    },
+    {
+      "path": "assets/narration.wav",
+      "sha256": "152941dbc2944210fed09dd130340ef92d6d8cb685f8f857d548d17da52bf0d5",
+      "source": "experiments/E10-style-probes/variants/B-magazine-collage/assets/narration.wav",
+      "provenance": "Project-generated TTS from the locked demo/demoText.txt excerpt",
+      "receipt": "experiments/E10-style-probes/shared/manifest.json"
+    }
+  ]
+}

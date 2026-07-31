@@ -1,0 +1,19 @@
+{
+  "name": "E16-comparison-split-probe",
+  "resolution": "landscape",
+  "width": 1920,
+  "height": 1080,
+  "duration": 6,
+  "elements": 2,
+  "tracks": 2,
+  "types": {
+    "text": 1,
+    "audio": 1
+  },
+  "size": 12247409,
+  "_meta": {
+    "version": "0.7.64",
+    "latestVersion": "0.7.64",
+    "updateAvailable": false
+  }
+}

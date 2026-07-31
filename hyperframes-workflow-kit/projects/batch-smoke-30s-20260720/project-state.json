@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "stage": "internal-delivery-ready",
+  "createdAt": "2026-07-20T12:44:42.681Z",
+  "updatedAt": "2026-07-28T05:04:18.267Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "30s",
+    "platform": "douyin",
+    "audience": "AI learners and knowledge-video viewers",
+    "rememberedOutcome": "理解平台封装与系统架构之间的差异",
+    "forbiddenTreatments": null,
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "creator-confirmed",
+      "approvedAt": "2026-07-20T13:14:01.631Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-22T12:27:39.809Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-creator-delegated",
+      "approvedAt": "2026-07-23T05:21:06.045Z",
+      "approvalScope": "internal-autonomous-review",
+      "humanReviewPerformed": false,
+      "publicReleaseBlocked": true,
+      "compositionDigest": "a33228e76b3851e1d6c776460241ad71259396810c4f45794f96b01949d8957d",
+      "compositionFileCount": 43,
+      "delegation": {
+        "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+        "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+      },
+      "notes": "Creator-delegated internal simulation only; no human final review was performed."
+    },
+    "deliveryQa": {
+      "status": "passed-internal-only",
+      "checkedAt": "2026-07-23T05:23:29.299Z",
+      "report": "qa/delivery-report.json",
+      "outputSha256": "fdf6222d6d0aa256fcaec0bfe164767555768e057ab7f9305e3c31ed6726e29e",
+      "publicReleaseBlocked": true
+    },
+    "oneScreenFinalReview": {
+      "status": "approved",
+      "approvedBy": "user",
+      "approvedAt": "2026-07-28T04:50:46.188Z",
+      "humanReviewPerformed": true,
+      "fullTimelineWatched": true,
+      "approvalScope": "internal-delivery",
+      "receipt": "review/one-screen-final-review.json",
+      "videoSha256": "166f9ca9a52158cc260a6a35c7ac03cb9c54f5929fbf28b2210d3887de2573fc",
+      "publicReleaseBlocked": true
+    }
+  },
+  "nextAction": "Wait for one real approximately five-minute narration text, then initialize a new 16:9 chapter-board project. Do not resume batch, P1/P2, new frameworks, or audit expansion before that trial passes.",
+  "handoffs": {
+    "audio": {
+      "status": "approved",
+      "rightsStatus": "needs-review",
+      "approvalScope": "technical-only",
+      "humanListeningStatus": "not-performed",
+      "publicReleaseBlocked": true,
+      "lock": "audio-handoff.json",
+      "durationSeconds": 31.807896
+    }
+  },
+  "release": {
+    "phase": "internal-delivery",
+    "technicalVideoGenerationReady": true,
+    "internalReviewReady": true,
+    "internalDeliveryReady": true,
+    "publicMasterReady": false,
+    "publicReleaseBlocked": true,
+    "receipt": "review/one-screen-final-review.json",
+    "video": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+    "cover": "renders/batch-smoke-30s-20260720-cover.png"
+  },
+  "invalidations": [
+    {
+      "at": "2026-07-22T10:12:23.880Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    },
+    {
+      "at": "2026-07-22T10:59:51.997Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    }
+  ],
+  "deliveries": {
+    "internalReview": {
+      "status": "approved",
+      "video": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+      "cover": "renders/batch-smoke-30s-20260720-cover.png",
+      "manifest": "delivery/delivery-manifest.json",
+      "review": "review/one-screen-final-review.json",
+      "outputSha256": "166f9ca9a52158cc260a6a35c7ac03cb9c54f5929fbf28b2210d3887de2573fc"
+    },
+    "standardPackage": {
+      "status": "ready",
+      "path": "delivery/standard-package",
+      "fileCount": 720,
+      "internalDeliveryReady": true,
+      "publicReleaseBlocked": true
+    }
+  }
+}

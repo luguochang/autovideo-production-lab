@@ -1,0 +1,1886 @@
+{
+  "project": "E15-diagram-build-probe",
+  "runtime": "all",
+  "compositions": [
+    {
+      "composition": "index.html",
+      "source": "index.html",
+      "tweens": [
+        {
+          "id": "#host-zone-fromTo-120",
+          "target": "#host-zone",
+          "method": "fromTo",
+          "start": 0.12,
+          "duration": 0.62,
+          "end": 0.74,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.12,
+              "properties": {
+                "opacity": 0,
+                "scale": 0.985
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.74,
+              "properties": {
+                "opacity": 1,
+                "scale": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#content-label-fromTo-180",
+          "target": "#content-label",
+          "method": "fromTo",
+          "start": 0.18,
+          "duration": 0.42,
+          "end": 0.6,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.18,
+              "properties": {
+                "opacity": 0,
+                "y": 12
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.6,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 12
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#anchor-rule-fromTo-260",
+          "target": "#anchor-rule",
+          "method": "fromTo",
+          "start": 0.26,
+          "duration": 0.58,
+          "end": 0.84,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.26,
+              "properties": {
+                "opacity": 0,
+                "scaleX": 0.16
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.84,
+              "properties": {
+                "opacity": 1,
+                "scaleX": 1
+              }
+            }
+          ],
+          "path": null
+        },
+        {
+          "id": "#diagram-heading-fromTo-340",
+          "target": "#diagram-heading",
+          "method": "fromTo",
+          "start": 0.34,
+          "duration": 0.54,
+          "end": 0.88,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.34,
+              "properties": {
+                "opacity": 0,
+                "y": 24
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.88,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 24
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-model-fromTo-620",
+          "target": "#graph-node-model",
+          "method": "fromTo",
+          "start": 0.62,
+          "duration": 0.42,
+          "end": 1.04,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.62,
+              "properties": {
+                "opacity": 0,
+                "y": 26,
+                "scale": 0.92
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.04,
+              "properties": {
+                "opacity": 1,
+                "y": 0,
+                "scale": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 26
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-base-to-1020-visual",
+          "target": "#edge-model-api-base",
+          "method": "to",
+          "group": "visual",
+          "start": 1.02,
+          "duration": 0.01,
+          "end": 1.03,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.02,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.03,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-base-to-1020-other",
+          "target": "#edge-model-api-base",
+          "method": "to",
+          "group": "other",
+          "start": 1.02,
+          "duration": 0.44,
+          "end": 1.46,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.02,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.46,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-head-base-to-1380-visual",
+          "target": "#edge-model-api-head-base",
+          "method": "to",
+          "group": "visual",
+          "start": 1.38,
+          "duration": 0.01,
+          "end": 1.39,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.38,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.39,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-head-base-to-1380-other",
+          "target": "#edge-model-api-head-base",
+          "method": "to",
+          "group": "other",
+          "start": 1.38,
+          "duration": 0.18,
+          "end": 1.56,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.38,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.56,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-label-model-api-fromTo-1220",
+          "target": "#edge-label-model-api",
+          "method": "fromTo",
+          "start": 1.22,
+          "duration": 0.24,
+          "end": 1.46,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.22,
+              "properties": {
+                "opacity": 0,
+                "y": 8
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.46,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 8
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-api-fromTo-1480",
+          "target": "#graph-node-api",
+          "method": "fromTo",
+          "start": 1.48,
+          "duration": 0.42,
+          "end": 1.9,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.48,
+              "properties": {
+                "opacity": 0,
+                "y": 26,
+                "scale": 0.92
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.9,
+              "properties": {
+                "opacity": 1,
+                "y": 0,
+                "scale": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 26
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-base-to-1840-visual",
+          "target": "#edge-api-tools-base",
+          "method": "to",
+          "group": "visual",
+          "start": 1.84,
+          "duration": 0.01,
+          "end": 1.85,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.84,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.85,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-base-to-1840-other",
+          "target": "#edge-api-tools-base",
+          "method": "to",
+          "group": "other",
+          "start": 1.84,
+          "duration": 0.44,
+          "end": 2.28,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 1.84,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.28,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-head-base-to-2200-visual",
+          "target": "#edge-api-tools-head-base",
+          "method": "to",
+          "group": "visual",
+          "start": 2.2,
+          "duration": 0.01,
+          "end": 2.21,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.2,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.21,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-head-base-to-2200-other",
+          "target": "#edge-api-tools-head-base",
+          "method": "to",
+          "group": "other",
+          "start": 2.2,
+          "duration": 0.18,
+          "end": 2.38,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.2,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.38,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-label-api-tools-fromTo-2040",
+          "target": "#edge-label-api-tools",
+          "method": "fromTo",
+          "start": 2.04,
+          "duration": 0.24,
+          "end": 2.28,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.04,
+              "properties": {
+                "opacity": 0,
+                "y": 8
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.28,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 8
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-tools-fromTo-2260",
+          "target": "#graph-node-tools",
+          "method": "fromTo",
+          "start": 2.26,
+          "duration": 0.42,
+          "end": 2.68,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.26,
+              "properties": {
+                "opacity": 0,
+                "y": 26,
+                "scale": 0.92
+              }
+            },
+            {
+              "pct": 100,
+              "time": 2.68,
+              "properties": {
+                "opacity": 1,
+                "y": 0,
+                "scale": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 26
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#diagram-camera-to-focus",
+          "target": "#diagram-camera",
+          "method": "to",
+          "start": 2.72,
+          "duration": 0.48,
+          "end": 3.2,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.72,
+              "properties": {
+                "x": 0,
+                "scale": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.2,
+              "properties": {
+                "x": 8,
+                "scale": 1.02
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 8,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-model-to-focus",
+          "target": "#graph-node-model",
+          "method": "to",
+          "start": 2.72,
+          "duration": 0.34,
+          "end": 3.06,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.72,
+              "properties": {
+                "scale": 1,
+                "backgroundColor": 0,
+                "borderColor": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.06,
+              "properties": {
+                "scale": 1.035,
+                "backgroundColor": "#fffaf2",
+                "borderColor": "#496958"
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-api, #graph-node-tools-to-focus-visual",
+          "target": "#graph-node-api, #graph-node-tools",
+          "method": "to",
+          "group": "visual",
+          "start": 2.72,
+          "duration": 0.3,
+          "end": 3.02,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 2.72,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.02,
+              "properties": {
+                "opacity": 0.52
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-active, #edge-model-api-head-active-to-3360-visual",
+          "target": "#edge-model-api-active, #edge-model-api-head-active",
+          "method": "to",
+          "group": "visual",
+          "start": 3.36,
+          "duration": 0.01,
+          "end": 3.37,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.36,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.37,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-active-to-3360-other",
+          "target": "#edge-model-api-active",
+          "method": "to",
+          "group": "other",
+          "start": 3.36,
+          "duration": 0.54,
+          "end": 3.9,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.36,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.9,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-model-api-head-active-to-3820-other",
+          "target": "#edge-model-api-head-active",
+          "method": "to",
+          "group": "other",
+          "start": 3.82,
+          "duration": 0.18,
+          "end": 4,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.82,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#diagram-camera-to-3580",
+          "target": "#diagram-camera",
+          "method": "to",
+          "start": 3.58,
+          "duration": 0.5,
+          "end": 4.08,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.58,
+              "properties": {
+                "x": 0,
+                "scale": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.08,
+              "properties": {
+                "x": 0,
+                "scale": 1.02
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-model-to-3660",
+          "target": "#graph-node-model",
+          "method": "to",
+          "start": 3.66,
+          "duration": 0.34,
+          "end": 4,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.66,
+              "properties": {
+                "scale": 1,
+                "opacity": 1,
+                "backgroundColor": 0,
+                "borderColor": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4,
+              "properties": {
+                "scale": 1,
+                "opacity": 0.64,
+                "backgroundColor": "#fbf3e7",
+                "borderColor": "#dcc2a3"
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-api-to-3740",
+          "target": "#graph-node-api",
+          "method": "to",
+          "start": 3.74,
+          "duration": 0.36,
+          "end": 4.1,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.74,
+              "properties": {
+                "scale": 1,
+                "opacity": 1,
+                "backgroundColor": 0,
+                "borderColor": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.1,
+              "properties": {
+                "scale": 1.035,
+                "opacity": 1,
+                "backgroundColor": "#fffaf2",
+                "borderColor": "#496958"
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-active, #edge-api-tools-head-active-to-4720-visual",
+          "target": "#edge-api-tools-active, #edge-api-tools-head-active",
+          "method": "to",
+          "group": "visual",
+          "start": 4.72,
+          "duration": 0.01,
+          "end": 4.73,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 4.72,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 4.73,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-active-to-4720-other",
+          "target": "#edge-api-tools-active",
+          "method": "to",
+          "group": "other",
+          "start": 4.72,
+          "duration": 0.54,
+          "end": 5.26,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 4.72,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.26,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#edge-api-tools-head-active-to-5180-other",
+          "target": "#edge-api-tools-head-active",
+          "method": "to",
+          "group": "other",
+          "start": 5.18,
+          "duration": 0.18,
+          "end": 5.36,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.18,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.36,
+              "properties": {
+                "strokeDashoffset": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#diagram-camera-to-4940",
+          "target": "#diagram-camera",
+          "method": "to",
+          "start": 4.94,
+          "duration": 0.5,
+          "end": 5.44,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 4.94,
+              "properties": {
+                "x": 0,
+                "scale": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.44,
+              "properties": {
+                "x": -8,
+                "scale": 1.02
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -8,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-api-to-5020",
+          "target": "#graph-node-api",
+          "method": "to",
+          "start": 5.02,
+          "duration": 0.34,
+          "end": 5.36,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.02,
+              "properties": {
+                "scale": 1,
+                "opacity": 1,
+                "backgroundColor": 0,
+                "borderColor": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.36,
+              "properties": {
+                "scale": 1,
+                "opacity": 0.64,
+                "backgroundColor": "#fbf3e7",
+                "borderColor": "#dcc2a3"
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-tools-to-5100",
+          "target": "#graph-node-tools",
+          "method": "to",
+          "start": 5.1,
+          "duration": 0.36,
+          "end": 5.46,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.1,
+              "properties": {
+                "scale": 1,
+                "opacity": 1,
+                "backgroundColor": 0,
+                "borderColor": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.46,
+              "properties": {
+                "scale": 1.035,
+                "opacity": 1,
+                "backgroundColor": "#fffaf2",
+                "borderColor": "#a94e36"
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#diagram-camera-to-pullback",
+          "target": "#diagram-camera",
+          "method": "to",
+          "start": 6.24,
+          "duration": 0.86,
+          "end": 7.1,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.24,
+              "properties": {
+                "x": 0,
+                "scale": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 7.1,
+              "properties": {
+                "x": 0,
+                "scale": 1
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#graph-node-model, #graph-node-api, #graph-node-tools-to-pullback",
+          "target": "#graph-node-model, #graph-node-api, #graph-node-tools",
+          "method": "to",
+          "start": 6.24,
+          "duration": 0.56,
+          "end": 6.8,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.24,
+              "properties": {
+                "scale": 1,
+                "opacity": 1,
+                "backgroundColor": 0,
+                "borderColor": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.8,
+              "properties": {
+                "scale": 1,
+                "opacity": 1,
+                "backgroundColor": "#fbf3e7",
+                "borderColor": "#dcc2a3"
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#relation-summary-fromTo-6480",
+          "target": "#relation-summary",
+          "method": "fromTo",
+          "start": 6.48,
+          "duration": 0.46,
+          "end": 6.94,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.48,
+              "properties": {
+                "opacity": 0,
+                "y": 16
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.94,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 16
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "composedWith": [
+            {
+              "selector": "#diagram-camera",
+              "summary": "x -8..8"
+            }
+          ]
+        },
+        {
+          "id": "#caption-a-fromTo-120",
+          "target": "#caption-a",
+          "method": "fromTo",
+          "start": 0.12,
+          "duration": 0.24,
+          "end": 0.36,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.12,
+              "properties": {
+                "opacity": 0,
+                "y": 3
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.36,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 3
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#caption-a .caption-copy:not(.emphasis)-to-760-visual",
+          "target": "#caption-a .caption-copy:not(.emphasis)",
+          "method": "to",
+          "group": "visual",
+          "start": 0.76,
+          "duration": 0.18,
+          "end": 0.94,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.76,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 0.94,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#caption-a",
+              "summary": "opacity 0..1, y -3..3"
+            }
+          ]
+        },
+        {
+          "id": "#caption-a .caption-copy.emphasis-to-840-visual",
+          "target": "#caption-a .caption-copy.emphasis",
+          "method": "to",
+          "group": "visual",
+          "start": 0.84,
+          "duration": 0.26,
+          "end": 1.1,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 0.84,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 1.1,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#caption-a",
+              "summary": "opacity 0..1, y -3..3"
+            }
+          ]
+        },
+        {
+          "id": "#caption-a-to-3040",
+          "target": "#caption-a",
+          "method": "to",
+          "start": 3.04,
+          "duration": 0.16,
+          "end": 3.2,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.04,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.2,
+              "properties": {
+                "opacity": 0,
+                "y": -3
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -3
+            }
+          ]
+        },
+        {
+          "id": "#caption-b-fromTo-3160",
+          "target": "#caption-b",
+          "method": "fromTo",
+          "start": 3.16,
+          "duration": 0.24,
+          "end": 3.4,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.16,
+              "properties": {
+                "opacity": 0,
+                "y": 3
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.4,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 3
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#caption-b .caption-copy:not(.emphasis)-to-3620-visual",
+          "target": "#caption-b .caption-copy:not(.emphasis)",
+          "method": "to",
+          "group": "visual",
+          "start": 3.62,
+          "duration": 0.16,
+          "end": 3.78,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.62,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.78,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#caption-b",
+              "summary": "opacity 0..1, y -3..3"
+            }
+          ]
+        },
+        {
+          "id": "#caption-b .caption-copy.emphasis-to-3680-visual",
+          "target": "#caption-b .caption-copy.emphasis",
+          "method": "to",
+          "group": "visual",
+          "start": 3.68,
+          "duration": 0.24,
+          "end": 3.92,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 3.68,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 3.92,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#caption-b",
+              "summary": "opacity 0..1, y -3..3"
+            }
+          ]
+        },
+        {
+          "id": "#caption-b-to-5300",
+          "target": "#caption-b",
+          "method": "to",
+          "start": 5.3,
+          "duration": 0.16,
+          "end": 5.46,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.3,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.46,
+              "properties": {
+                "opacity": 0,
+                "y": -3
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": -3
+            }
+          ]
+        },
+        {
+          "id": "#caption-c-fromTo-5420",
+          "target": "#caption-c",
+          "method": "fromTo",
+          "start": 5.42,
+          "duration": 0.24,
+          "end": 5.66,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.42,
+              "properties": {
+                "opacity": 0,
+                "y": 3
+              }
+            },
+            {
+              "pct": 100,
+              "time": 5.66,
+              "properties": {
+                "opacity": 1,
+                "y": 0
+              }
+            }
+          ],
+          "path": [
+            {
+              "x": 0,
+              "y": 3
+            },
+            {
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "id": "#caption-c .caption-copy:not(.emphasis)-to-5960-visual",
+          "target": "#caption-c .caption-copy:not(.emphasis)",
+          "method": "to",
+          "group": "visual",
+          "start": 5.96,
+          "duration": 0.16,
+          "end": 6.12,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 5.96,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.12,
+              "properties": {
+                "opacity": 0
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#caption-c",
+              "summary": "opacity 0..1, y 0..3"
+            }
+          ]
+        },
+        {
+          "id": "#caption-c .caption-copy.emphasis-to-6020-visual",
+          "target": "#caption-c .caption-copy.emphasis",
+          "method": "to",
+          "group": "visual",
+          "start": 6.02,
+          "duration": 0.26,
+          "end": 6.28,
+          "shape": "flat",
+          "keyframes": [
+            {
+              "pct": 0,
+              "time": 6.02,
+              "properties": {
+                "opacity": 1
+              }
+            },
+            {
+              "pct": 100,
+              "time": 6.28,
+              "properties": {
+                "opacity": 1
+              }
+            }
+          ],
+          "path": null,
+          "composedWith": [
+            {
+              "selector": "#caption-c",
+              "summary": "opacity 0..1, y 0..3"
+            }
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "target": "#diagram-camera",
+          "strokes": [
+            {
+              "id": "#diagram-camera-to-focus",
+              "start": 2.72,
+              "end": 3.2,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 2.72,
+                  "properties": {
+                    "x": 0,
+                    "scale": 1
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 3.2,
+                  "properties": {
+                    "x": 8,
+                    "scale": 1.02
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 8,
+                  "y": 0
+                }
+              ]
+            },
+            {
+              "id": "#diagram-camera-to-4940",
+              "start": 4.94,
+              "end": 5.44,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 4.94,
+                  "properties": {
+                    "x": 0,
+                    "scale": 1
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 5.44,
+                  "properties": {
+                    "x": -8,
+                    "scale": 1.02
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": -8,
+                  "y": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "#caption-a",
+          "strokes": [
+            {
+              "id": "#caption-a-fromTo-120",
+              "start": 0.12,
+              "end": 0.36,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 0.12,
+                  "properties": {
+                    "opacity": 0,
+                    "y": 3
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 0.36,
+                  "properties": {
+                    "opacity": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 3
+                },
+                {
+                  "x": 0,
+                  "y": 0
+                }
+              ]
+            },
+            {
+              "id": "#caption-a-to-3040",
+              "start": 3.04,
+              "end": 3.2,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 3.04,
+                  "properties": {
+                    "opacity": 1,
+                    "y": 0
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 3.2,
+                  "properties": {
+                    "opacity": 0,
+                    "y": -3
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 0,
+                  "y": -3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "#caption-b",
+          "strokes": [
+            {
+              "id": "#caption-b-fromTo-3160",
+              "start": 3.16,
+              "end": 3.4,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 3.16,
+                  "properties": {
+                    "opacity": 0,
+                    "y": 3
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 3.4,
+                  "properties": {
+                    "opacity": 1,
+                    "y": 0
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 3
+                },
+                {
+                  "x": 0,
+                  "y": 0
+                }
+              ]
+            },
+            {
+              "id": "#caption-b-to-5300",
+              "start": 5.3,
+              "end": 5.46,
+              "keyframes": [
+                {
+                  "pct": 0,
+                  "time": 5.3,
+                  "properties": {
+                    "opacity": 1,
+                    "y": 0
+                  }
+                },
+                {
+                  "pct": 100,
+                  "time": 5.46,
+                  "properties": {
+                    "opacity": 0,
+                    "y": -3
+                  }
+                }
+              ],
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 0,
+                  "y": -3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cssKeyframes": [],
+      "anime": []
+    }
+  ],
+  "_meta": {
+    "version": "0.7.64",
+    "latestVersion": "0.7.64",
+    "updateAvailable": false
+  }
+}

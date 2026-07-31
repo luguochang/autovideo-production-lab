@@ -1,0 +1,870 @@
+{
+  "schemaVersion": "autovideo-production-manifest/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "bindings": {
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "aaa9db4f0bef4c04f61b75dd600d70716ba6558f219b0a6cb5ed296fa61f234e",
+      "normalizedNarrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+      "frozenNarrationPath": "input/narration.txt"
+    },
+    "templateLock": {
+      "path": "template-lock.json",
+      "sha256": "9632327c539dde5b001b819a52b0efc7c7b72415f95e2e5dab335af6da558134"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "f35cfd79397e406b8eef3f0d16fe03c9e1f7a5c2eff297e944f33eeed4662fff",
+      "narrationSha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+      "audioSha256": "d9596e2129b1b5312bb0403a6740fa36430ce8756751fc760d00fd21d75aeb9f",
+      "cueCount": 46,
+      "lastEndSeconds": 239.328
+    },
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "188c952d116c09c735ec3da259bbbba37133742922a2fd2473606d45af03082e"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "173e25542ed573132181d8ef6d69860770bd95c6c35b5747deffda54bd67e22f",
+      "schemaVersion": "autovideo-shot-manifest/v1",
+      "schemaPath": "tools/planning-contract/schemas/shot-manifest.schema.json"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "05f8020926284fb489e449e214271811fae3ef7e5d2790fc95642db97af3c2ee",
+      "schemaVersion": "autovideo-graph-ir/v1",
+      "schemaPath": "tools/planning-contract/schemas/graph-ir.schema.json"
+    }
+  },
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 239.328,
+    "duration": 239.328
+  },
+  "sceneCount": 18,
+  "cueCount": 46,
+  "scenes": [
+    {
+      "id": "scene-01",
+      "order": 1,
+      "title": "我奉劝很多人，对AI技术一定要有",
+      "role": "hook",
+      "start": 0,
+      "end": 15.14,
+      "duration": 15.14,
+      "cueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "shotCueIds": [
+        "cue-001",
+        "cue-002",
+        "cue-003"
+      ],
+      "plannedSrc": "production/compositions/scenes/01-scene-01.html",
+      "layout": {
+        "hostPose": "question",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "enter",
+        "hold"
+      ],
+      "motionRules": [
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-01-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-02",
+      "order": 2,
+      "title": "AI也并不是你想的那么简单。",
+      "role": "process",
+      "start": 15.14,
+      "end": 31.5,
+      "duration": 16.36,
+      "cueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "shotCueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "plannedSrc": "production/compositions/scenes/02-scene-02.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-02-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-02",
+          "stateIds": [
+            "graph-scene-02-state-01",
+            "graph-scene-02-state-02",
+            "graph-scene-02-state-03"
+          ],
+          "sourceCueIds": [
+            "cue-004",
+            "cue-005",
+            "cue-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-03",
+      "order": 3,
+      "title": "我可以非常明确地告诉你，",
+      "role": "process",
+      "start": 31.5,
+      "end": 49.34,
+      "duration": 17.84,
+      "cueIds": [
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "shotCueIds": [
+        "cue-007",
+        "cue-008",
+        "cue-009"
+      ],
+      "plannedSrc": "production/compositions/scenes/03-scene-03.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-03-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-04",
+      "order": 4,
+      "title": "第一，平台把系统的复杂性给隐藏起",
+      "role": "process",
+      "start": 49.34,
+      "end": 61.68,
+      "duration": 12.34,
+      "cueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "shotCueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "plannedSrc": "production/compositions/scenes/04-scene-04.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-04-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-04",
+          "stateIds": [
+            "graph-scene-04-state-01",
+            "graph-scene-04-state-02"
+          ],
+          "sourceCueIds": [
+            "cue-010",
+            "cue-011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-05",
+      "order": 5,
+      "title": "好处是普通人可以快速上手，",
+      "role": "process",
+      "start": 61.68,
+      "end": 79.02,
+      "duration": 17.34,
+      "cueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "shotCueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "plannedSrc": "production/compositions/scenes/05-scene-05.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-05-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-05",
+          "stateIds": [
+            "graph-scene-05-state-01",
+            "graph-scene-05-state-02",
+            "graph-scene-05-state-03"
+          ],
+          "sourceCueIds": [
+            "cue-012",
+            "cue-013",
+            "cue-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-06",
+      "order": 6,
+      "title": "AI最擅长帮你从0到1做一个De",
+      "role": "compare",
+      "start": 79.02,
+      "end": 97.52,
+      "duration": 18.5,
+      "cueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "shotCueIds": [
+        "cue-015",
+        "cue-016"
+      ],
+      "plannedSrc": "production/compositions/scenes/06-scene-06.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-06-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-07",
+      "order": 7,
+      "title": "当没有工程底座的时候，",
+      "role": "process",
+      "start": 97.52,
+      "end": 107.08,
+      "duration": 9.56,
+      "cueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "shotCueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "plannedSrc": "production/compositions/scenes/07-scene-07.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-07-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-07",
+          "stateIds": [
+            "graph-scene-07-state-01",
+            "graph-scene-07-state-02"
+          ],
+          "sourceCueIds": [
+            "cue-017",
+            "cue-018"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-08",
+      "order": 8,
+      "title": "一个智能体自动生成报告、自动回复",
+      "role": "compare",
+      "start": 107.08,
+      "end": 123.96,
+      "duration": 16.88,
+      "cueIds": [
+        "cue-019",
+        "cue-020"
+      ],
+      "shotCueIds": [
+        "cue-019",
+        "cue-020"
+      ],
+      "plannedSrc": "production/compositions/scenes/08-scene-08.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-08-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-09",
+      "order": 9,
+      "title": "第四点，很多人有强烈的弯道超车的",
+      "role": "process",
+      "start": 123.96,
+      "end": 138.52,
+      "duration": 14.56,
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "shotCueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "plannedSrc": "production/compositions/scenes/09-scene-09.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-09-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-09",
+          "stateIds": [
+            "graph-scene-09-state-01",
+            "graph-scene-09-state-02",
+            "graph-scene-09-state-03"
+          ],
+          "sourceCueIds": [
+            "cue-021",
+            "cue-022",
+            "cue-023"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-10",
+      "order": 10,
+      "title": "但危险在于，有些人进一步误解为，",
+      "role": "process",
+      "start": 138.52,
+      "end": 151.74,
+      "duration": 13.22,
+      "cueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "shotCueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "plannedSrc": "production/compositions/scenes/10-scene-10.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-10-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-10",
+          "stateIds": [
+            "graph-scene-10-state-01",
+            "graph-scene-10-state-02",
+            "graph-scene-10-state-03"
+          ],
+          "sourceCueIds": [
+            "cue-024",
+            "cue-025",
+            "cue-026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-11",
+      "order": 11,
+      "title": "它失败时应该怎么办？",
+      "role": "concept",
+      "start": 151.74,
+      "end": 157.42,
+      "duration": 5.68,
+      "cueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029"
+      ],
+      "shotCueIds": [
+        "cue-027",
+        "cue-028",
+        "cue-029"
+      ],
+      "plannedSrc": "production/compositions/scenes/11-scene-11.html",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-11-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-12",
+      "order": 12,
+      "title": "它怎么处理工具调用失败？",
+      "role": "concept",
+      "start": 157.42,
+      "end": 164.22,
+      "duration": 6.8,
+      "cueIds": [
+        "cue-030",
+        "cue-031",
+        "cue-032"
+      ],
+      "shotCueIds": [
+        "cue-030",
+        "cue-031",
+        "cue-032"
+      ],
+      "plannedSrc": "production/compositions/scenes/12-scene-12.html",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-12-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-13",
+      "order": 13,
+      "title": "有没有日志、监控、测试、回滚机制",
+      "role": "process",
+      "start": 164.22,
+      "end": 170.36,
+      "duration": 6.14,
+      "cueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "shotCueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "plannedSrc": "production/compositions/scenes/13-scene-13.html",
+      "layout": {
+        "hostPose": "point-right",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compact"
+      ],
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-13-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": [
+        {
+          "graphId": "graph-scene-13",
+          "stateIds": [
+            "graph-scene-13-state-01",
+            "graph-scene-13-state-02",
+            "graph-scene-13-state-03"
+          ],
+          "sourceCueIds": [
+            "cue-033",
+            "cue-034",
+            "cue-035"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene-14",
+      "order": 14,
+      "title": "很多人出了Bug以后，",
+      "role": "concept",
+      "start": 170.36,
+      "end": 179.74,
+      "duration": 9.38,
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "shotCueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038"
+      ],
+      "plannedSrc": "production/compositions/scenes/14-scene-14.html",
+      "layout": {
+        "hostPose": "explain",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace"
+      ],
+      "motionRules": [
+        "scale-swap-transition",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-14-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-15",
+      "order": 15,
+      "title": "你回答不上来，它就不是产品，",
+      "role": "compare",
+      "start": 179.74,
+      "end": 191.84,
+      "duration": 12.1,
+      "cueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "shotCueIds": [
+        "cue-039",
+        "cue-040"
+      ],
+      "plannedSrc": "production/compositions/scenes/15-scene-15.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-15-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-16",
+      "order": 16,
+      "title": "如果你也想把Agent真正地学起",
+      "role": "compare",
+      "start": 191.84,
+      "end": 208.46,
+      "duration": 16.62,
+      "cueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "shotCueIds": [
+        "cue-041",
+        "cue-042"
+      ],
+      "plannedSrc": "production/compositions/scenes/16-scene-16.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-16-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-17",
+      "order": 17,
+      "title": "把这些东西都要系统地过一遍，",
+      "role": "compare",
+      "start": 208.46,
+      "end": 225.58,
+      "duration": 17.12,
+      "cueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045"
+      ],
+      "shotCueIds": [
+        "cue-043",
+        "cue-044",
+        "cue-045"
+      ],
+      "plannedSrc": "production/compositions/scenes/17-scene-17.html",
+      "layout": {
+        "hostPose": "present",
+        "hostZone": "host.left",
+        "contentZone": "content.right",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "replace",
+        "compare",
+        "compact"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "scale-swap-transition"
+      ],
+      "terminalState": {
+        "id": "scene-17-terminal",
+        "operation": "compact",
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    },
+    {
+      "id": "scene-18",
+      "order": 18,
+      "title": "但是后面如何去理解你的这个Age",
+      "role": "close",
+      "start": 225.58,
+      "end": 239.328,
+      "duration": 13.748,
+      "cueIds": [
+        "cue-046"
+      ],
+      "shotCueIds": [
+        "cue-046"
+      ],
+      "plannedSrc": "production/compositions/scenes/18-scene-18.html",
+      "layout": {
+        "hostPose": "close",
+        "hostZone": "host.right",
+        "contentZone": "content.left",
+        "captionZone": "caption"
+      },
+      "visualOperations": [
+        "compact",
+        "hold"
+      ],
+      "motionRules": [
+        "card-morph-anchor",
+        "viewport-change"
+      ],
+      "terminalState": {
+        "id": "scene-18-terminal",
+        "operation": "hold",
+        "minimumHoldSeconds": 0.6,
+        "description": "Keep the final exact-source statement readable before the next semantic handoff."
+      },
+      "graphRefs": []
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-baseline",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.0.0",
+    "reason": "No reviewed formal planning bundle existed; generated the canonical content-independent baseline before optional enrichment.",
+    "contentIndependent": true,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 3,
+      "targetSceneSeconds": 18,
+      "numericClaimsAsCharts": false,
+      "llmEnrichmentOptional": true
+    }
+  }
+}

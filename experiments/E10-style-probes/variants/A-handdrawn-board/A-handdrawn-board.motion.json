@@ -1,0 +1,12 @@
+{
+  "duration": 7.242254,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#reason-badge", "bySec": 0.65 },
+    { "kind": "appearsBy", "selector": "#surface-card", "bySec": 1.2 },
+    { "kind": "appearsBy", "selector": "#layer-model", "bySec": 4.2 },
+    { "kind": "appearsBy", "selector": "#final-verdict", "bySec": 6.6 },
+    { "kind": "before", "a": "#surface-card", "b": "#layer-model" },
+    { "kind": "staysInFrame", "selector": "#caption-shell" },
+    { "kind": "keepsMoving", "withinSelector": "#world", "maxStaticSec": 1.35 }
+  ]
+}

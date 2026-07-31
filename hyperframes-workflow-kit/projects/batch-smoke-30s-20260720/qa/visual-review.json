@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-visual-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "passed-internal-sample-review",
+  "reviewedBy": "codex-autonomous-internal-review",
+  "reviewScope": "HyperFrames strict check plus one midpoint frame for every one of 2 scenes and Studio timeline load verification.",
+  "checkedAt": "2026-07-23T05:23:22.733Z",
+  "compositionDigest": "a33228e76b3851e1d6c776460241ad71259396810c4f45794f96b01949d8957d",
+  "checks": {
+    "hostContentCaptionCollision": "passed",
+    "textOverflow": "passed",
+    "chineseReadability": "passed-at-sampled-frames",
+    "exactSourceVersusGeneratedSummaryLabels": "passed",
+    "unverifiedNumericClaimsNotCharted": "passed",
+    "terminalFrameReadability": "passed-at-sampled-frames",
+    "studioTimelineLoaded": {
+      "status": "passed",
+      "scenes": 2,
+      "captions": 6,
+      "durationSeconds": 31.808
+    }
+  },
+  "frames": [
+    {
+      "path": "qa/composition-snapshots/01-scene-01-midpoint.png",
+      "sha256": "68232537e99f93de6fcb02b66e0314553a43b1b3fb5a3737e4068a6aa3490b14",
+      "size": 545458
+    },
+    {
+      "path": "qa/composition-snapshots/02-scene-02-midpoint.png",
+      "sha256": "b5ed233b5ee8727ab37e123984d8b01c9305ae4e90f5a6cd7c2a1a3ecf0e4250",
+      "size": 540741
+    }
+  ],
+  "limitations": [
+    "Not a user final review.",
+    "No automated OCR engine is connected.",
+    "Full human semantic/subtitle review remains required before public release."
+  ],
+  "publicReleaseBlocked": true
+}

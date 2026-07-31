@@ -1,0 +1,18 @@
+direction: right
+
+source: 知识库 {
+  shape: rectangle
+}
+retrieve: 检索 {
+  shape: rectangle
+}
+model: 大模型 {
+  shape: rectangle
+}
+answer: 回答 {
+  shape: rectangle
+}
+
+source -> retrieve
+retrieve -> model
+model -> answer

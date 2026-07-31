@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "autovideo-planning-fallback/v1",
+  "projectId": "demotext-standard-delivery-v4",
+  "createdAt": "2026-07-19T09:49:40.632Z",
+  "status": "ready-for-workbench-import",
+  "failedStage": "visual-plan",
+  "failure": {
+    "type": "upstream-service",
+    "status": 502,
+    "message": "Codex structured planning adapter unavailable after retry timeout.",
+    "jobPreserved": true
+  },
+  "method": "Reused demotext-standard-delivery-v3 semantic structure only after an exact NarrationLock hash match; rebound every timing, narration excerpt, project ID, audio hash, alignment hash and NarrationLock hash to demotext-standard-delivery-v4.",
+  "referenceProject": "demotext-standard-delivery-v3",
+  "reused": [
+    "scene roles",
+    "stable scene/cue/node/edge IDs",
+    "screen-text provenance policy",
+    "motion rule selection"
+  ],
+  "notReused": [
+    "audio",
+    "alignment",
+    "final composition",
+    "render",
+    "QA",
+    "approval receipts"
+  ],
+  "outputs": {
+    "storyboard": {
+      "path": "plan/storyboard.json",
+      "sha256": "438c90e4be6f22323b68f7bf0a8a91978748263e56020beb2b5322f4bc046814"
+    },
+    "shotManifest": {
+      "path": "plan/shot-manifest.json",
+      "sha256": "88d92900bff3d5de8d39ff8585c04adfcd7ec7dac24d5d1c13aa900badbb778d"
+    },
+    "graphIr": {
+      "path": "plan/graph-ir.json",
+      "sha256": "ff8b9b38d5f47a3f3972444141eee57cee182ddf8e25c3cac23b0f98a45c44de"
+    },
+    "productionManifest": {
+      "path": "plan/production-manifest.json",
+      "sha256": "62c33b3e7c8ba795132763f1884d05af23508b19b1a66f61359a8d8a29943cec"
+    },
+    "planningBundle": {
+      "path": "plan/planning-fallback-bundle.json",
+      "sha256": "8f29af22f909a8bfe3cfadef70bef0a3cf0a4a95fc1cfb2e80c71c69a74afce8"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "duration": 8,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#host-wrap", "bySec": 0.9 },
+    { "kind": "appearsBy", "selector": "#headline-group", "bySec": 1.2 },
+    { "kind": "appearsBy", "selector": "#caption-first", "bySec": 0.6 },
+    { "kind": "appearsBy", "selector": "#host-pose-emphasis", "bySec": 4.2 },
+    { "kind": "appearsBy", "selector": "#host-pose-explain", "bySec": 6.2 },
+    { "kind": "appearsBy", "selector": "#keyword-state-a", "bySec": 4.3 },
+    { "kind": "appearsBy", "selector": "#keyword-state-b", "bySec": 6.4 },
+    { "kind": "before", "a": "#headline-group", "b": "#keyword-state-a" },
+    { "kind": "before", "a": "#keyword-state-a", "b": "#keyword-state-b" },
+    { "kind": "staysInFrame", "selector": "#host-wrap" },
+    { "kind": "staysInFrame", "selector": "#content-zone" },
+    { "kind": "staysInFrame", "selector": "#caption-rail" },
+    { "kind": "keepsMoving", "withinSelector": "#probe-scene", "maxStaticSec": 1.8 }
+  ]
+}

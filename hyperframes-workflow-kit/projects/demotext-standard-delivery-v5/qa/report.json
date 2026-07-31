@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "autovideo-qa-report/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "checkedAt": "2026-07-19T15:01:49.080Z",
+  "releaseScope": "internal-only",
+  "publicReleaseBlocked": true,
+  "okForInternalReview": true,
+  "okForPublicRelease": false,
+  "gates": {
+    "hyperframesCheck": {
+      "status": "passed",
+      "path": "qa/hyperframes-check.json"
+    },
+    "media": {
+      "status": "passed",
+      "path": "qa/delivery-report.json"
+    },
+    "lockedSubtitleReconstruction": {
+      "status": "passed",
+      "path": "captions/alignment-validation.json"
+    },
+    "visualReview": {
+      "status": "passed-internal-sample-review",
+      "path": "qa/visual-review.json",
+      "reviewedBy": "codex-autonomous-internal-review",
+      "scope": "HyperFrames strict check plus one midpoint frame for every one of 18 scenes and Studio timeline load verification."
+    },
+    "audioApproval": {
+      "status": "passed",
+      "approvalScope": "technical-only",
+      "approvedBy": "codex-technical-review",
+      "path": "audio/approval.json"
+    },
+    "finalPreview": {
+      "status": "approved-internal-review",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvalScope": "internal-autonomous-review",
+      "compositionDigest": "1c5b30c857564639527b5feb952d3d6816c45fcbad6b31b3a3078d3bf07dbd96",
+      "path": "qa/final-preview.json"
+    },
+    "humanListening": {
+      "status": "not-performed",
+      "approvedBy": null,
+      "path": "audio/listening-review.json"
+    },
+    "publicationRights": {
+      "status": "internal-only",
+      "declaration": "internal-only",
+      "path": "rights-clearance/publication-rights.json",
+      "unresolvedItemIds": [
+        "source-001-ec1a51a2",
+        "voice-speaker-rights",
+        "host-artwork-rights",
+        "gsap-runtime",
+        "ffmpeg-build"
+      ]
+    }
+  },
+  "releaseBlockers": [
+    "The current render is not an unblocked public-release master.",
+    "Publication rights are not fully cleared by the current approved rights receipt.",
+    "Human listening approval is missing or stale for the current final audio.",
+    "Human final review is missing or stale for the current preview and composition."
+  ]
+}

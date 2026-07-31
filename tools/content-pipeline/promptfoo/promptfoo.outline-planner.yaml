@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: AutoVideo Outline Planner offline contract regression
+sharing: false
+prompts:
+  - id: file://../prompt-chain/prompts/02-outline-planner.md
+    label: outline-planner-v1
+providers:
+  - id: file://providers/precomputed-artifact-provider.mjs
+    label: hash-bound-local-candidate
+    config:
+      stage: outline-planner
+defaultTest:
+  assert:
+    - type: javascript
+      value: file://assertions/stage-contract.mjs
+tests:
+  - description: Bind outline sections to current evidence and 30-second brief
+    vars:
+      stage: outline-planner
+      casePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.case.json
+      candidatePath: tools/content-pipeline/fixtures/contract/zh-ai-terms-001.outline-planner.candidate.json
+

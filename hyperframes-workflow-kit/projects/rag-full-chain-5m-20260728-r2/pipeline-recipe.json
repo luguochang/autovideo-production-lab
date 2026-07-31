@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "autovideo-pipeline-recipe/v1",
+  "id": "modern-ip-host-cosyvoice14-landscape",
+  "version": "1.1.0",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "inputRoute": "script",
+  "narration": {
+    "lock": "NarrationLock.json",
+    "normalizedSha256": "bdf2796e70774507b7ccfc50a66f925ae6b51917f188b976a8c6bb4691cfcf94",
+    "allowSilentRewrite": false
+  },
+  "voice": {
+    "route": "cosyvoice-preset-14",
+    "speaker": "中文女",
+    "precision": "FP32",
+    "stream": false,
+    "speed": 1.03,
+    "seed": 7,
+    "output": {
+      "sampleRate": 48000,
+      "channels": 1,
+      "codec": "pcm_s16le"
+    }
+  },
+  "video": {
+    "engine": "hyperframes",
+    "version": "0.7.77",
+    "template": "modern-ip-host-explainer",
+    "templateVersion": "1.0.0",
+    "palette": "light-apricot",
+    "ratio": "16:9",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "stageOrder": [
+    "source-register",
+    "audio-transcript",
+    "material-suitability",
+    "evidence-ledger",
+    "content-outline",
+    "script-draft",
+    "spoken-rewrite",
+    "content-duration-fit",
+    "claim-source-review",
+    "script-review",
+    "content-approval",
+    "narration-lock",
+    "template-lock",
+    "pronunciation-review",
+    "voice-final",
+    "audio-align",
+    "subtitle-qa",
+    "subtitle-review",
+    "rights-clearance",
+    "audio-handoff",
+    "visual-plan",
+    "diagram-assets",
+    "style-probe",
+    "visual-variety-qa",
+    "composition-readiness",
+    "full-production",
+    "qa-review",
+    "screen-text-review",
+    "final-preview",
+    "render-deliver",
+    "delivery-qa",
+    "retrospective",
+    "package-export"
+  ],
+  "humanGates": [
+    "script-review",
+    "voice-listening",
+    "rights-clearance",
+    "style-probe",
+    "studio-final-preview",
+    "retrospective"
+  ],
+  "editableContracts": [
+    "workbench stage configuration",
+    "artifact revisions",
+    "overrides/overrides.json",
+    "HyperFrames Studio"
+  ],
+  "publicReleaseRequires": [
+    "human-listening",
+    "human-final-review",
+    "publication-rights-cleared"
+  ]
+}

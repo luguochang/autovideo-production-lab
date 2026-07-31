@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutoVideo Graph IR",
+  "type": "object",
+  "required": ["schemaVersion", "projectId", "graphs"],
+  "additionalProperties": true,
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "autovideo-graph-ir/v1"},
+    "projectId": {"type": "string", "minLength": 1},
+    "graphs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "nodes", "edges"],
+        "additionalProperties": true,
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "sceneId": {"type": "string"},
+          "nodes": {"type": "array"},
+          "edges": {"type": "array"}
+        }
+      }
+    }
+  }
+}

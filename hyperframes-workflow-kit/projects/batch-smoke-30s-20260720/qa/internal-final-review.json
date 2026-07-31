@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "autovideo-internal-final-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "accepted-for-internal-only",
+  "approvalScope": "internal-autonomous-review",
+  "humanReviewPerformed": false,
+  "publicReleaseBlocked": true,
+  "composition": {
+    "path": "production/hyperframes",
+    "digest": "a33228e76b3851e1d6c776460241ad71259396810c4f45794f96b01949d8957d",
+    "fileCount": 43
+  },
+  "previewStartedAt": "2026-07-23T05:21:05.968Z",
+  "checklist": {
+    "fullTimeline": false,
+    "audioVisualSync": false,
+    "captions": false,
+    "visuals": false,
+    "content": false
+  },
+  "notes": "Creator requested closeout self-test before concentrated human review. Internal-only final preview binding after current OCR/screen-text checks; no playback, listening, human approval, or public release is claimed.",
+  "reviewedBy": "codex-creator-delegated",
+  "updatedAt": "2026-07-23T05:21:06.045Z",
+  "delegation": {
+    "path": "receipts/creator-delegation/2026-07-22-codex-internal-simulation.json",
+    "sha256": "97d7b7d1297cb17b03bb7f3dcb211dfcb6db86851fc61e285645d186eca9c17e"
+  }
+}

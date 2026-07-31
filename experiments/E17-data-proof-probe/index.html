@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Data Proof Motion Recipe Probe</title>
+    <script src="./assets/runtime/gsap.min.js"></script>
+    <style>
+      :root {
+        --background: #f2dfc7;
+        --surface: #fbf3e7;
+        --surface-focus: #fffaf2;
+        --ink: #2a211b;
+        --muted: #675748;
+        --primary: #496958;
+        --secondary: #a14a33;
+        --line: #dcc2a3;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      @font-face { font-family: "Noto Sans SC"; src: local("Noto Sans SC"), local("Noto Sans CJK SC"); font-weight: 100 900; }
+      @font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); font-weight: 100 900; }
+
+      html, body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--background);
+        color: var(--ink);
+        font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      }
+
+      #root, #probe-scene, .stage-fill { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .stage-fill { position: absolute; inset: 0; background: var(--background); }
+      .stage-fill::before { content: ""; position: absolute; left: 96px; top: 874px; width: 1728px; height: 3px; background: var(--line); }
+      .stage-mark { position: absolute; left: 96px; top: 70px; width: 510px; height: 30px; color: var(--muted); font-family: monospace; font-size: 18px; font-weight: 700; line-height: 30px; }
+      .stage-mark::before { content: ""; display: inline-block; width: 46px; height: 4px; margin-right: 16px; vertical-align: 5px; background: var(--primary); }
+
+      .host-zone { position: absolute; left: 96px; top: 156px; width: 600px; height: 730px; overflow: hidden; z-index: 4; opacity: 0; transform-origin: 50% 100%; will-change: transform, opacity; }
+      .host-shadow { position: absolute; left: 112px; bottom: 4px; width: 382px; height: 42px; border-radius: 50%; background: rgba(73,105,88,.12); filter: blur(14px); }
+      .host-pose { position: absolute; inset: 0; display: block; width: 600px; height: 730px; object-fit: contain; object-position: 50% 100%; }
+      .host-accent { position: absolute; left: 34px; bottom: 18px; width: 510px; height: 5px; background: var(--primary); transform-origin: 0 50%; opacity: .72; }
+
+      .content-zone { position: absolute; left: 694px; top: 112px; width: 1130px; height: 760px; overflow: hidden; z-index: 8; }
+      .content-world { position: absolute; inset: 0; width: 1130px; height: 760px; overflow: hidden; }
+      .content-label { position: absolute; left: 8px; top: 4px; width: 900px; height: 40px; color: var(--muted); font-family: monospace; font-size: 19px; font-weight: 700; line-height: 40px; opacity: 0; }
+      .content-label strong { margin-left: 18px; color: var(--secondary); font-weight: 800; }
+      .anchor-rule { position: absolute; left: 8px; top: 66px; width: 930px; height: 6px; background: var(--line); transform-origin: 0 50%; opacity: 0; }
+      .anchor-rule::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 286px; background: var(--primary); }
+
+      .chart-camera { position: absolute; left: 20px; top: 94px; width: 1050px; height: 624px; overflow: hidden; transform-origin: 50% 48%; will-change: transform; }
+      .chart-heading { position: absolute; left: 0; top: 0; width: 1050px; height: 102px; opacity: 0; }
+      .chart-kicker { position: absolute; left: 0; top: 2px; width: 700px; height: 28px; color: var(--muted); font-family: monospace; font-size: 17px; font-weight: 700; line-height: 28px; }
+      .chart-title { position: absolute; left: 0; top: 34px; width: 1020px; height: 66px; color: var(--ink); font-size: 48px; font-weight: 900; line-height: 1.2; white-space: nowrap; }
+      .chart-title strong { color: var(--secondary); }
+
+      .chart-area { position: absolute; left: 0; top: 124px; width: 1050px; height: 388px; overflow: hidden; }
+      .axis-note { position: absolute; left: 0; top: 4px; width: 230px; height: 24px; color: var(--muted); font-family: monospace; font-size: 15px; font-weight: 700; line-height: 24px; }
+      .axis-rule { position: absolute; left: 76px; top: 58px; width: 2px; height: 274px; background: var(--line); }
+      .baseline { position: absolute; left: 76px; bottom: 54px; width: 944px; height: 4px; background: var(--line); transform-origin: 0 50%; opacity: 0; }
+      .baseline::after { content: ""; position: absolute; left: 0; top: 0; width: 270px; height: 4px; background: var(--primary); }
+      .bar-group { position: absolute; left: 98px; bottom: 58px; width: 900px; height: 276px; }
+      .bar-slot { position: absolute; bottom: 0; width: 170px; height: 276px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+      #bar-slot-entry { left: 14px; }
+      #bar-slot-context { left: 364px; }
+      #bar-slot-tools { left: 714px; }
+      .bar-value { width: 170px; height: 32px; color: var(--ink); font-size: 29px; font-weight: 900; line-height: 32px; text-align: center; opacity: 0; }
+      .bar { display: block; width: 112px; transform: scaleY(0); transform-origin: 50% 100%; opacity: 0; }
+      #bar-entry { height: 112px; background: var(--primary); }
+      #bar-context { height: 190px; background: var(--primary); }
+      #bar-tools { height: 270px; background: var(--secondary); }
+      .bar-label { width: 170px; height: 34px; margin-top: 12px; color: var(--muted); font-size: 22px; font-weight: 800; line-height: 34px; text-align: center; opacity: 0; }
+
+      .trend-svg { position: absolute; inset: 0; width: 1050px; height: 338px; overflow: hidden; }
+      .trend-path { fill: none; stroke: var(--secondary); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
+      .trend-dot { fill: var(--secondary); opacity: 0; }
+      .focus-beacon { position: absolute; left: 184px; bottom: 38px; width: 20px; height: 20px; border-radius: 50%; background: var(--secondary); box-shadow: 0 0 0 8px rgba(161,74,51,.14); opacity: 0; transform: translateX(0); }
+      .focus-ring { position: absolute; left: 804px; top: 48px; width: 170px; height: 284px; border: 4px solid var(--secondary); border-radius: 8px; opacity: 0; transform: scale(.96); }
+      .focus-copy { position: absolute; left: 780px; top: 4px; width: 230px; height: 28px; color: var(--secondary); font-family: monospace; font-size: 15px; font-weight: 800; line-height: 28px; text-align: right; opacity: 0; }
+      .chart-source { position: absolute; left: 0; bottom: 0; width: 620px; height: 26px; color: var(--muted); font-family: monospace; font-size: 14px; font-weight: 650; line-height: 26px; opacity: 0; }
+      .chart-disclaimer { position: absolute; left: 730px; bottom: 0; width: 320px; height: 26px; color: var(--muted); font-family: monospace; font-size: 13px; font-weight: 650; line-height: 26px; text-align: right; opacity: 0; }
+
+      .summary-band { position: absolute; left: 30px; top: 530px; width: 990px; height: 76px; overflow: hidden; border-top: 3px solid var(--line); border-bottom: 3px solid var(--line); opacity: 0; transform: translateY(14px); }
+      .summary-label { position: absolute; left: 0; top: 0; width: 210px; height: 70px; display: flex; align-items: center; color: var(--primary); font-family: monospace; font-size: 16px; font-weight: 800; }
+      .summary-copy { position: absolute; left: 210px; top: 0; width: 760px; height: 70px; display: flex; align-items: center; color: var(--ink); font-size: 27px; font-weight: 850; line-height: 1.3; white-space: nowrap; }
+      .summary-copy strong { color: var(--secondary); }
+
+      .caption-shell { position: absolute; left: 96px; top: 926px; width: 1728px; height: 88px; overflow: hidden; border-top: 2px solid var(--line); background: var(--surface); z-index: 190; }
+      .caption-group { position: absolute; left: 0; top: 3px; width: 1728px; height: 82px; opacity: 0; will-change: transform, opacity; }
+      .caption-copy { position: absolute; left: 34px; top: 0; width: 1640px; height: 82px; display: flex; align-items: center; overflow: hidden; color: var(--muted); font-size: 27px; font-weight: 500; line-height: 1.35; white-space: nowrap; }
+      .caption-copy.emphasis { color: var(--ink); font-weight: 700; opacity: 0; }
+      .caption-copy.emphasis strong { color: var(--primary); font-weight: 900; }
+      #caption-c .caption-copy.emphasis strong { color: var(--secondary); }
+      .source-receipt { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="8" data-width="1920" data-height="1080" data-fps="30">
+      <section id="probe-scene" class="clip" data-start="0" data-duration="8.033" data-track-index="1">
+        <div class="stage-fill" data-role="persistent-stage" data-zone="stage" data-layout-ignore></div>
+        <div class="stage-mark">KNOWLEDGE EXPLAINER / MOTION PROBE</div>
+
+        <div id="host-zone" class="host-zone" data-role="host" data-zone="host.left">
+          <div class="host-shadow" aria-hidden="true"></div>
+          <img id="host-present" class="host-pose" src="./.media/images/image_001.png" alt="" data-role="host-pose" data-zone="host.left" data-pose-id="present" data-layout-allow-overflow="normalized-host-crop" />
+          <div id="host-accent" class="host-accent" aria-hidden="true"></div>
+        </div>
+
+        <div id="content-zone" class="content-zone" data-role="content" data-zone="content.right">
+          <div id="content-world" class="content-world" data-role="content-world" data-zone="content.right" data-camera-scope="content-world-only" data-motion-recipe="data-proof@1.0.0">
+            <div id="content-label" class="content-label">RECIPE / DATA PROOF <strong>BASE STYLE LOCKED</strong></div>
+            <div id="anchor-rule" class="anchor-rule" aria-hidden="true"></div>
+
+            <div id="chart-camera" class="chart-camera" data-role="content-camera" data-zone="content.right" data-camera-scope="content-world-only">
+              <div id="chart-heading" class="chart-heading">
+                <div class="chart-kicker">STRUCTURE EVIDENCE / GRAPH IR DERIVED</div>
+                <div class="chart-title">一个入口，展开成<strong>三层工程关系</strong></div>
+              </div>
+
+              <div id="chart-area" class="chart-area" data-role="data-proof" data-zone="content.right" data-source-ir="DataProofIR.json">
+                <div class="axis-note">已展开层级 / LAYERS</div>
+                <div class="axis-rule" aria-hidden="true"></div>
+                <div id="baseline" class="baseline" aria-hidden="true"></div>
+
+                <svg class="trend-svg" width="1050" height="338" viewBox="0 0 1050 338" aria-hidden="true" data-layout-ignore>
+                  <path id="trend-path" class="trend-path" d="M 184 220 C 320 190 420 150 534 140 C 680 126 790 88 894 60" />
+                  <circle id="trend-dot" class="trend-dot" cx="184" cy="220" r="9" />
+                </svg>
+
+                <div class="bar-group">
+                  <div id="bar-slot-entry" class="bar-slot" data-role="bar" data-source-value="1">
+                    <div id="value-entry" class="bar-value">1</div>
+                    <div id="bar-entry" class="bar"></div>
+                    <div id="label-entry" class="bar-label">入口</div>
+                  </div>
+                  <div id="bar-slot-context" class="bar-slot" data-role="bar" data-source-value="2">
+                    <div id="value-context" class="bar-value">2</div>
+                    <div id="bar-context" class="bar"></div>
+                    <div id="label-context" class="bar-label">上下文</div>
+                  </div>
+                  <div id="bar-slot-tools" class="bar-slot" data-role="bar" data-source-value="3">
+                    <div id="value-tools" class="bar-value">3</div>
+                    <div id="bar-tools" class="bar"></div>
+                    <div id="label-tools" class="bar-label">工具链</div>
+                  </div>
+                </div>
+
+                <div id="focus-beacon" class="focus-beacon" aria-hidden="true"></div>
+                <div id="focus-ring" class="focus-ring" aria-hidden="true" data-layout-ignore></div>
+                <div id="focus-copy" class="focus-copy">CURRENT FOCUS / 工具链调度</div>
+                <div id="chart-source" class="chart-source">Source: DataProofIR.json / Graph IR structure</div>
+                <div id="chart-disclaimer" class="chart-disclaimer">结构示意，不是业务指标</div>
+              </div>
+
+              <div id="summary-band" class="summary-band" data-role="data-proof-conclusion" data-zone="content.right">
+                <div class="summary-label">EVIDENCE LOCK</div>
+                <div class="summary-copy">复杂性不是消失，而是被<strong>分层包装</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="caption-shell" class="caption-shell" data-role="caption" data-zone="caption">
+          <div id="caption-a" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="weight shift crossfade">
+            <div class="caption-copy">第一，平台把系统的复杂性给隐藏起来。</div>
+            <div class="caption-copy emphasis">第一，平台把系统的<strong>复杂性</strong>给隐藏起来。</div>
+          </div>
+          <div id="caption-b" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="weight shift crossfade">
+            <div class="caption-copy">低代码、无代码、AI 平台、工作流工具，</div>
+            <div class="caption-copy emphasis"><strong>低代码、无代码、AI 平台、工作流工具</strong>，</div>
+          </div>
+          <div id="caption-c" class="caption-group" data-role="caption-cue" data-zone="caption" data-layout-allow-overlap="weight shift crossfade">
+            <div class="caption-copy">把模型调用、API 连接、向量库、工具链调度流程包装成了按钮和节点。</div>
+            <div class="caption-copy emphasis">把模型调用、API 连接、向量库、工具链调度流程<strong>包装成了按钮和节点</strong>。</div>
+          </div>
+        </div>
+
+        <div class="source-receipt" data-official-registry="data-chart" data-official-motion-rule="stat-bars-and-fills" data-adaptation-receipt="SOURCE_RECEIPT.json" data-license="Apache-2.0"></div>
+      </section>
+
+      <audio id="probe-narration" src="./.media/audio/voice/voice_001.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const trendPath = document.querySelector("#trend-path");
+      const trendLength = trendPath.getTotalLength();
+      trendPath.style.strokeDasharray = `${trendLength}`;
+      trendPath.style.strokeDashoffset = `${trendLength}`;
+
+      const tl = gsap.timeline({ paused: true });
+      tl.addLabel("establish", 0);
+      tl.addLabel("focus", 2.72);
+      tl.addLabel("pullback", 6.24);
+      tl.addLabel("finalHold", 7.1);
+
+      tl.fromTo("#host-zone", { opacity: 0, scale: 0.985 }, { opacity: 1, scale: 1, duration: 0.62, ease: "power4.out" }, 0.12);
+      tl.fromTo("#content-label", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" }, 0.18);
+      tl.fromTo("#anchor-rule", { opacity: 0, scaleX: 0.16 }, { opacity: 1, scaleX: 1, duration: 0.58, ease: "power2.out" }, 0.26);
+      tl.fromTo("#chart-heading", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.52, ease: "power3.out" }, 0.34);
+      tl.to("#baseline", { opacity: 1, scaleX: 1, duration: 0.5, ease: "power2.out" }, 0.58);
+
+      tl.to("#bar-entry", { opacity: 1, scaleY: 1, duration: 0.72, ease: "power3.out" }, 0.82);
+      tl.to("#value-entry, #label-entry", { opacity: 1, duration: 0.22, ease: "power2.out" }, 1.48);
+      tl.to("#bar-context", { opacity: 1, scaleY: 1, duration: 0.72, ease: "power3.out" }, 1.18);
+      tl.to("#value-context, #label-context", { opacity: 1, duration: 0.22, ease: "power2.out" }, 1.84);
+      tl.to("#bar-tools", { opacity: 1, scaleY: 1, duration: 0.72, ease: "power3.out" }, 1.54);
+      tl.to("#value-tools, #label-tools", { opacity: 1, duration: 0.22, ease: "power2.out" }, 2.2);
+
+      tl.to("#trend-path", { opacity: 1, strokeDashoffset: 0, duration: 1.2, ease: "none" }, 2.12);
+      tl.to("#trend-dot", { opacity: 1, duration: 0.08, ease: "none" }, 2.12);
+      tl.to("#trend-dot", { attr: { cx: 534, cy: 140 }, duration: 0.55, ease: "none" }, 2.67);
+      tl.to("#trend-dot", { attr: { cx: 894, cy: 60 }, duration: 0.55, ease: "none" }, 3.22);
+      tl.to("#chart-source, #chart-disclaimer", { opacity: 1, duration: 0.3, ease: "power2.out" }, 3.48);
+
+      tl.to("#chart-camera", { x: 8, scale: 1.02, duration: 0.48, ease: "power2.inOut" }, "focus");
+      tl.to("#bar-entry, #bar-context", { opacity: 0.5, duration: 0.32, ease: "power1.out" }, "focus");
+      tl.to("#focus-beacon", { opacity: 1, duration: 0.2, ease: "power2.out" }, "focus");
+      tl.to("#focus-beacon", { x: 350, duration: 1.16, ease: "power2.inOut" }, 2.84);
+      tl.to("#focus-beacon", { x: 710, duration: 1.16, ease: "power2.inOut" }, 4.0);
+      tl.to("#focus-ring, #focus-copy", { opacity: 1, duration: 0.3, ease: "power2.out" }, 4.92);
+      tl.to("#focus-ring", { scale: 1, duration: 0.32, ease: "power2.out" }, 4.92);
+      tl.to("#chart-camera", { x: 0, scale: 1.02, duration: 0.5, ease: "power2.inOut" }, 4.98);
+
+      tl.to("#chart-camera", { x: 0, scale: 1, duration: 0.86, ease: "power3.inOut" }, "pullback");
+      tl.to("#bar-entry, #bar-context, #bar-tools", { opacity: 1, duration: 0.54, ease: "power2.inOut" }, "pullback");
+      tl.fromTo("#summary-band", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.46, ease: "power3.out" }, 6.48);
+
+      tl.fromTo("#caption-a", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 0.12);
+      tl.to("#caption-a .caption-copy:not(.emphasis)", { opacity: 0, duration: 0.18, ease: "power1.in" }, 0.76);
+      tl.to("#caption-a .caption-copy.emphasis", { opacity: 1, duration: 0.26, ease: "power2.out" }, 0.84);
+      tl.to("#caption-a", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 3.04);
+      tl.fromTo("#caption-b", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 3.16);
+      tl.to("#caption-b .caption-copy:not(.emphasis)", { opacity: 0, duration: 0.16, ease: "power1.in" }, 3.62);
+      tl.to("#caption-b .caption-copy.emphasis", { opacity: 1, duration: 0.24, ease: "power2.out" }, 3.68);
+      tl.to("#caption-b", { opacity: 0, y: -3, duration: 0.16, ease: "power2.in" }, 5.3);
+      tl.fromTo("#caption-c", { opacity: 0, y: 3 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 5.42);
+      tl.to("#caption-c .caption-copy:not(.emphasis)", { opacity: 0, duration: 0.16, ease: "power1.in" }, 5.96);
+      tl.to("#caption-c .caption-copy.emphasis", { opacity: 1, duration: 0.26, ease: "power2.out" }, 6.02);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

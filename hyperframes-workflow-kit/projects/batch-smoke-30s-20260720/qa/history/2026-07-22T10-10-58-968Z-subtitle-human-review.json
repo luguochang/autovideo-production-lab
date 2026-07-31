@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "autovideo-subtitle-human-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "status": "in-progress",
+  "bindings": {
+    "subtitleQa": {
+      "path": "qa/subtitle-qa.json",
+      "sha256": "508791b02d0b54c0668296e06c327c481a1b6f22c2a3d36bdcc9faa9cec5cc82"
+    },
+    "alignment": {
+      "path": "audio/alignment.json",
+      "sha256": "11afd2885c121dfd419927320bf06199c27e411387ac3f2b88de0df2cbc494dd"
+    },
+    "alignmentValidation": {
+      "path": "captions/alignment-validation.json",
+      "sha256": "e6bd49ae49fc8af7c159c013303e200b0299d4df5686528fdbe534fdcf275624"
+    },
+    "narrationLock": {
+      "path": "NarrationLock.json",
+      "sha256": "5e90f0e64857622ae46b2d84a1e7c36e54f4333cb4eb9c7e748fd317db0c2b7c"
+    },
+    "srt": {
+      "path": "captions/narration.zh-CN.srt",
+      "sha256": "0c7bbf10a9f0be181e160d5e9313a9b6ce5d63c67f86604936f97593d7284d8a"
+    }
+  },
+  "checklist": {
+    "meaning": false,
+    "terminology": false,
+    "segmentation": false,
+    "punctuation": false,
+    "timingReadability": false
+  },
+  "cues": [
+    {
+      "id": "cue-001",
+      "decision": "pending",
+      "note": ""
+    },
+    {
+      "id": "cue-002",
+      "decision": "pending",
+      "note": ""
+    },
+    {
+      "id": "cue-003",
+      "decision": "pending",
+      "note": ""
+    },
+    {
+      "id": "cue-004",
+      "decision": "pending",
+      "note": ""
+    },
+    {
+      "id": "cue-005",
+      "decision": "pending",
+      "note": ""
+    },
+    {
+      "id": "cue-006",
+      "decision": "pending",
+      "note": ""
+    }
+  ],
+  "notes": "",
+  "reviewedBy": null,
+  "updatedAt": "2026-07-22T10:09:39.143Z"
+}

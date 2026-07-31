@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "autovideo-probe-asset-manifest/v1",
+  "projectId": "E06-keyword-handoff-probe",
+  "releaseScope": "internal-probe-only",
+  "assets": [
+    {
+      "id": "host-present-transparent",
+      "type": "image",
+      "path": ".media/images/image_001.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "hyperframes-workflow-kit/projects/persondesign-modern-host-probe/.media/images/image_001.png",
+      "derivedFrom": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (3).png",
+        "sha256": "e138bc64b8f7aa7f341cea5b0672aa7d09dccd3702e92a8fa5f5481e03d9b780"
+      },
+      "provider": "media-use/local-ingest",
+      "license": "derived from user-provided asset; publication rights not implied",
+      "purpose": "fixed host.left presenter"
+    },
+    {
+      "id": "host-emphasis-transparent",
+      "type": "image",
+      "path": ".media/images/image_002.png",
+      "sha256": "247393d6df391c6488a7aadb0f9639e26154b7eaa75ba0bef8da69078d484e61",
+      "source": "hyperframes-workflow-kit/projects/persondesign-modern-host-probe/.media/images/image_002.png",
+      "derivedFrom": {
+        "path": "demo/persondesign/persondesign/ChatGPT Image 2026年7月17日 15_32_04 (2).png",
+        "sha256": "6ad9b540b165d459025c70b98b8030b0110bf83db6e14fbd70337115c57b4882"
+      },
+      "provider": "media-use/local-ingest",
+      "license": "derived from user-provided asset; publication rights not implied",
+      "purpose": "reserved semantic host pose; not activated in this probe"
+    },
+    {
+      "id": "narration-window",
+      "type": "voice",
+      "path": ".media/audio/voice/voice_002.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "source": "first 8 seconds of persondesign-modern-host-probe/input/narration.wav",
+      "sourceSha256": "f549bccedfdaae4aa7fd89cfc52ed6a130ed7fc7c72667f4386f5f75ee0f49fd",
+      "provider": "media-use/local-ingest",
+      "license": "project-local generated narration; internal probe only",
+      "purpose": "exact narration window used by the motion probe"
+    },
+    {
+      "id": "caption-weight-shift",
+      "type": "official-registry-component",
+      "path": "compositions/components/caption-weight-shift.html",
+      "sha256": "8a5294debec3eadeb7ca0a8688c31a6e8c517ebb1c55ff410aa81df3807daa55",
+      "source": "HyperFrames official registry via hyperframes add caption-weight-shift",
+      "provider": "hyperframes@0.7.64",
+      "license": "Apache-2.0",
+      "purpose": "caption emphasis behavior adapted to the fixed caption rail"
+    },
+    {
+      "id": "gsap-runtime",
+      "type": "runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "existing approved HyperFrames project runtime",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license",
+      "purpose": "paused seek-safe timeline"
+    }
+  ]
+}

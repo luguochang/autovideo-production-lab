@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "autovideo-probe-receipt/v1",
+  "probeId": "E04-modern-host-content-probe",
+  "status": "candidate",
+  "baseStyleId": "modern-ip-host-explainer",
+  "baseStyleVersion": "1.0.0",
+  "paletteId": "light-apricot",
+  "requiredBackground": "#F2DFC7",
+  "hostAssetPolicy": {
+    "source": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+    "zone": "host.left",
+    "cameraScope": "content-world-only",
+    "replacementAllowed": false
+  },
+  "assets": [
+    {
+      "path": "assets/host/point-right.png",
+      "sha256": "6b97f0b2d3e0f6c91b623b5fd836d01181117fd89b7dbc573a9ecd750b7fd015",
+      "source": "demotext-standard-delivery-v5 prepared host asset",
+      "license": "user-provided"
+    },
+    {
+      "path": "assets/host/explain.png",
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6",
+      "source": "demotext-standard-delivery-v5 prepared host asset",
+      "license": "user-provided"
+    },
+    {
+      "path": "assets/host/present.png",
+      "sha256": "bf7ced6ced694176ec71e7cd49d9db4586c745fce23caa6343066192f461ca8a",
+      "source": "demotext-standard-delivery-v5 prepared host asset",
+      "license": "user-provided"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "existing HyperFrames project runtime",
+      "license": "GreenSock standard license"
+    }
+  ],
+  "contentRecipes": [
+    {"id": "device-surface-tour", "version": "1.0.0", "visualType": "device-surface"},
+    {"id": "code-proof", "version": "1.0.0", "visualType": "code-surface"},
+    {"id": "comparison-split", "version": "1.0.0", "visualType": "comparison"}
+  ],
+  "motionRules": ["card-morph-anchor", "scale-swap-transition", "svg-path-draw"],
+  "audio": {"mode": "silent-visual-probe", "narrationOwner": "formal-v5-not-mutated"},
+  "reviewQuestion": "Does the right content layer gain density and semantic motion while the original host and background remain visually continuous?"
+}

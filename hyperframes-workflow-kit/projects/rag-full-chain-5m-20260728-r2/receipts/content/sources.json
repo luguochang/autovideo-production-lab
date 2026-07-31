@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-sources/v1",
+  "projectId": "rag-full-chain-5m-20260728-r2",
+  "root": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+  "generatedAt": "2026-07-28T09:01:03.226Z",
+  "sources": [
+    {
+      "id": "source-001-0bd400ff",
+      "path": "content/workbench-intakes/rag-full-chain-5m-20260728-r2/input/content-intake/submissions/101212ee31a7a1fd6f7e6518a2c56eab369cbe1dd6554b6e40c94092ed5619d3/payload/pasted.txt",
+      "type": "txt",
+      "bytes": 28116,
+      "modifiedAt": "2026-07-28T08:58:58.923Z",
+      "sha256": "0bd400ff29c30be0161c3a927926dc09cc25a4f448cfaa35d6a46afc854f9c97",
+      "source": "user-provided",
+      "license": "user-provided; publication rights not implied",
+      "status": "registered"
+    }
+  ],
+  "skipped": [],
+  "warnings": []
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Modern IP Host Explainer Probe</title>
+    <script src="./assets/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: Inter;
+        src: local("Inter");
+      }
+
+      @font-face {
+        font-family: "Noto Sans SC";
+        src: local("Noto Sans SC");
+      }
+
+      @font-face {
+        font-family: "Microsoft YaHei";
+        src: local("Microsoft YaHei");
+      }
+
+      @font-face {
+        font-family: SFMono-Regular;
+        src: local("SFMono-Regular");
+      }
+
+      @font-face {
+        font-family: Consolas;
+        src: local("Consolas");
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        overflow: hidden;
+        background: #F2DFC7;
+        color: #2A211B;
+        font-family: Inter, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      }
+
+      #modern-ip-host-explainer-probe {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      #probe-scene {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      .stage-fill {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #F2DFC7;
+      }
+
+      .ambient-orbit {
+        position: absolute;
+        left: -84px;
+        top: 120px;
+        width: 770px;
+        height: 770px;
+        border: 2px solid #DCC2A3;
+        border-radius: 50%;
+        opacity: 0;
+      }
+
+      .ambient-track {
+        position: absolute;
+        left: 734px;
+        top: 704px;
+        width: 1090px;
+        height: 2px;
+        background: #DCC2A3;
+        transform-origin: 0 50%;
+      }
+
+      .host-wrap {
+        position: absolute;
+        left: 96px;
+        top: 156px;
+        width: 600px;
+        height: 730px;
+        overflow: hidden;
+        opacity: 0;
+        transform-origin: 50% 100%;
+        z-index: 4;
+      }
+
+      .host-pose-stack {
+        position: absolute;
+        inset: 0;
+        width: 600px;
+        height: 730px;
+        transform-origin: 50% 100%;
+        will-change: transform;
+      }
+
+      .host-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 600px;
+        height: 730px;
+        object-fit: contain;
+        object-position: 50% 100%;
+        opacity: 0;
+        transform-origin: 50% 100%;
+        will-change: opacity;
+      }
+
+      .host-image.pose-emphasis {
+        transform: scale(0.975);
+      }
+
+      .host-image.pose-explain {
+        transform: scale(0.969);
+      }
+
+      .content-zone {
+        position: absolute;
+        left: 734px;
+        top: 112px;
+        width: 1090px;
+        height: 760px;
+        overflow: hidden;
+        z-index: 5;
+      }
+
+      .section-index {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 380px;
+        height: 36px;
+        color: #675748;
+        font-family: SFMono-Regular, Consolas, monospace;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 36px;
+        opacity: 0;
+      }
+
+      .section-index::before {
+        content: "";
+        display: inline-block;
+        width: 52px;
+        height: 4px;
+        margin-right: 18px;
+        vertical-align: 5px;
+        background: #496958;
+      }
+
+      .headline-group {
+        position: absolute;
+        left: 0;
+        top: 116px;
+        width: 1060px;
+        height: 300px;
+        opacity: 0;
+        transform-origin: 0 50%;
+        will-change: transform, opacity;
+      }
+
+      .headline-line {
+        display: block;
+        width: 1060px;
+        height: 112px;
+        margin: 0;
+        color: #2A211B;
+        font-size: 96px;
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .headline-line.accented {
+        color: #496958;
+      }
+
+      .headline-path {
+        position: absolute;
+        left: 0;
+        top: 220px;
+        width: 850px;
+        height: 58px;
+        overflow: hidden;
+      }
+
+      .headline-path path {
+        fill: none;
+        stroke: #496958;
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .headline-path circle {
+        fill: #A94E36;
+        opacity: 0;
+      }
+
+      .context-helper {
+        position: absolute;
+        left: 0;
+        top: 468px;
+        width: 760px;
+        height: 56px;
+        color: #675748;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 56px;
+        letter-spacing: 0;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .context-helper strong {
+        color: #2A211B;
+        font-weight: 800;
+      }
+
+      .keyword-stage {
+        position: absolute;
+        left: 0;
+        top: 190px;
+        width: 1060px;
+        height: 330px;
+        overflow: hidden;
+      }
+
+      .keyword-state {
+        position: absolute;
+        inset: 0;
+        width: 1060px;
+        height: 330px;
+        display: flex;
+        align-items: center;
+        transform-origin: 50% 50%;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .keyword-rule {
+        display: block;
+        flex: 0 0 auto;
+        width: 10px;
+        height: 208px;
+        margin-right: 46px;
+        background: #496958;
+      }
+
+      .keyword-copy {
+        display: block;
+        width: 980px;
+        min-width: 0;
+        color: #2A211B;
+        font-size: 82px;
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      #keyword-state-a .keyword-copy {
+        color: #496958;
+      }
+
+      #keyword-state-b .keyword-rule {
+        background: #A94E36;
+      }
+
+      #keyword-state-b .keyword-copy em {
+        color: #A94E36;
+        font-style: normal;
+      }
+
+      .caption-rail {
+        position: absolute;
+        left: 96px;
+        top: 926px;
+        width: 1728px;
+        height: 88px;
+        overflow: hidden;
+        border-top: 2px solid #DCC2A3;
+        background: #FBF3E7;
+        z-index: 12;
+      }
+
+      .caption-group {
+        position: absolute;
+        inset: 0;
+        width: 1728px;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .caption-copy {
+        display: block;
+        width: 1640px;
+        height: 44px;
+        margin-left: 34px;
+        overflow: hidden;
+        color: #675748;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .caption-copy strong {
+        color: #496958;
+        font-weight: 800;
+      }
+
+      #caption-ai .caption-copy strong {
+        color: #A94E36;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-j94p" id="modern-ip-host-explainer-probe" data-composition-id="modern-ip-host-explainer-probe" data-start="0" data-width="1920" data-height="1080" data-duration="8" data-fps="30">
+      <section data-hf-id="hf-u4ki" id="probe-scene" class="clip" data-start="0" data-duration="8" data-track-index="1">
+        <div data-hf-id="hf-3njm" class="stage-fill" data-role="stage" data-zone="stage">
+          <div data-hf-id="hf-526q" id="ambient-orbit" class="ambient-orbit" data-role="ambient-structure" data-zone="stage" data-layout-ignore="" aria-hidden="true"></div>
+          <div data-hf-id="hf-2g7g" id="ambient-track" class="ambient-track" data-role="ambient-structure" data-zone="stage" data-layout-ignore="" aria-hidden="true"></div>
+
+          <div data-hf-id="hf-brij" id="host-wrap" class="host-wrap" data-role="host" data-zone="host.left">
+            <div data-hf-id="hf-7v2s" id="host-pose-stack" class="host-pose-stack" data-role="host-pose-stack" data-zone="host.left">
+              <img data-hf-id="hf-t747" id="host-pose-present" class="host-image pose-present" src="./.media/images/image_001.png" alt="" data-role="host-pose" data-pose-id="present" data-zone="host.left">
+              <img data-hf-id="hf-2eph" id="host-pose-emphasis" class="host-image pose-emphasis" src="./.media/images/image_002.png" alt="" data-role="host-pose" data-pose-id="emphasis" data-zone="host.left">
+              <img data-hf-id="hf-3ex9" id="host-pose-explain" class="host-image pose-explain" src="./.media/images/image_003.png" alt="" data-role="host-pose" data-pose-id="explain" data-zone="host.left">
+            </div>
+          </div>
+
+          <div data-hf-id="hf-a8q8" id="content-zone" class="content-zone" data-role="content" data-zone="content.right">
+            <div data-hf-id="hf-0ivn" id="section-index" class="section-index" data-role="context-label" data-zone="content.right">
+              SYSTEM LAYER / 01
+            </div>
+
+            <div data-hf-id="hf-crx3" id="headline-group" class="headline-group" data-role="headline" data-zone="content.right" data-layout-allow-overflow="exit travel">
+              <span data-hf-id="hf-bzq9" class="headline-line">平台把复杂性</span>
+              <span data-hf-id="hf-gtal" class="headline-line accented">藏在按钮后面</span>
+              <svg data-hf-id="hf-cqgr" class="headline-path" viewBox="0 0 850 58" aria-hidden="true">
+                <path data-hf-id="hf-vnez" id="accent-path" d="M 8 28 C 210 10, 450 46, 790 24" />
+                <circle data-hf-id="hf-fhw4" id="accent-end" cx="816" cy="23" r="11" />
+              </svg>
+            </div>
+
+            <div data-hf-id="hf-vvlm" id="context-helper" class="context-helper" data-role="helper-callout" data-zone="content.right">
+              系统仍然复杂，只是被<strong data-hf-id="hf-edu0">包装</strong>了。
+            </div>
+
+            <div data-hf-id="hf-nbe1" id="keyword-stage" class="keyword-stage" data-role="keyword-cluster" data-zone="content.right">
+              <div data-hf-id="hf-ige2" id="keyword-state-a" class="keyword-state" data-role="keyword-state" data-zone="content.right">
+                <span data-hf-id="hf-6bmq" class="keyword-rule" aria-hidden="true"></span>
+                <span data-hf-id="hf-co03" class="keyword-copy">低代码 · 无代码</span>
+              </div>
+              <div data-hf-id="hf-eia1" id="keyword-state-b" class="keyword-state" data-role="keyword-state" data-zone="content.right">
+                <span data-hf-id="hf-ys06" class="keyword-rule" aria-hidden="true"></span>
+                <span data-hf-id="hf-dtep" class="keyword-copy"><em data-hf-id="hf-gl40">AI 平台</em> · 工作流工具</span>
+              </div>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-j3hc" id="caption-rail" class="caption-rail" data-role="caption" data-zone="caption">
+            <div data-hf-id="hf-iqsp" id="caption-first" class="caption-group">
+              <span data-hf-id="hf-ig68" class="caption-copy">第一，平台把系统的<strong data-hf-id="hf-8r0m">复杂性</strong>给隐藏起来。</span>
+            </div>
+            <div data-hf-id="hf-2mw9" id="caption-low-code" class="caption-group">
+              <span data-hf-id="hf-wry8" class="caption-copy"><strong data-hf-id="hf-w075">低代码、无代码</strong>、AI平台、工作流工具，</span>
+            </div>
+            <div data-hf-id="hf-rl8b" id="caption-ai" class="caption-group">
+              <span data-hf-id="hf-ezx9" class="caption-copy">低代码、无代码、<strong data-hf-id="hf-dqcu">AI平台、工作流工具</strong>，</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <audio data-hf-id="hf-qgi4" id="probe-narration" src="./input/narration.wav" data-start="0" data-track-index="10" data-volume="1"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+      const accentPath = document.getElementById("accent-path");
+      const accentLength = accentPath.getTotalLength();
+
+      tl.set("#ambient-orbit", { opacity: 0, x: -12, scale: 0.97 }, 0);
+      tl.set("#ambient-track", { opacity: 0.7, scaleX: 0.82 }, 0);
+      tl.set("#host-wrap", { opacity: 0, x: -38, scale: 0.985 }, 0);
+      tl.set("#host-pose-stack", { scale: 1 }, 0);
+      tl.set("#host-pose-present", { opacity: 1 }, 0);
+      tl.set(["#host-pose-emphasis", "#host-pose-explain"], { opacity: 0 }, 0);
+      tl.set("#section-index", { y: 12 }, 0);
+      tl.set("#headline-group", { x: 46, scale: 0.99 }, 0);
+      tl.set("#context-helper", { y: 18 }, 0);
+      tl.set("#keyword-state-a", { opacity: 0, scale: 0.82, visibility: "hidden" }, 0);
+      tl.set("#keyword-state-b", { opacity: 0, scale: 0.72, visibility: "hidden" }, 0);
+      tl.set(["#caption-first", "#caption-low-code", "#caption-ai"], { opacity: 0, visibility: "hidden" }, 0);
+      tl.set(accentPath, { strokeDasharray: accentLength, strokeDashoffset: accentLength }, 0);
+      tl.set("#accent-end", { scale: 0.5, transformOrigin: "50% 50%" }, 0);
+
+      tl.addLabel("cue-01", 0);
+      tl.to("#ambient-orbit", { opacity: 0.68, x: 0, scale: 1, duration: 0.9, ease: "sine.out" }, 0.1);
+      tl.to("#ambient-orbit", { x: 12, duration: 7.0, ease: "sine.inOut" }, 1.0);
+      tl.to("#ambient-track", { scaleX: 1, duration: 7.6, ease: "sine.inOut" }, 0.2);
+      tl.to("#host-wrap", { opacity: 1, x: 0, scale: 1, duration: 0.62, ease: "power4.out" }, 0.18);
+      tl.to("#section-index", { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" }, 0.28);
+      tl.to("#headline-group", { opacity: 1, x: 0, scale: 1, duration: 0.68, ease: "power4.out" }, 0.34);
+      tl.to(accentPath, { strokeDashoffset: 0, duration: 0.62, ease: "power2.out" }, 0.88);
+      tl.to("#accent-end", { opacity: 1, scale: 1, duration: 0.3, ease: "power3.out" }, 1.36);
+      tl.to("#context-helper", { opacity: 1, y: 0, duration: 0.46, ease: "power3.out" }, 1.02);
+      tl.set("#caption-first", { visibility: "visible" }, 0.1);
+      tl.to("#caption-first", { opacity: 1, duration: 0.28, ease: "power2.out" }, 0.12);
+
+      tl.addLabel("handoff-to-low-code", 3.24);
+      tl.to("#headline-group", { opacity: 0, x: -54, scale: 0.98, duration: 0.34, ease: "power3.in" }, 3.24);
+      tl.to("#context-helper", { opacity: 0, y: -12, duration: 0.24, ease: "power2.in" }, 3.28);
+      tl.to("#section-index", { opacity: 0, y: -8, duration: 0.22, ease: "power2.in" }, 3.3);
+      tl.to("#headline-group svg", { opacity: 0, duration: 0.2, ease: "power1.in" }, 3.28);
+      tl.to("#caption-first", { opacity: 0, duration: 0.18, ease: "power2.in" }, 3.48);
+      tl.set(["#headline-group", "#context-helper", "#section-index", "#caption-first"], { visibility: "hidden" }, 3.66);
+
+      tl.addLabel("cue-02", 3.58);
+      tl.to("#host-pose-present", { opacity: 0, duration: 0.14, ease: "power2.in" }, 3.38);
+      tl.set("#host-pose-present", { visibility: "hidden" }, 3.54);
+      tl.to("#host-pose-emphasis", { opacity: 1, duration: 0.2, ease: "power2.out" }, 3.52);
+      tl.set("#keyword-state-a", { visibility: "visible" }, 3.58);
+      tl.set("#caption-low-code", { visibility: "visible" }, 3.68);
+      tl.to("#keyword-state-a", { opacity: 1, scale: 1, duration: 0.58, ease: "back.out(1.35)" }, 3.58);
+      tl.to("#caption-low-code", { opacity: 1, duration: 0.24, ease: "power2.out" }, 3.7);
+
+      tl.addLabel("cue-03", 5.2);
+      tl.to("#host-pose-emphasis", { opacity: 0, duration: 0.14, ease: "power2.in" }, 5.28);
+      tl.set("#host-pose-emphasis", { visibility: "hidden" }, 5.44);
+      tl.to("#host-pose-explain", { opacity: 1, duration: 0.2, ease: "power2.out" }, 5.42);
+      tl.to("#keyword-state-a", { opacity: 0, scale: 0.72, duration: 0.34, ease: "power3.in" }, 5.2);
+      tl.to("#caption-low-code", { opacity: 0, duration: 0.16, ease: "power2.in" }, 5.28);
+      tl.set(["#keyword-state-a", "#caption-low-code"], { visibility: "hidden" }, 5.54);
+      tl.set(["#keyword-state-b", "#caption-ai"], { visibility: "visible" }, 5.58);
+      tl.to("#keyword-state-b", { opacity: 1, scale: 1, duration: 0.58, ease: "back.out(1.35)" }, 5.58);
+      tl.to("#caption-ai", { opacity: 1, duration: 0.24, ease: "power2.out" }, 5.6);
+
+      gsap.set("#host-pose-explain", { x: -105, y: -21 });
+
+      window.__timelines["modern-ip-host-explainer-probe"] = tl;
+    </script>
+  </body>
+</html>

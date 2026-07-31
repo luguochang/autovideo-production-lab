@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "autovideo-content-intake-state/v1",
+  "projectId": "batch-smoke-20260720",
+  "stage": "reviewed",
+  "createdAt": "2026-07-20T12:23:32.346Z",
+  "updatedAt": "2026-07-20T12:31:45.068Z",
+  "artifacts": {
+    "sources": {
+      "path": "sources.json",
+      "sha256": "9d5420c2d88141ef4db3525f6acba5071604737746c0afdff6693a5cda70c4a1"
+    },
+    "suitability": {
+      "path": "material-suitability.json",
+      "sha256": "87c45d93d6e501b3078fa56f2c89ea2510b808f75994c4d738559659546253fc"
+    },
+    "evidence": {
+      "path": "evidence.json",
+      "sha256": "1b9f5b9cf6af4ac84673caed5a845e21451fb6910f2e735b4e3e400c05936898"
+    },
+    "spokenRewrite": {
+      "path": "spoken-rewrite.json",
+      "sha256": "c2bb2cf27babde367b0a95a50ee52af666ca97638d79edd8bae9d45e10386760"
+    },
+    "claimSourceReview": {
+      "path": "claim-source-review.json",
+      "sha256": "d2bd8706a39e9fa0fa85477f5fbbaf3adc99e0a74a74cc97263e749224ec4895"
+    }
+  },
+  "lockedProjectId": null
+}

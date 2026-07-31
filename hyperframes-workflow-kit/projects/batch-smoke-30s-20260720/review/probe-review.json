@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "autovideo-probe-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "scope": "internal-only",
+  "reviewer": "codex-autonomous-internal-review",
+  "approvalBasis": "Autonomous internal visual review only. This is not user listening, user final review, or public-rights approval.",
+  "window": {
+    "cueId": "cue-001",
+    "startSeconds": 0,
+    "endSeconds": 3.98,
+    "durationSeconds": 3.98,
+    "text": "第一，平台会把系统的复杂性藏起来。"
+  },
+  "composition": "review/probe-project",
+  "templateReference": "batch-smoke-30s-20260720/review/probe-project (self-snapshot; structure only; narration-independent)",
+  "hyperframesVersion": "0.7.68",
+  "check": {
+    "status": "passed",
+    "errors": 0,
+    "warnings": 0,
+    "artifact": "review/probe-check.json",
+    "snapshotTimesSeconds": [
+      0.4,
+      1.751,
+      2.985,
+      3.86
+    ]
+  },
+  "visualReview": {
+    "hostContentCaptionCollision": "passed-by-machine-check-and-sample-frame-review",
+    "chineseLineBreaks": "passed-by-sample-frame-review",
+    "activeNodeLimit": "passed",
+    "terminalHold": "passed",
+    "paletteAndHierarchy": "passed"
+  },
+  "bindings": {
+    "sourceAudio": {
+      "path": "audio/narration.final.wav",
+      "sha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1"
+    },
+    "probeAudio": {
+      "path": "review/probe-project/.media/audio/voice/voice_001.wav",
+      "sha256": "5316e8f8e9c80aa56cb456b853bb1d63e591d25b7fc8220f399a7533e9d97fda"
+    },
+    "hostAsset": {
+      "path": "production-assets/host/explain.png",
+      "sha256": "e182218df5d87a6cc802658f0ea0d71e0e51943256d51eea41c14853f8ff57a6"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "review/stills/style-probe-hidden-complexity.png",
+      "sha256": "eb16f0fa7e9aa8af2677372c1ac5d709bbda15f2ad7df0ca0a358f0d19e36f8a"
+    },
+    {
+      "path": "review/probes/style-probe-hidden-complexity.mp4",
+      "sha256": "e7ff08927c86dc259ea3bf70f6c924bbe97f9437c5ed7aa497641d7fc597ae3f"
+    }
+  ],
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640032",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 50,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 61440,
+        "duration": "4.000000",
+        "bit_rate": "1816084",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "120",
+        "extradata_size": 50,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.35.100 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 192512,
+        "duration": "4.010667",
+        "bit_rate": "153516",
+        "nb_frames": "188",
+        "extradata_size": 2,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\review\\probes\\style-probe-hidden-complexity.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "4.010667",
+      "size": "989877",
+      "bit_rate": "1974488",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.19.100"
+      }
+    }
+  },
+  "publicReleaseBlocked": true
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "sentenceIndex": 0,
+    "text": "真正可靠的人工智能工作流，",
+    "start": 0.1,
+    "duration": 2.2693611111111114,
+    "end": 2.3693611111111115,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "不是让模型替你盲目做决定，",
+    "start": 2.3693611111111115,
+    "duration": 2.269361111111111,
+    "end": 4.638722222222222,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "而是让每一步都有清晰的输入、",
+    "start": 4.638722222222222,
+    "duration": 2.4584745370370378,
+    "end": 7.09719675925926,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "可验证的结果，",
+    "start": 7.09719675925926,
+    "duration": 1.1346805555555566,
+    "end": 8.231877314814817,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "以及随时可以回退的边界。",
+    "start": 8.231877314814817,
+    "duration": 2.080247685185183,
+    "end": 10.312125,
+    "timingSource": "sentence-boundary-proportional"
+  }
+]

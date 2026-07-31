@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepFilterNet 本地实测</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6f8; color: #172033; font: 15px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; }
+    main { width: min(920px, calc(100% - 28px)); margin: 24px auto 36px; }
+    header { background: #172033; color: #fff; padding: 22px; border-left: 5px solid #22c55e; }
+    h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: 0; }
+    h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
+    p { margin: 6px 0; }
+    .status { color: #86efac; font-weight: 700; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+    .metric, section { background: #fff; border: 1px solid #dbe1e8; border-radius: 6px; padding: 14px; }
+    .metric strong { display: block; color: #0f766e; font-size: 20px; }
+    section { margin-top: 12px; }
+    pre { margin: 0; padding: 13px; overflow-wrap: anywhere; white-space: pre-wrap; border-radius: 5px; background: #101827; color: #d1fae5; font: 12px/1.55 Consolas, monospace; }
+    .wave { margin-top: 10px; padding: 8px; background: #111827; border-radius: 5px; }
+    .wave img { display: block; width: 100%; height: 86px; object-fit: fill; }
+    .label { display: flex; justify-content: space-between; color: #526078; font-size: 12px; }
+    .note { border-left: 4px solid #f59e0b; background: #fffbeb; }
+    @media (max-width: 560px) { .metrics { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>DeepFilterNet 本地实测</h1>
+      <p class="status">PASS · DeepFilterNet3 · 纯本地 CPU</p>
+      <p>真实项目口播，不改变原句、停顿和情绪，只做语音增强。</p>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>6.452 s</strong>输入 / 输出时长一致</div>
+      <div class="metric"><strong>0.15 s</strong>模型增强耗时</div>
+      <div class="metric"><strong>16 kHz</strong>单声道 PCM 输出</div>
+    </div>
+
+    <section>
+      <h2>运行命令</h2>
+      <pre>powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\voice-lab\run-deepfilter.ps1 `
+  -InputPath .\experiments\E11-open-source-voice-probe\reference.wav</pre>
+    </section>
+
+    <section>
+      <h2>关键日志</h2>
+      <pre>Loading model settings of DeepFilterNet3
+Running on device cpu
+Model loaded
+Enhanced noisy audio file 'reference.wav' in 0.15s (RT factor: 0.024)
+Enhanced audio written to: ...\deepfilter-output</pre>
+    </section>
+
+    <section>
+      <h2>波形对照</h2>
+      <div class="label"><span>原始口播</span><span>reference.wav</span></div>
+      <div class="wave"><img src="./assets/deepfilter-input-wave.png" alt="原始口播波形"></div>
+      <div class="label"><span>增强结果</span><span>reference_DeepFilterNet3.wav</span></div>
+      <div class="wave"><img src="./assets/deepfilter-output-wave.png" alt="DeepFilterNet 增强后波形"></div>
+    </section>
+
+    <section class="note">
+      <h2>判断标准</h2>
+      <p>重点听呼吸、齿音和句尾是否仍自然。波形更干净不等于听感更好；如果声音变薄，改用较温和的 <code>--atten-lim</code>，或直接保留原录音。</p>
+    </section>
+  </main>
+</body>
+</html>

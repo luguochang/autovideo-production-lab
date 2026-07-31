@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "autovideo-subtitle-qa/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "generatedAt": "2026-07-22T12:17:10.054Z",
+  "machine": {
+    "status": "passed",
+    "source": "alignment.cues and captions/narration.zh-CN.srt",
+    "alignmentSha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e",
+    "validationSha256": "26764e418d060019b263ca18f8d6134affbb99387463b15c3c54f0a3f891cf84",
+    "srtSha256": "0c7bbf10a9f0be181e160d5e9313a9b6ce5d63c67f86604936f97593d7284d8a",
+    "cueCount": 6,
+    "srtCount": 6,
+    "checks": [
+      {
+        "cueId": "cue-001",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 4.271,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-002",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.222,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-003",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.556,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-004",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.513,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-005",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 5.543,
+        "cpsPassed": true,
+        "empty": false
+      },
+      {
+        "cueId": "cue-006",
+        "textExact": true,
+        "timingExact": true,
+        "validTiming": true,
+        "cps": 6.052,
+        "cpsPassed": true,
+        "empty": false
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "humanSemanticReview": {
+    "status": "needs-review",
+    "reviewer": null,
+    "note": "Machine checks do not replace subtitle wording and context review."
+  },
+  "ocrReview": {
+    "status": "unavailable",
+    "tool": "PaddleOCR",
+    "note": "OCR adapter is not installed in this workspace; screen text review remains manual."
+  },
+  "publicReleaseEligible": false
+}

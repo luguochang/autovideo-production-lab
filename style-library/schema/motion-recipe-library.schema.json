@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autovideo.local/schema/motion-recipe-library.json",
+  "title": "AutoVideo Motion Recipe Library",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "libraryId",
+    "version",
+    "status",
+    "baseStyleId",
+    "baseStyleVersion",
+    "paletteId",
+    "requiredBackground",
+    "hostAssetPolicy",
+    "contentLayerPolicy",
+    "format",
+    "visualTypes",
+    "hostPolicy",
+    "sfxPolicy",
+    "receipts",
+    "recipes"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "autovideo-motion-recipe-library/v1"},
+    "libraryId": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"enum": ["candidate", "approved", "retired"]},
+    "baseStyleId": {"const": "modern-ip-host-explainer"},
+    "baseStyleVersion": {"const": "1.0.0"},
+    "paletteId": {"const": "light-apricot"},
+    "requiredBackground": {"const": "#F2DFC7"},
+    "hostAssetPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "source",
+        "defaultZone",
+        "cameraScope",
+        "allowPoseCrossfade",
+        "allowHostReplacement",
+        "allowPaletteReplacement"
+      ],
+      "properties": {
+        "required": {"const": true},
+        "source": {"const": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json"},
+        "defaultZone": {"const": "host.left"},
+        "cameraScope": {"const": "content-world-only"},
+        "allowPoseCrossfade": {"const": true},
+        "allowHostReplacement": {"const": false},
+        "allowPaletteReplacement": {"const": false}
+      }
+    },
+    "contentLayerPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["changeable"],
+      "properties": {
+        "changeable": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": [
+            "keyword",
+            "evidence-image",
+            "device-surface",
+            "diagram",
+            "data-proof",
+            "comparison",
+            "code-surface",
+            "object-metaphor",
+            "sfx",
+            "content-transition"
+          ]}
+        }
+      }
+    },
+    "format": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ratio", "width", "height", "fps"],
+      "properties": {
+        "ratio": {"const": "16:9"},
+        "width": {"const": 1920},
+        "height": {"const": 1080},
+        "fps": {"type": "integer", "minimum": 24, "maximum": 60}
+      }
+    },
+    "visualTypes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "keyword",
+          "evidence-image",
+          "device-surface",
+          "diagram",
+          "data-proof",
+          "comparison",
+          "code-surface",
+          "object-metaphor"
+        ]
+      }
+    },
+    "hostPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["persistent", "defaultZone", "cameraScope", "captionPersistent"],
+      "properties": {
+        "persistent": {"const": true},
+        "defaultZone": {"const": "host.left"},
+        "cameraScope": {"const": "content-world-only"},
+        "captionPersistent": {"const": true}
+      }
+    },
+    "sfxPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "contractPath",
+        "examplePath",
+        "resolver",
+        "manifestPath",
+        "pathPrefix",
+        "allowRemoteAtRender",
+        "allowUnregisteredAssets",
+        "requireSha256",
+        "roles",
+        "maxPerMinute",
+        "minGapSeconds",
+        "duckingDb"
+      ],
+      "properties": {
+        "mode": {"const": "semantic-only"},
+        "contractPath": {"const": "style-library/schema/semantic-sfx-plan.schema.json"},
+        "examplePath": {"const": "style-library/examples/knowledge-explainer-sfx-plan.example.json"},
+        "resolver": {"const": "media-use"},
+        "manifestPath": {"const": ".media/manifest.jsonl"},
+        "pathPrefix": {"const": ".media/audio/sfx/"},
+        "allowRemoteAtRender": {"const": false},
+        "allowUnregisteredAssets": {"const": false},
+        "requireSha256": {"const": true},
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["focus-hit", "connector-draw", "state-change", "error", "chapter-resolve"]}
+        },
+        "maxPerMinute": {"type": "integer", "minimum": 0, "maximum": 12},
+        "minGapSeconds": {"type": "number", "minimum": 1},
+        "duckingDb": {"type": "number", "maximum": 0}
+      }
+    },
+    "receipts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "source", "license"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["official-registry", "official-blueprint", "official-motion-rule", "project-local", "community-reference"]},
+          "source": {"type": "string", "minLength": 1},
+          "license": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "recipes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/recipe"}
+    }
+  },
+  "$defs": {
+    "reuseSources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["registryItems", "blueprints", "motionRules", "runtimeAdapters"],
+      "properties": {
+        "registryItems": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "blueprints": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "motionRules": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "runtimeAdapters": {"type": "array", "uniqueItems": true, "items": {"enum": ["gsap", "lottie", "three", "css", "waapi"]}}
+      }
+    },
+    "phase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "startPct", "endPct", "action"],
+      "properties": {
+        "name": {"enum": ["build", "breathe", "resolve"]},
+        "startPct": {"type": "number", "minimum": 0, "maximum": 1},
+        "endPct": {"type": "number", "minimum": 0, "maximum": 1},
+        "action": {"type": "string", "minLength": 1}
+      }
+    },
+    "recipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "status",
+        "visualType",
+        "purpose",
+        "semanticTriggers",
+        "requiredInputs",
+        "reuse",
+        "determinism",
+        "approval",
+        "phases",
+        "allowedSfxRoles",
+        "fallbackRecipeId",
+        "qa"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "status": {"enum": ["candidate", "probe-passed", "approved-project", "promoted-template", "retired", "deprecated"]},
+        "visualType": {"type": "string"},
+        "purpose": {"type": "string", "minLength": 1},
+        "semanticTriggers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "requiredInputs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "reuse": {"$ref": "#/$defs/reuseSources"},
+        "determinism": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["timelineOwner", "seekSafe", "networkAtRender"],
+          "properties": {
+            "timelineOwner": {"const": "hyperframes"},
+            "seekSafe": {"const": true},
+            "networkAtRender": {"const": false}
+          }
+        },
+        "approval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["probeReceipt", "approvedBy", "approvedAt"],
+          "properties": {
+            "probeReceipt": {"type": ["string", "null"]},
+            "approvedBy": {"type": ["string", "null"]},
+            "approvedAt": {"type": ["string", "null"], "format": "date-time"}
+          }
+        },
+        "phases": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/phase"}},
+        "allowedSfxRoles": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "fallbackRecipeId": {"type": ["string", "null"]},
+        "qa": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

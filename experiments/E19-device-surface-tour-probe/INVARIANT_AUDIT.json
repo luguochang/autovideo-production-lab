@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "autovideo-motion-probe-invariant-audit/v1",
+  "projectId": "E19-device-surface-tour-probe",
+  "recipeId": "device-surface-tour",
+  "recipeVersion": "1.0.0",
+  "status": "technical-probe-ready-human-pending",
+  "composition": {
+    "path": "experiments/E19-device-surface-tour-probe/index.html",
+    "sha256": "4e470b7e9b484a32efbf3ea2c0d036cedc2081d89993330b5c6c27f5a0ff1392",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "rootDurationSeconds": 8
+  },
+  "passed": true,
+  "authoredChecks": {
+    "landscape16x9": true,
+    "lightApricotBackground": true,
+    "singleQVersionHostAsset": true,
+    "hostLeft": true,
+    "contentRight": true,
+    "captionPersistent": true,
+    "contentWorldOnlyCamera": true,
+    "sameNarrationWindow": true,
+    "workbenchCaptureFrozenLocally": true,
+    "surfaceCountThree": true,
+    "stateOrderExplicit": true,
+    "iframeAbsent": true,
+    "onlineRuntimeAssetsAbsent": true,
+    "microphoneApiAbsent": true,
+    "recordingApiAbsent": true,
+    "autoplayAbsent": true,
+    "playbackCallsAbsent": true,
+    "sfxAbsentAndUnapproved": true
+  },
+  "brandShell": {
+    "baseStyleId": "modern-ip-host-explainer",
+    "baseStyleVersion": "1.0.0",
+    "paletteId": "light-apricot",
+    "background": "#F2DFC7",
+    "hostZone": "host.left",
+    "hostRect": {"left": 96, "top": 156, "width": 600, "height": 730},
+    "hostAssetPath": ".media/images/host.png",
+    "hostAssetSha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+    "hostPoseCount": 1,
+    "hostPoseSwap": false,
+    "captionZone": "caption",
+    "captionRect": {"left": 96, "top": 926, "width": 1728, "height": 88}
+  },
+  "camera": {
+    "scope": "content-world-only",
+    "selector": "#surface-camera",
+    "contentZone": "content.right",
+    "contentRect": {"left": 694, "top": 112, "width": 1130, "height": 760},
+    "hostTransformed": false,
+    "captionTransformed": false,
+    "transformSelectorsOutsideScope": []
+  },
+  "deviceSurfaceTour": {
+    "visualType": "device-surface",
+    "recipe": "device-surface-tour@1.0.0",
+    "sourceAssetPath": ".media/images/workbench.png",
+    "sourceAssetSha256": "9665b8c53c9cad5cbb235fa087836e5092405ec5ab18c908cf9aee0f28c15e80",
+    "singleFrozenSourceImage": true,
+    "surfaceCount": 3,
+    "stateOrder": ["project-input", "workflow-graph", "inspector-evidence"],
+    "liveIframe": false,
+    "runtimeNetwork": false
+  },
+  "timing": {
+    "narrationLockPath": "NarrationLock.json",
+    "narrationLockSha256": "085c2a9c8905298ba2c541919e0cbf620ad4811a3696626c5c5ee0651c4ecf84",
+    "audioPath": ".media/audio/voice/narration.wav",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "audioDurationSeconds": 8,
+    "phases": {
+      "projectInput": {"start": 0, "end": 2.36},
+      "workflowGraph": {"start": 2.36, "end": 5.34},
+      "inspectorEvidence": {"start": 5.34, "end": 8}
+    }
+  },
+  "audioSafety": {
+    "sourceMode": "frozen-file-reference",
+    "preload": "none",
+    "microphoneAllowed": false,
+    "recordingAllowed": false,
+    "autoplayAllowed": false,
+    "playbackCallsAllowed": false,
+    "externalSoundOutputAuthorized": false
+  },
+  "executionEvidence": {
+    "hyperframesCheck": {"status": "passed", "path": "strict-check.log", "version": "0.7.67", "findingCount": 0},
+    "snapshot": {"status": "passed", "contactSheet": "snapshots/contact-sheet.jpg"},
+    "render": {"status": "passed", "path": "renders/device-surface-tour-probe.mp4", "qa": "RENDER_QA.json"},
+    "audioPlayback": "not-run",
+    "humanReview": "pending"
+  },
+  "humanReview": {
+    "required": true,
+    "status": "pending",
+    "reviewDocument": "PROBE_REVIEW.md",
+    "lifecycleApplyExecuted": false,
+    "promotionExecuted": false
+  }
+}

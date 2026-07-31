@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "autovideo-composition-source-map/v1",
+  "projectId": "demotext-standard-delivery-v1",
+  "scenes": {
+    "scene-01": {
+      "file": "./compositions/scenes/01-respect-warning.html",
+      "cueIds": [
+        "cue-001"
+      ],
+      "graphId": null,
+      "hostPose": "emphasis",
+      "editableTargets": [
+        "scene-01-state-01"
+      ]
+    },
+    "scene-02": {
+      "file": "./compositions/scenes/02-community-claim.html",
+      "cueIds": [
+        "cue-002",
+        "cue-003"
+      ],
+      "graphId": null,
+      "hostPose": "read",
+      "editableTargets": [
+        "scene-02-state-01",
+        "scene-02-state-02"
+      ]
+    },
+    "scene-03": {
+      "file": "./compositions/scenes/03-confidence-illusion.html",
+      "cueIds": [
+        "cue-004",
+        "cue-005"
+      ],
+      "graphId": null,
+      "hostPose": "think",
+      "editableTargets": [
+        "scene-03-state-01",
+        "scene-03-state-02"
+      ]
+    },
+    "scene-04": {
+      "file": "./compositions/scenes/04-demo-not-system.html",
+      "cueIds": [
+        "cue-006",
+        "cue-007",
+        "cue-008"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-04-state-01",
+        "scene-04-state-02",
+        "scene-04-state-03"
+      ]
+    },
+    "scene-05": {
+      "file": "./compositions/scenes/05-five-reasons.html",
+      "cueIds": [
+        "cue-009"
+      ],
+      "graphId": null,
+      "hostPose": "emphasis",
+      "editableTargets": [
+        "scene-05-state-01"
+      ]
+    },
+    "scene-06": {
+      "file": "./compositions/scenes/06-hidden-complexity.html",
+      "cueIds": [
+        "cue-010",
+        "cue-011",
+        "cue-012",
+        "cue-013"
+      ],
+      "graphId": "graph-hidden-complexity",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-06-state-01",
+        "scene-06-state-02",
+        "scene-06-state-03",
+        "scene-06-state-04"
+      ]
+    },
+    "scene-07": {
+      "file": "./compositions/scenes/07-prototype-vs-product.html",
+      "cueIds": [
+        "cue-014",
+        "cue-015",
+        "cue-016",
+        "cue-017"
+      ],
+      "graphId": null,
+      "hostPose": "present",
+      "editableTargets": [
+        "scene-07-state-01",
+        "scene-07-state-02",
+        "scene-07-state-03",
+        "scene-07-state-04"
+      ]
+    },
+    "scene-08": {
+      "file": "./compositions/scenes/08-results-vs-maintenance.html",
+      "cueIds": [
+        "cue-018",
+        "cue-019",
+        "cue-020"
+      ],
+      "graphId": null,
+      "hostPose": "explain",
+      "editableTargets": [
+        "scene-08-state-01",
+        "scene-08-state-02",
+        "scene-08-state-03"
+      ]
+    },
+    "scene-09": {
+      "file": "./compositions/scenes/09-shortcut-misconception.html",
+      "cueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023",
+        "cue-024",
+        "cue-025"
+      ],
+      "graphId": null,
+      "hostPose": "think",
+      "editableTargets": [
+        "scene-09-state-01",
+        "scene-09-state-02",
+        "scene-09-state-03",
+        "scene-09-state-04",
+        "scene-09-state-05"
+      ]
+    },
+    "scene-10": {
+      "file": "./compositions/scenes/10-agent-engineering-checklist.html",
+      "cueIds": [
+        "cue-026",
+        "cue-027",
+        "cue-028",
+        "cue-029",
+        "cue-030",
+        "cue-031",
+        "cue-032",
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "graphId": "graph-agent-engineering",
+      "hostPose": "read",
+      "editableTargets": [
+        "scene-10-state-01",
+        "scene-10-state-02",
+        "scene-10-state-03",
+        "scene-10-state-04",
+        "scene-10-state-05",
+        "scene-10-state-06",
+        "scene-10-state-07",
+        "scene-10-state-08",
+        "scene-10-state-09",
+        "scene-10-state-10"
+      ]
+    },
+    "scene-11": {
+      "file": "./compositions/scenes/11-patch-distortion.html",
+      "cueIds": [
+        "cue-036",
+        "cue-037",
+        "cue-038",
+        "cue-039"
+      ],
+      "graphId": null,
+      "hostPose": "question",
+      "editableTargets": [
+        "scene-11-state-01",
+        "scene-11-state-02",
+        "scene-11-state-03",
+        "scene-11-state-04"
+      ]
+    },
+    "scene-12": {
+      "file": "./compositions/scenes/12-maturity-ladder.html",
+      "cueIds": [
+        "cue-040"
+      ],
+      "graphId": "graph-maturity-ladder",
+      "hostPose": "point-right",
+      "editableTargets": [
+        "scene-12-state-01"
+      ]
+    },
+    "scene-13": {
+      "file": "./compositions/scenes/13-learning-route.html",
+      "cueIds": [
+        "cue-041",
+        "cue-042",
+        "cue-043"
+      ],
+      "graphId": "graph-learning-route",
+      "hostPose": "encourage",
+      "editableTargets": [
+        "scene-13-state-01",
+        "scene-13-state-02",
+        "scene-13-state-03"
+      ]
+    },
+    "scene-14": {
+      "file": "./compositions/scenes/14-value-close.html",
+      "cueIds": [
+        "cue-044",
+        "cue-045",
+        "cue-046"
+      ],
+      "graphId": null,
+      "hostPose": "close",
+      "editableTargets": [
+        "scene-14-state-01",
+        "scene-14-state-02",
+        "scene-14-state-03"
+      ]
+    }
+  }
+}

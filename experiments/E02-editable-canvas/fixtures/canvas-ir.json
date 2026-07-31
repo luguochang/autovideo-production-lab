@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "documentId": "e02-rag-board",
+  "objects": [
+    {
+      "id": "node-source",
+      "kind": "diagram-node",
+      "source": { "adapter": "elk", "sourceId": "source" },
+      "text": "知识库",
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 64
+    },
+    {
+      "id": "node-retrieve",
+      "kind": "diagram-node",
+      "source": { "adapter": "elk", "sourceId": "retrieve" },
+      "text": "检索",
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 64
+    },
+    {
+      "id": "node-model",
+      "kind": "diagram-node",
+      "source": { "adapter": "elk", "sourceId": "model" },
+      "text": "大模型",
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 64
+    },
+    {
+      "id": "node-answer",
+      "kind": "diagram-node",
+      "source": { "adapter": "elk", "sourceId": "answer" },
+      "text": "回答",
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 64
+    }
+  ],
+  "edges": [
+    { "id": "edge-source-retrieve", "from": "node-source", "to": "node-retrieve" },
+    { "id": "edge-retrieve-model", "from": "node-retrieve", "to": "node-model" },
+    { "id": "edge-model-answer", "from": "node-model", "to": "node-answer" }
+  ],
+  "timeline": [
+    { "id": "cue-add-source", "at": 0, "op": "add", "targetId": "node-source" },
+    { "id": "cue-connect-retrieve", "at": 1.2, "op": "draw", "targetId": "edge-source-retrieve" },
+    { "id": "cue-highlight-model", "at": 3.4, "op": "highlight", "targetId": "node-model" }
+  ]
+}

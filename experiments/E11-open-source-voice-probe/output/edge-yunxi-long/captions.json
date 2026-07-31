@@ -1,0 +1,82 @@
+[
+  {
+    "sentenceIndex": 0,
+    "text": "如果你只是把提示词丢给模型，",
+    "start": 0.1,
+    "duration": 2.299232342105263,
+    "end": 2.3992323421052633,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "然后等待一个看起来漂亮的答案，",
+    "start": 2.3992323421052633,
+    "duration": 2.4760963684210524,
+    "end": 4.875328710526316,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 0,
+    "text": "视频很快就会变成流水账。",
+    "start": 4.875328710526316,
+    "duration": 1.9455042894736838,
+    "end": 6.8208329999999995,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "真正可靠的做法，",
+    "start": 6.870541666666666,
+    "duration": 1.4820986939393936,
+    "end": 8.35264036060606,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "是先锁定目标，",
+    "start": 8.35264036060606,
+    "duration": 1.270370309090909,
+    "end": 9.623010669696969,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "再核对证据，",
+    "start": 9.623010669696969,
+    "duration": 1.0586419242424245,
+    "end": 10.681652593939393,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 1,
+    "text": "最后让画面和声音一起服务于结论。",
+    "start": 10.681652593939393,
+    "duration": 3.175925772727272,
+    "end": 13.857578366666665,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 2,
+    "text": "听起来慢一点，",
+    "start": 13.907291666666666,
+    "duration": 1.2546625000000002,
+    "end": 15.161954166666666,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 2,
+    "text": "但观众会更舒服，",
+    "start": 15.161954166666666,
+    "duration": 1.4637729166666684,
+    "end": 16.625727083333334,
+    "timingSource": "sentence-boundary-proportional"
+  },
+  {
+    "sentenceIndex": 2,
+    "text": "也更容易相信你。",
+    "start": 16.625727083333334,
+    "duration": 1.4637729166666666,
+    "end": 18.0895,
+    "timingSource": "sentence-boundary-proportional"
+  }
+]

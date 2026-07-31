@@ -1,0 +1,664 @@
+{
+  "schemaVersion": "autovideo-graph-ir/v1",
+  "projectId": "demotext-standard-delivery-v5",
+  "purpose": "Conservative deterministic process diagrams derived from aligned cue order.",
+  "globalPolicy": {
+    "maxActiveNodesPerState": 3,
+    "defaultStateTransition": "replace",
+    "completedGroupTreatment": "compact",
+    "allowedMotionRules": [
+      "viewport-change",
+      "svg-path-draw",
+      "scale-swap-transition",
+      "card-morph-anchor"
+    ],
+    "forbidGraphKinds": [
+      "chart",
+      "stat",
+      "count"
+    ],
+    "excludedNumericClaims": [],
+    "numericClaimReason": "The deterministic baseline never promotes numeric narration to a statistical chart."
+  },
+  "graphs": [
+    {
+      "id": "graph-scene-02",
+      "sceneId": "scene-02",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-004",
+        "cue-005",
+        "cue-006"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-02-node-01",
+          "label": "AI也并不是你想的那么简单。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-004"
+          ]
+        },
+        {
+          "id": "graph-scene-02-node-02",
+          "label": "我看到很多人用完Codex、Clau",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-005"
+          ]
+        },
+        {
+          "id": "graph-scene-02-node-03",
+          "label": "尤其是应届生，投了很多简历，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-006"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-02-edge-01",
+          "from": "graph-scene-02-node-01",
+          "to": "graph-scene-02-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-02-edge-02",
+          "from": "graph-scene-02-node-02",
+          "to": "graph-scene-02-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-02-state-01",
+          "cueIds": [
+            "cue-004"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-02-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-02-state-02",
+          "cueIds": [
+            "cue-005"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-01",
+            "graph-scene-02-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-01"
+          ]
+        },
+        {
+          "id": "graph-scene-02-state-03",
+          "cueIds": [
+            "cue-006"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-02-node-01",
+            "graph-scene-02-node-02",
+            "graph-scene-02-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-02-edge-01",
+            "graph-scene-02-edge-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-02-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-scene-04",
+      "sceneId": "scene-04",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-010",
+        "cue-011"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-04-node-01",
+          "label": "第一，平台把系统的复杂性给隐藏起来。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-010"
+          ]
+        },
+        {
+          "id": "graph-scene-04-node-02",
+          "label": "低代码、无代码、AI平台、工作流工具",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-011"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-04-edge-01",
+          "from": "graph-scene-04-node-01",
+          "to": "graph-scene-04-node-02",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-04-state-01",
+          "cueIds": [
+            "cue-010"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-04-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-04-state-02",
+          "cueIds": [
+            "cue-011"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-04-node-01",
+            "graph-scene-04-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-04-edge-01"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-04-state-02",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-scene-05",
+      "sceneId": "scene-05",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-012",
+        "cue-013",
+        "cue-014"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-05-node-01",
+          "label": "好处是普通人可以快速上手，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-012"
+          ]
+        },
+        {
+          "id": "graph-scene-05-node-02",
+          "label": "但一旦报错，你根本就不知道是模型问题",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-013"
+          ]
+        },
+        {
+          "id": "graph-scene-05-node-03",
+          "label": "第二点，很多人把原型能力误判成是产品",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-014"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-05-edge-01",
+          "from": "graph-scene-05-node-01",
+          "to": "graph-scene-05-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-05-edge-02",
+          "from": "graph-scene-05-node-02",
+          "to": "graph-scene-05-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-05-state-01",
+          "cueIds": [
+            "cue-012"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-05-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-05-state-02",
+          "cueIds": [
+            "cue-013"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-05-node-01",
+            "graph-scene-05-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-05-edge-01"
+          ]
+        },
+        {
+          "id": "graph-scene-05-state-03",
+          "cueIds": [
+            "cue-014"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-05-node-01",
+            "graph-scene-05-node-02",
+            "graph-scene-05-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-05-edge-01",
+            "graph-scene-05-edge-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-05-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-scene-07",
+      "sceneId": "scene-07",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-017",
+        "cue-018"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-07-node-01",
+          "label": "当没有工程底座的时候，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-017"
+          ]
+        },
+        {
+          "id": "graph-scene-07-node-02",
+          "label": "第三点，就是我觉得现在短视频它疯狂地",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-018"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-07-edge-01",
+          "from": "graph-scene-07-node-01",
+          "to": "graph-scene-07-node-02",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-07-state-01",
+          "cueIds": [
+            "cue-017"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-07-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-07-state-02",
+          "cueIds": [
+            "cue-018"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-07-node-01",
+            "graph-scene-07-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-07-edge-01"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-07-state-02",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-scene-09",
+      "sceneId": "scene-09",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-021",
+        "cue-022",
+        "cue-023"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-09-node-01",
+          "label": "第四点，很多人有强烈的弯道超车的心理",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-021"
+          ]
+        },
+        {
+          "id": "graph-scene-09-node-02",
+          "label": "AI给了所有非技术的人一个巨大的想象",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-022"
+          ]
+        },
+        {
+          "id": "graph-scene-09-node-03",
+          "label": "这种心理有一部分是真的，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-023"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-09-edge-01",
+          "from": "graph-scene-09-node-01",
+          "to": "graph-scene-09-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-09-edge-02",
+          "from": "graph-scene-09-node-02",
+          "to": "graph-scene-09-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-09-state-01",
+          "cueIds": [
+            "cue-021"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-09-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-09-state-02",
+          "cueIds": [
+            "cue-022"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-09-node-01",
+            "graph-scene-09-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-09-edge-01"
+          ]
+        },
+        {
+          "id": "graph-scene-09-state-03",
+          "cueIds": [
+            "cue-023"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-09-node-01",
+            "graph-scene-09-node-02",
+            "graph-scene-09-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-09-edge-01",
+            "graph-scene-09-edge-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-09-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-scene-10",
+      "sceneId": "scene-10",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-024",
+        "cue-025",
+        "cue-026"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-10-node-01",
+          "label": "但危险在于，有些人进一步误解为，",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-024"
+          ]
+        },
+        {
+          "id": "graph-scene-10-node-02",
+          "label": "不能，最后只是一种自欺欺人。",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-025"
+          ]
+        },
+        {
+          "id": "graph-scene-10-node-03",
+          "label": "第五点，真正的智能体至少要能回答一些",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-026"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-10-edge-01",
+          "from": "graph-scene-10-node-01",
+          "to": "graph-scene-10-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-10-edge-02",
+          "from": "graph-scene-10-node-02",
+          "to": "graph-scene-10-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-10-state-01",
+          "cueIds": [
+            "cue-024"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-10-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-10-state-02",
+          "cueIds": [
+            "cue-025"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-10-node-01",
+            "graph-scene-10-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-10-edge-01"
+          ]
+        },
+        {
+          "id": "graph-scene-10-state-03",
+          "cueIds": [
+            "cue-026"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-10-node-01",
+            "graph-scene-10-node-02",
+            "graph-scene-10-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-10-edge-01",
+            "graph-scene-10-edge-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-10-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    },
+    {
+      "id": "graph-scene-13",
+      "sceneId": "scene-13",
+      "kind": "process",
+      "sourceCueIds": [
+        "cue-033",
+        "cue-034",
+        "cue-035"
+      ],
+      "nodes": [
+        {
+          "id": "graph-scene-13-node-01",
+          "label": "有没有日志、监控、测试、回滚机制？",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-033"
+          ]
+        },
+        {
+          "id": "graph-scene-13-node-02",
+          "label": "它的成本是否可控？",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-034"
+          ]
+        },
+        {
+          "id": "graph-scene-13-node-03",
+          "label": "最后，它能不能被别人去维护？",
+          "textType": "exact-source",
+          "sourceCueIds": [
+            "cue-035"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "graph-scene-13-edge-01",
+          "from": "graph-scene-13-node-01",
+          "to": "graph-scene-13-node-02",
+          "relation": "next"
+        },
+        {
+          "id": "graph-scene-13-edge-02",
+          "from": "graph-scene-13-node-02",
+          "to": "graph-scene-13-node-03",
+          "relation": "next"
+        }
+      ],
+      "states": [
+        {
+          "id": "graph-scene-13-state-01",
+          "cueIds": [
+            "cue-033"
+          ],
+          "operation": "replace",
+          "activeNodeIds": [
+            "graph-scene-13-node-01"
+          ],
+          "activeEdgeIds": []
+        },
+        {
+          "id": "graph-scene-13-state-02",
+          "cueIds": [
+            "cue-034"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-13-node-01",
+            "graph-scene-13-node-02"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-13-edge-01"
+          ]
+        },
+        {
+          "id": "graph-scene-13-state-03",
+          "cueIds": [
+            "cue-035"
+          ],
+          "operation": "compact",
+          "activeNodeIds": [
+            "graph-scene-13-node-01",
+            "graph-scene-13-node-02",
+            "graph-scene-13-node-03"
+          ],
+          "activeEdgeIds": [
+            "graph-scene-13-edge-01",
+            "graph-scene-13-edge-02"
+          ]
+        }
+      ],
+      "terminalStateId": "graph-scene-13-state-03",
+      "motionRules": [
+        "svg-path-draw",
+        "viewport-change"
+      ]
+    }
+  ],
+  "provenance": {
+    "mode": "deterministic-baseline",
+    "generator": "workflow-console/lib/deterministic-planning.mjs",
+    "generatorVersion": "1.0.0",
+    "reason": "No reviewed formal planning bundle existed; generated the canonical content-independent baseline before optional enrichment.",
+    "contentIndependent": true,
+    "policies": {
+      "exactSourceScreenText": true,
+      "everyCueExactlyOnce": true,
+      "maxCuesPerScene": 3,
+      "targetSceneSeconds": 18,
+      "numericClaimsAsCharts": false,
+      "llmEnrichmentOptional": true
+    }
+  }
+}

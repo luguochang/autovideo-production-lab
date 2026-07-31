@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family:"Noto Sans SC Variable"; src:local("Noto Sans SC Variable"), local("Noto Sans SC"); font-weight:100 900; }
+        @font-face { font-family:"Microsoft YaHei"; src:local("Microsoft YaHei"); }
+        #root { position:absolute; inset:0; width:1920px; height:1080px; overflow:hidden; color:#2A211B; font-family:"Noto Sans SC Variable", "Microsoft YaHei", sans-serif; }
+        .stage-fill { position:absolute; inset:0; width:1920px; height:1080px; overflow:hidden; background:#F2DFC7; }
+        .world { position:absolute; inset:0; width:1920px; height:1080px; transform-origin:50% 50%; will-change:transform; }
+        .ambient-orbit { position:absolute; left:-210px; top:94px; width:810px; height:810px; border:2px solid #DCC2A3; border-radius:50%; opacity:.62; }
+        .ambient-rule { position:absolute; left:694px; top:874px; width:1130px; height:3px; background:#496958; opacity:.55; transform-origin:0 50%; }
+        .host-wrap { position:absolute; left:96px; top:156px; width:600px; height:730px; overflow:hidden; z-index:4; transform-origin:50% 100%; will-change:transform,opacity; }
+        .host-wrap img { display:block; width:600px; height:730px; object-fit:contain; object-position:50% 100%; transform:scale(1); transform-origin:50% 0; }
+        .content-zone { position:absolute; left:694px; top:112px; width:1130px; height:760px; overflow:hidden; z-index:5; }
+        .eyebrow { position:absolute; left:0; top:0; height:38px; color:#675748; font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:700; line-height:38px; }
+        .eyebrow::before { content:""; display:inline-block; width:50px; height:4px; margin-right:16px; vertical-align:5px; background:#496958; }
+        .heading { position:absolute; left:0; top:42px; width:1130px; height:210px; padding-top:18px; overflow:hidden; color:#2A211B; font-size:72px; font-weight:800; line-height:1.12; letter-spacing:0; }
+        .state-stage { position:absolute; left:0; top:270px; width:1130px; height:456px; overflow:hidden; }
+        .state { position:absolute; inset:0; width:100%; height:100%; opacity:0; transform-origin:50% 50%; overflow:hidden; }
+        .state-focus { display:flex; align-items:center; padding:24px 28px 58px 0; }
+        .focus-rule { flex:0 0 auto; width:10px; height:214px; margin-right:38px; background:#496958; }
+        .state-text { max-width:calc(100% - 70px); color:#2A211B; font-weight:800; line-height:1.15; letter-spacing:0; overflow-wrap:anywhere; }
+        .claim-label { position:absolute; left:48px; bottom:42px; min-width:270px; height:42px; padding:0 18px; border:2px solid #A94E36; border-radius:6px; color:#A94E36; font-size:20px; font-weight:700; line-height:38px; }
+        .state-meta { position:absolute; right:10px; bottom:6px; color:#675748; font-family:"JetBrains Mono",monospace; font-size:17px; font-weight:700; }
+        .state-compare { display:grid; grid-template-columns:1fr 3px 1fr; gap:30px; align-items:center; padding:18px 8px 52px; }
+        .compare-divider { width:3px; height:260px; background:#DCC2A3; }
+        .compare-side { min-width:0; display:flex; flex-direction:column; gap:20px; }
+        .compare-side strong { color:#2A211B; font-size:42px; font-weight:800; line-height:1.2; overflow-wrap:anywhere; }
+        .compare-after strong { color:#496958; }
+        .compare-kicker { color:#675748; font-family:"JetBrains Mono",monospace; font-size:18px; font-weight:700; }
+        .graph-state { padding:10px 0 52px; }
+        .graph-connector { position:absolute; left:0; top:20px; width:100%; height:390px; overflow:visible; }
+        .graph-connector path { fill:none; stroke:#496958; stroke-width:7; stroke-linecap:round; stroke-dasharray:100; stroke-dashoffset:100; }
+        .graph-nodes { position:absolute; left:18px; right:18px; top:126px; height:190px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+        .graph-node { position:relative; flex:1 1 0; min-width:0; height:164px; padding:34px 22px 20px; border:3px solid #496958; border-radius:8px; background:#FBF3E7; box-shadow:0 12px 32px rgba(73,105,88,.12); display:flex; align-items:center; justify-content:center; text-align:center; }
+        .graph-node strong { color:#2A211B; font-size:28px; font-weight:800; line-height:1.22; overflow-wrap:anywhere; }
+        .node-index { position:absolute; left:16px; top:12px; color:#A94E36; font-family:"JetBrains Mono",monospace; font-size:17px; font-weight:700; }
+        .graph-count-1 .graph-node { max-width:440px; margin:0 auto; }
+        .state-close { padding:10px 0 54px; display:flex; flex-direction:column; justify-content:center; gap:38px; }
+        .value-terms { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+        .value-terms span { height:92px; display:flex; align-items:center; justify-content:center; border-bottom:7px solid #496958; color:#2A211B; font-size:42px; font-weight:800; }
+        .close-route { color:#496958; font-size:54px; font-weight:800; line-height:1.16; }
+      </style>
+      <div data-hf-id="scene-01-root" id="root" data-composition-id="scene-01" data-width="1920" data-height="1080" data-duration="5.48">
+        <div data-hf-id="scene-01-stage" id="scene-01-stage" class="stage-fill" data-role="stage" data-zone="stage">
+          <div data-hf-id="scene-01-world" id="scene-01-world" class="world" data-layout-allow-overflow="viewport-change">
+            <div data-hf-id="scene-01-ambient-orbit" class="ambient-orbit" data-role="ambient-structure" data-zone="stage" data-layout-ignore aria-hidden="true"></div>
+            <div data-hf-id="scene-01-ambient-rule" id="scene-01-ambient-rule" class="ambient-rule" data-role="ambient-structure" data-zone="stage" data-layout-ignore aria-hidden="true"></div>
+            <div data-hf-id="scene-01-host-wrap" id="scene-01-host-wrap" class="host-wrap" data-role="host" data-zone="host.left">
+              <img data-hf-id="scene-01-host-image" id="scene-01-host-image" src="./assets/host/emphasis.png" alt="" data-pose-id="emphasis" data-layout-allow-overflow="normalized pose crop" />
+            </div>
+            <div data-hf-id="scene-01-content-zone" id="scene-01-content-zone" class="content-zone" data-role="content" data-zone="content.right">
+              <div data-hf-id="scene-01-eyebrow" id="scene-01-eyebrow" class="eyebrow">SCENE 01 / HOOK</div>
+              <div data-hf-id="scene-01-heading" id="scene-01-heading" class="heading" data-role="headline">敬畏与辨别</div>
+              <div data-hf-id="scene-01-state-stage" class="state-stage" data-role="state-stage">
+      <div data-hf-id="scene-01-state-01" id="scene-01-state-01" class="state state-focus" data-state-id="scene-01-state-01" data-operation="enter" data-source-cues="cue-001">
+        <div data-hf-id="scene-01-state-01-focus-rule" class="focus-rule" aria-hidden="true"></div>
+        <div data-hf-id="scene-01-state-01-text" class="state-text" style="font-size:70px">对AI技术一定要有敬畏之心</div>
+        
+        <div data-hf-id="scene-01-state-01-meta" class="state-meta">cue-001 · exact-source</div>
+      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+      const sceneDuration = 5.48;
+      const world = document.getElementById("scene-01-world");
+      const cam = { scale: 1, x: 0, y: 0 };
+      const applyCamera = () => { world.style.transform = `translate(${cam.x}px, ${cam.y}px) scale(${cam.scale})`; };
+      applyCamera();
+      tl.fromTo("#scene-01-host-wrap", { opacity: 0, x: -34, scale: 0.985 }, { opacity: 1, x: 0, scale: 1, duration: 0.62, ease: "power4.out" }, 0.12);
+      tl.fromTo("#scene-01-eyebrow", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 0.2);
+      tl.fromTo("#scene-01-heading", { opacity: 0, x: 38 }, { opacity: 1, x: 0, duration: 0.62, ease: "power4.out" }, 0.24);
+      tl.fromTo("#scene-01-ambient-rule", { scaleX: 0.78 }, { scaleX: 1, duration: Math.max(1, sceneDuration - 0.3), ease: "none" }, 0.15);
+      tl.to(cam, { scale: 1.012, x: 4, duration: Math.max(1, sceneDuration - 0.45), ease: "sine.inOut", onUpdate: applyCamera }, 0.3);
+      tl.to("#scene-01-host-wrap", { y: -5, duration: Math.max(1, sceneDuration - 0.55), ease: "sine.inOut" }, 0.35);
+      tl.fromTo("#scene-01-state-01", { opacity: 0, scale: 0.965, x: 18 }, { opacity: 1, scale: 1, x: 0, duration: 0.42, ease: "power3.out" }, 0.384);
+      window.__timelines["scene-01"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "autovideo-alignment-validation/v1",
+  "generatedAt": "2026-07-22T12:00:14.277071+00:00",
+  "status": "passed",
+  "inputs": {
+    "alignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\alignment.json",
+    "alignmentSha256": "61a2a44b525e96bda85de0e26e57a00c7b6cbb263c582974c44d0854c47d965e",
+    "asrAlignment": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\alignment.asr.json",
+    "asrAlignmentSha256": "6ac012a98fb7009d6a88ebcc3d4b87d87ad43ca9548164f8e123cc1c3a9fcfff",
+    "narration": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\input\\script.approved.txt",
+    "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+    "narrationLock": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\NarrationLock.json",
+    "audio": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\narration.final.wav",
+    "audioSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+    "audioDurationSeconds": 31.807896
+  },
+  "textPolicy": {
+    "downstreamTextSource": "alignment.cues",
+    "rawAsrTranscriptField": "alignment.transcriptText",
+    "rawAsrTranscriptRole": "evidence-only",
+    "rawAsrTranscriptDownstreamConsumable": false
+  },
+  "checks": {
+    "hashesBound": true,
+    "wordTimeline": {
+      "count": 158,
+      "firstStartSeconds": 0.0,
+      "lastEndSeconds": 31.808,
+      "overlapCount": 1,
+      "gapCount": 4,
+      "gaps": [
+        {
+          "beforeIndex": 2,
+          "startSeconds": 0.24,
+          "endSeconds": 0.76,
+          "durationSeconds": 0.52
+        },
+        {
+          "beforeIndex": 15,
+          "startSeconds": 3.98,
+          "endSeconds": 4.16,
+          "durationSeconds": 0.18
+        },
+        {
+          "beforeIndex": 128,
+          "startSeconds": 25.88,
+          "endSeconds": 26.22,
+          "durationSeconds": 0.34
+        },
+        {
+          "beforeIndex": 131,
+          "startSeconds": 26.72,
+          "endSeconds": 26.94,
+          "durationSeconds": 0.22
+        }
+      ],
+      "maxGapSeconds": 0.52,
+      "monotonic": true
+    },
+    "cueTimeline": {
+      "count": 6,
+      "firstStartSeconds": 0.0,
+      "lastEndSeconds": 31.808,
+      "overlapCount": 0,
+      "gapCount": 0,
+      "gaps": [],
+      "maxGapSeconds": 0.0,
+      "monotonic": true
+    },
+    "cueWordBindings": {
+      "policy": "gaps-allowed-only-when-no-aligned-character-is-skipped",
+      "reviewScope": "technical-only/internal-only",
+      "humanListening": "not-performed",
+      "passed": true,
+      "bindings": [
+        {
+          "id": "cue-001",
+          "firstWordIndex": 0,
+          "lastWordIndex": 14,
+          "firstWordStartSeconds": 0.0,
+          "lastWordEndSeconds": 3.98,
+          "passed": true
+        },
+        {
+          "id": "cue-002",
+          "firstWordIndex": 15,
+          "lastWordIndex": 59,
+          "firstWordStartSeconds": 4.16,
+          "lastWordEndSeconds": 12.82,
+          "passed": true
+        },
+        {
+          "id": "cue-003",
+          "firstWordIndex": 60,
+          "lastWordIndex": 75,
+          "firstWordStartSeconds": 12.82,
+          "lastWordEndSeconds": 16.06,
+          "passed": true
+        },
+        {
+          "id": "cue-004",
+          "firstWordIndex": 76,
+          "lastWordIndex": 103,
+          "firstWordStartSeconds": 16.06,
+          "lastWordEndSeconds": 20.82,
+          "passed": true
+        },
+        {
+          "id": "cue-005",
+          "firstWordIndex": 104,
+          "lastWordIndex": 145,
+          "firstWordStartSeconds": 20.82,
+          "lastWordEndSeconds": 29.66,
+          "passed": true
+        },
+        {
+          "id": "cue-006",
+          "firstWordIndex": 146,
+          "lastWordIndex": 157,
+          "firstWordStartSeconds": 29.66,
+          "lastWordEndSeconds": 31.808,
+          "passed": true
+        }
+      ]
+    },
+    "wordTextReconstructsNarrationLock": true,
+    "cueTextReconstructsNarrationLock": true,
+    "cueCps": {
+      "thresholdCps": 15.0,
+      "maximumCps": 6.513,
+      "passed": true,
+      "cues": [
+        {
+          "id": "cue-001",
+          "characters": 17,
+          "durationSeconds": 3.98,
+          "cps": 4.271,
+          "passed": true
+        },
+        {
+          "id": "cue-002",
+          "characters": 52,
+          "durationSeconds": 8.84,
+          "cps": 5.882,
+          "passed": true
+        },
+        {
+          "id": "cue-003",
+          "characters": 18,
+          "durationSeconds": 3.24,
+          "cps": 5.556,
+          "passed": true
+        },
+        {
+          "id": "cue-004",
+          "characters": 31,
+          "durationSeconds": 4.76,
+          "cps": 6.513,
+          "passed": true
+        },
+        {
+          "id": "cue-005",
+          "characters": 49,
+          "durationSeconds": 8.84,
+          "cps": 5.543,
+          "passed": true
+        },
+        {
+          "id": "cue-006",
+          "characters": 13,
+          "durationSeconds": 2.148,
+          "cps": 6.052,
+          "passed": true
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "srt": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\captions\\narration.zh-CN.srt",
+    "srtSha256": "0c7bbf10a9f0be181e160d5e9313a9b6ce5d63c67f86604936f97593d7284d8a",
+    "cueCount": 6,
+    "source": "alignment.cues (NarrationLock exact text)"
+  }
+}

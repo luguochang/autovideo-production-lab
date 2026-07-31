@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "evidence-pivot",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E17-evidence-pivot-click-probe",
+    "path": "experiments/E17-evidence-pivot-click-probe",
+    "durationSeconds": 8,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E17-evidence-pivot-click-probe/INVARIANT_AUDIT.json",
+        "sha256": "278208759615e938854700032e41a2f6bd12294d403123a7486348db9d814708"
+      },
+      "passed": true,
+      "checks": {
+        "landscape16x9": true,
+        "lightApricotBackground": true,
+        "qVersionHostAssets": true,
+        "hostLeft": true,
+        "contentRight": true,
+        "captionPersistent": true,
+        "contentWorldOnlyCamera": true
+      }
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E17-evidence-pivot-click-probe/AssetManifest.json",
+      "sha256": "8cebf203c07cbe64e0de13d360adc9e3efe2ac8af2473726bb6b9922e208b1d6"
+    },
+    "stills": [
+      {
+        "path": "experiments/E17-evidence-pivot-click-probe/snapshots/frame-02-at-3.1s.png",
+        "sha256": "71299aadfac7ac3959bd461e9c9a9c21d605eeeef84e64605e14668f47d93241"
+      },
+      {
+        "path": "experiments/E17-evidence-pivot-click-probe/snapshots/frame-05-at-6.4s.png",
+        "sha256": "7cdcf9b67a7e5b675737c012ba49a94d9d409eb5fea06a07f0228bb07c05b2fc"
+      },
+      {
+        "path": "experiments/E17-evidence-pivot-click-probe/snapshots/frame-07-at-7.7s.png",
+        "sha256": "df8332fcad4272abb8d26d6ca213daffa4cba494062cdf8dd38642e9844553e6"
+      },
+      {
+        "path": "experiments/E17-evidence-pivot-click-probe/snapshots/contact-sheet.jpg",
+        "sha256": "3524cb1883cff9bf24e1d36e72b199faba7b73114532975f6d6b296706141706"
+      }
+    ],
+    "motionProbe": {
+      "path": "experiments/E17-evidence-pivot-click-probe/renders/evidence-pivot-click-probe.mp4",
+      "sha256": "754f5f304fb9bc7b3c30ea47907521034e7423f11388088acc20018bf5d66afd"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E17-evidence-pivot-click-probe/check.strict.log",
+        "sha256": "565c1b4fa6489d4765ea9bb0587bbeec24a694c61751e57e4e4c9ccc799f82e5"
+      },
+      "ok": true,
+      "strict": true,
+      "snapshotsEnabled": true,
+      "findingCount": 0,
+      "version": "0.7.64"
+    },
+    "visualReview": null,
+    "officialReuseObserved": [
+      {
+        "kind": "official-registry",
+        "id": "parallax-unzoom",
+        "implementation": {
+          "path": "experiments/E17-evidence-pivot-click-probe/compositions/components/parallax-unzoom.html",
+          "sha256": "0b98917fe6b89bcc054a6f3d33f42d837323e023b87cd2cd6fb15b8ab8284a20"
+        }
+      },
+      {
+        "kind": "official-motion-rule",
+        "id": "cursor-click-ripple",
+        "implementation": {
+          "path": "experiments/E17-evidence-pivot-click-probe/index.html",
+          "sha256": "6d4a77aea32eb5d9206ff00fe481b7dabcf3e21a6309ed043dd3951a9c813cc9"
+        }
+      }
+    ]
+  }
+}

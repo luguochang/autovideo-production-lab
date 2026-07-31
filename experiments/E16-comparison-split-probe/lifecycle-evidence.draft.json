@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "autovideo-motion-recipe-lifecycle-evidence/v1",
+  "recipeId": "comparison-split",
+  "recipeVersion": "1.0.0",
+  "requestedState": "probe-passed",
+  "effectiveState": "candidate",
+  "outcome": "blocked-pending-human-visual-review",
+  "applyExecuted": false,
+  "probe": {
+    "kind": "motion-probe",
+    "projectId": "E16-comparison-split-probe",
+    "path": "experiments/E16-comparison-split-probe",
+    "durationSeconds": 6,
+    "sameNarrationWindow": true,
+    "narrationSha256": "30ca17f6327b947f1abb990162c65a81e07cf25421b8b74f33bf3c79bd9b0e4c",
+    "audioSha256": "cf6f008124dd10bd4f7aafe97f3b7807400fc2e3775a52bccd122b80955d33c1",
+    "invariants": {
+      "baseStyleId": "modern-ip-host-explainer",
+      "baseStyleVersion": "1.0.0",
+      "paletteId": "light-apricot",
+      "background": "#F2DFC7",
+      "hostZone": "host.left",
+      "contentZone": "content.right",
+      "captionZone": "caption",
+      "cameraScope": "content-world-only",
+      "hostReplacementAllowed": false,
+      "paletteReplacementAllowed": false,
+      "stateCount": 2
+    },
+    "invariantAudit": {
+      "binding": {
+        "path": "experiments/E16-comparison-split-probe/INVARIANT_AUDIT.json",
+        "sha256": "cd3da9439b8fbf3e93a84a9ead7af8d3f4bdf2cb59e10083afbb19a6f7f94f7a"
+      },
+      "passed": true
+    },
+    "hostAssetManifest": {
+      "path": "experiments/E16-comparison-split-probe/AssetManifest.json",
+      "sha256": "f68e9ace6e5e467da7c97d94f9d4eeff5a7bd3fa6aa26b8133d9f09dbe680a78"
+    },
+    "officialReuse": {
+      "path": "experiments/E16-comparison-split-probe/official-reuse-receipt.json",
+      "sha256": "56bb3955532fae79232057a01037848ecb2194b3daec3d9b4fab42584ac76b61",
+      "sources": ["comparison-split", "split-tilt-cards", "scale-swap-transition"]
+    },
+    "stills": [
+      {"path": "experiments/E16-comparison-split-probe/snapshots/frame-04-at-4.44s.png", "sha256": "5c035c55bcc7d7b11d19f54eb44857bd33895c67e36045fd170cc391a10d45f1"},
+      {"path": "experiments/E16-comparison-split-probe/snapshots/frame-05-at-5.25s.png", "sha256": "331d6cd4c4b6297ddc4c01fb7eaf1bdb5d78a10a490251bc4b8c6b6ac04ae18b"},
+      {"path": "experiments/E16-comparison-split-probe/snapshots/contact-sheet.jpg", "sha256": "5f51081ebf0f29a68ec693922f86e1da9f05c69772eca0622dc56574c2c2e827"}
+    ],
+    "motionProbe": {
+      "path": "experiments/E16-comparison-split-probe/renders/comparison-split-probe.mp4",
+      "sha256": "d944be05863effa00b1f55f7f630b074bc80c90ffd0be822aa9e41973000718c",
+      "videoStream": {"width": 1920, "height": 1080, "fps": 30, "frames": 180, "durationSeconds": 6},
+      "containerDurationSeconds": 6.016,
+      "scope": "internal-review"
+    },
+    "renderQa": {
+      "path": "experiments/E16-comparison-split-probe/RENDER_QA.json",
+      "sha256": "40a21903c9065c4831c5be1c3ba42daf42376a0bad2de409e80cdff7403811ba",
+      "fullDecodePassed": true,
+      "frameInspectionPassed": true,
+      "publicReleaseApproved": false
+    },
+    "keyframes": {
+      "jsonPath": "experiments/E16-comparison-split-probe/keyframes.capture.json",
+      "jsonSha256": "b4dbdb543702767ecb036d92789b1c82d7e31fa6509960c3a04cbe0166e72d2e",
+      "shotPath": "experiments/E16-comparison-split-probe/review/keyframes/comparison-strip.png",
+      "shotSha256": "674831a8362d197550553dc659110033c584e3fd0d695a86d179194837edb0bb"
+    },
+    "hyperframesCheck": {
+      "binding": {
+        "path": "experiments/E16-comparison-split-probe/check.capture.log",
+        "sha256": "6deb18026322920d239f7995e0c8121499d2533e7576edc28dcd4a25878b9bdb"
+      },
+      "ok": true,
+      "strict": true,
+      "findingCount": 0,
+      "layoutSamples": 111,
+      "contrastChecks": 56,
+      "version": "0.7.64"
+    },
+    "upgradeCheck": {
+      "path": "experiments/E16-comparison-split-probe/upgrade-check.log",
+      "sha256": "d29a1be3f3d6b60dc8689ad8d61d3b2b98cd179c71466d24aa081ada2196b41e",
+      "from": "0.7.64",
+      "to": "0.7.64",
+      "updateAvailable": false
+    },
+    "visualReview": null
+  },
+  "gateResults": [
+    {"id": "probe.kind", "passed": true, "details": "motion-probe"},
+    {"id": "probe.duration", "passed": true, "details": {"duration": 6, "minimum": 3, "maximum": 8}},
+    {"id": "probe.same-narration-window", "passed": true, "details": true},
+    {"id": "probe.invariants", "passed": true},
+    {"id": "probe.invariant-audit", "passed": true},
+    {"id": "probe.host-assets", "passed": true},
+    {"id": "probe.official-reuse", "passed": true},
+    {"id": "probe.hyperframes-check", "passed": true, "details": {"strict": true, "findingCount": 0}},
+    {"id": "probe.visual-review", "passed": false, "details": null}
+  ],
+  "blockedReasons": ["missing-visual-review"]
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "autovideo-probe-source-receipt/v1",
+  "projectId": "E17-data-proof-probe",
+  "recipe": {
+    "id": "data-proof",
+    "version": "1.0.0",
+    "status": "candidate"
+  },
+  "composition": {
+    "path": "index.html",
+    "sha256": "d7af4e6f88cf9e475977b3ab5c50e7fea4fb25cf691037033dc0d95454b21896"
+  },
+  "officialSources": [
+    {
+      "id": "hyperframes-official-data-chart",
+      "kind": "official-registry-block",
+      "registryName": "data-chart",
+      "path": "vendor/hyperframes/registry/blocks/data-chart/data-chart.html",
+      "sha256": "02ccb24bfa21850d19c2842853256a3c47d5fd25dc746d6b99986bef268bf027",
+      "registryItemPath": "vendor/hyperframes/registry/blocks/data-chart/registry-item.json",
+      "registryItemSha256": "606685b75bd4755e45d816fbfc5221f95cbdb5d7d32b51cd0c3a03921143f4e0",
+      "provider": "HyperFrames official registry",
+      "license": "Apache-2.0",
+      "borrowedContract": "bounded chart surface, semantic metric values, source/disclaimer footer"
+    },
+    {
+      "id": "hyperframes-official-stat-bars-and-fills",
+      "kind": "official-motion-rule",
+      "ruleName": "stat-bars-and-fills",
+      "path": "vendor/hyperframes/skills/hyperframes-animation/rules/stat-bars-and-fills.md",
+      "sha256": "9ba06916fe29e05d6b0b2aaccd1f571513153cf4b10170975bfa66fca22a3bcb",
+      "provider": "HyperFrames official animation skill",
+      "license": "Apache-2.0",
+      "borrowedContract": "fixed bar geometry with transform-origin bottom and scaleY reveal"
+    }
+  ],
+  "localAssets": [
+    {
+      "id": "host-present-transparent",
+      "path": ".media/images/image_001.png",
+      "sha256": "83c711bf5729bc8361468de1a9c9c3b02416891b521aa0e6bb056f7a801895be",
+      "source": "experiments/E15-diagram-build-probe/.media/images/image_001.png",
+      "license": "derived from user-provided asset; publication rights not implied",
+      "purpose": "fixed Q-version presenter in host.left"
+    },
+    {
+      "id": "narration-window",
+      "path": ".media/audio/voice/voice_001.wav",
+      "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+      "source": "experiments/E15-diagram-build-probe/.media/audio/voice/voice_001.wav",
+      "license": "project-local generated narration; internal probe only",
+      "purpose": "immutable 0-8 second NarrationLock window"
+    },
+    {
+      "id": "gsap-runtime",
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "source": "experiments/E15-diagram-build-probe/assets/runtime/gsap.min.js",
+      "provider": "GSAP 3.14.2",
+      "license": "GreenSock standard license"
+    }
+  ],
+  "adaptationEvidence": [
+    {
+      "source": "hyperframes-official-data-chart",
+      "implementationSelectors": ["#chart-area", "#chart-source", "#chart-disclaimer"],
+      "projectSpecificChanges": [
+        "reduced the chart to structural layers 1, 2 and 3 rather than an external KPI",
+        "kept chart camera inside content.right so the host and caption rail remain invariant",
+        "added a measured SVG trend path to connect the three layers"
+      ]
+    },
+    {
+      "source": "hyperframes-official-stat-bars-and-fills",
+      "implementationSelectors": ["#bar-entry", "#bar-context", "#bar-tools"],
+      "timelineEvidence": [
+        "bottom-anchored scaleY reveals enter in narration order",
+        "focus uses opacity dimming, a beacon and ring; no bar enlargement that can cover labels"
+      ]
+    }
+  ],
+  "scope": {
+    "host": "fixed host.left; one existing Q-version presenter image",
+    "content": "data proof and content-only camera inside content.right",
+    "caption": "persistent fixed caption rail outside content camera",
+    "networkRuntimeAssets": false
+  },
+  "promotion": {
+    "lifecycleApplyExecuted": false,
+    "promoted": false,
+    "humanReview": "pending"
+  }
+}

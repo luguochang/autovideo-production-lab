@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "autovideo-project-state/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "stage": "internal-delivery-ready",
+  "createdAt": "2026-07-19T06:28:50.465Z",
+  "updatedAt": "2026-07-19T08:23:00.161Z",
+  "inputs": {
+    "narration": "input/narration.txt",
+    "referenceImage": null,
+    "ratio": "16:9",
+    "targetDuration": "275s",
+    "platform": "抖音",
+    "audience": "AI 学习者与知识视频观众",
+    "rememberedOutcome": "理解会搭工作流不等于具备可维护的 AI 系统能力",
+    "forbiddenTreatments": null,
+    "template": {
+      "id": "modern-ip-host-explainer",
+      "version": "1.0.0",
+      "palette": "light-apricot",
+      "lock": "template-lock.json"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T06:55:30.303Z"
+    },
+    "style": {
+      "status": "approved",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T06:55:30.398Z",
+      "reviewMode": "still-and-motion-probe",
+      "skippedReason": null
+    },
+    "finalPreview": {
+      "status": "approved-internal-only",
+      "approvedBy": "codex-autonomous-internal-review",
+      "approvedAt": "2026-07-19T08:07:02.585Z",
+      "approvalScope": "internal-autonomous-review",
+      "publicReleaseBlocked": true,
+      "compositionDigest": "bc3d9612c5f79e9c008c9b7034cc44e70974eef5cda38c69ff82b9f68d0b85c6",
+      "compositionFileCount": 50,
+      "checkEvidence": "workflow-console/data/projects/demotext-standard-delivery-v3/artifacts/qa-review/report.json",
+      "notes": "Internal review only. This does not represent user approval or public-release clearance."
+    },
+    "deliveryQa": {
+      "status": "passed-internal-only",
+      "checkedAt": "2026-07-19T08:22:59.952Z",
+      "report": "qa/delivery-report.json",
+      "outputSha256": "81fc1e8dfaff63e1cb09b32928b1c438b3ebe88bcbf2b1d2ef1697774cdd3829",
+      "publicReleaseBlocked": true
+    }
+  },
+  "nextAction": "Resolve the release blockers in qa/report.json. The current package remains available for internal review only.",
+  "handoffs": {
+    "audio": {
+      "status": "approved",
+      "rightsStatus": "needs-review",
+      "approvalScope": "technical-only",
+      "humanListeningStatus": "not-performed",
+      "publicReleaseBlocked": true,
+      "lock": "audio-handoff.json",
+      "durationSeconds": 242.904042
+    }
+  },
+  "invalidations": [
+    {
+      "at": "2026-07-19T06:33:16.284Z",
+      "reason": "Final audio or alignment replaced",
+      "invalidates": [
+        "captions",
+        "scene durations",
+        "motion cues",
+        "render QA"
+      ]
+    }
+  ],
+  "deliveries": {
+    "internalReview": {
+      "status": "ready",
+      "video": "renders/demotext-standard-delivery-v3-internal-review.mp4",
+      "cover": "renders/demotext-standard-delivery-v3-cover.png",
+      "manifest": "delivery/delivery-manifest.json",
+      "outputSha256": "81fc1e8dfaff63e1cb09b32928b1c438b3ebe88bcbf2b1d2ef1697774cdd3829"
+    }
+  }
+}

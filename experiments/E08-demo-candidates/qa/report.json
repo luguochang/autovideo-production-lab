@@ -1,0 +1,520 @@
+{
+  "schemaVersion": "demo-candidates-qa/v1",
+  "verifiedAt": "2026-07-16T04:00:48.276Z",
+  "source": {
+    "path": "demo/demoText.txt",
+    "sha256": "92334cb2a8231d77a5e7d138775d020d8427463fd1fd3b844c8ed0aa2b96620c",
+    "voice": "zh-CN-YunxiNeural",
+    "rate": 1.08,
+    "duration": 274.394667,
+    "checks": {
+      "narrationTextExact": true,
+      "sentenceTextExactIgnoringParagraphBreaks": true,
+      "chapterCount": true,
+      "sentenceCount": true,
+      "captionCount": true,
+      "captionOverlapBounded": true
+    },
+    "captionOverlaps": [
+      {
+        "index": 2,
+        "seconds": 0.05,
+        "previous": "心，也希望大家擦亮双眼。",
+        "current": "这个市场上有无数所谓的AI、Coze、"
+      }
+    ]
+  },
+  "render": {
+    "expectedDuration": 274.995,
+    "expectedFrames": 8250,
+    "videos": [
+      {
+        "name": "A-system-map",
+        "path": "renders/final/A-system-map.mp4",
+        "bytes": 14101476,
+        "duration": 275,
+        "video": {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280,
+          "r_frame_rate": "30/1",
+          "nb_frames": "8250"
+        },
+        "audio": {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "nb_frames": "12887"
+        },
+        "blackSegments": [],
+        "maxTransitionLumaDelta": 2.723,
+        "transitionTriplets": [
+          {
+            "chapter": 2,
+            "values": [
+              197.733,
+              197.137,
+              198.683
+            ],
+            "maxDelta": 1.546
+          },
+          {
+            "chapter": 3,
+            "values": [
+              197.753,
+              197.086,
+              198.494
+            ],
+            "maxDelta": 1.408
+          },
+          {
+            "chapter": 4,
+            "values": [
+              196.265,
+              196.026,
+              197.687
+            ],
+            "maxDelta": 1.661
+          },
+          {
+            "chapter": 5,
+            "values": [
+              196.342,
+              196.045,
+              198.034
+            ],
+            "maxDelta": 1.989
+          },
+          {
+            "chapter": 6,
+            "values": [
+              197.121,
+              196.262,
+              198.701
+            ],
+            "maxDelta": 2.439
+          },
+          {
+            "chapter": 7,
+            "values": [
+              196.713,
+              195.3,
+              197.915
+            ],
+            "maxDelta": 2.615
+          },
+          {
+            "chapter": 8,
+            "values": [
+              196.953,
+              196.127,
+              198.202
+            ],
+            "maxDelta": 2.075
+          },
+          {
+            "chapter": 9,
+            "values": [
+              196.094,
+              196.236,
+              198.136
+            ],
+            "maxDelta": 1.9
+          },
+          {
+            "chapter": 10,
+            "values": [
+              196.687,
+              195.464,
+              198.187
+            ],
+            "maxDelta": 2.723
+          },
+          {
+            "chapter": 11,
+            "values": [
+              197.501,
+              196.363,
+              197.632
+            ],
+            "maxDelta": 1.269
+          },
+          {
+            "chapter": 12,
+            "values": [
+              196.266,
+              195.703,
+              197.997
+            ],
+            "maxDelta": 2.294
+          },
+          {
+            "chapter": 13,
+            "values": [
+              195.905,
+              195.545,
+              197.817
+            ],
+            "maxDelta": 2.272
+          },
+          {
+            "chapter": 14,
+            "values": [
+              196.144,
+              195.883,
+              197.626
+            ],
+            "maxDelta": 1.743
+          }
+        ],
+        "checks": {
+          "h264": true,
+          "aac": true,
+          "dimensions": true,
+          "fps": true,
+          "frameCount": true,
+          "audioRate": true,
+          "duration": true,
+          "blackFrames": true,
+          "transitionLuma": true,
+          "fullDecode": true
+        },
+        "ok": true
+      },
+      {
+        "name": "B-whiteboard-mindmap",
+        "path": "renders/final/B-whiteboard-mindmap.mp4",
+        "bytes": 14164254,
+        "duration": 275,
+        "video": {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280,
+          "r_frame_rate": "30/1",
+          "nb_frames": "8250"
+        },
+        "audio": {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "nb_frames": "12887"
+        },
+        "blackSegments": [],
+        "maxTransitionLumaDelta": 2.723,
+        "transitionTriplets": [
+          {
+            "chapter": 2,
+            "values": [
+              200.005,
+              199.391,
+              200.979
+            ],
+            "maxDelta": 1.588
+          },
+          {
+            "chapter": 3,
+            "values": [
+              199.961,
+              199.178,
+              200.771
+            ],
+            "maxDelta": 1.593
+          },
+          {
+            "chapter": 4,
+            "values": [
+              198.707,
+              198.417,
+              200.156
+            ],
+            "maxDelta": 1.739
+          },
+          {
+            "chapter": 5,
+            "values": [
+              198.64,
+              198.336,
+              200.495
+            ],
+            "maxDelta": 2.159
+          },
+          {
+            "chapter": 6,
+            "values": [
+              199.561,
+              198.682,
+              201.162
+            ],
+            "maxDelta": 2.48
+          },
+          {
+            "chapter": 7,
+            "values": [
+              199.218,
+              197.77,
+              200.439
+            ],
+            "maxDelta": 2.669
+          },
+          {
+            "chapter": 8,
+            "values": [
+              199.557,
+              198.591,
+              200.818
+            ],
+            "maxDelta": 2.227
+          },
+          {
+            "chapter": 9,
+            "values": [
+              198.519,
+              198.567,
+              200.597
+            ],
+            "maxDelta": 2.03
+          },
+          {
+            "chapter": 10,
+            "values": [
+              199.202,
+              197.953,
+              200.676
+            ],
+            "maxDelta": 2.723
+          },
+          {
+            "chapter": 11,
+            "values": [
+              198.12,
+              196.913,
+              198.467
+            ],
+            "maxDelta": 1.554
+          },
+          {
+            "chapter": 12,
+            "values": [
+              198.681,
+              198.104,
+              200.479
+            ],
+            "maxDelta": 2.375
+          },
+          {
+            "chapter": 13,
+            "values": [
+              198.24,
+              197.872,
+              200.207
+            ],
+            "maxDelta": 2.335
+          },
+          {
+            "chapter": 14,
+            "values": [
+              198.61,
+              198.233,
+              200.149
+            ],
+            "maxDelta": 1.916
+          }
+        ],
+        "checks": {
+          "h264": true,
+          "aac": true,
+          "dimensions": true,
+          "fps": true,
+          "frameCount": true,
+          "audioRate": true,
+          "duration": true,
+          "blackFrames": true,
+          "transitionLuma": true,
+          "fullDecode": true
+        },
+        "ok": true
+      },
+      {
+        "name": "C-diagnostic-console",
+        "path": "renders/final/C-diagnostic-console.mp4",
+        "bytes": 13511183,
+        "duration": 275,
+        "video": {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 720,
+          "height": 1280,
+          "r_frame_rate": "30/1",
+          "nb_frames": "8250"
+        },
+        "audio": {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "nb_frames": "12887"
+        },
+        "blackSegments": [],
+        "maxTransitionLumaDelta": 3.094,
+        "transitionTriplets": [
+          {
+            "chapter": 2,
+            "values": [
+              189.805,
+              189.171,
+              190.985
+            ],
+            "maxDelta": 1.814
+          },
+          {
+            "chapter": 3,
+            "values": [
+              189.506,
+              188.855,
+              190.663
+            ],
+            "maxDelta": 1.808
+          },
+          {
+            "chapter": 4,
+            "values": [
+              188.466,
+              188.301,
+              190.248
+            ],
+            "maxDelta": 1.947
+          },
+          {
+            "chapter": 5,
+            "values": [
+              188.171,
+              187.857,
+              190.142
+            ],
+            "maxDelta": 2.285
+          },
+          {
+            "chapter": 6,
+            "values": [
+              189.107,
+              188.2,
+              190.937
+            ],
+            "maxDelta": 2.737
+          },
+          {
+            "chapter": 7,
+            "values": [
+              188.88,
+              187.386,
+              190.315
+            ],
+            "maxDelta": 2.929
+          },
+          {
+            "chapter": 8,
+            "values": [
+              189.283,
+              188.438,
+              190.924
+            ],
+            "maxDelta": 2.486
+          },
+          {
+            "chapter": 9,
+            "values": [
+              188.18,
+              188.337,
+              190.715
+            ],
+            "maxDelta": 2.378
+          },
+          {
+            "chapter": 10,
+            "values": [
+              188.918,
+              187.629,
+              190.723
+            ],
+            "maxDelta": 3.094
+          },
+          {
+            "chapter": 11,
+            "values": [
+              189.339,
+              188.055,
+              189.841
+            ],
+            "maxDelta": 1.786
+          },
+          {
+            "chapter": 12,
+            "values": [
+              188.37,
+              187.775,
+              190.432
+            ],
+            "maxDelta": 2.657
+          },
+          {
+            "chapter": 13,
+            "values": [
+              187.873,
+              187.493,
+              190.047
+            ],
+            "maxDelta": 2.554
+          },
+          {
+            "chapter": 14,
+            "values": [
+              188.419,
+              188.174,
+              190.311
+            ],
+            "maxDelta": 2.137
+          }
+        ],
+        "checks": {
+          "h264": true,
+          "aac": true,
+          "dimensions": true,
+          "fps": true,
+          "frameCount": true,
+          "audioRate": true,
+          "duration": true,
+          "blackFrames": true,
+          "transitionLuma": true,
+          "fullDecode": true
+        },
+        "ok": true
+      }
+    ]
+  },
+  "loudness": {
+    "input_i": "-16.21",
+    "input_tp": "-1.35",
+    "input_lra": "4.00",
+    "input_thresh": "-26.85",
+    "output_i": "-16.08",
+    "output_tp": "-1.50",
+    "output_lra": "3.90",
+    "output_thresh": "-26.71",
+    "normalization_type": "dynamic",
+    "target_offset": "0.08"
+  },
+  "ok": true
+}

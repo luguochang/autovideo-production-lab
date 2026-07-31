@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family:"Noto Sans SC Variable"; src:local("Noto Sans SC Variable"), local("Noto Sans SC"); font-weight:100 900; }
+        @font-face { font-family:"Microsoft YaHei"; src:local("Microsoft YaHei"); }
+        #root { position:absolute; inset:0; width:1920px; height:1080px; overflow:hidden; color:#2A211B; font-family:"Noto Sans SC Variable", "Microsoft YaHei", sans-serif; }
+        .stage-fill { position:absolute; inset:0; width:1920px; height:1080px; overflow:hidden; background:#F2DFC7; }
+        .world { position:absolute; inset:0; width:1920px; height:1080px; transform-origin:50% 50%; will-change:transform; }
+        .ambient-orbit { position:absolute; left:-210px; top:94px; width:810px; height:810px; border:2px solid #DCC2A3; border-radius:50%; opacity:.62; }
+        .ambient-rule { position:absolute; left:694px; top:874px; width:1130px; height:3px; background:#496958; opacity:.55; transform-origin:0 50%; }
+        .host-wrap { position:absolute; left:96px; top:156px; width:600px; height:730px; overflow:hidden; z-index:4; transform-origin:50% 100%; will-change:transform,opacity; }
+        .host-wrap img { display:block; width:600px; height:730px; object-fit:contain; object-position:50% 100%; transform:scaleX(-1) scale(1.1); transform-origin:50% 0; }
+        .content-zone { position:absolute; left:694px; top:112px; width:1130px; height:760px; overflow:hidden; z-index:5; }
+        .eyebrow { position:absolute; left:0; top:0; height:38px; color:#675748; font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:700; line-height:38px; }
+        .eyebrow::before { content:""; display:inline-block; width:50px; height:4px; margin-right:16px; vertical-align:5px; background:#496958; }
+        .heading { position:absolute; left:0; top:42px; width:1130px; height:210px; padding-top:18px; overflow:hidden; color:#2A211B; font-size:72px; font-weight:800; line-height:1.12; letter-spacing:0; }
+        .state-stage { position:absolute; left:0; top:270px; width:1130px; height:456px; overflow:hidden; }
+        .state { position:absolute; inset:0; width:100%; height:100%; opacity:0; transform-origin:50% 50%; overflow:hidden; }
+        .state-focus { display:flex; align-items:center; padding:24px 28px 58px 0; }
+        .focus-rule { flex:0 0 auto; width:10px; height:214px; margin-right:38px; background:#496958; }
+        .state-text { max-width:calc(100% - 70px); color:#2A211B; font-weight:800; line-height:1.15; letter-spacing:0; overflow-wrap:anywhere; }
+        .claim-label { position:absolute; left:48px; bottom:42px; min-width:270px; height:42px; padding:0 18px; border:2px solid #A94E36; border-radius:6px; color:#A94E36; font-size:20px; font-weight:700; line-height:38px; }
+        .state-meta { position:absolute; right:10px; bottom:6px; color:#675748; font-family:"JetBrains Mono",monospace; font-size:17px; font-weight:700; }
+        .state-compare { display:grid; grid-template-columns:1fr 3px 1fr; gap:30px; align-items:center; padding:18px 8px 52px; }
+        .compare-divider { width:3px; height:260px; background:#DCC2A3; }
+        .compare-side { min-width:0; display:flex; flex-direction:column; gap:20px; }
+        .compare-side strong { color:#2A211B; font-size:42px; font-weight:800; line-height:1.2; overflow-wrap:anywhere; }
+        .compare-after strong { color:#496958; }
+        .compare-kicker { color:#675748; font-family:"JetBrains Mono",monospace; font-size:18px; font-weight:700; }
+        .graph-state { padding:10px 0 52px; }
+        .graph-connector { position:absolute; left:0; top:20px; width:100%; height:390px; overflow:visible; }
+        .graph-connector path { fill:none; stroke:#496958; stroke-width:7; stroke-linecap:round; stroke-dasharray:100; stroke-dashoffset:100; }
+        .graph-nodes { position:absolute; left:18px; right:18px; top:126px; height:190px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+        .graph-node { position:relative; flex:1 1 0; min-width:0; height:164px; padding:34px 22px 20px; border:3px solid #496958; border-radius:8px; background:#FBF3E7; box-shadow:0 12px 32px rgba(73,105,88,.12); display:flex; align-items:center; justify-content:center; text-align:center; }
+        .graph-node strong { color:#2A211B; font-size:28px; font-weight:800; line-height:1.22; overflow-wrap:anywhere; }
+        .node-index { position:absolute; left:16px; top:12px; color:#A94E36; font-family:"JetBrains Mono",monospace; font-size:17px; font-weight:700; }
+        .graph-count-1 .graph-node { max-width:440px; margin:0 auto; }
+        .state-close { padding:10px 0 54px; display:flex; flex-direction:column; justify-content:center; gap:38px; }
+        .value-terms { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+        .value-terms span { height:92px; display:flex; align-items:center; justify-content:center; border-bottom:7px solid #496958; color:#2A211B; font-size:42px; font-weight:800; }
+        .close-route { color:#496958; font-size:54px; font-weight:800; line-height:1.16; }
+      </style>
+      <div data-hf-id="scene-13-root" id="root" data-composition-id="scene-13" data-width="1920" data-height="1080" data-duration="6.14">
+        <div data-hf-id="scene-13-stage" id="scene-13-stage" class="stage-fill" data-role="stage" data-zone="stage">
+          <div data-hf-id="scene-13-world" id="scene-13-world" class="world" data-layout-allow-overflow="viewport-change">
+            <div data-hf-id="scene-13-ambient-orbit" class="ambient-orbit" data-role="ambient-structure" data-zone="stage" data-layout-ignore aria-hidden="true"></div>
+            <div data-hf-id="scene-13-ambient-rule" id="scene-13-ambient-rule" class="ambient-rule" data-role="ambient-structure" data-zone="stage" data-layout-ignore aria-hidden="true"></div>
+            <div data-hf-id="scene-13-host-wrap" id="scene-13-host-wrap" class="host-wrap" data-role="host" data-zone="host.left">
+              <img data-hf-id="scene-13-host-image" id="scene-13-host-image" src="./assets/host/point-right.png" alt="" data-pose-id="point-right" data-layout-allow-overflow="normalized pose crop" />
+            </div>
+            <div data-hf-id="scene-13-content-zone" id="scene-13-content-zone" class="content-zone" data-role="content" data-zone="content.right">
+              <div data-hf-id="scene-13-eyebrow" id="scene-13-eyebrow" class="eyebrow">SCENE 13 / PROCESS</div>
+              <div data-hf-id="scene-13-heading" id="scene-13-heading" class="heading" data-role="headline">有没有日志、监控、测试、回滚机制</div>
+              <div data-hf-id="scene-13-state-stage" class="state-stage" data-role="state-stage">
+      <div data-hf-id="scene-13-graph-scene-13-state-01" id="scene-13-graph-scene-13-state-01" class="state graph-state" data-state-id="graph-scene-13-state-01" data-operation="replace" data-source-cues="cue-033">
+        <svg data-hf-id="scene-13-graph-scene-13-state-01-connector" class="graph-connector" viewBox="0 0 920 444" aria-hidden="true">
+          <path data-hf-id="scene-13-graph-scene-13-state-01-path" id="scene-13-graph-scene-13-state-01-path" pathLength="100" d="M 120 222 L 770 222"></path>
+        </svg>
+        <div data-hf-id="scene-13-graph-scene-13-state-01-nodes" class="graph-nodes graph-count-1">
+          
+            <div data-hf-id="scene-13-node-graph-scene-13-node-01-0" id="scene-13-node-graph-scene-13-node-01-0" class="graph-node" data-node-id="graph-scene-13-node-01" data-source-cues="cue-033">
+              <span data-hf-id="scene-13-node-graph-scene-13-node-01-0-index" class="node-index">01</span>
+              <strong data-hf-id="scene-13-node-graph-scene-13-node-01-0-label">有没有日志、监控、测试、回滚机制？</strong>
+            </div>
+        </div>
+        <div data-hf-id="scene-13-graph-scene-13-state-01-meta" class="state-meta">cue-033 · replace</div>
+      </div>
+      <div data-hf-id="scene-13-graph-scene-13-state-02" id="scene-13-graph-scene-13-state-02" class="state graph-state" data-state-id="graph-scene-13-state-02" data-operation="compact" data-source-cues="cue-034">
+        <svg data-hf-id="scene-13-graph-scene-13-state-02-connector" class="graph-connector" viewBox="0 0 920 444" aria-hidden="true">
+          <path data-hf-id="scene-13-graph-scene-13-state-02-path" id="scene-13-graph-scene-13-state-02-path" pathLength="100" d="M 170 222 C 350 222, 520 222, 700 222"></path>
+        </svg>
+        <div data-hf-id="scene-13-graph-scene-13-state-02-nodes" class="graph-nodes graph-count-2">
+          
+            <div data-hf-id="scene-13-node-graph-scene-13-node-01-1" id="scene-13-node-graph-scene-13-node-01-1" class="graph-node" data-node-id="graph-scene-13-node-01" data-source-cues="cue-033">
+              <span data-hf-id="scene-13-node-graph-scene-13-node-01-1-index" class="node-index">01</span>
+              <strong data-hf-id="scene-13-node-graph-scene-13-node-01-1-label">有没有日志、监控、测试、回滚机制？</strong>
+            </div>
+            <div data-hf-id="scene-13-node-graph-scene-13-node-02-1" id="scene-13-node-graph-scene-13-node-02-1" class="graph-node" data-node-id="graph-scene-13-node-02" data-source-cues="cue-034">
+              <span data-hf-id="scene-13-node-graph-scene-13-node-02-1-index" class="node-index">02</span>
+              <strong data-hf-id="scene-13-node-graph-scene-13-node-02-1-label">它的成本是否可控？</strong>
+            </div>
+        </div>
+        <div data-hf-id="scene-13-graph-scene-13-state-02-meta" class="state-meta">cue-034 · compact</div>
+      </div>
+      <div data-hf-id="scene-13-graph-scene-13-state-03" id="scene-13-graph-scene-13-state-03" class="state graph-state" data-state-id="graph-scene-13-state-03" data-operation="compact" data-source-cues="cue-035">
+        <svg data-hf-id="scene-13-graph-scene-13-state-03-connector" class="graph-connector" viewBox="0 0 920 444" aria-hidden="true">
+          <path data-hf-id="scene-13-graph-scene-13-state-03-path" id="scene-13-graph-scene-13-state-03-path" pathLength="100" d="M 118 222 C 270 222, 340 222, 456 222 S 650 222, 806 222"></path>
+        </svg>
+        <div data-hf-id="scene-13-graph-scene-13-state-03-nodes" class="graph-nodes graph-count-3">
+          
+            <div data-hf-id="scene-13-node-graph-scene-13-node-01-2" id="scene-13-node-graph-scene-13-node-01-2" class="graph-node" data-node-id="graph-scene-13-node-01" data-source-cues="cue-033">
+              <span data-hf-id="scene-13-node-graph-scene-13-node-01-2-index" class="node-index">01</span>
+              <strong data-hf-id="scene-13-node-graph-scene-13-node-01-2-label">有没有日志、监控、测试、回滚机制？</strong>
+            </div>
+            <div data-hf-id="scene-13-node-graph-scene-13-node-02-2" id="scene-13-node-graph-scene-13-node-02-2" class="graph-node" data-node-id="graph-scene-13-node-02" data-source-cues="cue-034">
+              <span data-hf-id="scene-13-node-graph-scene-13-node-02-2-index" class="node-index">02</span>
+              <strong data-hf-id="scene-13-node-graph-scene-13-node-02-2-label">它的成本是否可控？</strong>
+            </div>
+            <div data-hf-id="scene-13-node-graph-scene-13-node-03-2" id="scene-13-node-graph-scene-13-node-03-2" class="graph-node" data-node-id="graph-scene-13-node-03" data-source-cues="cue-035">
+              <span data-hf-id="scene-13-node-graph-scene-13-node-03-2-index" class="node-index">03</span>
+              <strong data-hf-id="scene-13-node-graph-scene-13-node-03-2-label">最后，它能不能被别人去维护？</strong>
+            </div>
+        </div>
+        <div data-hf-id="scene-13-graph-scene-13-state-03-meta" class="state-meta">cue-035 · compact</div>
+      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+      const sceneDuration = 6.14;
+      const world = document.getElementById("scene-13-world");
+      const cam = { scale: 1, x: 0, y: 0 };
+      const durationAnchor = { progress: 0 };
+      const applyCamera = () => { world.style.transform = `translate(${cam.x}px, ${cam.y}px) scale(${cam.scale})`; };
+      applyCamera();
+      tl.to(durationAnchor, { progress: 1, duration: sceneDuration, ease: "none" }, 0);
+      tl.fromTo("#scene-13-host-wrap", { opacity: 0, x: -34, scale: 0.985 }, { opacity: 1, x: 0, scale: 1, duration: 0.62, ease: "power4.out" }, 0.12);
+      tl.fromTo("#scene-13-eyebrow", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, 0.2);
+      tl.fromTo("#scene-13-heading", { opacity: 0, x: 38 }, { opacity: 1, x: 0, duration: 0.62, ease: "power4.out" }, 0.24);
+      tl.fromTo("#scene-13-ambient-rule", { scaleX: 0.78 }, { scaleX: 1, duration: Math.max(1, sceneDuration - 0.3), ease: "none" }, 0.15);
+      tl.to(cam, { scale: 1.012, x: 4, duration: Math.max(1, sceneDuration - 0.45), ease: "sine.inOut", onUpdate: applyCamera }, 0.3);
+      tl.to("#scene-13-host-wrap", { y: -5, duration: Math.max(1, sceneDuration - 0.55), ease: "sine.inOut" }, 0.35);
+      tl.fromTo("#scene-13-graph-scene-13-state-01", { opacity: 0, scale: 0.965, x: 18 }, { opacity: 1, scale: 1, x: 0, duration: 0.42, ease: "power3.out" }, 0.43);
+      tl.fromTo("#scene-13-graph-scene-13-state-01 .graph-node", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.38, stagger: 0.08, ease: "power3.out" }, 0.51);
+      tl.fromTo("#scene-13-graph-scene-13-state-01 .graph-connector path", { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.58, ease: "power2.out" }, 0.55);
+      tl.to("#scene-13-graph-scene-13-state-01", { opacity: 0, scale: 0.965, duration: 0.22, ease: "power2.in" }, 2.66);
+      tl.fromTo("#scene-13-graph-scene-13-state-02", { opacity: 0, scale: 0.965, x: 18 }, { opacity: 1, scale: 1, x: 0, duration: 0.42, ease: "power3.out" }, 2.88);
+      tl.fromTo("#scene-13-graph-scene-13-state-02 .graph-node", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.38, stagger: 0.08, ease: "power3.out" }, 2.96);
+      tl.fromTo("#scene-13-graph-scene-13-state-02 .graph-connector path", { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.58, ease: "power2.out" }, 3);
+      tl.to("#scene-13-graph-scene-13-state-02", { opacity: 0, scale: 0.965, duration: 0.22, ease: "power2.in" }, 3.92);
+      tl.fromTo("#scene-13-graph-scene-13-state-03", { opacity: 0, scale: 0.965, x: 18 }, { opacity: 1, scale: 1, x: 0, duration: 0.42, ease: "power3.out" }, 4.14);
+      tl.fromTo("#scene-13-graph-scene-13-state-03 .graph-node", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.38, stagger: 0.08, ease: "power3.out" }, 4.22);
+      tl.fromTo("#scene-13-graph-scene-13-state-03 .graph-connector path", { strokeDashoffset: 100 }, { strokeDashoffset: 0, duration: 0.58, ease: "power2.out" }, 4.26);
+      window.__timelines["scene-13"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "autovideo-content-prompt-chain/v1",
+  "chainId": "zh-explainer-content-chain",
+  "version": "1.0.0",
+  "orderingPolicy": "duration fitting must occur before final claim verification; any later wording change invalidates verification",
+  "stages": [
+    {
+      "id": "evidence-extractor",
+      "promptPath": "tools/content-pipeline/prompt-chain/prompts/01-evidence-extractor.md",
+      "inputContracts": ["sources.schema.json", "material-suitability.schema.json"],
+      "outputContract": "evidence.schema.json",
+      "mayModifyWording": false
+    },
+    {
+      "id": "outline-planner",
+      "promptPath": "tools/content-pipeline/prompt-chain/prompts/02-outline-planner.md",
+      "inputContracts": ["evidence.schema.json", "content brief"],
+      "outputContract": "content-outline.schema.json",
+      "mayModifyWording": false
+    },
+    {
+      "id": "narration-writer",
+      "promptPath": "tools/content-pipeline/prompt-chain/prompts/03-narration-writer.md",
+      "inputContracts": ["evidence.schema.json", "content-outline.schema.json"],
+      "outputContract": "script.schema.json",
+      "mayModifyWording": true
+    },
+    {
+      "id": "oralizer",
+      "promptPath": "tools/content-pipeline/prompt-chain/prompts/04-oralizer.md",
+      "inputContracts": ["evidence.schema.json", "script.schema.json"],
+      "outputContract": "spoken-rewrite.schema.json",
+      "mayModifyWording": true
+    },
+    {
+      "id": "duration-fitter",
+      "promptPath": "tools/content-pipeline/prompt-chain/prompts/05-duration-fitter.md",
+      "inputContracts": ["spoken-rewrite.schema.json", "content brief"],
+      "outputContract": "content-duration-fit.schema.json",
+      "mayModifyWording": false
+    },
+    {
+      "id": "claim-verifier",
+      "promptPath": "tools/content-pipeline/prompt-chain/prompts/06-claim-verifier.md",
+      "inputContracts": ["sources.schema.json", "evidence.schema.json", "spoken-rewrite.schema.json"],
+      "outputContract": "claim-source-review.schema.json",
+      "mayModifyWording": false
+    }
+  ]
+}

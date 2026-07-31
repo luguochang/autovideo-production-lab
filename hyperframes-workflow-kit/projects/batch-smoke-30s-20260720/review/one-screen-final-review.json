@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "autovideo-one-screen-final-review/v1",
+  "projectId": "batch-smoke-30s-20260720",
+  "decision": "approve",
+  "reviewedBy": "user",
+  "reviewedAt": "2026-07-28T04:50:46.188Z",
+  "humanReviewPerformed": true,
+  "fullTimelineWatched": true,
+  "publicReleaseBlocked": true,
+  "bindings": {
+    "video": {
+      "path": "renders/batch-smoke-30s-20260720-internal-review.mp4",
+      "bytes": 2348323,
+      "sha256": "166f9ca9a52158cc260a6a35c7ac03cb9c54f5929fbf28b2210d3887de2573fc"
+    },
+    "storyboard": {
+      "path": "review/one-screen-master-storyboard.png",
+      "bytes": 383803,
+      "sha256": "2064e4b251ede18243d4821da71ca022785ef00b16a6972b04a5ce74e75b51fd"
+    },
+    "qa": {
+      "path": "qa/one-screen-mvp-report.json",
+      "bytes": 2622,
+      "sha256": "27f1d74e1dbf82caccaf17c97ce1f43ea4a7120d85fb9d1261a24fbf8fac190d"
+    },
+    "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97"
+  },
+  "notes": "",
+  "issues": []
+}

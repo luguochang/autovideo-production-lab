@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "autovideo-decode-qa/v1",
+  "projectId": "E17-data-proof-probe",
+  "artifact": "renders/data-proof-probe.mp4",
+  "decode": {
+    "ffprobeOk": true,
+    "video": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "displayAspectRatio": "16:9",
+      "fps": 30,
+      "frames": 240,
+      "durationSeconds": 8
+    },
+    "audio": {
+      "codec": "aac",
+      "sampleRateHz": 48000,
+      "channels": 2,
+      "durationSeconds": 8,
+      "meanVolumeDb": -28.0,
+      "maxVolumeDb": -7.6,
+      "nonSilent": true
+    },
+    "frameDecode": {
+      "ok": true,
+      "sampledFrames": [
+        "review/render-qa/frame-0.80.png",
+        "review/render-qa/frame-2.72.png",
+        "review/render-qa/frame-3.80.png",
+        "review/render-qa/frame-5.20.png",
+        "review/render-qa/frame-7.10.png",
+        "review/render-qa/frame-7.96.png"
+      ]
+    }
+  },
+  "evidence": {
+    "ffprobe": "review/render-qa/ffprobe.json",
+    "audioVolumeDetect": "review/render-qa/audio-volumedetect.log",
+    "strictCheck": "strict-check.log"
+  },
+  "status": "pass"
+}

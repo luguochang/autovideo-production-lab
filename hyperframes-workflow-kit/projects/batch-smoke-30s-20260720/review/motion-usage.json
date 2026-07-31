@@ -1,0 +1,58 @@
+{
+  "path": "style-library/motion-library/usage-log.jsonl",
+  "usageKey": "batch-smoke-30s-20260720:cdd949df6139e7c48eb4578b5ef9054b80da0cc1b16b4efb02bffe5bd1c1407f",
+  "record": {
+    "schemaVersion": "autovideo-motion-usage/v1",
+    "usageKey": "batch-smoke-30s-20260720:cdd949df6139e7c48eb4578b5ef9054b80da0cc1b16b4efb02bffe5bd1c1407f",
+    "projectId": "batch-smoke-30s-20260720",
+    "compositionDigest": "cdd949df6139e7c48eb4578b5ef9054b80da0cc1b16b4efb02bffe5bd1c1407f",
+    "compositionFileCount": 26,
+    "compiledSourceMap": {
+      "path": "production/hyperframes/data/source-map.json",
+      "sha256": "c601d9f62ecc13dab7d884b034d2b78abb4fafebfe1641c35ee30c2f5c26b4a4"
+    },
+    "recipes": [
+      {
+        "key": "knowledge-explainer:keyword-handoff@1.0.0",
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "keyword-handoff",
+        "version": "1.0.0",
+        "cueIds": [
+          "cue-001",
+          "cue-003",
+          "cue-006"
+        ]
+      },
+      {
+        "key": "knowledge-explainer:diagram-build@1.0.0",
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "diagram-build",
+        "version": "1.0.0",
+        "cueIds": [
+          "cue-002",
+          "cue-005"
+        ]
+      },
+      {
+        "key": "knowledge-explainer:comparison-split@1.0.0",
+        "libraryId": "knowledge-explainer",
+        "libraryVersion": "1.0.0",
+        "recipeId": "comparison-split",
+        "version": "1.0.0",
+        "cueIds": [
+          "cue-004"
+        ]
+      }
+    ],
+    "humanReview": "superseded",
+    "feedback": {
+      "status": "historical-composition-not-human-reviewed",
+      "reason": "This usage record is bound to an earlier composition digest and must not inherit approval for the final one-screen render.",
+      "supersededBy": "review/one-screen-motion-feedback.json"
+    },
+    "recordedAt": "2026-07-21T10:10:48.931Z",
+    "feedbackRecordedAt": "2026-07-28T04:50:46.188Z"
+  }
+}

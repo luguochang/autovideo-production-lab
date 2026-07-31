@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "autovideo-publication-rights/v1",
+  "projectId": "demotext-standard-delivery-v3",
+  "declaration": "internal-only",
+  "notes": "本次标准演练默认仅内部交付；CosyVoice speaker、主持人素材与数字 claim 的公开发布凭据仍需人工补齐。",
+  "generatedAt": "2026-07-19T06:33:14.063Z",
+  "items": [
+    {
+      "id": "source-001-ec1a51a2",
+      "category": "input-source",
+      "source": "demo/demoText.txt",
+      "license": "user-provided; publication rights not implied",
+      "status": "needs-review",
+      "evidence": ""
+    },
+    {
+      "id": "voice-speaker-rights",
+      "category": "voice",
+      "source": "CosyVoice built-in 中文女 speaker",
+      "license": "Code/model license does not prove speaker publication rights.",
+      "status": "needs-review",
+      "evidence": ""
+    },
+    {
+      "id": "host-artwork-rights",
+      "category": "host-artwork",
+      "source": "style-library/styles/project/modern-ip-host-explainer/POSE_MANIFEST.json",
+      "license": "User-provided artwork; possession and generation provenance do not imply publication rights.",
+      "status": "needs-review",
+      "evidence": "Source pose manifest SHA-256 70872749953cfd53d32d2740385aed37082b1e3552e3e8bb7e9a06b2d3bace0f; prepared host manifest will be bound after production."
+    },
+    {
+      "id": "noto-sans-sc-font",
+      "category": "font",
+      "source": "@fontsource-variable/noto-sans-sc@5.2.10",
+      "license": "OFL-1.1",
+      "status": "cleared",
+      "evidence": "Pinned npm package metadata and LICENSE are included with the production dependency."
+    },
+    {
+      "id": "gsap-runtime",
+      "category": "animation-runtime",
+      "source": "review/probe-project/assets/gsap.min.js",
+      "license": "Concrete bundled runtime license receipt is not frozen in the project.",
+      "status": "needs-review",
+      "evidence": ""
+    },
+    {
+      "id": "hyperframes-runtime",
+      "category": "software",
+      "source": "hyperframes@0.7.62",
+      "license": "Apache-2.0",
+      "status": "cleared",
+      "evidence": "Pinned project runtime."
+    },
+    {
+      "id": "ffmpeg-build",
+      "category": "software",
+      "source": "Local FFmpeg binary",
+      "license": "LGPL/GPL depends on the concrete build.",
+      "status": "needs-review",
+      "evidence": ""
+    }
+  ],
+  "instruction": "Change an item to cleared only after recording evidence. Public-release approval requires every item to be cleared or not-applicable; internal-only approval preserves unresolved items and blocks public delivery."
+}

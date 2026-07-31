@@ -1,0 +1,1 @@
+一类是通用解析库，PyMuPDF、pdfplumber，快但只能拿纯文本，丢结构

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "autovideo-style-selection/v1",
+  "projectId": "demoText-mainstream-landscape-creator-cutout-pop",
+  "baseStyleId": "creator-cutout-pop",
+  "framePreset": null,
+  "addons": [],
+  "registryItems": [
+    "caption-editorial-emphasis"
+  ],
+  "blueprints": [],
+  "motionRules": [
+    "viewport-change",
+    "svg-path-draw",
+    "css-marker-patterns",
+    "card-morph-anchor"
+  ],
+  "status": "draft",
+  "approvedBy": null,
+  "notes": "Round-two mainstream landscape exploration informed by a user-provided reference video. Original deterministic SVG host; no reference character or artwork copied.",
+  "receipts": [
+    {
+      "source": "demo/douyin_一颗小樱_7662366814240303323.mp4",
+      "kind": "user-provided",
+      "license": "style reference only"
+    },
+    {
+      "source": "vendor/hyperframes/registry/registry.json",
+      "kind": "official",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "vendor/hyperframes/skills/hyperframes-animation/",
+      "kind": "official",
+      "license": "Apache-2.0"
+    }
+  ]
+}

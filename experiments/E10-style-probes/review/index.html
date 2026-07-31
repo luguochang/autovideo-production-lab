@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E10 风格探针审片</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #edf0ee;
+        --ink: #171b19;
+        --muted: #66706b;
+        --line: #c4cbc7;
+        --paper: #f9faf8;
+        --red: #c9483e;
+        --green: #197264;
+        --blue: #315f87;
+      }
+
+      * { box-sizing: border-box; }
+      html { background: var(--bg); }
+      body {
+        margin: 0;
+        min-width: 320px;
+        color: var(--ink);
+        background: var(--bg);
+        font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+        letter-spacing: 0;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 70px;
+        padding: 14px clamp(18px, 4vw, 52px);
+        border-bottom: 1px solid #323936;
+        background: #171b19;
+        color: #f6f8f6;
+      }
+      h1 { margin: 0; font-size: 20px; line-height: 1.25; }
+      .toolbar { display: flex; align-items: center; justify-content: flex-end; gap: 12px; flex-wrap: wrap; }
+      .controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+      .format-switch {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(64px, 1fr));
+        gap: 3px;
+        padding: 3px;
+        border: 1px solid #68716d;
+        border-radius: 4px;
+        background: #252b28;
+      }
+      button {
+        min-width: 76px;
+        height: 38px;
+        padding: 0 14px;
+        border: 1px solid #68716d;
+        border-radius: 4px;
+        background: #252b28;
+        color: #f6f8f6;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:hover { background: #343c38; }
+      button:disabled { cursor: wait; opacity: 0.68; }
+      .format-switch button {
+        min-width: 64px;
+        height: 30px;
+        padding: 0 10px;
+        border: 0;
+      }
+      .format-switch button.is-active {
+        background: #f6f8f6;
+        color: #171b19;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(18px, 2.4vw, 34px);
+        width: min(1440px, 100%);
+        margin: 0 auto;
+        padding: 30px clamp(18px, 4vw, 52px) 48px;
+      }
+      article {
+        min-width: 0;
+        border-top: 5px solid var(--tone);
+        background: var(--paper);
+      }
+      .candidate-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 14px;
+        min-height: 70px;
+        padding: 15px 16px 12px;
+        border: 1px solid var(--line);
+        border-top: 0;
+      }
+      h2 { margin: 0; font-size: 17px; line-height: 1.35; }
+      .candidate-id {
+        flex: 0 0 auto;
+        color: var(--tone);
+        font-size: 27px;
+        font-weight: 900;
+      }
+      .video-wrap {
+        display: grid;
+        place-items: center;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-top: 0;
+        background: #d8ddda;
+      }
+      video {
+        display: block;
+        width: min(100%, 360px);
+        aspect-ratio: 9 / 16;
+        background: #111;
+        object-fit: contain;
+      }
+      body[data-format="landscape"] video {
+        width: min(100%, 420px);
+        aspect-ratio: 16 / 9;
+      }
+      .meta {
+        min-height: 64px;
+        margin: 0;
+        padding: 13px 16px;
+        border: 1px solid var(--line);
+        border-top: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      @media (max-width: 980px) {
+        main { grid-template-columns: 1fr; max-width: 560px; }
+        header { position: static; align-items: flex-start; flex-direction: column; }
+        .toolbar, .controls { justify-content: flex-start; }
+      }
+    </style>
+  </head>
+  <body data-format="portrait">
+    <header>
+      <h1>demoText · 同音频三风格探针 · <span id="format-label">竖屏 9:16</span></h1>
+      <div class="toolbar">
+        <div class="format-switch" role="group" aria-label="画面比例">
+          <button class="format-button is-active" type="button" data-format="portrait" aria-pressed="true">竖屏</button>
+          <button class="format-button" type="button" data-format="landscape" aria-pressed="false">横屏</button>
+        </div>
+        <div class="controls">
+          <button id="play-all" type="button" title="三版静音同步预览；单独播放可听口播">全部播放</button>
+          <button id="pause-all" type="button">全部暂停</button>
+          <button id="restart-all" type="button">重新开始</button>
+          <span id="play-status" class="sr-only" aria-live="polite"></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <article style="--tone: var(--red)">
+        <div class="candidate-head"><h2>手绘连续画板</h2><span class="candidate-id">A</span></div>
+        <div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/A-handdrawn-board.png" src="../renders/A-handdrawn-board.mp4" data-portrait-src="../renders/A-handdrawn-board.mp4" data-landscape-src="../renders/A-handdrawn-board-landscape.mp4" data-portrait-poster="posters/A-handdrawn-board.png" data-landscape-poster="posters/A-handdrawn-board-landscape.png"></video></div>
+        <p class="meta">镜头沿手绘路径移动，表面卡片与隐藏系统层保留在同一空间。</p>
+      </article>
+      <article style="--tone: var(--green)">
+        <div class="candidate-head"><h2>杂志纸片拼贴</h2><span class="candidate-id">B</span></div>
+        <div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/B-magazine-collage.png" src="../renders/B-magazine-collage.mp4" data-portrait-src="../renders/B-magazine-collage.mp4" data-landscape-src="../renders/B-magazine-collage-landscape.mp4" data-portrait-poster="posters/B-magazine-collage.png" data-landscape-poster="posters/B-magazine-collage-landscape.png"></video></div>
+        <p class="meta">纸片、胶带和证据框连续接力，旧对象收缩留在画板上。</p>
+      </article>
+      <article style="--tone: var(--blue)">
+        <div class="candidate-head"><h2>编辑型数据简报</h2><span class="candidate-id">C</span></div>
+        <div class="video-wrap"><video controls playsinline preload="metadata" poster="posters/C-editorial-data.png" src="../renders/C-editorial-data.mp4" data-portrait-src="../renders/C-editorial-data.mp4" data-landscape-src="../renders/C-editorial-data-landscape.mp4" data-portrait-poster="posters/C-editorial-data.png" data-landscape-poster="posters/C-editorial-data-landscape.png"></video></div>
+        <p class="meta">论点、层级条与因果连线按阅读顺序建立，最后收敛到按钮与节点。</p>
+      </article>
+    </main>
+    <script>
+      const videos = [...document.querySelectorAll("video")];
+      const playAllButton = document.getElementById("play-all");
+      const playStatus = document.getElementById("play-status");
+      const formatLabel = document.getElementById("format-label");
+      const formatButtons = [...document.querySelectorAll(".format-button")];
+
+      function setFormat(format, updateUrl = true) {
+        const isLandscape = format === "landscape";
+        document.body.dataset.format = isLandscape ? "landscape" : "portrait";
+        formatLabel.textContent = isLandscape ? "横屏 16:9" : "竖屏 9:16";
+        formatButtons.forEach((button) => {
+          const active = button.dataset.format === format;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
+        videos.forEach((video) => {
+          video.pause();
+          video.muted = false;
+          video.poster = isLandscape ? video.dataset.landscapePoster : video.dataset.portraitPoster;
+          video.src = isLandscape ? video.dataset.landscapeSrc : video.dataset.portraitSrc;
+          video.load();
+        });
+        playStatus.textContent = isLandscape ? "已切换到横屏 16:9" : "已切换到竖屏 9:16";
+
+        if (updateUrl) {
+          const url = new URL(window.location.href);
+          if (isLandscape) url.searchParams.set("format", "landscape");
+          else url.searchParams.delete("format");
+          window.history.replaceState({}, "", url);
+        }
+      }
+
+      formatButtons.forEach((button) => {
+        button.addEventListener("click", () => setFormat(button.dataset.format));
+      });
+
+      playAllButton.addEventListener("click", async () => {
+        const allEnded = videos.every((video) => video.ended || (video.duration && video.currentTime >= video.duration - 0.05));
+        const time = allEnded ? 0 : Math.min(...videos.map((video) => video.currentTime || 0));
+        videos.forEach((video) => {
+          video.currentTime = time;
+          video.muted = true;
+        });
+
+        playAllButton.disabled = true;
+        const results = await Promise.allSettled(videos.map((video) => video.play()));
+        const failed = results.filter((result) => result.status === "rejected").length;
+        playStatus.textContent = failed
+          ? `${failed} 个视频未能自动播放，请单独点击播放`
+          : "三个视频已静音同步播放";
+        playAllButton.disabled = false;
+      });
+      document.getElementById("pause-all").addEventListener("click", () => videos.forEach((video) => video.pause()));
+      document.getElementById("restart-all").addEventListener("click", () => {
+        videos.forEach((video) => { video.pause(); video.currentTime = 0; video.muted = false; });
+      });
+
+      const initialFormat = new URLSearchParams(window.location.search).get("format") === "landscape"
+        ? "landscape"
+        : "portrait";
+      setFormat(initialFormat, false);
+    </script>
+  </body>
+</html>

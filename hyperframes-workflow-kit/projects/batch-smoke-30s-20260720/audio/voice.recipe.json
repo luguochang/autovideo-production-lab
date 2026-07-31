@@ -1,0 +1,236 @@
+{
+  "schemaVersion": "autovideo-voice-receipt/v2",
+  "route": "cosyvoice-preset-14",
+  "model": "CosyVoice-300M-SFT",
+  "speaker": "中文女",
+  "precision": "FP32",
+  "stream": false,
+  "speed": 1.03,
+  "seed": 7,
+  "segmentation": "Exact NarrationLock source text split at natural boundaries under the CosyVoice frontend threshold; every project part must preflight to one internal utterance.",
+  "narrationLockSha256": "61c1763700a77ffa654c910e5f88f1b2a981529561befeb8fdbe70f01e1eecb1",
+  "narrationSha256": "230fd3015b937e6dfc6de1aa4d442d2a0e9156dadf9a8eba5206847be65cbd97",
+  "pronunciation": {
+    "path": "input/pronunciation.effective.json",
+    "sha256": "f750463416837f3d0f914873b9ffc44ef4c4fcd2b8728c6f90902440ea38706e",
+    "autoAppliedStatus": "approved-default",
+    "approval": {
+      "path": "qa/pronunciation-approval.json",
+      "sha256": "2766d429bd3a3e389f6810a171cdd01710c18d4998d38627bf8066cf585c8e48",
+      "scope": "machine-no-subjective-terms"
+    },
+    "unresolved": []
+  },
+  "batch": {
+    "schemaVersion": "cosyvoice-zh-female-batch/v1",
+    "manifestPath": "audio/voice-candidates/candidate-003/parts/batch-manifest.json",
+    "manifestSha256": "2c5c3d1cb3a48d4339412e131c0888fd134aba804410239eff6c092cbfc45f6c",
+    "singleModelLoad": true
+  },
+  "merge": {
+    "schemaVersion": "autovideo-breath-merge/v1",
+    "manifestPath": "audio/voice-candidates/candidate-003/merge-manifest.json",
+    "manifestSha256": "8e932cca2d0f1768ab4e159e5fcf325363ecaa2fafb21c5bda0b9cee0e247033",
+    "receiptPath": "audio/voice-candidates/candidate-003/breath-merge.recipe.json",
+    "receiptSha256": "a50501a2d98c34290d169737bca9480883b3f7c36995c038012d3503005da715",
+    "targetActiveVoiceGapSeconds": 0.56,
+    "gaps": [
+      {
+        "afterPartIndex": 0,
+        "targetActiveVoiceGapSeconds": 0.56,
+        "retainedTrailingSilenceSeconds": 0,
+        "retainedNextLeadingSilenceSeconds": 0,
+        "insertedSilenceSeconds": 0.56,
+        "actualActiveVoiceGapSeconds": 0.56
+      },
+      {
+        "afterPartIndex": 1,
+        "targetActiveVoiceGapSeconds": 0.56,
+        "retainedTrailingSilenceSeconds": 0,
+        "retainedNextLeadingSilenceSeconds": 0,
+        "insertedSilenceSeconds": 0.56,
+        "actualActiveVoiceGapSeconds": 0.56
+      },
+      {
+        "afterPartIndex": 2,
+        "targetActiveVoiceGapSeconds": 0.56,
+        "retainedTrailingSilenceSeconds": 0,
+        "retainedNextLeadingSilenceSeconds": 0,
+        "insertedSilenceSeconds": 0.56,
+        "actualActiveVoiceGapSeconds": 0.56
+      }
+    ]
+  },
+  "parts": [
+    {
+      "id": "part-001",
+      "sourceTextPath": "audio/voice-candidates/candidate-003/narration-parts/part-001.source.txt",
+      "ttsTextPath": "audio/voice-candidates/candidate-003/parts/part-001.tts.txt",
+      "sourceTextSha256": "8457b8b48eb60b4ab69f0b2ce975c3fa9e88a7590a51247a5e9c294420f19c9c",
+      "ttsTextSha256": "8457b8b48eb60b4ab69f0b2ce975c3fa9e88a7590a51247a5e9c294420f19c9c",
+      "pronunciationSubstitutions": [],
+      "audioPath": "audio/voice-candidates/candidate-003/parts/part-001.wav",
+      "receiptPath": "audio/voice-candidates/candidate-003/parts/part-001.recipe.json",
+      "runnerTextSha256": "8457b8b48eb60b4ab69f0b2ce975c3fa9e88a7590a51247a5e9c294420f19c9c",
+      "outputSha256": "7A4BB8160E29F548FBA283D72977A6FCA2EC5412743C6D1B6533ADDEFB2AFFA4",
+      "durationSeconds": 3.6571458333333333,
+      "frontendPreflight": {
+        "policy": "exactly-one-internal-utterance-required",
+        "utterance_count": 1,
+        "normalized_text_sha256": "8457B8B48EB60B4AB69F0B2CE975C3FA9E88A7590A51247A5E9C294420F19C9C",
+        "normalized_text_characters": 17
+      },
+      "outputChunks": 1
+    },
+    {
+      "id": "part-002",
+      "sourceTextPath": "audio/voice-candidates/candidate-003/narration-parts/part-002.source.txt",
+      "ttsTextPath": "audio/voice-candidates/candidate-003/parts/part-002.tts.txt",
+      "sourceTextSha256": "d9bbae329648b1a8db3355282c6c4b986290405e62ae86da158f18d8ffe2d0c7",
+      "ttsTextSha256": "8b1bea173ee51c7abf4d9c6b1320f3aaeb43d5965f64c8656812ac21dc59f47e",
+      "pronunciationSubstitutions": [
+        {
+          "token": "API",
+          "spokenAs": "A P I",
+          "occurrences": 1,
+          "status": "approved-default"
+        },
+        {
+          "token": "AI",
+          "spokenAs": "A I",
+          "occurrences": 1,
+          "status": "approved-default"
+        }
+      ],
+      "audioPath": "audio/voice-candidates/candidate-003/parts/part-002.wav",
+      "receiptPath": "audio/voice-candidates/candidate-003/parts/part-002.recipe.json",
+      "runnerTextSha256": "8b1bea173ee51c7abf4d9c6b1320f3aaeb43d5965f64c8656812ac21dc59f47e",
+      "outputSha256": "F4850E8C607E2C33AE32F26565CCD801E7C13DFB80CF401B5FC3754FA1D6E234",
+      "durationSeconds": 8.626208333333333,
+      "frontendPreflight": {
+        "policy": "exactly-one-internal-utterance-required",
+        "utterance_count": 1,
+        "normalized_text_sha256": "305DEA8D29F020A5BB684081985DF14828FC8CB52900F07F5ECCF843B6D7A8C1",
+        "normalized_text_characters": 55
+      },
+      "outputChunks": 1
+    },
+    {
+      "id": "part-003",
+      "sourceTextPath": "audio/voice-candidates/candidate-003/narration-parts/part-003.source.txt",
+      "ttsTextPath": "audio/voice-candidates/candidate-003/parts/part-003.tts.txt",
+      "sourceTextSha256": "10183108a602a09397f50e1e5f6cde847113ef008f31d5702f1f1bcabeefdde2",
+      "ttsTextSha256": "10183108a602a09397f50e1e5f6cde847113ef008f31d5702f1f1bcabeefdde2",
+      "pronunciationSubstitutions": [],
+      "audioPath": "audio/voice-candidates/candidate-003/parts/part-003.wav",
+      "receiptPath": "audio/voice-candidates/candidate-003/parts/part-003.recipe.json",
+      "runnerTextSha256": "10183108a602a09397f50e1e5f6cde847113ef008f31d5702f1f1bcabeefdde2",
+      "outputSha256": "676A6CD8DA620957F28B633454B4649F8D10BCADDCC049C3B58015A1A4FCF79D",
+      "durationSeconds": 7.418770833333333,
+      "frontendPreflight": {
+        "policy": "exactly-one-internal-utterance-required",
+        "utterance_count": 1,
+        "normalized_text_sha256": "BEDA326B2832FC672831CB601A583D5C636BF461F636708017BC84636C9DB2B9",
+        "normalized_text_characters": 49
+      },
+      "outputChunks": 1
+    },
+    {
+      "id": "part-004",
+      "sourceTextPath": "audio/voice-candidates/candidate-003/narration-parts/part-004.source.txt",
+      "ttsTextPath": "audio/voice-candidates/candidate-003/parts/part-004.tts.txt",
+      "sourceTextSha256": "0814db2ef4bd237d2c5b98ac42c8f68a84e5e78533819a9dff4bb921a241b928",
+      "ttsTextSha256": "0814db2ef4bd237d2c5b98ac42c8f68a84e5e78533819a9dff4bb921a241b928",
+      "pronunciationSubstitutions": [],
+      "audioPath": "audio/voice-candidates/candidate-003/parts/part-004.wav",
+      "receiptPath": "audio/voice-candidates/candidate-003/parts/part-004.recipe.json",
+      "runnerTextSha256": "0814db2ef4bd237d2c5b98ac42c8f68a84e5e78533819a9dff4bb921a241b928",
+      "outputSha256": "853FA8EBED96FF281C86807AD85F478354DDCD39612FD6344F709CFC34C86717",
+      "durationSeconds": 10.425770833333333,
+      "frontendPreflight": {
+        "policy": "exactly-one-internal-utterance-required",
+        "utterance_count": 1,
+        "normalized_text_sha256": "DADE6C367C8A9DCEAC8CB098CF8BEB062D76D46D7169C4FC7F09FFBEDC8491FC",
+        "normalized_text_characters": 62
+      },
+      "outputChunks": 1
+    }
+  ],
+  "output": "narration.final.wav",
+  "outputSha256": "ea55f186ca0c48bc995461907e67006c16d949d5c5f1023381bc094fc610fad1",
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "pcm_s16le",
+        "codec_long_name": "PCM signed 16-bit little-endian",
+        "codec_type": "audio",
+        "codec_tag_string": "[1][0][0][0]",
+        "codec_tag": "0x0001",
+        "sample_fmt": "s16",
+        "sample_rate": "48000",
+        "channels": 1,
+        "bits_per_sample": 16,
+        "initial_padding": 0,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "duration_ts": 1526779,
+        "duration": "31.807896",
+        "bit_rate": "768000",
+        "disposition": {
+          "default": 0,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        }
+      }
+    ],
+    "format": {
+      "filename": "E:\\project\\study\\codex\\autoVideo\\hyperframes-workflow-kit\\projects\\batch-smoke-30s-20260720\\audio\\voice-candidates\\candidate-003\\narration.candidate.wav",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "wav",
+      "format_long_name": "WAV / WAVE (Waveform Audio)",
+      "duration": "31.807896",
+      "size": "3053636",
+      "bit_rate": "768019",
+      "probe_score": 99,
+      "tags": {
+        "encoder": "Lavf62.19.100"
+      }
+    }
+  },
+  "generatedAt": "2026-07-22T09:28:46.142Z",
+  "rightsStatus": "needs-review: built-in speaker rights chain is not yet documented for commercial publication",
+  "promotion": {
+    "schemaVersion": "autovideo-voice-promotion/v1",
+    "candidateId": "candidate-003",
+    "candidateManifest": {
+      "path": "audio/voice-candidates/candidate-003/candidate.json",
+      "sha256": "395f7b396335fdc48cd214491535cb385327ce5f47b677c085380aeeaead28e4"
+    },
+    "review": {
+      "path": "audio/voice-candidates/review.json",
+      "sha256": "8e4579ba00de304481767319b154391149d6683c2ccd6addda08cd1689565b56"
+    },
+    "promotedBy": "codex-creator-delegated-simulation",
+    "promotedAt": "2026-07-22T09:34:05.680Z"
+  }
+}

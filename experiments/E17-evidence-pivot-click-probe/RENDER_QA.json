@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "autovideo-render-qa/v1",
+  "projectId": "E17-evidence-pivot-click-probe",
+  "scope": "internal-review",
+  "artifact": {
+    "path": "renders/evidence-pivot-click-probe.mp4",
+    "sha256": "754f5f304fb9bc7b3c30ea47907521034e7423f11388088acc20018bf5d66afd",
+    "sizeBytes": 2038550,
+    "durationSeconds": 8,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "fps": 30},
+    "audio": {"codec": "aac", "sampleRate": 48000, "channels": 2}
+  },
+  "sourceAudio": {
+    "path": ".media/audio/voice/voice_002.wav",
+    "sha256": "587e7e0001857162b40761fd1a9da8b2be5071df71ec71bead8a2802eb1323a4",
+    "format": "PCM s16le, 48 kHz, mono",
+    "durationSeconds": 8
+  },
+  "checks": {
+    "highQualityRenderCompleted": true,
+    "fullDecodePassed": true,
+    "decodeLog": "render.decode.log",
+    "strictHyperframesCheckPassed": true,
+    "strictCheckLog": "check.strict.log",
+    "renderFrameInspectionPassed": true,
+    "publicReleaseApproved": false
+  },
+  "inspectedFrames": [
+    {"timeSeconds": 3.1, "path": "review/render-qa/frame-3.10.png", "sha256": "aae80fce102970fc1e6f76b274b87496c86e49f5a247b33552d9d13cfe17562b", "observation": "Cursor tip lands on the selected 素材登记 node; one ring only."},
+    {"timeSeconds": 5.76, "path": "review/render-qa/frame-5.76.png", "sha256": "a79fc7f0ed6e20349c99174e7570636004cd9bbcea7f18e01e7962c884f4cf07", "observation": "Evidence and single callout are both readable at unzoom start."},
+    {"timeSeconds": 6.4, "path": "review/render-qa/frame-6.40.png", "sha256": "17ed9cbab8485c82063de0c7482972a1b30024b85d4408f0cad2f11c1a565c69", "observation": "Evidence contracts within content.right while host and caption remain fixed."},
+    {"timeSeconds": 7.7, "path": "review/render-qa/frame-7.70.png", "sha256": "032b1daebcd6333fe7b9558d457e40897a32520b62840dbefe24ae3b68d58e83", "observation": "Terminal evidence/conclusion layout is stable and nonblank."}
+  ],
+  "humanVisualReview": null
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "autovideo-sources/v1",
+  "projectId": "demotext-standard-delivery-v2",
+  "root": "demo/demoText.txt",
+  "generatedAt": "2026-07-19T00:12:57.112Z",
+  "sources": [
+    {
+      "id": "source-001-ec1a51a2",
+      "path": "demo/demoText.txt",
+      "type": "txt",
+      "bytes": 4373,
+      "modifiedAt": "2026-07-15T13:05:08.065Z",
+      "sha256": "ec1a51a269faf0344b2ba93abf21c4a75b8aac51d4a0996bd43ac2c66af33198",
+      "source": "user-provided",
+      "license": "user-provided; publication rights not implied",
+      "status": "registered"
+    }
+  ],
+  "skipped": [],
+  "warnings": []
+}

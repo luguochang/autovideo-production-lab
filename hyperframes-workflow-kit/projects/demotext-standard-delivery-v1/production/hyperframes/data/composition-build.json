@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "autovideo-hyperframes-build/v1",
+  "compilerVersion": "1.0.0",
+  "projectId": "demotext-standard-delivery-v1",
+  "generatedAt": "2026-07-18T22:12:14.844Z",
+  "inputManifest": {
+    "path": "plan/production-manifest.json",
+    "sha256": "46e038cbf3417e42240626ee79f2e6080e2af04f3759041fb007ca7dc1063dab"
+  },
+  "outputDir": "production/hyperframes",
+  "format": {
+    "ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "timeline": {
+    "start": 0,
+    "end": 239.909,
+    "duration": 239.909
+  },
+  "sceneCount": 14,
+  "cueCount": 46,
+  "appliedOverrideIds": [],
+  "publicReleaseBlocked": true,
+  "hostAssetManifest": {
+    "path": "production-assets/host-assets.manifest.json",
+    "sha256": "b94ff6efddcaa952c625c0bfebe326d65b0f57a50abb5e8fb8e5e5b94d0955d6"
+  },
+  "outputs": [
+    {
+      "path": "index.html",
+      "sha256": "4045e5decfef846b138119a003ca6b8a0f0322b73c0f4cf97cd94b0c304e6377"
+    },
+    {
+      "path": "index.motion.json",
+      "sha256": "251fda14d163f3dde5ca57100e61ab3d433d4a4a2467d82cd576baf455db2fd2"
+    },
+    {
+      "path": "assets/audio/narration.final.wav",
+      "sha256": "97eb104ae0155ffb66a431c3f7aa4101c51eda708b5a8e8da3150c893d048527"
+    },
+    {
+      "path": "assets/runtime/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.html",
+      "sha256": "f5db4f8bc09e11266bab67ba6ac926b476f9a571370f9e4de04775b3ef6f9bfe"
+    },
+    {
+      "path": "compositions/scenes/01-respect-warning.motion.json",
+      "sha256": "144cef0ff465bec284a7517b82d8ffd0335db7d3f3ab3f136e2dc7c87f538936"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.html",
+      "sha256": "4838732f4d98dcaca24efa7b929a60644d657a7c6260a87facc44b7c505ca611"
+    },
+    {
+      "path": "compositions/scenes/02-community-claim.motion.json",
+      "sha256": "30ec6cb9465b4a24a9f8cab7fe697cbc9e1730575136684897a9a013497b2934"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.html",
+      "sha256": "6de55f304681758f4e656ae06e6661d93838fbfd6ade568856cb546da5f883d8"
+    },
+    {
+      "path": "compositions/scenes/03-confidence-illusion.motion.json",
+      "sha256": "f583c9b62de4f18aba5c34315733bbcd5af88477e14d6a360545d9282abcbfba"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.html",
+      "sha256": "3ff91e40fd330ee2db8a0807055b0d5c691787163ba2e859ca8b66abebd6f177"
+    },
+    {
+      "path": "compositions/scenes/04-demo-not-system.motion.json",
+      "sha256": "3b2c78549491f7d67316521de156d19f6304d36a519be6e7cff2ea2aa7f5983e"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.html",
+      "sha256": "b3ed940d67488f1ef683ca6eb9d3b304459bb0ae719da3af5eed1dba9b98bc72"
+    },
+    {
+      "path": "compositions/scenes/05-five-reasons.motion.json",
+      "sha256": "af61185c0d59e4c325c55e64a42a3a172c85ad9470699f4a7a31d76a18e007d6"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.html",
+      "sha256": "0def4b45d1ae931f04bf7a837bf5f64c7cee501fc5f789880b00a3e9b4524a2e"
+    },
+    {
+      "path": "compositions/scenes/06-hidden-complexity.motion.json",
+      "sha256": "f4289deeeb38971fa0652455e7eedf3b55dc51a313e41c5ccaf30fd82de4df74"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.html",
+      "sha256": "18d412ae857c3ddd74aa4206a2e9b99466f77936b7befac3c46ed9803702c6ba"
+    },
+    {
+      "path": "compositions/scenes/07-prototype-vs-product.motion.json",
+      "sha256": "a596ceb4303cde69ef701916d93befd3e922c82928f4a328bdaa4e6be13b6b72"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.html",
+      "sha256": "b37e0e9a38c0d2743eda0c6c3aef4edf88f8818702fe6604b68f58879d6cb026"
+    },
+    {
+      "path": "compositions/scenes/08-results-vs-maintenance.motion.json",
+      "sha256": "a52b052ee208b0433b214a66bcfe0f33f6975531dd6196c08b5546c5de2cf753"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.html",
+      "sha256": "68e5fc43c633fecebf1e1dff93f2363be275245bf971358610a111d584646749"
+    },
+    {
+      "path": "compositions/scenes/09-shortcut-misconception.motion.json",
+      "sha256": "f347f054ebdeb688f46ee6508e3a026122c4e60e9bc3eb44e4f69b61cb931305"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.html",
+      "sha256": "af70d7fe21b02b9e492b640005fc2c07f92a7c0b2be565e5f38aee95f3c3694b"
+    },
+    {
+      "path": "compositions/scenes/10-agent-engineering-checklist.motion.json",
+      "sha256": "ac0f3df2e7f70b72eb00ae1bbba7fdfeed4a9dcbdab4c6055bee45bfd0822ce2"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.html",
+      "sha256": "d0087eaee9c3c10fe8a7e30cd92d866a81ccdf8eccc9c0cdbef5a7760133e017"
+    },
+    {
+      "path": "compositions/scenes/11-patch-distortion.motion.json",
+      "sha256": "09a52b36cd8a80cccda1bba0dbeba758ca0a975ed5a19dd0ffd91f45f42787f6"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.html",
+      "sha256": "b242ca1c86920658f672f67a16154a50f03fc050675a1542a1089f41e85a037f"
+    },
+    {
+      "path": "compositions/scenes/12-maturity-ladder.motion.json",
+      "sha256": "d3b89fc5938630bcfe871ce2d4c2faa4701671c6a814faaeebb2fb68387c7843"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.html",
+      "sha256": "c25837ed6cb17238ec34ea9ce235dfbe3c921e8ab5654e42097f2a8cdf10e838"
+    },
+    {
+      "path": "compositions/scenes/13-learning-route.motion.json",
+      "sha256": "a1cf82d37f7711950db9c9a492572296c52275cf94d738184ef3dad4ea3933f1"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.html",
+      "sha256": "6fb591b3e635c663f26fa65ac6e2f0ebe93af908a3c3d52948a51d3534298a95"
+    },
+    {
+      "path": "compositions/scenes/14-value-close.motion.json",
+      "sha256": "c0345e1e853576c3043d93c69d282cd436a399003b1a89aacb83204f1174751e"
+    }
+  ]
+}

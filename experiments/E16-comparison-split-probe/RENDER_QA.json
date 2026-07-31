@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "autovideo-render-qa/v1",
+  "projectId": "E16-comparison-split-probe",
+  "scope": "internal-review",
+  "artifact": {
+    "path": "renders/comparison-split-probe.mp4",
+    "sha256": "d944be05863effa00b1f55f7f630b074bc80c90ffd0be822aa9e41973000718c",
+    "sizeBytes": 1344939,
+    "containerDurationSeconds": 6.016,
+    "video": {"codec": "h264", "width": 1920, "height": 1080, "fps": 30, "frames": 180, "durationSeconds": 6},
+    "audio": {"codec": "aac", "sampleRate": 48000, "channels": 2, "sourceFormat": "PCM s16le, 48 kHz, mono"}
+  },
+  "sourceAudio": {
+    "path": ".media/audio/voice/voice_001.wav",
+    "sha256": "cf6f008124dd10bd4f7aafe97f3b7807400fc2e3775a52bccd122b80955d33c1",
+    "format": "PCM s16le, 48 kHz, mono",
+    "durationSeconds": 6
+  },
+  "checks": {
+    "highQualityRenderCompleted": true,
+    "fullDecodePassed": true,
+    "decodeLog": "render.decode.log",
+    "strictHyperframesCheckPassed": true,
+    "strictCheckLog": "check.capture.log",
+    "renderFrameInspectionPassed": true,
+    "publicReleaseApproved": false
+  },
+  "inspectedFrames": [
+    {"timeSeconds": 0.8, "path": "review/render-qa/frame-0.8.png", "sha256": "bce663817f8de5a7013003fd19e0d9cf2e53f56a91a2d8166d44b3975c2cdbca", "observation": "Mirrored entry is in flight: both equal surfaces have semantic content, host remains fixed, and no full-frame cut appears."},
+    {"timeSeconds": 1.92, "path": "review/render-qa/frame-1.92.png", "sha256": "c62861da8e454bc7ea50631a040a5d8ee765a5bd9130f0356e33de26d2929d97", "observation": "Both comparison states are fully readable with the single contrast axis between them."},
+    {"timeSeconds": 4.44, "path": "review/render-qa/frame-4.44.png", "sha256": "d8d3e4efe6352438ee09e9bafbca7faa83755f607ae0f682560982a55d821718", "observation": "Selected actual state begins the scale handoff while apparent state remains visible and legible."},
+    {"timeSeconds": 5.25, "path": "review/render-qa/frame-5.25.png", "sha256": "921b7fb4d2731f09e31c6eba35e692e9e060f3643bb7c0302ac68ba6f87e7ffe", "observation": "Scale handoff has settled: actual state is selected, apparent state remains as context, and the middle rule is unobscured."},
+    {"timeSeconds": 5.9, "path": "review/render-qa/frame-5.9.png", "sha256": "afd9b4c26f2f45b248de1f2754ca051c82b67a623d8d10db06103f31a1b2242c", "observation": "Readable terminal hold; fixed host, caption rail, and both states remain stable."}
+  ],
+  "temporalInspection": [
+    {"path": "review/render-qa/temporal-1.5-2.3.png", "sha256": "ca0c7edcb1804e401afa3562118ca04e813f7c38db8a091e008b33d87b0a10bb", "observation": "Entry-to-readability strip shows no empty-page flash or identity replacement."},
+    {"path": "review/render-qa/temporal-3.9-4.7.png", "sha256": "adca54ce91eaf776ed196cdfd8a50523bfa1afa7f8468dd7b38bcc8fe842699a", "observation": "Focus-to-scale-handoff strip shows continuous selected-state emphasis without a cut."}
+  ],
+  "contactSheet": {"path": "snapshots/contact-sheet.jpg", "sha256": "5f51081ebf0f29a68ec693922f86e1da9f05c69772eca0622dc56574c2c2e827"},
+  "humanVisualReview": null
+}

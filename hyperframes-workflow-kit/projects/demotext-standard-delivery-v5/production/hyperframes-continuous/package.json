@@ -1,0 +1,14 @@
+{
+  "name": "demotext-standard-delivery-v5-hyperframes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.64 preview",
+    "check": "npx --yes hyperframes@0.7.64 check",
+    "render": "npx --yes hyperframes@0.7.64 render",
+    "publish": "npx --yes hyperframes@0.7.64 publish"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans-sc": "5.2.10"
+  }
+}

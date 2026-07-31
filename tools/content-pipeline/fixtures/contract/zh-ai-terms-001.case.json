@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "autovideo-content-regression-case/v1",
+  "caseId": "zh-ai-terms-001",
+  "language": "zh-CN",
+  "datasetClass": "synthetic-contract",
+  "humanGoldEligible": false,
+  "topicClass": "ai-application-opinion",
+  "provenance": {
+    "origin": "synthetic",
+    "createdBy": "autovideo-contract-test",
+    "rights": "test-only; not a publication source"
+  },
+  "brief": {
+    "targetSeconds": 30,
+    "toleranceSeconds": 2
+  },
+  "evidence": {
+    "schemaVersion": "autovideo-evidence/v2",
+    "claims": [
+      {
+        "id": "claim-sample-run",
+        "statement": "截至2026年7月，这个测试记录了30次 API 调用。",
+        "claimKind": "fact",
+        "supportStatus": "supported",
+        "citations": [
+          {
+            "id": "citation-sample-run",
+            "sourceId": "source-001",
+            "quote": "截至2026年7月，这个测试记录了30次 API 调用。",
+            "locator": {"scheme": "line-range", "startLine": 1, "endLine": 1, "occurrence": 1},
+            "canonicalQuoteSha256": "15dc1375048602deafdf70666720bbf2132691387baf4711a784d6747029d727"
+          }
+        ],
+        "protectedAtomIds": ["atom-year", "atom-month", "atom-count"]
+      },
+      {
+        "id": "claim-terms-need-review",
+        "statement": "demo、Codex、GPT-4o 和 camelCase 等技术词需要单独检查文字形式和实际发音。",
+        "claimKind": "creator-opinion",
+        "supportStatus": "supported",
+        "citations": [
+          {
+            "id": "citation-terms-review",
+            "sourceId": "source-001",
+            "quote": "我的看法是，demo、Codex、GPT-4o 和 camelCase 等技术词需要单独检查文字形式和实际发音。",
+            "locator": {"scheme": "line-range", "startLine": 2, "endLine": 2, "occurrence": 1},
+            "canonicalQuoteSha256": "9ca100015d3ae6ab0c94c93a511aa7c10f881894bf28884a64707d777838ad2d"
+          }
+        ],
+        "protectedAtomIds": []
+      }
+    ],
+    "protectedAtoms": [
+      {"id": "atom-year", "type": "date", "sourceSurface": "2026", "canonicalValue": "2026", "allowedNarrationForms": ["2026"], "omissionPolicy": "required"},
+      {"id": "atom-month", "type": "date", "sourceSurface": "7", "canonicalValue": "7", "allowedNarrationForms": ["7"], "omissionPolicy": "required"},
+      {"id": "atom-count", "type": "number", "sourceSurface": "30", "canonicalValue": "30", "allowedNarrationForms": ["30"], "omissionPolicy": "required"}
+    ],
+    "terms": [
+      {"id": "term-api", "token": "API", "tokenClass": "initialism", "caseSensitive": true, "allowedWrittenForms": ["API"], "spokenPolicy": "letter-by-letter", "requiresListeningReview": true},
+      {"id": "term-demo", "token": "demo", "tokenClass": "english-word", "caseSensitive": false, "allowedWrittenForms": ["demo"], "spokenPolicy": "whole-word", "requiresListeningReview": true},
+      {"id": "term-codex", "token": "Codex", "tokenClass": "brand", "caseSensitive": true, "allowedWrittenForms": ["Codex"], "spokenPolicy": "brand-pronunciation", "requiresListeningReview": true},
+      {"id": "term-gpt4o", "token": "GPT-4o", "tokenClass": "mixed-version", "caseSensitive": true, "allowedWrittenForms": ["GPT-4o"], "spokenPolicy": "listening-review", "requiresListeningReview": true},
+      {"id": "term-camelcase", "token": "camelCase", "tokenClass": "code-identifier", "caseSensitive": true, "allowedWrittenForms": ["camelCase"], "spokenPolicy": "listening-review", "requiresListeningReview": true}
+    ],
+    "gaps": []
+  },
+  "expectations": {
+    "requiredClaimIds": ["claim-sample-run", "claim-terms-need-review"],
+    "claimSectionKinds": [
+      {"claimId": "claim-sample-run", "allowedKinds": ["sourced"]},
+      {"claimId": "claim-terms-need-review", "allowedKinds": ["creator-opinion"]}
+    ],
+    "requiredNarrationTokens": ["2026", "30", "API", "demo", "Codex", "GPT-4o", "camelCase"],
+    "forbiddenNarrationTokens": [],
+    "allowedNewProtectedAtoms": [],
+    "minNarrationGraphemes": 90,
+    "maxNarrationGraphemes": 160,
+    "maxScreenItemsPerSection": 2,
+    "maxScreenItemGraphemes": 16,
+    "maxScreenCoverageRatio": 0.35,
+    "maxSentenceGraphemes": 48
+  }
+}
